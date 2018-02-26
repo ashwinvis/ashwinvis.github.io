@@ -2,7 +2,8 @@ Music and the State of the Mind
 ###############################
 :date: 2010-11-05 08:45
 :author: azuwish
-:category: emotion, list, mood, music
+:tags: emotion, list, mood, music
+:category: Blog
 :slug: music-and-the-state-of-the-mind
 :status: published
 

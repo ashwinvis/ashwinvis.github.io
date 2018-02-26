@@ -2,7 +2,8 @@ The thin line between being an Idealist and a Hypocrite
 #######################################################
 :date: 2013-06-26 16:21
 :author: azuwish
-:category: India, psychology, thin line
+:tags: India, psychology, thin line
+:category: Blog
 :slug: 52
 :status: draft
 

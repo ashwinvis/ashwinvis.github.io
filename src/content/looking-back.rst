@@ -2,7 +2,8 @@ Looking Back
 ############
 :date: 2014-01-01 20:46
 :author: azuwish
-:category: life, resolution
+:tags: life, resolution
+:category: Blog
 :slug: looking-back
 :status: published
 :attachments: 2014/01/430080_10150678754909859_666309858_11045588_1531052424_n.jpg, 2014/01/f33be-430080_10150678754909859_666309858_11045588_1531052424_n.jpg

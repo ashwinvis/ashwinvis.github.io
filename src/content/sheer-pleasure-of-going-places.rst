@@ -2,7 +2,8 @@ Sheer pleasure of Going Places
 ##############################
 :date: 2011-03-02 04:06
 :author: azuwish
-:category: Uncategorized
+:tags: Uncategorized
+:category: Blog
 :slug: sheer-pleasure-of-going-places
 :status: published
 

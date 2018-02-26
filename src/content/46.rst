@@ -1,8 +1,9 @@
 Are you truly free?
 ###################
 :date: 2018-02-25 22:00
-:author: azuwish
-:category: fundamental rights, India, Internet
+:author: Ashwin Vishnu
+:tags: fundamental rights, India, Internet
+:category: Blog
 :slug: 46
 :status: draft
 

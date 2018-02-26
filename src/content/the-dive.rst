@@ -2,7 +2,8 @@ The Dive
 ########
 :date: 2013-07-15 04:28
 :author: azuwish
-:category: poetry
+:tags: poetry
+:category: Blog
 :slug: the-dive
 :status: published
 

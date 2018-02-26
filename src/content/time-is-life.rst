@@ -2,7 +2,8 @@ Time is Life
 ############
 :date: 2010-02-12 13:04
 :author: azuwish
-:category: friends, life
+:tags: friends, life
+:category: Blog
 :slug: time-is-life
 :status: published
 

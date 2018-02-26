@@ -2,7 +2,8 @@ How to survive the Great Slowdown
 #################################
 :date: 2012-08-18 06:32
 :author: azuwish
-:category: economy, India, recession, survival, tips
+:tags: economy, India, recession, survival, tips
+:category: Blog
 :slug: how-to-survive-the-great-slowdown
 :status: published
 

@@ -2,7 +2,8 @@ Words of Change
 ###############
 :date: 2018-02-26 06:02
 :author: azuwish
-:category: Uncategorized
+:tags: Uncategorized
+:category: Blog
 :slug: 48
 :status: draft
 :attachments: 2018/02/neo.jpg, 2018/02/neo1.jpg

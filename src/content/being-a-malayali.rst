@@ -2,7 +2,8 @@ Being a Malayali
 ################
 :date: 2013-05-08 19:33
 :author: azuwish
-:category: life, survival
+:tags: life, survival
+:category: Blog
 :slug: being-a-malayali
 :status: published
 

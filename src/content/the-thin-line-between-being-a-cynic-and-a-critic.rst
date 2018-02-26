@@ -2,7 +2,8 @@ The thin line between being a Cynic and a Critic
 ################################################
 :date: 2013-06-04 08:03
 :author: azuwish
-:category: Internet, psychology, thin line
+:tags: Internet, psychology, thin line
+:category: Blog
 :slug: the-thin-line-between-being-a-cynic-and-a-critic
 :status: published
 

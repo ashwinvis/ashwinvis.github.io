@@ -72,6 +72,7 @@ endif
 
 
 devserver:
+	@echo 'server url: http://0.0.0.0:8000/'
 ifdef PORT
 	$(BASEDIR)/develop_server.sh restart $(PORT)
 else

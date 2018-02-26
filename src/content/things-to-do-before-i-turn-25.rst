@@ -2,7 +2,8 @@ Things to do before I turn 25
 #############################
 :date: 2011-04-22 13:12
 :author: azuwish
-:category: life, resolution
+:tags: life, resolution
+:category: Blog
 :slug: things-to-do-before-i-turn-25
 :status: published
 :attachments: 2011/04/your-bucket-list.png, 2011/04/your-bucket-list1.png
