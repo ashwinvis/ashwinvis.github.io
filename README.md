@@ -10,11 +10,9 @@
 Without node.js and just Python + Pelican.
 
 ```sh
-virtualenv pelican
-source pelican/bin/activate
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
 cd ashwinvis.github.io
-pip install -r REQUIREMENTS.txt
+pipenv install .
 cd src
 make html
 make serve
