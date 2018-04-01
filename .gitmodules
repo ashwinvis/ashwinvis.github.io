@@ -2,7 +2,3 @@
 	path = theme
 	url = https://github.com/ashwinvis/ashwinvis.github.io.git
 	branch = theme
-[submodule "output"]
-	path = output
-	url = https://github.com/ashwinvis/ashwinvis.github.io.git
-	branch = gh-pages
