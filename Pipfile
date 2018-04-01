@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 pelican = {git = "https://github.com/getpelican/pelican", editable = true, ref = "f7681f725918d9ea44de3d3a8dd44decc8e67737"}
+"beautifulsoup4" = "==4.6.0"
 restructuredtext-lint = "*"
 
 [dev-packages]
-"beautifulsoup4" = "==4.6.0"
 bleach = "==2.1.2"
 blinker = "==1.4"
 decorator = "==4.2.1"
