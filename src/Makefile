@@ -13,7 +13,7 @@ SSH_PORT=22
 SSH_USER=avmo
 SSH_TARGET_DIR=~/public_html
 
-GITHUB_PAGES_BRANCH=master
+GITHUB_PAGES_BRANCH=gh-pages
 
 
 DEBUG ?= 0

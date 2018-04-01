@@ -1,5 +1,7 @@
 # Ashwin Vishnu's website
 
+[![Build Status](https://travis-ci.org/ashwinvis/ashwinvis.github.io.svg?branch=master)](https://travis-ci.org/ashwinvis/ashwinvis.github.io)
+
 ## Requirements
 
 * Python: 3.x, Pelican and other packages (see `REQUIREMENTS.txt`)
@@ -11,8 +13,12 @@ Without node.js and just Python + Pelican.
 
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
+## or a simple clone followed by
+# git submodule update --init --recursive
 cd ashwinvis.github.io
-pipenv install .
+pipenv install
+pipenv shell
+pelican-themes -i theme/pelican-themes/backdrop
 cd src
 make html
 make serve
