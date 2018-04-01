@@ -37,7 +37,7 @@ RELATIVE_URLS = True
 THEME = 'backdrop'
 
 # Plugins
-PLUGIN_PATHS = ['./plugins',]
+PLUGIN_PATHS = ['../theme/pelican-plugins',]
 PLUGINS = ['sitemap', 'representative_image', 'tipue_search']
 SITEMAP = {
     'format': 'xml',
