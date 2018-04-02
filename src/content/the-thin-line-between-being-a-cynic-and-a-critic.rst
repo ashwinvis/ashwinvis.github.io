@@ -7,39 +7,6 @@ The thin line between being a Cynic and a Critic
 :slug: the-thin-line-between-being-a-cynic-and-a-critic
 :status: published
 
-.. raw:: html
-
-   <div dir="ltr" style="text-align:left;">
-
-    .. raw:: html
-
-       <div style="text-align:justify;">
-
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   <div class="separator" style="clear:both;text-align:justify;">
-
-|image0|
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div style="text-align:justify;">
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div style="text-align:justify;">
 
 Have you seen this guy on the right, people?  "The Thinker" that's what
 he's called. Ever wondered why he's crouching so low? Some may say he's
@@ -47,21 +14,7 @@ deep in his thought. I beg to differ. It is the weight of his
 preoccupation hanging on his shoulders. Can't you see this guy is
 depressed?!
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div style="text-align:justify;">
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div style="text-align:justify;">
+|image0|
 
 Knowing too much can be a pain in the neck. To be enlightened about
 world (read: too much of news, Facebook shares, Twitter, TV, and
@@ -95,14 +48,6 @@ WRONG! It's no fun being a dumb retard either.
 | and many political satirists like: Jon Stewart, Stephen Colbert,
   Sumeet Raghavan. Do tell me if there are others of the same repute. I
   would be interested.
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 .. |image0| image:: http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg
    :width: 214px

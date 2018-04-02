@@ -2,6 +2,7 @@ branches:
   only:
   - develop
 language: python
+cache: pip
 python:
 - 3.6
 env:

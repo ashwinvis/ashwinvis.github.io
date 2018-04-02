@@ -13,7 +13,6 @@ Things to do before I turn 25
    :height: 239px
    :target: http://bigfatpage.files.wordpress.com/2011/04/your-bucket-list.png
 
-|image0|
 
 #. Start reading books again.
 #. See the world, what lies beyond South India. Live for sometime on the
@@ -48,3 +47,5 @@ Things to do before I turn 25
 #. Inspire someone, probably a younger someone. Help them out find their
    destiny.
 #. And give and share unconditionally... as if I got millions to spend.
+
+|image0|

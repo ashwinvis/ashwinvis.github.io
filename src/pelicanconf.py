@@ -37,8 +37,9 @@ RELATIVE_URLS = True
 THEME = 'backdrop'
 
 # Plugins
-PLUGIN_PATHS = ['../theme/pelican-plugins',]
-PLUGINS = ['sitemap', 'representative_image', 'tipue_search']
+PLUGIN_PATHS = ['../theme/pelican-plugins']
+PLUGINS = ['sitemap', 'representative_image', 'tipue_search',
+           ]
 SITEMAP = {
     'format': 'xml',
     'priorities': {
@@ -57,3 +58,5 @@ SITEMAP = {
 DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 2
 PAGINATED_DIRECT_TEMPLATES = ('categories', 'archives', 'index')
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search',
+                     ))
