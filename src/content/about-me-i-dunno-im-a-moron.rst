@@ -10,15 +10,7 @@
 
     *Dedicated to all assholes who don't realise what they are.*
 
-.. raw:: html
 
-   <div class="separator" style="clear:both;text-align:center;">
-
-|image0|
-
-.. raw:: html
-
-   </div>
 
 Still no idea what i'm talking? These one liners may sound familiar to
 ya..
@@ -28,6 +20,7 @@ ya..
 #. u \ **tell** **me** that
 #. am still discovering myself..
 #. ???
+
 
 .. raw:: html
 
@@ -93,6 +86,8 @@ don't want to do that, well you are in the wrong page.
 .. raw:: html
 
    </div>
+
+|image0|
 
 .. |image0| image:: https://bigfatpage.files.wordpress.com/2010/06/its-all-about-me1.jpg?w=300
    :width: 400px
