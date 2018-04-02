@@ -167,11 +167,11 @@ human. Unique, unpredictable, but equally compassionate beings.
    </div>
 
 | P.S.: Correct me if I'm wrong. Just feel free to reply.
-| Jim Carrey's take : http://youtu.be/lbqxkS2ssUI?t=5m3s
+| Jim Carrey's take : https://youtu.be/lbqxkS2ssUI?t=5m3s
 
 .. raw:: html
 
    </div>
 
-.. |image0| image:: http://bigfatpage.files.wordpress.com/2012/10/devilandangel.jpg
-   :target: http://bigfatpage.files.wordpress.com/2012/10/devilandangel.jpg
+.. |image0| image:: https://bigfatpage.files.wordpress.com/2012/10/devilandangel.jpg
+   :target: https://bigfatpage.files.wordpress.com/2012/10/devilandangel.jpg

@@ -221,7 +221,7 @@ happy!
 
    </div>
 
-.. |image0| image:: http://i74.photobucket.com/albums/i263/myspaceye/bandwallpapers/pinkfloyd/pink_floyd_the_wall.jpg
+.. |image0| image:: https://i74.photobucket.com/albums/i263/myspaceye/bandwallpapers/pinkfloyd/pink_floyd_the_wall.jpg
    :width: 320px
    :height: 240px
-   :target: http://i74.photobucket.com/albums/i263/myspaceye/bandwallpapers/pinkfloyd/pink_floyd_the_wall.jpg
+   :target: https://i74.photobucket.com/albums/i263/myspaceye/bandwallpapers/pinkfloyd/pink_floyd_the_wall.jpg

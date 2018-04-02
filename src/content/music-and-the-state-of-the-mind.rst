@@ -7,30 +7,30 @@ Music and the State of the Mind
 :slug: music-and-the-state-of-the-mind
 :status: published
 
-.. |image0| image:: http://t3.gstatic.com/images?q=tbn:XRh_xR_ASL50sM:b
+.. |image0| image:: https://t3.gstatic.com/images?q=tbn:XRh_xR_ASL50sM:b
    :width: 265px
    :height: 400px
-   :target: http://t3.gstatic.com/images?q=tbn:XRh_xR_ASL50sM:b
+   :target: https://t3.gstatic.com/images?q=tbn:XRh_xR_ASL50sM:b
 
-.. |image1| image:: http://t0.gstatic.com/images?q=tbn:ANd9GcR4xPbn5-tdp3Jc1ns8h1mcz8SvkgaK4oVQEjtTrc19BRlUXZU&t=1&usg=__1rj8j4A29oK4mWNY1bRsID8NeVU=
+.. |image1| image:: https://t0.gstatic.com/images?q=tbn:ANd9GcR4xPbn5-tdp3Jc1ns8h1mcz8SvkgaK4oVQEjtTrc19BRlUXZU&t=1&usg=__1rj8j4A29oK4mWNY1bRsID8NeVU=
    :width: 275px
    :height: 183px
-   :target: http://t0.gstatic.com/images?q=tbn:ANd9GcR4xPbn5-tdp3Jc1ns8h1mcz8SvkgaK4oVQEjtTrc19BRlUXZU&t=1&usg=__1rj8j4A29oK4mWNY1bRsID8NeVU=
+   :target: https://t0.gstatic.com/images?q=tbn:ANd9GcR4xPbn5-tdp3Jc1ns8h1mcz8SvkgaK4oVQEjtTrc19BRlUXZU&t=1&usg=__1rj8j4A29oK4mWNY1bRsID8NeVU=
 
-.. |image2| image:: http://t2.gstatic.com/images?q=tbn:ANd9GcSptdHVhgJSSn3VS9proZkGYxo57zipk1NvfjS2ko0jwgbQfOM&t=1&usg=__6VnwRk9DhaR9KPRRLENDcPgEXk8=
+.. |image2| image:: https://t2.gstatic.com/images?q=tbn:ANd9GcSptdHVhgJSSn3VS9proZkGYxo57zipk1NvfjS2ko0jwgbQfOM&t=1&usg=__6VnwRk9DhaR9KPRRLENDcPgEXk8=
    :width: 279px
    :height: 181px
-   :target: http://t2.gstatic.com/images?q=tbn:ANd9GcSptdHVhgJSSn3VS9proZkGYxo57zipk1NvfjS2ko0jwgbQfOM&t=1&usg=__6VnwRk9DhaR9KPRRLENDcPgEXk8=
+   :target: https://t2.gstatic.com/images?q=tbn:ANd9GcSptdHVhgJSSn3VS9proZkGYxo57zipk1NvfjS2ko0jwgbQfOM&t=1&usg=__6VnwRk9DhaR9KPRRLENDcPgEXk8=
 
-.. |image3| image:: http://t2.gstatic.com/images?q=tbn:ANd9GcRcJyn7eGL5cpvlZUXJZZ8e-tRzaXyXu5OFy3bvF4gz38K-N2w&t=1&usg=__NNDY4z72dsQX_lpoEewKUWgShXM=
+.. |image3| image:: https://t2.gstatic.com/images?q=tbn:ANd9GcRcJyn7eGL5cpvlZUXJZZ8e-tRzaXyXu5OFy3bvF4gz38K-N2w&t=1&usg=__NNDY4z72dsQX_lpoEewKUWgShXM=
    :width: 284px
    :height: 177px
-   :target: http://t2.gstatic.com/images?q=tbn:ANd9GcRcJyn7eGL5cpvlZUXJZZ8e-tRzaXyXu5OFy3bvF4gz38K-N2w&t=1&usg=__NNDY4z72dsQX_lpoEewKUWgShXM=
+   :target: https://t2.gstatic.com/images?q=tbn:ANd9GcRcJyn7eGL5cpvlZUXJZZ8e-tRzaXyXu5OFy3bvF4gz38K-N2w&t=1&usg=__NNDY4z72dsQX_lpoEewKUWgShXM=
 
-.. |image4| image:: http://t1.gstatic.com/images?q=tbn:ANd9GcQFRYCbVV53W9uolSJWRfSKBjrv7X-ryJ_KoTslu7PoWMDHm9U&t=1&usg=__6589LmRi9dYUxQ7Ots8Bi7usmUo=
+.. |image4| image:: https://t1.gstatic.com/images?q=tbn:ANd9GcQFRYCbVV53W9uolSJWRfSKBjrv7X-ryJ_KoTslu7PoWMDHm9U&t=1&usg=__6589LmRi9dYUxQ7Ots8Bi7usmUo=
    :width: 194px
    :height: 259px
-   :target: http://t1.gstatic.com/images?q=tbn:ANd9GcQFRYCbVV53W9uolSJWRfSKBjrv7X-ryJ_KoTslu7PoWMDHm9U&t=1&usg=__6589LmRi9dYUxQ7Ots8Bi7usmUo=
+   :target: https://t1.gstatic.com/images?q=tbn:ANd9GcQFRYCbVV53W9uolSJWRfSKBjrv7X-ryJ_KoTslu7PoWMDHm9U&t=1&usg=__6589LmRi9dYUxQ7Ots8Bi7usmUo=
 
 | *Have you ever felt... there is a connection between your emotions and
   your level of enjoyment while you are listening to a track. Say it

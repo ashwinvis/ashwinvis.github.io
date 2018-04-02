@@ -94,7 +94,7 @@ don't want to do that, well you are in the wrong page.
 
    </div>
 
-.. |image0| image:: http://bigfatpage.files.wordpress.com/2010/06/its-all-about-me1.jpg?w=300
+.. |image0| image:: https://bigfatpage.files.wordpress.com/2010/06/its-all-about-me1.jpg?w=300
    :width: 400px
    :height: 260px
-   :target: http://bigfatpage.files.wordpress.com/2010/06/its-all-about-me.jpg
+   :target: https://bigfatpage.files.wordpress.com/2010/06/its-all-about-me.jpg

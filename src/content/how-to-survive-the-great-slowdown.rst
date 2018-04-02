@@ -17,11 +17,11 @@ How to survive the Great Slowdown
 
 On the backdrop of recent events when our beloved `King Singh gave a
 heartbroken I-day
-speech <http://in.reuters.com/article/2012/08/15/india-gdp-manmohan-singh-idINDEE87E01I20120815>`__,
+speech <https://in.reuters.com/article/2012/08/15/india-gdp-manmohan-singh-idINDEE87E01I20120815>`__,
 `all hope seems to be
-lost <http://in.reuters.com/article/2012/08/18/india-economy-gdp-panel-idINDEE87G02G20120818>`__
+lost <https://in.reuters.com/article/2012/08/18/india-economy-gdp-panel-idINDEE87G02G20120818>`__
 and the media starts scaring you with `impending
-doom <http://in.reuters.com/article/2012/08/18/india-ratings-junk-investment-idINDEE87F0IK20120818>`__;
+doom <https://in.reuters.com/article/2012/08/18/india-ratings-junk-investment-idINDEE87F0IK20120818>`__;
 I thought I would share a few pointers that would help the *selfish
 anarchist* in you survive in the days ahead.
 
@@ -111,7 +111,7 @@ if you can stop doing them.
       <div style="text-align:left;">
 
    Recommended watch: `Into the
-   Wild <http://www.imdb.com/title/tt0758758/>`__ - essentially a primer
+   Wild <https://www.imdb.com/title/tt0758758/>`__ - essentially a primer
    course in living with no money.
 
    .. raw:: html

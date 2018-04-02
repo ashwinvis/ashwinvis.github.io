@@ -8,10 +8,10 @@ Things to do before I turn 25
 :status: published
 :attachments: 2011/04/your-bucket-list.png, 2011/04/your-bucket-list1.png
 
-.. |image0| image:: http://bigfatpage.files.wordpress.com/2011/04/your-bucket-list1.png?w=300
+.. |image0| image:: https://bigfatpage.files.wordpress.com/2011/04/your-bucket-list1.png?w=300
    :width: 320px
    :height: 239px
-   :target: http://bigfatpage.files.wordpress.com/2011/04/your-bucket-list.png
+   :target: https://bigfatpage.files.wordpress.com/2011/04/your-bucket-list.png
 
 
 #. Start reading books again.

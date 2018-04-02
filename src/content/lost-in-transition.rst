@@ -168,7 +168,7 @@ in these blocks.
    <div>
 
 The next morning, there were seven of us, and we set out in a "`share
-auto <http://goo.gl/quKA8>`__". The way that little vehicle transports a
+auto <https://goo.gl/quKA8>`__". The way that little vehicle transports a
 truck-load of people, was insane yet comfortable. I doubt if I will see
 it anywhere else. Bargaining for a hired auto is a pain in the neck.
 "Kitna denge?" asked the auto-driver. Trying to play hard my friend
@@ -277,17 +277,17 @@ Courtesy: Vishnu K.V.
 
    </div>
 
-.. |image0| image:: http://4.bp.blogspot.com/-JcsN3-1iboo/TjfKh76p8KI/AAAAAAAAAN0/PtSkRmAmiuw/s320/untitled.bmp
+.. |image0| image:: https://4.bp.blogspot.com/-JcsN3-1iboo/TjfKh76p8KI/AAAAAAAAAN0/PtSkRmAmiuw/s320/untitled.bmp
    :width: 320px
    :height: 208px
-   :target: http://bigfatpage.files.wordpress.com/2011/08/untitled.jpg
-.. |image1| image:: http://1.bp.blogspot.com/-dOWCvFx9nIs/TjfN1GjgEEI/AAAAAAAAAOE/Qeg_lC1054A/s200/114257295.jpg
+   :target: https://bigfatpage.files.wordpress.com/2011/08/untitled.jpg
+.. |image1| image:: https://1.bp.blogspot.com/-dOWCvFx9nIs/TjfN1GjgEEI/AAAAAAAAAOE/Qeg_lC1054A/s200/114257295.jpg
    :width: 200px
    :height: 133px
-   :target: http://bigfatpage.files.wordpress.com/2011/08/114257295.jpg
-.. |Chandni%20Chowk(1).jpg| image:: http://www.grotal.com/CityImages/Chandni%20Chowk(1).jpg
+   :target: https://bigfatpage.files.wordpress.com/2011/08/114257295.jpg
+.. |Chandni%20Chowk(1).jpg| image:: https://www.grotal.com/CityImages/Chandni%20Chowk(1).jpg
    :width: 200px
    :height: 133px
-.. |tour-india-insights-chandni-chowk-delhi.jpg| image:: http://www.filmapia.com/sites/default/files/filmapia/pub/place/tour-india-insights-chandni-chowk-delhi.jpg
+.. |tour-india-insights-chandni-chowk-delhi.jpg| image:: https://www.filmapia.com/sites/default/files/filmapia/pub/place/tour-india-insights-chandni-chowk-delhi.jpg
    :width: 200px
    :height: 132px

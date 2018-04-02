@@ -49,7 +49,7 @@ around the Sun, could collectively influence so many minds.
 Let us not digress. Instead of piling on more hollow promises, I thought
 I would spare a moment and see how things have been. A little over two
 years back, I wrote this piece on my blog and called it my `"Bucket
-List" <http://bigfatpage.blogspot.in/2011/04/things-to-do-before-i-turn-25.html>`__
+List" <https://bigfatpage.blogspot.in/2011/04/things-to-do-before-i-turn-25.html>`__
 (didn't realise back then that the phrase was reference to the idiom,
 *kick the bucket* or *to die*). Looking back, I am glad that I could
 cross out most of the points. Some ride it has been. Went places, learnt

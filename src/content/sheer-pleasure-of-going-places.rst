@@ -40,4 +40,4 @@ So long computers, movies and society! World is calling.
 | V
 | V
 | V
-| >>\ `bigfatpage.blogspot.com <http://bigfatpage.blogspot.com>`__\ <<
+| >>\ `bigfatpage.blogspot.com <https://bigfatpage.blogspot.com>`__\ <<

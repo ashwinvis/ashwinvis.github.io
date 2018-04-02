@@ -42,14 +42,14 @@ WRONG! It's no fun being a dumb retard either.
    is a good start to clear your head and form opinions.
 
 | Here are some "few good men":
-| `Noam Chomsky <http://chomsky.info/articles.htm>`__, `Ramesh
-  Srivats <http://www.rameshsrivats.net/>`__, `Richard
-  Dawkins <http://www.richarddawkins.net/>`__
+| `Noam Chomsky <https://chomsky.info/articles.htm>`__, `Ramesh
+  Srivats <https://www.rameshsrivats.net/>`__, `Richard
+  Dawkins <https://www.richarddawkins.net/>`__
 | and many political satirists like: Jon Stewart, Stephen Colbert,
   Sumeet Raghavan. Do tell me if there are others of the same repute. I
   would be interested.
 
-.. |image0| image:: http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg
+.. |image0| image:: https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg
    :width: 214px
    :height: 320px
-   :target: http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg
+   :target: https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg
