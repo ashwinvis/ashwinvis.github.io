@@ -33,3 +33,11 @@ ncu -u  # Updates package.json
 npm rebuild node-sass grunt-sass grunt-contrib-watch grunt-contrib-copy grunt  # Optional
 grunt build
 ```
+
+### Development mode
+
+```sh
+pelican-themes -s $PWD/theme/pelican-themes/backdrop
+nohup bash -c 'cd src && ./develop_server.sh start' &
+nohup bash -c 'cd theme/backdrop-theme && grunt watch' &
+```

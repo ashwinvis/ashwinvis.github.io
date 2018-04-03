@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6c20859b7ce90db169dc996b2d9900c5a86d38ed2d283563494c1e830b21f793"
+            "sha256": "d7c68857f123bc27119b7d6b0be724dedf13353829ee3e046b991a6e3a6dba18"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -60,8 +60,8 @@
         },
         "pelican": {
             "editable": true,
-            "git": "https://github.com/getpelican/pelican",
-            "ref": "f7681f725918d9ea44de3d3a8dd44decc8e67737"
+            "git": "https://github.com/getpelican/pelican.git",
+            "ref": "04b0cfe50cd860e48f2ec8d65622e4dc83e61b30"
         },
         "pygments": {
             "hashes": [
@@ -190,7 +190,6 @@
                 "sha256:fcc6d46f08c3c4de7b15ae1c426e15be1b7932bcda9d83ce1a4304e8c1129df3"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.3'",
             "version": "==6.2.1"
         },
         "ipython-genutils": {

@@ -103,3 +103,4 @@ ENV/
 # Pelican
 src/*.pid
 output/
+nohup.out
