@@ -14,7 +14,7 @@ install:
 script:
 - cd src
 - rst-lint content/*.rst
-- make html
+- make publish
 
 deploy:
   provider: pages

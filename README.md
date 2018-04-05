@@ -28,9 +28,15 @@ make serve
 
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
-cd ashwinvis.github.io/theme/backdrop-theme
+# Fix detached heads
+cd ashwinvis.github.io/theme
+git checkout theme
+cd backdrop-theme
+git checkout master
+
 ncu -u  # Updates package.json
-npm rebuild node-sass grunt-sass grunt-contrib-watch grunt-contrib-copy grunt  # Optional
+npm install
+bower install --save
 grunt build
 ```
 
@@ -38,6 +44,5 @@ grunt build
 
 ```sh
 pelican-themes -s $PWD/theme/pelican-themes/backdrop
-nohup bash -c 'cd src && ./develop_server.sh start' &
-nohup bash -c 'cd theme/backdrop-theme && grunt watch' &
+make watch
 ```

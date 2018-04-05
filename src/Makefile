@@ -50,7 +50,7 @@ html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
-	ls -1 $(OUTPUTDIR) | egrep -v '.*(src|LICENSE)$$' | awk '{print "rm -rf", "../"$$0}' | sh
+	ls -1 $(OUTPUTDIR) | awk '{print "rm -rf", "$(OUTPUTDIR)/"$$0}' | sh
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
