@@ -2,6 +2,12 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 from datetime import date
+import sys
+import os
+
+sys.path.append(os.curdir)
+from util import encrypt_email
+
 
 AUTHOR = 'Ashwin Vishnu Mohanan'
 SITENAME = "Ashwin Vishnu's Website"
@@ -20,36 +26,58 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-STATIC_PATHS = ['images']
-
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
 THEME = 'backdrop'
+STATIC_PATHS = ['images', 'pdf']
 
-## Backdrop specific variables
+# Backdrop specific variables
 SITESUBTITLE = 'Ph. D. student in Geophysical Fluid Mechanics and Turbulence'
-# FIXME: static paths are not working
-# PROFILE_IMAGE = '{filename}/images/KTH_logo.png'
+SITE_DESCRIPTION = '''
+My research centers around geophysical flows, particularly with
+gravity waves and vortices, studied from a turbulence perspective. I am trained
+in computational, theoretical and experimental tools to do this. I am also a
+strong advocate for open-source, open-data and open-science.'''
+PROFILE_IMAGE = '/images/dp_ashwin.jpg'
+EMBLEMS = (
+    ('/images/KTH_Logotyp_RGB_2013-2.svg', 'https://kth.se'),
+)
+FAVICON = '/images/KTH_logo.png'
+
+# Carousel
+CAROUSEL = (
+    ('At Linné FLOW Centre, Department of Mechanics, KTH', 'images/caro_kth.jpg',
+     'https://www.mech.kth.se/mech/info_staff.xhtml?ID=381'),
+    ('Curriculum Vitae', 'images/caro_cv.png', 'pages/cv.html'),
+)
 
 # Blogroll
-LINKS = (('KTH', 'https://kth.se'),
-         ('Linné FLOW Centre', 'https://www.flow.kth.se'),
-         ('FluidDyn Project', 'https://fluiddyn.bitbucket.io'),
-         ('Student Profile', 'https://www.mech.kth.se/mech/info_staff.xhtml?ID=381'),
-         ('Python.org', 'https://python.org/'),
-         )
+LINKS = (
+    ('Linné FLOW Centre', 'https://www.flow.kth.se'),
+    ('FluidDyn Project', 'https://fluiddyn.bitbucket.io'),
+    ('Student Profile', 'https://www.mech.kth.se/mech/info_staff.xhtml?ID=381'),
+    ('Python.org', 'https://python.org/'),
+)
 
 # Social widget
-EMAIL = 'Ashwin Vishnu Mohanan <avmo [at] kth.se>'
-SOCIAL = (('Github', 'https://github.com/ashwinvis'),
-          ('Bitbucket', 'https://bitbucket.org/avmo'),
-          ('LinkedIn',
-           'https://www.linkedin.com/in/ashwinvishnu/')
-          )
-RESEARCH = (('ResearchGate',
-             'https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan'),
-            )
+EMAIL = encrypt_email(AUTHOR, rev_username='sivniwhsa', domain='pm', tld='me')
+SOCIAL = (
+    ('Github', 'https://github.com/ashwinvis'),
+    ('Bitbucket', 'https://bitbucket.org/avmo'),
+    ('LinkedIn',
+     'https://www.linkedin.com/in/ashwinvishnu/')
+)
+RESEARCH = (
+    ('ResearchGate',
+     'https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan'),
+    ('Google-Scholar',
+     'https://scholar.google.se/citations?user=zv4wwKoAAAAJ'),
+    ('ORCID', 'https://orcid.org/0000-0002-2979-6327'),
+    ('Zenodo',
+     'https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu'),
+)
+
 YEAR = date.today().year
 LICENSE = r'''
     <a
@@ -58,8 +86,9 @@ LICENSE = r'''
 
 # Plugins
 PLUGIN_PATHS = ['../theme/pelican-plugins']
-PLUGINS = ['sitemap', 'representative_image', 'tipue_search',
-           ]
+PLUGINS = [
+    'sitemap', 'representative_image', 'tipue_search',
+]
 SITEMAP = {
     'format': 'xml',
     'priorities': {
@@ -79,8 +108,7 @@ DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 2
 
 # HTML Template
-PAGINATED_DIRECT_TEMPLATES = ('categories', 'archives', 'index')
-DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search',
-                     ))
-
-
+PAGINATED_DIRECT_TEMPLATES = ('categories', 'archives', 'index', 'pages')
+DIRECT_TEMPLATES = ((
+    'index', 'tags', 'categories', 'archives', 'search',
+))

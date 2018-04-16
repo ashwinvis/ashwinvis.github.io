@@ -1,14 +1,16 @@
 watch: clean
-	nohup bash -c 'cd src && ./develop_server.sh start' &
+	nohup bash -c 'cd src && make devserver' &
 	nohup bash -c 'cd theme/backdrop-theme && grunt watch' &
 	tail -f nohup.out
 
-kill:
-	nohup bash -c 'cd src && ./develop_server.sh stop' &
+stop:
+	nohup bash -c 'cd src && make stopserver' &
 	nohup bash -c 'pgrep -f grunt | xargs kill -9' &
+
+kill: stop
 	nohup bash -c 'pgrep -f pelican.server | xargs kill -9' &
 
-restart: kill watch
+restart: stop watch
 
 clean:
 	rm -rf output

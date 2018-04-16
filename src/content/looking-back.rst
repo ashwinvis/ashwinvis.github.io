@@ -160,5 +160,4 @@ sense, if it is wrong the blame goes to Google.
 
 .. |image0| image:: https://bigfatpage.files.wordpress.com/2014/01/430080_10150678754909859_666309858_11045588_1531052424_n.jpg?w=300
    :width: 640px
-   :height: 380px
    :target: https://bigfatpage.files.wordpress.com/2014/01/430080_10150678754909859_666309858_11045588_1531052424_n.jpg
