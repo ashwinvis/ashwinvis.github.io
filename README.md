@@ -46,3 +46,11 @@ grunt build
 pelican-themes -s $PWD/theme/pelican-themes/backdrop
 make watch
 ```
+
+For convenience, install clustergit.
+```sh
+curl https://raw.githubusercontent.com/mnagel/clustergit/master/clustergit > $VIRTUAL_ENV/bin/clustergit
+chmod +x $VIRTUAL_ENV/bin/clustergit
+clustergit --recursive  # show status
+clustergit --recursive --push  # push recursive
+```
