@@ -65,8 +65,9 @@ EMAIL = encrypt_email(AUTHOR, rev_username='sivniwhsa', domain='pm', tld='me')
 SOCIAL = (
     ('Github', 'https://github.com/ashwinvis'),
     ('Bitbucket', 'https://bitbucket.org/avmo'),
+    ('Mastodon', 'https://scholar.social/@ashwinvis'),
     ('LinkedIn',
-     'https://www.linkedin.com/in/ashwinvishnu/')
+     'https://www.linkedin.com/in/ashwinvishnu/'),
 )
 RESEARCH = (
     ('ResearchGate',

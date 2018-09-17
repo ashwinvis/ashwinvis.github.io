@@ -1,6 +1,6 @@
 watch: clean
 	nohup bash -c 'cd src && make devserver' &
-	nohup bash -c 'cd theme/backdrop-theme && grunt watch' &
+	nohup bash -c 'cd theme/backdrop-theme && grunt serve' &
 	tail -f nohup.out
 
 stop:
