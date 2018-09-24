@@ -70,6 +70,7 @@ SOCIAL = (
      'https://www.linkedin.com/in/ashwinvishnu/'),
 )
 RESEARCH = (
+    ('Zotero', 'https://zotero.org/ashwinvis'),
     ('ResearchGate',
      'https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan'),
     ('Google-Scholar',
