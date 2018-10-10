@@ -64,6 +64,7 @@ LINKS = (
 EMAIL = encrypt_email(AUTHOR, rev_username='sivniwhsa', domain='pm', tld='me')
 SOCIAL = (
     ('Github', 'https://github.com/ashwinvis'),
+    ('Gitlab', 'https://source.coderefinery.org/ashwinvis/'),
     ('Bitbucket', 'https://bitbucket.org/avmo'),
     ('Mastodon', 'https://scholar.social/@ashwinvis'),
     ('LinkedIn',
