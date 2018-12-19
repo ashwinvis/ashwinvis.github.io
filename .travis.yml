@@ -13,7 +13,7 @@ cache: pip
 install:
 - pip install -U pipenv
 - pipenv install
-- pelican-themes -i theme/pelican-themes/backdrop
+- pelican-themes -i pelican-bluedrop/bluedrop
 
 script:
 - cd src

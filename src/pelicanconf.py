@@ -29,7 +29,7 @@ AUTHOR_FEED_RSS = None
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-THEME = "backdrop"
+THEME = "bluedrop"
 STATIC_PATHS = ["images", "pdf"]
 
 # Backdrop specific variables
@@ -90,7 +90,7 @@ LICENSE = r"""
     """
 
 # Plugins
-PLUGIN_PATHS = ["../theme/pelican-plugins"]
+PLUGIN_PATHS = ["../pelican-bluedrop/plugins"]
 PLUGINS = ["sitemap", "representative_image", "tipue_search"]
 SITEMAP = {
     "format": "xml",

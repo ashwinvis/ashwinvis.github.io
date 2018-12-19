@@ -11,7 +11,7 @@ from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 
 CONFIG = {
     # Local path configuration (can be absolute or relative to tasks.py)
-    'deploy_path': 'output',
+    'deploy_path': '../output',
     # Github Pages configuration
     'github_pages_branch': 'master',
     'commit_message': "'Publish site on {}'".format(datetime.date.today().isoformat()),

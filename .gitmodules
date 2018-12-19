@@ -1,4 +1,3 @@
-[submodule "theme"]
-	path = theme
-	url = https://github.com/ashwinvis/ashwinvis.github.io.git
-	branch = theme
+[submodule "pelican-bluedrop"]
+	path = pelican-bluedrop
+	url = https://github.com/ashwinvis/pelican-bluedrop.git
