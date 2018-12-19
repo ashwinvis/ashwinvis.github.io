@@ -1,3 +1,6 @@
 [submodule "pelican-bluedrop"]
 	path = pelican-bluedrop
 	url = https://github.com/ashwinvis/pelican-bluedrop.git
+[submodule "backdrop-theme"]
+	path = backdrop-theme
+	url = https://github.com/ashwinvis/backdrop-theme.git

@@ -29,6 +29,7 @@ make serve
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
 
+cd backdrop-theme
 ncu -u  # Updates package.json
 npm install
 bower install --save
