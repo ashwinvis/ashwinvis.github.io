@@ -18,7 +18,7 @@ git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
 cd ashwinvis.github.io
 pipenv install
 pipenv shell
-pelican-themes -i theme/pelican-themes/backdrop
+pelican-themes -s theme/pelican-themes/backdrop
 cd src
 make html
 make serve

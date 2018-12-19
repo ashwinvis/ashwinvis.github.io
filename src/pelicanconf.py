@@ -47,9 +47,9 @@ FAVICON = '/images/KTH_logo.png'
 
 # Carousel
 CAROUSEL = (
+    ('Curriculum Vitae', 'images/caro_cv.png', 'pages/cv.html'),
     ('At Linné FLOW Centre, Department of Mechanics, KTH', 'images/caro_kth.jpg',
      'https://www.mech.kth.se/mech/info_staff.xhtml?ID=381'),
-    ('Curriculum Vitae', 'images/caro_cv.png', 'pages/cv.html'),
 )
 
 # Blogroll
@@ -62,11 +62,15 @@ LINKS = (
 
 # Social widget
 EMAIL = encrypt_email(AUTHOR, rev_username='sivniwhsa', domain='pm', tld='me')
+GPG = 'https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2BF1534545A73FAD'
+MASTODON = 'https://scholar.social/@ashwinvis'
 SOCIAL = (
+    # To be uncommented when font-awesome implements fa-gnupg
+    #  ('GnuPG',
+    #   'https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2BF1534545A73FAD'),
     ('Github', 'https://github.com/ashwinvis'),
     ('Gitlab', 'https://source.coderefinery.org/ashwinvis/'),
     ('Bitbucket', 'https://bitbucket.org/avmo'),
-    ('Mastodon', 'https://scholar.social/@ashwinvis'),
     ('LinkedIn',
      'https://www.linkedin.com/in/ashwinvishnu/'),
 )
@@ -85,7 +89,8 @@ YEAR = date.today().year
 LICENSE = r'''
     <a
     href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a>'''
+    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
+    '''
 
 # Plugins
 PLUGIN_PATHS = ['../theme/pelican-plugins']
