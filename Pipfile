@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 beautifulsoup4 = "==4.6.0"
 restructuredtext_lint = "*"
-pelican = "==3.7.1"
+pelican = "==4.0.1"
 
 [dev-packages]
 bleach = "==2.1.2"
