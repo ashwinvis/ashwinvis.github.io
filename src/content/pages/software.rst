@@ -5,8 +5,8 @@ Software
 :modified: 2018-12-19
 :authors: Ashwin Vishnu
 
-Here is a showcase of all the projects I co-develop, have contributed
-to, or maintain myself:
+A showcase of all the projects which I have **co-developed**, have
+**contributed** to, or **maintain** myself:
 
 Research Software
 ~~~~~~~~~~~~~~~~~
@@ -32,9 +32,10 @@ Some key features include:
 
    .. raw:: html
 
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QHKBOQQJ8XE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen>
-      </iframe>
+      <iframe width="560" height="315"
+      src="https://www.youtube-nocookie.com/embed/QHKBOQQJ8XE" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope;
+      picture-in-picture" allowfullscreen> </iframe>
 
 
 -  `FluidImage <https://fluidimage.readthedocs.io>`__: Calibrate,
@@ -46,13 +47,14 @@ Some key features include:
 `Caeroc <https://github.com/ashwinvis/caeroc>`__
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
-An toy desktop GUI calculator for compressible aerodynamics built on top
+A toy desktop GUI calculator for compressible aerodynamics built on top
 of `scikit-aero <https://github.com/AeroPython/scikit-aero>`__. Demo:
 
 .. raw:: html
 
-   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts" src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775" frameborder="0" allowfullscreen>
-   </iframe>
+   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts"
+   src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775"
+   frameborder="0" allowfullscreen> </iframe>
 
 Open-Source contributions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,7 +70,7 @@ I have also contributed some serious projects such as:
    -  linting Pythran configuration files
       (`link <https://github.com/serge-sans-paille/pythran/pull/1145>`__)
 
--  `Jupyterlab <https://jupyterlabe.readthedocs.io>`__: Next generation
+-  `JupyterLab <https://jupyterlabe.readthedocs.io>`__: Next generation
    UI for Jupyter notebooks. I have:
 
    -  added access to solarized theme for the text editor
@@ -97,7 +99,7 @@ reuse.
 -  `vim-instant-markdown <https://github.com/ashwinvis/vim-instant-markdown>`__
    & `Instant markdown
    server <https://github.com/ashwinvis/instant-markdown-d>`__: Write
-   markdown with instant preview. Suppoorts MathJax as well.
+   markdown with instant preview. Supports MathJax as well.
 -  `xrandr-extend <https://github.com/ashwinvis/xrandr-extend>`__: CLI
    tool to calculate and use non-HIDPI external displays along with
    HIDPI monitors.
