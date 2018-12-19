@@ -70,7 +70,7 @@ I have also contributed some serious projects such as:
    -  linting Pythran configuration files
       (`link <https://github.com/serge-sans-paille/pythran/pull/1145>`__)
 
--  `JupyterLab <https://jupyterlabe.readthedocs.io>`__: Next generation
+-  `JupyterLab <https://jupyterlab.readthedocs.io>`__: Next generation
    UI for Jupyter notebooks. I have:
 
    -  added access to solarized theme for the text editor
