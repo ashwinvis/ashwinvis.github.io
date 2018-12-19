@@ -1,5 +1,6 @@
 Title: Software
 Author: Ashwin Vishnu
+Status: Published
 
 Here is a showcase of all the projects I co-develop, have contributed to, or
 maintain myself:
