@@ -18,7 +18,7 @@ git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
 cd ashwinvis.github.io
 pipenv install
 pipenv shell
-pelican-themes -i theme/pelican-themes/backdrop
+pelican-themes -i pelican-bluedrop/bluedrop
 cd src
 make html
 make serve
@@ -28,11 +28,6 @@ make serve
 
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
-# Fix detached heads
-cd ashwinvis.github.io/theme
-git checkout theme
-cd backdrop-theme
-git checkout master
 
 ncu -u  # Updates package.json
 npm install
@@ -43,7 +38,7 @@ grunt build
 ### Development mode
 
 ```sh
-pelican-themes -s $PWD/theme/pelican-themes/backdrop
+pelican-themes -s $PWD/pelican-bluedrop/bluedrop
 make watch
 ```
 
