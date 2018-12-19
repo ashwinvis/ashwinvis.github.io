@@ -1,16 +1,14 @@
 watch: clean
+	nohup bash -c 'cd backdrop-theme && grunt serve' &
+	xdg-open http://localhost:8000
 	nohup bash -c 'cd src && make devserver' &
-	nohup bash -c 'cd theme/backdrop-theme && grunt serve' &
 	tail -f nohup.out
 
-stop:
-	nohup bash -c 'cd src && make stopserver' &
+kill:
 	nohup bash -c 'pgrep -f grunt | xargs kill -9' &
+	nohup bash -c 'pgrep -f pelican | xargs kill -9' &
 
-kill: stop
-	nohup bash -c 'pgrep -f pelican.server | xargs kill -9' &
-
-restart: stop watch
+restart: kill watch
 
 clean:
 	rm -rf output
