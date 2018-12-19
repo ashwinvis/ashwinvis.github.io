@@ -1,7 +1,7 @@
 import codecs
 
 
-def encrypt_email(real_name, rev_username, domain, tld='com'):
+def encrypt_email(real_name, rev_username, domain, tld="com"):
     """Encrypt email to avoid spam bots from scraping. Uses ROT13 encryption.
 
     Example
@@ -13,6 +13,6 @@ def encrypt_email(real_name, rev_username, domain, tld='com'):
 
     """
     username = rev_username[::-1]
-    email = f'mailto:{real_name} <{username}@{domain}.{tld}>'
-    email_rot13 = codecs.encode(email, 'rot_13')
+    email = f"mailto:{real_name} <{username}@{domain}.{tld}>"
+    email_rot13 = codecs.encode(email, "rot_13")
     return email_rot13
