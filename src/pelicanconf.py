@@ -91,12 +91,18 @@ LICENSE = r"""
 
 # Plugins
 PLUGIN_PATHS = ["../pelican-bluedrop/plugins"]
-PLUGINS = ["sitemap", "representative_image", "tipue_search"]
+PLUGINS = ["sitemap", "representative_image", "tipue_search", "ipynb.markup"]
 SITEMAP = {
     "format": "xml",
     "priorities": {"articles": 0.7, "indexes": 0.5, "pages": 0.3},
     "changefreqs": {"articles": "monthly", "indexes": "monthly", "pages": "monthly"},
 }
+
+# ipynb
+MARKUP = ('md', 'ipynb')
+IGNORE_FILES = [".ipynb_checkpoints"]
+IPYNB_USE_METACELL = True
+IPYNB_IGNORE_CSS = True
 
 # Pagination
 DEFAULT_PAGINATION = 10
