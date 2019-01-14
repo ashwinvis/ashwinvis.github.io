@@ -11,8 +11,7 @@ branches:
 cache: pip
 
 install:
-- pip install -U pipenv
-- pipenv install
+- pip install -r requirements.txt
 - pelican-themes -i pelican-bluedrop/bluedrop
 
 script:

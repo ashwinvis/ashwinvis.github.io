@@ -10,6 +10,9 @@ kill:
 
 restart: kill watch
 
+lint:
+	rst-lint src/content/*.rst
+
 clean:
 	rm -rf output
 	rm -f nohup.out

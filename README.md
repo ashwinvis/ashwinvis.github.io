@@ -9,41 +9,41 @@
 
 ## Simple installation
 
-Without node.js and just Python + Pelican.
+Without node.js and just Python + Pelican. Start in a virtual environment.
 
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
 ## or a simple clone followed by
 # git submodule update --init --recursive
 cd ashwinvis.github.io
-pipenv install
-pipenv shell
+pip install -r requirements.txt
 pelican-themes -i pelican-bluedrop/bluedrop
 cd src
-make html
-make serve
+make html serve
 ```
 
-## Build instruction
+## Development
 
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
+
+cd ashwinvis.github.io
+pip install -U pip-tools
+pip-compile && pip-sync
 
 cd backdrop-theme
 ncu -u  # Updates package.json
 npm install
 bower install --save
 grunt build
-```
+cd ..
 
-### Development mode
-
-```sh
 pelican-themes -s $PWD/pelican-bluedrop/bluedrop
 make watch
 ```
 
-For convenience, install clustergit.
+**Tip**: To conveniently work with submodules, install clustergit.
+
 ```sh
 curl https://raw.githubusercontent.com/mnagel/clustergit/master/clustergit > $VIRTUAL_ENV/bin/clustergit
 chmod +x $VIRTUAL_ENV/bin/clustergit
