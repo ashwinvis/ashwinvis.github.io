@@ -37,8 +37,8 @@ SITESUBTITLE = "Ph. D. student in Geophysical Fluid Mechanics and Turbulence"
 SITE_DESCRIPTION = """
 My research centers around geophysical flows, particularly with
 gravity waves and vortices, studied from a turbulence perspective. I am trained
-in computational, theoretical and experimental tools to do this. I am also a
-strong advocate for open-source, open-data and open-science."""
+in computational, theoretical and experimental tools to do this. You would find
+me using things which are simple, efficent, open-source, and reproducible."""
 PROFILE_IMAGE = "/images/dp_ashwin.jpg"
 EMBLEMS = (("/images/KTH_Logotyp_RGB_2013-2.svg", "https://kth.se"),)
 FAVICON = "/images/KTH_logo.png"
