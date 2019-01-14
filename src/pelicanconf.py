@@ -30,7 +30,7 @@ AUTHOR_FEED_RSS = None
 RELATIVE_URLS = True
 
 THEME = "bluedrop"
-STATIC_PATHS = ["images", "pdf"]
+STATIC_PATHS = ["images", "pdf", "static"]
 
 # Backdrop specific variables
 SITESUBTITLE = "Ph. D. student in Geophysical Fluid Mechanics and Turbulence"
