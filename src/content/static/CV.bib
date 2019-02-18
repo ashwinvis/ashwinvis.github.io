@@ -1,0 +1,113 @@
+
+@inproceedings{antoine_report_2017,
+	address = {Stockholm},
+	title = {Report of the {MILESTONE} experiment: strongly stratified turbulence and mixing efficiency in the {Coriolis} platform},
+	copyright = {All rights reserved},
+	url = {http://www.delegia.com/app/data/8684/Abstract/28600/ETC16_Campagne.pdf},
+	language = {en},
+	booktitle = {16th {European} {Turbulence} {Conference}},
+	author = {Antoine, Campagne and Alfredsson, Henrik and Chassagne, Rémi and Micard, Diane and Mordant, Nicolas and Sommeria, Joel and Viboud, Samuel and Mohanan, Ashwin Vishnu and Lindborg, Erik and Augier, Pierre},
+	month = aug,
+	year = {2017},
+	pages = {1},
+	file = {Antoine et al. - REPORT OF THE MILESTONE EXPERIMENT STRONGLY STRAT.pdf:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/DVDYMT2L/Antoine et al. - REPORT OF THE MILESTONE EXPERIMENT STRONGLY STRAT.pdf:application/pdf}
+}
+
+@article{mohanan_fluidsim_2018,
+	title = {{FluidSim}: modular, object-oriented {Python} package for high-performance {CFD} simulations},
+	volume = {under review},
+	copyright = {All rights reserved},
+	shorttitle = {{FluidSim}},
+	url = {http://arxiv.org/abs/1807.01769},
+	abstract = {The Python package fluidsim is introduced in this article as an extensible framework for Computational Fluid Mechanics (CFD) solvers. It is developed as a part of FluidDyn project (Augier et al., 2018), an effort to promote open-source and open-science collaboration within fluid mechanics community and intended for both educational as well as research purposes. Solvers in fluidsim are scalable, High-Performance Computing (HPC) codes which are powered under the hood by the rich, scientific Python ecosystem and the Application Programming Interfaces (API) provided by fluiddyn and fluidfft packages (Mohanan et al., 2018). The present article describes the design aspects of fluidsim, viz. use of Python as the main language; focus on the ease of use, reuse and maintenance of the code without compromising performance. The implementation details including optimization methods, modular organization of features and object-oriented approach of using classes to implement solvers are also briefly explained. Currently, fluidsim includes solvers for a variety of physical problems using different numerical methods (including finite-difference methods). However, this metapaper shall dwell only on the implementation and performance of its pseudo-spectral solvers, in particular the two- and three-dimensional Navier-Stokes solvers. We investigate the performance and scalability of fluidsim in a state of the art HPC cluster. Three similar pseudo-spectral CFD codes based on Python (Dedalus, SpectralDNS) and Fortran (NS3D) are presented and qualitatively and quantitatively compared to fluidsim. The source code is hosted at Bitbucket as a Mercurial repository bitbucket.org/fluiddyn/fluidsim and the documentation generated using Sphinx can be read online at fluidsim.readthedocs.io.},
+	urldate = {2018-09-24},
+	journal = {arXiv:1807.01769 [physics]},
+	author = {Mohanan, Ashwin Vishnu and Bonamy, Cyrille and Linares, Miguel Calpe and Augier, Pierre},
+	month = jul,
+	year = {2018},
+	note = {arXiv: 1807.01769},
+	keywords = {Physics - Computational Physics, Physics - Fluid Dynamics, Computer Science - Computational Engineering, Finance, and Science},
+	file = {arXiv\:1807.01769 PDF:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/Y93BVCW9/Mohanan et al. - 2018 - FluidSim modular, object-oriented Python package .pdf:application/pdf;arXiv.org Snapshot:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/WETCC838/1807.html:text/html}
+}
+
+@article{augier_fluiddyn_2018,
+	title = {{FluidDyn}: a {Python} open-source framework for research and teaching in fluid dynamics},
+	volume = {under review},
+	copyright = {All rights reserved},
+	shorttitle = {{FluidDyn}},
+	url = {http://arxiv.org/abs/1807.09224},
+	abstract = {FluidDyn is a project to foster open-science and open-source in the fluid dynamics community. It is thought of as a research project to channel open-source dynamics, methods and tools to do science. We propose a set of Python packages forming a framework to study fluid dynamics with different methods, in particular laboratory experiments (package fluidlab), simulations (packages fluidfft, fluidsim and fluidfoam) and data processing (package fluidimage). In the present article, we give an overview of the specialized packages of the project and then focus on the base package called fluiddyn, which contains common code used in the specialized packages. Packages fluidfft and fluidsim are described with greater detail in two companion papers, Mohanan et al. (2018a,b). With the project FluidDyn, we demonstrate that specialized scientific code can be written with methods and good practices of the open-source community. The Mercurial repositories are available in Bitbucket (https://bitbucket.org/fluiddyn/). All codes are documented using Sphinx and Read the Docs, and tested with continuous integration run on Bitbucket, Pipelines and Travis. To improve the reuse potential, the codes are as modular as possible, leveraging the simple object-oriented programming model of Python. All codes are also written to be highly efficient, using C++, Cython and Pythran to speedup the performance of critical functions.},
+	urldate = {2018-09-24},
+	journal = {arXiv:1807.09224 [cs]},
+	author = {Augier, Pierre and Mohanan, Ashwin Vishnu and Bonamy, Cyrille},
+	month = jul,
+	year = {2018},
+	note = {arXiv: 1807.09224},
+	keywords = {Computer Science - Other Computer Science},
+	file = {arXiv\:1807.09224 PDF:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/CYMRKND9/Augier et al. - 2018 - FluidDyn a Python open-source framework for resea.pdf:application/pdf;arXiv.org Snapshot:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/GFBCUF9N/1807.html:text/html}
+}
+
+@article{mohanan_fluidfft_2018,
+	title = {{FluidFFT}: common {API} ({C}++ and {Python}) for {Fast} {Fourier} {Transform} {HPC} libraries},
+	volume = {under review},
+	copyright = {All rights reserved},
+	shorttitle = {{FluidFFT}},
+	url = {http://arxiv.org/abs/1807.01775},
+	abstract = {The Python package fluidfft provides a common Python API for performing Fast Fourier Transforms (FFT) in sequential, in parallel and on GPU with different FFT libraries (FFTW, P3DFFT, PFFT, cuFFT). fluidfft is a comprehensive FFT framework which allows Python users to easily and efficiently perform FFT and the associated tasks, such as as computing linear operators and energy spectra. We describe the architecture of the package composed of C++ and Cython FFT classes, Python "operator" classes and Pythran functions. The package supplies utilities to easily test itself and benchmark the different FFT solutions for a particular case and on a particular machine. We present a performance scaling analysis on three different computing clusters and a microbenchmark showing that fluidfft is an interesting solution to write efficient Python applications using FFT.},
+	urldate = {2018-09-24},
+	journal = {arXiv:1807.01775 [physics]},
+	author = {Mohanan, Ashwin Vishnu and Bonamy, Cyrille and Augier, Pierre},
+	month = jul,
+	year = {2018},
+	note = {arXiv: 1807.01775},
+	keywords = {Computer Science - Mathematical Software, Physics - Fluid Dynamics},
+	file = {arXiv\:1807.01775 PDF:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/JY258MWK/Mohanan et al. - 2018 - FluidFFT common API (C++ and Python) for Fast Fou.pdf:application/pdf;arXiv.org Snapshot:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/7K3YUDHE/1807.html:text/html}
+}
+
+@article{lindborg_two-dimensional_2017-2,
+	title = {A two-dimensional toy model for geophysical turbulence},
+	volume = {29},
+	issn = {1070-6631},
+	url = {https://aip.scitation.org/doi/full/10.1063/1.4985990},
+	doi = {10.1063/1.4985990},
+	abstract = {A toy model for large scale geophysical turbulence is constructed by making two modifications of the shallow water model. Unlike the shallow water model, the toy model has a quadratic expression for total energy, which is the sum of Available Potential Energy (APE) and Kinetic Energy (KE). More importantly, in contrast to the shallow water model, the toy model does not produce any shocks. Three numerical simulations with different forcing are presented and compared with the simulation of a full General Circulation Model (GCM). The energy which is injected cascades in a similar way as in the GCM. First, some of the energy is converted from APE to KE at large scales. The wave field then undergoes a forward energy cascade displaying shallow spectra, close to k−5/3, for both APE and KE, while the vortical field either displays a k−3-spectrum or a more shallow spectrum, close to k−5/3, depending on the forcing. In a simulation with medium forcing wave number, some of the energy which is converted from APE to KE undergoes an inverse energy cascade which is produced by nonlinear interactions only involving the rotational component of the velocity field. The inverse energy cascade builds up a vortical field at larger scales than the forcing scale. At these scales, coherent vortices emerge with a strong dominance of anticyclonic vortices. The relevance of the simulation results to the dynamics of the atmosphere is discussed as in possible continuations of the investigation.},
+	number = {11},
+	urldate = {2018-09-24},
+	journal = {Physics of Fluids},
+	author = {Lindborg, Erik and Mohanan, Ashwin Vishnu},
+	month = nov,
+	year = {2017},
+	pages = {111114},
+	file = {Full Text PDF:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/K5WVIQMU/Lindborg and Mohanan - 2017 - A two-dimensional toy model for geophysical turbul.pdf:application/pdf;Snapshot:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/8M3RGI6A/1.html:text/html}
+}
+
+@article{ashwin_kdv_2015,
+	title = {{KdV} {Equation} and {Computations} of {Solitons}: {Nonlinear} {Error} {Dynamics}},
+	volume = {62},
+	issn = {1573-7691},
+	shorttitle = {{KdV} {Equation} and {Computations} of {Solitons}},
+	url = {https://doi.org/10.1007/s10915-014-9875-4},
+	doi = {10.1007/s10915-014-9875-4},
+	abstract = {Here we have developed new compact and hybrid schemes for the solution of KdV equation. These schemes for the third derivative have been analyzed in the spectral plane for their resolution and compared with another scheme in the literature. Furthermore the developed schemes have been used to solve a model linear dispersion equation. The error dynamics equation has been developed for this model equation. Despite the linearity of the model equation, one can draw conclusions for error dynamics of nonlinear differential equations. The developed compact scheme has been found to be quite accurate in solving KdV equation. One- and two-soliton cases have been reported to demonstrate the above.},
+	language = {en},
+	number = {3},
+	urldate = {2018-09-24},
+	journal = {J Sci Comput},
+	author = {Ashwin, V. M. and Saurabh, K. and Sriramkrishnan, M. and Bagade, P. M. and Parvathi, M. K. and Sengupta, Tapan K.},
+	month = mar,
+	year = {2015},
+	keywords = {Compact scheme, DRP scheme, Gibbs’ phenomenon, KdV equation, Nonlinear error dynamics, Solitons},
+	pages = {693--717},
+	file = {Springer Full Text PDF:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/K2M2XU5T/Ashwin et al. - 2015 - KdV Equation and Computations of Solitons Nonline.pdf:application/pdf}
+}
+
+@article{augier_shallow_2019,
+	title = {Shallow water wave turbulence},
+	volume = {under review},
+	language = {en},
+	journal = {J. Fluid Mech.},
+	author = {Augier, Pierre and Mohanan, Ashwin Vishnu and Lindborg, Erik},
+	year = {2019},
+	pages = {22},
+	file = {Augier et al. - Shallow water wave turbulence.pdf:/home/avmo/.zotero/zotero/jb8pvbx5.default/zotero/storage/J8FNEAC7/Augier et al. - Shallow water wave turbulence.pdf:application/pdf}
+}

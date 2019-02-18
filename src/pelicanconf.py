@@ -91,7 +91,8 @@ LICENSE = r"""
 
 # Plugins
 PLUGIN_PATHS = ["../pelican-bluedrop/plugins"]
-PLUGINS = ["sitemap", "representative_image", "tipue_search", "ipynb.markup"]
+PLUGINS = ["sitemap", "representative_image", "tipue_search", "ipynb.markup",
+           "pelican_bibtex"]
 SITEMAP = {
     "format": "xml",
     "priorities": {"articles": 0.7, "indexes": 0.5, "pages": 0.3},
@@ -99,7 +100,7 @@ SITEMAP = {
 }
 
 # ipynb
-MARKUP = ('md', 'ipynb')
+MARKUP = ("md", "ipynb")
 IGNORE_FILES = [".ipynb_checkpoints"]
 IPYNB_USE_METACELL = True
 IPYNB_IGNORE_CSS = True
@@ -108,6 +109,18 @@ IPYNB_IGNORE_CSS = True
 DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 2
 
+# Publications with pybtex
+PUBLICATIONS_SRC = 'content/static/CV.bib'
+
 # HTML Template
 PAGINATED_DIRECT_TEMPLATES = ("categories", "archives", "index", "pages")
-DIRECT_TEMPLATES = ("index", "tags", "categories", "archives", "search")
+DIRECT_TEMPLATES = (
+    "index",
+    "tags",
+    "categories",
+    "archives",
+    # Requires tipue_search
+    "search",
+    # Requires pybtex
+    "publications",
+)

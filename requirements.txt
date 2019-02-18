@@ -25,6 +25,7 @@ jupyter-client==5.2.4     # via ipykernel, jupyter-console, notebook, qtconsole
 jupyter-console==6.0.0    # via jupyter
 jupyter-core==4.4.0       # via jupyter-client, nbconvert, nbformat, notebook, qtconsole
 jupyter==1.0.0
+latexcodec==1.0.6         # via pybtex
 markdown==3.0.1
 markupsafe==1.1.0         # via jinja2
 mistune==0.8.4            # via nbconvert
@@ -39,14 +40,16 @@ pickleshare==0.7.5        # via ipython
 prometheus-client==0.5.0  # via notebook
 prompt-toolkit==2.0.7     # via ipython, jupyter-console
 ptyprocess==0.6.0         # via pexpect, terminado
+pybtex==0.22.2
 pygments==2.3.1           # via ipython, jupyter-console, nbconvert, pelican, qtconsole
 python-dateutil==2.7.5    # via jupyter-client, pelican
 pytz==2018.9              # via feedgenerator, pelican
+pyyaml==3.13              # via pybtex
 pyzmq==17.1.2             # via jupyter-client, notebook
 qtconsole==4.4.3          # via jupyter
 restructuredtext-lint==1.2.2
 send2trash==1.5.0         # via notebook
-six==1.12.0               # via bleach, feedgenerator, pelican, prompt-toolkit, python-dateutil, traitlets
+six==1.12.0               # via bleach, feedgenerator, latexcodec, pelican, prompt-toolkit, pybtex, python-dateutil, traitlets
 terminado==0.8.1          # via notebook
 testpath==0.4.2           # via nbconvert
 tornado==5.1.1            # via ipykernel, jupyter-client, notebook, terminado

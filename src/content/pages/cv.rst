@@ -1,6 +1,6 @@
 CV
 ##
-:date: 2010-06-02 15:10
+:date: 2019-02-18 15:10
 :slug: cv
 :status: published
 
