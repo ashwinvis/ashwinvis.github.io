@@ -1,9 +1,11 @@
 beautifulsoup4==4.6.0
 restructuredtext-lint==1.3.0
 pelican==4.0.1
+jinja2>=2.10.1<3.0.0
 invoke==1.2.0
 jupyter
-notebook
+notebook>=5.7.8,<6.0.0
 ipython
 markdown
 pybtex==0.22.2
+pyyaml>=5.1<6.0
