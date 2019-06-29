@@ -40,7 +40,7 @@ gravity waves and vortices, studied from a turbulence perspective. I am trained
 in computational, theoretical and experimental tools. You would find
 me using things which are simple, efficent, open-source, and reproducible. Feel
 free to contact me - I am usually reachable via email or the social accounts
-listed below.."""
+listed below."""
 PROFILE_IMAGE = "/images/dp_ashwin.jpg"
 EMBLEMS = (("/images/KTH_Logotyp_RGB_2013-2.svg", "https://kth.se"),)
 FAVICON = "/images/KTH_logo.png"
