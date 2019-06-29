@@ -1,0 +1,9 @@
+search: False
+
+requirements:
+  - requirements.in:
+      update: all
+      pin: True
+  - requirements.txt:
+      update: insecure
+      pin: False
