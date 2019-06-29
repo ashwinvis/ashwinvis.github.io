@@ -50,6 +50,7 @@ CAROUSEL = (
     #  ("Curriculum Vitae", "images/caro_cv.png", "pages/cv.html"),
     ("Research", "images/caro_research1.png", "pages/research.html"),
     ("Research", "images/caro_research2.png", "pages/research.html"),
+    ("Software", "images/caro_software.png", "pages/software.html"),
     (
         "At Linné FLOW Centre, Department of Mechanics, KTH",
         "images/caro_kth.jpg",
