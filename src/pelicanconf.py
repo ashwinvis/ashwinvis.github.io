@@ -37,19 +37,23 @@ SITESUBTITLE = "Ph. D. student in Geophysical Fluid Mechanics and Turbulence"
 SITE_DESCRIPTION = """
 My research centers around geophysical flows, particularly with
 gravity waves and vortices, studied from a turbulence perspective. I am trained
-in computational, theoretical and experimental tools to do this. You would find
-me using things which are simple, efficent, open-source, and reproducible."""
+in computational, theoretical and experimental tools. You would find
+me using things which are simple, efficent, open-source, and reproducible. Feel
+free to contact me - I am usually reachable via email or the social accounts
+listed below.."""
 PROFILE_IMAGE = "/images/dp_ashwin.jpg"
 EMBLEMS = (("/images/KTH_Logotyp_RGB_2013-2.svg", "https://kth.se"),)
 FAVICON = "/images/KTH_logo.png"
 
 # Carousel
 CAROUSEL = (
-    ("Curriculum Vitae", "images/caro_cv.png", "pages/cv.html"),
+    #  ("Curriculum Vitae", "images/caro_cv.png", "pages/cv.html"),
+    ("Research", "images/caro_research1.png", "pages/research.html"),
+    ("Research", "images/caro_research2.png", "pages/research.html"),
     (
         "At Linné FLOW Centre, Department of Mechanics, KTH",
         "images/caro_kth.jpg",
-        "https://www.mech.kth.se/mech/info_staff.xhtml?ID=381",
+        "https://www.kth.se/profile/avmo"
     ),
 )
 
