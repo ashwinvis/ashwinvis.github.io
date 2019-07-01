@@ -68,7 +68,7 @@ LINKS = (
 
 # Social widget
 EMAIL = encrypt_email(AUTHOR, rev_username="sivniwhsa", domain="pm", tld="me")
-GPG = "https://sks-keyservers.net/pks/lookup?op=vindex&search=0x2BF1534545A73FAD"
+GPG = "https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD"
 MASTODON = "https://mastodon.acc.sunet.se/@ashwinvis"
 SOCIAL = (
     # To be uncommented when font-awesome implements fa-gnupg
