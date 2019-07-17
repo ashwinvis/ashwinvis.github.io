@@ -11,7 +11,7 @@ kill:
 restart: kill watch
 
 lint:
-	find src/content -name '*.rst' -exec rst-lint '{}' \;
+	find src/content -name '*.rst' | parallel rst-lint '{}'
 
 clean:
 	rm -rf output
