@@ -145,7 +145,7 @@ cat tweetstodislike.txt | parallel -j4 "echo 'Disliking {}' && ./disliketweet.sh
 tail -f dislike.log
 ```
 
-## Appendix 2: Unstar GitHub repositories
+#### Appendix 2: Unstar GitHub repositories
 
 1. Used [bookmark-github-
    stars](https://kirtan403.github.io/bookmark-github-stars/) to export all my
