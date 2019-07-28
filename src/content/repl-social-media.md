@@ -14,8 +14,10 @@ So we have heard this time and time again.
 1. Surveillance capitalism.
 1. The most profitable companies on the entire planet rely on your data[^data].
 
-[^data]: Also known as [GAFAM, the big four / five](https://en.m.wikipedia.org/wiki/Big_Four_tech_companies).
-  [Framasoft gives excellent talks about it](https://old.framatube.org/media/lets-de-google-ify-the-internet-floss-positive-alt),
+[^data]: Also known as [GAFAM, the big four /
+  five](https://en.m.wikipedia.org/wiki/Big_Four_tech_companies). [Framasoft
+  gave an excellent talk about it FOSDEM
+  2017](https://framatube.org/videos/watch/31225e78-5f41-41dc-bfca-5e63b34e7be4)
   if you don't mind the French accent.
 
 and so on. I believe the agenda for all these companies is to use data to power
