@@ -60,9 +60,10 @@ Therefore I started by cleansing my digital data footprint. I [deleted my
 Facebook account](https://deletefacebook.com) several months ago. Right now I
 deleting all my tweets[^tweets]. My reasons are more than privacy oriented. I
 do not want blood on my hands on a platform that have a proven impact on how
-people think, how they vote and do things. And these are all manipulated by
-their analytics for anyone who pays, and algorithmic timelines and recommendations
-on the user end. I progressively transitioning to more ethical services.
+people think, how they vote and do things. And these platforms profit from
+selling analytics, and manipulate users using algorithmic timelines and
+recommendations. I am therefore progressively transitioning to more ethical
+services.
 
 Unless you are in full control you have to be always to be cautious while
 entrusting some of your data with a third-party service. Even if they are
