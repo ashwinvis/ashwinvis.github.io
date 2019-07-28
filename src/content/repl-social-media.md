@@ -20,7 +20,7 @@ So we have heard this time and time again.
 
 and so on. I believe the agenda for all these companies is to use data to power
 their AI research. And our privacy is just a casualty in this process.  Despite
-all these news and "shocking" revelations that we hear almost every day in the
+all this news and "shocking" revelations that we hear almost every day in the
 news, many tend to stick around and use them, including me[^contra].  There are
 solutions however. And it gets better - what I described below require almost
 zero investment (except for your attention and time, of course).
@@ -56,16 +56,16 @@ into our social media usage. Read what others post, evaluate your thoughts,
 share your thoughts into the platform, keep doing it. What is unique about REPL
 consoles is that **data is ephemeral**. What you type is not meant to last forever.
 
-Therefore I started by cleansing my digital data footprint. I [deleted my
+Therefore, I have started to cleanse my digital data footprint. I [deleted my
 Facebook account](https://deletefacebook.com) several months ago. Right now I
-deleting all my tweets[^tweets]. My reasons are more than privacy oriented. I
-do not want blood on my hands on a platform that have a proven impact on how
+am deleting all my tweets[^tweets]. My reasons are more than privacy oriented.
+I do not want blood on my hands on a platform that have a proven impact on how
 people think, how they vote and do things. And these platforms profit from
 selling analytics, and manipulate users using algorithmic timelines and
 recommendations. I am therefore progressively transitioning to more ethical
 services.
 
-Unless you are in full control you have to be always to be cautious while
+Unless you are in full control, you have to be always to be cautious while
 entrusting some of your data with a third-party service. Even if they are
 ethical now. I remember a time not so long ago, when I had a positive
 impression about Google and its "Don't be evil" tag line[^evil]. I keep archives
