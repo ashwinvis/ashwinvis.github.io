@@ -1,10 +1,11 @@
 ---
-Title: REPL your data footprint
+Title: REPL for your data
 Authors: Ashwin Vishnu
 Date: 2019-07-28
 Tags: social media, privacy, fediverse
 Status: published
 Category: Tech Talk
+Summary: Use ethical solutions. Archive your data. REPL.
 ---
 
 So we have heard this time and time again.
@@ -53,7 +54,7 @@ Pi. You can even get a URL to point to your server at absolutely no charge[^dns]
 jargon for consoles of all sorts: bash, python etc. In this case I apply this
 into our social media usage. Read what others post, evaluate your thoughts,
 share your thoughts into the platform, keep doing it. What is unique about REPL
-consoles are these are ephemeral. They are not meant to last forever.
+consoles is that **data is ephemeral**. What you type is not meant to last forever.
 
 Therefore I started by cleansing my digital data footprint. I [deleted my
 Facebook account](https://deletefacebook.com) several months ago. Right now I
@@ -67,7 +68,10 @@ Unless you are in full control you have to be always to be cautious while
 entrusting some of your data with a third-party service. Even if they are
 ethical now. I remember a time not so long ago, when I had a positive
 impression about Google and its "Don't be evil" tag line[^evil]. I keep archives
-of my Mastodon account[^archive] and will soon add expiration to my posts.
+of my Mastodon account[^archive] and will soon add expiration to my posts. I
+also have this idea:
+
+<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/102518020982921035/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
 #### Appendix: mass tweet deletion
 
