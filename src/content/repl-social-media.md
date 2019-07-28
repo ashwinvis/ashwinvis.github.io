@@ -160,7 +160,7 @@ tail -f dislike.log
    relies on [pyzotero](https://pyzotero.readthedocs.org/en/latest/). The
    documentation is minimal, but you can reuse them if you want.
 1. Finally I run [this
-   script](https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js)
+   script](https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75)
    which relies on [pygithub](https://pygithub.readthedocs.io/en/latest/).
 
 <script src="https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js"></script>
