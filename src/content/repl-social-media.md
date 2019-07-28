@@ -74,7 +74,7 @@ also have this idea:
 
 <iframe src="https://mastodon.acc.sunet.se/@ashwinvis/102518259996206758/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
-#### Appendix: mass tweet deletion
+#### Appendix 1: Mass tweet deletion
 
 So the commands described in the blog post[^tweets] seem to work great. Here
 is what I did following the instructions:
@@ -147,18 +147,19 @@ tail -f dislike.log
 
 #### Appendix 2: Unstar GitHub repositories
 
-1. Used [bookmark-github-
-   stars](https://kirtan403.github.io/bookmark-github-stars/) to export all my
-   GitHub stars as html and imported into [Zotero](https://zotero.org) (you can
-   also import into your browser). I did so because because Zotero also retains
-   valuable metadata (programming language, license, description etc.).
-1. As Zotero does not automatically fetch metadata in its initial import, I
-   wrote a [few
+1. Used [bookmark-github-stars](https://kirtan403.github.io/bookmark-github-stars/)
+   to export all my GitHub stars as html and imported into
+   [Zotero](https://zotero.org) (you can also import into your browser). I did so
+   because because Zotero also retains valuable metadata (programming language,
+   license, description etc.).
+1. As [Zotero does not automatically fetch metadata in its initial
+   import](https://github.com/zotero/zotero/issues/1515), I wrote a [few
    scripts](https://source.coderefinery.org/ashwinvis/zotero-tools) which
    relies on [pyzotero](https://pyzotero.readthedocs.org/en/latest/). The
    documentation is minimal, but you can reuse them if you want.
-1. Finally I run this script which relies on
-   [pygithub](https://pygithub.readthedocs.io/en/latest/)
+1. Finally I run [this
+   script](https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js)
+   which relies on [pygithub](https://pygithub.readthedocs.io/en/latest/).
 
 <script src="https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js"></script>
 
