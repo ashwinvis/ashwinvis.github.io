@@ -118,6 +118,50 @@ cat tweet.json | jq '.[] | .id' -r > tweetstodelete.txt
 
 Now we need something similar for undoing all the likes on Twitter.
 
+**EDIT:** A short how-to "dislike" all your tweets.
+
+Get a list of tweets to dislike from your archive in a
+similar approach. Take the `like.js` file from your archive and make it a
+proper JSON file.
+
+```sh
+cat like.json | jq '.[] | .like.tweetId' -r >! tweetstodislike.txt
+```
+
+The POST request is also similar and contains "destroy". However the tweet ID
+should be in the data / payload. Therefore the curl command looks like (note
+the `$1` where the tweet ID gets substituted):
+
+```sh
+#!/bin/bash
+curl -s 'https://api.twitter.com/1.1/favorites/destroy.json' ...lots of stuff here...\
+  --data"id=$1&cards_platform=Web-13& ...even more stuff..."
+```
+
+Save the command in a file called `disliketweet.sh` and then,
+
+```sh
+cat tweetstodislike.txt | parallel -j4 "echo 'Disliking {}' && ./disliketweet.sh {}" 2>&1 1>> dislike.log &
+tail -f dislike.log
+```
+
+## Appendix 2: Unstar GitHub repositories
+
+1. Used [bookmark-github-
+   stars](https://kirtan403.github.io/bookmark-github-stars/) to export all my
+   GitHub stars as html and imported into [Zotero](https://zotero.org) (you can
+   also import into your browser). I did so because because Zotero also retains
+   valuable metadata (programming language, license, description etc.).
+1. As Zotero does not automatically fetch metadata in its initial import, I
+   wrote a [few
+   scripts](https://source.coderefinery.org/ashwinvis/zotero-tools) which
+   relies on [pyzotero](https://pyzotero.readthedocs.org/en/latest/). The
+   documentation is minimal, but you can reuse them if you want.
+1. Finally I run this script which relies on
+   [pygithub](https://pygithub.readthedocs.io/en/latest/)
+
+<script src="https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js"></script>
+
 [^mast]: Such as [Mastodon](https://joinmastodon.org)
 [^docs]: Good alternatives are [Cryptpad](https://cryptpad.fr/) and
   [Etherpad](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite).
