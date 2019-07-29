@@ -74,7 +74,9 @@ impression about Google and its "Don't be evil" tag line[^evil]. I keep archives
 of my Mastodon account[^archive] and will soon add expiration to my posts. I
 also have this idea:
 
-<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/102518259996206758/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
+<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/102518259996206758/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" height="300" allowfullscreen="allowfullscreen">
+</iframe>
+<script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
 #### Appendix 1: Mass tweet deletion
 
