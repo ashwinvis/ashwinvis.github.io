@@ -1,0 +1,41 @@
+name: Publish pelican website
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Checkout submodules
+      run: |
+        git submodule update --init --recursive
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pelican-themes -i pelican-bluedrop/bluedrop
+    - name: Lint content
+      run: |
+        rst-lint src/content/*.rst
+    - name: Publish
+      run: |
+        cd src
+        make publish
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v1.1.0
+      if: success()
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./output
