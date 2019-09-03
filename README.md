@@ -1,6 +1,6 @@
 # Ashwin Vishnu's website
 
-[![Build Status](https://travis-ci.org/ashwinvis/ashwinvis.github.io.svg?branch=master)](https://travis-ci.org/ashwinvis/ashwinvis.github.io)
+![Build Status](https://github.com/ashwinvis/ashwinvis.github.io/workflows/Publish%20pelican%20website/badge.svg)
 
 ## Requirements
 
