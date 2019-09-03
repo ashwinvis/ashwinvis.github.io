@@ -28,6 +28,10 @@ jobs:
     - name: Lint content
       run: |
         rst-lint src/content/*.rst
+    - name: Publish
+      run: |
+        cd src
+        make publish
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v1.1.0
       if: success()
