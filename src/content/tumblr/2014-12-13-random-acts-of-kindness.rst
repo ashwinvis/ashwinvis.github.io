@@ -3,7 +3,7 @@ Random acts of Kindness
 :date: 2014-12-13 10:55:03
 :author: Ashwin Vishnu
 :category: Blog
-:tags: kindness, strangers
+:tags: kindness, strangers, tumblr
 :slug: 2014-12-13-random-acts-of-kindness
 :status: published
 

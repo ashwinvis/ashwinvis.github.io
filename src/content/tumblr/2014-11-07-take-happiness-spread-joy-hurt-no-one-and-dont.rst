@@ -3,7 +3,7 @@ Quote
 :date: 2014-11-07 23:44:00
 :author: Ashwin Vishnu
 :category: Blog
-:tags: motto
+:tags: motto, tumblr
 :slug: 2014-11-07-take-happiness-spread-joy-hurt-no-one-and-dont
 :status: published
 

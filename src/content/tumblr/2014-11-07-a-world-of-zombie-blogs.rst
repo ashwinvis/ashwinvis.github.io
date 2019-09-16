@@ -3,7 +3,7 @@ A World of Zombie Blogs
 :date: 2014-11-07 23:23:00
 :author: Ashwin Vishnu
 :category: Blog
-:tags: helloworld, introduction
+:tags: helloworld, introduction, tumblr
 :slug: 2014-11-07-a-world-of-zombie-blogs
 :status: published
 
