@@ -1,0 +1,2297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2019-07-17T00:00:00+02:00</updated><subtitle>Ph. D. student in Geophysical Fluid Mechanics and Turbulence</subtitle><entry><title>New article: Shallow water wave turbulence</title><link href="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" rel="alternate"></link><published>2019-07-17T00:00:00+02:00</published><updated>2019-07-17T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-07-17:/new-article-shallow-water-wave-turbulence.html</id><summary type="html">&lt;p&gt;Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area &gt; div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area &gt; div.highlight &gt; pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph &gt; img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
+&lt;style type="text/css"&gt;
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+&lt;/style&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Just today another &lt;a href="https://doi.org/10.1017/jfm.2019.375"&gt;open access
+paper&lt;/a&gt; got published. This paper
+talks about some how turbulence in shallow water equations evolves and
+gives rise to shock waves. There are also some novel statistical results
+which might find use in other fields like acoustics.&lt;/p&gt;
+&lt;div align='center'&gt;
+&lt;a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/shallow-water-wave-turbulence/FC70A8CFDBC333070AC726C363FE3E0B"&gt;
+   &lt;img src="https://static.cambridge.org/resource/id/urn:cambridge.org:id:binary-alt:20190711124349-15858-optimisedImage-S0022112019003756_fig15g.jpg" width="500" alt="image" /&gt;
+&lt;/a&gt;
+
+&lt;p&gt;
+Figure: Shocks becoming stronger and weaker with variations in Reynolds number and Froude numbers.
+&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Find more about it in &lt;a href="https://doi.org/10.1017/jfm.2019.375"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Abstract"&gt;Abstract&lt;a class="anchor-link" href="#Abstract"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The dynamics of irrotational shallow water wave turbulence forced in large
+scales and dissipated at small scales is investigated. First, we derive the
+shallow water analogue of the `four-fifths law' of Kolmogorov turbulence for a
+third order structure function involving velocity and displacement increments.
+Using this relation and assuming that the flow is dominated by shocks we
+develop a simple model predicting that the shock amplitude scales as $(\epsilon
+d)^{1/3}$, where $\epsilon$ is the mean dissipation rate and $d$ the mean
+distance between the shocks, and that the $p$:th order displacement and
+velocity structure functions scale as $(\epsilon d)^{p/3} r/d$, where $r$ is
+the separation. Then we carry out a series of forced simulations with
+resolutions up to $7680^2$, varying the Froude number, $F_{f} = \epsilon^{1/3}
+/ ck_f^{1/3}$, where $k_f$ is the forcing wave number and $c$ is the wave
+speed. In all simulations a stationary state is reached in which there is a
+constant spectral energy flux and equipartition between kinetic and potential
+energy in the constant flux range. The third order structure function relation
+is satisfied with a high degree of accuracy. Mean energy is found to scale as
+$E \sim \sqrt{\epsilon c/k_f}$,
+and is also dependent on resolution, indicating
+that shallow water wave turbulence does not fit into the paradigm of a
+Richardson-Kolmogorov cascade. In all simulations shocks develop, displayed as
+long thin bands of negative divergence in flow visualisations. The mean
+distance between the shocks is found to scale as $d \sim F_f^{1/2}/k_f$.
+Structure functions of second and higher order are found to scale in good
+agreement with the model. We conclude that in the weak limit, $F_f \rightarrow
+0$, shocks will become denser and weaker and finally disappear for a finite
+Reynolds number. On the other hand, for a given $F_{f}$, no matter how small,
+shocks will prevail if the Reynolds number is sufficiently large.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;
+</content><category term="fluid-mechanics"></category><category term="open-source"></category><category term="open-access"></category></entry><entry><title>Why Open-Source?</title><link href="https://ashwinvis.github.io/why-open-source.html" rel="alternate"></link><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-01-06:/why-open-source.html</id><summary type="html">&lt;p&gt;Most of us who are engaged in development or use of open-source software have
+one reason or another to do it. The question of &amp;quot;Why open-source?&amp;quot; is something
+we should all reflect upon once, since we should be well prepared to answer the
+same question confidently in the future.&lt;/p&gt;
+&lt;p&gt;It …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Most of us who are engaged in development or use of open-source software have
+one reason or another to do it. The question of &amp;quot;Why open-source?&amp;quot; is something
+we should all reflect upon once, since we should be well prepared to answer the
+same question confidently in the future.&lt;/p&gt;
+&lt;p&gt;It was inspiring to see sessions dedicated to open-source in AGU 2017, and even
+more exciting to hear mentions of Python usage in talks here and there. I really
+encourage you to have a look at this informal session titled &lt;a class="reference external" href="https://www.youtube.com/watch?v=0GO4ZZ5Ry6M"&gt;Open-Source
+Software in the Geosciences&lt;/a&gt;.
+The content of the session applies to all open-source development in sciences in
+general, although it was intended to be focussed on geosciences.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0GO4ZZ5Ry6M"
+frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;p&gt;Since the video is rather long, I have summarized the gist of the talk below.
+The following questions were asked to the panel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. What considerations went into the decision of making a software openly
+available?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Because there were no alternative (both open or closed) for a specific new
+scientific method.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Because it is the right thing to do, since:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Journals require through terms and condition for the author to make
+results completely reproducible, a condition rarely enforced.&lt;/li&gt;
+&lt;li&gt;Science conducted using the public's tax money, rightfully belongs to
+the public.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;1.1. ... decision of not making a software openly available?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Slobbily written open-source code can flood your email inbox with queries in
+the future. Counterpoint: bad code is much better than no code at all.&lt;/li&gt;
+&lt;li&gt;Current academic setup does not consider software development as a metric for
+career advancement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Has making FOSS affected your career?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;With community use, comes fame, and through fame one gets more citations
+(caution, in the long term). Documentation and tests are very important to
+promote community adoption.&lt;/li&gt;
+&lt;li&gt;A novel method implemented in an open source software can make it a lot more
+attractive to the community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2.1. Means to promote your code&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Through talks, social and professional contacts, Github (and similar).&lt;/li&gt;
+&lt;li&gt;Should be citeable. i.e. include a BibTeX in the README. Options include
+&lt;a class="reference external" href="https://www.earthcube.org/"&gt;Earthcube (to publish workflows)&lt;/a&gt;, &lt;a class="reference external" href="https://openresearchsoftware.metajnl.com"&gt;JORS&lt;/a&gt;, &lt;a class="reference external" href="http://joss.theoj.org/"&gt;JOSS&lt;/a&gt;
+(open-access journals dedicated to open-source software).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Community impact&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Colleagues inspired to use software, provided if they are open-minded and the
+supervisors are encouraging.&lt;/li&gt;
+&lt;li&gt;Adoption of the software is typically slow in the first few years, but picks
+up gradually - so stay strong!&lt;/li&gt;
+&lt;li&gt;Python is popular these days. Why? The possibility to integrate workflow,
+including I/O and plotting.&lt;/li&gt;
+&lt;li&gt;Could become a benchmark code, for even validating commercial codes!&lt;/li&gt;
+&lt;li&gt;Will license pose a barrier for use of the code? A general thumbrule could be
+as follows. Intended for industry use or to function as a library: choose GPL
+v2, BSD or MIT. Intended only for academic and non-profit applications, and to
+ensure pull-requests: choose GPL v3.&lt;/li&gt;
+&lt;li&gt;Learning version control (mercurial or git) can be a barrier to start with.&lt;/li&gt;
+&lt;li&gt;Grad students go for open-source software just to get the work done. In the
+long run however they &lt;strong&gt;may&lt;/strong&gt; contribute back. Encourage them, even if they
+don't fully understand how to keep a consistent code style, and the importance
+of comments and documentations. In short, keep the code review process
+constructive. It is a good idea to maintain a one page &lt;em&gt;CODE_OF_CONDUCT&lt;/em&gt; text
+file.&lt;/li&gt;
+&lt;li&gt;Some organisations which are promoting open-science: &lt;a class="reference external" href="https://software-carpentry.org/"&gt;Software Carpentry&lt;/a&gt; and &lt;a class="reference external" href="https://science.mozilla.org/"&gt;Mozilla Science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Has your perception changed through making FOSS?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Version control offers sense of security in case your laptop gets stolen or
+broken.&lt;/li&gt;
+&lt;li&gt;Unittests offer confidence in your results, and ensures less bugs.&lt;/li&gt;
+&lt;li&gt;Continuous testing ensures others will not break your unittests, thus existing
+functionality.&lt;/li&gt;
+&lt;li&gt;Feel-good effect to have become a better scientist? Perhaps.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;5. Any regrets?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Poor choice of license in the beginning. Hard to change in the long run.&lt;/li&gt;
+&lt;li&gt;Always ask your boss before you release the code.&lt;/li&gt;
+&lt;li&gt;Email queries about a piece of code you wrote long back, that you have no idea
+about now. No docs!&lt;/li&gt;
+&lt;li&gt;Lonely in the absence of community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;6. Future of FOSS development&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;More professional, disciplined codes.&lt;/li&gt;
+&lt;li&gt;Web services - codes deployed as a service opens up the possibility for a
+layman to make a simulation even through one's smart phone. Right now it is
+restricted to computationally non-intensive calculations (for eg. Jupyter
+notebooks, JupyterHub). An example of this is the &lt;a class="reference external" href="http://turbulence.pha.jhu.edu/webquery/query.aspx"&gt;JHU turbulence database&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Research funds and resources allocated to code development, not just for
+buying laboratory apparatus and commercial software.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An inspiring quote to end with:&lt;/p&gt;
+&lt;img alt="Quote from the video" src="../images/why-open-source-quote.png" style="width: 75%;" /&gt;
+</content><category term="open-source"></category><category term="conference"></category></entry><entry><title>Video</title><link href="https://ashwinvis.github.io/2015-10-28-stockholm-throught-the-years-sthlm-urbanization.html" rel="alternate"></link><published>2015-10-28T13:54:03+01:00</published><updated>2015-10-28T13:54:03+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2015-10-28:/2015-10-28-stockholm-throught-the-years-sthlm-urbanization.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="None"&gt;via&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Stockholm throught the years #sthlm #urbanization (at KTH Royal Institute of Technology)&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="None"&gt;via&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Stockholm throught the years #sthlm #urbanization (at KTH Royal Institute of Technology)&lt;/p&gt;
+</content><category term="urbanization"></category><category term="sthlm"></category><category term="tumblr"></category></entry><entry><title>Quote</title><link href="https://ashwinvis.github.io/2015-03-29-so-many-places-movies-music-books-and-journal.html" rel="alternate"></link><published>2015-03-29T13:15:09+02:00</published><updated>2015-03-29T13:15:09+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2015-03-29:/2015-03-29-so-many-places-movies-music-books-and-journal.html</id><summary type="html">&lt;p&gt;So many places, movies, music, books and journal papers. So little time.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Me&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I know I can’t cover it in a lifetime.&lt;/div&gt;
+&lt;div class="line"&gt;&lt;strong&gt;Nirvana is overrated&lt;/strong&gt;. People invented it in the past because there was no internet and they got bored. Why break the circle when there is so much …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;So many places, movies, music, books and journal papers. So little time.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Me&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I know I can’t cover it in a lifetime.&lt;/div&gt;
+&lt;div class="line"&gt;&lt;strong&gt;Nirvana is overrated&lt;/strong&gt;. People invented it in the past because there was no internet and they got bored. Why break the circle when there is so much left to explore?&lt;/div&gt;
+&lt;/div&gt;
+&lt;/p&gt;&lt;/p&gt;</content><category term="rant"></category><category term="life"></category><category term="tumblr"></category></entry><entry><title>Random acts of Kindness</title><link href="https://ashwinvis.github.io/2014-12-13-random-acts-of-kindness.html" rel="alternate"></link><published>2014-12-13T10:55:03+01:00</published><updated>2014-12-13T10:55:03+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2014-12-13:/2014-12-13-random-acts-of-kindness.html</id><summary type="html">&lt;p&gt;I lost my access card to my lab.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Damn.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;It could have fallen anywhere in my 45 min. daily commute from my apartment to the university. I changed a bus and then took two metro trains. Practically untraceable. When I came back home, I turned my apartment inside out in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I lost my access card to my lab.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Damn.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;It could have fallen anywhere in my 45 min. daily commute from my apartment to the university. I changed a bus and then took two metro trains. Practically untraceable. When I came back home, I turned my apartment inside out in vain.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;The next day, I entered my lab with the help of my friend, Nasser. I asked him if losing the access card was a problem and whether I would end up paying a fine. He laughed and said, “No, it is fine. A lot of people lose it all the time.”&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Getting a replacement access card was a hassle nevertheless.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;I returned to my apartment, not realising I left my key hanging on the keyhole outside as I opened the door. A few minutes later, kind neighbours (who I barely knew, since I was new here), rang the bell, and handed the key to me, with a “be-careful” look.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;An hour later, I went down to go to the supermarket. And hey! There it was…. MY ACCESS CARD! Somebody figured out my address by searching online (In Sweden, all your contact details are public and open to all) and returned it. It was hanging on the notice board at ground floor. There was no message.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;div class="figure"&gt;
+&lt;img alt="" src="https://78.media.tumblr.com/ea4cf12bdb4fce8e9ed9794d019da07d/tumblr_inline_pfjaz1p6R01t4yejq_540.jpg" /&gt;
+&lt;/div&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;p&gt;To the stranger, who had the heart to return my card, thank you!&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Such random acts of kindness, without expecting gratitude is enough to spread happiness around the world.&lt;/p&gt;
+&lt;/p&gt;</content><category term="kindness"></category><category term="strangers"></category><category term="tumblr"></category></entry><entry><title>House Nehru</title><link href="https://ashwinvis.github.io/2014-12-05-house-nehru.html" rel="alternate"></link><published>2014-12-05T22:47:05+01:00</published><updated>2014-12-05T22:47:05+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2014-12-05:/2014-12-05-house-nehru.html</id><summary type="html">&lt;p&gt;It just occurred to me how similar the Nehru dynasty fits in the world of Westeros, the Game of Thrones world. You might have already guessed by now.&lt;/p&gt;
+&lt;p&gt;Yes I am talking about the all so proud House Stark.&lt;/p&gt;
+&lt;p&gt;*spoilers alert*&lt;/p&gt;
+&lt;p&gt;Rajiv Gandhi (Ned Stark) goes on a foreign trip …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It just occurred to me how similar the Nehru dynasty fits in the world of Westeros, the Game of Thrones world. You might have already guessed by now.&lt;/p&gt;
+&lt;p&gt;Yes I am talking about the all so proud House Stark.&lt;/p&gt;
+&lt;p&gt;*spoilers alert*&lt;/p&gt;
+&lt;p&gt;Rajiv Gandhi (Ned Stark) goes on a foreign trip to the south, Sri Lanka (Casterly Rock), so as to deal with regional politics. He ends up losing his life, unable to return to his home land. Becomes a legend in his nation.&lt;/p&gt;
+&lt;p&gt;Sonia Gandhi (Katlyn Stark) pushes her favourite son to lead the country.&lt;/p&gt;
+&lt;p&gt;Rahul Gandhi (Robb Stark) thrust into politics at a &amp;quot;tender&amp;quot; age, turns out to be way too emotional and inexperienced to meet the expectations of his bannermen. Loses way too many men in the elections, rendering his campaign against the BJP (Lannisters) a lost cause.&lt;/p&gt;
+&lt;p&gt;There may be more like Varun Gandhi (Theon Greyjoy) so on...&lt;/p&gt;
+&lt;p&gt;Coincidence?&lt;/p&gt;
+&lt;p&gt;Nah!&lt;/p&gt;
+&lt;p&gt;Indian National Congress is way too &amp;quot;honest&amp;quot; to be House Stark.&lt;/p&gt;
+&lt;p&gt;Winter is coming. Enjoy... Merry Xmas!&lt;/p&gt;
+</content><category term="game of thrones"></category><category term="congress"></category><category term="indian politics"></category><category term="tumblr"></category></entry><entry><title>Quote</title><link href="https://ashwinvis.github.io/2014-11-07-take-happiness-spread-joy-hurt-no-one-and-dont.html" rel="alternate"></link><published>2014-11-07T23:44:00+01:00</published><updated>2014-11-07T23:44:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2014-11-07:/2014-11-07-take-happiness-spread-joy-hurt-no-one-and-dont.html</id><summary type="html">&lt;p&gt;Take Happiness. Spread Joy. Hurt no one. And don't give in to sadness.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Myself.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;May seem like a very impractical, inhumane way to live by. But it is very logical and at the end of the day, you will be happy. With a mind without pain and full of joy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Take Happiness. Spread Joy. Hurt no one. And don't give in to sadness.&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;Myself.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;May seem like a very impractical, inhumane way to live by. But it is very logical and at the end of the day, you will be happy. With a mind without pain and full of joy, how will you ever hurt others?&lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;</content><category term="motto"></category><category term="tumblr"></category></entry><entry><title>A World of Zombie Blogs</title><link href="https://ashwinvis.github.io/2014-11-07-a-world-of-zombie-blogs.html" rel="alternate"></link><published>2014-11-07T23:23:00+01:00</published><updated>2014-11-07T23:23:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2014-11-07:/2014-11-07-a-world-of-zombie-blogs.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;*sighs*&lt;/strong&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Yes, I'm back.&lt;/p&gt;
+&lt;/p&gt;&lt;ol class="upperalpha simple" start="4"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha" start="2"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha" start="4"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Denial&lt;/li&gt;
+&lt;li&gt;Anger&lt;/li&gt;
+&lt;li&gt;Bargaining&lt;/li&gt;
+&lt;li&gt;Depression&lt;/li&gt;
+&lt;li&gt;Acceptance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Kübler-Ross model (yeah, I googled it, and kudos to Wikipedia) of grief. Usually applies to terminally ill people and families under the face of sudden loss. But well it can apply to anything. Even writer's block.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a class="reference external" href="http://bigfatpage.blogspot.com"&gt;My blog&lt;/a&gt; had went …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;*sighs*&lt;/strong&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Yes, I'm back.&lt;/p&gt;
+&lt;/p&gt;&lt;ol class="upperalpha simple" start="4"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha" start="2"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha" start="4"&gt;
+&lt;li&gt;&lt;ol class="first upperalpha"&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/p&gt;&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Denial&lt;/li&gt;
+&lt;li&gt;Anger&lt;/li&gt;
+&lt;li&gt;Bargaining&lt;/li&gt;
+&lt;li&gt;Depression&lt;/li&gt;
+&lt;li&gt;Acceptance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Kübler-Ross model (yeah, I googled it, and kudos to Wikipedia) of grief. Usually applies to terminally ill people and families under the face of sudden loss. But well it can apply to anything. Even writer's block.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a class="reference external" href="http://bigfatpage.blogspot.com"&gt;My blog&lt;/a&gt; had went into a state of prolonged stagnation. And I felt that it had been neglected for too long that, that no post can save it from this coma.&lt;/p&gt;
+&lt;/p&gt;&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;/p&gt;&lt;p&gt;It was time to reinvent, for renaissance!&lt;/p&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/p&gt;&lt;p&gt;&lt;div class="figure"&gt;
+&lt;img alt="" src="https://78.media.tumblr.com/cd0354bfb47a24ff5a177cb46bba5e38/tumblr_inline_pfjaz1Tw2Y1t4yejq_540.png" /&gt;
+&lt;/div&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;p&gt;To arms!&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;I knew tumblr existed. But when I first tried it, I found it too short, too cocky. Too twitterish - only not limited to 140 characters that's all. But things have changed, blogs are becoming redundant in a fast shrinking world. If I don't have time to write, how can I expect you to find time to read.&lt;/p&gt;
+&lt;/p&gt;&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;/p&gt;&lt;p&gt;That doesn't mean we stop to think&lt;/p&gt;
+&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/p&gt;&lt;p&gt;It is human nature to think and ponder. And the more out of the box we think, we push the limits of this ephemeral world of thoughts further. So I persist, with my big fat mouth. Bear with me.&lt;/p&gt;
+&lt;/p&gt;</content><category term="helloworld"></category><category term="introduction"></category><category term="tumblr"></category></entry><entry><title>Looking Back</title><link href="https://ashwinvis.github.io/looking-back.html" rel="alternate"></link><published>2014-01-01T20:46:00+01:00</published><updated>2014-01-01T20:46:00+01:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2014-01-01:/looking-back.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;It's that day of the year again. Resolutions, promises to change, and
+parties to kickstart the ride. Surprisingly, I find a lot of people,
+cheerful all around, everywhere! It is humbling to witness how a random
+date, set as the &amp;quot;starting point&amp;quot; of the Earth's perennial revolution
+around the Sun …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;It's that day of the year again. Resolutions, promises to change, and
+parties to kickstart the ride. Surprisingly, I find a lot of people,
+cheerful all around, everywhere! It is humbling to witness how a random
+date, set as the &amp;quot;starting point&amp;quot; of the Earth's perennial revolution
+around the Sun, could collectively influence so many minds.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;Let us not digress. Instead of piling on more hollow promises, I thought
+I would spare a moment and see how things have been. A little over two
+years back, I wrote this piece on my blog and called it my &lt;a class="reference external" href="https://bigfatpage.blogspot.in/2011/04/things-to-do-before-i-turn-25.html"&gt;&amp;quot;Bucket
+List&amp;quot;&lt;/a&gt;
+(didn't realise back then that the phrase was reference to the idiom,
+&lt;em&gt;kick the bucket&lt;/em&gt; or &lt;em&gt;to die&lt;/em&gt;). Looking back, I am glad that I could
+cross out most of the points. Some ride it has been. Went places, learnt
+the guitar(mastery would have to wait), started reading again, hardly
+watch any movies these days (damn! a stupid idea. What was I thinking?),
+met amazing friends, let go of all the miseries and opened up my mind
+and yeah, found closure to a 6 year long dream (mmhmm!). All that with
+five months left to 25.&lt;/p&gt;
+&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;/div&gt;&lt;p&gt;It is interesting how the course of your life, and your priorities
+change in a matter of few years; just when I was starting think that you
+hardly change anymore after adulthood. Not just me, I have noticed the
+same with all my friends, even the most &amp;quot;inertial&amp;quot; ones yearn change. I
+keep getting proved wrong over and over again. Well, Forrest Gump, you
+were right. &lt;em&gt;Life is a box of chocolates.&lt;/em&gt;&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2014/01/430080_10150678754909859_666309858_11045588_1531052424_n.jpg"&gt;&lt;img alt="image0" src="https://bigfatpage.files.wordpress.com/2014/01/430080_10150678754909859_666309858_11045588_1531052424_n.jpg?w=300" style="width: 640px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;What next? Well, the way ahead is still foggy. The only way to find out
+is to try and set out on the journey. Uncertain times are exciting! As
+things settle down to normalcy, who knows, I might write down another
+Bucket List again.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;So for now, Glückliches neues Jahr!&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;P.S: Although I'm fairly confident that the above translation makes
+sense, if it is wrong the blame goes to Google.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content><category term="life"></category><category term="resolution"></category></entry><entry><title>The Dive</title><link href="https://ashwinvis.github.io/the-dive.html" rel="alternate"></link><published>2013-07-15T04:28:00+02:00</published><updated>2013-07-15T04:28:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2013-07-15:/the-dive.html</id><summary type="html">&lt;p&gt;I make it a point that I don't let my rage take control. We all come to
+a tipping point at times. My friends would know that I get pissed very
+rarely, and as far as my memories go, there were only handful of
+incidents. And I regret all of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I make it a point that I don't let my rage take control. We all come to
+a tipping point at times. My friends would know that I get pissed very
+rarely, and as far as my memories go, there were only handful of
+incidents. And I regret all of them. No good comes out of an angry head.
+It is never fun. All it leaves are scars for life. Well, as one of my
+friends quoted: &lt;em&gt;&amp;quot;One who angers you, masters you.&amp;quot;&lt;/em&gt; Can't agree more:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+The more he looked, the more he saw pain in the world yonder.
+Wakes up everyday, setting the weight on his shoulders aside,
+Navigate from dawn to dusk and watch the sun subside.
+Unwillingly, he chased the sunset of his own life.
+One more day. One more day closer.
+
+All he yearned was to spread smiles in the journey.
+Unfazed by his heartbeats, he told them what they wished to hear.
+Yet once a while, he observed the fake world near
+Actors, manipulators, crooks, con-artists all around him.
+How he wished he could make amends, into the way it should be.
+He dived into calmness of the pool around him.
+
+Words escaped his lips, before he thought it through.
+Turns back to see chaos, delivered by his words, muddying the pool.
+The dirt of his doing dripped down his back as he rose.
+Things won't be the same, even in his dreams.
+
+The audience around the pool sneered aloud.
+&amp;quot;Lie, you should, if you seek your place in this show of clown
+faces,&amp;quot;
+Worn he was of pretensions and so he lived on with his
+differences.
+Mistaken by pride and principles, he might have been.
+I ask you, my friend, would you have the courage to do the same?
+&lt;/pre&gt;
+</content><category term="poetry"></category></entry><entry><title>The thin line between being a Cynic and a Critic</title><link href="https://ashwinvis.github.io/the-thin-line-between-being-a-cynic-and-a-critic.html" rel="alternate"></link><published>2013-06-04T08:03:00+02:00</published><updated>2013-06-04T08:03:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2013-06-04:/the-thin-line-between-being-a-cynic-and-a-critic.html</id><summary type="html">&lt;p&gt;Have you seen this guy on the right, people?&amp;nbsp; &amp;quot;The Thinker&amp;quot; that's what
+he's called. Ever wondered why he's crouching so low? Some may say he's
+deep in his thought. I beg to differ. It is the weight of his
+preoccupation hanging on his shoulders. Can't you see this guy …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Have you seen this guy on the right, people?&amp;nbsp; &amp;quot;The Thinker&amp;quot; that's what
+he's called. Ever wondered why he's crouching so low? Some may say he's
+deep in his thought. I beg to differ. It is the weight of his
+preoccupation hanging on his shoulders. Can't you see this guy is
+depressed?!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg"&gt;&lt;img alt="image0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_Thinker,_Auguste_Rodin.jpg/321px-The_Thinker,_Auguste_Rodin.jpg" style="width: 214px; height: 320px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Knowing too much can be a pain in the neck. To be enlightened about
+world (read: too much of news, Facebook shares, Twitter, TV, and
+Googling) burdens your mind with negativity. Then, your dear friend make
+you sit and watch a bunch of Youtube conspiracy theories. Follows a
+ranting session on &amp;quot;how the world has gone to the dogs&amp;quot;, &amp;quot;scams&amp;quot;,
+&amp;quot;corporates&amp;quot;, and &amp;quot;corruption&amp;quot;. Keep doing that, and before you know it,
+you'll end up bitter and start sneering at everything around you.
+Now that we have established media hype and bias, what's your next best
+option? They say &lt;em&gt;ignorance is bliss&lt;/em&gt;. So, it would have been better to
+not read the news, drink a cup of coffee and enjoy the evening, right?
+WRONG! It's no fun being a dumb retard either.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Choose your sources wisely.&lt;/strong&gt; If you read the Times of India
+regularly and believe in all the speculations on Aaj Tak, lobotomy is
+your best option. (Not just these two, but I could name other lost
+causes.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Be curious. Question.&lt;/strong&gt; Most of the conspiracy theories and e-mail
+hoaxes are with &amp;quot;evidence&amp;quot; that are webpages on the Net itself.
+Authentic, isn't it? I'm not asking you to Google to prove it. It's
+like that line in &lt;em&gt;Alchemist:&amp;nbsp;&amp;nbsp;* &amp;quot;*When you want something, all the
+universe conspires in helping you to achieve it&lt;/em&gt;.&amp;quot; Google will always
+deliver whatever you seek. Don't mug up any such fact on the net.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Follow blogs and opinions by unbiased&lt;/strong&gt; &lt;strong&gt;people.&lt;/strong&gt; That my friend,
+is a good start to clear your head and form opinions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Here are some &amp;quot;few good men&amp;quot;:&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://chomsky.info/articles.htm"&gt;Noam Chomsky&lt;/a&gt;, &lt;a class="reference external" href="https://www.rameshsrivats.net/"&gt;Ramesh
+Srivats&lt;/a&gt;, &lt;a class="reference external" href="https://www.richarddawkins.net/"&gt;Richard
+Dawkins&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;and many political satirists like: Jon Stewart, Stephen Colbert,
+Sumeet Raghavan. Do tell me if there are others of the same repute. I
+would be interested.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Internet"></category><category term="psychology"></category><category term="thin line"></category></entry><entry><title>Being a Malayali</title><link href="https://ashwinvis.github.io/being-a-malayali.html" rel="alternate"></link><published>2013-05-08T19:33:00+02:00</published><updated>2013-05-08T19:33:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2013-05-08:/being-a-malayali.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;... and not a Keralite.&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;p&gt;I've been away from my homeland, for two years straight. Situations
+throw you into a mish-mash&amp;nbsp; of people hailing from all over India, and I
+accept, it was weird and unsettling in the beginning. But you change
+overtime, slowly. And armed with the following superpowers vested …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;... and not a Keralite.&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;p&gt;I've been away from my homeland, for two years straight. Situations
+throw you into a mish-mash&amp;nbsp; of people hailing from all over India, and I
+accept, it was weird and unsettling in the beginning. But you change
+overtime, slowly. And armed with the following superpowers vested in
+you, life out there is cakewalk.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Listen and adapt -&lt;/strong&gt; I don't know how true this is, but a friend of
+mine said that Malayalam is the second most difficult language to
+learn, right under Mandarin. But it seems plausible, since it is an
+elaborately designed tongue. The uninitiated would find it hard to
+even tell the words apart as we speak! There are hardly any breaks
+between words - it just rolls and gurgles on to the end. Since it's
+hard for others to learn our language, you are left with no option,
+but to learn theirs - which comes with ease, slowly but surely.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encrypted tongue -&lt;/strong&gt; It works most of the time. You could shout and
+abuse each other in the metro, in the bus, or even in the middle of
+the road, and no one would have a clue. Somethings that you don't get
+to do back home. But.... there is a catch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Wherever you go, they are there -&lt;/strong&gt; It's like an epidemic. You find
+them everywhere, even where you don't expect them at all! Sometimes
+they just pretend to be an outsider, and overhear all your
+conversations. And they'd just leave with a oneliner in Malayalam at
+the end, making you look like a total&amp;nbsp; ശശി .&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One for all, and all for one -&lt;/strong&gt; Back in Kerala, you just get tired
+of seeing too many &amp;quot;blaady mallus.&amp;quot; But once you realise you are
+alone, even a complete stranger would seem like a long lost friend
+(if he's some random connection with you, god help him). And you
+would end up conversing stuff that you normally wouldn't ... to a
+stranger, c'mon! You are that vulnerable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of day, you have your bunch of friends, who reassure you that
+the place you live in is a home away from home. That occasional taste of
+the native cuisine, is enough to drive your miseries away and keep you
+going.&lt;/p&gt;
+&lt;/div&gt;</content><category term="life"></category><category term="survival"></category></entry><entry><title>Voices inside: What makes us human</title><link href="https://ashwinvis.github.io/voices-inside-what-makes-us-human.html" rel="alternate"></link><published>2012-10-05T14:45:00+02:00</published><updated>2012-10-05T14:45:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2012-10-05:/voices-inside-what-makes-us-human.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;Those tiny voices inside your head!&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;p&gt;As Jim Carrey said (on a lighter note, of course) we are always just one
+step away from insanity. Your mind is a pandora's box that cooks up all
+the evil you could do at &amp;quot;the moment.&amp;quot; Read these weird thoughts; you
+might have …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;Those tiny voices inside your head!&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;p&gt;As Jim Carrey said (on a lighter note, of course) we are always just one
+step away from insanity. Your mind is a pandora's box that cooks up all
+the evil you could do at &amp;quot;the moment.&amp;quot; Read these weird thoughts; you
+might have had them before - from time to time. Be it&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;jumping off the cliff while being awestruck at the suicide point, or&lt;/li&gt;
+&lt;li&gt;dancing in the middle of the road, or&lt;/li&gt;
+&lt;li&gt;imagining yourself beating the shit out of a guy in front of you,
+going on... and on... speaking nothing other than bullshit (with a
+baseball bat when the situation demands it).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;Your brain is a weird place. It is like a super-computer which figures
+out all the possible chess moves in front of you.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;It is that tiny voice inside your head that holds you back from all the
+wrong, insane, suicidal moves. It just tells you:&lt;/p&gt;
+&lt;/div&gt;
+
+ *"Uh-uh-uhh.... It's counter-productive!* "&lt;p&gt;And you stop. You throw all those thoughts away in the trash can. Let's
+call it the &lt;strong&gt;voice of control&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;p&gt;The catch is - you can't control that voice in your head. Reasoning and
+logic can only bargain a little. You can never turn it off. If we were
+allowed to do it, anarchists, psychopaths and criminals will be all
+around. So it is fine the way it is.&lt;/p&gt;
+&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2012/10/devilandangel.jpg"&gt;&lt;img alt="image0" src="https://bigfatpage.files.wordpress.com/2012/10/devilandangel.jpg" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;Then, there is another voice. Unlike the voice of control, which asks
+you to stop; this is like an inner urge which ask you to &lt;em&gt;start doing
+stuff,&lt;/em&gt; that you normally, &amp;quot;logically&amp;quot; don't want to do. To make the
+idea simple enough, let's call it the &lt;strong&gt;voice of heart&lt;/strong&gt;. Although it
+feels like a pounding in your head more than the heart.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;be it helping out a good friend in need, when you have &amp;quot;loads&amp;quot; of
+work to do on your own; or&lt;/li&gt;
+&lt;li&gt;a parent taking his/her kid to the children's park&amp;nbsp;even though&amp;nbsp;he/she
+is worn out after a day's work; or&lt;/li&gt;
+&lt;li&gt;falling in love and that lingering infatuation or crush; or&lt;/li&gt;
+&lt;li&gt;helping out someone you care with shopping, although you couldn't
+stand shopping when you're not doing it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;p&gt;No matter how much you have planned and premeditated, that you won't do
+it,&amp;nbsp;you &lt;strong&gt;finally&lt;/strong&gt; end up doing it. You will break your own plan, and
+there you go.&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;The catch here too, is that you can't stop it. Maybe if you are really
+strong at heart (figuratively), and have a will of steel, you can fight
+it out, and suppress it.&amp;nbsp;But still, the pounding in the head remains.
+The voice shouts back at you for being an insensitive prick, and you are
+filled with regret.&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;p&gt;These random voices are what end up as decisions and what makes us
+human. Unique, unpredictable, but equally compassionate beings.&lt;/p&gt;
+&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;P.S.: Correct me if I'm wrong. Just feel free to reply.&lt;/div&gt;
+&lt;div class="line"&gt;Jim Carrey's take : &lt;a class="reference external" href="https://youtu.be/lbqxkS2ssUI?t=5m3s"&gt;https://youtu.be/lbqxkS2ssUI?t=5m3s&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="emotion"></category><category term="life"></category><category term="psychology"></category></entry><entry><title>How to survive the Great Slowdown</title><link href="https://ashwinvis.github.io/how-to-survive-the-great-slowdown.html" rel="alternate"></link><published>2012-08-18T06:32:00+02:00</published><updated>2012-08-18T06:32:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2012-08-18:/how-to-survive-the-great-slowdown.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;On the backdrop of recent events when our beloved &lt;a class="reference external" href="https://in.reuters.com/article/2012/08/15/india-gdp-manmohan-singh-idINDEE87E01I20120815"&gt;King Singh gave a
+heartbroken I-day
+speech&lt;/a&gt;,
+&lt;a class="reference external" href="https://in.reuters.com/article/2012/08/18/india-economy-gdp-panel-idINDEE87G02G20120818"&gt;all hope seems to be
+lost&lt;/a&gt;
+and the media starts scaring you with &lt;a class="reference external" href="https://in.reuters.com/article/2012/08/18/india-ratings-junk-investment-idINDEE87F0IK20120818"&gt;impending
+doom&lt;/a&gt;;
+I thought I would share a few pointers that would help the &lt;em&gt;selfish
+anarchist&lt;/em&gt; in you survive in the …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;On the backdrop of recent events when our beloved &lt;a class="reference external" href="https://in.reuters.com/article/2012/08/15/india-gdp-manmohan-singh-idINDEE87E01I20120815"&gt;King Singh gave a
+heartbroken I-day
+speech&lt;/a&gt;,
+&lt;a class="reference external" href="https://in.reuters.com/article/2012/08/18/india-economy-gdp-panel-idINDEE87G02G20120818"&gt;all hope seems to be
+lost&lt;/a&gt;
+and the media starts scaring you with &lt;a class="reference external" href="https://in.reuters.com/article/2012/08/18/india-ratings-junk-investment-idINDEE87F0IK20120818"&gt;impending
+doom&lt;/a&gt;;
+I thought I would share a few pointers that would help the &lt;em&gt;selfish
+anarchist&lt;/em&gt; in you survive in the days ahead.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;There are some nonsensical things we do, that are considered OK. I
+wouldn't actually call it austerity measures. Think about these and see
+if you can stop doing them.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Start cutting down on overpriced junk food.&lt;/strong&gt; A few months ago, I
+saw a donation box in KFC that wanted me to donate some spare change
+to conquer &amp;quot;hunger in the world&amp;quot;. Makes you feel guilty, doesn't it?
+I was holding that pricey burger in my hand, and I realized that I
+don't actually need it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Get used to cheap transport&lt;/strong&gt;. Once you are employed and you have
+the luxury of commuting in your own motorbikes and buying Air trips
+back and forth, its hard to imagine going back to school-days when
+your pocket money was a 100 Rs. ($2 in those days. Not now.) note for
+a month. Brush up your footboard-hanging and hitchhiking skills.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;strong&gt;Recognize your *first-world* *problems* and deal with it.&lt;/strong&gt; When
+you are in your comfort zone, it's natural that you dig up
+discomforts in your daily routine, and cry about it to make your life
+miserable.
+Like you never have enough time, the food in the canteen is either
+too spicy or not spicy enough, your broadband is not broad enough,
+the girls in your college/workplace are not outdoorsy enough, the
+beer you get is too bitter and there is no end to this rant.
+I have done it too; and I despise myself for doing it. Trust me you
+would have lots to complain about, in the future.&lt;/p&gt;
+&lt;div style="text-align:left;"&gt;&lt;div style="text-align:center;"&gt;&lt;p&gt;&lt;em&gt;What doesn't kill you, makes you stronger.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Go by that thought.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:left;"&gt;&lt;/div&gt;&lt;div style="text-align:left;"&gt;&lt;/div&gt;&lt;div style="text-align:left;"&gt;&lt;p&gt;Recommended watch: &lt;a class="reference external" href="https://www.imdb.com/title/tt0758758/"&gt;Into the
+Wild&lt;/a&gt; - essentially a primer
+course in living with no money.&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="economy"></category><category term="India"></category><category term="recession"></category><category term="survival"></category><category term="tips"></category></entry><entry><title>Learning to Live</title><link href="https://ashwinvis.github.io/learning-to-live.html" rel="alternate"></link><published>2012-02-03T17:23:00+01:00</published><updated>2012-02-03T17:23:00+01:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2012-02-03:/learning-to-live.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div&gt;&lt;div&gt;&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;As I look back at 22 years of my life, I realise that my life took two sharp
+turns to define me as a person that I am today.  In my&amp;nbsp;defence,&amp;nbsp;this is not a
+prose in praise to myself. Nor am I saying I am the perfect son …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div&gt;&lt;div&gt;&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;As I look back at 22 years of my life, I realise that my life took two sharp
+turns to define me as a person that I am today.  In my&amp;nbsp;defence,&amp;nbsp;this is not a
+prose in praise to myself. Nor am I saying I am the perfect son or most
+adorable friend you ever saw. I had some&amp;nbsp;life-changing&amp;nbsp;incidents, and a few
+influences; and it might help you realise, how much wider your mind grows with
+age.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;em&gt;A man sooner or later discovers that he is the master-gardener of
+his soul, the director of his life.&lt;/em&gt;
+- James Allen&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Age One:&lt;/strong&gt; Dawn of Teenage (12-15)&lt;/p&gt;
+&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;em&gt;Naive, unassuming&lt;/em&gt; me. I was a child of reason, and accepted life
+as it is. Rarely doubting what my friends would say. The funny thing is,
+I never realised I was like this. However in those days, I went on, as a
+dreamer. And I dreamt of science and how it could change the world,
+things I still believe in.
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; With a small circle of friends I was happy. People who I still
+swear by, even now. Jayashankar knew what went through my &amp;quot;alternate
+universe&amp;quot; and we talked about it, lots. Even when I was stuck home,
+many&amp;nbsp; pointless topics were furiously discussed over the phone, God
+knows why. We were similar in ways more than one. We obeyed the &lt;em&gt;Law of
+conservation of mass&lt;/em&gt;, conserved it for years. The world beyond us
+seemed lesser than us. To add spice to this world, I put up with my male
+chauvinist act.
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; And there was Kalyan chettan, my cousin, my mentor. He taught me
+how to ride the bicycle. He made me believe, that maybe I was different,
+in a good way. I knew I had a long way to go.
+&amp;nbsp;&amp;nbsp;&amp;nbsp; The best part - I was being myself, never tensed, never
+self-conscious. Who knew things were about to change soon?&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Age Two:&lt;/strong&gt; Reinventing myself (16-17)&lt;/p&gt;
+&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://i74.photobucket.com/albums/i263/myspaceye/bandwallpapers/pinkfloyd/pink_floyd_the_wall.jpg"&gt;&lt;img alt="image0" src="https://i74.photobucket.com/albums/i263/myspaceye/bandwallpapers/pinkfloyd/pink_floyd_the_wall.jpg" style="width: 320px; height: 240px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;High school was over. I was fed up with my school and somehow I was
+sure, it held no future. What followed was 2 years of dramatic changes.
+I chose to switch schools.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Following the call of Pink Floyd, I slowly started undoing the
+wall. An artistic eye opened in me. Public speaking, was something I had
+never even dreamed I would be capable of; turned out I was more than OK
+at it. Majority of my Plus One days in school were consumed by the
+Drama&amp;nbsp;rehearsals&amp;nbsp;for Annual School Play. For the first time in my life,
+I danced - a skill that I would cherish for the rest of my days.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;But all the good things apart, I was drifting away. I was
+surrounded by an uncanny peer group. Some were down to earth, and fun to
+hang out with. Some made you think you were larger than life, and lied
+to your face. The &lt;em&gt;naive&lt;/em&gt; me, had to change if I had to survive. Arjun,
+my friend, helped me realise this and since then I thought for a second,
+before I act or react.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;Too much goodness could damage you.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;For the Plus Two year I was engulfed in the usual rat race of Board
+examinations and Entrance Tests. I am grateful for my parents for
+avoiding putting pressure on me. And that's the story how I was saved
+from drowning in the deep.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&lt;strong&gt;Age Three&lt;/strong&gt;&lt;strong&gt;:&lt;/strong&gt; Light at the end of the tunnel (18-22)&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; College had begun. I had to start anew. No old friends were here to
+cling on to the past. But just like everyone else, I couldn't forget how
+wondrous school life was. I couldn't find the same awesomeness in my new
+college. I was doubtful. Not that I locked up myself in a room and threw
+the key away. I did meet people, made a lot of friends; but I kept my
+distance.
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Why? I was afraid that drowning in the madness that was college-
+the mobs, small gangs, and perverted talks- could get to me and
+eventually, change me.
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; And then there was Arun. He said, &amp;quot;You know what your problem is?
+You are never happy with who you are!&amp;quot; A few honest words are all it
+takes to wake up your friend. It shook me; it shook me from deep within.
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Maybe it was that shadow of dissatisfaction, that was driving me to
+seek better. But now, I was grown up, and responsible. I could command
+myself. I then, took the dive. Let go my mind, and lived in the moment.
+Sharing your life with your friends is some of the best moments you'd
+ever get.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; So what did I learn? You might not get everything right, the way you
+want it. Be good to people and they would be good to you (Karma,
+karma!). Never lose yourself, be the master of your mind.... and stay
+happy!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="friends"></category><category term="life"></category><category term="teenage"></category></entry><entry><title>ഒരു ആഗ്ര യാത്ര.</title><link href="https://ashwinvis.github.io/oru-agra-yatra.html" rel="alternate"></link><published>2011-09-15T11:45:00+02:00</published><updated>2011-09-15T11:45:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2011-09-15:/oru-agra-yatra.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഓഗസ്റ്റ്‌&amp;nbsp;14&amp;nbsp;ഒരു നല്ല ദിനമാണ് .പാരതന്ത്ര്യത്തിന്റെ&amp;nbsp;പിടിയില്‍ നിന്നും
+ഭാരത്തെ മോചിപ്പിക്കാന്‍ വെള്ളക്കാര്‍ തീരുമാനിച്ച സുദിനം. Schoolil …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഓഗസ്റ്റ്‌&amp;nbsp;14&amp;nbsp;ഒരു നല്ല ദിനമാണ് .പാരതന്ത്ര്യത്തിന്റെ&amp;nbsp;പിടിയില്‍ നിന്നും
+ഭാരത്തെ മോചിപ്പിക്കാന്‍ വെള്ളക്കാര്‍ തീരുമാനിച്ച സുദിനം. Schoolil
+&amp;nbsp;പഠിക്കുമ്പോഴും ഓഗസ്റ്റ്‌ 14 എന്നും നല്ല ഓര്‍മ്മകള് മാത്രമേ
+&amp;nbsp;തരാറുള്ളൂ.. മടുപ്പിക്കുന്ന&amp;nbsp; ക്ലാസ്സുകല്കിടയില്‍&amp;nbsp; വരാനിരിക്കുന്ന&amp;nbsp; അവധിയെ
+ഓര്‍ത്തു&amp;nbsp; സുഖിക്കുന്ന&amp;nbsp; ദിവസം.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഇവിടെ&amp;nbsp; &amp;nbsp;ജോലിക്ക്&amp;nbsp; കയരിയിട്ട്ടും&amp;nbsp; &amp;nbsp;ആ&amp;nbsp; പ്രക്രിതതിനൊരു&amp;nbsp; മാറ്റമുണ്ടായില്ല.
+പക്ഷെ ഞാന്‍&amp;nbsp; &amp;nbsp;പറയും&amp;nbsp; ഓഗസ്റ്റ്‌&amp;nbsp; 14 ഒരു കാര്യത്തിന്&amp;nbsp;നല്ലതല്ല&amp;nbsp;, ആഗ്ര
+യാത്രയ്ക്&amp;nbsp;...&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;മടുപ്പിക്കുന്ന&amp;nbsp; ജോലിക്കിടെ&amp;nbsp; വീണുകിട്ടിയ&amp;nbsp; 3 ദിവസം&amp;nbsp; നമ്മള്‍&amp;nbsp; യാത്ര
+പോകാന്‍ &amp;nbsp;തീരുമാനിച്ചു&amp;nbsp;.ടെസ്ടിനറേന്‍&amp;nbsp; ഫിക്സ്&amp;nbsp; ചെയ്തു&amp;nbsp;. 'താജ്മഹല്‍'.
+പ്രണയത്തിന്റെ&amp;nbsp; പര്യായമായി&amp;nbsp; ലോകത്തില്‍&amp;nbsp; നിലകൊള്ളുന്ന&amp;nbsp; 7 ആം
+അത്ഭുദം.ഇന്നേ&amp;nbsp; വരെ&amp;nbsp; ഒരു&amp;nbsp; പ്രണയം&amp;nbsp;പോലും&amp;nbsp; ജീവിതത്തില്‍
+സംഭവിച്ചിട്ടില്ലാത്ത&amp;nbsp; നമുക്ക്&amp;nbsp; മറ്റൊന്നിനെ&amp;nbsp; കുറിച്ച്&amp;nbsp; ആലോചിക്കേണ്ടി
+വന്നില്ല.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;അങ്ങനെ&amp;nbsp; ആഗ്ര &amp;nbsp;യാത്രക്ക്&amp;nbsp; നമ്മള്‍ &amp;nbsp;പുറപ്പെട്ടു.ടാജ്മാഹലിനെ&amp;nbsp; കുറിച്ചുള്ള
+ചിന്തകള്‍&amp;nbsp; മനസ്സില്‍&amp;nbsp; ഒരു &amp;nbsp;വസന്തം&amp;nbsp; തീര്‍ത്തു&amp;nbsp;.ഇന്ന്നുവരെ
+കണ്ടിട്ടില്ലാത്ത&amp;nbsp; സ്വപ്ന&amp;nbsp; കാമുകിയെ&amp;nbsp; മനസ്സില്‍ &amp;nbsp;പ്രതിഷ്ടിച്ചു, സരെകാലെ
+ഖാന്‍ &amp;nbsp;ബസ്‌ ടെര്മിനുസ് ലക്ഷ്യമാക്കി &amp;nbsp;മെട്രോ&amp;nbsp;കയറി&amp;nbsp;. പ്രണയത്തെ&amp;nbsp; കുറിചുള്ള
+ചിന്തകള്‍ &amp;nbsp;നമ്മുടെ&amp;nbsp; വിശപ്പിനെ&amp;nbsp; പോലും &amp;nbsp;അടക്കിയെന്നു&amp;nbsp; തോന്നുന്നു&amp;nbsp;.ആരും
+ബ്രേക്ഫാസ്റ്റ്&amp;nbsp; പോലും &amp;nbsp;കഴിച്ചില്ല&amp;nbsp;.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;മെട്രോ &amp;nbsp;സ്റ്റേഷനില്‍&amp;nbsp; നിന്നും&amp;nbsp; ഒരു &amp;nbsp;ഓട്ടോ&amp;nbsp; പിടിച്ചു &amp;nbsp;ബസ്‌ സ്റ്റാന്‍ഡില്‍
+എത്തി . സമയം&amp;nbsp; രാവിലെ&amp;nbsp; 10 മണി&amp;nbsp;.അവിടെ&amp;nbsp; കാണാന്‍&amp;nbsp; തീരെ&amp;nbsp; ചന്ദമില്ലാത്ത,
+&amp;nbsp;വൃത്തിയില്ലാത്ത&amp;nbsp; ബസുകള്‍&amp;nbsp; ആഗ്ര &amp;nbsp;ബോര്‍ഡും&amp;nbsp; വച്ചിരിക്കുന്നു&amp;nbsp;.അയ്യേ
+നമ്മള്‍ &amp;nbsp;ഈ&amp;nbsp; ബുസിലോന്നും&amp;nbsp; പോകില്ല&amp;nbsp;.5 അക്ക&amp;nbsp; ശമ്പളം&amp;nbsp; &amp;nbsp; മേടിക്കുന്ന&amp;nbsp; നമ്മള്‍
+&amp;nbsp;ഒരു &amp;nbsp;a/c ബസിലെങ്കിലും&amp;nbsp; പോകണ്ടേ&amp;nbsp;?&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;അങ്ങനെ &amp;nbsp;a/c ബസുകള്‍ &amp;nbsp;തേടി&amp;nbsp; ഏകദേശം&amp;nbsp;ഒരു &amp;nbsp;കിലോമീട്ര്‍&amp;nbsp; അപ്പുറം&amp;nbsp; ഉള്ള
+പുതിയ&amp;nbsp; ബസ്‌ &amp;nbsp;ടെര്മിനുസ് &amp;nbsp; ഇലേക്ക്&amp;nbsp; നടന്നു&amp;nbsp;.പോകുന്ന&amp;nbsp; വഴികളില്‍&amp;nbsp; ഒരു &amp;nbsp;മഹാ
+യുഗ&amp;nbsp; പരിവര്‍ത്തനത്തിന്&amp;nbsp; സാക്ഷിയാകേണ്ടി&amp;nbsp; വന്ന&amp;nbsp; ചരിത്ര&amp;nbsp; സ്മാരകം&amp;nbsp; പോലെ
+പഴയ&amp;nbsp; ബസ്ടാന്റ്റ്&amp;nbsp; &amp;nbsp;നമ്മെ&amp;nbsp; നോക്കി&amp;nbsp; പല്ലിളിച്ചു&amp;nbsp;. കേരളത്തിന്റെ&amp;nbsp; വിദൂര
+ഗ്രാമങ്ങളില്‍&amp;nbsp; പോലും &amp;nbsp;ഇത്രയും&amp;nbsp; &amp;nbsp; &amp;nbsp;വൃത്തി&amp;nbsp; കേട്ട&amp;nbsp; ഒരു &amp;nbsp;ബസ്ടാന്ടു
+ഉണ്ടാവില്ല&amp;nbsp;.അവിടവിടെ&amp;nbsp; വെള്ളം&amp;nbsp; കെട്ടി&amp;nbsp; കിടക്കുന്നു&amp;nbsp;.ആ &amp;nbsp;ചെളിയില്‍
+പന്നികള്‍&amp;nbsp; കാമകേളികള്‍ ആടുന്നു&amp;nbsp; &amp;nbsp; .&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;പുതിയ &amp;nbsp;സ്റ്റാന്‍ഡില്‍ &amp;nbsp;ചെന്നപ്പോള്‍ അവര്‍ പറഞ്ഞു അടുത്ത &amp;nbsp;a/c bus 3
+മണിക്കൂര്‍&amp;nbsp; ശേഷമേ&amp;nbsp; ഉള്ളൂ&amp;nbsp; എന്ന്&amp;nbsp;.പിന്നെ&amp;nbsp; അവിടെ &amp;nbsp;കണ്ട&amp;nbsp; അതേ പോലൊരു&amp;nbsp; upsrtc
+ബസില്‍&amp;nbsp; കയറി , കാലുകള്‍&amp;nbsp; മര്യാദയ്ക്ക്&amp;nbsp; വെക്കാന്‍&amp;nbsp; പോലും &amp;nbsp;അതിനു&amp;nbsp; leg
+space ഇല്ലായിരുന്നു&amp;nbsp;. ഇങ്ങനെ&amp;nbsp; &amp;nbsp; 5 മണിക്കൂര്‍&amp;nbsp; നേരം&amp;nbsp; ആ &amp;nbsp;ബസില്‍
+&amp;nbsp;ഇരിക്കുന്നതിനെ&amp;nbsp; കുറിച്ച&amp;nbsp; ഓര്‍ത്തപ്പോഴേ&amp;nbsp; മനസ്സിനുള്ളിലെ
+പ്രണയചിന്തകള്‍ക്ക്&amp;nbsp; മങ്ങലേറ്റു&amp;nbsp;. വിശപ്പിന്റ്റെ വിളിയും
+തുടങ്ങി&amp;nbsp;.പിന്നെ &amp;nbsp;അടുത്തുള്ള&amp;nbsp; കടയില്‍&amp;nbsp; കയറി &amp;nbsp;ബിസ്കെറ്റും &amp;nbsp;കേക്കും
+വാങ്ങി&amp;nbsp;.MRP യിന്‍മേല്‍&amp;nbsp; വില&amp;nbsp; പെശിയതിനു തെറിയും&amp;nbsp; മേടിച്ചു&amp;nbsp;.ഡല്‍ഹിയില്‍
+എത്യിയ&amp;nbsp; ശേഷം&amp;nbsp; കിട്ടിയ&amp;nbsp; ശീലമാനത്‌&amp;nbsp;.എന്തിനും&amp;nbsp; വില &amp;nbsp;പേശും&amp;nbsp; &amp;nbsp;...&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഒരു &amp;nbsp;10 മിനിറ്റു&amp;nbsp; കാത്തു&amp;nbsp; നിന്നപ്പോള്‍&amp;nbsp; bus സീറ്റ്‌&amp;nbsp; എല്ലാം
+നിറഞ്ഞു&amp;nbsp;.യാത്ര &amp;nbsp;തുടങ്ങി . ഗുഡ് ഗാവില്‍&amp;nbsp; തരിശു&amp;nbsp; പാടങ്ങള്‍ മാത്രം&amp;nbsp; കണ്ട
+&amp;nbsp;നമ്മള്‍ക്ക്&amp;nbsp; യാത്രയില്‍&amp;nbsp; കൃഷി&amp;nbsp; സ്ഥലങ്ങള്‍&amp;nbsp; കാണാന്‍ &amp;nbsp;പറ്റി.പാതയോരം
+ചേര്‍ന്ന്&amp;nbsp; നീണ്ട&amp;nbsp; വയലുകള്‍&amp;nbsp;.ചോളം&amp;nbsp; കൃഷിയാണ്&amp;nbsp; മുഖ്യമെന്നു&amp;nbsp; തോന്നുന്നു
+.ബസിനുള്ളിലെ&amp;nbsp; ചൂടിനു&amp;nbsp; ശമനമേകി മഴയുമെത്തി. ഒരു &amp;nbsp; homely feel
+അനുഭവപ്പെട്ടു&amp;nbsp;.നാട്ടില്‍&amp;nbsp; ഇപ്പൊ&amp;nbsp; കര്‍ക്കിടകം&amp;nbsp; തകര്‍ത്തു
+പെയ്യുകയായിരിക്കും&amp;nbsp;.അമ്മ&amp;nbsp; വിളിച്ചപ്പോള്‍&amp;nbsp; പറഞ്ഞിരുന്നു&amp;nbsp; , തോട്ടില്‍
+വെള്ളം &amp;nbsp;നിറഞ്ഞു &amp;nbsp; മുറിച്ചു&amp;nbsp; കടക്കാന്‍&amp;nbsp; പട്ടതയിട്ടുണ്ട്&amp;nbsp;.ഇപ്പൊ &amp;nbsp;അവിടെ
+&amp;nbsp;കുളിക്കാന്‍&amp;nbsp; കണ്ണനെ&amp;nbsp; അമ്മ&amp;nbsp; വിടാറില്ല&amp;nbsp;. schoolil പോകാന്‍ &amp;nbsp;cycle
+എടുക്കാന്‍ &amp;nbsp;കഴിയാരില്ലെന്ന് കണ്ണനും&amp;nbsp; പറഞ്ഞു . കണ്ണന്‍&amp;nbsp; എന്റെ&amp;nbsp; അനിയനാണ്
+കേട്ടോ&amp;nbsp;.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;വഴിയില്‍&amp;nbsp; ഏതോ&amp;nbsp; ഒരു &amp;nbsp;ധാബയ്കരുകില്‍ bus നിര്‍ത്തി&amp;nbsp;. സമയം &amp;nbsp;1.30 ആയിരുന്നു&amp;nbsp;.
+പുറത്തിറങ്ങി&amp;nbsp; ,ഒന്ന്&amp;nbsp; കാല്&amp;nbsp; നിവര്‍ത്തി&amp;nbsp;, ധാബയുടെ അവസ്ഥ&amp;nbsp; കണ്ടു
+കഴിക്കാനും&amp;nbsp; തോന്നിയില&amp;nbsp;. പിന്നെ &amp;nbsp;കേക്ക്&amp;nbsp; തിന്നതിനാല്‍&amp;nbsp; വലിയ&amp;nbsp; വിശപ്പും
+തോന്നിയിരുന്നില്ല&amp;nbsp;.അവിടെ &amp;nbsp;cut fruits വില്‍ക്കുന്നുണ്ടായിരുന്നു&amp;nbsp;.
+പ്ലേടിനു 10 മാത്രം&amp;nbsp;. അതിനാല്‍&amp;nbsp; ഓരോപ്ലെട് മേടിച്ചു .ഫ്യൂ&amp;nbsp;.. ഒരു &amp;nbsp;പീസ്
+എടുത്തു&amp;nbsp; വായിലിട്ടപ്പോ&amp;nbsp; പുറത്തോട്ടു തന്നെ&amp;nbsp; തുപ്പി&amp;nbsp;. ഫ്രുട്സില്‍ എന്തോ
+വൃത്തികെട്ട&amp;nbsp; മസാല&amp;nbsp; ഇട്ടിരിക്കുന്നു&amp;nbsp;. പിന്നെ &amp;nbsp;രണ്ടു&amp;nbsp; പീസ്&amp;nbsp; കൂടി&amp;nbsp; എടുത്തു
+&amp;nbsp;വായിലിട്ടു&amp;nbsp;. ഇപ്പൊ &amp;nbsp;അത്ര&amp;nbsp; വലിയ &amp;nbsp;കുഴപ്പമില്ല&amp;nbsp;. മറ്റെ സിനിമയില് &amp;nbsp;ദിലീപ്
+&amp;nbsp;പറഞ്ഞ പോലെ പിന്നെ അത് ശീലമായി ...അവസാനം&amp;nbsp; മുഴുവനും&amp;nbsp; തിന്നു&amp;nbsp;. ഫ്രൂട്സ്
+എന്ന് &amp;nbsp;പറയാന്‍&amp;nbsp; അതില്‍&amp;nbsp; ഒന്നുമുണ്ടായിരുന്നില്ല&amp;nbsp;. കുറച്ചു&amp;nbsp; കക്കിരി
+കഷ്ണം&amp;nbsp; മാത്രം .ഒരു &amp;nbsp;ചാറ്റല്‍&amp;nbsp; മഴയുടെ&amp;nbsp; അകമ്പടിയോടെ&amp;nbsp; bus അവിടെ &amp;nbsp;നിന്നും
+&amp;nbsp;പുറപ്പെട്ടു .നീണ്ട &amp;nbsp;ഇടവേളകളില്‍&amp;nbsp; ഒരു &amp;nbsp;ഉറക്കം&amp;nbsp;. എഴുന്നേല്‍ക്കുമ്പോള്‍
+പുറത്തെ&amp;nbsp; കാഴ്ചകള്‍&amp;nbsp; നോക്കും&amp;nbsp;. കാതില്‍ pink floyd ന്‍റെ സംഗീതം&amp;nbsp;,
+സിരകളില്‍&amp;nbsp; മത്തു&amp;nbsp; പകരുന്നു&amp;nbsp;.പിന്നെ &amp;nbsp;വീണ്ടും&amp;nbsp; മയക്കം&amp;nbsp;.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;എഴുന്നേറ്റപ്പോള്‍&amp;nbsp; വണ്ടി&amp;nbsp; അഗ്രയിലെതിയിരുന്നു&amp;nbsp;. പഴയ &amp;nbsp;നഗരം&amp;nbsp;, ഇടുങ്ങിയ
+വഴികളില്‍ &amp;nbsp;വണ്ടികള്‍&amp;nbsp; നിറഞ്ഞിരിക്കുന്നു&amp;nbsp; , പഴകിയ&amp;nbsp; കെട്ടിടങ്ങള്‍&amp;nbsp;, ദൂരെ
+യമുനാ&amp;nbsp;നദിക്കക്കരെ&amp;nbsp; ടാജ്മാഹല്‍ &amp;nbsp;കാണാം&amp;nbsp;, മനസ്സില്‍ &amp;nbsp;കുളിരുകോരി&amp;nbsp;.. വീണ്ടും
+&amp;nbsp;പ്രണയം ...&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഛെ&amp;nbsp;.. വണ്ടി &amp;nbsp;നിന്നു. മുന്നില്‍&amp;nbsp; നീണ്ട &amp;nbsp;ബ്ലോക്ക്‌&amp;nbsp;.ബസില്‍ &amp;nbsp;നിന്നും
+&amp;nbsp;ഇറങ്ങി&amp;nbsp; നടന്നു . ബസ്‌ &amp;nbsp;കാരന്‍&amp;nbsp; പറഞ്ഞു , സീധാ ജാവോ&amp;nbsp;, ദായേം&amp;nbsp; മത് ജാവോ ,
+ബായേം&amp;nbsp; മത് &amp;nbsp;ജാവോ. 'ദായേം , ബായേം ' മെട്രോയില്‍&amp;nbsp; കേറുന്നത്&amp;nbsp; കൊണ്ട്&amp;nbsp; ഈ
+&amp;nbsp;വാക്കുകള്‍&amp;nbsp; എനിക്ക്&amp;nbsp; സുപരിചിതമായിരുന്നു.സത്യത്തില്‍ &amp;nbsp;ഗുഡ്ഗാവില്‍
+&amp;nbsp;ജീവിക്കാന്‍ അധികം ഹിന്ദി അറിയേണ്ട ആവശ്യമില്ല. 'പച്ചാസ്' ഏത് ഒരാളും
+അറിഞ്ഞിരിക്കേണ്ട വാക്ക്. കാരണം ഓട്ടോ വാലകള്‍ 100 &amp;nbsp;ഉം 150 ഉം ഒക്കെ
+&amp;nbsp;പറയുമ്പോള്‍ തലയാട്ടിക്കൊണ്ട് പച്ചാസ് പച്ചാസ് എന്ന് പറഞ്ഞാല്‍ മതി.
+എല്ലാവരും സമ്മതിക്കും.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ബസ്സിറങ്ങി നേരെ&amp;nbsp; മുന്നോട്ടു&amp;nbsp; നടന്നു .സൈഡില്‍&amp;nbsp; ആഗ്ര &amp;nbsp;ഫോര്‍ട്ട്‌&amp;nbsp; കാണാം ,
+നൂറ്റാണ്ടുകളുടെ &amp;nbsp; അനുഭവ പാരമ്പര്യമുള്ള&amp;nbsp; ചരിത്ര &amp;nbsp;സ്മാരകം .ബാബര്‍&amp;nbsp; തൊട്ടു
+വന്ന &amp;nbsp;മുഗളന്മാരുടെ&amp;nbsp; തലസ്ഥാനം&amp;nbsp;, ഒടുവില്‍&amp;nbsp;, തന്‍റെ പ്രണയിനിക്ക്&amp;nbsp; നല്‍കിയ
+അമൂല്യ&amp;nbsp; സൌധം&amp;nbsp; നോക്ക്കി&amp;nbsp; മരിക്കാന്‍ ഷാജഹാന്&amp;nbsp; തന്‍റെ &amp;nbsp;പുത്രന്‍റെ
+ഔദാര്യമായി&amp;nbsp; കിട്ടിയ&amp;nbsp; കാരാകാരം... അങ്ങനെ &amp;nbsp;ഒരു &amp;nbsp;സാമ്രാജ്യത്തിന്റെ&amp;nbsp; &amp;nbsp;പല
+രാജതന്ത്രങ്ങളും&amp;nbsp; രൂപം&amp;nbsp; കൊണ്ട&amp;nbsp; ചുവന്ന&amp;nbsp; കോട്ട&amp;nbsp;, രാജസ്ഥ്നിലെ കല്ലുകളില്‍
+വിരിഞ്ഞ&amp;nbsp; കാവ്യം&amp;nbsp;. ദൂരെ &amp;nbsp;നിന്നു &amp;nbsp;കാണാന്‍ &amp;nbsp;ആഗ്ര &amp;nbsp;ഫോര്‍ട്ടും&amp;nbsp; മനോഹരം&amp;nbsp;.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;നേരെ &amp;nbsp;നടന്നു . സന്ജരികളുടെ &amp;nbsp;തിരക്ക്&amp;nbsp; ഗേറ്റ്&amp;nbsp; ഇല്‍ നിന്നു &amp;nbsp;തന്നെ
+&amp;nbsp;അനുഭവപ്പെടും&amp;nbsp;. മതിലിനകത്തു&amp;nbsp; മോട്ടോര്‍&amp;nbsp; വണ്ടികള്‍ക്ക്
+പ്രവേശനമില്ല&amp;nbsp;.അകത്തുള്ളത്&amp;nbsp; കുതിര&amp;nbsp; വണ്ടികളും&amp;nbsp; ഒട്ടക&amp;nbsp; വണ്ടികളും . പിന്നെ
+&amp;nbsp;ഡല്‍ഹി&amp;nbsp; യിലെ&amp;nbsp; പോലെ &amp;nbsp;സൈക്കിള്‍&amp;nbsp; റിക്ഷകളും&amp;nbsp;. ഈ &amp;nbsp;സൈക്കിള്‍ &amp;nbsp;റിക്ഷകള്‍
+ഇല്ലാത്തതു&amp;nbsp; സൌത്ത്&amp;nbsp; ഇന്ത്യയില്‍ &amp;nbsp;മാത്രമേ &amp;nbsp;ഉള്ളൂ &amp;nbsp;എന്ന് &amp;nbsp;തോന്നുന്നു .
+ഞാനേതായാലും&amp;nbsp; ഈ &amp;nbsp;റിക്ഷകള്‍ക്ക്&amp;nbsp; എതിരാണ്&amp;nbsp;.പാവങ്ങള്‍&amp;nbsp; എത്ര
+അധ്വാനിക്കണം&amp;nbsp;..&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;പിന്നെ &amp;nbsp;ബാറ്റെരിയില്‍ &amp;nbsp;ഓടുന്ന &amp;nbsp;BHEL ബസുകളും&amp;nbsp; ഉണ്ട്. &amp;nbsp;.സീറോ
+പോല്ലുഷന്‍&amp;nbsp;!. നമ്മള്‍ &amp;nbsp;അതില്‍ &amp;nbsp;കയറി .ഒരു 10 പേര്‍ക്ക് ഇരിക്കാനുള്ള
+സീറ്റ് ഉണ്ട് . 5 രൂപ&amp;nbsp; കൊടുത്താല്‍&amp;nbsp; അങ്ങോളം&amp;nbsp; എത്തിക്കും&amp;nbsp;. സീറ്റ്‌
+&amp;nbsp;കിട്ടിയില്ല&amp;nbsp;.നേരെ &amp;nbsp;നിന്നാല്‍&amp;nbsp; തല &amp;nbsp;മുകളില്‍&amp;nbsp; മുട്ടും&amp;nbsp;, അത്രയ്ക്
+ചെറുതാണ്&amp;nbsp;, മിനി&amp;nbsp; ബസ്‌ .&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;മുന്നില്‍ &amp;nbsp;നീണ്ടു&amp;nbsp; നില്‍ക്കുന്ന&amp;nbsp; Q കണ്ടപ്പോള്‍&amp;nbsp; ആദ്യം&amp;nbsp; കാര്യമായി
+ഒന്നും&amp;nbsp; തോന്നിയില്ല&amp;nbsp;. നേരെ &amp;nbsp;കേറി&amp;nbsp; Q വിനു&amp;nbsp; പുറകില്‍&amp;nbsp; സ്ഥാനം&amp;nbsp; പിടിച്ചു .
+പിന്നീടാണ്‌&amp;nbsp;അറിയുന്നത്&amp;nbsp;&amp;nbsp; അത് &amp;nbsp;ടിക്കറ്റ്‌&amp;nbsp; എടുത്ത&amp;nbsp; ശേഷമുള്ള&amp;nbsp; 'Q'
+ആണെന്ന്&amp;nbsp;. ടിക്കറ്റ്‌ &amp;nbsp;എടുക്കാന്‍ &amp;nbsp;മുന്നോട്ടു &amp;nbsp;നടന്നു . Q വിന്റെ&amp;nbsp; അറ്റം
+കാണുന്നില്ല&amp;nbsp;. അത്രയ്ക്ക്&amp;nbsp; വലുത്&amp;nbsp;. പക്ഷെ &amp;nbsp;ടിക്കറ്റ്‌ &amp;nbsp;എടുക്കാന്‍ &amp;nbsp;ഉള്ള &amp;nbsp;Q
+ചെറുതാണ് . നേരെ &amp;nbsp;പിന്നില്‍ ചെന്ന് നിന്നു . 10 മിനിറ്റു
+&amp;nbsp;കഴിഞ്ഞിട്ടും&amp;nbsp;നിന്ന സ്ഥാനത്&amp;nbsp; നിന്നു &amp;nbsp;നീങ്ങിയില്ല&amp;nbsp;. അപ്പോള്‍ ആരോ
+പറയുന്നത് കേട്ടു തിരക്ക് &amp;nbsp;കാരണം&amp;nbsp; ടിക്കറ്റ്‌ &amp;nbsp;സെയില്‍&amp;nbsp; നിര്‍ത്തി എന്ന്&amp;nbsp;.
+കുറെ&amp;nbsp; കഴിഞ്ഞപ്പോള്‍&amp;nbsp; സെയില്‍ &amp;nbsp;തുടങ്ങി . മുന്നില്‍ &amp;nbsp;കുറെ &amp;nbsp;പേര്‍&amp;nbsp; Q
+തെറ്റിച്ചു&amp;nbsp; ഇടയ്ക്&amp;nbsp; കേരുന്നു&amp;nbsp;. അവന്റെയൊക്കെ&amp;nbsp; തന്തയ്ക്കു&amp;nbsp; വിളിക്കാന്‍
+തോന്നി&amp;nbsp;. കുറച്ചുകൂടി&amp;nbsp; കഴിഞ്ഞപ്പോള്‍ &amp;nbsp; രംഗം&amp;nbsp; കൂടുതല്‍&amp;nbsp; വഷളായി&amp;nbsp;. മുന്നില്‍
+&amp;nbsp;പോലീസ് ലാത്തി&amp;nbsp; ചാര്‍ജ്&amp;nbsp; &amp;nbsp;വരെ &amp;nbsp;നടത്തി&amp;nbsp;. കുറെ &amp;nbsp;എണ്ണത്തിനെ തൂകി&amp;nbsp; എറിഞ്ഞു&amp;nbsp;.
+ഞാന്‍ &amp;nbsp; സൌമ്യനായി&amp;nbsp; Q വില്‍&amp;nbsp; ത്തനെ നിന്നു . ഒരു &amp;nbsp;മുക്കാല്‍&amp;nbsp; മണിക്കൂറിനു
+ശേഷം &amp;nbsp;Q വിന്‍റെ മുന്നിലേക്ക്‌ &amp;nbsp;ഒന്നെത്തി&amp;nbsp; പെട്ടു. അവിടെ &amp;nbsp;നില്‍കാന്‍
+പോയിട്ട്&amp;nbsp; ഒരു &amp;nbsp;കാലുകുത്താന്‍&amp;nbsp; പോലും &amp;nbsp;സ്ഥലം&amp;nbsp; കിട്ടിയില്ല .കുറെ &amp;nbsp;പേര്‍
+&amp;nbsp;പിന്നെയും&amp;nbsp; Q തെറ്റിക്കുന്നു&amp;nbsp;. മുന്നില്‍ &amp;nbsp;ആകെ അലങ്കോലം&amp;nbsp;. ഒരു
+&amp;nbsp;ഭീമാകാരന്‍&amp;nbsp; പോലീസ്&amp;nbsp; കാരന്‍ &amp;nbsp;വന്നു&amp;nbsp; എന്നെ&amp;nbsp; കോളറിനു&amp;nbsp; പിടിച്ചു
+&amp;nbsp;പുറത്താക്കി&amp;nbsp;. ഒരു &amp;nbsp;മണിക്കൂറോളം&amp;nbsp; Q നിന്നത്&amp;nbsp; വേസ്റ്റ്&amp;nbsp;, ടിക്കറ്റ്‌ &amp;nbsp;ഉം
+&amp;nbsp;കിട്ട്യില്ല&amp;nbsp;.മനസ്സില്‍&amp;nbsp; ഞാന്‍ &amp;nbsp; അവന്‍റെ തന്തയ്ക്&amp;nbsp; വിളിച്ചു&amp;nbsp;.പൊല #####
+മോന്‍&amp;nbsp;.അവന്റെ&amp;nbsp; അമ്മേ കെട്ടിക്കാന്‍&amp;nbsp;... പിന്നെ &amp;nbsp;കൂടെയുണ്ടായിരുന്ന&amp;nbsp; ഒരു
+&amp;nbsp;വിരുതന്‍&amp;nbsp; ലേഡീസ്&amp;nbsp; Q വില്‍ &amp;nbsp;കയറി &amp;nbsp;ടിക്കറ്റ്‌ &amp;nbsp;എടുത്തു .3 എണ്ണം
+&amp;nbsp;എക്സ്ട്രാ&amp;nbsp;. 3 ഉം &amp;nbsp;ബ്ലാക്കില്‍&amp;nbsp; വിറ്റു. മലയാളികള്‍&amp;nbsp; എവിടെ &amp;nbsp;ചെന്നാലും
+സ്വഭാവം&amp;nbsp; കാണിക്കുമല്ലോ&amp;nbsp; !!ടിക്കറ്റ്‌ &amp;nbsp;കയ്യില്‍&amp;nbsp; കിട്ടി&amp;nbsp;. ഇനി&amp;nbsp; അകത്
+കേറണം. അതിനുള്ള&amp;nbsp; 'Q' 2 കിലോമീടെര്‍&amp;nbsp; ഉണ്ട് .independence day
+പ്രാമാനിച്ചുള്ള &amp;nbsp; &amp;nbsp;ടൈറ്റ്&amp;nbsp; ചെക്കിംഗ്&amp;nbsp; കാരണമാണ്&amp;nbsp; ഇത്രയും &amp;nbsp;താമസം&amp;nbsp;. മൂന്നു
+ദിവസം &amp;nbsp;അടുപ്പിച്ചു&amp;nbsp; കിട്ടിയ &amp;nbsp;അവധി&amp;nbsp; ആഘോഷിക്കാന്‍&amp;nbsp; എല്ലാ&amp;nbsp; മയി
+കുനപ്പന്മാരും&amp;nbsp; അഗ്രയിലോട്ടാണ്&amp;nbsp; കെട്ടിയെടുതതെന്നു തോന്നി . നമ്മള്‍
+എല്ലാരും&amp;nbsp; വിശന്നു&amp;nbsp; പണ്ടാരമടങ്ങി തുടങ്ങിയിരുന്നു&amp;nbsp;. രാവിലെ &amp;nbsp;ആകെ &amp;nbsp;കൂടി
+കഴിച്ച &amp;nbsp;ആ &amp;nbsp;കേക്കും&amp;nbsp; ബിസ്കെടും &amp;nbsp;ആണ്&amp;nbsp; 5 മണി &amp;nbsp;വരെ &amp;nbsp;ഉള്ള &amp;nbsp;ഇന്നത്തെ
+ഭക്ഷണം&amp;nbsp;.അനുപം&amp;nbsp; ആണെങ്കില്‍&amp;nbsp; നോമ്പും&amp;nbsp; ആണ് .&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;മനസ്സില്‍ &amp;nbsp;പ്രണയാഗ്നി കെട്ടു തുടങ്ങിയിരുന്നു . വിശപ്പിന്‍റെ തീ&amp;nbsp; ആളി
+കത്താനും.... &amp;nbsp;നീതിക്കും&amp;nbsp; നീതി&amp;nbsp; ബോധത്തിനും&amp;nbsp; ഒരു &amp;nbsp;വിലയുമില്ലെന്നു
+മനസ്സിലാക്കിയതിനാല്‍&amp;nbsp; Q വിന്‍റെ &amp;nbsp;ഇടയ്ക്ക്&amp;nbsp; കയറി . അകത്തുകടന്നു&amp;nbsp;.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഇടയ്കിടെ&amp;nbsp; &amp;nbsp;മഴ&amp;nbsp; പെയ്യുന്നുണ്ടായിരുന്നു&amp;nbsp;. നിഷാന്തിനു&amp;nbsp; പനിയടിച്ചു&amp;nbsp;. ഞാന്‍
+കയ്യിലുണ്ടായിരുന്ന&amp;nbsp; ടവല്‍&amp;nbsp; തലയില്‍&amp;nbsp; കെട്ടി . 2 കുട
+എടുത്തിരുന്നു&amp;nbsp;.അതാണെങ്കില്‍&amp;nbsp;ഗേറ്റില്‍&amp;nbsp; cloak &amp;nbsp;roomil വച്ചു.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ടാജ്മാഹല്‍&amp;nbsp; സത്യമായും&amp;nbsp; ഒരു &amp;nbsp;'സംഭവമാണ്&amp;nbsp;'. അതിന്‍റെ ശില്പ&amp;nbsp; ചാരുതയെ&amp;nbsp; ആരും
+&amp;nbsp;നമിച്ചു&amp;nbsp; പോകും&amp;nbsp;.പ്രണയത്തിനു&amp;nbsp; ലഭിച്ച&amp;nbsp; അവമതിക്കാന്‍&amp;nbsp; പറ്റാത്ത
+സമ്മാനം&amp;nbsp;.വെന്നക്കല്ലില്‍ തീര്‍ത്ത &amp;nbsp;മഹാകാവ്യം&amp;nbsp;.ഷാജഹാന്‍&amp;nbsp; തന്നെ &amp;nbsp;പറഞ്ഞത്
+പോലെ ,&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;‘’പാപങ്ങള്‍&amp;nbsp; ഇവിടെ &amp;nbsp;മോക്ഷം&amp;nbsp; തേടട്ടെ&amp;nbsp;,ഇവിടെയെത്തുന്നവന്റെ പാപങ്ങള്‍
+&amp;nbsp;യമുനാ &amp;nbsp;കഴുകി ക്കളയട്ടെ.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഈ &amp;nbsp;കുടീരം&amp;nbsp; വേദനയുടെ&amp;nbsp; നെടുവീര്പുകള്‍&amp;nbsp; ഉയര്‍ത്തട്ടെ,&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;സൂര്യ&amp;nbsp; ചന്ദ്രന്മാര്‍&amp;nbsp; കണ്ണീര്‍&amp;nbsp; പൊഴിക്കട്ടെ&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;ഈ &amp;nbsp;മണിമാളിക&amp;nbsp; രചിതാവിന്റെ കീര്‍ത്തി&amp;nbsp; ഉയര്‍ത്താന്‍&amp;nbsp;,എന്നും&amp;nbsp; ഇവിടെ
+&amp;nbsp;നിലകൊള്ളട്ടെ&amp;nbsp;’’.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;p&gt;നീല&amp;nbsp; മേഘങ്ങള്‍&amp;nbsp; കണ്ണീര്‍ &amp;nbsp;പൊഴിച്ച്&amp;nbsp; കൊണ്ടിരുന്നു&amp;nbsp;.ആ &amp;nbsp;മണി
+മന്ദിരത്തിന്റെ&amp;nbsp;&amp;nbsp;മുന്നില്‍&amp;nbsp; നിന്നുകൊണ്ട്&amp;nbsp; ഒന്ന്&amp;nbsp; രണ്ടു&amp;nbsp; ഫോട്ടോകള്‍
+എടുത്തു .സഞ്ചാരികളുടെ&amp;nbsp; ഒരു&amp;nbsp; മഹാ&amp;nbsp; പ്രവാഹം&amp;nbsp; ആ &amp;nbsp;വെണ്ണകള്‍&amp;nbsp; കൃതിയെ&amp;nbsp; നമിച്ചു
+കൊണ്ടിരുന്നു&amp;nbsp;. ഈ&amp;nbsp; പ്രക്രിയ &amp;nbsp;അവിടെ&amp;nbsp; അനുസ്യൂതം
+&lt;strong&gt;തുടര്‍ന്നുകൊണ്ടിരുന്നു&lt;/strong&gt;&amp;nbsp;.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:justify;"&gt;&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/09/11.jpg"&gt;&lt;img alt="image0" src="https://bigfatpage.files.wordpress.com/2011/09/11.jpg?w=300" style="width: 320px; height: 240px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/09/140820111821.jpg"&gt;&lt;img alt="image1" src="https://bigfatpage.files.wordpress.com/2011/09/140820111821.jpg?w=225" style="width: 240px; height: 320px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/09/140820111761.jpg"&gt;&lt;img alt="image2" src="https://bigfatpage.files.wordpress.com/2011/09/140820111761.jpg?w=300" style="width: 320px; height: 240px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/09/140820111851.jpg"&gt;&lt;img alt="image3" src="https://bigfatpage.files.wordpress.com/2011/09/140820111851.jpg?w=300" style="width: 320px; height: 240px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="life"></category><category term="travel"></category></entry><entry><title>Lost in Transition</title><link href="https://ashwinvis.github.io/lost-in-transition.html" rel="alternate"></link><published>2011-08-02T10:01:00+02:00</published><updated>2011-08-02T10:01:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2011-08-02:/lost-in-transition.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div class="gmail_quote"&gt;&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;&lt;div class="im"&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;p&gt;I dreamt of the blue skies. And in pursuit of another beautiful dream, I
+flew over the cotton-like clouds... my first flight. A warm evening in
+June. Haze covered the Delhi skies, as the flight descends to the land
+of promises. What was to follow, were days filled with awe …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;div class="gmail_quote"&gt;&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;&lt;div class="im"&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;p&gt;I dreamt of the blue skies. And in pursuit of another beautiful dream, I
+flew over the cotton-like clouds... my first flight. A warm evening in
+June. Haze covered the Delhi skies, as the flight descends to the land
+of promises. What was to follow, were days filled with awe, and silly
+incidents.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="separator"
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/08/untitled.jpg"&gt;&lt;img alt="image0" src="https://4.bp.blogspot.com/-JcsN3-1iboo/TjfKh76p8KI/AAAAAAAAAN0/PtSkRmAmiuw/s320/untitled.bmp" style="width: 320px; height: 208px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div dir="ltr"
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;div class="im"&gt;&lt;div style="text-align:center;"&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/08/114257295.jpg"&gt;&lt;img alt="image1" src="https://1.bp.blogspot.com/-dOWCvFx9nIs/TjfN1GjgEEI/AAAAAAAAAOE/Qeg_lC1054A/s200/114257295.jpg" style="width: 200px; height: 133px;" /&gt;&lt;/a&gt;And then in an old Ambassador cab, I was on the way to
+Gurgaon. Gurgaon, the place where the desert was turned into a fertile
+land, for concrete monsters to grow and reach for the sky. Endless
+stretches of residential colonies, with high tension electric lines hung
+as garlands. Many a family, from different roots, must have found home
+in these blocks.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;/div&gt;&lt;div&gt;&lt;div
+style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"&gt;&lt;div&gt;&lt;p&gt;The next morning, there were seven of us, and we set out in a &amp;quot;&lt;a class="reference external" href="https://goo.gl/quKA8"&gt;share
+auto&lt;/a&gt;&amp;quot;. The way that little vehicle transports a
+truck-load of people, was insane yet comfortable. I doubt if I will see
+it anywhere else. Bargaining for a hired auto is a pain in the neck.
+&amp;quot;Kitna denge?&amp;quot; asked the auto-driver. Trying to play hard my friend
+said, &amp;quot;Pachaas!&amp;quot; The obviously unsatisfied driver blurted, &amp;quot;Pachaas mein
+nahi chalega. Kahaan se aaye ho?!&amp;quot; Innocently he replied, &amp;quot;Ghar se.&amp;quot;&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="im"&gt;&lt;p&gt;The cars that roamed the streets were tattooed with dents. Back home,
+people attended to their cars, more often than they were worried of
+their own health. Any small scratch was a huge eyesore. Down the road,
+BMWs and Audis flooded the traffic junctions; while outside in the
+boiling heat we saw hungry young children. They were hanging on to their
+dear lives by selling some 5 rupees worth photos of Gods.
+Anyhow, we went on with our journey in the Metro, the lifeline of the
+NCR. Its clean, cold stainless steel frames, are definitely a relief in
+the madness that makes the city what it is. The historical monuments
+which dotted the Delhi landscape were a grim reminder how old this city
+really is. And that picture is different from the Delhi of malls,
+condos, and spendthrift lifestlye.&lt;/p&gt;
+&lt;div style="text-align:left;"&gt;&lt;p&gt;Of all the places I have been, an unforgettable memory was that of
+Chandni&amp;nbsp;Chowk. However shabby and old the place looks, somewhere in its
+dark corners is where the real Delhi, the city of equality, still
+survives.&lt;/p&gt;
+&lt;/div&gt;&lt;div style="text-align:center;"&gt;&lt;p&gt;&lt;img alt="Chandni%20Chowk(1).jpg" src="https://www.grotal.com/CityImages/Chandni%20Chowk(1).jpg" style="width: 200px; height: 133px;" /&gt;&lt;img alt="tour-india-insights-chandni-chowk-delhi.jpg" src="https://www.filmapia.com/sites/default/files/filmapia/pub/place/tour-india-insights-chandni-chowk-delhi.jpg" style="width: 200px; height: 132px;" /&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;Courtesy: Vishnu K.V.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content><category term="life"></category><category term="travel"></category></entry><entry><title>Things to do before I turn 25</title><link href="https://ashwinvis.github.io/things-to-do-before-i-turn-25.html" rel="alternate"></link><published>2011-04-22T13:12:00+02:00</published><updated>2011-04-22T13:12:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2011-04-22:/things-to-do-before-i-turn-25.html</id><summary type="html">&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Start reading books again.&lt;/li&gt;
+&lt;li&gt;See the world, what lies beyond South India. Live for sometime on the
+other side.&lt;/li&gt;
+&lt;li&gt;I always think inside my mind continuously. If you think I am silent,
+you assumed wrong. I am talking to myself. I really hope to change
+it.&lt;/li&gt;
+&lt;li&gt;I turn into a …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Start reading books again.&lt;/li&gt;
+&lt;li&gt;See the world, what lies beyond South India. Live for sometime on the
+other side.&lt;/li&gt;
+&lt;li&gt;I always think inside my mind continuously. If you think I am silent,
+you assumed wrong. I am talking to myself. I really hope to change
+it.&lt;/li&gt;
+&lt;li&gt;I turn into a wild party animal when I am alone. Where is the heck is
+that beast when I need it at real parties?&lt;/li&gt;
+&lt;li&gt;Grab a guitar,&amp;nbsp;preferably&amp;nbsp;nylon strings. Learn it during spare time.&lt;/li&gt;
+&lt;li&gt;Get a smartphone, just so that I can read e-books for free. Which in
+a way aids Resolution #1&lt;/li&gt;
+&lt;li&gt;Stop controlling my life, and let go for a change. Say yes to
+everything (yea, as in &amp;quot;Yes Man&amp;quot; the movie)&lt;/li&gt;
+&lt;li&gt;And that brings us to.... stop watching so many movies! We all
+realise at the end of the year, there was just 2 movies worth
+remembering. Why bother?&lt;/li&gt;
+&lt;li&gt;Sail to an island. Climb a mountain. Jump of a cliff.. I am &amp;nbsp;done
+with roadtrips. I need the X-factor (read, excitement).&lt;/li&gt;
+&lt;li&gt;When I was at school, I never judged people (Silly, innocent me).
+Then, I&amp;nbsp;realized&amp;nbsp;people do that all the time. Find more friends who
+don't judge me. Then I could be back on my don't-give-a-f attitude.&lt;/li&gt;
+&lt;li&gt;The problem with Cable TVs is that I keep channel surfing, even after
+midnight; in the lame hope, that there is something better than
+&amp;quot;sleeping&amp;quot; on the next channel. Should learn to turn it off.&lt;/li&gt;
+&lt;li&gt;It took me forever to&amp;nbsp;realize&amp;nbsp;what an amazing people my family had
+been. All these years, I was unhappy about a not-so-happening
+childhood, when actually they were trying to give me a normal
+childhood, away from their worries. I promise to give back.&lt;/li&gt;
+&lt;li&gt;Meet someone special, who could think on their own, and also who
+don't -giva-a-f to go places on their own.&lt;/li&gt;
+&lt;li&gt;Inspire someone, probably a younger someone. Help them out find their
+destiny.&lt;/li&gt;
+&lt;li&gt;And give and share unconditionally... as if I got millions to spend.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2011/04/your-bucket-list.png"&gt;&lt;img alt="image0" src="https://bigfatpage.files.wordpress.com/2011/04/your-bucket-list1.png?w=300" style="width: 320px; height: 239px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+</content><category term="life"></category><category term="resolution"></category></entry><entry><title>Sheer pleasure of Going Places</title><link href="https://ashwinvis.github.io/sheer-pleasure-of-going-places.html" rel="alternate"></link><published>2011-03-02T04:06:00+01:00</published><updated>2011-03-02T04:06:00+01:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2011-03-02:/sheer-pleasure-of-going-places.html</id><summary type="html">&lt;p&gt;Travelling with a rout3 map in hand is one thing.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;But have you ever thought of chasing an unknown route, and you have no&lt;/div&gt;
+&lt;div class="line"&gt;idea where you will end up.&lt;/div&gt;
+&lt;div class="line"&gt;I used to do it since I was 12, with a new cycle, and all my&lt;/div&gt;
+&lt;div class="line"&gt;neighbourhood back at Aluva …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Travelling with a rout3 map in hand is one thing.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;But have you ever thought of chasing an unknown route, and you have no&lt;/div&gt;
+&lt;div class="line"&gt;idea where you will end up.&lt;/div&gt;
+&lt;div class="line"&gt;I used to do it since I was 12, with a new cycle, and all my&lt;/div&gt;
+&lt;div class="line"&gt;neighbourhood back at Aluva laid out to conquer. Just two summer&lt;/div&gt;
+&lt;div class="line"&gt;holidays later (i.e. when i turned 14) I had seen it all, I knew every&lt;/div&gt;
+&lt;div class="line"&gt;grass and gutter. I no longer felt the novelty of getting&lt;/div&gt;
+&lt;div class="line"&gt;lost... And so, I stopped doing it.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Seven long years have past. Days had become hectic for me (or so i&lt;/div&gt;
+&lt;div class="line"&gt;thought; but I was wrong). Of all these years of being in an alien&lt;/div&gt;
+&lt;div class="line"&gt;city, never did a wild thought occur to start over and wander&lt;/div&gt;
+&lt;div class="line"&gt;aimlessly. Gng places had been restricted to hangouts with friends&lt;/div&gt;
+&lt;div class="line"&gt;(not that it's a bad thing...my mind had narrowed, if you see my&lt;/div&gt;
+&lt;div class="line"&gt;point).&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Until today.&lt;/div&gt;
+&lt;div class="line"&gt;Woke up at 6. An early breakfast. And a walk through unknown streets,&lt;/div&gt;
+&lt;div class="line"&gt;and lonely grounds. Away from traffic and madness of the city. Listen&lt;/div&gt;
+&lt;div class="line"&gt;to the birds sing. Feel the warmth of the golden sun, on a cold&lt;/div&gt;
+&lt;div class="line"&gt;morning. And smile :)&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Small steps to start with. But good enough to start over.&lt;/p&gt;
+&lt;p&gt;So long computers, movies and society! World is calling.&lt;/p&gt;
+&lt;p&gt;--&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Ashwin&amp;gt;&amp;gt;&amp;gt;&lt;/div&gt;
+&lt;div class="line"&gt;V&lt;/div&gt;
+&lt;div class="line"&gt;V&lt;/div&gt;
+&lt;div class="line"&gt;V&lt;/div&gt;
+&lt;div class="line"&gt;&amp;gt;&amp;gt;&lt;a class="reference external" href="https://bigfatpage.blogspot.com"&gt;bigfatpage.blogspot.com&lt;/a&gt;&amp;lt;&amp;lt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Uncategorized"></category></entry><entry><title>Age 21: Where are you now?</title><link href="https://ashwinvis.github.io/age-21-where-are-you-now.html" rel="alternate"></link><published>2011-02-07T12:29:00+01:00</published><updated>2011-02-07T12:29:00+01:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2011-02-07:/age-21-where-are-you-now.html</id><summary type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;Plan, one step at a time.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;It is a mistake to look too far ahead. Only one link in the chain of
+destiny can be handled at a time.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;It is always wise to look ahead, but difficult to look further than you
+can see.&amp;nbsp;// (Sir Winston Churchill)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;div
+style="font-family:'Courier New', Courier, monospace;font-style:italic;"&gt;&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;21, an …&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div dir="ltr" style="text-align:left;"&gt;&lt;p&gt;Plan, one step at a time.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;It is a mistake to look too far ahead. Only one link in the chain of
+destiny can be handled at a time.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;It is always wise to look ahead, but difficult to look further than you
+can see.&amp;nbsp;// (Sir Winston Churchill)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;div
+style="font-family:'Courier New', Courier, monospace;font-style:italic;"&gt;&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;21, an age at which we legally turn adults, willing to take our own
+choices (yeah, by all means).&lt;/div&gt;
+&lt;div class="line"&gt;We stand at crossroads, yet few of us realise the same. The very
+ground that we stand now, defines us in the days, months and years to
+come.... Yet, few are shaken by the gravity of that decision.&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;That one decision:&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;that &amp;nbsp;job, you plan to blindly chase in the 1-2 years to follow&lt;/li&gt;
+&lt;li&gt;that family business, which you plan to take care of&lt;/li&gt;
+&lt;li&gt;that university, which you always dreamt of being a part of&lt;/li&gt;
+&lt;li&gt;or even that&amp;nbsp;soul mate, for whom you gave your heart, and made
+promises&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Everything matters&lt;/strong&gt;. Search to the bottom of your soul, what you
+yearn.&lt;/p&gt;
+&lt;p&gt;Think about how &amp;quot;you think&amp;quot; life will be like after that one step.&amp;nbsp;Work
+to earn it.&amp;nbsp;Follow it with all you've got.&lt;/p&gt;
+&lt;p&gt;It all comes down to one small fundamental principle of happiness:&lt;/p&gt;
+&lt;/div&gt;
+
+ NO REGRETS&lt;p&gt;And for all fellow beings planning to &amp;quot;go with the flow&amp;quot; and later on
+&amp;quot;settle&amp;quot;.
+Trust me, it may seem the easy way, but it is the most dangerous path.&lt;/p&gt;
+&lt;p&gt;You are talking about settling for 40 years ahead, when already you
+have grown vary of living the same life for just 20 years!
+&lt;em&gt;Vita longa&lt;/em&gt; (Life is long), explore it in all its glory.&lt;/p&gt;
+&lt;p&gt;Farewell!&lt;/p&gt;
+</content><category term="life"></category></entry><entry><title>Music and the State of the Mind</title><link href="https://ashwinvis.github.io/music-and-the-state-of-the-mind.html" rel="alternate"></link><published>2010-11-05T08:45:00+01:00</published><updated>2010-11-05T08:45:00+01:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2010-11-05:/music-and-the-state-of-the-mind.html</id><summary type="html">&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Have you ever felt... there is a connection between your emotions and
+your level of enjoyment while you are listening to a track. Say it
+&amp;quot;striking&amp;nbsp;a vibe&amp;quot;, &amp;quot;feeling the love&amp;quot; whatever, ... you immediately
+connect to the artist and his lyrics.&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;em&gt;Here's a little guide on the kind of music …&lt;/em&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Have you ever felt... there is a connection between your emotions and
+your level of enjoyment while you are listening to a track. Say it
+&amp;quot;striking&amp;nbsp;a vibe&amp;quot;, &amp;quot;feeling the love&amp;quot; whatever, ... you immediately
+connect to the artist and his lyrics.&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;em&gt;Here's a little guide on the kind of music to get you started:&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;*
+*&lt;/div&gt;
+&lt;div class="line"&gt;&lt;em&gt;PS: This is an individual opinion. If you don't like it, feel free to
+throw it off the shelf..&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Homecoming/ nostalgia&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://t3.gstatic.com/images?q=tbn:XRh_xR_ASL50sM:b"&gt;&lt;img alt="image0" src="https://t3.gstatic.com/images?q=tbn:XRh_xR_ASL50sM:b" style="width: 265px; height: 400px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Country songs are the answer. Especially the old ones.. Shania Twain,
+Dolly Parton, Tom Petty, Kenny Rogers, John Denver. All of them talk
+of the good times we had, those small pleasures we cherish.&lt;/div&gt;
+&lt;div class="line"&gt;Even a good Indian would love a &amp;quot;Yun hi chala&amp;quot; on his car stereo, if
+it's roadtrips you have on your min; I'd recommend mixing it up with&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;div style="text-align:right;"&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;2. Get high&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://t0.gstatic.com/images?q=tbn:ANd9GcR4xPbn5-tdp3Jc1ns8h1mcz8SvkgaK4oVQEjtTrc19BRlUXZU&amp;amp;t=1&amp;amp;usg=__1rj8j4A29oK4mWNY1bRsID8NeVU="&gt;&lt;img alt="image1" src="https://t0.gstatic.com/images?q=tbn:ANd9GcR4xPbn5-tdp3Jc1ns8h1mcz8SvkgaK4oVQEjtTrc19BRlUXZU&amp;amp;t=1&amp;amp;usg=__1rj8j4A29oK4mWNY1bRsID8NeVU=" style="width: 275px; height: 183px;" /&gt;&lt;/a&gt;Psych it up with psychedelic, grunge and what not! Good old
+Pink Floyd, Led Zepp to the new age bands like Nirvana, Nine Inch
+Nails. All serves well.&lt;/div&gt;
+&lt;div class="line"&gt;I must say- I am totally against booze, drugs, smoke and shit, that
+can kill you eventually!&lt;/div&gt;
+&lt;div class="line"&gt;But listening to music, is a different level. It's close to travelling
+to another universe in your subconscious. Must try&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;Chillax n Relax&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;p&gt;&lt;a class="reference external" href="https://t2.gstatic.com/images?q=tbn:ANd9GcSptdHVhgJSSn3VS9proZkGYxo57zipk1NvfjS2ko0jwgbQfOM&amp;amp;t=1&amp;amp;usg=__6VnwRk9DhaR9KPRRLENDcPgEXk8="&gt;&lt;img alt="image2" src="https://t2.gstatic.com/images?q=tbn:ANd9GcSptdHVhgJSSn3VS9proZkGYxo57zipk1NvfjS2ko0jwgbQfOM&amp;amp;t=1&amp;amp;usg=__6VnwRk9DhaR9KPRRLENDcPgEXk8=" style="width: 279px; height: 181px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Holding a hot cuppa in a rainy day, lazing away your day on the
+hammock, a walk on the beach... it is all what we do to wind down from
+a busy life.&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Your ears deserve to take a break from the noises of city life for a
+while. Give it the respect it deserves. Listening to slow songs like
+Norah Jones, and trip-hop artists like Massive Attack is what I'm
+talking about..!&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;4. Distress/ hate/ anger&lt;/div&gt;
+&lt;div class="line"&gt;Sharing your anger could actually help cool down. Scream it out, don't
+hold it back. I prefer Metalcore, and angry Rap. Eminem, Avenged
+Sevenfold, Guns N Roses: it works for me.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="text-align:right;"&gt;&lt;div class="separator" style="clear:both;text-align:center;"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;For the really crazy guys out there, you love death metal don't you?&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;5. Party time!&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://t2.gstatic.com/images?q=tbn:ANd9GcRcJyn7eGL5cpvlZUXJZZ8e-tRzaXyXu5OFy3bvF4gz38K-N2w&amp;amp;t=1&amp;amp;usg=__NNDY4z72dsQX_lpoEewKUWgShXM="&gt;&lt;img alt="image3" src="https://t2.gstatic.com/images?q=tbn:ANd9GcRcJyn7eGL5cpvlZUXJZZ8e-tRzaXyXu5OFy3bvF4gz38K-N2w&amp;amp;t=1&amp;amp;usg=__NNDY4z72dsQX_lpoEewKUWgShXM=" style="width: 284px; height: 177px;" /&gt;&lt;/a&gt;Go for pop, &amp;quot;dappan&amp;quot;, hip hop, bollywood songs. Anything
+goes with a party; only on one condition&lt;/div&gt;
+&lt;div class="line"&gt;&lt;strong&gt;It should have a good beat to dance to ;)&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;6. Workaholic(Perspiration/ inspiration)&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://t1.gstatic.com/images?q=tbn:ANd9GcQFRYCbVV53W9uolSJWRfSKBjrv7X-ryJ_KoTslu7PoWMDHm9U&amp;amp;t=1&amp;amp;usg=__6589LmRi9dYUxQ7Ots8Bi7usmUo="&gt;&lt;img alt="image4" src="https://t1.gstatic.com/images?q=tbn:ANd9GcQFRYCbVV53W9uolSJWRfSKBjrv7X-ryJ_KoTslu7PoWMDHm9U&amp;amp;t=1&amp;amp;usg=__6589LmRi9dYUxQ7Ots8Bi7usmUo=" style="width: 194px; height: 259px;" /&gt;&lt;/a&gt;Trance,&amp;nbsp;trance&amp;nbsp;and trance alone... since it's electronic
+music, you don't have to listen to the lyrics, thats the plus side.
+Time just flies by...&lt;/div&gt;
+&lt;div class="line"&gt;Tiesto, Armin van buuren, and countless other DJs.. all rock!&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="text-align:right;"&gt;&lt;/div&gt;&lt;p&gt;For inspiration, listen to soundtracks of your fav movies. For instance,
+Rocky, Gladiator etc etc&lt;/p&gt;
+</content><category term="emotion"></category><category term="list"></category><category term="mood"></category><category term="music"></category></entry><entry><title>"About Me? I dunno, I'm a moron"</title><link href="https://ashwinvis.github.io/about-me-i-dunno-im-a-moron.html" rel="alternate"></link><published>2010-06-02T15:10:00+02:00</published><updated>2010-06-02T15:10:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2010-06-02:/about-me-i-dunno-im-a-moron.html</id><summary type="html">&lt;p&gt;Still no idea what i'm talking? These one liners may sound familiar to
+ya..&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Better u get to know me and say..&lt;/li&gt;
+&lt;li&gt;try me&lt;/li&gt;
+&lt;li&gt;u&amp;nbsp;&lt;strong&gt;tell&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;me&lt;/strong&gt;&amp;nbsp;that&lt;/li&gt;
+&lt;li&gt;am still discovering myself..&lt;/li&gt;
+&lt;li&gt;???&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;p&gt;These are a few of those umpteen ONELINER &amp;quot;about me&amp;quot;s you see everyday.
+Frankly i'm tired of …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Still no idea what i'm talking? These one liners may sound familiar to
+ya..&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Better u get to know me and say..&lt;/li&gt;
+&lt;li&gt;try me&lt;/li&gt;
+&lt;li&gt;u&amp;nbsp;&lt;strong&gt;tell&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;me&lt;/strong&gt;&amp;nbsp;that&lt;/li&gt;
+&lt;li&gt;am still discovering myself..&lt;/li&gt;
+&lt;li&gt;???&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;p&gt;These are a few of those umpteen ONELINER &amp;quot;about me&amp;quot;s you see everyday.
+Frankly i'm tired of reading these self insulting statements. So why
+bother when you can just LEAVE the space EMPTY!&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;p&gt;Ever wondered how often you hear her gossiping , and still won't write a
+word describing themselves. Protecting one's privacy is just a lame
+excuse.&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;p&gt;(PS: i'm not being a chauvinist, i just considered &amp;quot;gossiping&amp;quot; to be
+&amp;nbsp;feminine territory)&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;p&gt;&amp;nbsp;Networking is all about throwing a window open to the world.&amp;nbsp;If you
+want to network , you must tell ppl who you are;.. and yeah, if you
+don't want to do that, well you are in the wrong page.&lt;/p&gt;
+&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;An angry messed up netizen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;p&gt;&lt;a class="reference external" href="https://bigfatpage.files.wordpress.com/2010/06/its-all-about-me.jpg"&gt;&lt;img alt="image0" src="https://bigfatpage.files.wordpress.com/2010/06/its-all-about-me1.jpg?w=300" style="width: 400px; height: 260px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+</content><category term="Uncategorized"></category></entry><entry><title>Musings in a train journey - Pt.1</title><link href="https://ashwinvis.github.io/musings-in-a-train-journey-pt-1.html" rel="alternate"></link><published>2010-04-13T06:02:00+02:00</published><updated>2010-04-13T06:02:00+02:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2010-04-13:/musings-in-a-train-journey-pt-1.html</id><summary type="html">&lt;p&gt;Nothing could be more sore than sitting devoid of company in a train.
+For long i held this opinion. It was a hot saturday afternoon and I was
+stuck in the Chennai mail homebound. As I was early to reach the
+station, I managed to grab a seat in the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nothing could be more sore than sitting devoid of company in a train.
+For long i held this opinion. It was a hot saturday afternoon and I was
+stuck in the Chennai mail homebound. As I was early to reach the
+station, I managed to grab a seat in the general coach. A girl entered
+the train with her mother. Soon her father called her on the phone
+asking where they were. She replied, &amp;quot;Just come into coupe next to which
+a mammen is standing, with a newspaper on his head.&amp;quot; The guy to right
+suddenly asked, &amp;quot;What if that mammen moves past?&amp;quot; The girl prayed
+otherwise.&lt;/p&gt;
+&lt;p&gt;For a few passing minutes, i stared at a guy dressed like a pimp, who
+stood by the aisle. French beard, violet t-shirt with huge prints,
+egg-white wrist watch... &amp;quot;Interesting,&amp;quot; I thought. It wasn't long
+before, the way he spoke made me realise he was that average college
+boy. Father came and the train bade goodbye to hot, simmering station.&lt;/p&gt;
+&lt;p&gt;I spent the 1st dragging hour staring at the amusements my phone. All i
+could think of was my bum&amp;nbsp; gettin numb. Heaven sent a guy, asking me to
+get up and stuff his bags. Relief at last... I got rid of my gadget as i
+hit kollam. Transforming into a rubberneck, i saw the multitude of
+passengers who sat nearby... This was quite a queer lot.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;On the windowside opposite was a blind schoolteacher, who held his bag
+close to him. And next to me sat a man of sixties, who attempted to
+make small talk with the blind gentleman with little success. The
+weirdest was a family of three- a husband , a wife and a young girl,
+who were determined to battle their way till Chennai in the general
+coupe. To the right sat a pair of artists who were completely
+strangers when they entered the train. Getting to know each other,
+they couldn't stop themselves from bragging about 'the ailings of the
+entertainers'. Reality shows and egos of the 'superstars' hit bigtime
+between their gossips.&lt;/div&gt;
+&lt;div class="line"&gt;(...)&lt;/div&gt;
+&lt;div class="line"&gt;&lt;em&gt;to be concluded&lt;/em&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Uncategorized"></category></entry><entry><title>Time is Life</title><link href="https://ashwinvis.github.io/time-is-life.html" rel="alternate"></link><published>2010-02-12T13:04:00+01:00</published><updated>2010-02-12T13:04:00+01:00</updated><author><name>azuwish</name></author><id>tag:ashwinvis.github.io,2010-02-12:/time-is-life.html</id><summary type="html">&lt;p&gt;The past few weeks of my life were the most dramatic, glorious ones.
+Things start getting too good for you, they happen &amp;nbsp;so fast... that, it
+is next to impossible to squeeze enough time out. Those were yes, the
+golden moments...&lt;/p&gt;
+&lt;p&gt;Childhood was great... you had a hardcore gang of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The past few weeks of my life were the most dramatic, glorious ones.
+Things start getting too good for you, they happen &amp;nbsp;so fast... that, it
+is next to impossible to squeeze enough time out. Those were yes, the
+golden moments...&lt;/p&gt;
+&lt;p&gt;Childhood was great... you had a hardcore gang of 5-6 buddies, and your
+life mostly revolved around the innocent jokes you played. Now, you are
+20, and your friend circle has expanded exponentially... you can't miss
+out catching up with anyone, nor upset with negligence.&lt;/p&gt;
+&lt;p&gt;Sometimes I wonder if you ever get wary of keeping it alive, and
+connected. Ever wondered what it would be like to just I S O L A T E?
+Surely it is crazy, but is socializing&amp;nbsp;any less insane?&lt;/p&gt;
+&lt;p&gt;Today I'm running away... just to spend the holiday lazing around (-_-)&lt;/p&gt;
+</content><category term="friends"></category><category term="life"></category></entry></feed>

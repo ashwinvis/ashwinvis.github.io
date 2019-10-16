@@ -1,0 +1,438 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <link rel="icon" href="/images/KTH_logo.png" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Ashwin Vishnu Mohanan" />
+        <title>REPL for your data</title>
+
+<meta name="description" content="&lt;p&gt;Use ethical solutions. Archive your data. REPL.&lt;/p&gt;" />
+<meta name="keywords" content=" social media privacy fediverse  "/>
+
+        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/backdrop.min.css" />
+        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/pygments.min.css" />
+        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/dark.min.css" />
+        <script src="https://ashwinvis.github.io/theme/js/modernizr.js"></script>
+
+        <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu's Website Full Atom Feed" />
+        <link href="https://ashwinvis.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu's Website Categories Atom Feed" />
+
+
+        <script language="JavaScript" type="text/javascript">
+          function decrypt_email(a) {
+            // ROT13 : a Caesar cipher
+            // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
+            return a.replace(/[a-zA-Z]/g,
+                             function(c){
+				     return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+			     })
+          }
+          function openMailer(element) {
+            var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nfujvaivf@cz.zr>");
+            element.setAttribute("href", y);
+          }
+        </script>
+
+    </head>
+
+    <body>
+	<div class="top-row">
+	    <div class="fixed">
+		<nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><!-- Leave this empty for no title-->
+				<h1><a href="https://ashwinvis.github.io">Ashwin Vishnu's Website</a></h1>
+			</li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="right">
+                            <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
+                            <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
+                            <li><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                            <li><a href="https://ashwinvis.github.io/category/quote.html">quote</a></li>
+                            <li class="active"><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+                        </ul>
+                    </section>
+                </nav>
+	    </div>
+	</div>
+
+        <div class="master-row">
+            <div class="content-pane">
+                <div id="content1">
+                <div id="contents">
+<div class="row">
+    <div class="small-12 columns article">
+        <h2>REPL for your data</h2>
+        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="far fa-calendar-alt"></i>&nbsp; Sun 28 July 2019</span></li>
+            <li><span><i class="fas fa-folder-open"></i>&nbsp; <a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></span></li>
+            <li>
+                <span>
+                    <i class="fas fa-tags"></i>&nbsp;
+                    <a href="https://ashwinvis.github.io/tag/social-media.html"><span class="label">social media</span></a>
+                    <a href="https://ashwinvis.github.io/tag/privacy.html"><span class="label">privacy</span></a>
+                    <a href="https://ashwinvis.github.io/tag/fediverse.html"><span class="label">fediverse</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+        <section class="article">
+            <p>So we have heard this time and time again.</p>
+<ol>
+<li>Data is the new oil.</li>
+<li>Surveillance capitalism.</li>
+<li>The most profitable companies on the entire planet rely on your data<sup id="fnref:data"><a class="footnote-ref" href="#fn:data">1</a></sup>.</li>
+</ol>
+<p>and so on. I believe the agenda for all these companies is to use data to power
+their AI research. And our privacy is just a casualty in this process.  Despite
+all this news and "shocking" revelations that we hear almost every day in the
+news, many tend to stick around and use them, including me<sup id="fnref:contra"><a class="footnote-ref" href="#fn:contra">2</a></sup>.  There are
+solutions however. And it gets better - what I described below require almost
+zero investment (except for your attention and time, of course).</p>
+<h3>Solutions that do not require deep technical knowledge</h3>
+<ol>
+<li>Jump ship to the new wave of <a href="https://fediverse.party">decentralized social
+   networks, which are collectively called
+   Fediverse</a><sup id="fnref:mast"><a class="footnote-ref" href="#fn:mast">3</a></sup>.</li>
+<li>Start using zero-knowledge and FOSS software services for example
+   collaborative document editing<sup id="fnref:docs"><a class="footnote-ref" href="#fn:docs">4</a></sup> and emails<sup id="fnref:email"><a class="footnote-ref" href="#fn:email">5</a></sup>.</li>
+<li>Prefer end-to-end encrypted chat applications which cannot be
+   compromised<sup id="fnref:chat"><a class="footnote-ref" href="#fn:chat">6</a></sup>.</li>
+</ol>
+<h3>Solutions that need you to be a power user</h3>
+<p>If you are tech-savvy enough, you can start using OpenPGP with email using
+<a href="https://emailselfdefense.fsf.org/en/">Enigmail</a>. And for services you can
+also consider self-hosting it<sup id="fnref:host"><a class="footnote-ref" href="#fn:host">7</a></sup> in low-power devices such as a Raspberry
+Pi. You can even get a URL to point to your server at absolutely no charge<sup id="fnref:dns"><a class="footnote-ref" href="#fn:dns">8</a></sup>.</p>
+<h3>REPL: Read, evaluate, print and loop</h3>
+<p><a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> is a
+jargon for consoles of all sorts: bash, python etc. In this case I apply this
+into our social media usage. Read what others post, evaluate your thoughts,
+share your thoughts into the platform, keep doing it. What is unique about REPL
+consoles is that <strong>data is ephemeral</strong>. What you type is not meant to last forever.</p>
+<p>Therefore, I have started to cleanse my digital data footprint. I <a href="https://deletefacebook.com">deleted my
+Facebook account</a> several months ago. Right now I
+am deleting all my tweets<sup id="fnref:tweets"><a class="footnote-ref" href="#fn:tweets">10</a></sup>. My reasons are more than privacy oriented.
+I do not want blood on my hands on a platform that have a proven impact on how
+people think, how they vote and do things. And these platforms profit from
+selling analytics, and manipulate users using algorithmic timelines and
+recommendations. I am therefore progressively transitioning to more ethical
+services.</p>
+<p>Unless you are in full control, you have to be always to be cautious while
+entrusting some of your data with a third-party service. Even if they are
+ethical now. I remember a time not so long ago, when I had a positive
+impression about Google and its "Don't be evil" tag line<sup id="fnref:evil"><a class="footnote-ref" href="#fn:evil">9</a></sup>. I keep archives
+of my Mastodon account<sup id="fnref:archive"><a class="footnote-ref" href="#fn:archive">11</a></sup> and will soon add expiration to my posts. I
+also have this idea:</p>
+<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/102518259996206758/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" height="300" allowfullscreen="allowfullscreen">
+</iframe>
+
+<script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
+
+<h4>Appendix 1: Mass tweet deletion</h4>
+<p>So the commands described in the blog post<sup id="fnref2:tweets"><a class="footnote-ref" href="#fn:tweets">10</a></sup> seem to work great. Here
+is what I did following the instructions:</p>
+<ol>
+<li>Downloaded an archive from Twitter</li>
+<li>Copy and modify <code>tweet.js</code> into a proper JSON file.</li>
+<li>Extract the ID of all tweets.</li>
+<li>Sniff out the POST request as a cURL command using Firefox. I also added
+   the silent flag <code>-s</code> for cURL.
+   Save it as <code>deletetweet.sh</code> and make it executable.</li>
+<li>And a personal twist: send delete requests in parallel:</li>
+</ol>
+<div class="highlight"><pre><span></span>cat tweetstodelete.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Deleting {}&#39; &amp;&amp; ./deletetweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; delete.log <span class="p">&amp;</span>
+tail -f delete.log
+</pre></div>
+
+
+<p>And the cURL command looks like:</p>
+<div class="highlight"><pre><span></span>curl -s <span class="s2">&quot;https://api.twitter.com/1.1/statuses/destroy/</span><span class="nv">$1</span><span class="s2">.json&quot;</span> ...
+</pre></div>
+
+
+<p>So now I am down from 1400 tweets to 544 tweets. And the difference is almost
+correct:</p>
+<div class="highlight"><pre><span></span>❯ wc -l tweetstodelete.txt
+<span class="m">844</span> tweetstodelete.txt
+</pre></div>
+
+
+<p>In step 3, the following command was used to extract the tweets with no
+interaction</p>
+<div class="highlight"><pre><span></span>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.favorite_count == &quot;0&quot;) | select(.retweet_count == &quot;0&quot;) | select(has(&quot;in_reply_to_user_id_str&quot;) | not)  | .id&#39;</span> -r &gt; tweetstodelete.txt<span class="sb">`</span>
+</pre></div>
+
+
+<p>To get a list of all the tweets:</p>
+<div class="highlight"><pre><span></span>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .id&#39;</span> -r &gt; tweetstodelete.txt
+</pre></div>
+
+
+<p>Now we need something similar for undoing all the likes on Twitter.</p>
+<p><strong>EDIT:</strong> A short how-to "dislike" all your tweets.</p>
+<p>Get a list of tweets to dislike from your archive in a
+similar approach. Take the <code>like.js</code> file from your archive and make it a
+proper JSON file.</p>
+<div class="highlight"><pre><span></span>cat like.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .like.tweetId&#39;</span> -r &gt;! tweetstodislike.txt
+</pre></div>
+
+
+<p>The POST request is also similar and contains "destroy". However the tweet ID
+should be in the data / payload. Therefore the curl command looks like (note
+the <code>$1</code> where the tweet ID gets substituted):</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+curl -s <span class="s1">&#39;https://api.twitter.com/1.1/favorites/destroy.json&#39;</span> ...lots of stuff here...<span class="se">\</span>
+  --data<span class="s2">&quot;id=</span><span class="nv">$1</span><span class="s2">&amp;cards_platform=Web-13&amp; ...even more stuff...&quot;</span>
+</pre></div>
+
+
+<p>Save the command in a file called <code>disliketweet.sh</code> and then,</p>
+<div class="highlight"><pre><span></span>cat tweetstodislike.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Disliking {}&#39; &amp;&amp; ./disliketweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; dislike.log <span class="p">&amp;</span>
+tail -f dislike.log
+</pre></div>
+
+
+<h4>Appendix 2: Unstar GitHub repositories</h4>
+<ol>
+<li>Used <a href="https://kirtan403.github.io/bookmark-github-stars/">bookmark-github-stars</a>
+   to export all my GitHub stars as html and imported into
+   <a href="https://zotero.org">Zotero</a> (you can also import into your browser). I did so
+   because because Zotero also retains valuable metadata (programming language,
+   license, description etc.).</li>
+<li>As <a href="https://github.com/zotero/zotero/issues/1515">Zotero does not automatically fetch metadata in its initial
+   import</a>, I wrote a <a href="https://source.coderefinery.org/ashwinvis/zotero-tools">few
+   scripts</a> which
+   relies on <a href="https://pyzotero.readthedocs.org/en/latest/">pyzotero</a>. The
+   documentation is minimal, but you can reuse them if you want.</li>
+<li>Finally I run <a href="https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75">this
+   script</a>
+   which relies on <a href="https://pygithub.readthedocs.io/en/latest/">pygithub</a>.</li>
+</ol>
+<script src="https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js"></script>
+
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:data">
+<p>Also known as <a href="https://en.m.wikipedia.org/wiki/Big_Four_tech_companies">GAFAM, the big four /
+  five</a>. <a href="https://framatube.org/videos/watch/31225e78-5f41-41dc-bfca-5e63b34e7be4">Framasoft
+  gave an excellent talk about it FOSDEM
+  2017</a>
+  if you don't mind the French accent.&#160;<a class="footnote-backref" href="#fnref:data" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:contra">
+<p>Including me. Even this very blog post is right now on GitHub pages,
+  and this would seem like a contradiction. In my defence, I started blogging
+  here before the acquisition.  As much as I don't like MS products, GitHub
+  doesn't look like the worst place in the world and blogs are not private
+  places.&#160;<a class="footnote-backref" href="#fnref:contra" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mast">
+<p>Such as <a href="https://joinmastodon.org">Mastodon</a>&#160;<a class="footnote-backref" href="#fnref:mast" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:docs">
+<p>Good alternatives are <a href="https://cryptpad.fr/">Cryptpad</a> and
+  <a href="https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite">Etherpad</a>.&#160;<a class="footnote-backref" href="#fnref:docs" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:email">
+<p><a href="https://www.privacytools.io/providers/email/">See alternatives</a> of
+  which I use ProtonMail. The only downsides that I think are: for extra data
+  allowance and POP3/IMAP access you need a paid account&#160;<a class="footnote-backref" href="#fnref:email" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:chat">
+<p><a href="https://docs.google.com/spreadsheets/d/1-UlA4-tslROBDS9IqHalWVztqZo7uxlCeKPQ-8uoFOU/htmlview">Google docs spreadsheet which compares digital communication
+  protocols</a>&#160;<a class="footnote-backref" href="#fnref:chat" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:host">
+<p><a href="https://yunohost.org/">Why you no host</a>&#160;<a class="footnote-backref" href="#fnref:host" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:dns">
+<p>Using <a href="https://wiki.archlinux.org/index.php/Dynamic_DNS">Dynamic DNS</a>
+  technology. I use a subdomain name provided at
+  <a href="https://freedns.afraid.org">afraid.org</a>.&#160;<a class="footnote-backref" href="#fnref:dns" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:evil">
+<p>Which was removed in
+  <a href="https://en.wikipedia.org/wiki/Don%27t_be_evil">2018</a> as they no longer
+  follow it.&#160;<a class="footnote-backref" href="#fnref:evil" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:tweets">
+<p>I followed <a href="https://jlelse.blog/posts/mass-delete-tweets/">@jlelse's tutorial</a> to delete tweets.&#160;<a class="footnote-backref" href="#fnref:tweets" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:tweets" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:archive">
+<p>Using <a href="https://github.com/kensanata/mastodon-backup">mastodon-archive</a>&#160;<a class="footnote-backref" href="#fnref:archive" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:expire">
+<p>This is <a href="https://alexschroeder.ch/wiki/2017-04-27_Record_Keeping">an interesting
+  essay</a> on why you
+  should expire your posts.&#160;<a class="footnote-backref" href="#fnref:expire" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>    
+        </section>
+    </div>
+</div>
+                </div>
+                </div>
+
+                <footer id="foot" class="show-for-large-up">
+<div class="small-6 medium-3 columns">
+    <ul class="left-nav">
+        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+    </ul>
+</div>
+<div class="small-6 medium-3 medium-push-6 columns">
+    <ul class="right-nav">
+        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
+        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+    </ul>
+</div>
+<div class="small-12 medium-6 medium-pull-3 columns text-center">
+</div>
+<div class="small-12 columns sub-footer">
+    <hr>
+    <div class="small-12 medium-6 columns">
+        <p class="small-text-center medium-text-left">
+            &copy; 2019 Ashwin Vishnu Mohanan 
+    <a
+    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
+    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
+    
+            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+        </p>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <p class="small-text-center medium-text-right">
+            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+            which takes great advantage of <a href="https://www.python.org/">Python</a>.
+        </p>
+    </div>
+</div>                </footer>
+            </div>
+
+            <div class="image-pane" style="background: url(''); background-size:cover; background-position: right;">
+                <div class="row">
+                    <div class="small-12 medium-4 large-12 columns">
+                        <div class="about-me">
+                            <div class="hide-for-medium-only small-3 columns no-buffer">
+                                <a class="th" href="/images/dp_ashwin.jpg">
+                                    <img src="/images/dp_ashwin.jpg">
+                                </a>
+                            </div>
+                            <div class="small-9 medium-12 large-9 columns text-justify">
+				<div class="site-description">
+                                
+My research centers around geophysical flows, particularly with
+gravity waves and vortices, studied from a turbulence perspective. I am trained
+in computational, theoretical and experimental tools. You would find
+me using things which are simple, efficent, open-source, and reproducible. Feel
+free to contact me - I am usually reachable via email or the social accounts
+listed below.
+				</div>
+                            </div>
+                            <div class="small-12 columns">
+                                <ul class="inline-center social-list">
+                                    <li><a href="encrypted-mail:Click to reveal" onclick="openMailer(this);">
+					<i class="fas fa-envelope"></i>&nbsp; Email</a>
+				    </li>
+				    <li><a href=https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>
+					<i class="fas fa-fingerprint"></i>&nbsp; GnuPG</a>
+				    </li>
+				    <li><a rel="me" href=https://mastodon.acc.sunet.se/@ashwinvis>
+					<i class="fab fa-mastodon"></i>&nbsp; Mastodon</a>
+				    </li>
+				    <li><a href="https://github.com/ashwinvis"><i class="fab fa-github"></i>&nbsp; Github</a></li>
+				    <li><a href="https://source.coderefinery.org/ashwinvis/"><i class="fab fa-gitlab"></i>&nbsp; Gitlab</a></li>
+				    <li><a href="https://bitbucket.org/avmo"><i class="fab fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
+				    <li><a href="https://www.linkedin.com/in/ashwinvishnu/"><i class="fab fa-linkedin"></i>&nbsp; LinkedIn</a></li>
+                                    <li><a href="https://zotero.org/ashwinvis"><i class="ai ai-zotero"></i>&nbsp; Zotero</a></li>
+                                    <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"><i class="ai ai-researchgate"></i>&nbsp; ResearchGate</a></li>
+                                    <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ"><i class="ai ai-google-scholar"></i>&nbsp; Google-Scholar</a></li>
+                                    <li><a href="https://orcid.org/0000-0002-2979-6327"><i class="ai ai-orcid"></i>&nbsp; ORCID</a></li>
+                                    <li><a href="https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"><i class="ai ai-zenodo"></i>&nbsp; Zenodo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-8 medium-4  large-8 small-offset-2 medium-offset-0 large-offset-2 columns link-list">
+		    <h5 class="text-center"><b>Search</b></h5>
+                    <form action="https://ashwinvis.github.io/search.html">
+                    <input type="text" name="q" id="tipue_search_input" placeholder="keyword or phrase" autocomplete="off" required>
+                    </form>
+                         <a class="th link-img img-center" href="https://kth.se">
+                              <img src="/images/KTH_Logotyp_RGB_2013-2.svg">
+                         </a>
+                    </div>
+
+                    <div class="small-12 medium-4  large-12 columns link-list">
+                        <ul class="inline-center">
+                            <li><a href="https://www.flow.kth.se">Linné FLOW Centre</a></li>
+                            <li><a href="https://fluiddyn.bitbucket.io">FluidDyn Project</a></li>
+                            <li><a href="https://www.mech.kth.se/mech/info_staff.xhtml?ID=381">Student Profile</a></li>
+                            <li><a href="https://python.org/">Python.org</a></li>
+                        </ul>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <footer class="hide-for-large-up">
+<div class="small-6 medium-3 columns">
+    <ul class="left-nav">
+        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
+    </ul>
+</div>
+<div class="small-6 medium-3 medium-push-6 columns">
+    <ul class="right-nav">
+        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
+        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+    </ul>
+</div>
+<div class="small-12 medium-6 medium-pull-3 columns text-center">
+</div>
+<div class="small-12 columns sub-footer">
+    <hr>
+    <div class="small-12 medium-6 columns">
+        <p class="small-text-center medium-text-left">
+            &copy; 2019 Ashwin Vishnu Mohanan 
+    <a
+    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
+    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
+    
+            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+        </p>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <p class="small-text-center medium-text-right">
+            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
+            which takes great advantage of <a href="https://www.python.org/">Python</a>.
+        </p>
+    </div>
+</div>            </footer>
+        </div>
+
+        <script src="https://ashwinvis.github.io/theme/js/jquery.min.js"></script>
+        <script src="https://ashwinvis.github.io/theme/js/foundation.min.js"></script>
+        <script src="https://ashwinvis.github.io/theme/js/slick.min.js"></script>
+        <script src="https://ashwinvis.github.io/theme/js/slick-app.js"></script>
+        <script src="https://ashwinvis.github.io/theme/js/app.js"></script>
+    </body>
+
+
+</html>
