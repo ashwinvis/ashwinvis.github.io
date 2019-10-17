@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinvis.github.io/</loc>
-<lastmod>2019-10-17T06:44:14-00:00</lastmod>
+<lastmod>2019-10-17T06:49:37-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/archives.html</loc>
-<lastmod>2019-10-17T06:44:14-00:00</lastmod>
+<lastmod>2019-10-17T06:49:37-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/tags.html</loc>
-<lastmod>2019-10-17T06:44:14-00:00</lastmod>
+<lastmod>2019-10-17T06:49:37-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/categories.html</loc>
-<lastmod>2019-10-17T06:44:14-00:00</lastmod>
+<lastmod>2019-10-17T06:49:37-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -104,13 +104,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ashwinvis.github.io/why-open-source.html</loc>
 <lastmod>2018-01-06T00:00:00+01:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://ashwinvis.github.io/2015-10-28-stockholm-throught-the-years-sthlm-urbanization.html</loc>
-<lastmod>2015-10-28T13:54:03+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -277,15 +270,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://ashwinvis.github.io/category/quote.html</loc>
-<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<loc>https://ashwinvis.github.io/category/tech-talk.html</loc>
+<lastmod>2019-08-06T00:00:00+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://ashwinvis.github.io/category/tech-talk.html</loc>
-<lastmod>2019-08-06T00:00:00+01:12</lastmod>
+<loc>https://ashwinvis.github.io/category/tumblr.html</loc>
+<lastmod>2015-04-06T11:58:33+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -403,27 +396,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://ashwinvis.github.io/tag/urbanization.html</loc>
-<lastmod>2015-10-28T13:54:03+01:12</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://ashwinvis.github.io/tag/sthlm.html</loc>
-<lastmod>2015-10-28T13:54:03+01:12</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://ashwinvis.github.io/tag/tumblr.html</loc>
-<lastmod>2015-10-28T13:54:03+01:12</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://ashwinvis.github.io/tag/wordporm.html</loc>
 <lastmod>2015-04-06T11:58:33+01:12</lastmod>
 <changefreq>monthly</changefreq>
@@ -439,6 +411,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinvis.github.io/tag/today-i-learned.html</loc>
+<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://ashwinvis.github.io/tag/tumblr.html</loc>
 <lastmod>2015-04-06T11:58:33+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
