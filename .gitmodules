@@ -7,3 +7,6 @@
 [submodule "m.css"]
 	path = src/m.css
 	url = https://github.com/ashwinvis/m.css.git
+[submodule "src/plugins/ipynb"]
+	path = src/plugins/ipynb
+	url = https://github.com/ashwinvis/pelican-ipynb
