@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinvis.github.io/</loc>
-<lastmod>2019-10-17T07:04:25-00:00</lastmod>
+<lastmod>2019-10-18T09:21:52-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/archives.html</loc>
-<lastmod>2019-10-17T07:04:25-00:00</lastmod>
+<lastmod>2019-10-18T09:21:52-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/tags.html</loc>
-<lastmod>2019-10-17T07:04:25-00:00</lastmod>
+<lastmod>2019-10-18T09:21:52-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/categories.html</loc>
-<lastmod>2019-10-17T07:04:25-00:00</lastmod>
+<lastmod>2019-10-18T09:21:52-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -132,6 +132,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ashwinvis.github.io/2014-12-05-house-nehru.html</loc>
 <lastmod>2014-12-05T22:47:05+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>https://ashwinvis.github.io/2014-11-11-ying-yang.html</loc>
+<lastmod>2014-11-11T00:55:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -461,6 +468,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ashwinvis.github.io/tag/indian-politics.html</loc>
 <lastmod>2014-12-05T22:47:05+01:12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://ashwinvis.github.io/tag/brainwaves.html</loc>
+<lastmod>2014-11-11T00:55:00+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
