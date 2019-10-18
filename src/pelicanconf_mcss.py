@@ -13,6 +13,7 @@ sys.path.append(os.curdir)
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
+STATIC_PATHS = ["images", "pdf", "static"]
 DIRECT_TEMPLATES = (
     "index",
     "tags",
@@ -27,10 +28,12 @@ DIRECT_TEMPLATES = (
 M_CSS_FILES = [
     "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
     "/static/m-dark.css",
+    "/static/m-dark-ipynb.css",
+    #  "/static/pygments-dark.css",
 ]
 M_THEME_COLOR = "#22272e"
 
-PLUGIN_PATHS = ["m.css/plugins"]
+PLUGIN_PATHS = ["m.css/plugins", "plugins"]
 PLUGINS = ["m.htmlsanity"]
 
 M_FAVICON = ("/images/KTH_logo.png", "image/png")
@@ -41,20 +44,63 @@ M_SITE_LOGO_TEXT = "Ashwin Vishnu's Website"
 # Navbar
 M_LINKS_NAVBAR1 = [
     (
-        "Posts", "archives", "[blog]",
+        "Posts",
+        "archives",
+        "[blog]",
         [
-            ("Blog", "categories/blog.html", ""),
-            ("Tech Talk", "categories/tech-talk.html", ""),
+            ("Blog", "category/blog.html", ""),
+            ("Tech Talk", "category/tech-talk.html", ""),
         ],
     ),
     ("Contact", "contact/", "contact", []),
 ]
 
 M_LINKS_NAVBAR2 = [
-    ("Showcase", "showcase/", "[showcase]",
+    (
+        "Showcase",
+        "showcase/",
+        "",
         [
+            ("CV", "pages/cv", ""),
             ("Research", "pages/research", ""),
             ("Software", "pages/software", ""),
-        ]
-    ),
+        ],
+    )
 ]
+
+PLUGINS += [
+    "representative_image",
+    "tipue_search",
+    "ipynb.markup",
+    "pelican_bibtex",
+]
+
+# ipynb
+MARKUP = ("md", "ipynb")
+IGNORE_FILES = [".ipynb_checkpoints"]
+IPYNB_USE_METACELL = True
+#  IPYNB_COLORSCHEME = "solarized-dark"
+IPYNB_COLORSCHEME = "monokai"
+IPYNB_FIX_CSS = True
+IPYNB_SKIP_CSS = False
+IPYNB_EXPORT_TEMPLATE ="nbconvert.tpl"
+
+# Pagination
+DEFAULT_PAGINATION = 10
+DEFAULT_ORPHANS = 2
+
+# Publications with pybtex
+PUBLICATIONS_SRC = 'content/static/CV.bib'
+
+# HTML Template
+#  PAGINATED_TEMPLATES = ("category", "archives", "index", "pages")
+DIRECT_TEMPLATES = (
+    "index",
+    "tags",
+    "categories",
+    "archives",
+    # Requires tipue_search
+    #  "search",
+    # Requires pybtex
+    #  "publications",
+)
