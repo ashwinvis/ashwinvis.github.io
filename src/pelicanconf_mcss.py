@@ -13,7 +13,7 @@ sys.path.append(os.curdir)
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
-STATIC_PATHS = ["images", "pdf", "static"]
+STATIC_PATHS = ["images", "showcase", "pdf", "static"]
 DIRECT_TEMPLATES = (
     "index",
     "tags",
@@ -26,9 +26,8 @@ DIRECT_TEMPLATES = (
 )
 
 M_CSS_FILES = [
-    "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
+    # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
     "/static/m-dark.css",
-    "/static/m-dark-ipynb.css",
     #  "/static/pygments-dark.css",
 ]
 M_THEME_COLOR = "#22272e"
@@ -52,7 +51,7 @@ M_LINKS_NAVBAR1 = [
             ("Tech Talk", "category/tech-talk.html", ""),
         ],
     ),
-    ("Contact", "contact/", "contact", []),
+    ("Contact", "pages/contact/", "contact", []),
 ]
 
 M_LINKS_NAVBAR2 = [
