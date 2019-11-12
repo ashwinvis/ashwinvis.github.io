@@ -5,30 +5,37 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinvis.github.io/</loc>
-<lastmod>2019-10-31T23:57:36-00:00</lastmod>
+<lastmod>2019-11-12T07:00:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/archives.html</loc>
-<lastmod>2019-10-31T23:57:36-00:00</lastmod>
+<lastmod>2019-11-12T07:00:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/tags.html</loc>
-<lastmod>2019-10-31T23:57:36-00:00</lastmod>
+<lastmod>2019-11-12T07:00:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/categories.html</loc>
-<lastmod>2019-10-31T23:57:36-00:00</lastmod>
+<lastmod>2019-11-12T07:00:49-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://ashwinvis.github.io/pages/contact.html</loc>
+<lastmod>2019-10-18T00:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.3</priority>
 </url>
 
 <url>
@@ -50,13 +57,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2018-12-19T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
-</url>
-
-<url>
-<loc>https://ashwinvis.github.io/pyconse2019.html</loc>
-<lastmod>2019-10-31T00:00:00+01:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
 </url>
 
 <url>
@@ -139,6 +139,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ashwinvis.github.io/2014-12-05-house-nehru.html</loc>
 <lastmod>2014-12-05T22:47:05+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>https://ashwinvis.github.io/2014-11-11-ying-yang.html</loc>
+<lastmod>2014-11-11T00:55:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -278,28 +285,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinvis.github.io/category/tech-talk.html</loc>
-<lastmod>2019-10-31T00:00:00+01:12</lastmod>
+<lastmod>2019-08-06T00:00:00+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://ashwinvis.github.io/tag/python.html</loc>
-<lastmod>2019-10-31T00:00:00+01:12</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://ashwinvis.github.io/tag/fluiddyn.html</loc>
-<lastmod>2019-10-31T00:00:00+01:12</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://ashwinvis.github.io/tag/transonic.html</loc>
-<lastmod>2019-10-31T00:00:00+01:12</lastmod>
+<lastmod>2019-08-06T00:00:00+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -487,6 +480,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://ashwinvis.github.io/tag/brainwaves.html</loc>
+<lastmod>2014-11-11T00:55:00+01:12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://ashwinvis.github.io/tag/motto.html</loc>
 <lastmod>2014-11-07T23:44:00+01:12</lastmod>
 <changefreq>monthly</changefreq>
@@ -635,7 +635,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://ashwinvis.github.io/author/ashwin-vishnu.html</loc>
-<lastmod>2019-10-31T00:00:00+01:12</lastmod>
+<lastmod>2019-08-06T00:00:00+01:12</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
