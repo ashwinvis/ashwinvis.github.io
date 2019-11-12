@@ -8,9 +8,12 @@ from __future__ import unicode_literals
 import os
 import sys
 
-sys.path.append(os.curdir)
-#  from pelicanconf import *
+# sys.path.append(os.curdir)
+# from pelicanconf import *
 
+AUTHOR = "Ashwin Vishnu Mohanan"
+SITENAME = "Ashwin Vishnu's Website"
+SITEURL = ""
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
@@ -68,6 +71,31 @@ M_LINKS_NAVBAR2 = [
         ],
     )
 ]
+M_LINKS_FOOTER1 = [
+    ("Social", ""),
+    # To be uncommented when font-awesome implements fa-gnupg
+    #  ('GnuPG',
+    #   'https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2BF1534545A73FAD'),
+    ("GitHub", "https://github.com/ashwinvis"),
+    ("Gitlab", "https://source.coderefinery.org/ashwinvis/"),
+    ("Bitbucket", "https://bitbucket.org/avmo"),
+    ("LinkedIn", "https://www.linkedin.com/in/ashwinvishnu/"),
+]
+M_LINKS_FOOTER2 = [
+    ("Research", "/"),
+    ("Zotero", "https://zotero.org/ashwinvis"),
+    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"),
+    ("Google-Scholar", "https://scholar.google.se/citations?user=zv4wwKoAAAAJ"),
+    ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
+    ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
+]
+M_FINE_PRINT = SITENAME + """ | `CC-BY-SA 4.0 <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE>`_ |
+`GnuPG: 45A73FAD
+<https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>`_
+| `Mastodon <https://mastodon.acc.sunet.se/@ashwinvis>`_
+"""
+
+# TODO: Mastodon rel=me
 
 PLUGINS += [
     "representative_image",
