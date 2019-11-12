@@ -11,6 +11,7 @@ import sys
 sys.path.append(os.curdir)
 #  from pelicanconf import *
 
+
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
 STATIC_PATHS = ["images", "showcase", "pdf", "static"]
@@ -57,12 +58,13 @@ M_LINKS_NAVBAR1 = [
 M_LINKS_NAVBAR2 = [
     (
         "Showcase",
-        "showcase/",
         "",
+        "#",
         [
             ("CV", "pages/cv", ""),
             ("Research", "pages/research", ""),
             ("Software", "pages/software", ""),
+            ("Talks", "talks", "[talks]",)
         ],
     )
 ]

@@ -13,15 +13,20 @@ Contact
    \             return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
    \         })
    \  }
-   \  function openMailer(element) {
-   \    var y = decrypt_email("ashwinvis@protonmail.com");
+   \  // Generated using src/util.py
+   \  function openPersonalMail(element) {
+   \    var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nfujvaivf@cz.zr>");
    \    element.setAttribute("href", y);
    \  }
-   </script>
+   \  function openWorkMail(element) {
+   \    var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nizb@zvfh.fh.fr>");
+   \    element.setAttribute("href", y);
+   \  }
+   \ </script>
 
-
+I would love to hear from you!
 Drop me a message if you wish to collaborate, or even leave a comment about my
-research_ or software_ that I maintain. It
+research_ or software_ that I maintain.
 
 .. raw:: html
 
@@ -63,21 +68,31 @@ research_ or software_ that I maintain. It
        </td>
 
      </tr>
-   </tbody>
-   </table>
 
-   <div class="m-button m-success m-fullwidth">
-     <a href="encrypted-mail:Click to reveal" onclick="openMailer(this);">
-         <div class="m-big">e-mail</div>
-         <div class="m-small">Click to mail</div>
-     </a>
-   </div>
+     <tr>
+     <td>
+       <div class="m-button m-flat m-fullwidth">
+         <a href="encrypted-personal-mail:Click to reveal" onclick="openPersonalMail(this);">
+             <div class="m-big">Personal e-mail</div>
+             <div class="m-small">Click to mail</div>
+         </a>
+       </div>
+     </td>
+     <td>
+       <div class="m-button m-flat m-fullwidth">
+         <a href="encrypted-work-mail:Click to reveal" onclick="openWorkMail(this);">
+             <div class="m-big">Work e-mail</div>
+             <div class="m-small">Click to mail</div>
+         </a>
+       </div>
+     </td>
+     </tr>
+
+     </tbody>
+     </table>
 
 
-
-Social
-------
-
+You can also reach me via social media accounts listed in the footer.
 
 .. _research: /pages/research
 .. _software: /pages/software
