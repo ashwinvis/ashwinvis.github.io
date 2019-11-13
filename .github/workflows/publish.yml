@@ -34,7 +34,7 @@ jobs:
     - name: Publish
       run: |
         cd src
-        make publish
+        DEBUG=1 make publish
 
     - name: Deploy to GitHub Pages
       if: success()
