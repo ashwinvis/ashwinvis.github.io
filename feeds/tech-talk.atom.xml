@@ -1117,46 +1117,7 @@ h6:hover .anchor-link {
  .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
  .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
  .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
- .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-
-&lt;style type="text/css"&gt;
+ .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -3192,46 +3153,7 @@ h6:hover .anchor-link {
  .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
  .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
  .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
- .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-
-&lt;style type="text/css"&gt;
+ .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -3662,9 +3584,7 @@ height=450
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="sympy"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwinvis.github.io/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html">
-
-&lt;style type="text/css"&gt;
+</content><category term="python"></category><category term="sympy"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwinvis.github.io/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -4804,46 +4724,7 @@ h6:hover .anchor-link {
  .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
  .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
  .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
- .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;&lt;body&gt;
-
-&lt;style type="text/css"&gt;
+ .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;body&gt;&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -5219,9 +5100,7 @@ div.input_prompt {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category></entry><entry><title>Lightweight classes for scientific computing using "cached_property"</title><link href="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="alternate"></link><published>2018-12-25T00:00:00+01:00</published><updated>2018-12-26T00:00:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-12-25:/lightweight-classes-for-scientific-computing-using-cached_property.html</id><summary type="html">
-
-&lt;style type="text/css"&gt;
+</content><category term="python"></category></entry><entry><title>Lightweight classes for scientific computing using "cached_property"</title><link href="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="alternate"></link><published>2018-12-25T00:00:00+01:00</published><updated>2018-12-26T00:00:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-12-25:/lightweight-classes-for-scientific-computing-using-cached_property.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -6361,46 +6240,7 @@ h6:hover .anchor-link {
  .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
  .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
  .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
- .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;&lt;body&gt;
-
-&lt;style type="text/css"&gt;
+ .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;body&gt;&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -7494,9 +7334,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="fluidfft"></category><category term="fluidsim"></category><category term="optimization"></category></entry><entry><title>Intensely edgy cat with FluidFFT</title><link href="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html" rel="alternate"></link><published>2018-08-16T00:00:00+02:00</published><updated>2018-08-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-08-16:/intensely-edgy-cat-with-fluidfft.html</id><summary type="html">
-
-&lt;style type="text/css"&gt;
+</content><category term="fluidfft"></category><category term="fluidsim"></category><category term="optimization"></category></entry><entry><title>Intensely edgy cat with FluidFFT</title><link href="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html" rel="alternate"></link><published>2018-08-16T00:00:00+02:00</published><updated>2018-08-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-08-16:/intensely-edgy-cat-with-fluidfft.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -8636,46 +8474,7 @@ h6:hover .anchor-link {
  .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
  .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
  .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
- .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-&lt;/style&gt;&lt;body&gt;
-
-&lt;style type="text/css"&gt;
+ .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */&lt;/style&gt;&lt;body&gt;&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
