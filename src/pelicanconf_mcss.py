@@ -7,6 +7,7 @@ from __future__ import unicode_literals
 
 import os
 import sys
+import shutil
 
 # sys.path.append(os.curdir)
 # from pelicanconf import *
@@ -37,12 +38,12 @@ M_CSS_FILES = [
 M_THEME_COLOR = "#22272e"
 
 PLUGIN_PATHS = ["m.css/plugins", "plugins"]
-PLUGINS = ["m.htmlsanity"]
+PLUGINS = ["m.htmlsanity", "m.components"]
 
-M_FAVICON = ("/images/KTH_logo.png", "image/png")
-#  M_BLOG_FAVICON = ("/images/KTH_logo.png", "image/png")
-#  M_SITE_LOGO = "/images/KTH_logo.png"
-M_SITE_LOGO_TEXT = "Ashwin Vishnu's Website"
+M_FAVICON = ("/images/SU_logo.png", "image/png")
+M_BLOG_FAVICON = M_FAVICON
+M_SITE_LOGO = "/images/SU_logo.svg"
+M_SITE_LOGO_TEXT = "Home"
 
 # Navbar
 M_LINKS_NAVBAR1 = [
@@ -55,10 +56,6 @@ M_LINKS_NAVBAR1 = [
             ("Tech Talk", "category/tech-talk.html", ""),
         ],
     ),
-    ("Contact", "pages/contact/", "contact", []),
-]
-
-M_LINKS_NAVBAR2 = [
     (
         "Showcase",
         "",
@@ -69,7 +66,11 @@ M_LINKS_NAVBAR2 = [
             ("Software", "pages/software", ""),
             ("Talks", "talks", "[talks]",)
         ],
-    )
+    ),
+]
+
+M_LINKS_NAVBAR2 = [
+    ("Contact", "pages/contact/", "contact", []),
 ]
 M_LINKS_FOOTER1 = [
     ("Social", ""),
@@ -80,6 +81,7 @@ M_LINKS_FOOTER1 = [
     ("Gitlab", "https://source.coderefinery.org/ashwinvis/"),
     ("Bitbucket", "https://bitbucket.org/avmo"),
     ("LinkedIn", "https://www.linkedin.com/in/ashwinvishnu/"),
+    ("Mastodon", "https://mastodon.acc.sunet.se/@ashwinvis"),
 ]
 M_LINKS_FOOTER2 = [
     ("Research", "/"),
@@ -89,13 +91,25 @@ M_LINKS_FOOTER2 = [
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
 ]
-M_FINE_PRINT = SITENAME + """ | `CC-BY-SA 4.0 <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE>`_ |
-`GnuPG: 45A73FAD
-<https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>`_
-| `Mastodon <https://mastodon.acc.sunet.se/@ashwinvis>`_
-"""
+M_FINE_PRINT = """
 
-# TODO: Mastodon rel=me
+.. role:: raw-html(raw)
+    :format: html
+
+`CC-BY-SA 4.0 <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE>`_ | `GnuPG: 45A73FAD <https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>`_ :raw-html:`<div> </div>` """
+
+
+# For landing page
+FORMATTED_FIELDS = ['summary', 'landing', 'header', 'footer', 'description', 'badge']
+M_NEWS_ON_INDEX = ("Latest posts", 5)
+
+# TODO:
+M_HTMLSANITY_SMART_QUOTES = True
+M_HTMLSANITY_HYPHENATION = True
+
+if not shutil.which('latex'):
+    logging.warning("LaTeX not found, fallback to rendering math as code")
+    M_MATH_RENDER_AS_CODE = True
 
 PLUGINS += [
     "representative_image",

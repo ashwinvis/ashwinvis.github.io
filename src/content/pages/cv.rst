@@ -4,9 +4,14 @@ CV
 :slug: cv
 :status: published
 
-Download_
+.. container:: m-row
 
-.. _Download: ../pdf/CV_Mohanan_AshwinVishnu.pdf
+    .. container:: m-col-l-3
+
+        .. button-primary:: ../pdf/CV_Mohanan_AshwinVishnu.pdf
+            :class: m-fullwidth
+
+            Download PDF
 
 .. raw:: html
 
