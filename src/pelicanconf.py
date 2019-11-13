@@ -8,6 +8,7 @@ from __future__ import unicode_literals
 import os
 import sys
 import shutil
+import logging
 
 # sys.path.append(os.curdir)
 # from pelicanconf import *
