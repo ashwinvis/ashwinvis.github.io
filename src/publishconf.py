@@ -24,3 +24,13 @@ DELETE_OUTPUT_DIRECTORY = False
 
 # DISQUS_SITENAME = ""
 # GOOGLE_ANALYTICS = ""
+
+# m.css specific
+
+M_CSS_FILES = [
+    # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
+    # Open font library instead of Google Fonts
+    "https://fontlibrary.org/face/source-code-pro",
+    "https://fontlibrary.org/face/source-sans-pro",
+    "/static/m-dark.compiled.css",
+]
