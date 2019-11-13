@@ -87,7 +87,7 @@ M_LINKS_NAVBAR1 = [
 ]
 
 M_LINKS_NAVBAR2 = [
-    ("Contact", "pages/contact/", "contact", []),
+    ("Contact", "pages/contact", "[contact]", []),
 ]
 M_LINKS_FOOTER1 = [
     ("Social", ""),
