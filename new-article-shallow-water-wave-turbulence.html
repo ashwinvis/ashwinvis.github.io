@@ -1,93 +1,75 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <link rel="icon" href="/images/KTH_logo.png" />
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Ashwin Vishnu Mohanan" />
-        <title>New article: Shallow water wave turbulence</title>
-
-<meta name="description" content="&lt;p&gt;Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.&lt;/p&gt;" />
-<meta name="keywords" content=" fluid-mechanics open-source open-access  "/>
-
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/backdrop.min.css" />
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/pygments.min.css" />
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/dark.min.css" />
-        <script src="https://ashwinvis.github.io/theme/js/modernizr.js"></script>
-
-        <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu's Website Full Atom Feed" />
-        <link href="https://ashwinvis.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu's Website Categories Atom Feed" />
-
-
-        <script language="JavaScript" type="text/javascript">
-          function decrypt_email(a) {
-            // ROT13 : a Caesar cipher
-            // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
-            return a.replace(/[a-zA-Z]/g,
-                             function(c){
-				     return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-			     })
-          }
-          function openMailer(element) {
-            var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nfujvaivf@cz.zr>");
-            element.setAttribute("href", y);
-          }
-        </script>
-
-    </head>
-
-    <body>
-	<div class="top-row">
-	    <div class="fixed">
-		<nav class="top-bar" data-topbar role="navigation">
-                    <ul class="title-area">
-                        <li class="name"><!-- Leave this empty for no title-->
-				<h1><a href="https://ashwinvis.github.io">Ashwin Vishnu's Website</a></h1>
-			</li>
-                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-                    </ul>
-                    <section class="top-bar-section">
-                        <ul class="right">
-                            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
-                        </ul>
-                        <ul class="right">
-                            <li class="active"><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
-                            <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
-                        </ul>
-                    </section>
-                </nav>
-	    </div>
-	</div>
-
-        <div class="master-row">
-            <div class="content-pane">
-                <div id="content1">
-                <div id="contents">
-<div class="row">
-    <div class="small-12 columns article">
-        <h2>New article: Shallow water wave turbulence</h2>
-        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
-    <div class="small-12 columns">
-        <ul class="inline-list">
-            <li><span><i class="far fa-calendar-alt"></i>&nbsp; Wed 17 July 2019</span></li>
-            <li><span><i class="fas fa-folder-open"></i>&nbsp; <a href="https://ashwinvis.github.io/category/blog.html">Blog</a></span></li>
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>New article: Shallow water wave turbulence | Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-dark.css" />
+  <link rel="icon" href="https://ashwinvis.github.io/images/SU_logo.png" type="image/png" />
+  <link rel="canonical" href="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" />
+  <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <link href="https://ashwinvis.github.io/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Blog" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="New article: Shallow water wave turbulence" />
+  <meta name="twitter:title" content="New article: Shallow water wave turbulence" />
+  <meta property="og:url" content="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" />
+  <meta property="og:description" content="Paper about how turbulence in shallow water equations evolves and gives rise to shock waves." />
+  <meta name="twitter:description" content="Paper about how turbulence in shallow water equations evolves and gives rise to shock waves." />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="article" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwinvis.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwinvis.github.io/images/SU_logo.svg" />Home</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
             <li>
-                <span>
-                    <i class="fas fa-tags"></i>&nbsp;
-                    <a href="https://ashwinvis.github.io/tag/fluid-mechanics.html"><span class="label">fluid-mechanics</span></a>
-                    <a href="https://ashwinvis.github.io/tag/open-source.html"><span class="label">open-source</span></a>
-                    <a href="https://ashwinvis.github.io/tag/open-access.html"><span class="label">open-access</span></a>
-                </span>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
             </li>
-        </ul>
+            <li>
+              <a href="https://ashwinvis.github.io/">Showcase</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/pages/cv">CV</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/research">Research</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/software">Software</a></li>
+                <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="https://ashwinvis.github.io/pages/contact/">Contact</a></li>
+          </ol>
+        </div>
+      </div>
     </div>
-</div>
-        <section class="article">
-            <style type="text/css">/*!
+  </div>
+</nav></header>
+<main>
+<div class="m-container">
+  <div class="m-row">
+    <article class="m-col-m-10 m-nopadb">
+      <header>
+        <h1><a href="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" rel="bookmark" title="Permalink to New article: Shallow water wave turbulence">
+          <time class="m-date" datetime="2019-07-17T00:00:00+02:00">
+            Jul <span class="m-date-day">17</span> 2019
+          </time>
+          New article: Shallow water wave turbulence
+        </a></h1>
+        <p>Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.</p>
+      </header>
+      <div class="m-clearfix-l"></div>
+<!-- content -->
+<style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -1130,75 +1112,76 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 </style>
-<style type="text/css">.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #FF0000 } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0044DD } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
-.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
-.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
-.highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
-.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css"> .highlight pre  .hll { background-color: #49483e }
+ .highlight pre   { background: #272822; color: #f8f8f2 }
+ .highlight pre  .c { color: #75715e } /* Comment */
+ .highlight pre  .err { color: #960050; background-color: #1e0010 } /* Error */
+ .highlight pre  .k { color: #66d9ef } /* Keyword */
+ .highlight pre  .l { color: #ae81ff } /* Literal */
+ .highlight pre  .n { color: #f8f8f2 } /* Name */
+ .highlight pre  .o { color: #f92672 } /* Operator */
+ .highlight pre  .p { color: #f8f8f2 } /* Punctuation */
+ .highlight pre  .ch { color: #75715e } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #75715e } /* Comment.Multiline */
+ .highlight pre  .cp { color: #75715e } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #75715e } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #75715e } /* Comment.Single */
+ .highlight pre  .cs { color: #75715e } /* Comment.Special */
+ .highlight pre  .gd { color: #f92672 } /* Generic.Deleted */
+ .highlight pre  .ge { font-style: italic } /* Generic.Emph */
+ .highlight pre  .gi { color: #a6e22e } /* Generic.Inserted */
+ .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
+ .highlight pre  .gu { color: #75715e } /* Generic.Subheading */
+ .highlight pre  .kc { color: #66d9ef } /* Keyword.Constant */
+ .highlight pre  .kd { color: #66d9ef } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #f92672 } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #66d9ef } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #66d9ef } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #66d9ef } /* Keyword.Type */
+ .highlight pre  .ld { color: #e6db74 } /* Literal.Date */
+ .highlight pre  .m { color: #ae81ff } /* Literal.Number */
+ .highlight pre  .s { color: #e6db74 } /* Literal.String */
+ .highlight pre  .na { color: #a6e22e } /* Name.Attribute */
+ .highlight pre  .nb { color: #f8f8f2 } /* Name.Builtin */
+ .highlight pre  .nc { color: #a6e22e } /* Name.Class */
+ .highlight pre  .no { color: #66d9ef } /* Name.Constant */
+ .highlight pre  .nd { color: #a6e22e } /* Name.Decorator */
+ .highlight pre  .ni { color: #f8f8f2 } /* Name.Entity */
+ .highlight pre  .ne { color: #a6e22e } /* Name.Exception */
+ .highlight pre  .nf { color: #a6e22e } /* Name.Function */
+ .highlight pre  .nl { color: #f8f8f2 } /* Name.Label */
+ .highlight pre  .nn { color: #f8f8f2 } /* Name.Namespace */
+ .highlight pre  .nx { color: #a6e22e } /* Name.Other */
+ .highlight pre  .py { color: #f8f8f2 } /* Name.Property */
+ .highlight pre  .nt { color: #f92672 } /* Name.Tag */
+ .highlight pre  .nv { color: #f8f8f2 } /* Name.Variable */
+ .highlight pre  .ow { color: #f92672 } /* Operator.Word */
+ .highlight pre  .w { color: #f8f8f2 } /* Text.Whitespace */
+ .highlight pre  .mb { color: #ae81ff } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #ae81ff } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #ae81ff } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #ae81ff } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #ae81ff } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #e6db74 } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #e6db74 } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #e6db74 } /* Literal.String.Char */
+ .highlight pre  .dl { color: #e6db74 } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #e6db74 } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #e6db74 } /* Literal.String.Double */
+ .highlight pre  .se { color: #ae81ff } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #e6db74 } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #e6db74 } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #e6db74 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #e6db74 } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #e6db74 } /* Literal.String.Single */
+ .highlight pre  .ss { color: #e6db74 } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #a6e22e } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #f8f8f2 } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */</style>
 <style type="text/css">
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
@@ -1236,6 +1219,37 @@ h6:hover .anchor-link {
 
 .ansi-bold { font-weight: bold; }
 </style>
+
+<style type="text/css">
+/* jupyter nbconvert */
+.rendered_html code {
+  background: #272822
+  color: #f8f8f2;
+}
+
+div.text_cell_render {
+  color: #f8f8f2 !important;
+}
+div.input_area {
+ background: #272822 !important;
+ border-color: #272822 !important;
+}
+div.output_area pre, div.output_stderr {
+  background: var(--background-color) !important;
+  color: #f8f8f2; !important;
+}
+div.input_prompt {
+	color: #6E759D; !important;
+}
+.MathJax_Display,
+.MathJax {
+  color: #fff !important;
+}
+.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn {
+  color: #fff !important;
+}
+</style>
+
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1322,160 +1336,113 @@ shocks will prevail if the Reynolds number is sufficiently large.</p>
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-    
-        </section>
+<!-- /content -->
+      <footer>
+        <p>Posted by <a href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-07-17T00:00:00+02:00">Wed 17 July 2019</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>, <a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a>.</p>
+      </footer>
+    </article>
+    <nav class="m-navpanel m-col-m-2">
+      <h3>Categories</h3>
+      <ol class="m-block-bar-m">
+        <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+      </ol>
+      <h3>Tag cloud</h3>
+      <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/conference.html">conference</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/congress.html">congress</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/economy.html">economy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fediverse.html">fediverse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidsim.html">fluidsim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/friends.html">friends</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/game-of-thrones.html">game of thrones</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/india.html">India</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/indian-politics.html">indian politics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/internet.html">Internet</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/introduction.html">introduction</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/java.html">java</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/kindness.html">kindness</a></li>
+        <li class="m-tag-5"><a href="https://ashwinvis.github.io/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/list.html">list</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/mood.html">mood</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/motto.html">motto</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/music.html">music</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/optimization.html">optimization</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/poetry.html">poetry</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/privacy.html">privacy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/psychology.html">psychology</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pypy.html">pypy</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/python.html">python</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rant.html">rant</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/recession.html">recession</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/resolution.html">resolution</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/teenage.html">teenage</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/thin-line.html">thin line</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/til.html">til</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/tips.html">tips</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/today-i-learned.html">today i learned</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/travel.html">travel</a></li>
+        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/wordporm.html">wordporm</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://bitbucket.org/avmo">Bitbucket</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Research</a></h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Blog</a></h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+        </ul>
+      </div>
     </div>
-</div>
-                </div>
-                </div>
-
-                <footer id="foot" class="show-for-large-up">
-<div class="small-6 medium-3 columns">
-    <ul class="left-nav">
-        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
-        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
-    </ul>
-</div>
-<div class="small-6 medium-3 medium-push-6 columns">
-    <ul class="right-nav">
-        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
-        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
-    </ul>
-</div>
-<div class="small-12 medium-6 medium-pull-3 columns text-center">
-</div>
-<div class="small-12 columns sub-footer">
-    <hr>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-left">
-            &copy; 2019 Ashwin Vishnu Mohanan 
-    <a
-    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
-    
-            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
-        </p>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">CC-BY-SA 4.0</a> | <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> <span class="raw-html"><div> </div></span></p>
+      </div>
     </div>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-right">
-            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="https://www.python.org/">Python</a>.
-        </p>
-    </div>
-</div>                </footer>
-            </div>
-
-            <div class="image-pane" style="background: url(''); background-size:cover; background-position: right;">
-                <div class="row">
-                    <div class="small-12 medium-4 large-12 columns">
-                        <div class="about-me">
-                            <div class="hide-for-medium-only small-3 columns no-buffer">
-                                <a class="th" href="/images/dp_ashwin.jpg">
-                                    <img src="/images/dp_ashwin.jpg">
-                                </a>
-                            </div>
-                            <div class="small-9 medium-12 large-9 columns text-justify">
-				<div class="site-description">
-                                
-My research centers around geophysical flows, particularly with
-gravity waves and vortices, studied from a turbulence perspective. I am trained
-in computational, theoretical and experimental tools. You would find
-me using things which are simple, efficent, open-source, and reproducible. Feel
-free to contact me - I am usually reachable via email or the social accounts
-listed below.
-				</div>
-                            </div>
-                            <div class="small-12 columns">
-                                <ul class="inline-center social-list">
-                                    <li><a href="encrypted-mail:Click to reveal" onclick="openMailer(this);">
-					<i class="fas fa-envelope"></i>&nbsp; Email</a>
-				    </li>
-				    <li><a href=https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>
-					<i class="fas fa-fingerprint"></i>&nbsp; GnuPG</a>
-				    </li>
-				    <li><a rel="me" href=https://mastodon.acc.sunet.se/@ashwinvis>
-					<i class="fab fa-mastodon"></i>&nbsp; Mastodon</a>
-				    </li>
-				    <li><a href="https://github.com/ashwinvis"><i class="fab fa-github"></i>&nbsp; Github</a></li>
-				    <li><a href="https://source.coderefinery.org/ashwinvis/"><i class="fab fa-gitlab"></i>&nbsp; Gitlab</a></li>
-				    <li><a href="https://bitbucket.org/avmo"><i class="fab fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
-				    <li><a href="https://www.linkedin.com/in/ashwinvishnu/"><i class="fab fa-linkedin"></i>&nbsp; LinkedIn</a></li>
-                                    <li><a href="https://zotero.org/ashwinvis"><i class="ai ai-zotero"></i>&nbsp; Zotero</a></li>
-                                    <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"><i class="ai ai-researchgate"></i>&nbsp; ResearchGate</a></li>
-                                    <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ"><i class="ai ai-google-scholar"></i>&nbsp; Google-Scholar</a></li>
-                                    <li><a href="https://orcid.org/0000-0002-2979-6327"><i class="ai ai-orcid"></i>&nbsp; ORCID</a></li>
-                                    <li><a href="https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"><i class="ai ai-zenodo"></i>&nbsp; Zenodo</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="small-8 medium-4  large-8 small-offset-2 medium-offset-0 large-offset-2 columns link-list">
-		    <h5 class="text-center"><b>Search</b></h5>
-                    <form action="https://ashwinvis.github.io/search.html">
-                    <input type="text" name="q" id="tipue_search_input" placeholder="keyword or phrase" autocomplete="off" required>
-                    </form>
-                         <a class="th link-img img-center" href="https://kth.se">
-                              <img src="/images/KTH_Logotyp_RGB_2013-2.svg">
-                         </a>
-                    </div>
-
-                    <div class="small-12 medium-4  large-12 columns link-list">
-                        <ul class="inline-center">
-                            <li><a href="https://www.flow.kth.se">Linné FLOW Centre</a></li>
-                            <li><a href="https://fluiddyn.bitbucket.io">FluidDyn Project</a></li>
-                            <li><a href="https://www.mech.kth.se/mech/info_staff.xhtml?ID=381">Student Profile</a></li>
-                            <li><a href="https://python.org/">Python.org</a></li>
-                        </ul>
-                    </div>
-               </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <footer class="hide-for-large-up">
-<div class="small-6 medium-3 columns">
-    <ul class="left-nav">
-        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
-        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
-    </ul>
-</div>
-<div class="small-6 medium-3 medium-push-6 columns">
-    <ul class="right-nav">
-        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
-        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
-    </ul>
-</div>
-<div class="small-12 medium-6 medium-pull-3 columns text-center">
-</div>
-<div class="small-12 columns sub-footer">
-    <hr>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-left">
-            &copy; 2019 Ashwin Vishnu Mohanan 
-    <a
-    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
-    
-            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
-        </p>
-    </div>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-right">
-            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="https://www.python.org/">Python</a>.
-        </p>
-    </div>
-</div>            </footer>
-        </div>
-
-        <script src="https://ashwinvis.github.io/theme/js/jquery.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/foundation.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/slick.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/slick-app.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/app.js"></script>
-    </body>
-
-
+  </div>
+</nav></footer>
+</body>
 </html>

@@ -1,94 +1,84 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <link rel="icon" href="/images/KTH_logo.png" />
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Ashwin Vishnu Mohanan" />
-        <title>Software</title>
-
-        <meta name="description" content="Ph. D. student in Geophysical Fluid Mechanics and Turbulence" />
-        <meta name="keywords" content="Blog "/>
-
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/backdrop.min.css" />
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/pygments.min.css" />
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/dark.min.css" />
-        <script src="https://ashwinvis.github.io/theme/js/modernizr.js"></script>
-
-        <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu's Website Full Atom Feed" />
-
-
-        <script language="JavaScript" type="text/javascript">
-          function decrypt_email(a) {
-            // ROT13 : a Caesar cipher
-            // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
-            return a.replace(/[a-zA-Z]/g,
-                             function(c){
-				     return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-			     })
-          }
-          function openMailer(element) {
-            var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nfujvaivf@cz.zr>");
-            element.setAttribute("href", y);
-          }
-        </script>
-
-    </head>
-
-    <body>
-	<div class="top-row">
-	    <div class="fixed">
-		<nav class="top-bar" data-topbar role="navigation">
-                    <ul class="title-area">
-                        <li class="name"><!-- Leave this empty for no title-->
-				<h1><a href="https://ashwinvis.github.io">Ashwin Vishnu's Website</a></h1>
-			</li>
-                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-                    </ul>
-                    <section class="top-bar-section">
-                        <ul class="right">
-                            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
-                            <li class="active"><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
-                        </ul>
-                        <ul class="right">
-                            <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
-                            <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
-                        </ul>
-                    </section>
-                </nav>
-	    </div>
-	</div>
-
-        <div class="master-row">
-            <div class="content-pane">
-                <div id="content1">
-                <div id="contents">
-<div class="row">
-    <div class="small-12 columns article">
-        <h2>Software</h2>
-        <section>
-            <p>A showcase of all the projects which I have <strong>co-developed</strong>, have
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>Software | Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-dark.css" />
+  <link rel="icon" href="https://ashwinvis.github.io/images/SU_logo.png" type="image/png" />
+  <link rel="canonical" href="https://ashwinvis.github.io/pages/software.html" />
+  <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="Software" />
+  <meta name="twitter:title" content="Software" />
+  <meta property="og:url" content="https://ashwinvis.github.io/pages/software.html" />
+  <meta property="og:description" content="A showcase of all the projects which I have co-developed, have contributed to, or maintain myself: Research Software FluidDyn project An ecosystem of packages for research and teaching in fluid dynamics. Some key features include: FluidDyn: Classes to manage parameters, large sets of files, named numpy arrays, scripting job submissions …" />
+  <meta name="twitter:description" content="A showcase of all the projects which I have co-developed, have contributed to, or maintain myself: Research Software FluidDyn project An ecosystem of packages for research and teaching in fluid dynamics. Some key features include: FluidDyn: Classes to manage parameters, large sets of files, named numpy arrays, scripting job submissions …" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="page" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwinvis.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwinvis.github.io/images/SU_logo.svg" />Home</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li>
+              <a href="https://ashwinvis.github.io/archives">Posts</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="https://ashwinvis.github.io/">Showcase</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/pages/cv">CV</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/research">Research</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/software">Software</a></li>
+                <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="https://ashwinvis.github.io/pages/contact/">Contact</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>Software</h1>
+<!-- content -->
+<p>A showcase of all the projects which I have <strong>co-developed</strong>, have
 <strong>contributed</strong> to, or <strong>maintain</strong> myself:</p>
-<div class="section" id="research-software">
+<section id="research-software">
 <h2>Research Software</h2>
-<div class="section" id="fluiddyn-project">
-<h3><a class="reference external" href="https://fluiddyn.bitbucket.io">FluidDyn project</a></h3>
+<section id="fluiddyn-project">
+<h3><a href="https://fluiddyn.bitbucket.io">FluidDyn project</a></h3>
 <p>An ecosystem of packages for research and teaching in fluid dynamics.</p>
 <p>Some key features include:</p>
 <ul>
-<li><p class="first"><a class="reference external" href="https://fluiddyn.readthedocs.io">FluidDyn</a>: Classes to manage
+<li><p><a href="https://fluiddyn.readthedocs.io">FluidDyn</a>: Classes to manage
 parameters, large sets of files, named numpy arrays, scripting job
 submissions in clusters, MPI wrappers to easily implement sequential
 and parallel programming.</p>
 </li>
-<li><p class="first"><a class="reference external" href="https://fluidfft.readthedocs.io">FluidFFT</a>: Unified Python and
+<li><p><a href="https://fluidfft.readthedocs.io">FluidFFT</a>: Unified Python and
 C++ API for various sequential and MPI &amp; GPU accelerated FFT
 implementations.</p>
 </li>
-<li><p class="first"><a class="reference external" href="https://fluidsim.readthedocs.io">FluidSim</a>: Arguably one of
+<li><p><a href="https://fluidsim.readthedocs.io">FluidSim</a>: Arguably one of
 fastest CFD framework specializing in pseudospectral solvers, with
 on-the-fly post processing. Example of a research done using
 FluidSim:</p>
@@ -96,226 +86,118 @@ FluidSim:</p>
 src="https://www.youtube-nocookie.com/embed/QHKBOQQJ8XE" frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope;
 picture-in-picture" allowfullscreen> </iframe></li>
-<li><p class="first"><a class="reference external" href="https://fluidimage.readthedocs.io">FluidImage</a>: Calibrate,
+<li><p><a href="https://fluidimage.readthedocs.io">FluidImage</a>: Calibrate,
 pre-process and perform PIV on large sets of images asynchronously
 and with open-source software.</p>
 </li>
-<li><p class="first"><a class="reference external" href="https://bitbucket.org/fluiddyn/fluiddevops">FluidDevOps</a>: Nifty
+<li><p><a href="https://bitbucket.org/fluiddyn/fluiddevops">FluidDevOps</a>: Nifty
 CLI tools to help ease the development workflow.</p>
 </li>
 </ul>
-</div>
-<div class="section" id="caeroc">
-<h3><a class="reference external" href="https://github.com/ashwinvis/caeroc">Caeroc</a></h3>
+</section>
+<section id="caeroc">
+<h3><a href="https://github.com/ashwinvis/caeroc">Caeroc</a></h3>
 <p>A toy desktop GUI calculator for compressible aerodynamics built on top
-of <a class="reference external" href="https://github.com/AeroPython/scikit-aero">scikit-aero</a>. Demo:</p>
+of <a href="https://github.com/AeroPython/scikit-aero">scikit-aero</a>. Demo:</p>
 <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts"
 src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775"
-frameborder="0" allowfullscreen> </iframe></div>
-</div>
-<div class="section" id="open-source-contributions">
+frameborder="0" allowfullscreen> </iframe></section>
+</section>
+<section id="open-source-contributions">
 <h2>Open-Source contributions</h2>
 <p>I have also contributed some serious projects such as:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://pythran.readthedocs.io">Pythran</a>: An ahead-of-time
+<ul>
+<li><a href="https://pythran.readthedocs.io">Pythran</a>: An ahead-of-time
 compiler for creating blazing fast Python extensions from Pure python
 or NumPy code. I contributed to:<ul>
 <li>improvements in Pythran extension build process
-(<a class="reference external" href="https://github.com/serge-sans-paille/pythran/pull/941">link</a>)</li>
+(<a href="https://github.com/serge-sans-paille/pythran/pull/941">link</a>)</li>
 <li>linting Pythran configuration files
-(<a class="reference external" href="https://github.com/serge-sans-paille/pythran/pull/1145">link</a>)</li>
+(<a href="https://github.com/serge-sans-paille/pythran/pull/1145">link</a>)</li>
 </ul>
 </li>
-<li><a class="reference external" href="https://jupyterlab.readthedocs.io">JupyterLab</a>: Next generation
+<li><a href="https://jupyterlab.readthedocs.io">JupyterLab</a>: Next generation
 UI for Jupyter notebooks. I have:<ul>
 <li>added access to solarized theme for the text editor
-(<a class="reference external" href="https://github.com/jupyterlab/jupyterlab/pull/4445">link</a>)</li>
+(<a href="https://github.com/jupyterlab/jupyterlab/pull/4445">link</a>)</li>
 <li>fixed font rendering in the terminal
-(<a class="reference external" href="https://github.com/jupyterlab/jupyterlab/pull/5732">link</a>)</li>
+(<a href="https://github.com/jupyterlab/jupyterlab/pull/5732">link</a>)</li>
 </ul>
 </li>
-<li><a class="reference external" href="https://github.com/ashwinvis/pymc3">PyMC3</a>: Probabilistic
+<li><a href="https://github.com/ashwinvis/pymc3">PyMC3</a>: Probabilistic
 programming in Python. I have:<ul>
 <li>improved the overall structure of documentation
-(<a class="reference external" href="https://github.com/pymc-devs/pymc3/pull/3303">link</a>)</li>
+(<a href="https://github.com/pymc-devs/pymc3/pull/3303">link</a>)</li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="humble-projects">
+</section>
+<section id="humble-projects">
 <h2>Humble projects</h2>
 <p>Some repositories that I maintain for my personal use and possible
 reuse.</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/ashwinvis/backdrop-theme">Backdrop theme</a>: A
+<ul>
+<li><a href="https://github.com/ashwinvis/backdrop-theme">Backdrop theme</a>: A
 responsive pelican theme compiled node, grunt, sass technologies.</li>
-<li><a class="reference external" href="https://github.com/ashwinvis/awesome-scientific-writing">Awesome scientific
+<li><a href="https://github.com/ashwinvis/awesome-scientific-writing">Awesome scientific
 writing</a>:
 A curated list of resources for writing scientific documents with
 markup languages.</li>
-<li><a class="reference external" href="https://github.com/ashwinvis/vim-instant-markdown">vim-instant-markdown</a>
-&amp; <a class="reference external" href="https://github.com/ashwinvis/instant-markdown-d">Instant markdown
+<li><a href="https://github.com/ashwinvis/vim-instant-markdown">vim-instant-markdown</a>
+&amp; <a href="https://github.com/ashwinvis/instant-markdown-d">Instant markdown
 server</a>: Write
 markdown with instant preview. Supports MathJax as well.</li>
-<li><a class="reference external" href="https://github.com/ashwinvis/xrandr-extend">xrandr-extend</a>: CLI
+<li><a href="https://github.com/ashwinvis/xrandr-extend">xrandr-extend</a>: CLI
 tool to calculate and use non-HIDPI external displays along with
 HIDPI monitors.</li>
 </ul>
-</div>
-    
-        </section>
+</section>
+<!-- /content -->
+      </div>
     </div>
-</div>
-                </div>
-                </div>
-
-                <footer id="foot" class="show-for-large-up">
-<div class="small-6 medium-3 columns">
-    <ul class="left-nav">
-        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
-        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
-    </ul>
-</div>
-<div class="small-6 medium-3 medium-push-6 columns">
-    <ul class="right-nav">
-        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
-        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
-    </ul>
-</div>
-<div class="small-12 medium-6 medium-pull-3 columns text-center">
-</div>
-<div class="small-12 columns sub-footer">
-    <hr>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-left">
-            &copy; 2019 Ashwin Vishnu Mohanan 
-    <a
-    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
-    
-            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
-        </p>
+  </div>
+</article>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://bitbucket.org/avmo">Bitbucket</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Research</a></h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Blog</a></h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-right">
-            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="https://www.python.org/">Python</a>.
-        </p>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">CC-BY-SA 4.0</a> | <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> <span class="raw-html"><div> </div></span></p>
+      </div>
     </div>
-</div>                </footer>
-            </div>
-
-            <div class="image-pane" style="background: url(''); background-size:cover; background-position: right;">
-                <div class="row">
-                    <div class="small-12 medium-4 large-12 columns">
-                        <div class="about-me">
-                            <div class="hide-for-medium-only small-3 columns no-buffer">
-                                <a class="th" href="/images/dp_ashwin.jpg">
-                                    <img src="/images/dp_ashwin.jpg">
-                                </a>
-                            </div>
-                            <div class="small-9 medium-12 large-9 columns text-justify">
-				<div class="site-description">
-                                
-My research centers around geophysical flows, particularly with
-gravity waves and vortices, studied from a turbulence perspective. I am trained
-in computational, theoretical and experimental tools. You would find
-me using things which are simple, efficent, open-source, and reproducible. Feel
-free to contact me - I am usually reachable via email or the social accounts
-listed below.
-				</div>
-                            </div>
-                            <div class="small-12 columns">
-                                <ul class="inline-center social-list">
-                                    <li><a href="encrypted-mail:Click to reveal" onclick="openMailer(this);">
-					<i class="fas fa-envelope"></i>&nbsp; Email</a>
-				    </li>
-				    <li><a href=https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>
-					<i class="fas fa-fingerprint"></i>&nbsp; GnuPG</a>
-				    </li>
-				    <li><a rel="me" href=https://mastodon.acc.sunet.se/@ashwinvis>
-					<i class="fab fa-mastodon"></i>&nbsp; Mastodon</a>
-				    </li>
-				    <li><a href="https://github.com/ashwinvis"><i class="fab fa-github"></i>&nbsp; Github</a></li>
-				    <li><a href="https://source.coderefinery.org/ashwinvis/"><i class="fab fa-gitlab"></i>&nbsp; Gitlab</a></li>
-				    <li><a href="https://bitbucket.org/avmo"><i class="fab fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
-				    <li><a href="https://www.linkedin.com/in/ashwinvishnu/"><i class="fab fa-linkedin"></i>&nbsp; LinkedIn</a></li>
-                                    <li><a href="https://zotero.org/ashwinvis"><i class="ai ai-zotero"></i>&nbsp; Zotero</a></li>
-                                    <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"><i class="ai ai-researchgate"></i>&nbsp; ResearchGate</a></li>
-                                    <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ"><i class="ai ai-google-scholar"></i>&nbsp; Google-Scholar</a></li>
-                                    <li><a href="https://orcid.org/0000-0002-2979-6327"><i class="ai ai-orcid"></i>&nbsp; ORCID</a></li>
-                                    <li><a href="https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"><i class="ai ai-zenodo"></i>&nbsp; Zenodo</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="small-8 medium-4  large-8 small-offset-2 medium-offset-0 large-offset-2 columns link-list">
-		    <h5 class="text-center"><b>Search</b></h5>
-                    <form action="https://ashwinvis.github.io/search.html">
-                    <input type="text" name="q" id="tipue_search_input" placeholder="keyword or phrase" autocomplete="off" required>
-                    </form>
-                         <a class="th link-img img-center" href="https://kth.se">
-                              <img src="/images/KTH_Logotyp_RGB_2013-2.svg">
-                         </a>
-                    </div>
-
-                    <div class="small-12 medium-4  large-12 columns link-list">
-                        <ul class="inline-center">
-                            <li><a href="https://www.flow.kth.se">Linné FLOW Centre</a></li>
-                            <li><a href="https://fluiddyn.bitbucket.io">FluidDyn Project</a></li>
-                            <li><a href="https://www.mech.kth.se/mech/info_staff.xhtml?ID=381">Student Profile</a></li>
-                            <li><a href="https://python.org/">Python.org</a></li>
-                        </ul>
-                    </div>
-               </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <footer class="hide-for-large-up">
-<div class="small-6 medium-3 columns">
-    <ul class="left-nav">
-        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
-        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
-    </ul>
-</div>
-<div class="small-6 medium-3 medium-push-6 columns">
-    <ul class="right-nav">
-        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
-        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
-    </ul>
-</div>
-<div class="small-12 medium-6 medium-pull-3 columns text-center">
-</div>
-<div class="small-12 columns sub-footer">
-    <hr>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-left">
-            &copy; 2019 Ashwin Vishnu Mohanan 
-    <a
-    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
-    
-            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
-        </p>
-    </div>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-right">
-            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="https://www.python.org/">Python</a>.
-        </p>
-    </div>
-</div>            </footer>
-        </div>
-
-        <script src="https://ashwinvis.github.io/theme/js/jquery.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/foundation.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/slick.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/slick-app.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/app.js"></script>
-    </body>
-
-
+  </div>
+</nav></footer>
+</body>
 </html>

@@ -1,307 +1,390 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <link rel="icon" href="/images/KTH_logo.png" />
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Ashwin Vishnu Mohanan" />
-        <title>Ashwin Vishnu's Website</title>
-
-        <meta name="description" content="Ph. D. student in Geophysical Fluid Mechanics and Turbulence" />
-        <meta name="keywords" content="Blog "/>
-
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/backdrop.min.css" />
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/pygments.min.css" />
-        <link rel="stylesheet" href="https://ashwinvis.github.io/theme/css/dark.min.css" />
-        <script src="https://ashwinvis.github.io/theme/js/modernizr.js"></script>
-
-        <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu's Website Full Atom Feed" />
-
-
-        <script language="JavaScript" type="text/javascript">
-          function decrypt_email(a) {
-            // ROT13 : a Caesar cipher
-            // letter -> letter' such that code(letter') = (code(letter) + 13) modulo 26
-            return a.replace(/[a-zA-Z]/g,
-                             function(c){
-				     return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
-			     })
-          }
-          function openMailer(element) {
-            var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nfujvaivf@cz.zr>");
-            element.setAttribute("href", y);
-          }
-        </script>
-
-    </head>
-
-    <body>
-	<div class="top-row">
-	    <div class="fixed">
-		<nav class="top-bar" data-topbar role="navigation">
-                    <ul class="title-area">
-                        <li class="name"><!-- Leave this empty for no title-->
-				<h1><a href="https://ashwinvis.github.io">Ashwin Vishnu's Website</a></h1>
-			</li>
-                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-                    </ul>
-                    <section class="top-bar-section">
-                        <ul class="right">
-                            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
-                            <li><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
-                        </ul>
-                        <ul class="right">
-                            <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
-                            <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
-                        </ul>
-                    </section>
-                </nav>
-	    </div>
-	</div>
-
-        <div class="master-row">
-            <div class="content-pane">
-                <div id="content1">
-                <div id="contents">
-
-<div class="row title-bar">
-    <div class="small-12 columns">
-	<h1><a href="https://ashwinvis.github.io">Ashwin Vishnu Mohanan</a></h1>
-	<h2> <small>Ph. D. student in Geophysical Fluid Mechanics and Turbulence</small></h2>
-	<hr>
-    </div>
-</div>
-
-            
-<div class="row carousel-row">
-   <div class="small-11 small-centered columns">
-        <div class="carousel lazy">
-             <div class="carousel-img"><a class="th" href="pages/research.html"><img
-                 data-lazy="images/caro_research1.png"></a></div>
-             <div class="carousel-img"><a class="th" href="pages/research.html"><img
-                 data-lazy="images/caro_research2.png"></a></div>
-             <div class="carousel-img"><a class="th" href="pages/software.html"><img
-                 data-lazy="images/caro_software.png"></a></div>
-             <div class="carousel-img"><a class="th" href="https://www.kth.se/profile/avmo"><img
-                 data-lazy="images/caro_kth.jpg"></a></div>
-        </div>
-        <div class="carousel-nav">
-	     <div class="carousel-nav-title"><a href="pages/research.html">Research</a></div>
-	     <div class="carousel-nav-title"><a href="pages/research.html">Research</a></div>
-	     <div class="carousel-nav-title"><a href="pages/software.html">Software</a></div>
-	     <div class="carousel-nav-title"><a href="https://www.kth.se/profile/avmo">At Linné FLOW Centre, Department of Mechanics, KTH</a></div>
-         </div>
-    </div>
-</div>
-
-<hr>
-
-<div class="row summary">
-    <div class="small-12 medium-6 columns">
-        <section class="summary">
-    <h3><a href="https://ashwinvis.github.io/diversity-amongst-python-interpreters.html" rel="bookmark" title="Permalink to Diversity amongst Python interpreters">Diversity amongst Python interpreters</a></h3>
-    <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
-    <div class="small-12 columns">
-        <ul class="inline-list">
-            <li><span><i class="far fa-calendar-alt"></i>&nbsp; Tue 06 August 2019</span></li>
-            <li><span><i class="fas fa-folder-open"></i>&nbsp; <a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></span></li>
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-dark.css" />
+  <link rel="icon" href="https://ashwinvis.github.io/images/SU_logo.png" type="image/png" />
+  <link rel="prev" href="https://ashwinvis.github.io/index2.html" />
+  <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="Ashwin Vishnu&#39;s Website" />
+  <meta name="twitter:title" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:url" content="https://ashwinvis.github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwinvis.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwinvis.github.io/images/SU_logo.svg" />Home</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
             <li>
-                <span>
-                    <i class="fas fa-tags"></i>&nbsp;
-                    <a href="https://ashwinvis.github.io/tag/python.html"><span class="label">python</span></a>
-                    <a href="https://ashwinvis.github.io/tag/pypy.html"><span class="label">pypy</span></a>
-                    <a href="https://ashwinvis.github.io/tag/rust.html"><span class="label">rust</span></a>
-                    <a href="https://ashwinvis.github.io/tag/java.html"><span class="label">java</span></a>
-                    <a href="https://ashwinvis.github.io/tag/csharp.html"><span class="label">csharp</span></a>
-                </span>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
             </li>
-        </ul>
-    </div>
-</div>
-    <div class="row summary">
-        <div class="small-12 medium-12 columns">
-            <p>We now have multiple Python interpreters and let's see what is in store.</p>
-            <p class='text-right'><a href="https://ashwinvis.github.io/diversity-amongst-python-interpreters.html"><em>Continue reading&hellip;</em></a></p>
+            <li>
+              <a href="https://ashwinvis.github.io/">Showcase</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/pages/cv">CV</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/research">Research</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/software">Software</a></li>
+                <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="https://ashwinvis.github.io/pages/contact/">Contact</a></li>
+          </ol>
         </div>
+      </div>
     </div>
-</section>
+  </div>
+</nav></header>
+<main>
+<div class="m-container">
+  <div class="m-row">
+    <div class="m-col-m-10">
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/how-to-survive-the-great-slowdown.html" rel="bookmark" title="Permalink to How to survive the Great Slowdown">
+            <time class="m-date" datetime="2012-08-18T06:32:00+02:00">
+              Aug <span class="m-date-day">18</span> 2012
+            </time>
+            How to survive the Great Slowdown
+          </a></h1>
+          <div dir="ltr" style="text-align:left;"><div style="text-align:justify;"><p>On the backdrop of recent events when our beloved <a href="https://in.reuters.com/article/2012/08/15/india-gdp-manmohan-singh-idINDEE87E01I20120815">King Singh gave a
+          heartbroken I-day
+          speech</a>,
+          <a href="https://in.reuters.com/article/2012/08/18/india-economy-gdp-panel-idINDEE87G02G20120818">all hope seems to be
+          lost</a>
+          and the media starts scaring you with <a href="https://in.reuters.com/article/2012/08/18/india-ratings-junk-investment-idINDEE87F0IK20120818">impending
+          doom</a>;
+          I thought I would share a few pointers that would help the <em>selfish
+          anarchist</em> in you survive in the …</p></div></div>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2012-08-18T06:32:00+02:00">Sat 18 August 2012</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/economy.html">economy</a>, <a href="https://ashwinvis.github.io/tag/india.html">India</a>, <a href="https://ashwinvis.github.io/tag/recession.html">recession</a>, <a href="https://ashwinvis.github.io/tag/survival.html">survival</a>, <a href="https://ashwinvis.github.io/tag/tips.html">tips</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/learning-to-live.html" rel="bookmark" title="Permalink to Learning to Live">
+            <time class="m-date" datetime="2012-02-03T17:23:00+01:00">
+              Feb <span class="m-date-day">03</span> 2012
+            </time>
+            Learning to Live
+          </a></h1>
+          <div dir="ltr" style="text-align:left;"><div><div><div dir="ltr" style="text-align:left;"><p>As I look back at 22 years of my life, I realise that my life took two sharp
+          turns to define me as a person that I am today.  In my defence, this is not a
+          prose in praise to myself. Nor am I saying I am the perfect son …</p></div></div></div></div>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2012-02-03T17:23:00+01:00">Fri 03 February 2012</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/friends.html">friends</a>, <a href="https://ashwinvis.github.io/tag/life.html">life</a>, <a href="https://ashwinvis.github.io/tag/teenage.html">teenage</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/oru-agra-yatra.html" rel="bookmark" title="Permalink to ഒരു ആഗ്ര യാത്ര.">
+            <time class="m-date" datetime="2011-09-15T11:45:00+02:00">
+              Sep <span class="m-date-day">15</span> 2011
+            </time>
+            ഒരു ആഗ്ര യാത്ര.
+          </a></h1>
+          <div dir="ltr" style="text-align:left;"><div><div style="text-align:justify;"><p>ഓഗസ്റ്റ്‌ 14 ഒരു നല്ല ദിനമാണ് .പാരതന്ത്ര്യത്തിന്റെ പിടിയില്‍ നിന്നും
+          ഭാരത്തെ മോചിപ്പിക്കാന്‍ വെള്ളക്കാര്‍ തീരുമാനിച്ച സുദിനം. Schoolil …</p></div></div></div>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2011-09-15T11:45:00+02:00">Thu 15 September 2011</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/life.html">life</a>, <a href="https://ashwinvis.github.io/tag/travel.html">travel</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/lost-in-transition.html" rel="bookmark" title="Permalink to Lost in Transition">
+            <time class="m-date" datetime="2011-08-02T10:01:00+02:00">
+              Aug <span class="m-date-day">02</span> 2011
+            </time>
+            Lost in Transition
+          </a></h1>
+          <div dir="ltr" style="text-align:left;"><div class="gmail_quote"><div dir="ltr"><div class="gmail_quote"><div class="im"><div
+          style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"><div
+          style="border-bottom:medium none;border-left:medium none;border-right:medium none;border-top:medium none;"><p>I dreamt of the blue skies. And in pursuit of another beautiful dream, I
+          flew over the cotton-like clouds… my first flight. A warm evening in
+          June. Haze covered the Delhi skies, as the flight descends to the land
+          of promises. What was to follow, were days filled with awe …</p></div></div></div></div></div></div></div>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2011-08-02T10:01:00+02:00">Tue 02 August 2011</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/life.html">life</a>, <a href="https://ashwinvis.github.io/tag/travel.html">travel</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/things-to-do-before-i-turn-25.html" rel="bookmark" title="Permalink to Things to do before I turn 25">
+            <time class="m-date" datetime="2011-04-22T13:12:00+02:00">
+              Apr <span class="m-date-day">22</span> 2011
+            </time>
+            Things to do before I turn 25
+          </a></h1>
+          <ol>
+          <li>Start reading books again.</li>
+          <li>See the world, what lies beyond South India. Live for sometime on the
+          other side.</li>
+          <li>I always think inside my mind continuously. If you think I am silent,
+          you assumed wrong. I am talking to myself. I really hope to change
+          it.</li>
+          <li>I turn into a …</li></ol>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2011-04-22T13:12:00+02:00">Fri 22 April 2011</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/life.html">life</a>, <a href="https://ashwinvis.github.io/tag/resolution.html">resolution</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/sheer-pleasure-of-going-places.html" rel="bookmark" title="Permalink to Sheer pleasure of Going Places">
+            <time class="m-date" datetime="2011-03-02T04:06:00+01:00">
+              Mar <span class="m-date-day">02</span> 2011
+            </time>
+            Sheer pleasure of Going Places
+          </a></h1>
+          <p>Travelling with a rout3 map in hand is one thing.</p>
+          <p>
+          But have you ever thought of chasing an unknown route, and you have no<br />
+          idea where you will end up.<br />
+          I used to do it since I was 12, with a new cycle, and all my<br />
+          neighbourhood back at Aluva …</p>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2011-03-02T04:06:00+01:00">Wed 02 March 2011</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/age-21-where-are-you-now.html" rel="bookmark" title="Permalink to Age 21: Where are you now?">
+            <time class="m-date" datetime="2011-02-07T12:29:00+01:00">
+              Feb <span class="m-date-day">07</span> 2011
+            </time>
+            Age 21: Where are you now?
+          </a></h1>
+          <div dir="ltr" style="text-align:left;"><p>Plan, one step at a time.</p>
+          <blockquote>
+          <ul>
+          <li><strong>It is a mistake to look too far ahead. Only one link in the chain of
+          destiny can be handled at a time.</strong></li>
+          <li><strong>It is always wise to look ahead, but difficult to look further than you
+          can see. // (Sir Winston Churchill)</strong></li>
+          </ul>
+          </blockquote>
+          <div
+          style="font-family:'Courier New', Courier, monospace;font-style:italic;"></div><p>
+          21, an …</p></div>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2011-02-07T12:29:00+01:00">Mon 07 February 2011</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/life.html">life</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/music-and-the-state-of-the-mind.html" rel="bookmark" title="Permalink to Music and the State of the Mind">
+            <time class="m-date" datetime="2010-11-05T08:45:00+01:00">
+              Nov <span class="m-date-day">05</span> 2010
+            </time>
+            Music and the State of the Mind
+          </a></h1>
+          <p>
+          <em>Have you ever felt… there is a connection between your emotions and
+          your level of enjoyment while you are listening to a track. Say it
+          “striking a vibe”, “feeling the love” whatever, … you immediately
+          connect to the artist and his lyrics.</em><br />
+          <em>Here’s a little guide on the kind of …</em></p>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2010-11-05T08:45:00+01:00">Fri 05 November 2010</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a>, <a href="https://ashwinvis.github.io/tag/list.html">list</a>, <a href="https://ashwinvis.github.io/tag/mood.html">mood</a>, <a href="https://ashwinvis.github.io/tag/music.html">music</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/about-me-i-dunno-im-a-moron.html" rel="bookmark" title="Permalink to “About Me? I dunno, I’m a moron”">
+            <time class="m-date" datetime="2010-06-02T15:10:00+02:00">
+              Jun <span class="m-date-day">02</span> 2010
+            </time>
+            “About Me? I dunno, I’m a moron”
+          </a></h1>
+          <p>Still no idea what i’m talking? These one liners may sound familiar to
+          ya..</p>
+          <ol>
+          <li>Better u get to know me and say..</li>
+          <li>try me</li>
+          <li>u <strong>tell</strong> <strong>me</strong> that</li>
+          <li>am still discovering myself..</li>
+          <li>???</li>
+          </ol>
+          <div><p>These are a few of those umpteen ONELINER “about me”s you see everyday.
+          Frankly i’m …</p></div>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2010-06-02T15:10:00+02:00">Wed 02 June 2010</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/musings-in-a-train-journey-pt-1.html" rel="bookmark" title="Permalink to Musings in a train journey - Pt.1">
+            <time class="m-date" datetime="2010-04-13T06:02:00+02:00">
+              Apr <span class="m-date-day">13</span> 2010
+            </time>
+            Musings in a train journey - Pt.1
+          </a></h1>
+          <p>Nothing could be more sore than sitting devoid of company in a train.
+          For long i held this opinion. It was a hot saturday afternoon and I was
+          stuck in the Chennai mail homebound. As I was early to reach the
+          station, I managed to grab a seat in the …</p>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2010-04-13T06:02:00+02:00">Tue 13 April 2010</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article>
+        <header>
+          <h1><a href="https://ashwinvis.github.io/time-is-life.html" rel="bookmark" title="Permalink to Time is Life">
+            <time class="m-date" datetime="2010-02-12T13:04:00+01:00">
+              Feb <span class="m-date-day">12</span> 2010
+            </time>
+            Time is Life
+          </a></h1>
+          <p>The past few weeks of my life were the most dramatic, glorious ones.
+          Things start getting too good for you, they happen  so fast… that, it
+          is next to impossible to squeeze enough time out. Those were yes, the
+          golden moments…</p>
+          <p>Childhood was great… you had a hardcore gang of …</p>
+        </header>
+        <footer>
+          <p>Posted by <a href="https://ashwinvis.github.io/author/azuwish.html">azuwish</a> on <time datetime="2010-02-12T13:04:00+01:00">Fri 12 February 2010</time> in <a href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/friends.html">friends</a>, <a href="https://ashwinvis.github.io/tag/life.html">life</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <div class="m-article-pagination"><a href="https://ashwinvis.github.io/index2.html">&laquo; newer articles</a> | page 3</div>
     </div>
-    <div class="small-12 medium-6 columns small-articles">
-      <h3>Recent articles</h3>
-      <hr>
-      <ul class="no-bullet">
-        <li><h6><a href="repl-for-your-data.html">REPL for your data</a>
-            <small><em>28 July 2019</em></small>
-        </h6></li>
-        <li><h6><a href="feigenbaum-constant.html">Feigenbaum constant</a>
-            <small><em>24 July 2019</em></small>
-        </h6></li>
-        <li><h6><a href="new-article-shallow-water-wave-turbulence.html">New article: Shallow water wave turbulence</a>
-            <small><em>17 July 2019</em></small>
-        </h6></li>
-        <li><h6><a href="a-dictionary-of-horrors.html">A dictionary of horrors</a>
-            <small><em>31 January 2019</em></small>
-        </h6></li>
-        <li><h6><a href="lightweight-classes-for-scientific-computing-using-cached_property.html">Lightweight classes for scientific computing using "cached_property"</a>
-            <small><em>25 December 2018</em></small>
-        </h6></li>
+    <nav class="m-navpanel m-col-m-2">
+      <h3>Categories</h3>
+      <ol class="m-block-bar-m">
+        <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+      </ol>
+      <h3>Tag cloud</h3>
+      <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/conference.html">conference</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/congress.html">congress</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/economy.html">economy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fediverse.html">fediverse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidsim.html">fluidsim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/friends.html">friends</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/game-of-thrones.html">game of thrones</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/india.html">India</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/indian-politics.html">indian politics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/internet.html">Internet</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/introduction.html">introduction</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/java.html">java</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/kindness.html">kindness</a></li>
+        <li class="m-tag-5"><a href="https://ashwinvis.github.io/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/list.html">list</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/mood.html">mood</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/motto.html">motto</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/music.html">music</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/optimization.html">optimization</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/poetry.html">poetry</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/privacy.html">privacy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/psychology.html">psychology</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pypy.html">pypy</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/python.html">python</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rant.html">rant</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/recession.html">recession</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/resolution.html">resolution</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/teenage.html">teenage</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/thin-line.html">thin line</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/til.html">til</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/tips.html">tips</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/today-i-learned.html">today i learned</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/travel.html">travel</a></li>
+        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/wordporm.html">wordporm</a></li>
       </ul>
-      <a class="button" href="https://ashwinvis.github.io/archives.html">See more&hellip;</a>
+    </nav>
+  </div>
+</div>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://bitbucket.org/avmo">Bitbucket</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Research</a></h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Blog</a></h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+        </ul>
+      </div>
     </div>
-</div>
-                </div>
-                </div>
-
-                <footer id="foot" class="show-for-large-up">
-<div class="small-6 medium-3 columns">
-    <ul class="left-nav">
-        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
-        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
-    </ul>
-</div>
-<div class="small-6 medium-3 medium-push-6 columns">
-    <ul class="right-nav">
-        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
-        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
-    </ul>
-</div>
-<div class="small-12 medium-6 medium-pull-3 columns text-center">
-</div>
-<div class="small-12 columns sub-footer">
-    <hr>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-left">
-            &copy; 2019 Ashwin Vishnu Mohanan 
-    <a
-    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
-    
-            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
-        </p>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">CC-BY-SA 4.0</a> | <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> <span class="raw-html"><div> </div></span></p>
+      </div>
     </div>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-right">
-            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="https://www.python.org/">Python</a>.
-        </p>
-    </div>
-</div>                </footer>
-            </div>
-
-            <div class="image-pane" style="background: url(''); background-size:cover; background-position: right;">
-                <div class="row">
-                    <div class="small-12 medium-4 large-12 columns">
-                        <div class="about-me">
-                            <div class="hide-for-medium-only small-3 columns no-buffer">
-                                <a class="th" href="/images/dp_ashwin.jpg">
-                                    <img src="/images/dp_ashwin.jpg">
-                                </a>
-                            </div>
-                            <div class="small-9 medium-12 large-9 columns text-justify">
-				<div class="site-description">
-                                
-My research centers around geophysical flows, particularly with
-gravity waves and vortices, studied from a turbulence perspective. I am trained
-in computational, theoretical and experimental tools. You would find
-me using things which are simple, efficent, open-source, and reproducible. Feel
-free to contact me - I am usually reachable via email or the social accounts
-listed below.
-				</div>
-                            </div>
-                            <div class="small-12 columns">
-                                <ul class="inline-center social-list">
-                                    <li><a href="encrypted-mail:Click to reveal" onclick="openMailer(this);">
-					<i class="fas fa-envelope"></i>&nbsp; Email</a>
-				    </li>
-				    <li><a href=https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>
-					<i class="fas fa-fingerprint"></i>&nbsp; GnuPG</a>
-				    </li>
-				    <li><a rel="me" href=https://mastodon.acc.sunet.se/@ashwinvis>
-					<i class="fab fa-mastodon"></i>&nbsp; Mastodon</a>
-				    </li>
-				    <li><a href="https://github.com/ashwinvis"><i class="fab fa-github"></i>&nbsp; Github</a></li>
-				    <li><a href="https://source.coderefinery.org/ashwinvis/"><i class="fab fa-gitlab"></i>&nbsp; Gitlab</a></li>
-				    <li><a href="https://bitbucket.org/avmo"><i class="fab fa-bitbucket"></i>&nbsp; Bitbucket</a></li>
-				    <li><a href="https://www.linkedin.com/in/ashwinvishnu/"><i class="fab fa-linkedin"></i>&nbsp; LinkedIn</a></li>
-                                    <li><a href="https://zotero.org/ashwinvis"><i class="ai ai-zotero"></i>&nbsp; Zotero</a></li>
-                                    <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"><i class="ai ai-researchgate"></i>&nbsp; ResearchGate</a></li>
-                                    <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ"><i class="ai ai-google-scholar"></i>&nbsp; Google-Scholar</a></li>
-                                    <li><a href="https://orcid.org/0000-0002-2979-6327"><i class="ai ai-orcid"></i>&nbsp; ORCID</a></li>
-                                    <li><a href="https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"><i class="ai ai-zenodo"></i>&nbsp; Zenodo</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="small-8 medium-4  large-8 small-offset-2 medium-offset-0 large-offset-2 columns link-list">
-		    <h5 class="text-center"><b>Search</b></h5>
-                    <form action="https://ashwinvis.github.io/search.html">
-                    <input type="text" name="q" id="tipue_search_input" placeholder="keyword or phrase" autocomplete="off" required>
-                    </form>
-                         <a class="th link-img img-center" href="https://kth.se">
-                              <img src="/images/KTH_Logotyp_RGB_2013-2.svg">
-                         </a>
-                    </div>
-
-                    <div class="small-12 medium-4  large-12 columns link-list">
-                        <ul class="inline-center">
-                            <li><a href="https://www.flow.kth.se">Linné FLOW Centre</a></li>
-                            <li><a href="https://fluiddyn.bitbucket.io">FluidDyn Project</a></li>
-                            <li><a href="https://www.mech.kth.se/mech/info_staff.xhtml?ID=381">Student Profile</a></li>
-                            <li><a href="https://python.org/">Python.org</a></li>
-                        </ul>
-                    </div>
-               </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <footer class="hide-for-large-up">
-<div class="small-6 medium-3 columns">
-    <ul class="left-nav">
-        <li><a href="https://ashwinvis.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
-        <li><a href="https://ashwinvis.github.io/categories.html">Categories &nbsp;<i class="fa fa-folder-open fa-fw"></i></a></li>
-    </ul>
-</div>
-<div class="small-6 medium-3 medium-push-6 columns">
-    <ul class="right-nav">
-        <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml"><i class="fa fa-rss fa-fw"></i>&nbsp; Feed</a></li>
-        <li><a href="https://ashwinvis.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
-    </ul>
-</div>
-<div class="small-12 medium-6 medium-pull-3 columns text-center">
-</div>
-<div class="small-12 columns sub-footer">
-    <hr>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-left">
-            &copy; 2019 Ashwin Vishnu Mohanan 
-    <a
-    href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">
-    CC-BY-SA 4.0</a> | GnuPG: 45A73FAD
-    
-            <!-- <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
-        </p>
-    </div>
-    <div class="small-12 medium-6 columns">
-        <p class="small-text-center medium-text-right">
-            Proudly powered by <a href="http://blog.getpelican.com/">Pelican</a>,
-            which takes great advantage of <a href="https://www.python.org/">Python</a>.
-        </p>
-    </div>
-</div>            </footer>
-        </div>
-
-        <script src="https://ashwinvis.github.io/theme/js/jquery.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/foundation.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/slick.min.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/slick-app.js"></script>
-        <script src="https://ashwinvis.github.io/theme/js/app.js"></script>
-    </body>
-
-
+  </div>
+</nav></footer>
+</body>
 </html>
