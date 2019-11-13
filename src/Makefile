@@ -5,7 +5,8 @@ PELICANOPTS=
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/../output
-CONFFILE=$(BASEDIR)/pelicanconf_mcss.py
+CONFFILE=$(BASEDIR)/pelicanconf.py
+# CONFFILE=$(BASEDIR)/pelicanconf_bluedrop.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 SSH_HOST=pelvoux.mech.kth.se

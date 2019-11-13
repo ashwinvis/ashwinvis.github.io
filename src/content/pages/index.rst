@@ -29,7 +29,7 @@ Welcome
             research interests:* geophysical flows, stratified flows,
             instabilities, scientific computing
 
-            I am also passionate about building simple, efficent, open-source,
+            I am also passionate about building simple, efficient, open-source,
             and reproducible software. Check out my blog posts and showcase!
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
