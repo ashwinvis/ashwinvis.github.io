@@ -5,5 +5,8 @@
 	path = backdrop-theme
 	url = https://github.com/ashwinvis/backdrop-theme.git
 [submodule "m.css"]
-	path = m.css
-	url = https://github.com/mosra/m.css.git
+	path = src/m.css
+	url = https://github.com/ashwinvis/m.css.git
+[submodule "src/plugins/ipynb"]
+	path = src/plugins/ipynb
+	url = https://github.com/ashwinvis/pelican-ipynb

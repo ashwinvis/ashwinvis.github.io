@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+import argparse
+from shutil import rmtree
+from os.path import join, exists
+from os import makedirs
+import urllib.request
+
+
+parser = argparse.ArgumentParser(
+    prog='pelican-install',
+    description='Install pelican plugins from Github',
+)
+
+parser.add_argument('-r', action='store_true', help='remove or uninstall plugin')
+parser.add_argument('-p', '--path', default='./pelican-plugins',
+                    help='directory under which plugins will be install to.')
+parser.add_argument('plugin')
+args = parser.parse_args()
+
+src = join(
+    'http://raw.githubusercontent.com/getpelican/pelican-plugins/master/',
+    args.plugin)
+dest = join(args.path, args.plugin)
+src_dest = dict(
+    [(join(src, filename), join(dest, filename)) for filename in (
+        '__init__.py', args.plugin + '.py', 'README.md', 'README.rst',
+        'Readme.md')])
+
+if args.r:
+    if exists(dest):
+        shutil.rmtree(dest)
+    else:
+        print('Plugin', args.plugin, ' not found')
+else:
+    makedirs(dest, exist_ok=True)
+    for src_path, dest_path in src_dest.items():
+        try:
+            urllib.request.urlretrieve(src_path, dest_path)
+        except urllib.error.HTTPError:
+            if not 'readme' in src_path.lower():
+                print('Download from', src_path, 'not successful.')
+                # raise

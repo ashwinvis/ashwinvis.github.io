@@ -16,3 +16,10 @@ def encrypt_email(real_name, rev_username, domain, tld="com"):
     email = f"mailto:{real_name} <{username}@{domain}.{tld}>"
     email_rot13 = codecs.encode(email, "rot_13")
     return email_rot13
+
+
+if __name__ == "__main__":
+    # Generate email href
+    AUTHOR = "Ashwin Vishnu Mohanan"
+    print(encrypt_email(AUTHOR, rev_username="sivniwhsa", domain="pm", tld="me"))
+    print(encrypt_email(AUTHOR, rev_username="omva", domain="misu.su", tld="se"))

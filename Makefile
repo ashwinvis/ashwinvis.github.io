@@ -1,7 +1,7 @@
 watch: clean
-	nohup bash -c 'cd backdrop-theme && grunt serve' &
+	# nohup bash -c 'cd backdrop-theme && grunt serve' &
 	nohup bash -c 'cd src && make devserver' &
-	sleep 1
+	sleep 5
 	xdg-open http://localhost:8000/
 	tail -f nohup.out
 
