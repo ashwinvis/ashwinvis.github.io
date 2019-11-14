@@ -1,5 +1,5 @@
-CV
-##
+Curriculum Vitae
+################
 :date: 2019-02-18 15:10
 :slug: cv
 :status: published

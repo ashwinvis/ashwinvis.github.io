@@ -20,6 +20,13 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = False
 
+try:
+    idx_css = M_CSS_FILES.index("/static/m-dark.css")
+    path_css = M_CSS_FILES.pop(idx_css)
+    M_CSS_FILES.insert(idx_css, path_css[:-3] + "compiled.css")
+except NameError:
+    pass
+
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = ""
@@ -27,10 +34,3 @@ DELETE_OUTPUT_DIRECTORY = False
 
 # m.css specific
 
-M_CSS_FILES = [
-    # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
-    # Open font library instead of Google Fonts
-    "https://fontlibrary.org/face/source-code-pro",
-    "https://fontlibrary.org/face/source-sans-pro",
-    "/static/m-dark.compiled.css",
-]

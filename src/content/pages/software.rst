@@ -8,10 +8,12 @@ Software
 A showcase of all the projects which I have **co-developed**, have
 **contributed** to, or **maintain** myself:
 
+.. contents::
+
 Research Software
 ~~~~~~~~~~~~~~~~~
 
-`FluidDyn project <https://fluiddyn.bitbucket.io>`__ 
+`FluidDyn project <https://fluiddyn.bitbucket.io>`__
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 An ecosystem of packages for research and teaching in fluid dynamics.

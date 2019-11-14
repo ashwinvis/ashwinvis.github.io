@@ -9,3 +9,6 @@ ipython
 markdown
 pybtex==0.22.2
 pyyaml>=5.1<6.0
+toolz<1.0.0
+requests
+cssutils

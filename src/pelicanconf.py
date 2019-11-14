@@ -9,6 +9,7 @@ import os
 import sys
 import shutil
 import logging
+from datetime import datetime
 
 # sys.path.append(os.curdir)
 # from pelicanconf import *
@@ -47,10 +48,16 @@ DIRECT_TEMPLATES = (
     #  "publications",
 )
 
-# FIXME: Caution this is overridden in publishconf.py
 M_CSS_FILES = [
+    # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
+    ##  Open font library instead of Google Fonts
+    # "https://fontlibrary.org/face/source-code-pro",
+    # "https://fontlibrary.org/face/source-sans-pro",
+    ## Patched open font library css
+    "/static/source-code-pro.css",
+    "/static/source-sans-pro.css",
     "/static/m-dark.css",
-    #  "/static/pygments-dark.css",
+    # "/static/pygments-dark.css",
 ]
 M_THEME_COLOR = "#22272e"
 
@@ -75,8 +82,8 @@ M_LINKS_NAVBAR1 = [
     ),
     (
         "Showcase",
+        "\#",
         "",
-        "#",
         [
             ("CV", "pages/cv", ""),
             ("Research", "pages/research", ""),
@@ -108,16 +115,17 @@ M_LINKS_FOOTER2 = [
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
 ]
-M_FINE_PRINT = """
+M_FINE_PRINT = f"""
 
 .. role:: raw-html(raw)
     :format: html
 
-`CC-BY-SA 4.0 <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE>`_ | `GnuPG: 45A73FAD <https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>`_ :raw-html:`<div> </div>` """
+`CC-BY-SA 4.0 <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE>`_ | Ashwin Vishnu Mohanan 2010 - {datetime.now().year} | `GnuPG: 45A73FAD <https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>`_ :raw-html:`<div> </div>` """
 
 
 # For landing page
-FORMATTED_FIELDS = ['summary', 'landing', 'header', 'footer', 'description', 'badge']
+FORMATTED_FIELDS = ['summary', 'landing',
+                    'header', 'footer', 'description', 'badge']
 M_NEWS_ON_INDEX = ("Latest posts", 5)
 
 # TODO:
@@ -129,10 +137,10 @@ if not shutil.which('latex'):
     M_MATH_RENDER_AS_CODE = True
 
 PLUGINS += [
-    "representative_image",
-    "tipue_search",
     "ipynb.markup",
-    "pelican_bibtex",
+    # "representative_image",
+    # "tipue_search",
+    # "pelican_bibtex",
 ]
 
 # ipynb
@@ -143,7 +151,7 @@ IPYNB_USE_METACELL = True
 IPYNB_COLORSCHEME = "monokai"
 IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
-IPYNB_EXPORT_TEMPLATE ="nbconvert.tpl"
+IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # Pagination
 DEFAULT_PAGINATION = 10
