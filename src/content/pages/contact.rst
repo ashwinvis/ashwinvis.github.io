@@ -86,10 +86,18 @@ research_ or software_ that I maintain.
 
         .. container:: m-col-l-10 m-push-l-1 m-col-m-7 m-nopadb
 
-            .. image:: /images/contact_map.png
-               :width: 100%
-               :target: https://www.qwant.com/maps/place/osm:way:63082892@Stockholm_University#map=11.00/59.3661410/18.0589277
-               :alt: Qwant / Open Street Maps
+            .. raw:: html
+
+                <a href="https://www.qwant.com/maps/place/osm:way:63082892@Stockholm_University#map=11.00/59.3661410/18.0589277">
+                <picture width="100%">
+                  <source srcset="/images/contact_map.webp" type="image/webp"
+                    width="100%">
+                  <source srcset="/images/contact_map.jpg" type="image/jpeg"
+                    width="100%">
+                  <img src="/images/contact_map.jpg" width="100%">
+                </picture>
+                </a>
+
 
 
 You can also reach me via social media accounts listed in the footer.
