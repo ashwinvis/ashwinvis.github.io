@@ -57,7 +57,6 @@ M_CSS_FILES = [
     "/static/source-code-pro.css",
     "/static/source-sans-pro.css",
     "/static/m-dark.css",
-    "/static/m-vars.css",
     # "/static/pygments-dark.css",
 ]
 M_THEME_COLOR = "#22272e"
