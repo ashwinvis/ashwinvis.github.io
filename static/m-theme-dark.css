@@ -38,7 +38,7 @@
   --nav-menu-case: none;
   --nav-heading-case: uppercase;
   --nav-categories-case: lowercase;
-  --landing-header-case: lowercase;
+  --landing-header-case: none;
   --heading-font-weight: 600;
 
   /* Shapes */

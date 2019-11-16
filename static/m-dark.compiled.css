@@ -2104,7 +2104,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
   margin-top: -0.5rem;
   padding-left: 1.5rem;
   padding-bottom: 1rem;
-  text-transform: lowercase;
+  text-transform: none;
 }
 #m-landing-cover {
   padding-bottom: 10rem;
