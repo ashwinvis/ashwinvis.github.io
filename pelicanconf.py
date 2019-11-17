@@ -34,6 +34,15 @@ AUTHOR_FEED_RSS = None
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
+# Metadata
+DEFAULT_METADATA = {
+    'author': AUTHOR,
+    'category': "Blog",
+    'summary': "",  # Disable auto-generated summary
+    # TODO:
+    # 'status': 'draft',  # Avoid accidently publishing articles
+}
+
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
 STATIC_PATHS = ["images", "showcase", "pdf", "static"]
