@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2019-10-31T00:00:00+01:00</updated><entry><title>At PyCon Sweden 2019</title><link href="https://ashwinvis.github.io/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-10-31T00:00:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.isyour.guru/" rel="alternate"></link><link href="https://ashwin.isyour.guru/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.isyour.guru/</id><updated>2019-10-31T00:00:00+01:00</updated><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.isyour.guru/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-10-31T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
 Do check out the slides for my presentation:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://cicero.xyz/v3/remark/0.14.0/github.com/ashwinvis/talks/master/pyconse2019/talk.md/#1"&gt;Make your Python code fly at transonic speeds!&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Don't miss the links to Binder demo and further reading at the final slide.
-Also, feel free to contact me (see email / links to social media on the sidebar / below).&lt;/p&gt;</content><category term="python"></category><category term="fluiddyn"></category><category term="transonic"></category></entry><entry><title>Diversity amongst Python interpreters</title><link href="https://ashwinvis.github.io/diversity-amongst-python-interpreters.html" rel="alternate"></link><published>2019-08-06T00:00:00+02:00</published><updated>2019-08-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-08-06:/diversity-amongst-python-interpreters.html</id><summary type="html">&lt;p&gt;We now have multiple Python interpreters and let's see what is in store.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+Also, feel free to contact me (see email / links to social media on the sidebar / below).&lt;/p&gt;</content><category term="python"></category><category term="fluiddyn"></category><category term="transonic"></category></entry><entry><title>Diversity amongst Python interpreters</title><link href="https://ashwin.isyour.guru/diversity-amongst-python-interpreters.html" rel="alternate"></link><published>2019-08-06T00:00:00+02:00</published><updated>2019-08-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2019-08-06:/diversity-amongst-python-interpreters.html</id><summary type="html">&lt;p&gt;We now have multiple Python interpreters and let's see what is in store.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -1849,7 +1849,7 @@ Python 3.7.3 (GraalVM CE Native 19.1.1)
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="pypy"></category><category term="rust"></category><category term="java"></category><category term="csharp"></category></entry><entry><title>REPL for your data</title><link href="https://ashwinvis.github.io/repl-for-your-data.html" rel="alternate"></link><published>2019-07-28T00:00:00+02:00</published><updated>2019-07-28T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-07-28:/repl-for-your-data.html</id><summary type="html">&lt;p&gt;Use ethical solutions. Archive your data. REPL.&lt;/p&gt;</summary><content type="html">&lt;p&gt;So we have heard this time and time again.&lt;/p&gt;
+</content><category term="python"></category><category term="pypy"></category><category term="rust"></category><category term="java"></category><category term="csharp"></category></entry><entry><title>REPL for your data</title><link href="https://ashwin.isyour.guru/repl-for-your-data.html" rel="alternate"></link><published>2019-07-28T00:00:00+02:00</published><updated>2019-07-28T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2019-07-28:/repl-for-your-data.html</id><summary type="html">&lt;p&gt;Use ethical solutions. Archive your data. REPL.&lt;/p&gt;</summary><content type="html">&lt;p&gt;So we have heard this time and time again.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Data is the new oil.&lt;/li&gt;
 &lt;li&gt;Surveillance capitalism.&lt;/li&gt;
@@ -2041,7 +2041,7 @@ tail -f dislike.log
   should expire your posts.&amp;#160;&lt;a class="footnote-backref" href="#fnref:expire" title="Jump back to footnote 12 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="social media"></category><category term="privacy"></category><category term="fediverse"></category></entry><entry><title>Feigenbaum constant</title><link href="https://ashwinvis.github.io/feigenbaum-constant.html" rel="alternate"></link><published>2019-07-24T00:00:00+02:00</published><updated>2019-07-24T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-07-24:/feigenbaum-constant.html</id><summary type="html">&lt;p&gt;Computing Feigenbaum constant using SymPy&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;/div&gt;</content><category term="social media"></category><category term="privacy"></category><category term="fediverse"></category></entry><entry><title>Feigenbaum constant</title><link href="https://ashwin.isyour.guru/feigenbaum-constant.html" rel="alternate"></link><published>2019-07-24T00:00:00+02:00</published><updated>2019-07-24T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2019-07-24:/feigenbaum-constant.html</id><summary type="html">&lt;p&gt;Computing Feigenbaum constant using SymPy&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -3584,7 +3584,7 @@ height=450
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="sympy"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwinvis.github.io/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html">&lt;style type="text/css"&gt;
+</content><category term="python"></category><category term="sympy"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwin.isyour.guru/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -5100,7 +5100,7 @@ div.input_prompt {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category></entry><entry><title>Lightweight classes for scientific computing using "cached_property"</title><link href="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="alternate"></link><published>2018-12-25T00:00:00+01:00</published><updated>2018-12-26T00:00:00+01:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-12-25:/lightweight-classes-for-scientific-computing-using-cached_property.html</id><summary type="html">&lt;style type="text/css"&gt;
+</content><category term="python"></category></entry><entry><title>Lightweight classes for scientific computing using "cached_property"</title><link href="https://ashwin.isyour.guru/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="alternate"></link><published>2018-12-25T00:00:00+01:00</published><updated>2018-12-26T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2018-12-25:/lightweight-classes-for-scientific-computing-using-cached_property.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -7334,7 +7334,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="fluidfft"></category><category term="fluidsim"></category><category term="optimization"></category></entry><entry><title>Intensely edgy cat with FluidFFT</title><link href="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html" rel="alternate"></link><published>2018-08-16T00:00:00+02:00</published><updated>2018-08-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwinvis.github.io,2018-08-16:/intensely-edgy-cat-with-fluidfft.html</id><summary type="html">&lt;style type="text/css"&gt;
+</content><category term="fluidfft"></category><category term="fluidsim"></category><category term="optimization"></category></entry><entry><title>Intensely edgy cat with FluidFFT</title><link href="https://ashwin.isyour.guru/intensely-edgy-cat-with-fluidfft.html" rel="alternate"></link><published>2018-08-16T00:00:00+02:00</published><updated>2018-08-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.isyour.guru,2018-08-16:/intensely-edgy-cat-with-fluidfft.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
