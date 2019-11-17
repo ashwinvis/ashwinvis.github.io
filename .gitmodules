@@ -1,12 +1,6 @@
-[submodule "pelican-bluedrop"]
-	path = pelican-bluedrop
-	url = https://github.com/ashwinvis/pelican-bluedrop.git
-[submodule "backdrop-theme"]
-	path = backdrop-theme
-	url = https://github.com/ashwinvis/backdrop-theme.git
 [submodule "m.css"]
-	path = src/m.css
+	path = m.css
 	url = https://github.com/ashwinvis/m.css.git
 [submodule "src/plugins/ipynb"]
-	path = src/plugins/ipynb
+	path = plugins/ipynb
 	url = https://github.com/ashwinvis/pelican-ipynb

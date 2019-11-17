@@ -41,11 +41,10 @@ jobs:
 
     - name: Lint content
       run: |
-        rst-lint src/content/*.rst
+        rst-lint content/*.rst
 
     - name: Publish
       run: |
-        cd src
         DEBUG=1 make publish
 
     - name: Deploy to GitHub Pages
