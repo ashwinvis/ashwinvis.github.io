@@ -75,7 +75,7 @@ PLUGINS = ["m.htmlsanity", "m.components"]
 
 M_FAVICON = ("/images/SU_logo.png", "image/png")
 M_BLOG_FAVICON = M_FAVICON
-M_SITE_LOGO = "/images/SU_logo.svg"
+M_SITE_LOGO = "/images/SU_logo.png"
 M_SITE_LOGO_TEXT = "Home"
 
 # Navbar
