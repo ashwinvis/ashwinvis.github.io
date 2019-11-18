@@ -9,8 +9,6 @@ CONFFILE=$(BASEDIR)/pelicanconf.py
 # CONFFILE=$(BASEDIR)/pelicanconf_bluedrop.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-CNAME=ashwin.info.tm
-
 SSH_HOST=pelvoux.mech.kth.se
 SSH_PORT=22
 SSH_USER=avmo
@@ -85,7 +83,8 @@ endif
 
 publish:
 	$(PELICAN) -v $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
-	printf "$(CNAME)" > $(OUTPUTDIR)/CNAME
+	cd $(BASEDIR)
+	$(PY) -c "from publishconf import *; print(SITEURL, end='')" > $(OUTPUTDIR)/CNAME
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)rsync_upload: publish
