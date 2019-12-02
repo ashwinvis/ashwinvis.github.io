@@ -40,3 +40,23 @@ chmod +x $VIRTUAL_ENV/bin/clustergit
 clustergit --recursive  # show status
 clustergit --recursive --push  # push recursive
 ```
+
+## License
+
+This repository contains copyrighted source code from a variety of sources.  In
+each instance, the copyright holder has released that source code under some
+kind of license.
+
+* All text and media under `content` is distributed under a CC-BY license a
+  copy of which is included in the file called `LICENSE-content`.
+
+* `pelican`'s source code and the configuration files for `pelican` is distributed
+  under the terms of the GNU Affero General Public License, a copy of which is
+  included in the file called `LICENSE-code`.
+
+* `m.css` is distributed under an MIT license, a copy of which is included in the
+  file called `m.css/COPYING`.
+
+You should read the corresponding license carefully, as it defines your
+specific rights regarding the use of covered source code, as well as the
+conditions under which those rights are given to you.
