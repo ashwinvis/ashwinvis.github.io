@@ -73,11 +73,93 @@ Do check out the slides for my presentation:</p>
 <blockquote>
 <p><a href="https://cicero.xyz/v3/remark/0.14.0/github.com/ashwinvis/talks/master/pyconse2019/talk.md/#1">Make your Python code fly at transonic speeds!</a>.</p>
 </blockquote>
-<p>Don't miss the links to Binder demo and further reading at the final slide.
-Also, feel free to contact me (see email / links to social media on the sidebar / below).</p>
+<p>Don't miss the links to Binder demo and further reading at the final slide.</p>
+<h2>Update</h2>
+<p>The video of the talk is out! Watch it:</p>
+<iframe id='ivplayer' type='text/html' width='640' height='360' src='https://invidio.us/embed/donHrISOO-w' frameborder='0'></iframe>
+
+<p>Alt: <a href="https://www.youtube.com/watch?v=donHrISOO-w">Youtube link</a></p>
+<h2>Rewind of my experience</h2>
+<p>I got to meet a lot of great like-minded people in those two days! It is no
+easy task to list all whom I met and convey my regards. Therefore, I list the
+videos and slides which might be of interest to you as a reader:</p>
+<ul>
+<li><a href="https://github.com/consideRatio">Erik Sundell</a> who works for both <em>Jupyterhub</em>
+  and his company shared his insights on how one can setup Jupyter with
+  multiple user deployments on a <a href="https://tljh.jupyter.org/">single server</a> or
+  on <a href="https://ztjh.jupyter.org/">the cloud</a>. <a href="https://invidio.us/watch?v=Epx4P6YCgTo">[video]</a></li>
+<li><a href="https://github.com/gavincyi/pycon-presentation/">Gavin Chan</a> who compared <em>Cython and Pybind11</em>
+   in his talk. <a href="https://invidio.us/watch?v=ZRKjoUALmwk">[video]</a></li>
+<li><a href="https://github.com/isaacbernat/presentations/">Isaac Bernat</a> showed us that
+  <em>algorithmic</em> improvements go a long way, indeed! <a href="https://invidio.us/watch?v=asZ0SDTKqvM">[video]</a></li>
+</ul>
+<p>There were also really educative talks on
+<a href="https://invidio.us/watch?v=fZwB1gQBwnU">asyncio</a>, <a href="https://invidio.us/watch?v=MKf6KfdTems">property based
+testing</a>
+<a href="https://slides.com/hultner/pycon-se-2019">[slides]</a> and <a href="https://invidio.us/watch?v=fZwB1gQBwnU">mutation
+testing</a>, plus a sizable representation
+from the data science community. A couple of fun projects such as the
+<a href="https://www.brachiograph.art/">a plotting DIY tool made using Python + Raspberry Pi Zero,
+BrachioGraph</a> and a <a href="https://invidio.us/watch?v=o8Un1w30IDk">really hacky self-documenting
+code</a>. See the <a href="https://invidio.us/channel/UCH_2cuWzFMyCPvm75lJJ6wg">PyCon Sweden video
+channel</a> for the whole
+programme.</p>
+<p>Last but not the least, I am thankful to the whole PyCon Sweden team for
+selflessly devoting their time into organizing a great conference - twice as
+large compared to last year. It was quite insightful to learn from the
+<a href="https://www.linkedin.com/in/anna-kazakova-lindegren-154b63b/">chair</a> that organizing the conference is a
+tightrope walk with a good fraction of ticket sales occurring towards the last
+week and booking the venue has numerous constraints! Hats off!</p>
+<h2>Epilogue</h2>
+<p>As for my talk, I believe I did my part. Judging from my interaction, it
+seemed that a lot of folks were oblivious to fact that <code>numpy</code> is not so fast
+for CPU-bound problems. I received some interesting questions as well:</p>
+<blockquote>
+<p>Add some nice fluid dynamics visualizations?</p>
+</blockquote>
+<p>There is a video on my <a href="/pages/software.html">Software</a> page.</p>
+<blockquote>
+<p>Can you use std. library <code>typing</code> for type annotations? Say for lists and
+dictionaries etc. This would allow for compatibility with <code>mypy</code> and later on
+<code>mypyc</code> when it is ready.</p>
+</blockquote>
+<p>This is seriously followed up as a <a href="https://github.com/fluiddyn/transonic/issues/9">possible
+enhancement</a> to <code>transonic</code>. </p>
+<blockquote>
+<p>Can you accelerate Pandas?</p>
+</blockquote>
+<p><a href="https://github.com/fluiddyn/transonic-demos/blob/master/pandas.ipynb">It seems to be
+possible</a>,
+especially when you follow functional programming style.</p>
+<blockquote>
+<p>Can you accelerate OpenCV code?</p>
+</blockquote>
+<p>This is a hard one. Of course, if you are dealing with images which are
+read as <code>numpy</code> arrays, it is possible. I haven't seen any Python extensions
+written (in Cython or other) to accelerate OpenCV code and even if it does
+exist, <code>transonic</code> is not designed to interface with libraries. </p>
+<blockquote>
+<p>Can Pythran replace Cython / f2py for interfacing with native code? </p>
+</blockquote>
+<p>Pythran does sound like Fortran, but it has nothing much in common - except the
+fact that Pythran and Fortran target scientific computing and HPC. Generally
+speaking, Pythran is meant to extend not interface.</p>
+<p>However, Pythran can do some useful things such as generate C++ only code, free
+from any runtime Python dependencies (using <code>-e</code> argument) or even <a href="https://serge-sans-paille.github.io/pythran-stories/the-capsule-corporation.html">export
+capsules</a>
+which is compatible with
+<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.LowLevelCallable.html"><code>scipy.LowLevelCallable</code></a>.</p>
+<h2>The journey continues ...</h2>
+<p>As developers of project <code>transonic</code>, we are hoping that you would try out the
+project and adopt it in your personal scripts, notebooks and possibly in
+packages that you develop. If you found <code>transonic</code> useful, help us, encourage
+us, by <a href="https://github.com/fluiddyn/transonic">starring the project on GitHub</a>
+and <a href="https://framaforms.org/transonic-declaration-of-interest-and-feedback-1570969704">sharing your
+experience</a>
+with us.</p>
 <!-- /content -->
         <footer>
-          <p>Posted by <a href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-10-31T00:00:00+01:00">Thu 31 October 2019</time> in <a href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/python.html">python</a>, <a href="https://ashwin.info.tm/tag/fluiddyn.html">fluiddyn</a>, <a href="https://ashwin.info.tm/tag/transonic.html">transonic</a>.</p>
+          <p>Posted by <a href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-10-31T00:00:00+01:00">Thu 31 October 2019</time> in <a href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2019-12-01T00:00:00+01:00">Sun 01 December 2019</time></span> Tags: <a href="https://ashwin.info.tm/tag/python.html">python</a>, <a href="https://ashwin.info.tm/tag/fluiddyn.html">fluiddyn</a>, <a href="https://ashwin.info.tm/tag/transonic.html">transonic</a>, <a href="https://ashwin.info.tm/tag/pyconse.html">pyconse</a>.</p>
         </footer>
       </article>
       <article>
@@ -647,6 +729,7 @@ Also, feel free to contact me (see email / links to social media on the sidebar 
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/poetry.html">poetry</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/privacy.html">privacy</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/psychology.html">psychology</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/pyconse.html">pyconse</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/pypy.html">pypy</a></li>
         <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/python.html">python</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/rant.html">rant</a></li>
@@ -709,7 +792,7 @@ Also, feel free to contact me (see email / links to social media on the sidebar 
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <p>
-        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE">CC-BY-SA 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2019<br />
+        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE-content">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2019<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://unsplash.com/photos/tmp3sxAl-DI">Cover photo credit</a><br />
         </p>
       </div>

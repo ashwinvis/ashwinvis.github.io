@@ -1,11 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-10-31T00:00:00+01:00</updated><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.info.tm/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-10-31T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-01T00:00:00+01:00</updated><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.info.tm/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-12-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
 Do check out the slides for my presentation:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://cicero.xyz/v3/remark/0.14.0/github.com/ashwinvis/talks/master/pyconse2019/talk.md/#1"&gt;Make your Python code fly at transonic speeds!&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Don't miss the links to Binder demo and further reading at the final slide.
-Also, feel free to contact me (see email / links to social media on the sidebar / below).&lt;/p&gt;</content><category term="python"></category><category term="fluiddyn"></category><category term="transonic"></category></entry><entry><title>Diversity amongst Python interpreters</title><link href="https://ashwin.info.tm/diversity-amongst-python-interpreters.html" rel="alternate"></link><published>2019-08-06T00:00:00+02:00</published><updated>2019-08-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-08-06:/diversity-amongst-python-interpreters.html</id><summary type="html">&lt;p&gt;We now have multiple Python interpreters and let's see what is in store.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;p&gt;Don't miss the links to Binder demo and further reading at the final slide.&lt;/p&gt;
+&lt;h2&gt;Update&lt;/h2&gt;
+&lt;p&gt;The video of the talk is out! Watch it:&lt;/p&gt;
+&lt;iframe id='ivplayer' type='text/html' width='640' height='360' src='https://invidio.us/embed/donHrISOO-w' frameborder='0'&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Alt: &lt;a href="https://www.youtube.com/watch?v=donHrISOO-w"&gt;Youtube link&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Rewind of my experience&lt;/h2&gt;
+&lt;p&gt;I got to meet a lot of great like-minded people in those two days! It is no
+easy task to list all whom I met and convey my regards. Therefore, I list the
+videos and slides which might be of interest to you as a reader:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/consideRatio"&gt;Erik Sundell&lt;/a&gt; who works for both &lt;em&gt;Jupyterhub&lt;/em&gt;
+  and his company shared his insights on how one can setup Jupyter with
+  multiple user deployments on a &lt;a href="https://tljh.jupyter.org/"&gt;single server&lt;/a&gt; or
+  on &lt;a href="https://ztjh.jupyter.org/"&gt;the cloud&lt;/a&gt;. &lt;a href="https://invidio.us/watch?v=Epx4P6YCgTo"&gt;[video]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/gavincyi/pycon-presentation/"&gt;Gavin Chan&lt;/a&gt; who compared &lt;em&gt;Cython and Pybind11&lt;/em&gt;
+   in his talk. &lt;a href="https://invidio.us/watch?v=ZRKjoUALmwk"&gt;[video]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/isaacbernat/presentations/"&gt;Isaac Bernat&lt;/a&gt; showed us that
+  &lt;em&gt;algorithmic&lt;/em&gt; improvements go a long way, indeed! &lt;a href="https://invidio.us/watch?v=asZ0SDTKqvM"&gt;[video]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There were also really educative talks on
+&lt;a href="https://invidio.us/watch?v=fZwB1gQBwnU"&gt;asyncio&lt;/a&gt;, &lt;a href="https://invidio.us/watch?v=MKf6KfdTems"&gt;property based
+testing&lt;/a&gt;
+&lt;a href="https://slides.com/hultner/pycon-se-2019"&gt;[slides]&lt;/a&gt; and &lt;a href="https://invidio.us/watch?v=fZwB1gQBwnU"&gt;mutation
+testing&lt;/a&gt;, plus a sizable representation
+from the data science community. A couple of fun projects such as the
+&lt;a href="https://www.brachiograph.art/"&gt;a plotting DIY tool made using Python + Raspberry Pi Zero,
+BrachioGraph&lt;/a&gt; and a &lt;a href="https://invidio.us/watch?v=o8Un1w30IDk"&gt;really hacky self-documenting
+code&lt;/a&gt;. See the &lt;a href="https://invidio.us/channel/UCH_2cuWzFMyCPvm75lJJ6wg"&gt;PyCon Sweden video
+channel&lt;/a&gt; for the whole
+programme.&lt;/p&gt;
+&lt;p&gt;Last but not the least, I am thankful to the whole PyCon Sweden team for
+selflessly devoting their time into organizing a great conference - twice as
+large compared to last year. It was quite insightful to learn from the
+&lt;a href="https://www.linkedin.com/in/anna-kazakova-lindegren-154b63b/"&gt;chair&lt;/a&gt; that organizing the conference is a
+tightrope walk with a good fraction of ticket sales occurring towards the last
+week and booking the venue has numerous constraints! Hats off!&lt;/p&gt;
+&lt;h2&gt;Epilogue&lt;/h2&gt;
+&lt;p&gt;As for my talk, I believe I did my part. Judging from my interaction, it
+seemed that a lot of folks were oblivious to fact that &lt;code&gt;numpy&lt;/code&gt; is not so fast
+for CPU-bound problems. I received some interesting questions as well:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Add some nice fluid dynamics visualizations?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There is a video on my &lt;a href="/pages/software.html"&gt;Software&lt;/a&gt; page.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can you use std. library &lt;code&gt;typing&lt;/code&gt; for type annotations? Say for lists and
+dictionaries etc. This would allow for compatibility with &lt;code&gt;mypy&lt;/code&gt; and later on
+&lt;code&gt;mypyc&lt;/code&gt; when it is ready.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is seriously followed up as a &lt;a href="https://github.com/fluiddyn/transonic/issues/9"&gt;possible
+enhancement&lt;/a&gt; to &lt;code&gt;transonic&lt;/code&gt;. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can you accelerate Pandas?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/fluiddyn/transonic-demos/blob/master/pandas.ipynb"&gt;It seems to be
+possible&lt;/a&gt;,
+especially when you follow functional programming style.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can you accelerate OpenCV code?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is a hard one. Of course, if you are dealing with images which are
+read as &lt;code&gt;numpy&lt;/code&gt; arrays, it is possible. I haven't seen any Python extensions
+written (in Cython or other) to accelerate OpenCV code and even if it does
+exist, &lt;code&gt;transonic&lt;/code&gt; is not designed to interface with libraries. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can Pythran replace Cython / f2py for interfacing with native code? &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pythran does sound like Fortran, but it has nothing much in common - except the
+fact that Pythran and Fortran target scientific computing and HPC. Generally
+speaking, Pythran is meant to extend not interface.&lt;/p&gt;
+&lt;p&gt;However, Pythran can do some useful things such as generate C++ only code, free
+from any runtime Python dependencies (using &lt;code&gt;-e&lt;/code&gt; argument) or even &lt;a href="https://serge-sans-paille.github.io/pythran-stories/the-capsule-corporation.html"&gt;export
+capsules&lt;/a&gt;
+which is compatible with
+&lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.LowLevelCallable.html"&gt;&lt;code&gt;scipy.LowLevelCallable&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;The journey continues ...&lt;/h2&gt;
+&lt;p&gt;As developers of project &lt;code&gt;transonic&lt;/code&gt;, we are hoping that you would try out the
+project and adopt it in your personal scripts, notebooks and possibly in
+packages that you develop. If you found &lt;code&gt;transonic&lt;/code&gt; useful, help us, encourage
+us, by &lt;a href="https://github.com/fluiddyn/transonic"&gt;starring the project on GitHub&lt;/a&gt;
+and &lt;a href="https://framaforms.org/transonic-declaration-of-interest-and-feedback-1570969704"&gt;sharing your
+experience&lt;/a&gt;
+with us.&lt;/p&gt;</content><category term="python"></category><category term="fluiddyn"></category><category term="transonic"></category><category term="pyconse"></category></entry><entry><title>Diversity amongst Python interpreters</title><link href="https://ashwin.info.tm/diversity-amongst-python-interpreters.html" rel="alternate"></link><published>2019-08-06T00:00:00+02:00</published><updated>2019-08-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-08-06:/diversity-amongst-python-interpreters.html</id><summary type="html">&lt;p&gt;We now have multiple Python interpreters and let's see what is in store.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
