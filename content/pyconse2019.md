@@ -41,7 +41,7 @@ videos and slides which might be of interest to you as a reader:
   _algorithmic_ improvements go a long way, indeed! [[video]](https://invidio.us/watch?v=asZ0SDTKqvM)
 
 There were also really educative talks on
-[asyncio](https://invidio.us/watch?v=fZwB1gQBwnU), [property based
+[asyncio](https://invidio.us/watch?v=EX4YsevmZBg), [property based
 testing](https://invidio.us/watch?v=MKf6KfdTems)
 [[slides]](https://slides.com/hultner/pycon-se-2019) and [mutation
 testing](https://invidio.us/watch?v=fZwB1gQBwnU), plus a sizable representation
