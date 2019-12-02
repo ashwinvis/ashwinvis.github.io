@@ -4,42 +4,32 @@
 
 ## Requirements
 
-* Python: 3.x, Pelican and other packages (see `REQUIREMENTS.txt`)
-* node.js (to build the Pelican theme): npm, grunt, libsass
+* Python: 3.x, Pelican and other packages (see `requirements.txt`)
 
 ## Simple installation
-
-Without node.js and just Python + Pelican. Start in a virtual environment.
 
 ```sh
 git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
 ## or a simple clone followed by
 # git submodule update --init --recursive
+
 cd ashwinvis.github.io
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
-pelican-themes -i pelican-bluedrop/bluedrop
-cd src
+
 make html serve
 ```
 
 ## Development
 
-```sh
-git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
+Update `requirements.txt` and launch development server
 
-cd ashwinvis.github.io
+```sh
 pip install -U pip-tools
 pip-compile && pip-sync
 
-cd backdrop-theme
-ncu -u  # Updates package.json
-npm install
-bower install --save
-grunt build
-cd ..
-
-pelican-themes -s $PWD/pelican-bluedrop/bluedrop
-make watch
+make develop
 ```
 
 **Tip**: To conveniently work with submodules, install clustergit.
