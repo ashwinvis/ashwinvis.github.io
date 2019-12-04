@@ -9,13 +9,28 @@ Welcome
 :hide_navbar_brand: True
 :landing:
 
+  .. role:: raw-html(raw)
+      :format: html
+
+  .. role:: p-org
+
+  .. container:: h-card
+
     .. container:: m-row
 
         .. container:: m-col-l-6 m-push-l-1 m-col-m-7 m-nopadb
 
             .. raw:: html
 
-                <h1>Ashwin Vishnu<br/><span class="m-thin">Mohanan</span></h1>
+                <a class="p-name u-url"
+                   href="https://ashwin.info.tm"
+                   style="color: white; text-decoration: none;"
+                >
+                  <h1>
+                    <span class="p-given-name">Ashwin Vishnu</span><br/>
+                    <span class="p-family-name m-thin">Mohanan</span>
+                  </h1>
+                </a>
 
     .. container:: m-row
 
@@ -23,8 +38,9 @@ Welcome
 
 
             *Welcome!*
-            I am a postdoctoral researcher at MISU, Stockholm University.  My
-            current research concerns with atmospheric boundary layer
+            I am a postdoctoral researcher at :p-org:`MISU, Stockholm University`.
+
+            My current research concerns with atmospheric boundary layer
             turbulence studied using large-eddy simulations (LES).  *Other
             research interests:* geophysical flows, stratified flows,
             instabilities, scientific computing
@@ -38,9 +54,4 @@ Welcome
                 :class: m-fullwidth
 
                 Read my blog posts
-
-        .. raw:: html
-
-            <!-- Mastodon Link verification -->
-            <a rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis"> </a>
 

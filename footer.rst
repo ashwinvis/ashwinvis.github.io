@@ -1,6 +1,3 @@
-.. role:: raw-html(raw)
-    :format: html
-
 .. |license| image:: https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg
     :height: 31px
 
