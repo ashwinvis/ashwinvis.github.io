@@ -46,19 +46,23 @@ categories = [
     "indieweb",
 ]
 
-default_template = "indiekit/default.njk"
 
 for ptype in post_types:
     if ptype == "article":
         dest = "content"
+        template = "indiekit/default.njk"
     elif ptype == "note":
-        dest = "content/notes"
+        dest = f"content/notes"
+        template = "indiekit/default.njk"
     elif ptype in ("photo", "video", "audio"):
         dest = "content/media"
-    elif ptype in ("like", "repost"):
+        template = "indiekit/media.njk"
+    elif ptype in ("like", "repost", "reply"):
         dest = "content/mentions"
+        template = "indiekit/mentions.njk"
     else:
         dest = "content/misc"
+        template = "indiekit/misc.njk"
 
     assert not dest.endswith("/")
     post_types[ptype] = {
@@ -67,7 +71,7 @@ for ptype in post_types:
             % dest,
             "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}",
         },
-        "template": default_template,
+        "template": template,
     }
     if ptype in ("photo", "video", "audio"):
         post_types[ptype].update(

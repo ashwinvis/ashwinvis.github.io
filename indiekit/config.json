@@ -19,7 +19,7 @@
         "path": "content/media/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk",
+      "template": "indiekit/media.njk",
       "media": {
         "path": "content/static/photos/{{ published | date('yyyy-MM-dd') }}-{{ filename }}"
       }
@@ -29,7 +29,7 @@
         "path": "content/media/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk",
+      "template": "indiekit/media.njk",
       "media": {
         "path": "content/static/videos/{{ published | date('yyyy-MM-dd') }}-{{ filename }}"
       }
@@ -39,52 +39,52 @@
         "path": "content/media/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk",
+      "template": "indiekit/media.njk",
       "media": {
         "path": "content/static/audios/{{ published | date('yyyy-MM-dd') }}-{{ filename }}"
       }
     },
     "reply": {
       "post": {
-        "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "path": "content/mentions/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk"
+      "template": "indiekit/mentions.njk"
     },
     "like": {
       "post": {
         "path": "content/mentions/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk"
+      "template": "indiekit/mentions.njk"
     },
     "repost": {
       "post": {
         "path": "content/mentions/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk"
+      "template": "indiekit/mentions.njk"
     },
     "bookmark": {
       "post": {
         "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk"
+      "template": "indiekit/misc.njk"
     },
     "checkin": {
       "post": {
         "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk"
+      "template": "indiekit/misc.njk"
     },
     "event": {
       "post": {
         "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
         "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
       },
-      "template": "indiekit/default.njk"
+      "template": "indiekit/misc.njk"
     }
   },
   "syndicate-to": [
