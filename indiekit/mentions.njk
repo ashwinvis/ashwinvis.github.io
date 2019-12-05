@@ -1,6 +1,6 @@
 ---
 Title: {{ title if title else 👉 }}
-{% extends "indiekit/metadata.njk" %}
+{% extends "metadata.njk" %}
 ---
 
 {%- if likeOf %}
@@ -18,4 +18,4 @@ Title: {{ title if title else 👉 }}
 
 {{ content | safe }}
 
-{% extends "indiekit/footer.njk" %}
+{% extends "footer.njk" %}
