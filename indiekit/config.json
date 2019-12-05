@@ -1,5 +1,5 @@
 {
-  "post_types": {
+  "post-types": {
     "article": {
       "post": {
         "path": "content/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",

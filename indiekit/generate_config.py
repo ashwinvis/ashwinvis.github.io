@@ -84,7 +84,7 @@ for ptype in post_types:
 with open("config.json", "w") as config:
     json.dump(
         {
-            "post_types": post_types,
+            "post-types": post_types,
             "syndicate-to": syndicate_to,
             "categories": categories,
         },
