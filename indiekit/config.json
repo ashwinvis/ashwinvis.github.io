@@ -1,0 +1,99 @@
+{
+  "post_types": {
+    "article": {
+      "post": {
+        "path": "content/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "note": {
+      "post": {
+        "path": "content/notes/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "photo": {
+      "post": {
+        "path": "content/media/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk",
+      "media": {
+        "path": "content/static/photos/{{ published | date('yyyy-MM-dd') }}-{{ filename }}"
+      }
+    },
+    "video": {
+      "post": {
+        "path": "content/media/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk",
+      "media": {
+        "path": "content/static/videos/{{ published | date('yyyy-MM-dd') }}-{{ filename }}"
+      }
+    },
+    "audio": {
+      "post": {
+        "path": "content/media/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk",
+      "media": {
+        "path": "content/static/audios/{{ published | date('yyyy-MM-dd') }}-{{ filename }}"
+      }
+    },
+    "reply": {
+      "post": {
+        "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "like": {
+      "post": {
+        "path": "content/mentions/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "repost": {
+      "post": {
+        "path": "content/mentions/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "bookmark": {
+      "post": {
+        "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "checkin": {
+      "post": {
+        "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    },
+    "event": {
+      "post": {
+        "path": "content/misc/{{ published | date('yyyy-MM-dd') }}-{{ slug }}.md",
+        "url": "{{ published | date('yyyy-MM-dd') }}-{{ slug }}"
+      },
+      "template": "indiekit/default.njk"
+    }
+  },
+  "syndicate-to": [
+    {
+      "uid": "https://mastodon.acc.sunet.se/@ashwinvis",
+      "name": "Ashwin Vishnu Mohanan on Mastodon"
+    }
+  ],
+  "categories": [
+    "indieweb"
+  ]
+}

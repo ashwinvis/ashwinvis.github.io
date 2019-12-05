@@ -1,0 +1,62 @@
+---
+Title: {{ title }}
+Authors: Ashwin Vishnu
+Date: {{ published }}
+Status: published
+Category: Notes
+{%- if category %}
+Tags: {{ category | join(", ") }}
+{%- endif %}
+{%- if summary %}
+Summary: {{ summary }}
+{%- endif %}
+Slug:
+---
+
+{%- for item in photo %}
+![{{ item.alt }}]({{ item.value }})
+{% endfor %}
+
+{%- for item in audio %}
+<audio controls>
+   <source src="{{ item.value }}">
+   Sorry, your browser doesn't support embedded audios.
+</audio>
+{% endfor %}
+
+{%- for item in video %}
+<video controls>
+   <source src="{{ item.value }}">
+   Sorry, your browser doesn't support embedded videos.
+</video>
+{% endfor %}
+
+{{ content | safe }}
+
+{%- if likeOf %}
+- Like: {{ likeOf }}
+{%- endif %}
+{%- if bookmarkOf %}
+- Bookmark: {{ bookmarkOf }}
+{%- endif %}
+{%- if repostOf %}
+- Repost: {{ repostOf }}
+{%- endif %}
+{%- if inReplyTo %}
+- In reply to: {{ inReplyTo }}
+{%- endif %}
+{%- if rsvp %}
+- RSVP: {{ rsvp }}
+{%- endif %}
+{%- if location %}
+- Event:
+  + Start: {{ start }}
+  + End: {{ end }}
+  + Location: {{ location }}
+{%- endif %}
+{%- if syndicateTo %}
+- Syndicated to:
+{%- for item in syndicateTo %}
+  + {{ item }}
+{%- endfor %}
+{%- endif %}
