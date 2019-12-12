@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-01T00:00:00+01:00</updated><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.info.tm/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-12-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-12T00:00:00+01:00</updated><entry><title>About my postdoc project at Stockholm University</title><link href="https://ashwin.info.tm/project-eturb.html" rel="alternate"></link><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-12:/project-eturb.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
+University. There has been a couple of meetings with the group involved, and
+now the &lt;em&gt;who&lt;/em&gt; and the &lt;em&gt;what&lt;/em&gt; are more concrete. I wrote a short abstract for
+the &lt;a href="https://www.flow.kth.se/projects"&gt;annual FLOW catalogue&lt;/a&gt;, which I share
+below.&lt;/p&gt;
+&lt;h2&gt;eTurb: Efficient simulations of turbulence in atmospheric boundary layers&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A. V. Mohanan, G. Brethouwer, M. Kupiainen, J. Nordström, D. S. Henningson,
+P. Schlatter &amp;amp; G. Svensson&lt;/p&gt;
+&lt;p&gt;Funding: Swedish e-Science Research Centre (SeRC)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The atmospheric boundary layer (ABL) is the region which interacts with the
+Earth’s surface and exchanges energy between larger geophysical scales and
+land. The ABL goes through different regimes of stratification during the
+day-night transition, referred to as the diurnal cycle. Daytime convection
+results in a mixed layer when the boundary layer depth increases, and during
+night as the land cools, a shallower stably stratified boundary layer is
+observed. Accurate representation of turbulence in the ABL is crucial e.g. to
+improve weather predictions and for wind-energy applications. A suitable tool
+for studying the turbulence and complex transient phenomena in the ABL during a
+typical diurnal cycle is large-eddy simulation (LES).&lt;/p&gt;
+&lt;p&gt;This project aims to tackle different modelling challenges along the road to an
+efficient LES of the ABL. From the physics perspective, the wall boundary
+condition and the LES subgrid-scale model need to be improved to allow for high
+resolution simulations. Existing models should also be verified with regards to
+numerical stability and consistency. A desired outcome of this project is an
+efficient and accurate code for an LES of diurnal cycle of the ABL. To
+coordinate this inter-disciplinary project a collaboration between KTH, SU, LiU
+and SMHI is set afoot. For the LES we will use the Nek5000 (KTH and SU) and
+ESSENSE (LiU and SMHI) codes.&lt;/p&gt;
+&lt;p&gt;&lt;a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"&gt;&lt;img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="postdoc"></category><category term="research"></category><category term="fluid-mechanics"></category></entry><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.info.tm/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-12-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
 Do check out the slides for my presentation:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://cicero.xyz/v3/remark/0.14.0/github.com/ashwinvis/talks/master/pyconse2019/talk.md/#1"&gt;Make your Python code fly at transonic speeds!&lt;/a&gt;.&lt;/p&gt;
