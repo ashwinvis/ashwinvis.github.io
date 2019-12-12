@@ -2,10 +2,11 @@
 Title: About my postdoc project at Stockholm University
 Authors: Ashwin Vishnu
 Date: 2019-12-12
-Status: draft
+Status: published
 Category: Blog
 Tags: postdoc, research, fluid-mechanics
 Summary: eTurb: Efficient simulations of turbulence in atmospheric boundary layers
+Slug: project-eturb
 ---
 
 Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
@@ -42,4 +43,4 @@ coordinate this inter-disciplinary project a collaboration between KTH, SU, LiU
 and SMHI is set afoot. For the LES we will use the Nek5000 (KTH and SU) and
 ESSENSE (LiU and SMHI) codes.
 
-<a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"><img width="512" alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"></a>
+<a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"><img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"></a>
