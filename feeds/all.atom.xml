@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-12T00:00:00+01:00</updated><entry><title>About my postdoc project at Stockholm University</title><link href="https://ashwin.info.tm/project-eturb.html" rel="alternate"></link><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-12:/project-eturb.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-21T00:00:00+01:00</updated><entry><title>Licensing software to be permissive</title><link href="https://ashwin.info.tm/licensing-software.html" rel="alternate"></link><published>2019-12-21T00:00:00+01:00</published><updated>2019-12-21T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-21:/licensing-software.html</id><summary type="html">&lt;p&gt;Considerations while selecting a permissive license for your open-source project.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while back we were discussing changing the license of
+&lt;a href="https://transonic.rtfd.io"&gt;transonic&lt;/a&gt; from CeCILL-B to a more recognizable,
+but still permissive license. We would soon make that move. The
+most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
+as an alternative, due to the potential benefits.&lt;/p&gt;
+&lt;iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Being a licensing nerd, I found this &lt;a href="https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html"&gt;amusing
+piece&lt;/a&gt;
+informative on why everyone should avoid MIT and BSD. Patents and ambiguity.
+The article also links to &lt;a href="https://writing.kemitchell.com/2016/09/21/MIT-License-Line-by-Line.html"&gt;verbose explanation of what the MIT license actually
+means&lt;/a&gt;,
+along with this warning:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As a result, the shortness of MIT and BSD are reassuring only until you
+actually try to understand them, and find you need a decoder ring. The terms
+are actually dangerous if you read them without knowing you need that decoder
+ring, believing you see the whole picture, which often turns out to be just
+the picture you wanted to see.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A friend of mine had used the MIT license a while ago, commenting that he
+understood every word of it! Well, did he?!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;My arguments &lt;em&gt;in favour of&lt;/em&gt; Apache 2.0 were as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I don't think Apache 2.0 makes any demand from users of transonic or vice-versa. It is &lt;a href="https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache"&gt;compatible with BSD too&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To quote the license itself from section 1, it makes it adequately clear
+   what &lt;em&gt;derivate works&lt;/em&gt; are:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For the purposes of this License, Derivative Works shall not include works
+that remain separable from, or merely link (or bind by name) to the
+interfaces of, the Work and Derivative Works thereof.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/ch02.html"&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The key aspect of Apache 2.0 is it &lt;a href="https://snyk.io/blog/mit-apache-bsd-fairest-of-them-all/"&gt;protects developers from patent
+   lawsuits&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Indeed something more easier to read, but legally sound would be nice, like Blue Oak.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Don't use the Blue Oak license ... yet. Once it is approved / vetted
+by &lt;a href="https://www.gnu.org/licenses/license-list.html"&gt; GNU &lt;/a&gt; and
+&lt;a href="https://opensource.org/licenses"&gt; OSI &lt;/a&gt; we can start using it. I seems like a
+good license, but I am no expert, and most likely you are not too. Unfamiliar
+licenses slows down contributions and use of software.  It is listed on &lt;a href="https://spdx.org/licenses/BlueOak-1.0.0.html"&gt; SPDX
+&lt;/a&gt; though!&lt;/p&gt;</content><category term="licensing"></category><category term="open-source"></category></entry><entry><title>About my postdoc project at Stockholm University</title><link href="https://ashwin.info.tm/project-eturb.html" rel="alternate"></link><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-12:/project-eturb.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
 University. There has been a couple of meetings with the group involved, and
 now the &lt;em&gt;who&lt;/em&gt; and the &lt;em&gt;what&lt;/em&gt; are more concrete. I wrote a short abstract for
 the &lt;a href="https://www.flow.kth.se/projects"&gt;annual FLOW catalogue&lt;/a&gt;, which I share

@@ -58,6 +58,77 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/licensing-software.html" rel="bookmark" class="u-url" title="Permalink to Licensing software to be permissive">
+            <time class="m-date" datetime="2019-12-21T00:00:00+01:00">
+              Dec <span class="m-date-day">21</span> 2019
+            </time>
+            <div class="p-name">
+              Licensing software to be permissive
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Considerations while selecting a permissive license for your open-source project.</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>A while back we were discussing changing the license of
+<a href="https://transonic.rtfd.io">transonic</a> from CeCILL-B to a more recognizable,
+but still permissive license. We would soon make that move. The
+most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
+as an alternative, due to the potential benefits.</p>
+<iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+
+<p>Being a licensing nerd, I found this <a href="https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html">amusing
+piece</a>
+informative on why everyone should avoid MIT and BSD. Patents and ambiguity.
+The article also links to <a href="https://writing.kemitchell.com/2016/09/21/MIT-License-Line-by-Line.html">verbose explanation of what the MIT license actually
+means</a>,
+along with this warning:</p>
+<blockquote>
+<p>As a result, the shortness of MIT and BSD are reassuring only until you
+actually try to understand them, and find you need a decoder ring. The terms
+are actually dangerous if you read them without knowing you need that decoder
+ring, believing you see the whole picture, which often turns out to be just
+the picture you wanted to see.</p>
+</blockquote>
+<p>A friend of mine had used the MIT license a while ago, commenting that he
+understood every word of it! Well, did he?!</p>
+<hr>
+<p>My arguments <em>in favour of</em> Apache 2.0 were as follows:</p>
+<ol>
+<li>
+<p>I don't think Apache 2.0 makes any demand from users of transonic or vice-versa. It is <a href="https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache">compatible with BSD too</a></p>
+</li>
+<li>
+<p>To quote the license itself from section 1, it makes it adequately clear
+   what <em>derivate works</em> are:</p>
+</li>
+</ol>
+<blockquote>
+<p>For the purposes of this License, Derivative Works shall not include works
+that remain separable from, or merely link (or bind by name) to the
+interfaces of, the Work and Derivative Works thereof.</p>
+</blockquote>
+<p><a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/ch02.html">Source</a></p>
+<ol>
+<li>The key aspect of Apache 2.0 is it <a href="https://snyk.io/blog/mit-apache-bsd-fairest-of-them-all/">protects developers from patent
+   lawsuits</a></li>
+</ol>
+<p>Indeed something more easier to read, but legally sound would be nice, like Blue Oak.</p>
+<p><strong>Note</strong>: Don't use the Blue Oak license ... yet. Once it is approved / vetted
+by <a href="https://www.gnu.org/licenses/license-list.html"> GNU </a> and
+<a href="https://opensource.org/licenses"> OSI </a> we can start using it. I seems like a
+good license, but I am no expert, and most likely you are not too. Unfamiliar
+licenses slows down contributions and use of software.  It is listed on <a href="https://spdx.org/licenses/BlueOak-1.0.0.html"> SPDX
+</a> though!</p>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-12-21T00:00:00+01:00" class="dt-published">Sat 21 December 2019</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/licensing.html">licensing</a>, <a href="https://ashwin.info.tm/tag/open-source.html">open-source</a>.</p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/project-eturb.html" rel="bookmark" class="u-url" title="Permalink to About my postdoc project at Stockholm University">
             <time class="m-date" datetime="2019-12-12T00:00:00+01:00">
               Dec <span class="m-date-day">12</span> 2019
@@ -67,43 +138,10 @@
             </div>
           </a></h1>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
-University. There has been a couple of meetings with the group involved, and
-now the <em>who</em> and the <em>what</em> are more concrete. I wrote a short abstract for
-the <a href="https://www.flow.kth.se/projects">annual FLOW catalogue</a>, which I share
-below.</p>
-<h2>eTurb: Efficient simulations of turbulence in atmospheric boundary layers</h2>
-<blockquote>
-<p>A. V. Mohanan, G. Brethouwer, M. Kupiainen, J. Nordström, D. S. Henningson,
-P. Schlatter &amp; G. Svensson</p>
-<p>Funding: Swedish e-Science Research Centre (SeRC)</p>
-</blockquote>
-<p>The atmospheric boundary layer (ABL) is the region which interacts with the
-Earth’s surface and exchanges energy between larger geophysical scales and
-land. The ABL goes through different regimes of stratification during the
-day-night transition, referred to as the diurnal cycle. Daytime convection
-results in a mixed layer when the boundary layer depth increases, and during
-night as the land cools, a shallower stably stratified boundary layer is
-observed. Accurate representation of turbulence in the ABL is crucial e.g. to
-improve weather predictions and for wind-energy applications. A suitable tool
-for studying the turbulence and complex transient phenomena in the ABL during a
-typical diurnal cycle is large-eddy simulation (LES).</p>
-<p>This project aims to tackle different modelling challenges along the road to an
-efficient LES of the ABL. From the physics perspective, the wall boundary
-condition and the LES subgrid-scale model need to be improved to allow for high
-resolution simulations. Existing models should also be verified with regards to
-numerical stability and consistency. A desired outcome of this project is an
-efficient and accurate code for an LES of diurnal cycle of the ABL. To
-coordinate this inter-disciplinary project a collaboration between KTH, SU, LiU
-and SMHI is set afoot. For the LES we will use the Nek5000 (KTH and SU) and
-ESSENSE (LiU and SMHI) codes.</p>
-<p><a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"><img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"></a></p>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-12-12T00:00:00+01:00" class="dt-published">Thu 12 December 2019</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/postdoc.html">postdoc</a>, <a href="https://ashwin.info.tm/tag/research.html">research</a>, <a href="https://ashwin.info.tm/tag/fluid-mechanics.html">fluid-mechanics</a>.</p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -760,13 +798,14 @@ ESSENSE (LiU and SMHI) codes.</p>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/introduction.html">introduction</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/java.html">java</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/kindness.html">kindness</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/licensing.html">licensing</a></li>
         <li class="m-tag-5"><a href="https://ashwin.info.tm/tag/life.html">life</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/list.html">list</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/mood.html">mood</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/motto.html">motto</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/music.html">music</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/open-access.html">open-access</a></li>
-        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/open-source.html">open-source</a></li>
+        <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/open-source.html">open-source</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/optimization.html">optimization</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/poetry.html">poetry</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/postdoc.html">postdoc</a></li>
