@@ -17,7 +17,7 @@ as an alternative, due to the potential benefits.
 
 Then I saw this:
 
-<iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" height="20em" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" height="320em" width="100%" allowfullscreen="allowfullscreen"></iframe>
 
 Being a licensing nerd, I found this [amusing
 piece](https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html)
