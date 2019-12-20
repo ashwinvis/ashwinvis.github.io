@@ -4,7 +4,8 @@
 but still permissive license. We would soon make that move. The
 most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
 as an alternative, due to the potential benefits.&lt;/p&gt;
-&lt;iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+&lt;p&gt;Then I saw this:&lt;/p&gt;
+&lt;iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" height="20em" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Being a licensing nerd, I found this &lt;a href="https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html"&gt;amusing
 piece&lt;/a&gt;
@@ -25,11 +26,13 @@ understood every word of it! Well, did he?!&lt;/p&gt;
 &lt;p&gt;My arguments &lt;em&gt;in favour of&lt;/em&gt; Apache 2.0 were as follows:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;I don't think Apache 2.0 makes any demand from users of transonic or vice-versa. It is &lt;a href="https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache"&gt;compatible with BSD too&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I don't think Apache 2.0 makes any demand from users of transonic or
+   vice-versa. It is
+   &lt;a href="https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache"&gt;compatible with BSD too&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;To quote the license itself from section 1, it makes it adequately clear
-   what &lt;em&gt;derivate works&lt;/em&gt; are:&lt;/p&gt;
+   what &lt;em&gt;derivative works&lt;/em&gt; are:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
