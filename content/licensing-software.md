@@ -1,11 +1,12 @@
 ---
-Title: Insert title here
+Title: Licensing software to be permissive
 Authors: Ashwin Vishnu
-Date: 2000-01-01
+Date: 2019-12-21
 Status: publised
 Category: Tech Talk
 Tags: licensing, open-source
 Slug: licensing-software
+Summarry: Considerations while selecting a permissive license for your open-source project.
 ---
 
 A while back we were discussing changing the license of
