@@ -15,7 +15,9 @@ but still permissive license. We would soon make that move. The
 most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
 as an alternative, due to the potential benefits.
 
-<iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+Then I saw this:
+
+<iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" height="20em" allowfullscreen="allowfullscreen"></iframe>
 
 Being a licensing nerd, I found this [amusing
 piece](https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html)
@@ -37,16 +39,18 @@ understood every word of it! Well, did he?!
 
 My arguments *in favour of* Apache 2.0 were as follows:
 
-1. I don't think Apache 2.0 makes any demand from users of transonic or vice-versa. It is [compatible with BSD too](https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache)
+1. I don't think Apache 2.0 makes any demand from users of transonic or
+   vice-versa. It is
+   [compatible with BSD too](https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache)
 
 2. To quote the license itself from section 1, it makes it adequately clear
-   what *derivate works* are:
+   what *derivative works* are:
 
-  > For the purposes of this License, Derivative Works shall not include works
-  > that remain separable from, or merely link (or bind by name) to the
-  > interfaces of, the Work and Derivative Works thereof.
+   > For the purposes of this License, Derivative Works shall not include works
+   > that remain separable from, or merely link (or bind by name) to the
+   > interfaces of, the Work and Derivative Works thereof.
 
-  [Source](https://www.oreilly.com/library/view/understanding-open-source/0596005814/ch02.html)
+   [Source](https://www.oreilly.com/library/view/understanding-open-source/0596005814/ch02.html)
 
 3. The key aspect of Apache 2.0 is it [protects developers from patent
    lawsuits](https://snyk.io/blog/mit-apache-bsd-fairest-of-them-all/)
