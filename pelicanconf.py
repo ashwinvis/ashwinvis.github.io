@@ -67,6 +67,7 @@ M_CSS_FILES = [
     "/static/source-sans-pro.css",
     "/static/m-dark.css",
     # "/static/pygments-dark.css",
+    "/static/landing.css",
 ]
 M_THEME_COLOR = "#22272e"
 
