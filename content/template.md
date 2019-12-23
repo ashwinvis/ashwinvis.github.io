@@ -1,7 +1,7 @@
 ---
 Title: Insert title here
 Authors: Ashwin Vishnu
-Date: 2000-01-01
+Date: 2020-01-01
 Status: draft
 Category: Blog
 Tags:
@@ -10,7 +10,7 @@ Tags:
 Alternative meta data
 
 ```yaml
-Status: publised
+Status: published
 Category: Tech Talk
 ```
 
