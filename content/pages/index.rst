@@ -23,23 +23,27 @@ Welcome
             .. raw:: html
 
                 <h1 id="landing">
-                  <span class="landing-prompt">❯❯❯ </span>
-                  <span class="landing-kw">from</span>
-                  <span class="landing-mod">site</span>
-                  <span class="landing-kw">import</span>
-                  <span class="landing-sym">(</span>
-                  <br/>
+                  <span class="m-thin">
+                    <span class="landing-prompt">❯❯❯ </span>
+                    <span class="landing-kw">from</span>
+                    <span class="landing-mod">site</span>
+                    <span class="landing-kw">import</span>
+                    <span class="landing-sym">(</span>
+                    <br/>
+                  </span>
                   <span class="landing-prompt">…&nbsp;</span><span>&nbsp;</span>
                   <a class="p-name u-url"
                      href="https://ashwin.info.tm"
                   >
                     <span class="p-given-name">Ashwin Vishnu</span>
-                    <span class="p-family-name m-thin">Mohanan</span>
+                    <span class="p-family-name">Mohanan</span>
                   </a>
-                  <br/>
-                  <span class="landing-prompt">… </span>
-                  <span class="landing-sym">)</span>
-                  <span class="landing-ticker">|</span>
+                  <span class="m-thin">
+                    <br/>
+                    <span class="landing-prompt">… </span>
+                    <span class="landing-sym">)</span>
+                    <span class="landing-ticker">|</span>
+                  </span>
                 </h1>
 
     .. container:: m-row
