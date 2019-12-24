@@ -26,6 +26,20 @@ h1#landing {
   font-family: monospace;
 }
 
+/* Responsive design: decrease title size to stay consistent */
+
+@media (width <= 990px) {
+  h1#landing {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width <= 404px) {
+  h1#landing {
+    font-size: 1rem;
+  }
+}
+
 span.landing-kw {
   color: #090;
 }
