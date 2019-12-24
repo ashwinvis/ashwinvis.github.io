@@ -54,8 +54,6 @@ span.landing-sym {
 
 span.landing-prompt {
   color: gray;
-  font-size: 1.5rem;
-  vertical-align: 0.2rem;
 }
 
 @keyframes tick{
