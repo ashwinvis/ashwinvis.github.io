@@ -55,7 +55,7 @@ prometheus-client==0.7.1  # via notebook
 prompt-toolkit==2.0.10    # via ipython, jupyter-console
 ptyprocess==0.6.0         # via pexpect, terminado
 pybtex==0.22.2
-pygments==2.4.2           # via ipython, jupyter-console, nbconvert, pelican, qtconsole
+pygments==2.4.2
 pyrsistent==0.15.5        # via jsonschema
 python-dateutil==2.8.1    # via arrow, jupyter-client, pelican
 pytz==2019.3              # via feedgenerator, pelican
