@@ -1,0 +1,12 @@
+{% block metadata -%}
+---
+Title: {{ title }}
+Author: {{ author }}
+Date: {{ date }}
+Status: {{ status }}
+Summary: {{ summary }}
+Category: {{ category }}
+Tags: {{ tags | join(', ') }}
+---
+{%- endblock %}
+
