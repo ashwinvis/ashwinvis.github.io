@@ -75,7 +75,7 @@ with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
 PLUGIN_PATHS = ["m.css/plugins", "plugins"]
-PLUGINS = ["m.htmlsanity", "m.components"]
+PLUGINS = ["m.htmlsanity", "m.components", "m.code"]
 
 M_FAVICON = ("/images/SU_logo.png", "image/png")
 M_BLOG_FAVICON = M_FAVICON

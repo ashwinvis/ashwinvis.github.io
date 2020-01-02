@@ -4,20 +4,25 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "- Title: Insert title\n",
-    "- Authors: Ashwin Vishnu\n",
-    "- Date: 2019-07-24\n",
-    "- Tags: python, sympy\n",
-    "- Category: Tech Talk\n",
-    "- Status: draft\n",
-    "- Summary: Few lines"
+{% block metadata -%}
+    "- Title: {{ title }}\n",
+    "- Author: {{ author }}\n",
+    "- Date: {{ date }}\n",
+    "- Slug: {{ slug }}\n",
+    "- Status: {{ status }}\n",
+    "- Summary: {{ summary }}\n",
+    "- Category: {{ category }}\n",
+    "- Tags: {{ tags | join(', ') }}\n"
+{%- endblock %}
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "*You can [download](https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/src/content/feigenbaum_constant.ipynb) this notebook, or see a static view [on nbviewer](https://nbviewer.jupyter.org/github/ashwinvis/ashwinvis.github.io/blob/develop/src/content/feigenbaum_constant.ipynb).*"
+{% block footnote %}
+    "*You can [download](https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/src/content/{{ slug }}.ipynb) this notebook, or see a static view [on nbviewer](https://nbviewer.jupyter.org/github/ashwinvis/ashwinvis.github.io/blob/develop/src/content/{{ slug }}.ipynb).*"
+{% endblock %}
    ]
   }
  ],

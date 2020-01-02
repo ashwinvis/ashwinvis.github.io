@@ -1,0 +1,11 @@
+{
+  "title": "Insert title",
+  "summary": "",
+  "category": ["Blog", "Tech Talk"],
+  "tags": ["life", "research", "software"],
+  "slug": "{{ cookiecutter.title.lower().replace(' ', '-') }}",
+  "status": ["draft", "published"],
+  "date": "",
+  "author": "Ashwin Vishnu Mohanan",
+  "filetype": ["md", "ipynb"]
+}

@@ -12,3 +12,5 @@ pyyaml>=5.1<6.0
 toolz<1.0.0
 requests
 cssutils
+cookiecutter<2.0.0
+pygments
