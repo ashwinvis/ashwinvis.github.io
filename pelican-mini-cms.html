@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
-  <link rel="canonical" href="https://ashwin.info.tm/drafts/turning-pelican-into-a-mini-cms.html" />
+  <link rel="canonical" href="https://ashwin.info.tm/pelican-mini-cms.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
   <meta property="og:title" content="Turning Pelican into a mini-CMS" />
   <meta name="twitter:title" content="Turning Pelican into a mini-CMS" />
-  <meta property="og:url" content="https://ashwin.info.tm/drafts/turning-pelican-into-a-mini-cms.html" />
+  <meta property="og:url" content="https://ashwin.info.tm/pelican-mini-cms.html" />
   <meta property="og:description" content="Lowering writing inhibitions with tech" />
   <meta name="twitter:description" content="Lowering writing inhibitions with tech" />
   <meta name="twitter:card" content="summary" />
@@ -61,14 +61,13 @@
   <div class="m-row">
     <article class="h-entry m-col-m-10 m-nopadb">
       <header>
-        <h1><a href="https://ashwin.info.tm/drafts/turning-pelican-into-a-mini-cms.html" rel="bookmark" class="u-url" title="Permalink to Turning Pelican into a mini-CMS">
+        <h1><a href="https://ashwin.info.tm/pelican-mini-cms.html" rel="bookmark" class="u-url" title="Permalink to Turning Pelican into a mini-CMS">
           <time class="m-date" datetime="2020-01-02T14:12:41.803562+01:00">
             Jan <span class="m-date-day">02</span> 2020
           </time>
           <div class="p-name">
             Turning Pelican into a mini-CMS
           </div>
-          <span class="m-label m-dim">draft</span>
         </a></h1>
         <div class="p-summary">
         <p>Lowering writing inhibitions with tech</p>
@@ -77,22 +76,28 @@
       <div class="m-clearfix-l"></div>
 <!-- content -->
 <div class="e-content">
-<p>I like automating things. This means I write small nifty tools to do boring /
-repetitive stuff for me.</p>
-<p>For this blog, I wanted to keep the source code and generated output separate.
-A way to do that was to use git branches to <code>develop</code> content and publish the
-output on the <code>master</code> branch. While in theory this sounds nice, it becomes
-cumbersome to manage two copies of the same repository locally. The solution was CI.</p>
-<h1>Stage 1: CI</h1>
-<p>This very blog is automatically published on GitHub pages every time I push
-some text to GitHub, specifically on the <code>develop</code> branch. As a result, I don't
-have to remember to activate the Python virtual environment, run a Makefile,
-commit output to another branch (<code>master</code>) etc.</p>
-<p>I used to do this with Travis CI and ever since GitHub actions rolled out, I
-have been using the latter as it is noticeably faster. Snippets of the
-configuration files that I used are shown below.</p>
-<h2><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml">Travis CI configuration</a></h2>
-<div class="highlight"><pre><span></span><span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+<p>I like automating things. This means I write small nifty tools to do
+boring / repetitive stuff for me. I have been relying on <a href="https://pelican.readthedocs.io/">static site
+generator Pelican</a> for my website. I
+do go an extra mile from the usual workflow.</p>
+<p>For this blog, I wanted to keep the source code and generated output
+separate. A way to do that was to use git branches to <code>develop</code>
+content and publish the output on the <code>master</code> branch. While in theory
+this sounds nice, it becomes cumbersome to manage two copies of the same
+repository locally. The solution was CI.</p>
+<section id="stage-1-ci">
+<h2>Stage 1: CI</h2>
+<p>This very blog is automatically published on GitHub pages every time I
+push some text to GitHub, specifically on the <code>develop</code> branch. As a
+result, I don’t have to remember to activate the Python virtual
+environment, run a Makefile, commit output to another branch
+(<code>master</code>) etc.</p>
+<p>I used to do this with Travis CI and ever since GitHub actions rolled
+out, I have been using the latter as it is noticeably faster. Snippets
+of the configuration files that I used are shown below.</p>
+<section id="travis-ci-configuration">
+<h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml">Travis CI configuration</a></h3>
+<pre class="m-code"><span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
 
 <span class="nn">...</span>
 
@@ -113,17 +118,16 @@ configuration files that I used are shown below.</p>
   <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Travis CI</span>
   <span class="nt">local-dir</span><span class="p">:</span> <span class="s">&quot;./output&quot;</span>
   <span class="nt">on</span><span class="p">:</span>
-    <span class="nt">branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">develop</span>
-</pre></div>
-
-
+    <span class="nt">branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">develop</span></pre>
 <p>An extra step you have to do is to generate a personal access token,
-<a href="https://github.com/settings/tokens"><code>GITHUB_TOKEN</code></a> for Travis to get
-permissions. Then, you save the token as a secret environment variable in
-Travis. The process is <a href="https://docs.travis-ci.com/user/deployment/pages/">nicely
+<code>`GITHUB_TOKEN</code> &lt;<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>&gt;`__ for Travis to
+get permissions. Then, you save the token as a secret environment
+variable in Travis. The process is <a href="https://docs.travis-ci.com/user/deployment/pages/">nicely
 documented</a>.</p>
-<h2><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml">GitHub actions workflow</a></h2>
-<div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span>
+</section>
+<section id="github-actions-workflow">
+<h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml">GitHub actions workflow</a></h3>
+<pre class="m-code"><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span>
 
 <span class="nt">on</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
 
@@ -141,7 +145,7 @@ documented</a>.</p>
 
     <span class="nt">steps</span><span class="p">:</span>
 
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
 
     <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
       <span class="nt">if</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">success()</span>
@@ -152,29 +156,33 @@ documented</a>.</p>
         <span class="nt">SCRIPT_MODE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
       <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
         <span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span>
-        <span class="no">bash ./entrypoint.sh</span>
-</pre></div>
-
-
-<p>Here we use the third-party action created to deploy generated files to
-GitHub pages. We may not want to give too many permissions here (i.e. access to
-all repositories as we did with Travis!). Therefore a deploy key was generated
-from <code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io/settings/keys</code> instead.</p>
-<h1>Stage 2: Templating</h1>
+        <span class="no">bash ./entrypoint.sh</span></pre>
+<p>Here we use a <a href="https://github.com/peaceiris/actions-gh-pages">third-party
+action</a> created to
+deploy generated files to GitHub pages. We may not want to give too many
+permissions here (i.e. access to all repositories as we did with
+Travis!). Therefore a deploy key was generated from
+<code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io/settings/keys</code>
+instead.</p>
+</section>
+</section>
+<section id="stage-2-templating">
+<h2>Stage 2: Templating</h2>
 <p>Pelican posts require some
 <a href="https://pelican.readthedocs.io/en/stable/content.html#file-metadata">metadata</a>
-for the posts to be acceptable. Some (title, date) are mandatory while the rest
-are optional. I wanted the process of writing a new post to be as fluid as possible.</p>
-<p>I started by keeping a <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/src/content/template.md">simple markdown file with dummy
+for the posts to be acceptable. Some (title, date) are mandatory while
+the rest are optional. I wanted the process of writing a new post to be
+as fluid as possible.
+I started by keeping a <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/src/content/template.md">simple markdown file with dummy
 metadata</a>.
-Then I would copy this file, and manually edit the metadata before authoring
-the post. As you can imagine, I was not pleased by this approach!</p>
-<p>Now I have come up with a better approach. A Jinja template + interactive TUI
-to create a post stub, save it with the right filename, commit it and push it!
-<a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/templates/post.md.j2">The
-template</a>
+Then I would copy this file, and manually edit the metadata before
+authoring the post. As you can imagine, I was not pleased by this
+approach!
+Now I have come up with a better approach. The result was a Jinja template +
+interactive TUI workflow which creates a post stub, save it with the right
+filename, opens my editor, commits and pushes it! <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/templates/post.md.j2">The template</a>
 looks as follows:</p>
-<div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">metadata</span> -<span class="cp">%}</span><span class="x"></span>
+<pre class="m-code"><span class="cp">{%</span> <span class="k">block</span> <span class="nv">metadata</span> -<span class="cp">%}</span><span class="x"></span>
 <span class="x">---</span>
 <span class="x">Title: </span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x"></span>
 <span class="x">Author: </span><span class="cp">{{</span> <span class="nv">author</span> <span class="cp">}}</span><span class="x"></span>
@@ -184,17 +192,14 @@ looks as follows:</p>
 <span class="x">Category: </span><span class="cp">{{</span> <span class="nv">category</span> <span class="cp">}}</span><span class="x"></span>
 <span class="x">Tags: </span><span class="cp">{{</span> <span class="nv">tags</span> <span class="o">|</span> <span class="nf">join</span><span class="o">(</span><span class="s1">&#39;, &#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
 <span class="x">---</span>
-<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
-</pre></div>
-
-
-<p>I did not want to build the TUI from the scratch. Therefore I borrowed the
-<a href="https://cookiecutter.readthedocs.io/en/1.7.0/cookiecutter.html#module-cookiecutter.prompt"><code>prompt</code> module from the cookiecutter
-project</a>
-to do it for me. I save some defaults in a <code>cookiecutter.json</code> file, based on
-which the metadata values are prompted from the user conveniently as follows:</p>
-<div class="highlight"><pre><span></span>title <span class="o">[</span>Insert title<span class="o">]</span>: Turning Pelican into a mini-CMS
-summary <span class="o">[]</span>: Lowering writing inhibitions with tech                                          
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span></pre>
+<p>I did not want to build the TUI from the scratch. Therefore I borrowed
+the <code>prompt</code> module from <a href="https://cookiecutter.readthedocs.io/en/1.7.0/cookiecutter.html#module-cookiecutter.prompt">the cookiecutter project</a>
+to do it for me. I save some defaults in a <code>cookiecutter.json</code> file,
+based on which the metadata values are prompted from the user
+conveniently as follows:</p>
+<pre class="m-code">title <span class="o">[</span>Insert title<span class="o">]</span>: Turning Pelican into a mini-CMS
+summary <span class="o">[]</span>: Lowering writing inhibitions with tech
 Select category:
 <span class="m">1</span> - Blog
 <span class="m">2</span> - Tech Talk
@@ -209,23 +214,23 @@ Select status:
 <span class="m">1</span> - draft
 <span class="m">2</span> - published
 Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">1</span>
-date <span class="o">[</span><span class="m">2020</span>-01-02T14:12:41.803562<span class="o">]</span>: 
-author <span class="o">[</span>Ashwin Vishnu Mohanan<span class="o">]</span>: 
+date <span class="o">[</span><span class="m">2020</span>-01-02T14:12:41.803562<span class="o">]</span>:
+author <span class="o">[</span>Ashwin Vishnu Mohanan<span class="o">]</span>:
 Select filetype:
 <span class="m">1</span> - md
 <span class="m">2</span> - ipynb
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: 
-Track changes? <span class="o">[</span>True<span class="o">]</span>: 
+Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>:
+Track changes? <span class="o">[</span>True<span class="o">]</span>:
 Commit changes? <span class="o">[</span>True<span class="o">]</span>: n
-Push changes? <span class="o">[</span>False<span class="o">]</span>: 
-</pre></div>
-
-
-<p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/write.py">The script which does this</a> is self explanatory, I hope!</p>
+Push changes? <span class="o">[</span>False<span class="o">]</span>:</pre>
+<p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/write.py">The script which does
+this</a>
+is self explanatory, I hope!</p>
+</section>
 </div>
 <!-- /content -->
       <footer>
-        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-02T14:12:41.803562+01:00" class="dt-published">Thu 02 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-dim">draft</span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/ci.html">ci</a>, <a href="https://ashwin.info.tm/tag/automation.html">automation</a>, <a href="https://ashwin.info.tm/tag/devops.html">devops</a>.</p>
+        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-02T14:12:41.803562+01:00" class="dt-published">Thu 02 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/ci.html">ci</a>, <a href="https://ashwin.info.tm/tag/automation.html">automation</a>, <a href="https://ashwin.info.tm/tag/devops.html">devops</a>.</p>
       </footer>
     </article>
     <nav class="m-navpanel m-col-m-2">
@@ -236,10 +241,13 @@ Push changes? <span class="o">[</span>False<span class="o">]</span>:
       </ol>
       <h3>Tag cloud</h3>
       <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/automation.html">automation</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ci.html">ci</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/conference.html">conference</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/congress.html">congress</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/devops.html">devops</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/economy.html">economy</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/emotion.html">emotion</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/fediverse.html">fediverse</a></li>
@@ -278,6 +286,7 @@ Push changes? <span class="o">[</span>False<span class="o">]</span>:
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/resolution.html">resolution</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/social-media.html">social media</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/sympy.html">sympy</a></li>

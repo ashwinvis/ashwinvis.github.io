@@ -58,6 +58,178 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/pelican-mini-cms.html" rel="bookmark" class="u-url" title="Permalink to Turning Pelican into a mini-CMS">
+            <time class="m-date" datetime="2020-01-02T14:12:41.803562+01:00">
+              Jan <span class="m-date-day">02</span> 2020
+            </time>
+            <div class="p-name">
+              Turning Pelican into a mini-CMS
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Lowering writing inhibitions with tech</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>I like automating things. This means I write small nifty tools to do
+boring / repetitive stuff for me. I have been relying on <a href="https://pelican.readthedocs.io/">static site
+generator Pelican</a> for my website. I
+do go an extra mile from the usual workflow.</p>
+<p>For this blog, I wanted to keep the source code and generated output
+separate. A way to do that was to use git branches to <code>develop</code>
+content and publish the output on the <code>master</code> branch. While in theory
+this sounds nice, it becomes cumbersome to manage two copies of the same
+repository locally. The solution was CI.</p>
+<section id="stage-1-ci">
+<h2>Stage 1: CI</h2>
+<p>This very blog is automatically published on GitHub pages every time I
+push some text to GitHub, specifically on the <code>develop</code> branch. As a
+result, I don’t have to remember to activate the Python virtual
+environment, run a Makefile, commit output to another branch
+(<code>master</code>) etc.</p>
+<p>I used to do this with Travis CI and ever since GitHub actions rolled
+out, I have been using the latter as it is noticeably faster. Snippets
+of the configuration files that I used are shown below.</p>
+<section id="travis-ci-configuration">
+<h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml">Travis CI configuration</a></h3>
+<pre class="m-code"><span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+
+<span class="nn">...</span>
+
+<span class="nt">install</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pelican-themes -i pelican-bluedrop/bluedrop</span>
+
+<span class="nt">script</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cd src</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">make publish</span>
+
+<span class="nt">deploy</span><span class="p">:</span>
+  <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pages</span>
+  <span class="nt">skip-cleanup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">github-token</span><span class="p">:</span> <span class="s">&quot;$GITHUB_TOKEN&quot;</span>
+  <span class="nt">keep-history</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">target-branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Travis CI</span>
+  <span class="nt">local-dir</span><span class="p">:</span> <span class="s">&quot;./output&quot;</span>
+  <span class="nt">on</span><span class="p">:</span>
+    <span class="nt">branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">develop</span></pre>
+<p>An extra step you have to do is to generate a personal access token,
+<code>`GITHUB_TOKEN</code> &lt;<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>&gt;`__ for Travis to
+get permissions. Then, you save the token as a secret environment
+variable in Travis. The process is <a href="https://docs.travis-ci.com/user/deployment/pages/">nicely
+documented</a>.</p>
+</section>
+<section id="github-actions-workflow">
+<h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml">GitHub actions workflow</a></h3>
+<pre class="m-code"><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span>
+
+<span class="nt">on</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
+
+<span class="nt">env</span><span class="p">:</span>
+  <span class="nt">PIP_CACHE_DIR</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">build</span><span class="p">:</span>
+
+    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+    <span class="nt">strategy</span><span class="p">:</span>
+      <span class="nt">max-parallel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+      <span class="nt">matrix</span><span class="p">:</span>
+        <span class="nt">python-version</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span>
+
+    <span class="nt">steps</span><span class="p">:</span>
+
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+      <span class="nt">if</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">success()</span>
+      <span class="nt">env</span><span class="p">:</span>
+        <span class="nt">ACTIONS_DEPLOY_KEY</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+        <span class="nt">PUBLISH_BRANCH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
+        <span class="nt">PUBLISH_DIR</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./output</span>
+        <span class="nt">SCRIPT_MODE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+        <span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span>
+        <span class="no">bash ./entrypoint.sh</span></pre>
+<p>Here we use a <a href="https://github.com/peaceiris/actions-gh-pages">third-party
+action</a> created to
+deploy generated files to GitHub pages. We may not want to give too many
+permissions here (i.e. access to all repositories as we did with
+Travis!). Therefore a deploy key was generated from
+<code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io/settings/keys</code>
+instead.</p>
+</section>
+</section>
+<section id="stage-2-templating">
+<h2>Stage 2: Templating</h2>
+<p>Pelican posts require some
+<a href="https://pelican.readthedocs.io/en/stable/content.html#file-metadata">metadata</a>
+for the posts to be acceptable. Some (title, date) are mandatory while
+the rest are optional. I wanted the process of writing a new post to be
+as fluid as possible.
+I started by keeping a <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/src/content/template.md">simple markdown file with dummy
+metadata</a>.
+Then I would copy this file, and manually edit the metadata before
+authoring the post. As you can imagine, I was not pleased by this
+approach!
+Now I have come up with a better approach. The result was a Jinja template +
+interactive TUI workflow which creates a post stub, save it with the right
+filename, opens my editor, commits and pushes it! <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/templates/post.md.j2">The template</a>
+looks as follows:</p>
+<pre class="m-code"><span class="cp">{%</span> <span class="k">block</span> <span class="nv">metadata</span> -<span class="cp">%}</span><span class="x"></span>
+<span class="x">---</span>
+<span class="x">Title: </span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Author: </span><span class="cp">{{</span> <span class="nv">author</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Date: </span><span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Status: </span><span class="cp">{{</span> <span class="nv">status</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Summary: </span><span class="cp">{{</span> <span class="nv">summary</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Category: </span><span class="cp">{{</span> <span class="nv">category</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Tags: </span><span class="cp">{{</span> <span class="nv">tags</span> <span class="o">|</span> <span class="nf">join</span><span class="o">(</span><span class="s1">&#39;, &#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">---</span>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span></pre>
+<p>I did not want to build the TUI from the scratch. Therefore I borrowed
+the <code>prompt</code> module from <a href="https://cookiecutter.readthedocs.io/en/1.7.0/cookiecutter.html#module-cookiecutter.prompt">the cookiecutter project</a>
+to do it for me. I save some defaults in a <code>cookiecutter.json</code> file,
+based on which the metadata values are prompted from the user
+conveniently as follows:</p>
+<pre class="m-code">title <span class="o">[</span>Insert title<span class="o">]</span>: Turning Pelican into a mini-CMS
+summary <span class="o">[]</span>: Lowering writing inhibitions with tech
+Select category:
+<span class="m">1</span> - Blog
+<span class="m">2</span> - Tech Talk
+Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">2</span>
+Select tags:
+<span class="m">1</span> - life
+<span class="m">2</span> - research
+<span class="m">3</span> - software
+Choose from <span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">3</span>
+slug <span class="o">[</span>turning-pelican-into-a-mini-cms<span class="o">]</span>: pelican-mini-cms
+Select status:
+<span class="m">1</span> - draft
+<span class="m">2</span> - published
+Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">1</span>
+date <span class="o">[</span><span class="m">2020</span>-01-02T14:12:41.803562<span class="o">]</span>:
+author <span class="o">[</span>Ashwin Vishnu Mohanan<span class="o">]</span>:
+Select filetype:
+<span class="m">1</span> - md
+<span class="m">2</span> - ipynb
+Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>:
+Track changes? <span class="o">[</span>True<span class="o">]</span>:
+Commit changes? <span class="o">[</span>True<span class="o">]</span>: n
+Push changes? <span class="o">[</span>False<span class="o">]</span>:</pre>
+<p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/write.py">The script which does
+this</a>
+is self explanatory, I hope!</p>
+</section>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-02T14:12:41.803562+01:00" class="dt-published">Thu 02 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/ci.html">ci</a>, <a href="https://ashwin.info.tm/tag/automation.html">automation</a>, <a href="https://ashwin.info.tm/tag/devops.html">devops</a>.</p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/licensing-software.html" rel="bookmark" class="u-url" title="Permalink to Licensing software to be permissive">
             <time class="m-date" datetime="2019-12-21T00:00:00+01:00">
               Dec <span class="m-date-day">21</span> 2019
@@ -70,65 +242,10 @@
           <p>Considerations while selecting a permissive license for your open-source project.</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>A while back we were discussing changing the license of
-<a href="https://transonic.rtfd.io">transonic</a> from CeCILL-B to a more recognizable,
-but still permissive license. We would soon make that move. The
-most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
-as an alternative, due to the potential benefits.</p>
-<p>Then I saw this:</p>
-<iframe src="https://fosstodon.org/@chris/101733810026327049/embed" class="mastodon-embed" style="max-width: 100%; border: 0" height="320em" width="100%" allowfullscreen="allowfullscreen"></iframe>
-
-<p>Being a licensing nerd, I found this <a href="https://writing.kemitchell.com/2019/03/09/Deprecation-Notice.html">amusing
-piece</a>
-informative on why everyone should avoid MIT and BSD. Patents and ambiguity.
-The article also links to <a href="https://writing.kemitchell.com/2016/09/21/MIT-License-Line-by-Line.html">verbose explanation of what the MIT license actually
-means</a>,
-along with this warning:</p>
-<blockquote>
-<p>As a result, the shortness of MIT and BSD are reassuring only until you
-actually try to understand them, and find you need a decoder ring. The terms
-are actually dangerous if you read them without knowing you need that decoder
-ring, believing you see the whole picture, which often turns out to be just
-the picture you wanted to see.</p>
-</blockquote>
-<p>A friend of mine had used the MIT license a while ago, commenting that he
-understood every word of it! Well, did he?!</p>
-<hr>
-<p>My arguments <em>in favour of</em> Apache 2.0 were as follows:</p>
-<ol>
-<li>
-<p>I don't think Apache 2.0 makes any demand from users of transonic or
-   vice-versa. It is
-   <a href="https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache">compatible with BSD too</a></p>
-</li>
-<li>
-<p>To quote the license itself from section 1, it makes it adequately clear
-   what <em>derivative works</em> are:</p>
-</li>
-</ol>
-<blockquote>
-<p>For the purposes of this License, Derivative Works shall not include works
-that remain separable from, or merely link (or bind by name) to the
-interfaces of, the Work and Derivative Works thereof.</p>
-</blockquote>
-<p><a href="https://www.oreilly.com/library/view/understanding-open-source/0596005814/ch02.html">Source</a></p>
-<ol>
-<li>The key aspect of Apache 2.0 is it <a href="https://snyk.io/blog/mit-apache-bsd-fairest-of-them-all/">protects developers from patent
-   lawsuits</a></li>
-</ol>
-<p>Indeed something more easier to read, but legally sound would be nice, like Blue Oak.</p>
-<p><strong>Note</strong>: Don't use the Blue Oak license ... yet. Once it is approved / vetted
-by <a href="https://www.gnu.org/licenses/license-list.html"> GNU </a> and
-<a href="https://opensource.org/licenses"> OSI </a> we can start using it. I seems like a
-good license, but I am no expert, and most likely you are not too. Unfamiliar
-licenses slows down contributions and use of software.  It is listed on <a href="https://spdx.org/licenses/BlueOak-1.0.0.html"> SPDX
-</a> though!</p>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-12-21T00:00:00+01:00" class="dt-published">Sat 21 December 2019</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/licensing.html">licensing</a>, <a href="https://ashwin.info.tm/tag/open-source.html">open-source</a>.</p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -781,10 +898,13 @@ licenses slows down contributions and use of software.  It is listed on <a href=
       </ol>
       <h3>Tag cloud</h3>
       <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/automation.html">automation</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ci.html">ci</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/conference.html">conference</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/congress.html">congress</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/devops.html">devops</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/economy.html">economy</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/emotion.html">emotion</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/fediverse.html">fediverse</a></li>
@@ -823,6 +943,7 @@ licenses slows down contributions and use of software.  It is listed on <a href=
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/resolution.html">resolution</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/social-media.html">social media</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/sympy.html">sympy</a></li>

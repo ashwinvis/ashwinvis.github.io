@@ -1,5 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-21T00:00:00+01:00</updated><entry><title>Licensing software to be permissive</title><link href="https://ashwin.info.tm/licensing-software.html" rel="alternate"></link><published>2019-12-21T00:00:00+01:00</published><updated>2019-12-21T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-21:/licensing-software.html</id><summary type="html">&lt;p&gt;Considerations while selecting a permissive license for your open-source project.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while back we were discussing changing the license of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-01-02T14:12:41+01:00</updated><entry><title>Turning Pelican into a mini-CMS</title><link href="https://ashwin.info.tm/pelican-mini-cms.html" rel="alternate"></link><published>2020-01-02T14:12:41+01:00</published><updated>2020-01-02T14:12:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-02:/pelican-mini-cms.html</id><summary type="html">&lt;p&gt;Lowering writing inhibitions with tech&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;I like automating things. This means I write small nifty tools to do
+boring / repetitive stuff for me. I have been relying on &lt;a href="https://pelican.readthedocs.io/"&gt;static site
+generator Pelican&lt;/a&gt; for my website. I
+do go an extra mile from the usual workflow.&lt;/p&gt;
+&lt;p&gt;For this blog, I wanted to keep the source code and generated output
+separate. A way to do that was to use git branches to &lt;code&gt;develop&lt;/code&gt;
+content and publish the output on the &lt;code&gt;master&lt;/code&gt; branch. While in theory
+this sounds nice, it becomes cumbersome to manage two copies of the same
+repository locally. The solution was CI.&lt;/p&gt;
+&lt;section id="stage-1-ci"&gt;
+&lt;h2&gt;Stage 1: CI&lt;/h2&gt;
+&lt;p&gt;This very blog is automatically published on GitHub pages every time I
+push some text to GitHub, specifically on the &lt;code&gt;develop&lt;/code&gt; branch. As a
+result, I don’t have to remember to activate the Python virtual
+environment, run a Makefile, commit output to another branch
+(&lt;code&gt;master&lt;/code&gt;) etc.&lt;/p&gt;
+&lt;p&gt;I used to do this with Travis CI and ever since GitHub actions rolled
+out, I have been using the latter as it is noticeably faster. Snippets
+of the configuration files that I used are shown below.&lt;/p&gt;
+&lt;section id="travis-ci-configuration"&gt;
+&lt;h3&gt;&lt;a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml"&gt;Travis CI configuration&lt;/a&gt;&lt;/h3&gt;
+&lt;pre class="m-code"&gt;&lt;span class="nt"&gt;language&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+
+&lt;span class="nn"&gt;...&lt;/span&gt;
+
+&lt;span class="nt"&gt;install&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r requirements.txt&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pelican-themes -i pelican-bluedrop/bluedrop&lt;/span&gt;
+
+&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cd src&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;make publish&lt;/span&gt;
+
+&lt;span class="nt"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;provider&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pages&lt;/span&gt;
+  &lt;span class="nt"&gt;skip-cleanup&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+  &lt;span class="nt"&gt;github-token&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;$GITHUB_TOKEN&amp;quot;&lt;/span&gt;
+  &lt;span class="nt"&gt;keep-history&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+  &lt;span class="nt"&gt;target-branch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;master&lt;/span&gt;
+  &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Travis CI&lt;/span&gt;
+  &lt;span class="nt"&gt;local-dir&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;./output&amp;quot;&lt;/span&gt;
+  &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;branch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;develop&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;An extra step you have to do is to generate a personal access token,
+&lt;code&gt;`GITHUB_TOKEN&lt;/code&gt; &amp;lt;&lt;a href="https://github.com/settings/tokens"&gt;https://github.com/settings/tokens&lt;/a&gt;&amp;gt;`__ for Travis to
+get permissions. Then, you save the token as a secret environment
+variable in Travis. The process is &lt;a href="https://docs.travis-ci.com/user/deployment/pages/"&gt;nicely
+documented&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="github-actions-workflow"&gt;
+&lt;h3&gt;&lt;a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml"&gt;GitHub actions workflow&lt;/a&gt;&lt;/h3&gt;
+&lt;pre class="m-code"&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Publish pelican website&lt;/span&gt;
+
+&lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;push&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+
+&lt;span class="nt"&gt;env&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;PIP_CACHE_DIR&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;~/.cache/pip&lt;/span&gt;
+
+&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+    &lt;span class="nt"&gt;runs-on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span class="nt"&gt;strategy&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;max-parallel&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;4&lt;/span&gt;
+      &lt;span class="nt"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;python-version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;3.7&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+
+    &lt;span class="nt"&gt;steps&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;...&lt;/span&gt;
+
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Deploy to GitHub Pages&lt;/span&gt;
+      &lt;span class="nt"&gt;if&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;success()&lt;/span&gt;
+      &lt;span class="nt"&gt;env&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;ACTIONS_DEPLOY_KEY&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{ secrets.ACTIONS_DEPLOY_KEY }}&lt;/span&gt;
+        &lt;span class="nt"&gt;PUBLISH_BRANCH&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;master&lt;/span&gt;
+        &lt;span class="nt"&gt;PUBLISH_DIR&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./output&lt;/span&gt;
+        &lt;span class="nt"&gt;SCRIPT_MODE&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+      &lt;span class="nt"&gt;run&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
+        &lt;span class="no"&gt;wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh&lt;/span&gt;
+        &lt;span class="no"&gt;bash ./entrypoint.sh&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;Here we use a &lt;a href="https://github.com/peaceiris/actions-gh-pages"&gt;third-party
+action&lt;/a&gt; created to
+deploy generated files to GitHub pages. We may not want to give too many
+permissions here (i.e. access to all repositories as we did with
+Travis!). Therefore a deploy key was generated from
+&lt;code&gt;https://github.com/&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io/settings/keys&lt;/code&gt;
+instead.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="stage-2-templating"&gt;
+&lt;h2&gt;Stage 2: Templating&lt;/h2&gt;
+&lt;p&gt;Pelican posts require some
+&lt;a href="https://pelican.readthedocs.io/en/stable/content.html#file-metadata"&gt;metadata&lt;/a&gt;
+for the posts to be acceptable. Some (title, date) are mandatory while
+the rest are optional. I wanted the process of writing a new post to be
+as fluid as possible.
+I started by keeping a &lt;a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/src/content/template.md"&gt;simple markdown file with dummy
+metadata&lt;/a&gt;.
+Then I would copy this file, and manually edit the metadata before
+authoring the post. As you can imagine, I was not pleased by this
+approach!
+Now I have come up with a better approach. The result was a Jinja template +
+interactive TUI workflow which creates a post stub, save it with the right
+filename, opens my editor, commits and pushes it! &lt;a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/templates/post.md.j2"&gt;The template&lt;/a&gt;
+looks as follows:&lt;/p&gt;
+&lt;pre class="m-code"&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;metadata&lt;/span&gt; -&lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;---&lt;/span&gt;
+&lt;span class="x"&gt;Title: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Author: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;author&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Date: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;date&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Status: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;status&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Summary: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;summary&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Category: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;category&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;Tags: &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;tags&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nf"&gt;join&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;span class="x"&gt;---&lt;/span&gt;
+&lt;span class="cp"&gt;{%&lt;/span&gt;- &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;I did not want to build the TUI from the scratch. Therefore I borrowed
+the &lt;code&gt;prompt&lt;/code&gt; module from &lt;a href="https://cookiecutter.readthedocs.io/en/1.7.0/cookiecutter.html#module-cookiecutter.prompt"&gt;the cookiecutter project&lt;/a&gt;
+to do it for me. I save some defaults in a &lt;code&gt;cookiecutter.json&lt;/code&gt; file,
+based on which the metadata values are prompted from the user
+conveniently as follows:&lt;/p&gt;
+&lt;pre class="m-code"&gt;title &lt;span class="o"&gt;[&lt;/span&gt;Insert title&lt;span class="o"&gt;]&lt;/span&gt;: Turning Pelican into a mini-CMS
+summary &lt;span class="o"&gt;[]&lt;/span&gt;: Lowering writing inhibitions with tech
+Select category:
+&lt;span class="m"&gt;1&lt;/span&gt; - Blog
+&lt;span class="m"&gt;2&lt;/span&gt; - Tech Talk
+Choose from &lt;span class="m"&gt;1&lt;/span&gt;, &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;: &lt;span class="m"&gt;2&lt;/span&gt;
+Select tags:
+&lt;span class="m"&gt;1&lt;/span&gt; - life
+&lt;span class="m"&gt;2&lt;/span&gt; - research
+&lt;span class="m"&gt;3&lt;/span&gt; - software
+Choose from &lt;span class="m"&gt;1&lt;/span&gt;, &lt;span class="m"&gt;2&lt;/span&gt;, &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;: &lt;span class="m"&gt;3&lt;/span&gt;
+slug &lt;span class="o"&gt;[&lt;/span&gt;turning-pelican-into-a-mini-cms&lt;span class="o"&gt;]&lt;/span&gt;: pelican-mini-cms
+Select status:
+&lt;span class="m"&gt;1&lt;/span&gt; - draft
+&lt;span class="m"&gt;2&lt;/span&gt; - published
+Choose from &lt;span class="m"&gt;1&lt;/span&gt;, &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;: &lt;span class="m"&gt;1&lt;/span&gt;
+date &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2020&lt;/span&gt;-01-02T14:12:41.803562&lt;span class="o"&gt;]&lt;/span&gt;:
+author &lt;span class="o"&gt;[&lt;/span&gt;Ashwin Vishnu Mohanan&lt;span class="o"&gt;]&lt;/span&gt;:
+Select filetype:
+&lt;span class="m"&gt;1&lt;/span&gt; - md
+&lt;span class="m"&gt;2&lt;/span&gt; - ipynb
+Choose from &lt;span class="m"&gt;1&lt;/span&gt;, &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;:
+Track changes? &lt;span class="o"&gt;[&lt;/span&gt;True&lt;span class="o"&gt;]&lt;/span&gt;:
+Commit changes? &lt;span class="o"&gt;[&lt;/span&gt;True&lt;span class="o"&gt;]&lt;/span&gt;: n
+Push changes? &lt;span class="o"&gt;[&lt;/span&gt;False&lt;span class="o"&gt;]&lt;/span&gt;:&lt;/pre&gt;
+&lt;p&gt;&lt;a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/write.py"&gt;The script which does
+this&lt;/a&gt;
+is self explanatory, I hope!&lt;/p&gt;
+&lt;/section&gt;
+</content><category term="software"></category><category term="ci"></category><category term="automation"></category><category term="devops"></category></entry><entry><title>Licensing software to be permissive</title><link href="https://ashwin.info.tm/licensing-software.html" rel="alternate"></link><published>2019-12-21T00:00:00+01:00</published><updated>2019-12-21T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-21:/licensing-software.html</id><summary type="html">&lt;p&gt;Considerations while selecting a permissive license for your open-source project.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while back we were discussing changing the license of
 &lt;a href="https://transonic.rtfd.io"&gt;transonic&lt;/a&gt; from CeCILL-B to a more recognizable,
 but still permissive license. We would soon make that move. The
 most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
