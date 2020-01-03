@@ -1,4 +1,4 @@
-#!venv/bin/python
+#!/home/avmo/www/ashwinvis.github.io/venv/bin/python
 import json
 import os
 import shutil
@@ -7,12 +7,13 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from cookiecutter import config, generate, prompt
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from cookiecutter import generate, prompt
+from jinja2 import Environment, FileSystemLoader
 
 no_input = False
 write_post = True
 open_editor = True
+template_filetypes = ["md", "rst", "ipynb"]
 
 here = Path(__file__).parent
 now = datetime.utcnow()
@@ -21,17 +22,18 @@ today = date.today()
 os.chdir(here)
 
 env = Environment(loader=FileSystemLoader("templates"), autoescape=True,)
-templates = {ext: env.get_template(f"post.{ext}.j2") for ext in ("md", "ipynb")}
+templates = {
+    ext: env.get_template(f"post.{ext}.j2") for ext in template_filetypes
+}
 
 context_file = here / "templates/cookiecutter.json"
 
 with open(context_file) as fp:
     defaults = json.load(fp)
 
-config_dict = config.get_user_config()
-
 context = generate.generate_context(
-    context_file=context_file, extra_context={"date": now.isoformat()}
+    context_file=context_file,
+    extra_context={"date": now.isoformat(), "filetype": template_filetypes},
 )
 
 # prompt the user to manually configure at the command line.
@@ -44,7 +46,11 @@ if isinstance(cc["tags"], str):
 
 template = templates[cc["filetype"]]
 post = template.render(**cc)
-filename = here / "content" / "{}-{}.{}".format(today.isoformat(), cc["slug"], cc["filetype"])
+filename = (
+    here
+    / "content"
+    / "{}-{}.{}".format(today.isoformat(), cc["slug"], cc["filetype"])
+)
 
 if write_post:
     try:
