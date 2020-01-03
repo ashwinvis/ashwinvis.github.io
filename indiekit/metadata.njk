@@ -1,0 +1,10 @@
+Authors: Ashwin Vishnu
+Date: {{ published }}
+Status: published
+Category: Notes
+{%- if category %}
+Tags: {{ category | join(", ") }}
+{%- endif %}
+{%- if summary %}
+Summary: {{ summary }}
+{%- endif %}

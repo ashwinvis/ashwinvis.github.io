@@ -67,8 +67,12 @@ M_CSS_FILES = [
     "/static/source-sans-pro.css",
     "/static/m-dark.css",
     # "/static/pygments-dark.css",
+    "/static/landing.css",
 ]
 M_THEME_COLOR = "#22272e"
+
+with open("header.html") as header:
+    M_HTML_HEADER = header.read()
 
 PLUGIN_PATHS = ["m.css/plugins", "plugins"]
 PLUGINS = ["m.htmlsanity", "m.components", "m.code"]
@@ -124,17 +128,9 @@ M_LINKS_FOOTER2 = [
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
 ]
-M_FINE_PRINT = f"""
 
-.. role:: raw-html(raw)
-    :format: html
-
-.. |ccbysa| image:: https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg
-    :height: 0.85em
-
-| Except where otherwise noted, content on this site is licensed under `CC-BY 4.0 <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE-content>`_ | Ashwin Vishnu Mohanan 2010 - {datetime.now().year}
-| `GnuPG: 45A73FAD <https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD>`_ | `Cover photo credit <https://unsplash.com/photos/tmp3sxAl-DI>`_
-"""
+with open("footer.rst") as footer:
+    M_FINE_PRINT = footer.read().format(year=datetime.now().year)
 
 
 # For landing page

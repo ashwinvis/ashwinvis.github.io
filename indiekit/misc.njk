@@ -1,0 +1,18 @@
+---
+Title: {{ title if title else 🔗 }}
+{% extends "metadata.njk" %}
+---
+
+{%- if rsvp %}
+- RSVP: {{ rsvp }}
+{%- endif %}
+{%- if location %}
+- Event:
+  + Start: {{ start }}
+  + End: {{ end }}
+  + Location: {{ location }}
+{%- endif %}
+
+{{ content | safe }}
+
+{% extends "footer.njk" %}

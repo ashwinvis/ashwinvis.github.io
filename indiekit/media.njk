@@ -1,0 +1,27 @@
+---
+Title: {{ title if title else 📷 }}
+{% extends "metadata.njk" %}
+---
+
+{%- for item in photo %}
+![{{ item.alt }}]({{ item.value }})
+{% endfor %}
+
+{%- for item in audio %}
+<audio controls>
+   <source src="{{ item.value }}">
+   Sorry, your browser doesn't support embedded audios.
+</audio>
+{% endfor %}
+
+{%- for item in video %}
+<video controls>
+   <source src="{{ item.value }}">
+   Sorry, your browser doesn't support embedded videos.
+</video>
+{% endfor %}
+
+{{ content | safe }}
+
+{% extends "footer.njk" %}
+
