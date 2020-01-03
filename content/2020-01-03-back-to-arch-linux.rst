@@ -4,7 +4,7 @@ Back to Arch Linux
 :author: Ashwin Vishnu Mohanan
 :date: 2020-01-03T10:00:41.042526
 :slug: back-to-arch-linux
-:status: draft
+:status: published
 :summary: Within a Ubuntu LTS pre-installed laptop
 :category: Tech Talk
 :tags: software, linux, ubuntu, archlinux
@@ -57,7 +57,7 @@ from source. Either ways, it is also unacceptable to run a desktop environment
 How
 ---
 
-.. warning::
+.. note-danger::
 
   Make sure you understand what how ``chroot`` and ``mount`` commands work.
   Also do not run ``rm -rf`` at any stage below.
@@ -112,7 +112,7 @@ And mounted the partitions to be bootstrapped::
   [chroot] # genfstab -U /mnt >> /mnt/etc/fstab
   [chroot] # umount /mnt/home
 
-.. note::
+.. note-info::
 
   In preparation, I had created these partitions by shrinking the existing ones
   with a GParted_ USB live medium, long time ago.  The home partition was also
@@ -139,7 +139,7 @@ Thereafter I followed the official `installation guide`_::
 
   [chroot] # arch-chroot /mnt
 
-.. note::
+.. note-info::
 
   The step above runs ``arch-chroot`` from within a ``chroot``. Now, I see why
   Leo was so confused in Inception. Whenever in doubt, run ``df``.
@@ -160,10 +160,19 @@ Exit the ``chroot`` and unmount everything::
   [chroot] # exit
   # umount -R /tmp/root.x86_64
 
-The Ubuntu installation came with a GRUB_ boot loader and ``osloader`` package
+The Ubuntu installation came with a GRUB_ boot loader and ``os-loader`` package
 which should detect the new Arch Linux installation (since we installed the
 ``lsb-release`` package). To make it happen, reboot? from Ubuntu run::
 
-  # sudo grub-mkconfig
+  # sudo update-grub
+
+That did not work! `Turns out`_ ``/etc/default/grub`` had two offending lines::
+
+  GRUB_TIMEOUT_STYLE=hidden
+  GRUB_DISABLE_OS_PROBER=true
+
+which when commented out, it started working. Follow this by ``update-grub`` or
+``grub-mkconfig -o /boot/grub/grub.cfg`` and it is good to go.
 
 .. _GRUB: https://wiki.archlinux.org/index.php/GRUB#Detecting_other_operating_systems
+.. _Turns out: https://askubuntu.com/questions/111085/how-do-i-hide-the-grub-menu-showing-up-at-the-beginning-of-boot
