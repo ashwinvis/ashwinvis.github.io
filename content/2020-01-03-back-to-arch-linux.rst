@@ -3,6 +3,7 @@ Back to Arch Linux
 
 :author: Ashwin Vishnu Mohanan
 :date: 2020-01-03T10:00:41.042526
+:modified: 2020-01-04
 :slug: back-to-arch-linux
 :status: published
 :summary: Within a Ubuntu LTS pre-installed laptop
@@ -34,14 +35,14 @@ all the hacks under the sun to stay up-to-date:
 - pyenv_ to have the latest Python
 - flatpak_ to install some applications which are *ancient* in the official `Ubuntu repos`_ (Okular, Signal, KeepassXC, Zeal, Zotero etc.)
 - appimage_ when flatpak_'s sandbox is too restrictive (Neovim)
-- ppa_ / unofficial ``.deb`` packages from GitHub when the startup overhead of
+- PPA_ / unofficial ``.deb`` packages from GitHub when the start-up overhead of
   flatpak_ or appimage_ is way too high (Neovim, again 😅) or similar reasons
   as above (Nextcloud client, VSCodium etc.)
 
 This is not good at all, I hear you. And I have to wait a good `4 more months`_
 for the next LTS release! The final blow came when I saw Vim 8.2 was released
 last month with popup_ support, and I do not have it yet! There is no practical
-way (apart from yet another ppa_) to get the latest Vim, without compiling it
+way (apart from yet another PPA_) to get the latest Vim, without compiling it
 from source. Either ways, it is also unacceptable to run a desktop environment
 (GNOME) which is lagging behind (version 3.28.2) the latest stable release
 (version 3.34) for so long!
@@ -50,7 +51,7 @@ from source. Either ways, it is also unacceptable to run a desktop environment
 .. _flatpak: https://flatpak.org/
 .. _Ubuntu repos: https://packages.ubuntu.com/
 .. _appimage: https://appimage.org/
-.. _ppa: https://help.ubuntu.com/community/PPA
+.. _PPA: https://help.ubuntu.com/community/PPA
 .. _4 more months: https://www.omgubuntu.co.uk/2019/10/ubuntu-20-04-release-features
 .. _popup: https://github.com/skywind3000/vim-quickui
 
@@ -66,7 +67,7 @@ There is a nice guide_ which demonstrates how to setup Arch Linux from an
 existing Linux OS. I started off by downloading_ the bootstrap image along with
 the GPG signature and verifying it::
 
-  ❯ gpg --keyserver-options auto-key-retrieve --verify archlinux-2020.01.01-x86_64.iso.sig
+  $ gpg --keyserver-options auto-key-retrieve --verify archlinux-2020.01.01-x86_64.iso.sig
   gpg: assuming signed data in 'archlinux-2020.01.01-x86_64.iso'
   gpg: Signature made Wed 01 Jan 2020 06:21:41 AM CET
   gpg:                using RSA key 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
@@ -76,7 +77,7 @@ the GPG signature and verifying it::
   Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC
 
 The key fingerprint was cross-checked_ to be doubly sure.
-I extracted the bootstrap image over there::
+Then I extracted the bootstrap image::
 
   $ sudo su
   # tar xzf archlinux-bootstrap-2020.01.01-x86_64.tar.gz -C /tmp
@@ -130,7 +131,7 @@ and installed some essentials::
      21) sed  22) sudo  23) texinfo  24) which
   ...
 
-Did the same for the target Arch Linux installation::
+Did the same for the target Arch Linux partition mounted at ``/mnt``::
 
   [chroot] # pacstrap /mnt base base-devel
   [chroot] # pacstrap /mnt linux-lts linux-firmware intel-ucode lsb-release
