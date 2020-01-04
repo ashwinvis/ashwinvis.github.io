@@ -1,5 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-01-02T14:12:41+01:00</updated><entry><title>Turning Pelican into a mini-CMS</title><link href="https://ashwin.info.tm/pelican-mini-cms.html" rel="alternate"></link><published>2020-01-02T14:12:41+01:00</published><updated>2020-01-02T14:12:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-02:/pelican-mini-cms.html</id><summary type="html">&lt;p&gt;Lowering writing inhibitions with tech&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-01-04T00:00:00+01:00</updated><entry><title>Back to Arch Linux</title><link href="https://ashwin.info.tm/back-to-arch-linux.html" rel="alternate"></link><published>2020-01-03T10:00:41+01:00</published><updated>2020-01-04T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-03:/back-to-arch-linux.html</id><summary type="html">&lt;p&gt;Within a Ubuntu LTS pre-installed laptop&lt;/p&gt;
+</summary><content type="html">&lt;section id="why"&gt;
+&lt;h2&gt;Why&lt;/h2&gt;
+&lt;p&gt;It was October 2019. New job, new laptop.&lt;/p&gt;
+&lt;p&gt;I tried to tell myself to stay with the LTS that was given to me from the
+Canonical and Dell overlords. To be honest, I did not remove Ubuntu from the
+get-go was because I was unsure if I can run Nvidia’s CUDA toolkit on an
+&lt;a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;amp;target_arch=x86_64/"&gt;unlisted&lt;/a&gt; OS. In my old laptop (2011-2014) on which I had a Nvidia GPU and
+which ran Manjaro, I would frequently total my installation every time I ran
+&lt;code&gt;pacman -Syu&lt;/code&gt;. The X.org display server would just stop functioning and I
+would be left with a terminal to figure out how to get back.&lt;/p&gt;
+&lt;p&gt;I thought I could just weed out the bloatware (Google Chrome, Amazon etc.)
+and be content with what I have. Trust the Ubuntu and Dell repositories.&lt;/p&gt;
+&lt;p&gt;Fast-forward to January 2020.  Turns out, the project which I am on right now
+may not get started with CUDA development soon. Therefore, a good OS and GCC
+compiler toolchain is all that I need. I have a mutant Ubuntu LTS already with
+all the hacks under the sun to stay up-to-date:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/pyenv/pyenv/"&gt;pyenv&lt;/a&gt; to have the latest Python&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://flatpak.org/"&gt;flatpak&lt;/a&gt; to install some applications which are &lt;em&gt;ancient&lt;/em&gt; in the official &lt;a href="https://packages.ubuntu.com/"&gt;Ubuntu repos&lt;/a&gt; (Okular, Signal, KeepassXC, Zeal, Zotero etc.)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://appimage.org/"&gt;appimage&lt;/a&gt; when &lt;a href="https://flatpak.org/"&gt;flatpak&lt;/a&gt;’s sandbox is too restrictive (Neovim)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.ubuntu.com/community/PPA"&gt;PPA&lt;/a&gt; / unofficial &lt;code&gt;.deb&lt;/code&gt; packages from GitHub when the start-up overhead of
+&lt;a href="https://flatpak.org/"&gt;flatpak&lt;/a&gt; or &lt;a href="https://appimage.org/"&gt;appimage&lt;/a&gt; is way too high (Neovim, again 😅) or similar reasons
+as above (Nextcloud client, VSCodium etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is not good at all, I hear you. And I have to wait a good &lt;a href="https://www.omgubuntu.co.uk/2019/10/ubuntu-20-04-release-features"&gt;4 more months&lt;/a&gt;
+for the next LTS release! The final blow came when I saw Vim 8.2 was released
+last month with &lt;a href="https://github.com/skywind3000/vim-quickui"&gt;popup&lt;/a&gt; support, and I do not have it yet! There is no practical
+way (apart from yet another &lt;a href="https://help.ubuntu.com/community/PPA"&gt;PPA&lt;/a&gt;) to get the latest Vim, without compiling it
+from source. Either ways, it is also unacceptable to run a desktop environment
+(GNOME) which is lagging behind (version 3.28.2) the latest stable release
+(version 3.34) for so long!&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="how"&gt;
+&lt;h2&gt;How&lt;/h2&gt;
+&lt;aside class="m-note m-danger"&gt;
+Make sure you understand what how &lt;code&gt;chroot&lt;/code&gt; and &lt;code&gt;mount&lt;/code&gt; commands work.
+Also do not run &lt;code&gt;rm -rf&lt;/code&gt; at any stage below.&lt;/aside&gt;
+&lt;p&gt;There is a nice &lt;a href="https://wiki.archlinux.org/index.php/Install_Arch_Linux_from_existing_Linux#From_a_host_running_another_Linux_distribution"&gt;guide&lt;/a&gt; which demonstrates how to setup Arch Linux from an
+existing Linux OS. I started off by &lt;a href="https://www.archlinux.org/download/"&gt;downloading&lt;/a&gt; the bootstrap image along with
+the GPG signature and verifying it:&lt;/p&gt;
+&lt;pre&gt;$ gpg --keyserver-options auto-key-retrieve --verify archlinux-2020.01.01-x86_64.iso.sig
+gpg: assuming signed data in 'archlinux-2020.01.01-x86_64.iso'
+gpg: Signature made Wed 01 Jan 2020 06:21:41 AM CET
+gpg:                using RSA key 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
+gpg: Good signature from &amp;quot;Pierre Schmitz &amp;lt;pierre&amp;#64;archlinux.de&amp;gt;&amp;quot; [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC&lt;/pre&gt;
+&lt;p&gt;The key fingerprint was &lt;a href="https://www.archlinux.org/master-keys/"&gt;cross-checked&lt;/a&gt; to be doubly sure.
+Then I extracted the bootstrap image:&lt;/p&gt;
+&lt;pre&gt;$ sudo su
+# tar xzf archlinux-bootstrap-2020.01.01-x86_64.tar.gz -C /tmp&lt;/pre&gt;
+&lt;p&gt;When I skipped a few steps and went into the &lt;code&gt;chroot&lt;/code&gt;, I got this:&lt;/p&gt;
+&lt;pre&gt;# /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
+==&amp;gt; WARNING: /mnt/archlinux/root.x86_64/ is not a mountpoint. This may have undesirable side effects.&lt;/pre&gt;
+&lt;p&gt;I &lt;a href="https://bugs.archlinux.org/task/46169"&gt;understood&lt;/a&gt; that the &lt;code&gt;chroot&lt;/code&gt; should be a mount point:&lt;/p&gt;
+&lt;pre&gt;# mount --bind /tmp/root.x86_64 /tmp/root.x86_64
+# /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/&lt;/pre&gt;
+&lt;p&gt;And the &lt;code&gt;chroot&lt;/code&gt; worked without any warnings. To clarify the shell I am
+running I will prefix the commands with &lt;code&gt;[chroot] #&lt;/code&gt; from here on:&lt;/p&gt;
+&lt;pre&gt;[chroot] # pacman-key --init
+[chroot] # pacman-key --populate archlinux&lt;/pre&gt;
+&lt;p&gt;After editing the mirror list outside of the &lt;code&gt;chroot&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;$ sudoedit /tmp/root.x86_64/etc/pacman.d/mirrorlist&lt;/pre&gt;
+&lt;p&gt;I updated the bootstrap:&lt;/p&gt;
+&lt;pre&gt;[chroot] # pacman -Syyu&lt;/pre&gt;
+&lt;p&gt;And mounted the partitions to be bootstrapped:&lt;/p&gt;
+&lt;pre&gt;[chroot] # mount /dev/nvme0n1p5 /mnt
+[chroot] # mount /dev/nvme0n1p4 /mnt/home
+[chroot] # genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+[chroot] # umount /mnt/home&lt;/pre&gt;
+&lt;aside class="m-note m-info"&gt;
+In preparation, I had created these partitions by shrinking the existing ones
+with a &lt;a href="https://distrowatch.com/table.php?distribution=gparted"&gt;GParted&lt;/a&gt; USB live medium, long time ago.  The home partition was also
+created and made separate such that it can be shared between Ubuntu and Arch
+Linux for a dual-boot setup.&lt;/aside&gt;
+&lt;p&gt;and installed some essentials:&lt;/p&gt;
+&lt;pre&gt;[chroot] # pacman -S base base-devel
+:: There are 24 members in group base-devel:
+:: Repository core
+   1) autoconf  2) automake  3) binutils  4) bison  5) fakeroot  6) file
+   7) findutils  8) flex  9) gawk  10) gcc  11) gettext  12) grep  13) groff
+   14) gzip  15) libtool  16) m4 17) make  18) pacman  19) patch  20) pkgconf
+   21) sed  22) sudo  23) texinfo  24) which
+...&lt;/pre&gt;
+&lt;p&gt;Did the same for the target Arch Linux partition mounted at &lt;code&gt;/mnt&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;[chroot] # pacstrap /mnt base base-devel
+[chroot] # pacstrap /mnt linux-lts linux-firmware intel-ucode lsb-release&lt;/pre&gt;
+&lt;p&gt;Thereafter I followed the official &lt;a href="https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system"&gt;installation guide&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;[chroot] # arch-chroot /mnt&lt;/pre&gt;
+&lt;aside class="m-note m-info"&gt;
+The step above runs &lt;code&gt;arch-chroot&lt;/code&gt; from within a &lt;code&gt;chroot&lt;/code&gt;. Now, I see why
+Leo was so confused in Inception. Whenever in doubt, run &lt;code&gt;df&lt;/code&gt;.&lt;/aside&gt;
+&lt;/section&gt;
+&lt;section id="cleaning-up-and-dual-booting"&gt;
+&lt;h2&gt;Cleaning up and dual booting&lt;/h2&gt;
+&lt;p&gt;Exit the &lt;code&gt;chroot&lt;/code&gt; and unmount everything:&lt;/p&gt;
+&lt;pre&gt;[chroot in a chroot] # exit
+[chroot] # exit
+# umount -R /tmp/root.x86_64&lt;/pre&gt;
+&lt;p&gt;The Ubuntu installation came with a &lt;a href="https://wiki.archlinux.org/index.php/GRUB#Detecting_other_operating_systems"&gt;GRUB&lt;/a&gt; boot loader and &lt;code&gt;os-loader&lt;/code&gt; package
+which should detect the new Arch Linux installation (since we installed the
+&lt;code&gt;lsb-release&lt;/code&gt; package). To make it happen, reboot? from Ubuntu run:&lt;/p&gt;
+&lt;pre&gt;# sudo update-grub&lt;/pre&gt;
+&lt;p&gt;That did not work! &lt;a href="https://askubuntu.com/questions/111085/how-do-i-hide-the-grub-menu-showing-up-at-the-beginning-of-boot"&gt;Turns out&lt;/a&gt; &lt;code&gt;/etc/default/grub&lt;/code&gt; had two offending lines:&lt;/p&gt;
+&lt;pre&gt;GRUB_TIMEOUT_STYLE=hidden
+GRUB_DISABLE_OS_PROBER=true&lt;/pre&gt;
+&lt;p&gt;which when commented out, it started working. Follow this by &lt;code&gt;update-grub&lt;/code&gt; or
+&lt;code&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/code&gt; and it is good to go.&lt;/p&gt;
+&lt;/section&gt;
+</content><category term="software"></category><category term="linux"></category><category term="ubuntu"></category><category term="archlinux"></category></entry><entry><title>Turning Pelican into a mini-CMS</title><link href="https://ashwin.info.tm/pelican-mini-cms.html" rel="alternate"></link><published>2020-01-02T14:12:41+01:00</published><updated>2020-01-02T14:12:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-02:/pelican-mini-cms.html</id><summary type="html">&lt;p&gt;Lowering writing inhibitions with tech&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;I like automating things. This means I write small nifty tools to do
 boring / repetitive stuff for me. I have been relying on &lt;a href="https://pelican.readthedocs.io/"&gt;static site
 generator Pelican&lt;/a&gt; for my website. I

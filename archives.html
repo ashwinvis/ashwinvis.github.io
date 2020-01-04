@@ -78,6 +78,137 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/back-to-arch-linux.html" rel="bookmark" class="u-url" title="Permalink to Back to Arch Linux">
+            <time class="m-date" datetime="2020-01-03T10:00:41.042526+01:00">
+              Jan <span class="m-date-day">03</span> 2020
+            </time>
+            <div class="p-name">
+              Back to Arch Linux
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Within a Ubuntu LTS pre-installed laptop</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<section id="why">
+<h2>Why</h2>
+<p>It was October 2019. New job, new laptop.</p>
+<p>I tried to tell myself to stay with the LTS that was given to me from the
+Canonical and Dell overlords. To be honest, I did not remove Ubuntu from the
+get-go was because I was unsure if I can run Nvidia’s CUDA toolkit on an
+<a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64/">unlisted</a> OS. In my old laptop (2011-2014) on which I had a Nvidia GPU and
+which ran Manjaro, I would frequently total my installation every time I ran
+<code>pacman -Syu</code>. The X.org display server would just stop functioning and I
+would be left with a terminal to figure out how to get back.</p>
+<p>I thought I could just weed out the bloatware (Google Chrome, Amazon etc.)
+and be content with what I have. Trust the Ubuntu and Dell repositories.</p>
+<p>Fast-forward to January 2020.  Turns out, the project which I am on right now
+may not get started with CUDA development soon. Therefore, a good OS and GCC
+compiler toolchain is all that I need. I have a mutant Ubuntu LTS already with
+all the hacks under the sun to stay up-to-date:</p>
+<ul>
+<li><a href="https://github.com/pyenv/pyenv/">pyenv</a> to have the latest Python</li>
+<li><a href="https://flatpak.org/">flatpak</a> to install some applications which are <em>ancient</em> in the official <a href="https://packages.ubuntu.com/">Ubuntu repos</a> (Okular, Signal, KeepassXC, Zeal, Zotero etc.)</li>
+<li><a href="https://appimage.org/">appimage</a> when <a href="https://flatpak.org/">flatpak</a>’s sandbox is too restrictive (Neovim)</li>
+<li><a href="https://help.ubuntu.com/community/PPA">PPA</a> / unofficial <code>.deb</code> packages from GitHub when the start-up overhead of
+<a href="https://flatpak.org/">flatpak</a> or <a href="https://appimage.org/">appimage</a> is way too high (Neovim, again 😅) or similar reasons
+as above (Nextcloud client, VSCodium etc.)</li>
+</ul>
+<p>This is not good at all, I hear you. And I have to wait a good <a href="https://www.omgubuntu.co.uk/2019/10/ubuntu-20-04-release-features">4 more months</a>
+for the next LTS release! The final blow came when I saw Vim 8.2 was released
+last month with <a href="https://github.com/skywind3000/vim-quickui">popup</a> support, and I do not have it yet! There is no practical
+way (apart from yet another <a href="https://help.ubuntu.com/community/PPA">PPA</a>) to get the latest Vim, without compiling it
+from source. Either ways, it is also unacceptable to run a desktop environment
+(GNOME) which is lagging behind (version 3.28.2) the latest stable release
+(version 3.34) for so long!</p>
+</section>
+<section id="how">
+<h2>How</h2>
+<aside class="m-note m-danger">
+Make sure you understand what how <code>chroot</code> and <code>mount</code> commands work.
+Also do not run <code>rm -rf</code> at any stage below.</aside>
+<p>There is a nice <a href="https://wiki.archlinux.org/index.php/Install_Arch_Linux_from_existing_Linux#From_a_host_running_another_Linux_distribution">guide</a> which demonstrates how to setup Arch Linux from an
+existing Linux OS. I started off by <a href="https://www.archlinux.org/download/">downloading</a> the bootstrap image along with
+the GPG signature and verifying it:</p>
+<pre>$ gpg --keyserver-options auto-key-retrieve --verify archlinux-2020.01.01-x86_64.iso.sig
+gpg: assuming signed data in 'archlinux-2020.01.01-x86_64.iso'
+gpg: Signature made Wed 01 Jan 2020 06:21:41 AM CET
+gpg:                using RSA key 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
+gpg: Good signature from &quot;Pierre Schmitz &lt;pierre&#64;archlinux.de&gt;&quot; [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC</pre>
+<p>The key fingerprint was <a href="https://www.archlinux.org/master-keys/">cross-checked</a> to be doubly sure.
+Then I extracted the bootstrap image:</p>
+<pre>$ sudo su
+# tar xzf archlinux-bootstrap-2020.01.01-x86_64.tar.gz -C /tmp</pre>
+<p>When I skipped a few steps and went into the <code>chroot</code>, I got this:</p>
+<pre># /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
+==&gt; WARNING: /mnt/archlinux/root.x86_64/ is not a mountpoint. This may have undesirable side effects.</pre>
+<p>I <a href="https://bugs.archlinux.org/task/46169">understood</a> that the <code>chroot</code> should be a mount point:</p>
+<pre># mount --bind /tmp/root.x86_64 /tmp/root.x86_64
+# /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/</pre>
+<p>And the <code>chroot</code> worked without any warnings. To clarify the shell I am
+running I will prefix the commands with <code>[chroot] #</code> from here on:</p>
+<pre>[chroot] # pacman-key --init
+[chroot] # pacman-key --populate archlinux</pre>
+<p>After editing the mirror list outside of the <code>chroot</code>:</p>
+<pre>$ sudoedit /tmp/root.x86_64/etc/pacman.d/mirrorlist</pre>
+<p>I updated the bootstrap:</p>
+<pre>[chroot] # pacman -Syyu</pre>
+<p>And mounted the partitions to be bootstrapped:</p>
+<pre>[chroot] # mount /dev/nvme0n1p5 /mnt
+[chroot] # mount /dev/nvme0n1p4 /mnt/home
+[chroot] # genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+[chroot] # umount /mnt/home</pre>
+<aside class="m-note m-info">
+In preparation, I had created these partitions by shrinking the existing ones
+with a <a href="https://distrowatch.com/table.php?distribution=gparted">GParted</a> USB live medium, long time ago.  The home partition was also
+created and made separate such that it can be shared between Ubuntu and Arch
+Linux for a dual-boot setup.</aside>
+<p>and installed some essentials:</p>
+<pre>[chroot] # pacman -S base base-devel
+:: There are 24 members in group base-devel:
+:: Repository core
+   1) autoconf  2) automake  3) binutils  4) bison  5) fakeroot  6) file
+   7) findutils  8) flex  9) gawk  10) gcc  11) gettext  12) grep  13) groff
+   14) gzip  15) libtool  16) m4 17) make  18) pacman  19) patch  20) pkgconf
+   21) sed  22) sudo  23) texinfo  24) which
+...</pre>
+<p>Did the same for the target Arch Linux partition mounted at <code>/mnt</code>:</p>
+<pre>[chroot] # pacstrap /mnt base base-devel
+[chroot] # pacstrap /mnt linux-lts linux-firmware intel-ucode lsb-release</pre>
+<p>Thereafter I followed the official <a href="https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system">installation guide</a>:</p>
+<pre>[chroot] # arch-chroot /mnt</pre>
+<aside class="m-note m-info">
+The step above runs <code>arch-chroot</code> from within a <code>chroot</code>. Now, I see why
+Leo was so confused in Inception. Whenever in doubt, run <code>df</code>.</aside>
+</section>
+<section id="cleaning-up-and-dual-booting">
+<h2>Cleaning up and dual booting</h2>
+<p>Exit the <code>chroot</code> and unmount everything:</p>
+<pre>[chroot in a chroot] # exit
+[chroot] # exit
+# umount -R /tmp/root.x86_64</pre>
+<p>The Ubuntu installation came with a <a href="https://wiki.archlinux.org/index.php/GRUB#Detecting_other_operating_systems">GRUB</a> boot loader and <code>os-loader</code> package
+which should detect the new Arch Linux installation (since we installed the
+<code>lsb-release</code> package). To make it happen, reboot? from Ubuntu run:</p>
+<pre># sudo update-grub</pre>
+<p>That did not work! <a href="https://askubuntu.com/questions/111085/how-do-i-hide-the-grub-menu-showing-up-at-the-beginning-of-boot">Turns out</a> <code>/etc/default/grub</code> had two offending lines:</p>
+<pre>GRUB_TIMEOUT_STYLE=hidden
+GRUB_DISABLE_OS_PROBER=true</pre>
+<p>which when commented out, it started working. Follow this by <code>update-grub</code> or
+<code>grub-mkconfig -o /boot/grub/grub.cfg</code> and it is good to go.</p>
+</section>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-03T10:00:41.042526+01:00" class="dt-published">Fri 03 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-01-04T00:00:00+01:00" class="dt-updated">Sat 04 January 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/linux.html">linux</a>, <a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a>, <a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a>.</p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/pelican-mini-cms.html" rel="bookmark" class="u-url" title="Permalink to Turning Pelican into a mini-CMS">
             <time class="m-date" datetime="2020-01-02T14:12:41.803562+01:00">
               Jan <span class="m-date-day">02</span> 2020
@@ -90,163 +221,10 @@
           <p>Lowering writing inhibitions with tech</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>I like automating things. This means I write small nifty tools to do
-boring / repetitive stuff for me. I have been relying on <a href="https://pelican.readthedocs.io/">static site
-generator Pelican</a> for my website. I
-do go an extra mile from the usual workflow.</p>
-<p>For this blog, I wanted to keep the source code and generated output
-separate. A way to do that was to use git branches to <code>develop</code>
-content and publish the output on the <code>master</code> branch. While in theory
-this sounds nice, it becomes cumbersome to manage two copies of the same
-repository locally. The solution was CI.</p>
-<section id="stage-1-ci">
-<h2>Stage 1: CI</h2>
-<p>This very blog is automatically published on GitHub pages every time I
-push some text to GitHub, specifically on the <code>develop</code> branch. As a
-result, I don’t have to remember to activate the Python virtual
-environment, run a Makefile, commit output to another branch
-(<code>master</code>) etc.</p>
-<p>I used to do this with Travis CI and ever since GitHub actions rolled
-out, I have been using the latter as it is noticeably faster. Snippets
-of the configuration files that I used are shown below.</p>
-<section id="travis-ci-configuration">
-<h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml">Travis CI configuration</a></h3>
-<pre class="m-code"><span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
-
-<span class="nn">...</span>
-
-<span class="nt">install</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pelican-themes -i pelican-bluedrop/bluedrop</span>
-
-<span class="nt">script</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cd src</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">make publish</span>
-
-<span class="nt">deploy</span><span class="p">:</span>
-  <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pages</span>
-  <span class="nt">skip-cleanup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">github-token</span><span class="p">:</span> <span class="s">&quot;$GITHUB_TOKEN&quot;</span>
-  <span class="nt">keep-history</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">target-branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Travis CI</span>
-  <span class="nt">local-dir</span><span class="p">:</span> <span class="s">&quot;./output&quot;</span>
-  <span class="nt">on</span><span class="p">:</span>
-    <span class="nt">branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">develop</span></pre>
-<p>An extra step you have to do is to generate a personal access token,
-<code>`GITHUB_TOKEN</code> &lt;<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>&gt;`__ for Travis to
-get permissions. Then, you save the token as a secret environment
-variable in Travis. The process is <a href="https://docs.travis-ci.com/user/deployment/pages/">nicely
-documented</a>.</p>
-</section>
-<section id="github-actions-workflow">
-<h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml">GitHub actions workflow</a></h3>
-<pre class="m-code"><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span>
-
-<span class="nt">on</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
-
-<span class="nt">env</span><span class="p">:</span>
-  <span class="nt">PIP_CACHE_DIR</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span>
-
-<span class="nt">jobs</span><span class="p">:</span>
-  <span class="nt">build</span><span class="p">:</span>
-
-    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-    <span class="nt">strategy</span><span class="p">:</span>
-      <span class="nt">max-parallel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
-      <span class="nt">matrix</span><span class="p">:</span>
-        <span class="nt">python-version</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span>
-
-    <span class="nt">steps</span><span class="p">:</span>
-
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
-
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
-      <span class="nt">if</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">success()</span>
-      <span class="nt">env</span><span class="p">:</span>
-        <span class="nt">ACTIONS_DEPLOY_KEY</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
-        <span class="nt">PUBLISH_BRANCH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
-        <span class="nt">PUBLISH_DIR</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./output</span>
-        <span class="nt">SCRIPT_MODE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-        <span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span>
-        <span class="no">bash ./entrypoint.sh</span></pre>
-<p>Here we use a <a href="https://github.com/peaceiris/actions-gh-pages">third-party
-action</a> created to
-deploy generated files to GitHub pages. We may not want to give too many
-permissions here (i.e. access to all repositories as we did with
-Travis!). Therefore a deploy key was generated from
-<code>https://github.com/&lt;username&gt;/&lt;username&gt;.github.io/settings/keys</code>
-instead.</p>
-</section>
-</section>
-<section id="stage-2-templating">
-<h2>Stage 2: Templating</h2>
-<p>Pelican posts require some
-<a href="https://pelican.readthedocs.io/en/stable/content.html#file-metadata">metadata</a>
-for the posts to be acceptable. Some (title, date) are mandatory while
-the rest are optional. I wanted the process of writing a new post to be
-as fluid as possible.
-I started by keeping a <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/src/content/template.md">simple markdown file with dummy
-metadata</a>.
-Then I would copy this file, and manually edit the metadata before
-authoring the post. As you can imagine, I was not pleased by this
-approach!
-Now I have come up with a better approach. The result was a Jinja template +
-interactive TUI workflow which creates a post stub, save it with the right
-filename, opens my editor, commits and pushes it! <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/templates/post.md.j2">The template</a>
-looks as follows:</p>
-<pre class="m-code"><span class="cp">{%</span> <span class="k">block</span> <span class="nv">metadata</span> -<span class="cp">%}</span><span class="x"></span>
-<span class="x">---</span>
-<span class="x">Title: </span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Author: </span><span class="cp">{{</span> <span class="nv">author</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Date: </span><span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Status: </span><span class="cp">{{</span> <span class="nv">status</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Summary: </span><span class="cp">{{</span> <span class="nv">summary</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Category: </span><span class="cp">{{</span> <span class="nv">category</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Tags: </span><span class="cp">{{</span> <span class="nv">tags</span> <span class="o">|</span> <span class="nf">join</span><span class="o">(</span><span class="s1">&#39;, &#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">---</span>
-<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span></pre>
-<p>I did not want to build the TUI from the scratch. Therefore I borrowed
-the <code>prompt</code> module from <a href="https://cookiecutter.readthedocs.io/en/1.7.0/cookiecutter.html#module-cookiecutter.prompt">the cookiecutter project</a>
-to do it for me. I save some defaults in a <code>cookiecutter.json</code> file,
-based on which the metadata values are prompted from the user
-conveniently as follows:</p>
-<pre class="m-code">title <span class="o">[</span>Insert title<span class="o">]</span>: Turning Pelican into a mini-CMS
-summary <span class="o">[]</span>: Lowering writing inhibitions with tech
-Select category:
-<span class="m">1</span> - Blog
-<span class="m">2</span> - Tech Talk
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">2</span>
-Select tags:
-<span class="m">1</span> - life
-<span class="m">2</span> - research
-<span class="m">3</span> - software
-Choose from <span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">3</span>
-slug <span class="o">[</span>turning-pelican-into-a-mini-cms<span class="o">]</span>: pelican-mini-cms
-Select status:
-<span class="m">1</span> - draft
-<span class="m">2</span> - published
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">1</span>
-date <span class="o">[</span><span class="m">2020</span>-01-02T14:12:41.803562<span class="o">]</span>:
-author <span class="o">[</span>Ashwin Vishnu Mohanan<span class="o">]</span>:
-Select filetype:
-<span class="m">1</span> - md
-<span class="m">2</span> - ipynb
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>:
-Track changes? <span class="o">[</span>True<span class="o">]</span>:
-Commit changes? <span class="o">[</span>True<span class="o">]</span>: n
-Push changes? <span class="o">[</span>False<span class="o">]</span>:</pre>
-<p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/write.py">The script which does
-this</a>
-is self explanatory, I hope!</p>
-</section>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-02T14:12:41.803562+01:00" class="dt-published">Thu 02 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/ci.html">ci</a>, <a href="https://ashwin.info.tm/tag/automation.html">automation</a>, <a href="https://ashwin.info.tm/tag/devops.html">devops</a>.</p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -918,6 +896,7 @@ is self explanatory, I hope!</p>
       </ol>
       <h3>Tag cloud</h3>
       <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/automation.html">automation</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/brainwaves.html">brainwaves</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ci.html">ci</a></li>
@@ -943,6 +922,7 @@ is self explanatory, I hope!</p>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/kindness.html">kindness</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/licensing.html">licensing</a></li>
         <li class="m-tag-5"><a href="https://ashwin.info.tm/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/linux.html">linux</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/list.html">list</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/mood.html">mood</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/motto.html">motto</a></li>
@@ -975,6 +955,7 @@ is self explanatory, I hope!</p>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/transonic.html">transonic</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/travel.html">travel</a></li>
         <li class="m-tag-4"><a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a></li>
         <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/uncategorized.html">Uncategorized</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/wordporm.html">wordporm</a></li>
       </ul>
@@ -1019,7 +1000,7 @@ is self explanatory, I hope!</p>
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <p>
-        <img alt="license" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" style="height: 31px" /><br />
+        <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE-content">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>

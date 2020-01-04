@@ -2,25 +2,21 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Back to Arch Linux | Ashwin Vishnu&#39;s Website</title>
+  <title>Posts tagged linux | Ashwin Vishnu&#39;s Website</title>
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-code-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
-  <link rel="canonical" href="https://ashwin.info.tm/drafts/back-to-arch-linux.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
-  <link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
-  <meta property="og:title" content="Back to Arch Linux" />
-  <meta name="twitter:title" content="Back to Arch Linux" />
-  <meta property="og:url" content="https://ashwin.info.tm/drafts/back-to-arch-linux.html" />
-  <meta property="og:description" content="Within a Ubuntu LTS pre-installed laptop" />
-  <meta name="twitter:description" content="Within a Ubuntu LTS pre-installed laptop" />
+  <meta property="og:title" content="linux" />
+  <meta name="twitter:title" content="linux" />
+  <meta property="og:url" content="https://ashwin.info.tm/tag/linux.html" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <!-- Mastodon Link verification -->
   <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
 
@@ -79,141 +75,30 @@
 <main>
 <div class="m-container">
   <div class="m-row">
-    <article class="h-entry m-col-m-10 m-nopadb">
-      <header>
-        <h1><a href="https://ashwin.info.tm/drafts/back-to-arch-linux.html" rel="bookmark" class="u-url" title="Permalink to Back to Arch Linux">
-          <time class="m-date" datetime="2020-01-03T10:00:41.042526+01:00">
-            Jan <span class="m-date-day">03</span> 2020
-          </time>
-          <div class="p-name">
-            Back to Arch Linux
+    <div class="m-col-m-10">
+      <div class="m-info m-note">
+        Showing only posts tagged <em>linux</em>. <a href="https://ashwin.info.tm/">Show all posts.</a>
+      </div>
+      <article>
+        <header>
+          <h1><a href="https://ashwin.info.tm/back-to-arch-linux.html" rel="bookmark" class="u-url" title="Permalink to Back to Arch Linux">
+            <time class="m-date" datetime="2020-01-03T10:00:41.042526+01:00">
+              Jan <span class="m-date-day">03</span> 2020
+            </time>
+            <div class="p-name">
+              Back to Arch Linux
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Within a Ubuntu LTS pre-installed laptop</p>
           </div>
-          <span class="m-label m-dim">draft</span>
-        </a></h1>
-        <div class="p-summary">
-        <p>Within a Ubuntu LTS pre-installed laptop</p>
-        </div>
-      </header>
-      <div class="m-clearfix-l"></div>
-<!-- content -->
-<div class="e-content">
-<section id="why">
-<h2>Why</h2>
-<p>It was October 2019. New job, new laptop.</p>
-<p>I tried to tell myself to stay with the LTS that was given to me from the
-Canonical and Dell overlords. To be honest, I did not remove Ubuntu from the
-get-go was because I was unsure if I can run Nvidia’s CUDA toolkit on an
-<a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64/">unlisted</a> OS. In my old laptop (2011-2014) on which I had a Nvidia GPU and
-which ran Manjaro, I would frequently total my installation every time I ran
-<code>pacman -Syu</code>. The X.org display server would just stop functioning and I
-would be left with a terminal to figure out how to get back.</p>
-<p>I thought I could just weed out the bloatware (Google Chrome, Amazon etc.)
-and be content with what I have. Trust the Ubuntu and Dell repositories.</p>
-<p>Fast-forward to January 2020.  Turns out, the project which I am on right now
-may not get started with CUDA development soon. Therefore, a good OS and GCC
-compiler toolchain is all that I need. I have a mutant Ubuntu LTS already with
-all the hacks under the sun to stay up-to-date:</p>
-<ul>
-<li><a href="https://github.com/pyenv/pyenv/">pyenv</a> to have the latest Python</li>
-<li><a href="https://flatpak.org/">flatpak</a> to install some applications which are <em>ancient</em> in the official <a href="https://packages.ubuntu.com/">Ubuntu repos</a> (Okular, Signal, KeepassXC, Zeal, Zotero etc.)</li>
-<li><a href="https://appimage.org/">appimage</a> when <a href="https://flatpak.org/">flatpak</a>’s sandbox is too restrictive (Neovim)</li>
-<li><a href="https://help.ubuntu.com/community/PPA">ppa</a> / unofficial <code>.deb</code> packages from GitHub when the startup overhead of
-<a href="https://flatpak.org/">flatpak</a> or <a href="https://appimage.org/">appimage</a> is way too high (Neovim, again 😅) or similar reasons
-as above (Nextcloud client, VSCodium etc.)</li>
-</ul>
-<p>This is not good at all, I hear you. And I have to wait a good <a href="https://www.omgubuntu.co.uk/2019/10/ubuntu-20-04-release-features">4 more months</a>
-for the next LTS release! The final blow came when I saw Vim 8.2 was released
-last month with <a href="https://github.com/skywind3000/vim-quickui">popup</a> support, and I do not have it yet! There is no practical
-way (apart from yet another <a href="https://help.ubuntu.com/community/PPA">ppa</a>) to get the latest Vim, without compiling it
-from source. Either ways, it is also unacceptable to run a desktop environment
-(GNOME) which is lagging behind (version 3.28.2) the latest stable release
-(version 3.34) for so long!</p>
-</section>
-<section id="how">
-<h2>How</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Make sure you understand what how <code>chroot</code> and <code>mount</code> commands work.
-Also do not run <code>rm -rf</code> at any stage below.</p>
-</div>
-<p>There is a nice <a href="https://wiki.archlinux.org/index.php/Install_Arch_Linux_from_existing_Linux#From_a_host_running_another_Linux_distribution">guide</a> which demonstrates how to setup Arch Linux from an
-existing Linux OS. I started off by <a href="https://www.archlinux.org/download/">downloading</a> the bootstrap image along with
-the GPG signature and verifying it:</p>
-<pre>❯ gpg --keyserver-options auto-key-retrieve --verify archlinux-2020.01.01-x86_64.iso.sig
-gpg: assuming signed data in 'archlinux-2020.01.01-x86_64.iso'
-gpg: Signature made Wed 01 Jan 2020 06:21:41 AM CET
-gpg:                using RSA key 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
-gpg: Good signature from &quot;Pierre Schmitz &lt;pierre&#64;archlinux.de&gt;&quot; [unknown]
-gpg: WARNING: This key is not certified with a trusted signature!
-gpg:          There is no indication that the signature belongs to the owner.
-Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC</pre>
-<p>The key fingerprint was <a href="https://www.archlinux.org/master-keys/">cross-checked</a> to be doubly sure.
-I extracted the bootstrap image over there:</p>
-<pre>$ sudo su
-# tar xzf archlinux-bootstrap-2020.01.01-x86_64.tar.gz -C /tmp</pre>
-<p>When I skipped a few steps and went into the <code>chroot</code>, I got this:</p>
-<pre># /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
-==&gt; WARNING: /mnt/archlinux/root.x86_64/ is not a mountpoint. This may have undesirable side effects.</pre>
-<p>I <a href="https://bugs.archlinux.org/task/46169">understood</a> that the <code>chroot</code> should be a mount point:</p>
-<pre># mount --bind /tmp/root.x86_64 /tmp/root.x86_64
-# /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/</pre>
-<p>And the <code>chroot</code> worked without any warnings. To clarify the shell I am
-running I will prefix the commands with <code>[chroot] #</code> from here on:</p>
-<pre>[chroot] # pacman-key --init
-[chroot] # pacman-key --populate archlinux</pre>
-<p>After editing the mirror list outside of the <code>chroot</code>:</p>
-<pre>$ sudoedit /tmp/root.x86_64/etc/pacman.d/mirrorlist</pre>
-<p>I updated the bootstrap:</p>
-<pre>[chroot] # pacman -Syyu</pre>
-<p>And mounted the partitions to be bootstrapped:</p>
-<pre>[chroot] # mount /dev/nvme0n1p5 /mnt
-[chroot] # mount /dev/nvme0n1p4 /mnt/home
-[chroot] # genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
-[chroot] # umount /mnt/home</pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In preparation, I had created these partitions by shrinking the existing ones
-with a <a href="https://distrowatch.com/table.php?distribution=gparted">GParted</a> USB live medium, long time ago.  The home partition was also
-created and made separate such that it can be shared between Ubuntu and Arch
-Linux for a dual-boot setup.</p>
-</div>
-<p>and installed some essentials:</p>
-<pre>[chroot] # pacman -S base base-devel
-:: There are 24 members in group base-devel:
-:: Repository core
-   1) autoconf  2) automake  3) binutils  4) bison  5) fakeroot  6) file
-   7) findutils  8) flex  9) gawk  10) gcc  11) gettext  12) grep  13) groff
-   14) gzip  15) libtool  16) m4 17) make  18) pacman  19) patch  20) pkgconf
-   21) sed  22) sudo  23) texinfo  24) which
-...</pre>
-<p>Did the same for the target Arch Linux installation:</p>
-<pre>[chroot] # pacstrap /mnt base base-devel
-[chroot] # pacstrap /mnt linux-lts linux-firmware intel-ucode lsb-release</pre>
-<p>Thereafter I followed the official <a href="https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system">installation guide</a>:</p>
-<pre>[chroot] # arch-chroot /mnt</pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The step above runs <code>arch-chroot</code> from within a <code>chroot</code>. Now, I see why
-Leo was so confused in Inception. Whenever in doubt, run <code>df</code>.</p>
-</div>
-</section>
-<section id="cleaning-up-and-dual-booting">
-<h2>Cleaning up and dual booting</h2>
-<p>Exit the <code>chroot</code> and unmount everything:</p>
-<pre>[chroot in a chroot] # exit
-[chroot] # exit
-# umount -R /tmp/root.x86_64</pre>
-<p>The Ubuntu installation came with a <a href="https://wiki.archlinux.org/index.php/GRUB#Detecting_other_operating_systems">GRUB</a> boot loader and <code>osloader</code> package
-which should detect the new Arch Linux installation (since we installed the
-<code>lsb-release</code> package). To make it happen, reboot? from Ubuntu run:</p>
-<pre># sudo grub-mkconfig</pre>
-</section>
-</div>
-<!-- /content -->
-      <footer>
-        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-03T10:00:41.042526+01:00" class="dt-published">Fri 03 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-dim">draft</span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/linux.html">linux</a>, <a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a>, <a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a>.</p>
-      </footer>
-    </article>
+        </header>
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-03T10:00:41.042526+01:00" class="dt-published">Fri 03 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-01-04T00:00:00+01:00" class="dt-updated">Sat 04 January 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/linux.html">linux</a>, <a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a>, <a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a>.</p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+    </div>
     <nav class="m-navpanel m-col-m-2">
       <h3>Categories</h3>
       <ol class="m-block-bar-m">
@@ -222,6 +107,7 @@ which should detect the new Arch Linux installation (since we installed the
       </ol>
       <h3>Tag cloud</h3>
       <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/automation.html">automation</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/brainwaves.html">brainwaves</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ci.html">ci</a></li>
@@ -247,6 +133,7 @@ which should detect the new Arch Linux installation (since we installed the
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/kindness.html">kindness</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/licensing.html">licensing</a></li>
         <li class="m-tag-5"><a href="https://ashwin.info.tm/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/linux.html">linux</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/list.html">list</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/mood.html">mood</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/motto.html">motto</a></li>
@@ -279,6 +166,7 @@ which should detect the new Arch Linux installation (since we installed the
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/transonic.html">transonic</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/travel.html">travel</a></li>
         <li class="m-tag-4"><a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a></li>
         <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/uncategorized.html">Uncategorized</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/wordporm.html">wordporm</a></li>
       </ul>
@@ -323,7 +211,7 @@ which should detect the new Arch Linux installation (since we installed the
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <p>
-        <img alt="license" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" style="height: 31px" /><br />
+        <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/LICENSE-content">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
