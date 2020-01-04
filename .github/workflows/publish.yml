@@ -41,7 +41,7 @@ jobs:
 
     - name: Lint content
       run: |
-        rst-lint content/*.rst
+        make lint
 
     - name: Publish
       run: |
