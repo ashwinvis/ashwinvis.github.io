@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-01-04T00:00:00+01:00</updated><entry><title>Back to Arch Linux</title><link href="https://ashwin.info.tm/back-to-arch-linux.html" rel="alternate"></link><published>2020-01-03T10:00:41+01:00</published><updated>2020-01-04T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-03:/back-to-arch-linux.html</id><summary type="html">&lt;p&gt;Within a Ubuntu LTS pre-installed laptop&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-01-13T00:00:00+01:00</updated><entry><title>Back to Arch Linux</title><link href="https://ashwin.info.tm/back-to-arch-linux.html" rel="alternate"></link><published>2020-01-03T10:00:41+01:00</published><updated>2020-01-13T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-03:/back-to-arch-linux.html</id><summary type="html">&lt;p&gt;Within a Ubuntu LTS pre-installed laptop&lt;/p&gt;
 </summary><content type="html">&lt;section id="why"&gt;
 &lt;h2&gt;Why&lt;/h2&gt;
 &lt;p&gt;It was October 2019. New job, new laptop.&lt;/p&gt;
@@ -109,6 +109,226 @@ which should detect the new Arch Linux installation (since we installed the
 GRUB_DISABLE_OS_PROBER=true&lt;/pre&gt;
 &lt;p&gt;which when commented out, it started working. Follow this by &lt;code&gt;update-grub&lt;/code&gt; or
 &lt;code&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/code&gt; and it is good to go.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="epilogue-some-personal-choices"&gt;
+&lt;h2&gt;Epilogue: some personal choices&lt;/h2&gt;
+&lt;p&gt;What follows below are not necessary but I note it down for future reference.
+Here are the packages I chose to install:&lt;/p&gt;
+&lt;pre&gt;neovim vim code  # editors
+plasma kdegraphics-thumbnailers # KDE desktop meta package
+konsole
+acpi
+inetutils  # many network commands, including hostname
+openssh
+parted  # partitioning tool
+xonsh zsh # alternatives to bash
+tlp  # CPU and FAN governor
+man-db  # man pages
+arch-wiki-docs  # provides wiki-search
+arch-wiki-lite  # and wiki-search-html commands
+ttf-joypixels ttf-roboto adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-arphic-uming terminus-font  # extra fonts
+libreoffice-fresh  # writer, calc, impress...
+gcc-fortran gcc-go rust  # compilers
+pacman-contrib reflector  # pacman utilities
+firefox thunderbird zeal okular ark nextcloud-client mplayer  # ... and more applications
+flatpak  # for sandboxing non-free applications&lt;/pre&gt;
+&lt;p&gt;An AUR helper:&lt;/p&gt;
+&lt;pre&gt;$ git clone https://aur.archlinux.org/yay.git
+$ cd yay &amp;amp;&amp;amp; makepkg -s
+# pacman -U /home/avmo/.cache/makepkg/yay-*&lt;/pre&gt;
+&lt;p&gt;Check and activate periodic &lt;a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM"&gt;TRIM&lt;/a&gt; for long-term performance:&lt;/p&gt;
+&lt;pre&gt;$ lsblk --discard
+NAME        DISC-ALN DISC-GRAN DISC-MAX DISC-ZERO
+nvme0n1            0      512B       2T         0
+|-nvme0n1p1        0      512B       2T         0
+|-nvme0n1p2        0      512B       2T         0
+|-nvme0n1p3        0      512B       2T         0
+|-nvme0n1p4        0      512B       2T         0
+|-nvme0n1p5        0      512B       2T         0
+`-nvme0n1p6        0      512B       2T         0
+
+# systemctl enable fstrim.timer
+Created symlink /etc/systemd/system/timers.target.wants/fstrim.timer → /usr/lib/systemd/system/fstrim.timer.&lt;/pre&gt;
+&lt;p&gt;Format a &lt;a href="https://wiki.archlinux.org/index.php/Swap"&gt;swap&lt;/a&gt; partition in the empty space available and mount it with &lt;a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM"&gt;TRIM&lt;/a&gt;
+(&lt;code&gt;discard&lt;/code&gt;) support:&lt;/p&gt;
+&lt;pre&gt;# parted /dev/nvme0n1
+GNU Parted 3.3
+Using /dev/nvme0n1
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) print
+Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
+Disk /dev/nvme0n1: 512GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:
+
+Number  Start   End     Size    File system  Name                  Flags
+ 1      1049kB  819MB   818MB   fat32        EFI system partition  boot, esp
+ 2      819MB   6188MB  5369MB  fat32        Basic data partition  msftres
+ 3      6188MB  140GB   134GB   ext4
+ 4      194GB   301GB   107GB   btrfs
+ 5      405GB   512GB   107GB   ext4
+
+(parted) mkpart primary linux-swap 140GB 194GB
+(parted) print
+Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
+Disk /dev/nvme0n1: 512GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:
+
+Number  Start   End     Size    File system     Name                  Flags
+ 1      1049kB  819MB   818MB   fat32           EFI system partition  boot, esp
+ 2      819MB   6188MB  5369MB  fat32           Basic data partition  msftres
+ 3      6188MB  140GB   134GB   ext4
+ 6      140GB   194GB   53.7GB  linux-swap(v1)  primary
+ 4      194GB   301GB   107GB   btrfs
+ 5      405GB   512GB   107GB   ext4
+
+(parted) quit
+# mkswap /dev/nvme0n1p6
+Setting up swapspace version 1, size = 50 GiB (53687087104 bytes)
+no label, UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40
+# swapon --discard
+# echo &amp;quot;UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40 none swap defaults,discard 0 0&amp;quot; &amp;gt;&amp;gt; /etc/fstab&lt;/pre&gt;
+&lt;p&gt;Installed an alternative shell (as listed in &lt;code&gt;/etc/shells&lt;/code&gt;) and added myself
+as a user:&lt;/p&gt;
+&lt;pre&gt;# useradd --no-create-home --uid 1001 --user-group avmo --shell /usr/bin/xonsh
+# passwd avmo&lt;/pre&gt;
+&lt;p&gt;Then to make the desktop and essential components appear:&lt;/p&gt;
+&lt;pre&gt;# systemctl enable sddm NetworkManager tlp&lt;/pre&gt;
+&lt;p&gt;Configure sensors from &lt;code&gt;lm_sensors&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;# sensors-detect
+# sensors
+Adapter: ISA adapter
+Package id 0:  +45.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +45.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 2:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 3:        +47.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 4:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 5:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
+
+dell_smm-virtual-0
+Adapter: Virtual device
+fan1:        2288 RPM
+fan2:        2317 RPM
+
+pch_cannonlake-virtual-0
+Adapter: Virtual device
+temp1:        +55.0°C
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0°C  (crit = +107.0°C)
+
+iwlwifi-virtual-0
+Adapter: Virtual device
+temp1:        +48.0°C
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:          12.80 V
+curr1:       1000.00 uA&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="nvidia"&gt;
+&lt;h2&gt;Nvidia&lt;/h2&gt;
+&lt;p&gt;The riskiest part, IMHO, although it is well &lt;a href="https://wiki.archlinux.org/index.php/NVIDIA"&gt;documented&lt;/a&gt;. The driver package
+depends on the GPU model and the kernel. Thankfully no kernel panic occurred by
+installing:&lt;/p&gt;
+&lt;pre&gt;# pacman -S nvidia xorg-xrandr&lt;/pre&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;If anything goes wrong, it often helped by simply clearing up
+&lt;code&gt;/etc/X11/xorg.conf.d&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;section id="option-1-nvidia-alone"&gt;
+&lt;h3&gt;Option 1: Nvidia alone&lt;/h3&gt;
+&lt;p&gt;Tried:&lt;/p&gt;
+&lt;pre&gt;# nvidia-xconfig&lt;/pre&gt;
+&lt;p&gt;However, SDDM did not start when X server was configured to use &lt;code&gt;nvidia&lt;/code&gt;
+display driver. The key was to run some commands &lt;a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#SDDM"&gt;before SDDM&lt;/a&gt; starts, with
+the following lines in &lt;code&gt;/usr/share/sddm/scripts/Xsetup&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class="m-code"&gt;xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="option-2-optimus-prime"&gt;
+&lt;h3&gt;Option 2: Optimus Prime&lt;/h3&gt;
+&lt;p&gt;After reading a bit more, I chose NOT to do Option 1, but instead go for
+&lt;a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Using_PRIME_render_offload"&gt;switchable&lt;/a&gt; graphics. The following package provides a &lt;code&gt;prime-run&lt;/code&gt; command
+and a X server configuration:&lt;/p&gt;
+&lt;pre&gt;# pacman -S nvidia-prime&lt;/pre&gt;
+&lt;p&gt;Rebooted and verified it:&lt;/p&gt;
+&lt;pre&gt;$ xrandr --listproviders
+Providers: number : 2
+Provider 0: id: 0x48 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 3 outputs: 6 associated providers: 0 name:modesetting
+Provider 1: id: 0x2a3 cap: 0x0 crtcs: 0 outputs: 0 associated providers: 0 name:NVIDIA-G0
+
+# pacman -S mesa-demos
+$ prime-run glxinfo | grep OpenGL&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="finally"&gt;
+&lt;h3&gt;Finally&lt;/h3&gt;
+&lt;p&gt;There was a small &lt;a href="https://bbs.archlinux.org/viewtopic.php?id=251919"&gt;hiccup&lt;/a&gt; in detecting the external HDMI monitor. Turns out it
+was &lt;a href="https://git.archlinux.org/svntogit/packages.git/commit/trunk?h=packages/nvidia-utils&amp;amp;id=65ce50c4fd7388e91987cd2d271881e4ae126902"&gt;regression&lt;/a&gt; due to a change in &lt;code&gt;nvidia-utils&lt;/code&gt;. It was fixed by adding
+back the line:&lt;/p&gt;
+&lt;pre&gt;Option &amp;quot;PrimaryGPU&amp;quot; &amp;quot;yes&amp;quot;&lt;/pre&gt;
+&lt;p&gt;to &lt;code&gt;/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf&lt;/code&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="cuda"&gt;
+&lt;h2&gt;CUDA&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://wiki.archlinux.org/index.php/GPGPU#CUDA"&gt;Installation&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;# pacman -S cuda&lt;/pre&gt;
+&lt;p&gt;Testing:&lt;/p&gt;
+&lt;pre&gt;$ cp -r /opt/cuda/samples/ .
+$ cd samples/1_Utilities/deviceQuery
+$ make
+$ ./deviceQuery
+./deviceQuery Starting...
+
+ CUDA Device Query (Runtime API) version (CUDART static linking)
+
+Detected 1 CUDA Capable device(s)
+
+Device 0: &amp;quot;Quadro RTX 3000&amp;quot;
+  CUDA Driver Version / Runtime Version          10.2 / 10.2
+  CUDA Capability Major/Minor version number:    7.5
+  Total amount of global memory:                 5935 MBytes (6222839808 bytes)
+  (30) Multiprocessors, ( 64) CUDA Cores/MP:     1920 CUDA Cores
+  GPU Max Clock rate:                            1380 MHz (1.38 GHz)
+  Memory Clock rate:                             7001 Mhz
+  Memory Bus Width:                              192-bit
+  L2 Cache Size:                                 3145728 bytes
+  Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
+  Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
+  Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 65536
+  Warp size:                                     32
+  Maximum number of threads per multiprocessor:  1024
+  Maximum number of threads per block:           1024
+  Max dimension size of a thread block (x,y,z): (1024, 1024, 64)
+  Max dimension size of a grid size    (x,y,z): (2147483647, 65535, 65535)
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             512 bytes
+  Concurrent copy and kernel execution:          Yes with 3 copy engine(s)
+  Run time limit on kernels:                     Yes
+  Integrated GPU sharing Host Memory:            No
+  Support host page-locked memory mapping:       Yes
+  Alignment requirement for Surfaces:            Yes
+  Device has ECC support:                        Disabled
+  Device supports Unified Addressing (UVA):      Yes
+  Device supports Compute Preemption:            Yes
+  Supports Cooperative Kernel Launch:            Yes
+  Supports MultiDevice Co-op Kernel Launch:      Yes
+  Device PCI Domain ID / Bus ID / location ID:   0 / 1 / 0
+  Compute Mode:
+     &amp;lt; Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) &amp;gt;
+
+deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Version = 10.2, NumDevs = 1
+Result = PASS&lt;/pre&gt;
 &lt;/section&gt;
 </content><category term="software"></category><category term="linux"></category><category term="ubuntu"></category><category term="archlinux"></category></entry><entry><title>Turning Pelican into a mini-CMS</title><link href="https://ashwin.info.tm/pelican-mini-cms.html" rel="alternate"></link><published>2020-01-02T14:12:41+01:00</published><updated>2020-01-02T14:12:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-02:/pelican-mini-cms.html</id><summary type="html">&lt;p&gt;Lowering writing inhibitions with tech&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;I like automating things. This means I write small nifty tools to do

@@ -206,10 +206,230 @@ GRUB_DISABLE_OS_PROBER=true</pre>
 <p>which when commented out, it started working. Follow this by <code>update-grub</code> or
 <code>grub-mkconfig -o /boot/grub/grub.cfg</code> and it is good to go.</p>
 </section>
+<section id="epilogue-some-personal-choices">
+<h2>Epilogue: some personal choices</h2>
+<p>What follows below are not necessary but I note it down for future reference.
+Here are the packages I chose to install:</p>
+<pre>neovim vim code  # editors
+plasma kdegraphics-thumbnailers # KDE desktop meta package
+konsole
+acpi
+inetutils  # many network commands, including hostname
+openssh
+parted  # partitioning tool
+xonsh zsh # alternatives to bash
+tlp  # CPU and FAN governor
+man-db  # man pages
+arch-wiki-docs  # provides wiki-search
+arch-wiki-lite  # and wiki-search-html commands
+ttf-joypixels ttf-roboto adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-arphic-uming terminus-font  # extra fonts
+libreoffice-fresh  # writer, calc, impress...
+gcc-fortran gcc-go rust  # compilers
+pacman-contrib reflector  # pacman utilities
+firefox thunderbird zeal okular ark nextcloud-client mplayer  # ... and more applications
+flatpak  # for sandboxing non-free applications</pre>
+<p>An AUR helper:</p>
+<pre>$ git clone https://aur.archlinux.org/yay.git
+$ cd yay &amp;&amp; makepkg -s
+# pacman -U /home/avmo/.cache/makepkg/yay-*</pre>
+<p>Check and activate periodic <a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM">TRIM</a> for long-term performance:</p>
+<pre>$ lsblk --discard
+NAME        DISC-ALN DISC-GRAN DISC-MAX DISC-ZERO
+nvme0n1            0      512B       2T         0
+|-nvme0n1p1        0      512B       2T         0
+|-nvme0n1p2        0      512B       2T         0
+|-nvme0n1p3        0      512B       2T         0
+|-nvme0n1p4        0      512B       2T         0
+|-nvme0n1p5        0      512B       2T         0
+`-nvme0n1p6        0      512B       2T         0
+
+# systemctl enable fstrim.timer
+Created symlink /etc/systemd/system/timers.target.wants/fstrim.timer → /usr/lib/systemd/system/fstrim.timer.</pre>
+<p>Format a <a href="https://wiki.archlinux.org/index.php/Swap">swap</a> partition in the empty space available and mount it with <a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM">TRIM</a>
+(<code>discard</code>) support:</p>
+<pre># parted /dev/nvme0n1
+GNU Parted 3.3
+Using /dev/nvme0n1
+Welcome to GNU Parted! Type 'help' to view a list of commands.
+(parted) print
+Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
+Disk /dev/nvme0n1: 512GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:
+
+Number  Start   End     Size    File system  Name                  Flags
+ 1      1049kB  819MB   818MB   fat32        EFI system partition  boot, esp
+ 2      819MB   6188MB  5369MB  fat32        Basic data partition  msftres
+ 3      6188MB  140GB   134GB   ext4
+ 4      194GB   301GB   107GB   btrfs
+ 5      405GB   512GB   107GB   ext4
+
+(parted) mkpart primary linux-swap 140GB 194GB
+(parted) print
+Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
+Disk /dev/nvme0n1: 512GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:
+
+Number  Start   End     Size    File system     Name                  Flags
+ 1      1049kB  819MB   818MB   fat32           EFI system partition  boot, esp
+ 2      819MB   6188MB  5369MB  fat32           Basic data partition  msftres
+ 3      6188MB  140GB   134GB   ext4
+ 6      140GB   194GB   53.7GB  linux-swap(v1)  primary
+ 4      194GB   301GB   107GB   btrfs
+ 5      405GB   512GB   107GB   ext4
+
+(parted) quit
+# mkswap /dev/nvme0n1p6
+Setting up swapspace version 1, size = 50 GiB (53687087104 bytes)
+no label, UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40
+# swapon --discard
+# echo &quot;UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40 none swap defaults,discard 0 0&quot; &gt;&gt; /etc/fstab</pre>
+<p>Installed an alternative shell (as listed in <code>/etc/shells</code>) and added myself
+as a user:</p>
+<pre># useradd --no-create-home --uid 1001 --user-group avmo --shell /usr/bin/xonsh
+# passwd avmo</pre>
+<p>Then to make the desktop and essential components appear:</p>
+<pre># systemctl enable sddm NetworkManager tlp</pre>
+<p>Configure sensors from <code>lm_sensors</code>:</p>
+<pre># sensors-detect
+# sensors
+Adapter: ISA adapter
+Package id 0:  +45.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +45.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 2:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 3:        +47.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 4:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 5:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
+
+dell_smm-virtual-0
+Adapter: Virtual device
+fan1:        2288 RPM
+fan2:        2317 RPM
+
+pch_cannonlake-virtual-0
+Adapter: Virtual device
+temp1:        +55.0°C
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0°C  (crit = +107.0°C)
+
+iwlwifi-virtual-0
+Adapter: Virtual device
+temp1:        +48.0°C
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:          12.80 V
+curr1:       1000.00 uA</pre>
+</section>
+<section id="nvidia">
+<h2>Nvidia</h2>
+<p>The riskiest part, IMHO, although it is well <a href="https://wiki.archlinux.org/index.php/NVIDIA">documented</a>. The driver package
+depends on the GPU model and the kernel. Thankfully no kernel panic occurred by
+installing:</p>
+<pre># pacman -S nvidia xorg-xrandr</pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If anything goes wrong, it often helped by simply clearing up
+<code>/etc/X11/xorg.conf.d</code>.</p>
+</div>
+<section id="option-1-nvidia-alone">
+<h3>Option 1: Nvidia alone</h3>
+<p>Tried:</p>
+<pre># nvidia-xconfig</pre>
+<p>However, SDDM did not start when X server was configured to use <code>nvidia</code>
+display driver. The key was to run some commands <a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#SDDM">before SDDM</a> starts, with
+the following lines in <code>/usr/share/sddm/scripts/Xsetup</code>.</p>
+<pre class="m-code">xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto</pre>
+</section>
+<section id="option-2-optimus-prime">
+<h3>Option 2: Optimus Prime</h3>
+<p>After reading a bit more, I chose NOT to do Option 1, but instead go for
+<a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Using_PRIME_render_offload">switchable</a> graphics. The following package provides a <code>prime-run</code> command
+and a X server configuration:</p>
+<pre># pacman -S nvidia-prime</pre>
+<p>Rebooted and verified it:</p>
+<pre>$ xrandr --listproviders
+Providers: number : 2
+Provider 0: id: 0x48 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 3 outputs: 6 associated providers: 0 name:modesetting
+Provider 1: id: 0x2a3 cap: 0x0 crtcs: 0 outputs: 0 associated providers: 0 name:NVIDIA-G0
+
+# pacman -S mesa-demos
+$ prime-run glxinfo | grep OpenGL</pre>
+</section>
+<section id="finally">
+<h3>Finally</h3>
+<p>There was a small <a href="https://bbs.archlinux.org/viewtopic.php?id=251919">hiccup</a> in detecting the external HDMI monitor. Turns out it
+was <a href="https://git.archlinux.org/svntogit/packages.git/commit/trunk?h=packages/nvidia-utils&amp;id=65ce50c4fd7388e91987cd2d271881e4ae126902">regression</a> due to a change in <code>nvidia-utils</code>. It was fixed by adding
+back the line:</p>
+<pre>Option &quot;PrimaryGPU&quot; &quot;yes&quot;</pre>
+<p>to <code>/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf</code>.</p>
+</section>
+</section>
+<section id="cuda">
+<h2>CUDA</h2>
+<p><a href="https://wiki.archlinux.org/index.php/GPGPU#CUDA">Installation</a>:</p>
+<pre># pacman -S cuda</pre>
+<p>Testing:</p>
+<pre>$ cp -r /opt/cuda/samples/ .
+$ cd samples/1_Utilities/deviceQuery
+$ make
+$ ./deviceQuery
+./deviceQuery Starting...
+
+ CUDA Device Query (Runtime API) version (CUDART static linking)
+
+Detected 1 CUDA Capable device(s)
+
+Device 0: &quot;Quadro RTX 3000&quot;
+  CUDA Driver Version / Runtime Version          10.2 / 10.2
+  CUDA Capability Major/Minor version number:    7.5
+  Total amount of global memory:                 5935 MBytes (6222839808 bytes)
+  (30) Multiprocessors, ( 64) CUDA Cores/MP:     1920 CUDA Cores
+  GPU Max Clock rate:                            1380 MHz (1.38 GHz)
+  Memory Clock rate:                             7001 Mhz
+  Memory Bus Width:                              192-bit
+  L2 Cache Size:                                 3145728 bytes
+  Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
+  Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
+  Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 65536
+  Warp size:                                     32
+  Maximum number of threads per multiprocessor:  1024
+  Maximum number of threads per block:           1024
+  Max dimension size of a thread block (x,y,z): (1024, 1024, 64)
+  Max dimension size of a grid size    (x,y,z): (2147483647, 65535, 65535)
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             512 bytes
+  Concurrent copy and kernel execution:          Yes with 3 copy engine(s)
+  Run time limit on kernels:                     Yes
+  Integrated GPU sharing Host Memory:            No
+  Support host page-locked memory mapping:       Yes
+  Alignment requirement for Surfaces:            Yes
+  Device has ECC support:                        Disabled
+  Device supports Unified Addressing (UVA):      Yes
+  Device supports Compute Preemption:            Yes
+  Supports Cooperative Kernel Launch:            Yes
+  Supports MultiDevice Co-op Kernel Launch:      Yes
+  Device PCI Domain ID / Bus ID / location ID:   0 / 1 / 0
+  Compute Mode:
+     &lt; Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) &gt;
+
+deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Version = 10.2, NumDevs = 1
+Result = PASS</pre>
+</section>
 </div>
 <!-- /content -->
       <footer>
-        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-03T10:00:41.042526+01:00" class="dt-published">Fri 03 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-01-04T00:00:00+01:00" class="dt-updated">Sat 04 January 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/linux.html">linux</a>, <a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a>, <a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a>.</p>
+        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-03T10:00:41.042526+01:00" class="dt-published">Fri 03 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-01-13T00:00:00+01:00" class="dt-updated">Mon 13 January 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/linux.html">linux</a>, <a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a>, <a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a>.</p>
       </footer>
     </article>
     <nav class="m-navpanel m-col-m-2">
