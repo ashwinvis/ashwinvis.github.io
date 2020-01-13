@@ -3,7 +3,7 @@ Back to Arch Linux
 
 :author: Ashwin Vishnu Mohanan
 :date: 2020-01-03T10:00:41.042526
-:modified: 2020-01-04
+:modified: 2020-01-13
 :slug: back-to-arch-linux
 :status: published
 :summary: Within a Ubuntu LTS pre-installed laptop
@@ -177,3 +177,267 @@ which when commented out, it started working. Follow this by ``update-grub`` or
 
 .. _GRUB: https://wiki.archlinux.org/index.php/GRUB#Detecting_other_operating_systems
 .. _Turns out: https://askubuntu.com/questions/111085/how-do-i-hide-the-grub-menu-showing-up-at-the-beginning-of-boot
+
+Epilogue: some personal choices
+-------------------------------
+What follows below are not necessary but I note it down for future reference.
+Here are the packages I chose to install::
+
+  neovim vim code  # editors
+  plasma kdegraphics-thumbnailers # KDE desktop meta package
+  konsole
+  acpi
+  inetutils  # many network commands, including hostname
+  openssh
+  parted  # partitioning tool
+  xonsh zsh # alternatives to bash
+  tlp  # CPU and FAN governor
+  man-db  # man pages
+  arch-wiki-docs  # provides wiki-search
+  arch-wiki-lite  # and wiki-search-html commands
+  ttf-joypixels ttf-roboto adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-arphic-uming terminus-font  # extra fonts
+  libreoffice-fresh  # writer, calc, impress...
+  gcc-fortran gcc-go rust  # compilers
+  pacman-contrib reflector  # pacman utilities
+  firefox thunderbird zeal okular ark nextcloud-client mplayer  # ... and more applications
+  flatpak  # for sandboxing non-free applications
+
+An AUR helper::
+
+  $ git clone https://aur.archlinux.org/yay.git
+  $ cd yay && makepkg -s
+  # pacman -U /home/avmo/.cache/makepkg/yay-*
+
+Check and activate periodic TRIM_ for long-term performance::
+
+  $ lsblk --discard
+  NAME        DISC-ALN DISC-GRAN DISC-MAX DISC-ZERO
+  nvme0n1            0      512B       2T         0
+  |-nvme0n1p1        0      512B       2T         0
+  |-nvme0n1p2        0      512B       2T         0
+  |-nvme0n1p3        0      512B       2T         0
+  |-nvme0n1p4        0      512B       2T         0
+  |-nvme0n1p5        0      512B       2T         0
+  `-nvme0n1p6        0      512B       2T         0
+
+  # systemctl enable fstrim.timer
+  Created symlink /etc/systemd/system/timers.target.wants/fstrim.timer → /usr/lib/systemd/system/fstrim.timer.
+
+Format a swap_ partition in the empty space available and mount it with TRIM_
+(``discard``) support::
+
+  # parted /dev/nvme0n1
+  GNU Parted 3.3
+  Using /dev/nvme0n1
+  Welcome to GNU Parted! Type 'help' to view a list of commands.
+  (parted) print
+  Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
+  Disk /dev/nvme0n1: 512GB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: gpt
+  Disk Flags:
+
+  Number  Start   End     Size    File system  Name                  Flags
+   1      1049kB  819MB   818MB   fat32        EFI system partition  boot, esp
+   2      819MB   6188MB  5369MB  fat32        Basic data partition  msftres
+   3      6188MB  140GB   134GB   ext4
+   4      194GB   301GB   107GB   btrfs
+   5      405GB   512GB   107GB   ext4
+
+  (parted) mkpart primary linux-swap 140GB 194GB
+  (parted) print
+  Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
+  Disk /dev/nvme0n1: 512GB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: gpt
+  Disk Flags:
+
+  Number  Start   End     Size    File system     Name                  Flags
+   1      1049kB  819MB   818MB   fat32           EFI system partition  boot, esp
+   2      819MB   6188MB  5369MB  fat32           Basic data partition  msftres
+   3      6188MB  140GB   134GB   ext4
+   6      140GB   194GB   53.7GB  linux-swap(v1)  primary
+   4      194GB   301GB   107GB   btrfs
+   5      405GB   512GB   107GB   ext4
+
+  (parted) quit
+  # mkswap /dev/nvme0n1p6
+  Setting up swapspace version 1, size = 50 GiB (53687087104 bytes)
+  no label, UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40
+  # swapon --discard
+  # echo "UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40 none swap defaults,discard 0 0" >> /etc/fstab
+
+Installed an alternative shell (as listed in ``/etc/shells``) and added myself
+as a user::
+
+  # useradd --no-create-home --uid 1001 --user-group avmo --shell /usr/bin/xonsh
+  # passwd avmo
+
+Then to make the desktop and essential components appear::
+
+  # systemctl enable sddm NetworkManager tlp
+
+Configure sensors from ``lm_sensors``::
+
+  # sensors-detect
+  # sensors
+  Adapter: ISA adapter
+  Package id 0:  +45.0°C  (high = +100.0°C, crit = +100.0°C)
+  Core 0:        +45.0°C  (high = +100.0°C, crit = +100.0°C)
+  Core 1:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
+  Core 2:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
+  Core 3:        +47.0°C  (high = +100.0°C, crit = +100.0°C)
+  Core 4:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
+  Core 5:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
+
+  dell_smm-virtual-0
+  Adapter: Virtual device
+  fan1:        2288 RPM
+  fan2:        2317 RPM
+
+  pch_cannonlake-virtual-0
+  Adapter: Virtual device
+  temp1:        +55.0°C
+
+  acpitz-acpi-0
+  Adapter: ACPI interface
+  temp1:        +25.0°C  (crit = +107.0°C)
+
+  iwlwifi-virtual-0
+  Adapter: Virtual device
+  temp1:        +48.0°C
+
+  BAT0-acpi-0
+  Adapter: ACPI interface
+  in0:          12.80 V
+  curr1:       1000.00 uA
+
+.. _TRIM: https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM
+.. _swap: https://wiki.archlinux.org/index.php/Swap
+
+Nvidia
+------
+
+The riskiest part, IMHO, although it is well documented_. The driver package
+depends on the GPU model and the kernel. Thankfully no kernel panic occurred by
+installing::
+
+  # pacman -S nvidia xorg-xrandr
+
+.. note::
+
+  If anything goes wrong, it often helped by simply clearing up
+  ``/etc/X11/xorg.conf.d``.
+
+Option 1: Nvidia alone
+~~~~~~~~~~~~~~~~~~~~~~
+
+Tried::
+
+  # nvidia-xconfig
+
+However, SDDM did not start when X server was configured to use ``nvidia``
+display driver with::
+
+The key_ was to run some commands `before SDDM`_ starts, with the following
+lines in ``/usr/share/sddm/scripts/Xsetup``.
+
+.. code:: bash
+
+  xrandr --setprovideroutputsource modesetting NVIDIA-0
+  xrandr --auto
+
+Option 2: Optimus Prime
+~~~~~~~~~~~~~~~~~~~~~~~
+
+After reading a bit more, I chose NOT to do Option 1, but instead go for
+switchable_ graphics. The following package provides a ``prime-run`` command
+and a X server configuration::
+
+  # pacman -S nvidia-prime
+
+Rebooted and verified it::
+
+  $ xrandr --listproviders
+  Providers: number : 2
+  Provider 0: id: 0x48 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 3 outputs: 6 associated providers: 0 name:modesetting
+  Provider 1: id: 0x2a3 cap: 0x0 crtcs: 0 outputs: 0 associated providers: 0 name:NVIDIA-G0
+
+  # pacman -S mesa-demos
+  $ prime-run glxinfo | grep OpenGL
+
+Finally
+~~~~~~~
+
+There was a small hiccup_ in detecting the external HDMI monitor. Turns out it
+was regression_ due to a change in ``nvidia-utils``. It was fixed by adding
+back the line::
+
+  Option "PrimaryGPU" "yes"
+
+to ``/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf``.
+
+CUDA
+----
+Installation_::
+
+  # pacman -S cuda
+
+Testing::
+
+  $ cp -r /opt/cuda/samples/ .
+  $ cd samples/1_Utilities/deviceQuery
+  $ make
+  $ ./deviceQuery
+  ./deviceQuery Starting...
+
+   CUDA Device Query (Runtime API) version (CUDART static linking)
+
+  Detected 1 CUDA Capable device(s)
+
+  Device 0: "Quadro RTX 3000"
+    CUDA Driver Version / Runtime Version          10.2 / 10.2
+    CUDA Capability Major/Minor version number:    7.5
+    Total amount of global memory:                 5935 MBytes (6222839808 bytes)
+    (30) Multiprocessors, ( 64) CUDA Cores/MP:     1920 CUDA Cores
+    GPU Max Clock rate:                            1380 MHz (1.38 GHz)
+    Memory Clock rate:                             7001 Mhz
+    Memory Bus Width:                              192-bit
+    L2 Cache Size:                                 3145728 bytes
+    Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
+    Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
+    Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
+    Total amount of constant memory:               65536 bytes
+    Total amount of shared memory per block:       49152 bytes
+    Total number of registers available per block: 65536
+    Warp size:                                     32
+    Maximum number of threads per multiprocessor:  1024
+    Maximum number of threads per block:           1024
+    Max dimension size of a thread block (x,y,z): (1024, 1024, 64)
+    Max dimension size of a grid size    (x,y,z): (2147483647, 65535, 65535)
+    Maximum memory pitch:                          2147483647 bytes
+    Texture alignment:                             512 bytes
+    Concurrent copy and kernel execution:          Yes with 3 copy engine(s)
+    Run time limit on kernels:                     Yes
+    Integrated GPU sharing Host Memory:            No
+    Support host page-locked memory mapping:       Yes
+    Alignment requirement for Surfaces:            Yes
+    Device has ECC support:                        Disabled
+    Device supports Unified Addressing (UVA):      Yes
+    Device supports Compute Preemption:            Yes
+    Supports Cooperative Kernel Launch:            Yes
+    Supports MultiDevice Co-op Kernel Launch:      Yes
+    Device PCI Domain ID / Bus ID / location ID:   0 / 1 / 0
+    Compute Mode:
+       < Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) >
+
+  deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Version = 10.2, NumDevs = 1
+  Result = PASS
+
+
+.. _documented: https://wiki.archlinux.org/index.php/NVIDIA
+.. _key: https://wiki.archlinux.org/index.php/NVIDIA_Optimus#SDDM
+.. _switchable: https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Using_PRIME_render_offload
+.. _hiccup: https://bbs.archlinux.org/viewtopic.php?id=251919
+.. _regression: https://git.archlinux.org/svntogit/packages.git/commit/trunk?h=packages/nvidia-utils&id=65ce50c4fd7388e91987cd2d271881e4ae126902
+.. _Installation: https://wiki.archlinux.org/index.php/GPGPU#CUDA
