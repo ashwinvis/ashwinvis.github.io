@@ -337,15 +337,15 @@ Tried::
   # nvidia-xconfig
 
 However, SDDM did not start when X server was configured to use ``nvidia``
-display driver with::
-
-The key_ was to run some commands `before SDDM`_ starts, with the following
-lines in ``/usr/share/sddm/scripts/Xsetup``.
+display driver. The key was to run some commands `before SDDM`_ starts, with
+the following lines in ``/usr/share/sddm/scripts/Xsetup``.
 
 .. code:: bash
 
   xrandr --setprovideroutputsource modesetting NVIDIA-0
   xrandr --auto
+
+.. _before SDDM: https://wiki.archlinux.org/index.php/NVIDIA_Optimus#SDDM
 
 Option 2: Optimus Prime
 ~~~~~~~~~~~~~~~~~~~~~~~
