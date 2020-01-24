@@ -45,7 +45,10 @@ DEFAULT_METADATA = {
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
-STATIC_PATHS = ["images", "showcase", "pdf", "static"]
+STATIC_PATHS = ["images", "showcase", "pdf", "static", "extra/robots.txt"]
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+}
 DIRECT_TEMPLATES = (
     "index",
     "tags",
