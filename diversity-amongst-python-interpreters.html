@@ -1157,6 +1157,8 @@ h6:hover .anchor-link {
  .highlight pre  .gd { color: #f92672 } /* Generic.Deleted */
  .highlight pre  .ge { font-style: italic } /* Generic.Emph */
  .highlight pre  .gi { color: #a6e22e } /* Generic.Inserted */
+ .highlight pre  .go { color: #66d9ef } /* Generic.Output */
+ .highlight pre  .gp { color: #f92672; font-weight: bold } /* Generic.Prompt */
  .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
  .highlight pre  .gu { color: #75715e } /* Generic.Subheading */
  .highlight pre  .kc { color: #66d9ef } /* Keyword.Constant */
@@ -1291,15 +1293,15 @@ and not breaking compatibility.</p>
 <h1 id="Performance!">Performance!<a class="anchor-link" href="#Performance!">&#182;</a></h1><p>Note that it is possible to get really good performance with CPython by writing extensions using Pythran, Numba etc.
 Let's see if how much faster can these alternate implementations be, based on a naive benchmark, loop hundred
 million times, and do nothing.</p>
-<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span><span class="n">_000_000</span>
+<div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100_000_000</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 <p>and a <a href="https://pymotw.com/2/itertools/">slightly more efficient looping</a></p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">repeat</span>
 
-<span class="n">N</span> <span class="o">=</span> <span class="mi">100</span><span class="n">_000_000</span>
-<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">repeat</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100_000_000</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">repeat</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
     <span class="k">pass</span>
 </pre></div>
 

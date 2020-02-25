@@ -1185,6 +1185,8 @@ h6:hover .anchor-link {
  .highlight pre  .gd { color: #f92672 } /* Generic.Deleted */
  .highlight pre  .ge { font-style: italic } /* Generic.Emph */
  .highlight pre  .gi { color: #a6e22e } /* Generic.Inserted */
+ .highlight pre  .go { color: #66d9ef } /* Generic.Output */
+ .highlight pre  .gp { color: #f92672; font-weight: bold } /* Generic.Prompt */
  .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
  .highlight pre  .gu { color: #75715e } /* Generic.Subheading */
  .highlight pre  .kc { color: #66d9ef } /* Keyword.Constant */
@@ -1270,7 +1272,7 @@ div.input_prompt {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the quest for optimization and fast computation, while using object-oriented programming, it is a typical technique to initialize the linear algebra array operators as class attributes. Especially in <code>fluidfft</code> we encounter pseudospectral operator classes that look like:</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">fluiddyn.util</span> <span class="kn">import</span> <span class="n">mpi</span>
 
 <span class="k">class</span> <span class="nc">Operator</span><span class="p">:</span>
@@ -1332,13 +1334,13 @@ $$\mathbf{A} =
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="k">import</span> <span class="n">diags</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="k">import</span> <span class="n">inv</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">diags</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 
 <span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Gather input parameters for OUCS3</span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
@@ -1466,7 +1468,7 @@ B =
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="k">import</span> <span class="n">solve_toeplitz</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">solve_toeplitz</span>
 
 <span class="k">class</span> <span class="nc">OUCS3</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A class to perform OUCS3 compact scheme finite differentiation.&quot;&quot;&quot;</span>
@@ -1495,7 +1497,7 @@ B =
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="k">import</span> <span class="n">gausspulse</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">gausspulse</span>
 
 <span class="k">def</span> <span class="nf">init_params_fields</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Initialize parameters and generate a gaussian pulse.&quot;&quot;&quot;</span>
@@ -1636,7 +1638,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="k">import</span> <span class="n">solve_toeplitz</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">solve_toeplitz</span>
 
 <span class="k">class</span> <span class="nc">BaseCached</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
@@ -1664,7 +1666,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">lru_cache</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
     
 <span class="k">class</span> <span class="nc">OUCS3Native</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A native implementation of a ``cached_property``.&quot;&quot;&quot;</span>
@@ -1940,7 +1942,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">werkzeug.utils</span> <span class="k">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">wcached_property</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">werkzeug.utils</span> <span class="kn">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">wcached_property</span>
 
 
 <span class="k">class</span> <span class="nc">OUCS3Werkzeug</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
@@ -2091,7 +2093,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">cached_property</span> <span class="k">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">ccached_property</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">cached_property</span> <span class="kn">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">ccached_property</span>
 
 
 <span class="k">class</span> <span class="nc">OUCS3CachedProperty</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
