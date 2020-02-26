@@ -120,7 +120,7 @@ M_LINKS_FOOTER1 = [
     #   'https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2BF1534545A73FAD'),
     ("GitHub", "https://github.com/ashwinvis"),
     ("Gitlab", "https://source.coderefinery.org/ashwinvis/"),
-    ("Bitbucket", "https://bitbucket.org/avmo"),
+    ("Heptapod", "https://foss.heptapod.net/avmo"),
     ("LinkedIn", "https://www.linkedin.com/in/ashwinvishnu/"),
     ("Mastodon", "https://mastodon.acc.sunet.se/@ashwinvis"),
 ]
