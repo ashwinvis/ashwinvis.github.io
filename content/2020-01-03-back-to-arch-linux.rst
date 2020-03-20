@@ -441,3 +441,17 @@ Testing::
 .. _hiccup: https://bbs.archlinux.org/viewtopic.php?id=251919
 .. _regression: https://git.archlinux.org/svntogit/packages.git/commit/trunk?h=packages/nvidia-utils&id=65ce50c4fd7388e91987cd2d271881e4ae126902
 .. _Installation: https://wiki.archlinux.org/index.php/GPGPU#CUDA
+
+Docker
+------
+Installing docker_ is straightforward, but I wanted to avoid adding my default
+login into the ``docker`` group which is root equivalent. So I created a
+special user to do this::
+
+  # pacman -S docker
+  # systemctl start docker
+  # useradd --no-create-home -g docker docker
+  # passwd
+  $ su - docker
+
+.. _docker: https://wiki.archlinux.org/index.php/Docker#Installation
