@@ -79,6 +79,182 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/cloud-computing.html" rel="bookmark" class="u-url" title="Permalink to Cloud computing for research">
+            <time class="m-date" datetime="2020-03-20T11:29:00+01:00">
+              Mar <span class="m-date-day">20</span> 2020
+            </time>
+            <div class="p-name">
+              Cloud computing for research
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>A journal of how I setup BOINC and <a href="mailto:Folding&#64;home">Folding&#64;home</a> on my laptop running Arch Linux.</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>There is an ongoing effort in all disciplines to find solutions the Covid-19
+pandemic. Be it policy (social distancing, call for people to work from home),
+technology (repurposing auto, beverages and perfume industries to manufacture
+ventilators and hand sanitizers etc., open access to research) and art (hobbies
+and music to stay upbeat at home).</p>
+<p>And then there is BOINC and <a href="mailto:Folding&#64;home">Folding&#64;home</a> - serious research projects which has
+a nice social cloud-computing infrastructure to solve difficult problems. This
+also include molecular dynamics simulations using open-source software like
+GROMACS by different research groups around the world. My laptop has a
+top-notch Quadro RTX 3000 Mobile GPU, so I decided to give it a go.</p>
+<div align="center">
+<iframe src="https://pixelfed.social/p/ashwinvis/146561445096722432/embed?caption=true&likes=false&layout=full" class="pixelfed__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+</div>
+<script async defer src="https://pixelfed.social/embed.js"></script><p>First off some essentials:</p>
+<pre># pacman -S opencl-nvidia cuda nvtop</pre>
+<section id="boinc">
+<h2>BOINC</h2>
+<section id="references">
+<h3>References</h3>
+<ul>
+<li><a href="https://wiki.archlinux.org/index.php/BOINC">https://wiki.archlinux.org/index.php/BOINC</a></li>
+<li><a href="https://boinc.berkeley.edu/projects.php">https://boinc.berkeley.edu/projects.php</a></li>
+<li><a href="http://www.gpugrid.net/join.php">http://www.gpugrid.net/join.php</a></li>
+<li><a href="https://www.gpugrid.net/team_display.php?teamid=2985">https://www.gpugrid.net/team_display.php?teamid=2985</a></li>
+</ul>
+</section>
+<section id="how-to">
+<h3>How to</h3>
+<p>Installing and setting up:</p>
+<pre># pacman -S boinc-nox opencl-nvidia
+# usermod -a -G boinc video
+# systemctl start boinc-client.service
+# systemctl status boinc-client
+● boinc-client.service - Berkeley Open Infrastructure Network Computing Client
+     Loaded: loaded (/usr/lib/systemd/system/boinc-client.service; disabled; vendor preset: disabled)
+     Active: active (running) since Fri 2020-03-20 08:06:50 CET; 1h 44min ago
+       Docs: man:boinc(1)
+   Main PID: 119973 (boinc)
+      Tasks: 2 (limit: 38224)
+     Memory: 9.6M
+     CGroup: /system.slice/boinc-client.service
+             └─119973 /usr/bin/boinc
+
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---]    (to change preferences, visit a project web site or select Preferences in the Manager)
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Setting up project and slot directories
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Checking active tasks
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Setting up GUI RPC socket
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Checking presence of 0 project files
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] This computer is not attached to any projects
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 Initialization completed
+Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Suspending GPU computation - computer is in use
+Mar 20 08:55:30 archmage boinc[119973]: 20-Mar-2020 08:55:30 [---] Resuming GPU computation
+Mar 20 09:14:26 archmage boinc[119973]: 20-Mar-2020 09:14:26 [---] Suspending GPU computation - computer is in use</pre>
+<p>This would generate a password at <code>/var/lib/boinc/gui_rpc_auth.cfg</code>:</p>
+<pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) --get_host_info
+  timezone: 3600
+  domain name: archmage
+  IP addr: 127.0.1.1
+  #CPUS: 12
+  CPU vendor: GenuineIntel
+  CPU model: Intel(R) Core(TM) i7-9850H CPU &#64; 2.60GHz [Family 6 Model 158 Stepping 13]
+  CPU FP OPS: 1000000000.000000
+  CPU int OPS: 1000000000.000000
+  OS name: Linux Arch
+  OS version: Arch Linux [5.5.9-arch1-2|libc 2.31 (GNU libc)]
+  mem size: 33419243520.000000
+  cache size: 12582912.000000
+  swap size: 53687087104.000000
+  disk size: 105152544768.000000
+  disk free: 57508556800.000000
+  NVIDIA GPU: Quadro RTX 3000 (driver version 440.64, CUDA version 10.2, compute capability 7.5, 4096MB, 3970MB available, 5299 GFLOPS peak)
+    OpenCL: NVIDIA 0: Quadro RTX 3000 (driver version 440.64, device version OpenCL 1.2 CUDA, 5935MB, 3970MB available, 5299 GFLOPS peak)</pre>
+<p>Create an account in a project:</p>
+<pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) \
+    --create_account www.gpugrid.net $email $project_passwd $project_username</pre>
+<p>The client should then run while the system is idle.</p>
+</section>
+</section>
+<section id="folding-home">
+<h2>Folding &#64; home</h2>
+<section id="id1">
+<h3>References</h3>
+<ul>
+<li><a href="https://foldingathome.org/start-folding">https://foldingathome.org/start-folding</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Folding&#64;home">https://wiki.archlinux.org/index.php/Folding&#64;home</a></li>
+<li><a href="https://stats.foldingathome.org/team/45032">https://stats.foldingathome.org/team/45032</a></li>
+</ul>
+</section>
+<section id="id2">
+<h3>How to</h3>
+<p>Install:</p>
+<pre># pacman -S foldingathome</pre>
+<p><a href="https://apps.foldingathome.org/getpasskey">Register for an account (optional)</a></p>
+<p>Run as a user:</p>
+<pre>❯ mkdir ~/{.config,.cache}/foldingathome
+❯ cd ~/.config/foldingathome
+❯ FAHClient --configure
+User name [Anonymous]: ****
+Team number [0]: 45032
+Passkey: ****
+Enable SMP [true]: false
+Enable GPU [true]:
+Name of configuration file [config.xml]:
+❯ mkdir -p ~/.config/systemd/user/</pre>
+<p>Create a service <code>~/.config/systemd/user/foldingathome.service</code>:</p>
+<pre class="m-code"><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Run folding at home client</span>
+
+<span class="k">[Service]</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/avmo/.cache/foldingathome</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml</span></pre>
+<p>Execute:</p>
+<pre>❯ systemctl --user start foldingathome.service
+❯ systemctl --user status foldingathome.service
+● foldingathome.service - Run folding at home client
+     Loaded: loaded (/home/avmo/.config/systemd/user/foldingathome.service; static; vendor preset: enabled)
+     Active: active (running) since Fri 2020-03-20 09:38:15 CET; 4s ago
+   Main PID: 149577 (FAHClient)
+     CGroup: /user.slice/user-1001.slice/user&#64;1001.service/foldingathome.service
+             └─149577 /usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml
+
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:  &lt;!-- Folding Slots --&gt;
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:&lt;/config&gt;
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Trying to access database...
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Successfully acquired database lock
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Enabled folding slot 00: READY cpu:1
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Enabled folding slot 01: PAUSED gpu:0:TU106GLM [Quadro RTX 3000 Mobile / Max-Q] (waiting for idle)
+Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:WU00:FS00:Connecting to 65.254.110.245:8080
+Mar 20 09:38:16 archmage FAHClient[149577]: 08:38:16:WU00:FS00:Assigned to work server 128.252.203.9
+Mar 20 09:38:16 archmage FAHClient[149577]: 08:38:16:WU00:FS00:Requesting new work unit for slot 00: READY cpu:1 from 128.252.203.9
+
+# after a while ...
+❯ systemctl --user status foldingathome.service
+● foldingathome.service - Run folding at home client
+     Loaded: loaded (/home/avmo/.config/systemd/user/foldingathome.service; static; vendor preset: enabled)
+     Active: active (running) since Fri 2020-03-20 09:38:15 CET; 19min ago
+   Main PID: 149577 (FAHClient)
+     CGroup: /user.slice/user-1001.slice/user&#64;1001.service/foldingathome.service
+             ├─149577 /usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml
+             ├─153643 /usr/bin/FAHCoreWrapper /home/avmo/.cache/foldingathome/cores/cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah/FahCore_a7 -dir 00 -suffix 01 -ver&gt;
+             └─153647 /home/avmo/.cache/foldingathome/cores/cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah/FahCore_a7 -dir 00 -suffix 01 -version 705 -lifeline 15364&gt;
+
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:********************************************************************************
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Project: 14328 (Run 6, Clone 756, Gen 14)
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Unit: 0x000000109bf7a4d65e6d0ea7eac01f9c
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Reading tar file core.xml
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Reading tar file frame14.tpr
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Digital signatures verified
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Calling: mdrun -s frame14.tpr -o frame14.trr -cpt 15 -nt 1
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Steps: first=3500000 total=250000
+Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Completed 1 out of 250000 steps (0%)
+Mar 20 09:57:25 archmage FAHClient[149577]: 08:57:25:WU00:FS00:0xa7:Completed 2500 out of 250000 steps (1%)</pre>
+<p>While the client is running / idle, you can schedule and tweak using the <a href="http://0.0.0.0:7396/">web client</a>.</p>
+</section>
+</section>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-20T11:29:00+01:00" class="dt-published">Fri 20 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/research.html">research</a>, <a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a>, <a href="https://ashwin.info.tm/tag/hpc.html">hpc</a>.</p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/back-to-arch-linux.html" rel="bookmark" class="u-url" title="Permalink to Back to Arch Linux">
             <time class="m-date" datetime="2020-01-03T10:00:41.042526+01:00">
               Jan <span class="m-date-day">03</span> 2020
@@ -91,342 +267,10 @@
           <p>Within a Ubuntu LTS pre-installed laptop</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<section id="why">
-<h2>Why</h2>
-<p>It was October 2019. New job, new laptop.</p>
-<p>I tried to tell myself to stay with the LTS that was given to me from the
-Canonical and Dell overlords. To be honest, I did not remove Ubuntu from the
-get-go was because I was unsure if I can run Nvidia’s CUDA toolkit on an
-<a href="https://developer.nvidia.com/cuda-downloads?target_os=Linux&amp;target_arch=x86_64/">unlisted</a> OS. In my old laptop (2011-2014) on which I had a Nvidia GPU and
-which ran Manjaro, I would frequently total my installation every time I ran
-<code>pacman -Syu</code>. The X.org display server would just stop functioning and I
-would be left with a terminal to figure out how to get back.</p>
-<p>I thought I could just weed out the bloatware (Google Chrome, Amazon etc.)
-and be content with what I have. Trust the Ubuntu and Dell repositories.</p>
-<p>Fast-forward to January 2020.  Turns out, the project which I am on right now
-may not get started with CUDA development soon. Therefore, a good OS and GCC
-compiler toolchain is all that I need. I have a mutant Ubuntu LTS already with
-all the hacks under the sun to stay up-to-date:</p>
-<ul>
-<li><a href="https://github.com/pyenv/pyenv/">pyenv</a> to have the latest Python</li>
-<li><a href="https://flatpak.org/">flatpak</a> to install some applications which are <em>ancient</em> in the official <a href="https://packages.ubuntu.com/">Ubuntu repos</a> (Okular, Signal, KeepassXC, Zeal, Zotero etc.)</li>
-<li><a href="https://appimage.org/">appimage</a> when <a href="https://flatpak.org/">flatpak</a>’s sandbox is too restrictive (Neovim)</li>
-<li><a href="https://help.ubuntu.com/community/PPA">PPA</a> / unofficial <code>.deb</code> packages from GitHub when the start-up overhead of
-<a href="https://flatpak.org/">flatpak</a> or <a href="https://appimage.org/">appimage</a> is way too high (Neovim, again 😅) or similar reasons
-as above (Nextcloud client, VSCodium etc.)</li>
-</ul>
-<p>This is not good at all, I hear you. And I have to wait a good <a href="https://www.omgubuntu.co.uk/2019/10/ubuntu-20-04-release-features">4 more months</a>
-for the next LTS release! The final blow came when I saw Vim 8.2 was released
-last month with <a href="https://github.com/skywind3000/vim-quickui">popup</a> support, and I do not have it yet! There is no practical
-way (apart from yet another <a href="https://help.ubuntu.com/community/PPA">PPA</a>) to get the latest Vim, without compiling it
-from source. Either ways, it is also unacceptable to run a desktop environment
-(GNOME) which is lagging behind (version 3.28.2) the latest stable release
-(version 3.34) for so long!</p>
-</section>
-<section id="how">
-<h2>How</h2>
-<aside class="m-note m-danger">
-Make sure you understand what how <code>chroot</code> and <code>mount</code> commands work.
-Also do not run <code>rm -rf</code> at any stage below.</aside>
-<p>There is a nice <a href="https://wiki.archlinux.org/index.php/Install_Arch_Linux_from_existing_Linux#From_a_host_running_another_Linux_distribution">guide</a> which demonstrates how to setup Arch Linux from an
-existing Linux OS. I started off by <a href="https://www.archlinux.org/download/">downloading</a> the bootstrap image along with
-the GPG signature and verifying it:</p>
-<pre>$ gpg --keyserver-options auto-key-retrieve --verify archlinux-2020.01.01-x86_64.iso.sig
-gpg: assuming signed data in 'archlinux-2020.01.01-x86_64.iso'
-gpg: Signature made Wed 01 Jan 2020 06:21:41 AM CET
-gpg:                using RSA key 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
-gpg: Good signature from &quot;Pierre Schmitz &lt;pierre&#64;archlinux.de&gt;&quot; [unknown]
-gpg: WARNING: This key is not certified with a trusted signature!
-gpg:          There is no indication that the signature belongs to the owner.
-Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC</pre>
-<p>The key fingerprint was <a href="https://www.archlinux.org/master-keys/">cross-checked</a> to be doubly sure.
-Then I extracted the bootstrap image:</p>
-<pre>$ sudo su
-# tar xzf archlinux-bootstrap-2020.01.01-x86_64.tar.gz -C /tmp</pre>
-<p>When I skipped a few steps and went into the <code>chroot</code>, I got this:</p>
-<pre># /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
-==&gt; WARNING: /mnt/archlinux/root.x86_64/ is not a mountpoint. This may have undesirable side effects.</pre>
-<p>I <a href="https://bugs.archlinux.org/task/46169">understood</a> that the <code>chroot</code> should be a mount point:</p>
-<pre># mount --bind /tmp/root.x86_64 /tmp/root.x86_64
-# /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/</pre>
-<p>And the <code>chroot</code> worked without any warnings. To clarify the shell I am
-running I will prefix the commands with <code>[chroot] #</code> from here on:</p>
-<pre>[chroot] # pacman-key --init
-[chroot] # pacman-key --populate archlinux</pre>
-<p>After editing the mirror list outside of the <code>chroot</code>:</p>
-<pre>$ sudoedit /tmp/root.x86_64/etc/pacman.d/mirrorlist</pre>
-<p>I updated the bootstrap:</p>
-<pre>[chroot] # pacman -Syyu</pre>
-<p>And mounted the partitions to be bootstrapped:</p>
-<pre>[chroot] # mount /dev/nvme0n1p5 /mnt
-[chroot] # mount /dev/nvme0n1p4 /mnt/home
-[chroot] # genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
-[chroot] # umount /mnt/home</pre>
-<aside class="m-note m-info">
-In preparation, I had created these partitions by shrinking the existing ones
-with a <a href="https://distrowatch.com/table.php?distribution=gparted">GParted</a> USB live medium, long time ago.  The home partition was also
-created and made separate such that it can be shared between Ubuntu and Arch
-Linux for a dual-boot setup.</aside>
-<p>and installed some essentials:</p>
-<pre>[chroot] # pacman -S base base-devel
-:: There are 24 members in group base-devel:
-:: Repository core
-   1) autoconf  2) automake  3) binutils  4) bison  5) fakeroot  6) file
-   7) findutils  8) flex  9) gawk  10) gcc  11) gettext  12) grep  13) groff
-   14) gzip  15) libtool  16) m4 17) make  18) pacman  19) patch  20) pkgconf
-   21) sed  22) sudo  23) texinfo  24) which
-...</pre>
-<p>Did the same for the target Arch Linux partition mounted at <code>/mnt</code>:</p>
-<pre>[chroot] # pacstrap /mnt base base-devel
-[chroot] # pacstrap /mnt linux-lts linux-firmware intel-ucode lsb-release</pre>
-<p>Thereafter I followed the official <a href="https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system">installation guide</a>:</p>
-<pre>[chroot] # arch-chroot /mnt</pre>
-<aside class="m-note m-info">
-The step above runs <code>arch-chroot</code> from within a <code>chroot</code>. Now, I see why
-Leo was so confused in Inception. Whenever in doubt, run <code>df</code>.</aside>
-</section>
-<section id="cleaning-up-and-dual-booting">
-<h2>Cleaning up and dual booting</h2>
-<p>Exit the <code>chroot</code> and unmount everything:</p>
-<pre>[chroot in a chroot] # exit
-[chroot] # exit
-# umount -R /tmp/root.x86_64</pre>
-<p>The Ubuntu installation came with a <a href="https://wiki.archlinux.org/index.php/GRUB#Detecting_other_operating_systems">GRUB</a> boot loader and <code>os-loader</code> package
-which should detect the new Arch Linux installation (since we installed the
-<code>lsb-release</code> package). To make it happen, reboot? from Ubuntu run:</p>
-<pre># sudo update-grub</pre>
-<p>That did not work! <a href="https://askubuntu.com/questions/111085/how-do-i-hide-the-grub-menu-showing-up-at-the-beginning-of-boot">Turns out</a> <code>/etc/default/grub</code> had two offending lines:</p>
-<pre>GRUB_TIMEOUT_STYLE=hidden
-GRUB_DISABLE_OS_PROBER=true</pre>
-<p>which when commented out, it started working. Follow this by <code>update-grub</code> or
-<code>grub-mkconfig -o /boot/grub/grub.cfg</code> and it is good to go.</p>
-</section>
-<section id="epilogue-some-personal-choices">
-<h2>Epilogue: some personal choices</h2>
-<p>What follows below are not necessary but I note it down for future reference.
-Here are the packages I chose to install:</p>
-<pre>neovim vim code  # editors
-plasma kdegraphics-thumbnailers # KDE desktop meta package
-konsole
-acpi
-inetutils  # many network commands, including hostname
-openssh
-parted  # partitioning tool
-xonsh zsh # alternatives to bash
-tlp  # CPU and FAN governor
-man-db  # man pages
-arch-wiki-docs  # provides wiki-search
-arch-wiki-lite  # and wiki-search-html commands
-ttf-joypixels ttf-roboto adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts ttf-arphic-uming terminus-font  # extra fonts
-libreoffice-fresh  # writer, calc, impress...
-gcc-fortran gcc-go rust  # compilers
-pacman-contrib reflector  # pacman utilities
-firefox thunderbird zeal okular ark nextcloud-client mplayer  # ... and more applications
-flatpak  # for sandboxing non-free applications</pre>
-<p>An AUR helper:</p>
-<pre>$ git clone https://aur.archlinux.org/yay.git
-$ cd yay &amp;&amp; makepkg -s
-# pacman -U /home/avmo/.cache/makepkg/yay-*</pre>
-<p>Check and activate periodic <a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM">TRIM</a> for long-term performance:</p>
-<pre>$ lsblk --discard
-NAME        DISC-ALN DISC-GRAN DISC-MAX DISC-ZERO
-nvme0n1            0      512B       2T         0
-|-nvme0n1p1        0      512B       2T         0
-|-nvme0n1p2        0      512B       2T         0
-|-nvme0n1p3        0      512B       2T         0
-|-nvme0n1p4        0      512B       2T         0
-|-nvme0n1p5        0      512B       2T         0
-`-nvme0n1p6        0      512B       2T         0
-
-# systemctl enable fstrim.timer
-Created symlink /etc/systemd/system/timers.target.wants/fstrim.timer → /usr/lib/systemd/system/fstrim.timer.</pre>
-<p>Format a <a href="https://wiki.archlinux.org/index.php/Swap">swap</a> partition in the empty space available and mount it with <a href="https://wiki.archlinux.org/index.php/Solid_state_drive#TRIM">TRIM</a>
-(<code>discard</code>) support:</p>
-<pre># parted /dev/nvme0n1
-GNU Parted 3.3
-Using /dev/nvme0n1
-Welcome to GNU Parted! Type 'help' to view a list of commands.
-(parted) print
-Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
-Disk /dev/nvme0n1: 512GB
-Sector size (logical/physical): 512B/512B
-Partition Table: gpt
-Disk Flags:
-
-Number  Start   End     Size    File system  Name                  Flags
- 1      1049kB  819MB   818MB   fat32        EFI system partition  boot, esp
- 2      819MB   6188MB  5369MB  fat32        Basic data partition  msftres
- 3      6188MB  140GB   134GB   ext4
- 4      194GB   301GB   107GB   btrfs
- 5      405GB   512GB   107GB   ext4
-
-(parted) mkpart primary linux-swap 140GB 194GB
-(parted) print
-Model: KXG60ZNV512G NVMe TOSHIBA 512GB (nvme)
-Disk /dev/nvme0n1: 512GB
-Sector size (logical/physical): 512B/512B
-Partition Table: gpt
-Disk Flags:
-
-Number  Start   End     Size    File system     Name                  Flags
- 1      1049kB  819MB   818MB   fat32           EFI system partition  boot, esp
- 2      819MB   6188MB  5369MB  fat32           Basic data partition  msftres
- 3      6188MB  140GB   134GB   ext4
- 6      140GB   194GB   53.7GB  linux-swap(v1)  primary
- 4      194GB   301GB   107GB   btrfs
- 5      405GB   512GB   107GB   ext4
-
-(parted) quit
-# mkswap /dev/nvme0n1p6
-Setting up swapspace version 1, size = 50 GiB (53687087104 bytes)
-no label, UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40
-# swapon --discard
-# echo &quot;UUID=6ce1daf4-6a66-44a8-a14b-bd4ea3eb9c40 none swap defaults,discard 0 0&quot; &gt;&gt; /etc/fstab</pre>
-<p>Installed an alternative shell (as listed in <code>/etc/shells</code>) and added myself
-as a user:</p>
-<pre># useradd --no-create-home --uid 1001 --user-group avmo --shell /usr/bin/xonsh
-# passwd avmo</pre>
-<p>Then to make the desktop and essential components appear:</p>
-<pre># systemctl enable sddm NetworkManager tlp</pre>
-<p>Configure sensors from <code>lm_sensors</code>:</p>
-<pre># sensors-detect
-# sensors
-Adapter: ISA adapter
-Package id 0:  +45.0°C  (high = +100.0°C, crit = +100.0°C)
-Core 0:        +45.0°C  (high = +100.0°C, crit = +100.0°C)
-Core 1:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
-Core 2:        +44.0°C  (high = +100.0°C, crit = +100.0°C)
-Core 3:        +47.0°C  (high = +100.0°C, crit = +100.0°C)
-Core 4:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
-Core 5:        +42.0°C  (high = +100.0°C, crit = +100.0°C)
-
-dell_smm-virtual-0
-Adapter: Virtual device
-fan1:        2288 RPM
-fan2:        2317 RPM
-
-pch_cannonlake-virtual-0
-Adapter: Virtual device
-temp1:        +55.0°C
-
-acpitz-acpi-0
-Adapter: ACPI interface
-temp1:        +25.0°C  (crit = +107.0°C)
-
-iwlwifi-virtual-0
-Adapter: Virtual device
-temp1:        +48.0°C
-
-BAT0-acpi-0
-Adapter: ACPI interface
-in0:          12.80 V
-curr1:       1000.00 uA</pre>
-</section>
-<section id="nvidia">
-<h2>Nvidia</h2>
-<p>The riskiest part, IMHO, although it is well <a href="https://wiki.archlinux.org/index.php/NVIDIA">documented</a>. The driver package
-depends on the GPU model and the kernel. Thankfully no kernel panic occurred by
-installing:</p>
-<pre># pacman -S nvidia xorg-xrandr</pre>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If anything goes wrong, it often helped by simply clearing up
-<code>/etc/X11/xorg.conf.d</code>.</p>
-</div>
-<section id="option-1-nvidia-alone">
-<h3>Option 1: Nvidia alone</h3>
-<p>Tried:</p>
-<pre># nvidia-xconfig</pre>
-<p>However, SDDM did not start when X server was configured to use <code>nvidia</code>
-display driver. The key was to run some commands <a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#SDDM">before SDDM</a> starts, with
-the following lines in <code>/usr/share/sddm/scripts/Xsetup</code>.</p>
-<pre class="m-code">xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto</pre>
-</section>
-<section id="option-2-optimus-prime">
-<h3>Option 2: Optimus Prime</h3>
-<p>After reading a bit more, I chose NOT to do Option 1, but instead go for
-<a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#Using_PRIME_render_offload">switchable</a> graphics. The following package provides a <code>prime-run</code> command
-and a X server configuration:</p>
-<pre># pacman -S nvidia-prime</pre>
-<p>Rebooted and verified it:</p>
-<pre>$ xrandr --listproviders
-Providers: number : 2
-Provider 0: id: 0x48 cap: 0xf, Source Output, Sink Output, Source Offload, Sink Offload crtcs: 3 outputs: 6 associated providers: 0 name:modesetting
-Provider 1: id: 0x2a3 cap: 0x0 crtcs: 0 outputs: 0 associated providers: 0 name:NVIDIA-G0
-
-# pacman -S mesa-demos
-$ prime-run glxinfo | grep OpenGL</pre>
-</section>
-<section id="finally">
-<h3>Finally</h3>
-<p>There was a small <a href="https://bbs.archlinux.org/viewtopic.php?id=251919">hiccup</a> in detecting the external HDMI monitor. Turns out it
-was <a href="https://git.archlinux.org/svntogit/packages.git/commit/trunk?h=packages/nvidia-utils&amp;id=65ce50c4fd7388e91987cd2d271881e4ae126902">regression</a> due to a change in <code>nvidia-utils</code>. It was fixed by adding
-back the line:</p>
-<pre>Option &quot;PrimaryGPU&quot; &quot;yes&quot;</pre>
-<p>to <code>/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf</code>.</p>
-</section>
-</section>
-<section id="cuda">
-<h2>CUDA</h2>
-<p><a href="https://wiki.archlinux.org/index.php/GPGPU#CUDA">Installation</a>:</p>
-<pre># pacman -S cuda</pre>
-<p>Testing:</p>
-<pre>$ cp -r /opt/cuda/samples/ .
-$ cd samples/1_Utilities/deviceQuery
-$ make
-$ ./deviceQuery
-./deviceQuery Starting...
-
- CUDA Device Query (Runtime API) version (CUDART static linking)
-
-Detected 1 CUDA Capable device(s)
-
-Device 0: &quot;Quadro RTX 3000&quot;
-  CUDA Driver Version / Runtime Version          10.2 / 10.2
-  CUDA Capability Major/Minor version number:    7.5
-  Total amount of global memory:                 5935 MBytes (6222839808 bytes)
-  (30) Multiprocessors, ( 64) CUDA Cores/MP:     1920 CUDA Cores
-  GPU Max Clock rate:                            1380 MHz (1.38 GHz)
-  Memory Clock rate:                             7001 Mhz
-  Memory Bus Width:                              192-bit
-  L2 Cache Size:                                 3145728 bytes
-  Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
-  Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
-  Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
-  Total amount of constant memory:               65536 bytes
-  Total amount of shared memory per block:       49152 bytes
-  Total number of registers available per block: 65536
-  Warp size:                                     32
-  Maximum number of threads per multiprocessor:  1024
-  Maximum number of threads per block:           1024
-  Max dimension size of a thread block (x,y,z): (1024, 1024, 64)
-  Max dimension size of a grid size    (x,y,z): (2147483647, 65535, 65535)
-  Maximum memory pitch:                          2147483647 bytes
-  Texture alignment:                             512 bytes
-  Concurrent copy and kernel execution:          Yes with 3 copy engine(s)
-  Run time limit on kernels:                     Yes
-  Integrated GPU sharing Host Memory:            No
-  Support host page-locked memory mapping:       Yes
-  Alignment requirement for Surfaces:            Yes
-  Device has ECC support:                        Disabled
-  Device supports Unified Addressing (UVA):      Yes
-  Device supports Compute Preemption:            Yes
-  Supports Cooperative Kernel Launch:            Yes
-  Supports MultiDevice Co-op Kernel Launch:      Yes
-  Device PCI Domain ID / Bus ID / location ID:   0 / 1 / 0
-  Compute Mode:
-     &lt; Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) &gt;
-
-deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Version = 10.2, NumDevs = 1
-Result = PASS</pre>
-</section>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-01-03T10:00:41.042526+01:00" class="dt-published">Fri 03 January 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-01-13T00:00:00+01:00" class="dt-updated">Mon 13 January 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/linux.html">linux</a>, <a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a>, <a href="https://ashwin.info.tm/tag/archlinux.html">archlinux</a>.</p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -1123,6 +967,7 @@ Result = PASS</pre>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ci.html">ci</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/conference.html">conference</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/congress.html">congress</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/csharp.html">csharp</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/devops.html">devops</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/economy.html">economy</a></li>
@@ -1135,6 +980,7 @@ Result = PASS</pre>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/friends.html">friends</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/game-of-thrones.html">game of thrones</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/hpc.html">hpc</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/india.html">India</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/indian-politics.html">indian politics</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/internet.html">Internet</a></li>
@@ -1164,7 +1010,7 @@ Result = PASS</pre>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/resolution.html">resolution</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/social-media.html">social media</a></li>
-        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
+        <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/sympy.html">sympy</a></li>

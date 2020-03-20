@@ -427,6 +427,17 @@ Device 0: &quot;Quadro RTX 3000&quot;
 deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Version = 10.2, NumDevs = 1
 Result = PASS</pre>
 </section>
+<section id="docker">
+<h2>Docker</h2>
+<p>Installing <a href="https://wiki.archlinux.org/index.php/Docker#Installation">docker</a> is straightforward, but I wanted to avoid adding my default
+login into the <code>docker</code> group which is root equivalent. So I created a
+special user to do this:</p>
+<pre># pacman -S docker
+# systemctl start docker
+# useradd --no-create-home -g docker docker
+# passwd
+$ su - docker</pre>
+</section>
 </div>
 <!-- /content -->
       <footer>
@@ -447,6 +458,7 @@ Result = PASS</pre>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ci.html">ci</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/conference.html">conference</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/congress.html">congress</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/csharp.html">csharp</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/devops.html">devops</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/economy.html">economy</a></li>
@@ -459,6 +471,7 @@ Result = PASS</pre>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/friends.html">friends</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/game-of-thrones.html">game of thrones</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/hpc.html">hpc</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/india.html">India</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/indian-politics.html">indian politics</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/internet.html">Internet</a></li>
@@ -488,7 +501,7 @@ Result = PASS</pre>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/resolution.html">resolution</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/social-media.html">social media</a></li>
-        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
+        <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/sympy.html">sympy</a></li>
