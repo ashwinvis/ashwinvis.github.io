@@ -165,9 +165,13 @@ Mar 20 09:14:26 archmage boinc[119973]: 20-Mar-2020 09:14:26 [---] Suspending GP
   disk free: 57508556800.000000
   NVIDIA GPU: Quadro RTX 3000 (driver version 440.64, CUDA version 10.2, compute capability 7.5, 4096MB, 3970MB available, 5299 GFLOPS peak)
     OpenCL: NVIDIA 0: Quadro RTX 3000 (driver version 440.64, device version OpenCL 1.2 CUDA, 5935MB, 3970MB available, 5299 GFLOPS peak)</pre>
-<p>Create an account in a project:</p>
+<p>Create an account in a project (substitute those variables starting with a $
+sign):</p>
 <pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) \
     --create_account www.gpugrid.net $email $project_passwd $project_username</pre>
+<p>Find the “weak account key” by <a href="https://www.gpugrid.net/login_form.php">logging in</a>. Then attach the account to the
+project:</p>
+<pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) --project_attach www.gpugrid.net $weak_account_key</pre>
 <p>The client should then run while the system is idle.</p>
 </section>
 </section>
@@ -246,11 +250,17 @@ Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Steps: first
 Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Completed 1 out of 250000 steps (0%)
 Mar 20 09:57:25 archmage FAHClient[149577]: 08:57:25:WU00:FS00:0xa7:Completed 2500 out of 250000 steps (1%)</pre>
 <p>While the client is running / idle, you can schedule and tweak using the <a href="http://0.0.0.0:7396/">web client</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want GPU jobs alone, comment out the CPU slots in
+<code>~/.config/foldingathome/config.xml</code> and set power to “Medium” in the web
+client.</p>
+</div>
 </section>
 </section>
 <!-- /content -->
         <footer>
-          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-20T11:29:00+01:00" class="dt-published">Fri 20 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/research.html">research</a>, <a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a>, <a href="https://ashwin.info.tm/tag/hpc.html">hpc</a>.</p>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-20T11:29:00+01:00" class="dt-published">Fri 20 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-03-25T22:29:00+01:00" class="dt-updated">Wed 25 March 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/research.html">research</a>, <a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a>, <a href="https://ashwin.info.tm/tag/hpc.html">hpc</a>.</p>
         </footer>
       </article>
       <article>

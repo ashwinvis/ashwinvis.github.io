@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-03-20T11:29:00+01:00</updated><entry><title>Cloud computing for research</title><link href="https://ashwin.info.tm/cloud-computing.html" rel="alternate"></link><published>2020-03-20T11:29:00+01:00</published><updated>2020-03-20T11:29:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-20:/cloud-computing.html</id><summary type="html">&lt;p&gt;A journal of how I setup BOINC and &lt;a href="mailto:Folding&amp;#64;home"&gt;Folding&amp;#64;home&lt;/a&gt; on my laptop running Arch Linux.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-03-25T22:29:00+01:00</updated><entry><title>Cloud computing for research</title><link href="https://ashwin.info.tm/cloud-computing.html" rel="alternate"></link><published>2020-03-20T11:29:00+01:00</published><updated>2020-03-25T22:29:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-20:/cloud-computing.html</id><summary type="html">&lt;p&gt;A journal of how I setup BOINC and &lt;a href="mailto:Folding&amp;#64;home"&gt;Folding&amp;#64;home&lt;/a&gt; on my laptop running Arch Linux.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;There is an ongoing effort in all disciplines to find solutions the Covid-19
 pandemic. Be it policy (social distancing, call for people to work from home),
 technology (repurposing auto, beverages and perfume industries to manufacture
@@ -72,9 +72,13 @@ Mar 20 09:14:26 archmage boinc[119973]: 20-Mar-2020 09:14:26 [---] Suspending GP
   disk free: 57508556800.000000
   NVIDIA GPU: Quadro RTX 3000 (driver version 440.64, CUDA version 10.2, compute capability 7.5, 4096MB, 3970MB available, 5299 GFLOPS peak)
     OpenCL: NVIDIA 0: Quadro RTX 3000 (driver version 440.64, device version OpenCL 1.2 CUDA, 5935MB, 3970MB available, 5299 GFLOPS peak)&lt;/pre&gt;
-&lt;p&gt;Create an account in a project:&lt;/p&gt;
+&lt;p&gt;Create an account in a project (substitute those variables starting with a $
+sign):&lt;/p&gt;
 &lt;pre&gt;# boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) \
     --create_account www.gpugrid.net $email $project_passwd $project_username&lt;/pre&gt;
+&lt;p&gt;Find the “weak account key” by &lt;a href="https://www.gpugrid.net/login_form.php"&gt;logging in&lt;/a&gt;. Then attach the account to the
+project:&lt;/p&gt;
+&lt;pre&gt;# boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) --project_attach www.gpugrid.net $weak_account_key&lt;/pre&gt;
 &lt;p&gt;The client should then run while the system is idle.&lt;/p&gt;
 &lt;/section&gt;
 &lt;/section&gt;
@@ -153,6 +157,12 @@ Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Steps: first
 Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Completed 1 out of 250000 steps (0%)
 Mar 20 09:57:25 archmage FAHClient[149577]: 08:57:25:WU00:FS00:0xa7:Completed 2500 out of 250000 steps (1%)&lt;/pre&gt;
 &lt;p&gt;While the client is running / idle, you can schedule and tweak using the &lt;a href="http://0.0.0.0:7396/"&gt;web client&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;If you want GPU jobs alone, comment out the CPU slots in
+&lt;code&gt;~/.config/foldingathome/config.xml&lt;/code&gt; and set power to “Medium” in the web
+client.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content><category term="software"></category><category term="research"></category><category term="covid-19"></category><category term="hpc"></category></entry><entry><title>Back to Arch Linux</title><link href="https://ashwin.info.tm/back-to-arch-linux.html" rel="alternate"></link><published>2020-01-03T10:00:41+01:00</published><updated>2020-01-13T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-03:/back-to-arch-linux.html</id><summary type="html">&lt;p&gt;Within a Ubuntu LTS pre-installed laptop&lt;/p&gt;
