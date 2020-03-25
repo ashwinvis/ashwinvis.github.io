@@ -3,6 +3,7 @@ Cloud computing for research
 
 :author: Ashwin Vishnu Mohanan
 :date: 2020-03-20T11:29:00
+:modified: 2020-03-25T22:29:00
 :slug: cloud-computing
 :status: published
 :summary: A journal of how I setup BOINC and Folding@home on my laptop running Arch Linux.
@@ -94,10 +95,16 @@ This would generate a password at ``/var/lib/boinc/gui_rpc_auth.cfg``::
       NVIDIA GPU: Quadro RTX 3000 (driver version 440.64, CUDA version 10.2, compute capability 7.5, 4096MB, 3970MB available, 5299 GFLOPS peak)
         OpenCL: NVIDIA 0: Quadro RTX 3000 (driver version 440.64, device version OpenCL 1.2 CUDA, 5935MB, 3970MB available, 5299 GFLOPS peak)
 
-Create an account in a project::
+Create an account in a project (substitute those variables starting with a $
+sign)::
 
     # boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) \
         --create_account www.gpugrid.net $email $project_passwd $project_username
+
+Find the "weak account key" by `logging in <https://www.gpugrid.net/login_form.php>`_. Then attach the account to the
+project::
+
+    # boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) --project_attach www.gpugrid.net $weak_account_key
 
 The client should then run while the system is idle.
 
@@ -188,3 +195,9 @@ Execute::
     Mar 20 09:57:25 archmage FAHClient[149577]: 08:57:25:WU00:FS00:0xa7:Completed 2500 out of 250000 steps (1%)
 
 While the client is running / idle, you can schedule and tweak using the `web client <http://0.0.0.0:7396/>`_.
+
+.. note::
+
+   If you want GPU jobs alone, comment out the CPU slots in
+   ``~/.config/foldingathome/config.xml`` and set power to "Medium" in the web
+   client.
