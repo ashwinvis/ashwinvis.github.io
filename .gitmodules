@@ -6,4 +6,4 @@
 	url = https://github.com/ashwinvis/pelican-ipynb
 [submodule "plugins/pelican-planet"]
 	path = plugins/pelican-planet
-	url = https://github.com/ashwinvis/pelican-planet.git
+	url = https://github.com/ashwinvis/pelican-planet
