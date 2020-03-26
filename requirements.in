@@ -9,3 +9,5 @@ pyyaml>=5.1<6.0
 toolz<1.0.0
 cssutils
 cookiecutter<2.0.0
+feedparser>5.2.1
+python-dateutil==2.6.0

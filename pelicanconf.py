@@ -11,8 +11,10 @@ import shutil
 import logging
 from datetime import datetime
 
-# sys.path.append(os.curdir)
-# from pelicanconf import *
+sys.path.append(os.curdir)
+from util import read_opml
+
+
 
 AUTHOR = "Ashwin Vishnu Mohanan"
 SITENAME = "Ashwin Vishnu's Website"
@@ -78,7 +80,7 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGIN_PATHS = ["m.css/plugins", "plugins"]
+PLUGIN_PATHS = ["m.css/plugins", "plugins", "plugins/pelican-planet"]
 PLUGINS = ["m.htmlsanity", "m.components", "m.code"]
 
 M_FAVICON = ("/images/SU_logo.png", "image/png")
@@ -111,6 +113,7 @@ M_LINKS_NAVBAR1 = [
 ]
 
 M_LINKS_NAVBAR2 = [
+    ("Planet", "pages/planet", "[planet]", []),
     ("Contact", "pages/contact", "[contact]", []),
 ]
 M_LINKS_FOOTER1 = [
@@ -152,6 +155,7 @@ if not shutil.which('latex'):
 
 PLUGINS += [
     "ipynb.markup",
+    "pelican_planet",
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
@@ -166,6 +170,13 @@ IPYNB_COLORSCHEME = "monokai"
 IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
 IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
+
+# pelican_planet
+PLANET_FEEDS = read_opml("planet.opml")
+PLANET_TEMPLATE = 'templates/planet.md.j2'
+PLANET_PAGE = 'content/pages/planet.md'
+PLANET_MAX_ARTICLES_PER_FEED = 3
+PLANET_MAX_SUMMARY_LENGTH = 140
 
 # Pagination
 DEFAULT_PAGINATION = 10
