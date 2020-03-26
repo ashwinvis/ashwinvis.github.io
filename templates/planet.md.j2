@@ -1,0 +1,48 @@
+---
+Title: Planet Avium
+Author: Various
+Slug: planet
+Status: published
+---
+
+> A [river of news](https://indieweb.org/planet) from a selection of RSS feeds
+> I follow. Not an endorsement, but simply out of curiousity!
+
+<style>
+#planet img{
+    max-width: 100%;
+}
+</style>
+
+<div id="planet">
+{% for article in articles %}
+<article>
+<header>
+  <h1><a href="{{ article.link }}" rel="bookmark" class="u-url"
+  title="{{ article.title}}">
+    <time class="m-date" datetime="{{ article.updated }}">
+      {{ article.updated.strftime("%b") }}
+      <span class="m-date-day">
+        {{ article.updated.strftime("%d") }}
+      </span>
+      {{ article.updated.strftime("%Y") }}
+    </time>
+    <div class="p-name">
+    {{ article.title or "..." }}
+    </div>
+  </a></h1>
+  <div class="p-summary">
+  {{ article.summary }}
+  </div>
+</header>
+<footer>
+  <p>Posted by <b>{{ article.author or "Anonymous" }}</b>
+  on <time datetime="{{ article.updated }}" class="dt-published"></time>
+  {{ article.updated.strftime("%a %d %b %Y")}}
+  in {{ article.feed_name }}.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+{% endfor %}
+</div>

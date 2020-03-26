@@ -4,3 +4,6 @@
 [submodule "src/plugins/ipynb"]
 	path = plugins/ipynb
 	url = https://github.com/ashwinvis/pelican-ipynb
+[submodule "plugins/pelican-planet"]
+	path = plugins/pelican-planet
+	url = https://github.com/ashwinvis/pelican-planet.git
