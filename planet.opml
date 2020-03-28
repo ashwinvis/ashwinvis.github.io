@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
 <head>
-	<title>FeedReader Exported RSS Feeds</title>
+    <title>FeedReader Exported RSS Feeds</title>
 </head>
 <body>
-	<outline title="Academic" text="Academic">
-		<outline title="MISU - Events and News" text="MISU - Events and News" type="rss" htmlUrl="/cmlink/misu-events-news-1.23228" xmlUrl="http://www.misu.su.se/cmlink/misu-events-news-1.23228"/>
-		<outline title="KTH Mechanics - Seminars" text="KTH Mechanics - Seminars" type="rss" htmlUrl="" xmlUrl="https://www.mech.kth.se/mech/rss_seminars.xhtml"/>
-	</outline>
-	<outline title="Blogroll" text="Blogroll">
-		<outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
-		<outline title="Excuse me please" text="Excuse me please" type="rss" htmlUrl="http://husemeplz.blogspot.com/feeds/posts/default" xmlUrl="http://husemeplz.blogspot.com/feeds/posts/default"/>
-		<outline title="chomsky.info" text="chomsky.info" type="rss" htmlUrl="http://chomskydotinfo.blogspot.com/" xmlUrl="http://chomskydotinfo.blogspot.com/feeds/posts/default?alt=rss"/>
-		<outline title="Reclaiming Lost Marbles" text="Reclaiming Lost Marbles" type="rss" htmlUrl="http://nidaac.blogspot.com/feeds/posts/default" xmlUrl="http://nidaac.blogspot.com/feeds/posts/default"/>
-		<outline title="bits and pieces of my day" text="bits and pieces of my day" type="rss" htmlUrl="http://thedailylore.blogspot.com/feeds/posts/default" xmlUrl="http://thedailylore.blogspot.com/feeds/posts/default"/>
-		<outline title="No Dry Day in England" text="No Dry Day in England" type="rss" htmlUrl="http://nodrydayinengland.blogspot.com/feeds/posts/default" xmlUrl="http://nodrydayinengland.blogspot.com/feeds/posts/default"/>
+    <outline title="Academic" text="Academic">
+        <outline title="MISU - Events and News" text="MISU - Events and News" type="rss" htmlUrl="/cmlink/misu-events-news-1.23228" xmlUrl="http://www.misu.su.se/cmlink/misu-events-news-1.23228"/>
+        <outline title="KTH Mechanics - Seminars" text="KTH Mechanics - Seminars" type="rss" htmlUrl="" xmlUrl="https://www.mech.kth.se/mech/rss_seminars.xhtml"/>
+    </outline>
+    <outline title="Blogroll" text="Blogroll">
+        <outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
+        <outline title="Excuse me please" text="Excuse me please" type="rss" htmlUrl="http://husemeplz.blogspot.com/feeds/posts/default" xmlUrl="http://husemeplz.blogspot.com/feeds/posts/default"/>
+        <outline title="chomsky.info" text="chomsky.info" type="rss" htmlUrl="http://chomskydotinfo.blogspot.com/" xmlUrl="http://chomskydotinfo.blogspot.com/feeds/posts/default?alt=rss"/>
+        <outline title="Reclaiming Lost Marbles" text="Reclaiming Lost Marbles" type="rss" htmlUrl="http://nidaac.blogspot.com/feeds/posts/default" xmlUrl="http://nidaac.blogspot.com/feeds/posts/default"/>
+        <outline title="bits and pieces of my day" text="bits and pieces of my day" type="rss" htmlUrl="http://thedailylore.blogspot.com/feeds/posts/default" xmlUrl="http://thedailylore.blogspot.com/feeds/posts/default"/>
+        <outline title="No Dry Day in England" text="No Dry Day in England" type="rss" htmlUrl="http://nodrydayinengland.blogspot.com/feeds/posts/default" xmlUrl="http://nodrydayinengland.blogspot.com/feeds/posts/default"/>
         <outline title="The World. Our Take." text="The World. Our Take." type="rss" htmlUrl="http://laugh-at-the-world.blogspot.com/" xmlUrl="http://laugh-at-the-world.blogspot.com/feeds/posts/default"/>
-		<outline title="Some Sincere Thoughts" text="Some Sincere Thoughts" type="rss" htmlUrl="http://lissachacko.blogspot.com/feeds/posts/default" xmlUrl="http://lissachacko.blogspot.com/feeds/posts/default"/>
+        <outline title="Some Sincere Thoughts" text="Some Sincere Thoughts" type="rss" htmlUrl="http://lissachacko.blogspot.com/feeds/posts/default" xmlUrl="http://lissachacko.blogspot.com/feeds/posts/default"/>
         <outline title="Oh Pandaram!" text="Oh Pandaram!" type="rss" htmlUrl="https://ohpandaram.wordpress.com" xmlUrl="http://ohpandaram.wordpress.com/feed/"/>
-		<outline title="born with 2 legs, living on 2 wheels" text="born with 2 legs, living on 2 wheels" type="rss" htmlUrl="https://ajitno46.wordpress.com" xmlUrl="https://ajitno46.wordpress.com/feed/"/>
+        <outline title="born with 2 legs, living on 2 wheels" text="born with 2 legs, living on 2 wheels" type="rss" htmlUrl="https://ajitno46.wordpress.com" xmlUrl="https://ajitno46.wordpress.com/feed/"/>
         <outline title="Ring Around The Aggie" text="Ring Around The Aggie" type="rss" htmlUrl="https://ringaroundtheaggies.wordpress.com" xmlUrl="http://ringaroundtheaggies.wordpress.com/feed/"/>
         <outline title="Jibu's Travel Diary" text="Jibu's Travel Diary" type="rss" htmlUrl="https://jibutomjose.wordpress.com" xmlUrl="http://jibutomjose.wordpress.com/feed/"/>
-		<outline title="Unsung Films" text="Unsung Films" type="rss" htmlUrl="https://www.unsungfilms.com" xmlUrl="https://www.unsungfilms.com/feed/"/>
-		<outline title="jlelse's Blog" text="jlelse's Blog" type="rss" htmlUrl="https://jlelse.blog/" xmlUrl="https://jlelse.blog/index.xml"/>
-		<outline title="Frolian's blog" text="Frolian's blog" type="rss" htmlUrl="http://flothesof.github.io/" xmlUrl="https://flothesof.github.io/feeds/all.atom.xml"/>
-		<outline title="Pythonic Perambulations" text="Pythonic Perambulations" type="rss" htmlUrl="http://jakevdp.github.io/" xmlUrl="https://jakevdp.github.io/feeds/all.atom.xml"/>
-		<outline title="Drew DeVault's Blog" text="Drew DeVault's Blog" type="rss" htmlUrl="https://drewdevault.com" xmlUrl="https://drewdevault.com/feed.xml"/>
-		<outline title="Python Software Foundation News" text="Python Software Foundation News" type="rss" htmlUrl="http://pyfound.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonSoftwareFoundationNews"/>
-		<outline title="Newest Python PEPs" text="Newest Python PEPs" type="rss" htmlUrl="http://www.python.org/dev/peps" xmlUrl="https://www.python.org/dev/peps/peps.rss/"/>
-		<outline title="Python Insider" text="Python Insider" type="rss" htmlUrl="https://pythoninsider.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonInsider"/>
-		<outline title="Peter Norvig" text="Peter Norvig" type="rss" htmlUrl="http://www.norvig.com" xmlUrl="http://norvig.com/rss-feed.xml"/>
-		<outline title="PyMOTW – Doug Hellmann" text="PyMOTW – Doug Hellmann" type="rss" htmlUrl="https://doughellmann.com/blog" xmlUrl="http://feeds.doughellmann.com/PyMOTW"/>
-		<outline title="Artificial Intelligence" text="Artificial Intelligence" type="rss" htmlUrl="https://lexfridman.com/ai/" xmlUrl="https://lexfridman.com/category/ai/feed/"/>
-		<outline title="Ned Batchelder's blog" text="Ned Batchelder's blog" type="rss" htmlUrl="https://nedbatchelder.com/blog" xmlUrl="https://nedbatchelder.com/blog/rss.xml"/>
-		<outline title="PHD Comics" text="PHD Comics" type="rss" htmlUrl="https://www.phdcomics.com" xmlUrl="https://www.phdcomics.com/gradfeed.php"/>
-		<outline title="xkcd.com" text="xkcd.com" type="rss" htmlUrl="https://xkcd.com/" xmlUrl="https://xkcd.com/atom.xml"/>
-		<outline title="The Numerical Methods Guy" text="The Numerical Methods Guy" type="rss" htmlUrl="https://autarkaw.org" xmlUrl="https://autarkaw.org/feed/"/>
+        <outline title="Unsung Films" text="Unsung Films" type="rss" htmlUrl="https://www.unsungfilms.com" xmlUrl="https://www.unsungfilms.com/feed/"/>
+        <outline title="jlelse's Blog" text="jlelse's Blog" type="rss" htmlUrl="https://jlelse.blog/" xmlUrl="https://jlelse.blog/index.xml"/>
+        <outline title="Frolian's blog" text="Frolian's blog" type="rss" htmlUrl="http://flothesof.github.io/" xmlUrl="https://flothesof.github.io/feeds/all.atom.xml"/>
+        <outline title="Pythonic Perambulations" text="Pythonic Perambulations" type="rss" htmlUrl="http://jakevdp.github.io/" xmlUrl="https://jakevdp.github.io/feeds/all.atom.xml"/>
+        <outline title="Drew DeVault's Blog" text="Drew DeVault's Blog" type="rss" htmlUrl="https://drewdevault.com" xmlUrl="https://drewdevault.com/feed.xml"/>
+        <outline title="Python Software Foundation News" text="Python Software Foundation News" type="rss" htmlUrl="http://pyfound.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonSoftwareFoundationNews"/>
+        <outline title="Newest Python PEPs" text="Newest Python PEPs" type="rss" htmlUrl="http://www.python.org/dev/peps" xmlUrl="https://www.python.org/dev/peps/peps.rss/"/>
+        <outline title="Python Insider" text="Python Insider" type="rss" htmlUrl="https://pythoninsider.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonInsider"/>
+        <outline title="Peter Norvig" text="Peter Norvig" type="rss" htmlUrl="http://www.norvig.com" xmlUrl="http://norvig.com/rss-feed.xml"/>
+        <outline title="PyMOTW – Doug Hellmann" text="PyMOTW – Doug Hellmann" type="rss" htmlUrl="https://doughellmann.com/blog" xmlUrl="http://feeds.doughellmann.com/PyMOTW"/>
+        <outline title="Artificial Intelligence" text="Artificial Intelligence" type="rss" htmlUrl="https://lexfridman.com/ai/" xmlUrl="https://lexfridman.com/category/ai/feed/"/>
+        <outline title="Ned Batchelder's blog" text="Ned Batchelder's blog" type="rss" htmlUrl="https://nedbatchelder.com/blog" xmlUrl="https://nedbatchelder.com/blog/rss.xml"/>
+        <outline title="PHD Comics" text="PHD Comics" type="rss" htmlUrl="https://www.phdcomics.com" xmlUrl="https://www.phdcomics.com/gradfeed.php"/>
+        <outline title="xkcd.com" text="xkcd.com" type="rss" htmlUrl="https://xkcd.com/" xmlUrl="https://xkcd.com/atom.xml"/>
+        <outline title="The Numerical Methods Guy" text="The Numerical Methods Guy" type="rss" htmlUrl="https://autarkaw.org" xmlUrl="https://autarkaw.org/feed/"/>
         <outline title="Gilles Castel" text="Gilles Castel" type="rss" htmlUrl="https://castel.dev" xmlUrl="https://castel.dev/rss.xml"/>
         <outline title="David Revoy" text="David Revoy" type="rss" htmlUrl="https://www.davidrevoy.com/" xmlUrl="https://www.davidrevoy.com/feed/rss"/>
         <outline title="Hynek Schlawak" text="Hynek Schlawak" type="rss" htmlUrl="https://hynek.me/" xmlUrl="https://hynek.me/index.xml"/>
@@ -44,32 +44,33 @@
         <outline title="PyPy Status Blog" text="PyPy Status Blog" type="rss" htmlUrl="https://morepypy.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PyPyStatusBlog"/>
         <outline title="Tall, Snarky Canadian" text="Tall, Snarky Canadian" type="rss" htmlUrl="https://snarky.ca/" xmlUrl="https://snarky.ca/rss/"/>
         <outline title="Gregory Szorc's Digital Home" text="Gregory Szorc's Digital Home" type="rss" htmlUrl="https://gregoryszorc.com/" xmlUrl="https://gregoryszorc.com/blog/feed/atom/"/>
-	</outline>
-	<outline title="Comix" text="Comix">
-		<outline title="ZEN PENCILS" text="ZEN PENCILS" type="rss" htmlUrl="https://zenpencils.com" xmlUrl="http://feeds.feedburner.com/zenpencils?format=xml"/>
-		<outline title="Abstruse Goose" text="Abstruse Goose" type="rss" htmlUrl="https://abstrusegoose.com" xmlUrl="http://abstrusegoose.com/feed"/>
-	</outline>
-	<outline title="Free Software" text="Free Software">
-		<outline title="Phoronix" text="Phoronix" type="rss" htmlUrl="https://www.phoronix.com/" xmlUrl="http://www.phoronix.com/rss.php"/>
-		<outline title="Planet GNOME" text="Planet GNOME" type="rss" htmlUrl="http://planet.gnome.org/atom.xml" xmlUrl="http://planet.gnome.org/atom.xml"/>
+        <outline title="Alex Schroeder: Diary" text="Alex Schroeder: Diary" type="rss" htmlUrl="https://alexschroeder.ch/wiki" xmlUrl="https://alexschroeder.ch/wiki?action=journal;search=-tag:rpg%20-tag:rsp;lang=en;title=English%20Diary%20without%20RPG%20Pages"/>
+    </outline>
+    <outline title="Comix" text="Comix">
+        <outline title="ZEN PENCILS" text="ZEN PENCILS" type="rss" htmlUrl="https://zenpencils.com" xmlUrl="http://feeds.feedburner.com/zenpencils?format=xml"/>
+        <outline title="Abstruse Goose" text="Abstruse Goose" type="rss" htmlUrl="https://abstrusegoose.com" xmlUrl="http://abstrusegoose.com/feed"/>
+    </outline>
+    <outline title="Free Software" text="Free Software">
+        <outline title="Phoronix" text="Phoronix" type="rss" htmlUrl="https://www.phoronix.com/" xmlUrl="http://www.phoronix.com/rss.php"/>
+        <outline title="Planet GNOME" text="Planet GNOME" type="rss" htmlUrl="http://planet.gnome.org/atom.xml" xmlUrl="http://planet.gnome.org/atom.xml"/>
         <outline title="Planet KDE" text="Planet KDE" type="rss" htmlUrl="http://planet.kde.org/" xmlUrl="http://planet.kde.org/global/atom.xml"/>
-	</outline>
-	<outline title="News" text="News">
-		<outline title="BBC News - Home" text="BBC News - Home" type="rss" htmlUrl="https://www.bbc.co.uk/news/" xmlUrl="http://feeds.bbci.co.uk/news/rss.xml"/>
-		<outline title="NYT > Top Stories" text="NYT > Top Stories" type="rss" htmlUrl="https://www.nytimes.com?emc=rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"/>
-		<outline title="The Guardian" text="The Guardian" type="rss" htmlUrl="https://www.theguardian.com/international" xmlUrl="https://www.theguardian.com/international/rss"/>
-	</outline>
-	<outline title="Reddit" text="Reddit">
-		<outline title="top scoring links : coding_languages" text="top scoring links : coding_languages" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/coding_languages/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/coding_languages/top/.rss"/>
-		<outline title="top scoring links : linuxworld" text="top scoring links : linuxworld" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/linuxworld/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/linuxworld/top/.rss"/>
-		<outline title="top scoring links : topnews" text="top scoring links : topnews" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/topnews/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/topnews/top/.rss"/>
-		<outline title="top scoring links : ProgrammerHumor" text="top scoring links : ProgrammerHumor" type="rss" htmlUrl="https://www.reddit.com/r/programmerhumor/top/.rss" xmlUrl="https://www.reddit.com/r/programmerhumor/top/.rss"/>
-		<outline title="top scoring links : linux" text="top scoring links : linux" type="rss" htmlUrl="https://www.reddit.com/r/linux/top/.rss" xmlUrl="https://www.reddit.com/r/linux/top/.rss"/>
-		<outline title="top scoring links : programming" text="top scoring links : programming" type="rss" htmlUrl="https://www.reddit.com/r/programming/top/.rss" xmlUrl="https://www.reddit.com/r/programming/top/.rss"/>
-		<outline title="top scoring links : Python" text="top scoring links : Python" type="rss" htmlUrl="https://www.reddit.com/r/Python/top/.rss" xmlUrl="https://www.reddit.com/r/Python/top/.rss"/>
-	</outline>
-	<outline title="Tech" text="Tech">
-		<outline title="Hacker News" text="Hacker News" type="rss" htmlUrl="https://news.ycombinator.com/" xmlUrl="https://news.ycombinator.com/rss"/>
-	</outline>
-	</body>
+    </outline>
+    <outline title="News" text="News">
+        <outline title="BBC News - Home" text="BBC News - Home" type="rss" htmlUrl="https://www.bbc.co.uk/news/" xmlUrl="http://feeds.bbci.co.uk/news/rss.xml"/>
+        <outline title="NYT > Top Stories" text="NYT > Top Stories" type="rss" htmlUrl="https://www.nytimes.com?emc=rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"/>
+        <outline title="The Guardian" text="The Guardian" type="rss" htmlUrl="https://www.theguardian.com/international" xmlUrl="https://www.theguardian.com/international/rss"/>
+    </outline>
+    <outline title="Reddit" text="Reddit">
+        <outline title="top scoring links : coding_languages" text="top scoring links : coding_languages" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/coding_languages/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/coding_languages/top/.rss"/>
+        <outline title="top scoring links : linuxworld" text="top scoring links : linuxworld" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/linuxworld/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/linuxworld/top/.rss"/>
+        <outline title="top scoring links : topnews" text="top scoring links : topnews" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/topnews/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/topnews/top/.rss"/>
+        <outline title="top scoring links : ProgrammerHumor" text="top scoring links : ProgrammerHumor" type="rss" htmlUrl="https://www.reddit.com/r/programmerhumor/top/.rss" xmlUrl="https://www.reddit.com/r/programmerhumor/top/.rss"/>
+        <outline title="top scoring links : linux" text="top scoring links : linux" type="rss" htmlUrl="https://www.reddit.com/r/linux/top/.rss" xmlUrl="https://www.reddit.com/r/linux/top/.rss"/>
+        <outline title="top scoring links : programming" text="top scoring links : programming" type="rss" htmlUrl="https://www.reddit.com/r/programming/top/.rss" xmlUrl="https://www.reddit.com/r/programming/top/.rss"/>
+        <outline title="top scoring links : Python" text="top scoring links : Python" type="rss" htmlUrl="https://www.reddit.com/r/Python/top/.rss" xmlUrl="https://www.reddit.com/r/Python/top/.rss"/>
+    </outline>
+    <outline title="Tech" text="Tech">
+        <outline title="Hacker News" text="Hacker News" type="rss" htmlUrl="https://news.ycombinator.com/" xmlUrl="https://news.ycombinator.com/rss"/>
+    </outline>
+    </body>
 </opml>
