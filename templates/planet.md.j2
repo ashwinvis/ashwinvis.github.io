@@ -29,7 +29,7 @@ Status: published
       {{ article.updated.strftime("%Y") }}
     </time>
     <div class="p-name">
-    {{ article.title or "..." }}
+    {{ article.title|truncate(42, False, "💬") or "💬" }}
     </div>
   </a></h1>
   <div class="p-summary">
