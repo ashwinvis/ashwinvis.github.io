@@ -20,19 +20,26 @@ def encrypt_email(real_name, rev_username, domain, tld="com"):
     return email_rot13
 
 
-def read_opml(path):
+def read_opml(path, category=None):
     tree = parse(path)
     root = tree.getroot()
 
     opml = {}
-    for child in root.find('body'):
-        category = child.get('title')
-        opml[category] = {}
-        for grandchild in child:
-            feed_title = grandchild.get('title')
-            feed_url = grandchild.get('xmlUrl')
-            opml[category][feed_title] = feed_url
-    return opml["Blogroll"]
+
+    def update(d, elem):
+        feed_title = elem.get('title')
+        feed_url = elem.get('xmlUrl')
+        d[feed_title] = feed_url
+        print(feed_title)
+
+    if category:
+        for child in root.findall(f".//*[@title='{category}']/outline"):
+            update(opml, child)
+    else:
+        for child in root.findall('.//outline'):
+            if child.get('xmlUrl'):
+                update(opml, child)
+    return opml
 
 
 if __name__ == "__main__":
@@ -41,4 +48,4 @@ if __name__ == "__main__":
     print(encrypt_email(AUTHOR, rev_username="sivniwhsa", domain="pm", tld="me"))
     print(encrypt_email(AUTHOR, rev_username="omva", domain="misu.su", tld="se"))
 
-    read_opml("planet.opml")
+    read_opml("planet.opml", "Blogroll")
