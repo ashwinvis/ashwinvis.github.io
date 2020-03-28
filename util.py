@@ -30,7 +30,6 @@ def read_opml(path, category=None):
         feed_title = elem.get('title')
         feed_url = elem.get('xmlUrl')
         d[feed_title] = feed_url
-        print(feed_title)
 
     if category:
         for child in root.findall(f".//*[@title='{category}']/outline"):
