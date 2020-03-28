@@ -16,7 +16,7 @@ Status: published
 
 <div id="planet">
 {% for article in articles %}
-<article>
+<article class="h-cite">
 <header>
   <h1><a href="{{ article.link }}" rel="bookmark" class="u-url"
   title="{{ article.title}}">
@@ -36,7 +36,8 @@ Status: published
   </div>
 </header>
 <footer>
-  <p>Posted by <b>{{ article.author or "Anonymous" }}</b>
+  <p>Posted by
+  <span class="p-author"><b>{{ article.author or "Anonymous" }}</b></span>
   on <time datetime="{{ article.updated }}" class="dt-published"></time>
   {{ article.updated.strftime("%a %d %b %Y")}}
   in {{ article.feed_name }}.
