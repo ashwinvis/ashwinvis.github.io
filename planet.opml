@@ -45,6 +45,9 @@
         <outline title="Tall, Snarky Canadian" text="Tall, Snarky Canadian" type="rss" htmlUrl="https://snarky.ca/" xmlUrl="https://snarky.ca/rss/"/>
         <outline title="Gregory Szorc's Digital Home" text="Gregory Szorc's Digital Home" type="rss" htmlUrl="https://gregoryszorc.com/" xmlUrl="https://gregoryszorc.com/blog/feed/atom/"/>
         <outline title="Alex Schroeder: Diary" text="Alex Schroeder: Diary" type="rss" htmlUrl="https://alexschroeder.ch/wiki" xmlUrl="https://alexschroeder.ch/wiki?action=journal;search=-tag:rpg%20-tag:rsp;lang=en;title=English%20Diary%20without%20RPG%20Pages"/>
+        <outline title="Armin Ronacher's Thoughts and Writings" text="Armin Ronacher's Thoughts and Writings" type="rss" htmlUrl="https://lucumr.pocoo.org/" xmlUrl="https://lucumr.pocoo.org/feed.atom"/>
+        <outline title="Raymond Hettinger" text="Raymond Hettinger" type="rss" htmlUrl="https://nitter.net/raymondh/" xmlUrl="https://nitter.net/raymondh/rss"/>
+        <outline title="David Beazley" text="David Beazley" type="rss" htmlUrl="https://nitter.net/dabeaz/" xmlUrl="https://nitter.net/dabeaz/rss"/>
     </outline>
     <outline title="Comix" text="Comix">
         <outline title="ZEN PENCILS" text="ZEN PENCILS" type="rss" htmlUrl="https://zenpencils.com" xmlUrl="http://feeds.feedburner.com/zenpencils?format=xml"/>
