@@ -28,6 +28,7 @@ except NameError:
     pass
 
 PLANET_FEEDS = read_opml("planet.opml", ("Blogroll", "Planets"))
+PLANET_RESOLVE_REDIRECTS = True
 
 # Following items are often useful when publishing
 
