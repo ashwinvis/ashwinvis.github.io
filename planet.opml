@@ -55,9 +55,9 @@
         <outline title="ZEN PENCILS" text="ZEN PENCILS" type="rss" htmlUrl="https://zenpencils.com" xmlUrl="http://feeds.feedburner.com/zenpencils?format=xml"/>
         <outline title="Abstruse Goose" text="Abstruse Goose" type="rss" htmlUrl="https://abstrusegoose.com" xmlUrl="http://abstrusegoose.com/feed"/>
     </outline>
-    <outline title="Free Software" text="Free Software">
-        <outline title="Phoronix" text="Phoronix" type="rss" htmlUrl="https://www.phoronix.com/" xmlUrl="http://www.phoronix.com/rss.php"/>
-        <outline title="Planet GNOME" text="Planet GNOME" type="rss" htmlUrl="http://planet.gnome.org/atom.xml" xmlUrl="http://planet.gnome.org/atom.xml"/>
+    <outline title="Planets" text="Planets">
+        <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
+        <outline title="Planet GNOME" text="Planet GNOME" type="rss" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml"/>
         <outline title="Planet KDE" text="Planet KDE" type="rss" htmlUrl="http://planet.kde.org/" xmlUrl="http://planet.kde.org/global/atom.xml"/>
     </outline>
     <outline title="News" text="News">
@@ -75,6 +75,7 @@
         <outline title="top scoring links : Python" text="top scoring links : Python" type="rss" htmlUrl="https://www.reddit.com/r/Python/top/.rss" xmlUrl="https://www.reddit.com/r/Python/top/.rss"/>
     </outline>
     <outline title="Tech" text="Tech">
+        <outline title="Phoronix" text="Phoronix" type="rss" htmlUrl="https://www.phoronix.com/" xmlUrl="http://www.phoronix.com/rss.php"/>
         <outline title="Hacker News" text="Hacker News" type="rss" htmlUrl="https://news.ycombinator.com/" xmlUrl="https://news.ycombinator.com/rss"/>
     </outline>
     </body>
