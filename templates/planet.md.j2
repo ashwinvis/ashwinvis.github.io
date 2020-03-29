@@ -19,19 +19,21 @@ Status: published
 {% for article in articles %}
 <article class="h-cite">
 <header>
-  <h1><a href="{{ article.link }}" rel="bookmark" class="u-url"
-  title="{{ article.title}}">
-    <time class="m-date" datetime="{{ article.updated }}">
-      {{ article.updated.strftime("%b") }}
-      <span class="m-date-day">
-        {{ article.updated.strftime("%d") }}
-      </span>
-      {{ article.updated.strftime("%Y") }}
-    </time>
-    <div class="p-name">
-    {{ article.title or "💬" }}
-    </div>
-  </a></h1>
+  <h1>
+    <a href="{{ article.link }}" rel="bookmark" class="u-url"
+       title="{{ article.title}}" target="_blank">
+      <time class="m-date" datetime="{{ article.updated }}">
+        {{ article.updated.strftime("%b") }}
+        <span class="m-date-day">
+          {{ article.updated.strftime("%d") }}
+        </span>
+        {{ article.updated.strftime("%Y") }}
+      </time>
+      <div class="p-name">
+      {{ article.title or "💬" }}
+      </div>
+    </a>
+  </h1>
   <div class="p-summary">
   {{ article.summary }}
   </div>
