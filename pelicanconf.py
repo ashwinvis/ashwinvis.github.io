@@ -172,10 +172,11 @@ IPYNB_SKIP_CSS = False
 IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # pelican_planet
-PLANET_FEEDS = read_opml("planet.opml")
+PLANET_FEEDS = read_opml("planet.opml", ("News", "Tech"))
 PLANET_TEMPLATE = 'templates/planet.md.j2'
 PLANET_PAGE = 'content/pages/planet.md'
-PLANET_MAX_ARTICLES_PER_FEED = 3
+PLANET_MAX_ARTICLES_PER_FEED = 2
+PLANET_MAX_ARTICLES = max(42, PLANET_MAX_ARTICLES_PER_FEED * len(PLANET_FEEDS))
 PLANET_MAX_SUMMARY_LENGTH = 140
 
 # Pagination

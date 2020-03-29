@@ -5,8 +5,9 @@ Slug: planet
 Status: published
 ---
 
-> A [river of news](https://indieweb.org/planet) from a selection of RSS feeds
-> I follow. Not an endorsement, but simply out of curiousity!
+> A [river of news](https://indieweb.org/planet) from a [selection of
+> feeds](https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/planet.opml)
+> I follow. *Disclaimer: This is not an endorsement*.
 
 <style>
 #planet img{
@@ -16,27 +17,30 @@ Status: published
 
 <div id="planet">
 {% for article in articles %}
-<article>
+<article class="h-cite">
 <header>
-  <h1><a href="{{ article.link }}" rel="bookmark" class="u-url"
-  title="{{ article.title}}">
-    <time class="m-date" datetime="{{ article.updated }}">
-      {{ article.updated.strftime("%b") }}
-      <span class="m-date-day">
-        {{ article.updated.strftime("%d") }}
-      </span>
-      {{ article.updated.strftime("%Y") }}
-    </time>
-    <div class="p-name">
-    {{ article.title or "..." }}
-    </div>
-  </a></h1>
+  <h1>
+    <a href="{{ article.link }}" rel="bookmark" class="u-url"
+       title="{{ article.title}}" target="_blank">
+      <time class="m-date" datetime="{{ article.updated }}">
+        {{ article.updated.strftime("%b") }}
+        <span class="m-date-day">
+          {{ article.updated.strftime("%d") }}
+        </span>
+        {{ article.updated.strftime("%Y") }}
+      </time>
+      <div class="p-name">
+      {{ article.title or "💬" }}
+      </div>
+    </a>
+  </h1>
   <div class="p-summary">
   {{ article.summary }}
   </div>
 </header>
 <footer>
-  <p>Posted by <b>{{ article.author or "Anonymous" }}</b>
+  <p>Posted by
+  <span class="p-author"><b>{{ article.author or "Anonymous" }}</b></span>
   on <time datetime="{{ article.updated }}" class="dt-published"></time>
   {{ article.updated.strftime("%a %d %b %Y")}}
   in {{ article.feed_name }}.

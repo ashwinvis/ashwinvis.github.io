@@ -1,6 +1,11 @@
 import codecs
+import logging
+from itertools import chain
 
 from defusedxml.ElementTree import parse
+
+
+logger = logging.getLogger(__name__)
 
 
 def encrypt_email(real_name, rev_username, domain, tld="com"):
@@ -20,19 +25,28 @@ def encrypt_email(real_name, rev_username, domain, tld="com"):
     return email_rot13
 
 
-def read_opml(path):
+def read_opml(path, categories=()):
     tree = parse(path)
     root = tree.getroot()
 
     opml = {}
-    for child in root.find('body'):
-        category = child.get('title')
-        opml[category] = {}
-        for grandchild in child:
-            feed_title = grandchild.get('title')
-            feed_url = grandchild.get('xmlUrl')
-            opml[category][feed_title] = feed_url
-    return opml["Blogroll"]
+
+    def update(d, elem):
+        feed_title = elem.get("title")
+        feed_url = elem.get("xmlUrl")
+        logger.debug(f"Add feed: {feed_title}")
+        d[feed_title] = feed_url
+
+    if categories:
+        for child in chain.from_iterable(
+            root.findall(f".//*[@title='{category}']/outline")
+            for category in categories
+        ):
+            update(opml, child)
+    elif not categories:
+        for child in root.findall(".//outline/outline"):
+            update(opml, child)
+    return opml
 
 
 if __name__ == "__main__":
@@ -41,4 +55,5 @@ if __name__ == "__main__":
     print(encrypt_email(AUTHOR, rev_username="sivniwhsa", domain="pm", tld="me"))
     print(encrypt_email(AUTHOR, rev_username="omva", domain="misu.su", tld="se"))
 
-    read_opml("planet.opml")
+    # from pprint import pprint
+    # pprint(read_opml("planet.opml"))
