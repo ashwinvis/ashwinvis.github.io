@@ -2,6 +2,7 @@
 Title: Tesing Indieweb Stack
 Author: Ashwin Vishnu Mohanan
 Date: 2020-03-31T22:54:39.019340
+Modified: 2020-03-01T13:24:00
 Slug: tesing-indieweb-stack
 Status: published
 Summary: A simple test page to see what parts of Indieweb actually works
@@ -26,6 +27,7 @@ webmention as follows:
 - Embed a blank hyperlink to `https://brid.gy/publish/mastodon` as
   [mentioned here](https://brid.gy/about#webmentions)
 - Send a request [using cURL](https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL)
+
   ```sh
   ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
   HTTP/2 201 
@@ -50,6 +52,7 @@ webmention as follows:
   ```
 
 - Ensure that accidental duplicate posts are avoided.
+
   ```sh
   ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
   HTTP/2 400 
@@ -75,7 +78,7 @@ webmention as follows:
 
 ### End result
 
-<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
+<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
 ### Next steps
 
