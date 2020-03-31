@@ -15,51 +15,55 @@ webmention as follows:&lt;/p&gt;
   &lt;a href="https://brid.gy/about#webmentions"&gt;mentioned here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Send a request &lt;a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL"&gt;using cURL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;```sh
-  ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
-  HTTP/2 201 
-  content-type: application/json; charset=utf-8
-  cache-control: no-cache
-  access-control-allow-origin: *
-  content-security-policy: script-src https: localhost:8080 my.dev.com:8080 'unsafe-inline'; frame-ancestors 'self'; report-uri /csp-report;
-  strict-transport-security: max-age=16070400; preload
-  x-content-type-options: nosniff
-  x-frame-options: SAMEORIGIN
-  x-xss-protection: 1; mode=block
-  location: https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082
-  x-cloud-trace-context: 89f23f15ae3916e5ae535cfe3d1b5152;o=1
-  date: Tue, 31 Mar 2020 23:08:54 GMT
-  server: Google Frontend
-  content-length: 3401&lt;/p&gt;
-&lt;p&gt;{
-    "id":"103920181819443082",
-    "created_at":"2020-03-31T23:08:53.759Z",
-    ...
-  ```&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ curl -i -d &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://ashwin.info.tm/tesing-indieweb-stack.html -d &lt;span class="nv"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+HTTP/2 &lt;span class="m"&gt;201&lt;/span&gt; 
+content-type: application/json&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;utf-8
+cache-control: no-cache
+access-control-allow-origin: *
+content-security-policy: script-src https: localhost:8080 my.dev.com:8080 &lt;span class="s1"&gt;&amp;#39;unsafe-inline&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; frame-ancestors &lt;span class="s1"&gt;&amp;#39;self&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; report-uri /csp-report&lt;span class="p"&gt;;&lt;/span&gt;
+strict-transport-security: max-age&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;16070400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;block
+location: https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082
+x-cloud-trace-context: 89f23f15ae3916e5ae535cfe3d1b5152&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;o&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+date: Tue, &lt;span class="m"&gt;31&lt;/span&gt; Mar &lt;span class="m"&gt;2020&lt;/span&gt; &lt;span class="m"&gt;23&lt;/span&gt;:08:54 GMT
+server: Google Frontend
+content-length: &lt;span class="m"&gt;3401&lt;/span&gt;
+
+&lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;quot;103920181819443082&amp;quot;&lt;/span&gt;,
+  &lt;span class="s2"&gt;&amp;quot;created_at&amp;quot;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;quot;2020-03-31T23:08:53.759Z&amp;quot;&lt;/span&gt;,
+  ...
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;ul&gt;
 &lt;li&gt;Ensure that accidental duplicate posts are avoided.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;```sh
-  ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
-  HTTP/2 400 
-  content-type: application/json; charset=utf-8
-  cache-control: no-cache
-  access-control-allow-origin: *
-  content-security-policy: script-src https: localhost:8080 my.dev.com:8080 'unsafe-inline'; frame-ancestors 'self'; report-uri /csp-report;
-  strict-transport-security: max-age=16070400; preload
-  x-content-type-options: nosniff
-  x-frame-options: SAMEORIGIN
-  x-xss-protection: 1; mode=block
-  x-cloud-trace-context: 1691edd117aa780e68a530ff0f116824;o=1
-  date: Tue, 31 Mar 2020 23:09:55 GMT
-  server: Google Frontend
-  content-length: 3731&lt;/p&gt;
-&lt;p&gt;{
-    "error":"Sorry, you've already published that page, and Bridgy Publish doesn't support updating existing posts. Details: https://github.com/snarfed/bridgy/issues/84",
-    "original":{
-      "id":"103920181819443082
-      ...
-  ```&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ curl -i -d &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://ashwin.info.tm/tesing-indieweb-stack.html -d &lt;span class="nv"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+HTTP/2 &lt;span class="m"&gt;400&lt;/span&gt; 
+content-type: application/json&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;utf-8
+cache-control: no-cache
+access-control-allow-origin: *
+content-security-policy: script-src https: localhost:8080 my.dev.com:8080 &lt;span class="s1"&gt;&amp;#39;unsafe-inline&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; frame-ancestors &lt;span class="s1"&gt;&amp;#39;self&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; report-uri /csp-report&lt;span class="p"&gt;;&lt;/span&gt;
+strict-transport-security: max-age&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;16070400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;block
+x-cloud-trace-context: 1691edd117aa780e68a530ff0f116824&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;o&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+date: Tue, &lt;span class="m"&gt;31&lt;/span&gt; Mar &lt;span class="m"&gt;2020&lt;/span&gt; &lt;span class="m"&gt;23&lt;/span&gt;:09:55 GMT
+server: Google Frontend
+content-length: &lt;span class="m"&gt;3731&lt;/span&gt;
+
+&lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;error&amp;quot;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;quot;Sorry, you&amp;#39;ve already published that page, and Bridgy Publish doesn&amp;#39;t support updating existing posts. Details: https://github.com/snarfed/bridgy/issues/84&amp;quot;&lt;/span&gt;,
+  &lt;span class="s2"&gt;&amp;quot;original&amp;quot;&lt;/span&gt;:&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;quot;103920181819443082&lt;/span&gt;
+&lt;span class="s2"&gt;    ...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h3&gt;End result&lt;/h3&gt;
 &lt;iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 
