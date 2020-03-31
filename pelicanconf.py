@@ -72,6 +72,7 @@ M_CSS_FILES = [
     "/static/source-sans-pro.css",
     "/static/m-dark.css",
     "/static/bibbase-m.css",
+    "/static/custom.css",
     # "/static/pygments-dark.css",
     "/static/landing.css",
 ]
