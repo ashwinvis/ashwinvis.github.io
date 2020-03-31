@@ -108,8 +108,9 @@ webmention as follows:</p>
 <ul>
 <li>Embed a blank hyperlink to <code>https://brid.gy/publish/mastodon</code> as
   <a href="https://brid.gy/about#webmentions">mentioned here</a></li>
-<li>Send a request <a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL">using cURL</a>
-  ```sh
+<li>Send a request <a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL">using cURL</a></li>
+</ul>
+<p>```sh
   ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
   HTTP/2 201 
   content-type: application/json; charset=utf-8
@@ -124,16 +125,16 @@ webmention as follows:</p>
   x-cloud-trace-context: 89f23f15ae3916e5ae535cfe3d1b5152;o=1
   date: Tue, 31 Mar 2020 23:08:54 GMT
   server: Google Frontend
-  content-length: 3401</li>
-</ul>
+  content-length: 3401</p>
 <p>{
     "id":"103920181819443082",
     "created_at":"2020-03-31T23:08:53.759Z",
     ...
   ```</p>
 <ul>
-<li>Ensure that accidental duplicate posts are avoided.
-  ```sh
+<li>Ensure that accidental duplicate posts are avoided.</li>
+</ul>
+<p>```sh
   ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
   HTTP/2 400 
   content-type: application/json; charset=utf-8
@@ -147,8 +148,7 @@ webmention as follows:</p>
   x-cloud-trace-context: 1691edd117aa780e68a530ff0f116824;o=1
   date: Tue, 31 Mar 2020 23:09:55 GMT
   server: Google Frontend
-  content-length: 3731</li>
-</ul>
+  content-length: 3731</p>
 <p>{
     "error":"Sorry, you've already published that page, and Bridgy Publish doesn't support updating existing posts. Details: https://github.com/snarfed/bridgy/issues/84",
     "original":{
@@ -156,7 +156,7 @@ webmention as follows:</p>
       ...
   ```</p>
 <h3>End result</h3>
-<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
+<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"></iframe>
 
 <script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
@@ -164,7 +164,7 @@ webmention as follows:</p>
 <p>To automate this process into CI?</p>
 <!-- /content -->
         <footer>
-          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-31T22:54:39.019340+02:00" class="dt-published">Tue 31 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>.</p>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-31T22:54:39.019340+02:00" class="dt-published">Tue 31 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-03-01T13:24:00+01:00" class="dt-updated">Sun 01 March 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>.</p>
         </footer>
       </article>
       <article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-03-31T22:54:39+02:00</updated><entry><title>Tesing Indieweb Stack</title><link href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="alternate"></link><published>2020-03-31T22:54:39+02:00</published><updated>2020-03-31T22:54:39+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-31:/tesing-indieweb-stack.html</id><summary type="html">&lt;p&gt;A simple test page to see what parts of Indieweb actually works&lt;/p&gt;</summary><content type="html">&lt;p&gt;Indieweb consists of the following building blocks:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-03-31T22:54:39+02:00</updated><entry><title>Tesing Indieweb Stack</title><link href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="alternate"></link><published>2020-03-31T22:54:39+02:00</published><updated>2020-03-01T13:24:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-31:/tesing-indieweb-stack.html</id><summary type="html">&lt;p&gt;A simple test page to see what parts of Indieweb actually works&lt;/p&gt;</summary><content type="html">&lt;p&gt;Indieweb consists of the following building blocks:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Microformats 2&lt;/li&gt;
 &lt;li&gt;Webmentions&lt;/li&gt;
@@ -13,8 +13,9 @@ webmention as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Embed a blank hyperlink to &lt;code&gt;https://brid.gy/publish/mastodon&lt;/code&gt; as
   &lt;a href="https://brid.gy/about#webmentions"&gt;mentioned here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Send a request &lt;a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL"&gt;using cURL&lt;/a&gt;
-  ```sh
+&lt;li&gt;Send a request &lt;a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL"&gt;using cURL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;```sh
   ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
   HTTP/2 201 
   content-type: application/json; charset=utf-8
@@ -29,16 +30,16 @@ webmention as follows:&lt;/p&gt;
   x-cloud-trace-context: 89f23f15ae3916e5ae535cfe3d1b5152;o=1
   date: Tue, 31 Mar 2020 23:08:54 GMT
   server: Google Frontend
-  content-length: 3401&lt;/li&gt;
-&lt;/ul&gt;
+  content-length: 3401&lt;/p&gt;
 &lt;p&gt;{
     "id":"103920181819443082",
     "created_at":"2020-03-31T23:08:53.759Z",
     ...
   ```&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ensure that accidental duplicate posts are avoided.
-  ```sh
+&lt;li&gt;Ensure that accidental duplicate posts are avoided.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;```sh
   ❯ curl -i -d source=https://ashwin.info.tm/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
   HTTP/2 400 
   content-type: application/json; charset=utf-8
@@ -52,8 +53,7 @@ webmention as follows:&lt;/p&gt;
   x-cloud-trace-context: 1691edd117aa780e68a530ff0f116824;o=1
   date: Tue, 31 Mar 2020 23:09:55 GMT
   server: Google Frontend
-  content-length: 3731&lt;/li&gt;
-&lt;/ul&gt;
+  content-length: 3731&lt;/p&gt;
 &lt;p&gt;{
     "error":"Sorry, you've already published that page, and Bridgy Publish doesn't support updating existing posts. Details: https://github.com/snarfed/bridgy/issues/84",
     "original":{
@@ -61,7 +61,7 @@ webmention as follows:&lt;/p&gt;
       ...
   ```&lt;/p&gt;
 &lt;h3&gt;End result&lt;/h3&gt;
-&lt;iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
+&lt;iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 
 &lt;script src="https://mastodon.acc.sunet.se/embed.js" async="async"&gt;&lt;/script&gt;
 
