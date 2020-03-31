@@ -80,6 +80,36 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="bookmark" class="u-url" title="Permalink to Tesing Indieweb Stack">
+            <time class="m-date" datetime="2020-03-31T22:54:39.019340+02:00">
+              Mar <span class="m-date-day">31</span> 2020
+            </time>
+            <div class="p-name">
+              Tesing Indieweb Stack
+            </div>
+          </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
+          <div class="p-summary">
+          <p>A simple test page to see what parts of Indieweb actually works</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>Indieweb consists of the following building blocks:</p>
+<ul>
+<li>Microformats 2</li>
+<li>Webmentions</li>
+</ul>
+<p>This allows one to Publish Own and Syndicate Somewhere Else (POSSE). I have
+logged in my progress in the <a href="https://indieweb.org/User:Ashwin.info.tm">Indieweb
+wiki</a>.</p>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-31T22:54:39.019340+02:00" class="dt-published">Tue 31 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>.</p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/cloud-computing.html" rel="bookmark" class="u-url" title="Permalink to Cloud computing for research">
             <time class="m-date" datetime="2020-03-20T11:29:00+01:00">
               Mar <span class="m-date-day">20</span> 2020
@@ -88,181 +118,15 @@
               Cloud computing for research
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>A journal of how I setup BOINC and <a href="mailto:Folding&#64;home">Folding&#64;home</a> on my laptop running Arch Linux.</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>There is an ongoing effort in all disciplines to find solutions the Covid-19
-pandemic. Be it policy (social distancing, call for people to work from home),
-technology (repurposing auto, beverages and perfume industries to manufacture
-ventilators and hand sanitizers etc., open access to research) and art (hobbies
-and music to stay upbeat at home).</p>
-<p>And then there is BOINC and <a href="mailto:Folding&#64;home">Folding&#64;home</a> - serious research projects which has
-a nice social cloud-computing infrastructure to solve difficult problems. This
-also include molecular dynamics simulations using open-source software like
-GROMACS by different research groups around the world. My laptop has a
-top-notch Quadro RTX 3000 Mobile GPU, so I decided to give it a go.</p>
-<div align="center">
-<iframe src="https://pixelfed.social/p/ashwinvis/146561445096722432/embed?caption=true&likes=false&layout=full" class="pixelfed__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe>
-</div>
-<script async defer src="https://pixelfed.social/embed.js"></script><p>First off some essentials:</p>
-<pre># pacman -S opencl-nvidia cuda nvtop</pre>
-<section id="boinc">
-<h2>BOINC</h2>
-<section id="references">
-<h3>References</h3>
-<ul>
-<li><a href="https://wiki.archlinux.org/index.php/BOINC">https://wiki.archlinux.org/index.php/BOINC</a></li>
-<li><a href="https://boinc.berkeley.edu/projects.php">https://boinc.berkeley.edu/projects.php</a></li>
-<li><a href="http://www.gpugrid.net/join.php">http://www.gpugrid.net/join.php</a></li>
-<li><a href="https://www.gpugrid.net/team_display.php?teamid=2985">https://www.gpugrid.net/team_display.php?teamid=2985</a></li>
-</ul>
-</section>
-<section id="how-to">
-<h3>How to</h3>
-<p>Installing and setting up:</p>
-<pre># pacman -S boinc-nox opencl-nvidia
-# usermod -a -G boinc video
-# systemctl start boinc-client.service
-# systemctl status boinc-client
-● boinc-client.service - Berkeley Open Infrastructure Network Computing Client
-     Loaded: loaded (/usr/lib/systemd/system/boinc-client.service; disabled; vendor preset: disabled)
-     Active: active (running) since Fri 2020-03-20 08:06:50 CET; 1h 44min ago
-       Docs: man:boinc(1)
-   Main PID: 119973 (boinc)
-      Tasks: 2 (limit: 38224)
-     Memory: 9.6M
-     CGroup: /system.slice/boinc-client.service
-             └─119973 /usr/bin/boinc
-
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---]    (to change preferences, visit a project web site or select Preferences in the Manager)
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Setting up project and slot directories
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Checking active tasks
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Setting up GUI RPC socket
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Checking presence of 0 project files
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] This computer is not attached to any projects
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 Initialization completed
-Mar 20 08:07:37 archmage boinc[119973]: 20-Mar-2020 08:07:37 [---] Suspending GPU computation - computer is in use
-Mar 20 08:55:30 archmage boinc[119973]: 20-Mar-2020 08:55:30 [---] Resuming GPU computation
-Mar 20 09:14:26 archmage boinc[119973]: 20-Mar-2020 09:14:26 [---] Suspending GPU computation - computer is in use</pre>
-<p>This would generate a password at <code>/var/lib/boinc/gui_rpc_auth.cfg</code>:</p>
-<pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) --get_host_info
-  timezone: 3600
-  domain name: archmage
-  IP addr: 127.0.1.1
-  #CPUS: 12
-  CPU vendor: GenuineIntel
-  CPU model: Intel(R) Core(TM) i7-9850H CPU &#64; 2.60GHz [Family 6 Model 158 Stepping 13]
-  CPU FP OPS: 1000000000.000000
-  CPU int OPS: 1000000000.000000
-  OS name: Linux Arch
-  OS version: Arch Linux [5.5.9-arch1-2|libc 2.31 (GNU libc)]
-  mem size: 33419243520.000000
-  cache size: 12582912.000000
-  swap size: 53687087104.000000
-  disk size: 105152544768.000000
-  disk free: 57508556800.000000
-  NVIDIA GPU: Quadro RTX 3000 (driver version 440.64, CUDA version 10.2, compute capability 7.5, 4096MB, 3970MB available, 5299 GFLOPS peak)
-    OpenCL: NVIDIA 0: Quadro RTX 3000 (driver version 440.64, device version OpenCL 1.2 CUDA, 5935MB, 3970MB available, 5299 GFLOPS peak)</pre>
-<p>Create an account in a project (substitute those variables starting with a $
-sign):</p>
-<pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) \
-    --create_account www.gpugrid.net $email $project_passwd $project_username</pre>
-<p>Find the “weak account key” by <a href="https://www.gpugrid.net/login_form.php">logging in</a>. Then attach the account to the
-project:</p>
-<pre># boinccmd --passwd $(cat /var/lib/boinc/gui_rpc_auth.cfg) --project_attach www.gpugrid.net $weak_account_key</pre>
-<p>The client should then run while the system is idle.</p>
-</section>
-</section>
-<section id="folding-home">
-<h2>Folding &#64; home</h2>
-<section id="id1">
-<h3>References</h3>
-<ul>
-<li><a href="https://foldingathome.org/start-folding">https://foldingathome.org/start-folding</a></li>
-<li><a href="https://wiki.archlinux.org/index.php/Folding&#64;home">https://wiki.archlinux.org/index.php/Folding&#64;home</a></li>
-<li><a href="https://stats.foldingathome.org/team/45032">https://stats.foldingathome.org/team/45032</a></li>
-</ul>
-</section>
-<section id="id2">
-<h3>How to</h3>
-<p>Install:</p>
-<pre># pacman -S foldingathome</pre>
-<p><a href="https://apps.foldingathome.org/getpasskey">Register for an account (optional)</a></p>
-<p>Run as a user:</p>
-<pre>❯ mkdir ~/{.config,.cache}/foldingathome
-❯ cd ~/.config/foldingathome
-❯ FAHClient --configure
-User name [Anonymous]: ****
-Team number [0]: 45032
-Passkey: ****
-Enable SMP [true]: false
-Enable GPU [true]:
-Name of configuration file [config.xml]:
-❯ mkdir -p ~/.config/systemd/user/</pre>
-<p>Create a service <code>~/.config/systemd/user/foldingathome.service</code>:</p>
-<pre class="m-code"><span class="k">[Unit]</span>
-<span class="na">Description</span><span class="o">=</span><span class="s">Run folding at home client</span>
-
-<span class="k">[Service]</span>
-<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/avmo/.cache/foldingathome</span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml</span></pre>
-<p>Execute:</p>
-<pre>❯ systemctl --user start foldingathome.service
-❯ systemctl --user status foldingathome.service
-● foldingathome.service - Run folding at home client
-     Loaded: loaded (/home/avmo/.config/systemd/user/foldingathome.service; static; vendor preset: enabled)
-     Active: active (running) since Fri 2020-03-20 09:38:15 CET; 4s ago
-   Main PID: 149577 (FAHClient)
-     CGroup: /user.slice/user-1001.slice/user&#64;1001.service/foldingathome.service
-             └─149577 /usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml
-
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:  &lt;!-- Folding Slots --&gt;
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:&lt;/config&gt;
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Trying to access database...
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Successfully acquired database lock
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Enabled folding slot 00: READY cpu:1
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:Enabled folding slot 01: PAUSED gpu:0:TU106GLM [Quadro RTX 3000 Mobile / Max-Q] (waiting for idle)
-Mar 20 09:38:15 archmage FAHClient[149577]: 08:38:15:WU00:FS00:Connecting to 65.254.110.245:8080
-Mar 20 09:38:16 archmage FAHClient[149577]: 08:38:16:WU00:FS00:Assigned to work server 128.252.203.9
-Mar 20 09:38:16 archmage FAHClient[149577]: 08:38:16:WU00:FS00:Requesting new work unit for slot 00: READY cpu:1 from 128.252.203.9
-
-# after a while ...
-❯ systemctl --user status foldingathome.service
-● foldingathome.service - Run folding at home client
-     Loaded: loaded (/home/avmo/.config/systemd/user/foldingathome.service; static; vendor preset: enabled)
-     Active: active (running) since Fri 2020-03-20 09:38:15 CET; 19min ago
-   Main PID: 149577 (FAHClient)
-     CGroup: /user.slice/user-1001.slice/user&#64;1001.service/foldingathome.service
-             ├─149577 /usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml
-             ├─153643 /usr/bin/FAHCoreWrapper /home/avmo/.cache/foldingathome/cores/cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah/FahCore_a7 -dir 00 -suffix 01 -ver&gt;
-             └─153647 /home/avmo/.cache/foldingathome/cores/cores.foldingathome.org/v7/lin/64bit/avx/Core_a7.fah/FahCore_a7 -dir 00 -suffix 01 -version 705 -lifeline 15364&gt;
-
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:********************************************************************************
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Project: 14328 (Run 6, Clone 756, Gen 14)
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Unit: 0x000000109bf7a4d65e6d0ea7eac01f9c
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Reading tar file core.xml
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Reading tar file frame14.tpr
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Digital signatures verified
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Calling: mdrun -s frame14.tpr -o frame14.trr -cpt 15 -nt 1
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Steps: first=3500000 total=250000
-Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Completed 1 out of 250000 steps (0%)
-Mar 20 09:57:25 archmage FAHClient[149577]: 08:57:25:WU00:FS00:0xa7:Completed 2500 out of 250000 steps (1%)</pre>
-<p>While the client is running / idle, you can schedule and tweak using the <a href="http://0.0.0.0:7396/">web client</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want GPU jobs alone, comment out the CPU slots in
-<code>~/.config/foldingathome/config.xml</code> and set power to “Medium” in the web
-client.</p>
-</div>
-</section>
-</section>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-20T11:29:00+01:00" class="dt-published">Fri 20 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-03-25T22:29:00+01:00" class="dt-updated">Wed 25 March 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/research.html">research</a>, <a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a>, <a href="https://ashwin.info.tm/tag/hpc.html">hpc</a>.</p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -274,6 +138,7 @@ client.</p>
               Back to Arch Linux
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Within a Ubuntu LTS pre-installed laptop</p>
           </div>
@@ -293,6 +158,7 @@ client.</p>
               Turning Pelican into a mini-CMS
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Lowering writing inhibitions with tech</p>
           </div>
@@ -312,6 +178,7 @@ client.</p>
               Licensing software to be permissive
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Considerations while selecting a permissive license for your open-source project.</p>
           </div>
@@ -331,6 +198,7 @@ client.</p>
               About my postdoc project at Stockholm University
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-12-12T00:00:00+01:00" class="dt-published">Thu 12 December 2019</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/postdoc.html">postdoc</a>, <a href="https://ashwin.info.tm/tag/research.html">research</a>, <a href="https://ashwin.info.tm/tag/fluid-mechanics.html">fluid-mechanics</a>.</p>
@@ -347,6 +215,7 @@ client.</p>
               At PyCon Sweden 2019
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Representing Transonic</p>
           </div>
@@ -366,6 +235,7 @@ client.</p>
               Diversity amongst Python interpreters
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>We now have multiple Python interpreters and let's see what is in store.</p>
           </div>
@@ -385,6 +255,7 @@ client.</p>
               REPL for your data
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Use ethical solutions. Archive your data. REPL.</p>
           </div>
@@ -404,6 +275,7 @@ client.</p>
               Feigenbaum constant
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Computing Feigenbaum constant using SymPy</p>
           </div>
@@ -423,6 +295,7 @@ client.</p>
               New article: Shallow water wave turbulence
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.</p>
           </div>
@@ -442,6 +315,7 @@ client.</p>
               A dictionary of horrors
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <style type="text/css">
           /* jupyter nbconvert */
@@ -489,6 +363,7 @@ client.</p>
               Lightweight classes for scientific computing using "cached_property"
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <style type="text/css">
           /* jupyter nbconvert */
@@ -536,6 +411,7 @@ client.</p>
               Intensely edgy cat with FluidFFT
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <style type="text/css">
           /* jupyter nbconvert */
@@ -583,6 +459,7 @@ client.</p>
               Why Open-Source?
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2018-01-06T00:00:00+01:00" class="dt-published">Sat 06 January 2018</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. <span class="m-label m-success">updated <time datetime="2018-01-06T00:00:00+01:00" class="dt-updated">Sat 06 January 2018</time></span> Tags: <a href="https://ashwin.info.tm/tag/open-source.html">open-source</a>, <a href="https://ashwin.info.tm/tag/conference.html">conference</a>.</p>
@@ -599,6 +476,7 @@ client.</p>
               Quote
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>Tmesis</p>
           </div>
@@ -618,6 +496,7 @@ client.</p>
               Quote
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2015-03-29T13:15:09+02:00" class="dt-published">Sun 29 March 2015</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/rant.html">rant</a>, <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a>.</p>
@@ -634,6 +513,7 @@ client.</p>
               Random acts of Kindness
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2014-12-13T10:55:03+01:00" class="dt-published">Sat 13 December 2014</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/kindness.html">kindness</a>, <a href="https://ashwin.info.tm/tag/strangers.html">strangers</a>, <a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a>.</p>
@@ -650,6 +530,7 @@ client.</p>
               House Nehru
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2014-12-05T22:47:05+01:00" class="dt-published">Fri 05 December 2014</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/game-of-thrones.html">game of thrones</a>, <a href="https://ashwin.info.tm/tag/congress.html">congress</a>, <a href="https://ashwin.info.tm/tag/indian-politics.html">indian politics</a>, <a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a>.</p>
@@ -666,6 +547,7 @@ client.</p>
               Ying-Yang
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
           <div class="p-summary">
           <p>The never-ending yearning for the other side.</p>
           </div>
@@ -685,6 +567,7 @@ client.</p>
               Quote
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2014-11-07T23:44:00+01:00" class="dt-published">Fri 07 November 2014</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/motto.html">motto</a>, <a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a>.</p>
@@ -701,6 +584,7 @@ client.</p>
               A World of Zombie Blogs
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2014-11-07T23:23:00+01:00" class="dt-published">Fri 07 November 2014</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/helloworld.html">helloworld</a>, <a href="https://ashwin.info.tm/tag/introduction.html">introduction</a>, <a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a>.</p>
@@ -717,6 +601,7 @@ client.</p>
               Looking Back
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2014-01-01T20:46:00+01:00" class="dt-published">Wed 01 January 2014</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/resolution.html">resolution</a>.</p>
@@ -733,6 +618,7 @@ client.</p>
               The Dive
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2013-07-15T04:28:00+02:00" class="dt-published">Mon 15 July 2013</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/poetry.html">poetry</a>.</p>
@@ -749,6 +635,7 @@ client.</p>
               The thin line between being a Cynic and a Critic
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2013-06-04T08:03:00+02:00" class="dt-published">Tue 04 June 2013</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/internet.html">Internet</a>, <a href="https://ashwin.info.tm/tag/psychology.html">psychology</a>, <a href="https://ashwin.info.tm/tag/thin-line.html">thin line</a>.</p>
@@ -765,6 +652,7 @@ client.</p>
               Being a Malayali
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2013-05-08T19:33:00+02:00" class="dt-published">Wed 08 May 2013</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/survival.html">survival</a>.</p>
@@ -781,6 +669,7 @@ client.</p>
               Voices inside: What makes us human
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2012-10-05T14:45:00+02:00" class="dt-published">Fri 05 October 2012</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/emotion.html">emotion</a>, <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/psychology.html">psychology</a>.</p>
@@ -797,6 +686,7 @@ client.</p>
               How to survive the Great Slowdown
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2012-08-18T06:32:00+02:00" class="dt-published">Sat 18 August 2012</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/economy.html">economy</a>, <a href="https://ashwin.info.tm/tag/india.html">India</a>, <a href="https://ashwin.info.tm/tag/recession.html">recession</a>, <a href="https://ashwin.info.tm/tag/survival.html">survival</a>, <a href="https://ashwin.info.tm/tag/tips.html">tips</a>.</p>
@@ -813,6 +703,7 @@ client.</p>
               Learning to Live
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2012-02-03T17:23:00+01:00" class="dt-published">Fri 03 February 2012</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/friends.html">friends</a>, <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/teenage.html">teenage</a>.</p>
@@ -829,6 +720,7 @@ client.</p>
               ഒരു ആഗ്ര യാത്ര.
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2011-09-15T11:45:00+02:00" class="dt-published">Thu 15 September 2011</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/travel.html">travel</a>.</p>
@@ -845,6 +737,7 @@ client.</p>
               Lost in Transition
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2011-08-02T10:01:00+02:00" class="dt-published">Tue 02 August 2011</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/travel.html">travel</a>.</p>
@@ -861,6 +754,7 @@ client.</p>
               Things to do before I turn 25
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2011-04-22T13:12:00+02:00" class="dt-published">Fri 22 April 2011</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/life.html">life</a>, <a href="https://ashwin.info.tm/tag/resolution.html">resolution</a>.</p>
@@ -877,6 +771,7 @@ client.</p>
               Sheer pleasure of Going Places
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2011-03-02T04:06:00+01:00" class="dt-published">Wed 02 March 2011</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/uncategorized.html">Uncategorized</a>.</p>
@@ -893,6 +788,7 @@ client.</p>
               Age 21: Where are you now?
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2011-02-07T12:29:00+01:00" class="dt-published">Mon 07 February 2011</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/life.html">life</a>.</p>
@@ -909,6 +805,7 @@ client.</p>
               Music and the State of the Mind
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2010-11-05T08:45:00+01:00" class="dt-published">Fri 05 November 2010</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/emotion.html">emotion</a>, <a href="https://ashwin.info.tm/tag/list.html">list</a>, <a href="https://ashwin.info.tm/tag/mood.html">mood</a>, <a href="https://ashwin.info.tm/tag/music.html">music</a>.</p>
@@ -925,6 +822,7 @@ client.</p>
               “About Me? I dunno, I’m a moron”
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2010-06-02T15:10:00+02:00" class="dt-published">Wed 02 June 2010</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/uncategorized.html">Uncategorized</a>.</p>
@@ -941,6 +839,7 @@ client.</p>
               Musings in a train journey - Pt.1
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2010-04-13T06:02:00+02:00" class="dt-published">Tue 13 April 2010</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/uncategorized.html">Uncategorized</a>.</p>
@@ -957,6 +856,7 @@ client.</p>
               Time is Life
             </div>
           </a></h1>
+          <a href="https://bridgy/publish/mastodon"></a>
         </header>
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2010-02-12T13:04:00+01:00" class="dt-published">Fri 12 February 2010</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/friends.html">friends</a>, <a href="https://ashwin.info.tm/tag/life.html">life</a>.</p>
