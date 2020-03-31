@@ -153,6 +153,8 @@ if not shutil.which('latex'):
     logging.warning("LaTeX not found, fallback to rendering math as code")
     M_MATH_RENDER_AS_CODE = True
 
+M_BRIDGY_PUBLISH = "mastodon"
+
 PLUGINS += [
     "ipynb.markup",
     "pelican_planet",
