@@ -72,6 +72,7 @@ M_CSS_FILES = [
     "/static/source-sans-pro.css",
     "/static/m-dark.css",
     "/static/bibbase-m.css",
+    "/static/custom.css",
     # "/static/pygments-dark.css",
     "/static/landing.css",
 ]
@@ -152,6 +153,8 @@ M_HTMLSANITY_HYPHENATION = True
 if not shutil.which('latex'):
     logging.warning("LaTeX not found, fallback to rendering math as code")
     M_MATH_RENDER_AS_CODE = True
+
+M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
     "ipynb.markup",
