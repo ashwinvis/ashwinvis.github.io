@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Time is Life | Ashwin Vishnu&#39;s Website</title>
+  <title>Tesing Indieweb Stack | Ashwin Vishnu&#39;s Website</title>
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-code-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
@@ -10,15 +10,17 @@
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
-  <link rel="canonical" href="https://ashwin.info.tm/time-is-life.html" />
+  <link rel="canonical" href="https://ashwin.info.tm/tesing-indieweb-stack.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
-  <link href="https://ashwin.info.tm/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Blog" />
+  <link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
-  <meta property="og:title" content="Time is Life" />
-  <meta name="twitter:title" content="Time is Life" />
-  <meta property="og:url" content="https://ashwin.info.tm/time-is-life.html" />
+  <meta property="og:title" content="Tesing Indieweb Stack" />
+  <meta name="twitter:title" content="Tesing Indieweb Stack" />
+  <meta property="og:url" content="https://ashwin.info.tm/tesing-indieweb-stack.html" />
+  <meta property="og:description" content="A simple test page to see what parts of Indieweb actually works" />
+  <meta name="twitter:description" content="A simple test page to see what parts of Indieweb actually works" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="article" />
   <!-- Mastodon Link verification -->
@@ -82,35 +84,98 @@
   <div class="m-row">
     <article class="h-entry m-col-m-10 m-nopadb">
       <header>
-        <h1><a href="https://ashwin.info.tm/time-is-life.html" rel="bookmark" class="u-url" title="Permalink to Time is Life">
-          <time class="m-date" datetime="2010-02-12T13:04:00+01:00">
-            Feb <span class="m-date-day">12</span> 2010
+        <h1><a href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="bookmark" class="u-url" title="Permalink to Tesing Indieweb Stack">
+          <time class="m-date" datetime="2020-03-31T22:54:39.019340+02:00">
+            Mar <span class="m-date-day">31</span> 2020
           </time>
           <div class="p-name">
-            Time is Life
+            Tesing Indieweb Stack
           </div>
         </a></h1>
+        <div class="p-summary">
+        <p>A simple test page to see what parts of Indieweb actually works</p>
+        </div>
       </header>
       <div class="m-clearfix-l"></div>
 <a href="https://brid.gy/publish/mastodon"></a>
 <!-- content -->
 <div class="e-content">
-<p>The past few weeks of my life were the most dramatic, glorious ones.
-Things start getting too good for you, they happen  so fast… that, it
-is next to impossible to squeeze enough time out. Those were yes, the
-golden moments…</p>
-<p>Childhood was great… you had a hardcore gang of 5-6 buddies, and your
-life mostly revolved around the innocent jokes you played. Now, you are
-20, and your friend circle has expanded exponentially… you can’t miss
-out catching up with anyone, nor upset with negligence.</p>
-<p>Sometimes I wonder if you ever get wary of keeping it alive, and
-connected. Ever wondered what it would be like to just I S O L A T E?
-Surely it is crazy, but is socializing any less insane?</p>
-<p>Today I’m running away… just to spend the holiday lazing around (-_-)</p>
+<p>Indieweb consists of the following building blocks:</p>
+<ul>
+<li>Microformats 2</li>
+<li>Webmentions</li>
+</ul>
+<p>This allows one to Publish Own and Syndicate Somewhere Else (POSSE). I have
+logged in my progress in the <a href="https://indieweb.org/User:Ashwin.info.tm">Indieweb
+wiki</a>.</p>
+<h2>Update: POSSE works</h2>
+<p>I managed to publish this post, semi-automatically by sending Bridgy a
+webmention as follows:</p>
+<ul>
+<li>Embed a blank hyperlink to <code>https://brid.gy/publish/mastodon</code> as
+  <a href="https://brid.gy/about#webmentions">mentioned here</a></li>
+<li>Send a request <a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL">using cURL</a></li>
+</ul>
+<div class="highlight"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwin.info.tm/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+HTTP/2 <span class="m">201</span> 
+content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
+cache-control: no-cache
+access-control-allow-origin: *
+content-security-policy: script-src https: localhost:8080 my.dev.com:8080 <span class="s1">&#39;unsafe-inline&#39;</span><span class="p">;</span> frame-ancestors <span class="s1">&#39;self&#39;</span><span class="p">;</span> report-uri /csp-report<span class="p">;</span>
+strict-transport-security: max-age<span class="o">=</span><span class="m">16070400</span><span class="p">;</span> preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: <span class="m">1</span><span class="p">;</span> <span class="nv">mode</span><span class="o">=</span>block
+location: https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082
+x-cloud-trace-context: 89f23f15ae3916e5ae535cfe3d1b5152<span class="p">;</span><span class="nv">o</span><span class="o">=</span><span class="m">1</span>
+date: Tue, <span class="m">31</span> Mar <span class="m">2020</span> <span class="m">23</span>:08:54 GMT
+server: Google Frontend
+content-length: <span class="m">3401</span>
+
+<span class="o">{</span>
+  <span class="s2">&quot;id&quot;</span>:<span class="s2">&quot;103920181819443082&quot;</span>,
+  <span class="s2">&quot;created_at&quot;</span>:<span class="s2">&quot;2020-03-31T23:08:53.759Z&quot;</span>,
+  ...
+</pre></div>
+
+
+<ul>
+<li>Ensure that accidental duplicate posts are avoided.</li>
+</ul>
+<div class="highlight"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwin.info.tm/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+HTTP/2 <span class="m">400</span> 
+content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
+cache-control: no-cache
+access-control-allow-origin: *
+content-security-policy: script-src https: localhost:8080 my.dev.com:8080 <span class="s1">&#39;unsafe-inline&#39;</span><span class="p">;</span> frame-ancestors <span class="s1">&#39;self&#39;</span><span class="p">;</span> report-uri /csp-report<span class="p">;</span>
+strict-transport-security: max-age<span class="o">=</span><span class="m">16070400</span><span class="p">;</span> preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: <span class="m">1</span><span class="p">;</span> <span class="nv">mode</span><span class="o">=</span>block
+x-cloud-trace-context: 1691edd117aa780e68a530ff0f116824<span class="p">;</span><span class="nv">o</span><span class="o">=</span><span class="m">1</span>
+date: Tue, <span class="m">31</span> Mar <span class="m">2020</span> <span class="m">23</span>:09:55 GMT
+server: Google Frontend
+content-length: <span class="m">3731</span>
+
+<span class="o">{</span>
+  <span class="s2">&quot;error&quot;</span>:<span class="s2">&quot;Sorry, you&#39;ve already published that page, and Bridgy Publish doesn&#39;t support updating existing posts. Details: https://github.com/snarfed/bridgy/issues/84&quot;</span>,
+  <span class="s2">&quot;original&quot;</span>:<span class="o">{</span>
+    <span class="s2">&quot;id&quot;</span>:<span class="s2">&quot;103920181819443082</span>
+<span class="s2">    ...</span>
+</pre></div>
+
+
+<h3>End result</h3>
+<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"></iframe>
+
+<script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
+
+<h3>Next steps</h3>
+<p>To automate this process into CI?</p>
 </div>
 <!-- /content -->
       <footer>
-        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2010-02-12T13:04:00+01:00" class="dt-published">Fri 12 February 2010</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/friends.html">friends</a>, <a href="https://ashwin.info.tm/tag/life.html">life</a>.</p>
+        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-31T22:54:39.019340+02:00" class="dt-published">Tue 31 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-03-01T13:24:00+01:00" class="dt-updated">Sun 01 March 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>.</p>
       </footer>
     </article>
     <nav class="m-navpanel m-col-m-2">
