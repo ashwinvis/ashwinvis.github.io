@@ -100,6 +100,168 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://jlelse.blog/micro/2020/04/new-gitea-instance/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-04-03 13:29:36+02:00">
+        Apr
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p><a href="https://www.githubstatus.com/incidents/80d0cs6kpsps" target="_blank">Yesterday GitHub had an outage</a> and it also resulted in some failures in the build pipeline for this blog. That’s why I decided to host myself a second Gitea instance on a VPS just for this purpose, where I mirror all the dependencies that are needed for a successful build, host some private repos or backup mirrors.</p>
+<p>Having two Gitea instances (one at home, one on the VPS - both are backuped daily) also enables me to not have to use <a href="https://jlelse.blog/links/2019/09/codeberg/">Codeberg</a> for not-open-source things. And if I have a sudden internet outage at home, I can still update my blog (the blog repo was hosted at home until today).</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-03 13:29:36+02:00" class="dt-published"></time>
+  Fri 03 Apr 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://wingolog.org/archives/2020/04/03/multi-value-webassembly-in-firefox-from-1-to-n" rel="bookmark" class="u-url"
+       title="multi-value webassembly in firefox: from 1 to n" target="_blank">
+      <time class="m-date" datetime="2020-04-03 10:56:29+00:00">
+        Apr
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      multi-value webassembly in firefox: from 1 to n
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>Greetings, hackers!  Today I'd like to write about something I worked on recently: implementation of the <a href="https://github.com/WebAssembly/multi-value/blob/master/proposals/multi-value/Overview.md">multi-value</a> future feature of WebAssembly in Firefox, as sponsored by <a href="https://techatbloomberg.com/">Bloomberg</a>.</p><p>In the "minimum viable product" version of WebAssembly published in 2018, there were a few artificial restrictions placed on the language.  <a href="https://webassembly.github.io/spec/core/valid/types.html#function-types">Functions could only return a single value</a>; if a function would naturally return two values, it would have to return at least one of them by writing to memory.  <a href="https://webassembly.github.io/spec/core/valid/instructions.html#xref-syntax-instructions-syntax-instr-control-mathsf-loop-t-xref-syntax-instructions-syntax-instr-mathit-instr-ast-xref-syntax-instructions-syntax-instr-control-mathsf-end">Loops couldn't take parameters</a>; any loop state variables had to be stored to and loaded from indexed local variables at each iteration.  Similarly, any block that would naturally return more than one result would also have to do so via locals.</p><p>This restruction is lifted with the multi-value proposal.  <a href="https://webassembly.github.io/multi-value/core/syntax/types.html#function-types">Function type now map from <i>result type</i> to <i>result type</i></a>, where a <a href="https://webassembly.github.io/multi-value/core/syntax/types.html#result-types">result type …</a></p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2020-04-03 10:56:29+00:00" class="dt-published"></time>
+  Fri 03 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blog.jospoortvliet.com/2020/04/rant-of-day-well-at-least-microsoft-is.html" rel="bookmark" class="u-url"
+       title="Rant of the day: well, at least Microsoft is making loads of money..." target="_blank">
+      <time class="m-date" datetime="2020-04-03 08:44:00+00:00">
+        Apr
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Rant of the day: well, at least Microsoft is making loads of money...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div dir="ltr" style="text-align: left;">Sadly, many if not most of our schools today are suddenly pumping lots of extra money into Microsoft, Zoom and other proprietary software companies, because they need online collaboration. We all know there are many alternatives to giving their students' data away to foreign companies but most don't bother. It is annoying, there is always budget for Microsoft, but not for proper, local, privacy-protecting open source solutions, even if those are better. Why is that?<br /><br />Reputation, I'm convinced, is the main reason for that.<br /><br /><h2>We teach them the wrong thing</h2>Unfortunately, a lot of people try to convince schools, governments, charitable organizations and even companies to not pay anything at all. They are promoting open source solutions as an alternative that is cheaper or free, which just makes it look inferior to management. They are not telling organizations to pay …</div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jos Poortvliet</b></span>
+  on <time datetime="2020-04-03 08:44:00+00:00" class="dt-published"></time>
+  Fri 03 Apr 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://krita.org/en/item/april-development-update-2/" rel="bookmark" class="u-url"
+       title="April Development Update" target="_blank">
+      <time class="m-date" datetime="2020-04-03 08:09:08+00:00">
+        Apr
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      April Development Update
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>With near infinite difficulty we managed to release Krita 4.2.9 in the last week of March… So now it’s time to look ahead! All Krita developers work from home anyway, whether they do sponsored work or are volunteers, but it’s quite hard to keep focus these days. Several of us are in quarantine, others are in lock-down — with people in Hong Kong, China, India, Russia, Poland, Germany, the Netherlands, U.S.A, Canada, Mexico and Brazil we live under a wide variety of pandemic responses. The <a href="https://libregraphicsmeeting.org/2020/en/index.html">Libre Graphics Meeting</a> in Rennes has been moved to 2021, as has the Krita Developers Sprint that was going to happen right after LGM.</p>
+<p>But life goes on, and we’re on the verge of another edition of Google Summer of Code. Krita has received a bunch of excellent proposals …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Krita News</b></span>
+  on <time datetime="2020-04-03 08:09:08+00:00" class="dt-published"></time>
+  Fri 03 Apr 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2288/" rel="bookmark" class="u-url"
+       title="Collector's Edition" target="_blank">
+      <time class="m-date" datetime="2020-04-03 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Collector's Edition
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <img alt="I'm sure you can find some suitable worldbuilding material if you scavenge through the archives." src="https://imgs.xkcd.com/comics/collectors_edition.png" title="I'm sure you can find some suitable worldbuilding material if you scavenge through the archives." />
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-03 00:00:00+00:00" class="dt-published"></time>
+  Fri 03 Apr 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/micro/2020/04/short-qr-code/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-04-02 22:25:37+02:00">
@@ -167,120 +329,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://www.volkerkrause.eu/2020/04/02/kde-itinerary-february-march-2020.html" rel="bookmark" class="u-url"
-       title="February/March in KDE Itinerary" target="_blank">
-      <time class="m-date" datetime="2020-04-02 15:45:00+00:00">
-        Apr
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      February/March in KDE Itinerary
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Since the <a href="/2020/01/31/kde-itinerary-december-january-2020.html">last report</a> about
-<a href="https://kde.org/applications/office/org.kde.itinerary">KDE Itinerary</a> there has been work on Thunderbird integration,
-a <a href="/2020/02/11/fosdem-2020-plasma-mobile-sprint.html">presentation at FOSDEM</a>, a major
-<a href="/2020/02/29/kf5-android-qt5-14.html">update to the Android build environment</a> and many
-more changes. We also entered the finishing line towards the 20.04 releases, and got hit by the fallout of the COVID-19
-countermeasures.</p>
-
-<h3 id="covid-19">COVID-19</h3>
-
-<p>With most travel being suspended for the foreseeable future, we wont be able to field-test KDE Itinerary
-or collect sample data either obviously. The current situation is however highlighting a few areas we could
-improve.</p>
-
-<p>The probably most obvious one is supporting the trip cancellation workflow. The <a href="https://schema.org">schema.org</a> data
-model has that covered, but we hadn’t implemented this yet, due to cancellations being rare, and manual
-deletion of reservations being already possible. Technically this requires that we can process “minimal” elements
-that only carry the information …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2020-04-02 15:45:00+00:00" class="dt-published"></time>
-  Thu 02 Apr 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jriddell.org/2020/04/02/kde-on-instagram/" rel="bookmark" class="u-url"
-       title="KDE on Instagram" target="_blank">
-      <time class="m-date" datetime="2020-04-02 11:55:06+00:00">
-        Apr
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KDE on Instagram
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>If you’re feeling stuck indoors during the lock down you can browse some happy pretty pictures on <a href="https://www.instagram.com/kdecommunity/">KDE’s new Instagram account</a>.</p>
-<p>Instagram is one of those social medium services and is run by everyone’s favourite Facebook.  The good side of it is that it’s based on happy pretty pictures rather than angry people (Twitter) or political disinformation (Facebook) but the bad side of that is it is common to feel inferior because you’re not as good looking as the people in the pictures.  Well that’s not a problem because everyone using KDE or helping out the community is automatically good looking.</p>
-<p>It’s being run by me and <span class="qu" tabindex="-1"><span class="gD">Niccolò Venerandi (veggero) for now but if you want to help out give us a ping.  And if you have pretty pictures to go on there …</span></span></p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jonathan Riddell</b></span>
-  on <time datetime="2020-04-02 11:55:06+00:00" class="dt-published"></time>
-  Thu 02 Apr 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/04/new-wifi-card/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-04-02 13:01:19+02:00">
-        Apr
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>I just upgraded <a href="https://jlelse.blog/posts/new-amd-pc/">my PC</a> with <a href="https://www.amazon.de/gp/product/B07VL55BNT/" target="_blank">a WiFi M.2 card with an Intel AX200 chipset</a> (and <a href="https://www.amazon.de/gp/product/B07PG8RWDQ/" target="_blank">two antennas</a>), which supports Wi-Fi 6 and Bluetooth 5. No more adapters for Bluetooth! Now I’m just waiting for my “Microsoft Designer Bluetooth Desktop” mouse and keyboard and I have a few cables less on my desktop. 😄</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-02 13:01:19+02:00" class="dt-published"></time>
-  Thu 02 Apr 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-04-02_Bread" rel="bookmark" class="u-url"
        title="Bread" target="_blank">
       <time class="m-date" datetime="2020-04-02 09:01:04+00:00">
@@ -305,53 +353,6 @@ that only carry the information …</p>
   on <time datetime="2020-04-02 09:01:04+00:00" class="dt-published"></time>
   Thu 02 Apr 2020
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://aplazas.pages.gitlab.gnome.org/blog/blog/2020/04/02/coloring-api.html" rel="bookmark" class="u-url"
-       title="A Coloring API for GTK" target="_blank">
-      <time class="m-date" datetime="2020-04-02 00:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      A Coloring API for GTK
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>In GUADEC 2019 we had a <a href="https://wiki.gnome.org/GUADEC/2019/Hackingdays/VendorThemes">vendor themes BoF</a> which got expanded to the application developersâ€™ need to brand their app with color.
-We agreed on the need of a recoloring API for apps and vendors to take advantage of.</p>
-
-<p>This week we had the <a href="https://wiki.gnome.org/Hackfests/DesignTools2020">Design Tools Hackfest 2020</a>, virtualized because of COVID-19, where we discussed that recoloring API.
-We came up with something I think is interesting enough to discuss more widely.</p>
-
-<h2 id="the-need">The Need</h2>
-
-<p>First letâ€™s define the need:</p>
-<ul>
-  <li>vendors want to inject their branding in applications, this is typically done by shipping a different theme which creates <a href="https://stopthemingmy.app/">a whole new set of problems</a>;</li>
-  <li>application developers want to use their branding or inject colors in parts of the applicationâ€™s UI;</li>
-  <li>users want to make the system more their own by setting the systemâ€™s colors.</li>
-</ul>
-
-<p>Common patterns …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-02 00:00:00+00:00" class="dt-published"></time>
-  Thu 02 Apr 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -810,38 +811,6 @@ we talking about basic familiarity, or deep memorization?  Does something …</p
   on <time datetime="2020-03-27 02:45:47+00:00" class="dt-published"></time>
   Fri 27 Mar 2020
   in The Numerical Methods Guy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2286/" rel="bookmark" class="u-url"
-       title="6-Foot Zone" target="_blank">
-      <time class="m-date" datetime="2020-03-27 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      6-Foot Zone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <img alt="Technically now it's a 34-foot zone." src="https://imgs.xkcd.com/comics/6_foot_zone.png" title="Technically now it's a 34-foot zone." />
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-27 00:00:00+00:00" class="dt-published"></time>
-  Fri 27 Mar 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
