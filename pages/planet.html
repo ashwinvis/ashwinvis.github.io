@@ -100,6 +100,38 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://who-t.blogspot.com/2020/04/high-resolution-wheel-scrolling-in.html" rel="bookmark" class="u-url"
+       title="High resolution wheel scrolling in the desktop stack" target="_blank">
+      <time class="m-date" datetime="2020-04-04 04:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          04
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      High resolution wheel scrolling in the desktop stack
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>This is a follow up from <a href="https://who-t.blogspot.com/2018/12/high-resolution-wheel-scrolling-on.html">the kernel support for high-resolution wheel scrolling</a> which you totally forgot about because it's already more then a year in the past and seriously, who has the attention span these days to remember this. Anyway, I finally found time and motivation to pick this up again and I started lining up the pieces like cans, for it only to be shot down by the commentary of strangers on the internet. The <a href="https://gitlab.freedesktop.org/wayland/wayland/-/merge_requests/72">Wayland merge request</a> lists the various pieces (libinput, wayland, weston, mutter, gtk and Xwayland) but for the impatient there's also an <a href="https://copr.fedorainfracloud.org/coprs/whot/high-resolution-wheel-scrolling/">Fedora 32 COPR</a>. For all you weirdos inexplicably not running the latest Fedora, well, you'll have to compile this yourself, just like I did. </p> <p>Let's recap: in v5.0 the kernel added new axes <b>REL_WHEEL_HI_RES</b> and <b>REL_HWHEEL_HI_RES</b> for all devices. On devices …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Peter Hutterer (noreply@blogger.com)</b></span>
+  on <time datetime="2020-04-04 04:00:00+00:00" class="dt-published"></time>
+  Sat 04 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://write.as/pontaos-shenanigans/why-nullpomino-is-the-only-acceptable-open-source-tetris?pk_campaign=rss-feed" rel="bookmark" class="u-url"
        title="Why Nullpomino is the only acceptable open-source Tetris" target="_blank">
       <time class="m-date" datetime="2020-04-03 22:29:13+00:00">
@@ -347,38 +379,6 @@ Second step is to make sure that modifying the code will modify the behaviour yo
   on <time datetime="2020-04-03 13:29:36+02:00" class="dt-published"></time>
   Fri 03 Apr 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://wingolog.org/archives/2020/04/03/multi-value-webassembly-in-firefox-from-1-to-n" rel="bookmark" class="u-url"
-       title="multi-value webassembly in firefox: from 1 to n" target="_blank">
-      <time class="m-date" datetime="2020-04-03 10:56:29+00:00">
-        Apr
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      multi-value webassembly in firefox: from 1 to n
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>Greetings, hackers!  Today I'd like to write about something I worked on recently: implementation of the <a href="https://github.com/WebAssembly/multi-value/blob/master/proposals/multi-value/Overview.md">multi-value</a> future feature of WebAssembly in Firefox, as sponsored by <a href="https://techatbloomberg.com/">Bloomberg</a>.</p><p>In the "minimum viable product" version of WebAssembly published in 2018, there were a few artificial restrictions placed on the language.  <a href="https://webassembly.github.io/spec/core/valid/types.html#function-types">Functions could only return a single value</a>; if a function would naturally return two values, it would have to return at least one of them by writing to memory.  <a href="https://webassembly.github.io/spec/core/valid/instructions.html#xref-syntax-instructions-syntax-instr-control-mathsf-loop-t-xref-syntax-instructions-syntax-instr-mathit-instr-ast-xref-syntax-instructions-syntax-instr-control-mathsf-end">Loops couldn't take parameters</a>; any loop state variables had to be stored to and loaded from indexed local variables at each iteration.  Similarly, any block that would naturally return more than one result would also have to do so via locals.</p><p>This restruction is lifted with the multi-value proposal.  <a href="https://webassembly.github.io/multi-value/core/syntax/types.html#function-types">Function types now map from <i>result type</i> to <i>result type</i></a>, where a <a href="https://webassembly.github.io/multi-value/core/syntax/types.html#result-types">result type …</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Andy Wingo</b></span>
-  on <time datetime="2020-04-03 10:56:29+00:00" class="dt-published"></time>
-  Fri 03 Apr 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
