@@ -4,7 +4,7 @@ Hack the Crisis: We Care
 :author: Ashwin Vishnu Mohanan
 :date: 2020-04-05T20:38:02.657040
 :slug: hack-the-crisis
-:status: draft
+:status: published
 :summary: How we created project We Care in this COVID-19 themed hackathon
 :category: Tech Talk
 :tags: software
