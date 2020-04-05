@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Posts tagged recession | Ashwin Vishnu&#39;s Website</title>
+  <title>Hack the Crisis: We Care! | Ashwin Vishnu&#39;s Website</title>
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-code-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
@@ -10,15 +10,19 @@
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
+  <link rel="canonical" href="https://ashwin.info.tm/hack-the-crisis.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
-  <meta property="og:title" content="recession" />
-  <meta name="twitter:title" content="recession" />
-  <meta property="og:url" content="https://ashwin.info.tm/tag/recession.html" />
+  <meta property="og:title" content="Hack the Crisis: We Care!" />
+  <meta name="twitter:title" content="Hack the Crisis: We Care!" />
+  <meta property="og:url" content="https://ashwin.info.tm/hack-the-crisis.html" />
+  <meta property="og:description" content="How we created project We Care! in this COVID-19 themed hackathon" />
+  <meta name="twitter:description" content="How we created project We Care! in this COVID-19 themed hackathon" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <!-- Mastodon Link verification -->
   <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
 
@@ -78,27 +82,90 @@
 <main>
 <div class="m-container">
   <div class="m-row">
-    <div class="m-col-m-10">
-      <div class="m-info m-note">
-        Showing only posts tagged <em>recession</em>. <a href="https://ashwin.info.tm/">Show all posts.</a>
-      </div>
-      <article>
-        <header>
-          <h1><a href="https://ashwin.info.tm/how-to-survive-the-great-slowdown.html" rel="bookmark" class="u-url" title="Permalink to How to survive the Great Slowdown">
-            <time class="m-date" datetime="2012-08-18T06:32:00+02:00">
-              Aug <span class="m-date-day">18</span> 2012
-            </time>
-            <div class="p-name">
-              How to survive the Great Slowdown
-            </div>
-          </a></h1>
-        </header>
-        <footer>
-          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/azuwish.html">azuwish</a> on <time datetime="2012-08-18T06:32:00+02:00" class="dt-published">Sat 18 August 2012</time> in <a class="p-category" href="https://ashwin.info.tm/category/blog.html">Blog</a>. Tags: <a href="https://ashwin.info.tm/tag/economy.html">economy</a>, <a href="https://ashwin.info.tm/tag/india.html">India</a>, <a href="https://ashwin.info.tm/tag/recession.html">recession</a>, <a href="https://ashwin.info.tm/tag/survival.html">survival</a>, <a href="https://ashwin.info.tm/tag/tips.html">tips</a>.</p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-    </div>
+    <article class="h-entry m-col-m-10 m-nopadb">
+      <header>
+        <h1><a href="https://ashwin.info.tm/hack-the-crisis.html" rel="bookmark" class="u-url" title="Permalink to Hack the Crisis: We Care!">
+          <time class="m-date" datetime="2020-04-05T20:38:02.657040+02:00">
+            Apr <span class="m-date-day">05</span> 2020
+          </time>
+          <div class="p-name">
+            Hack the Crisis: We Care!
+          </div>
+        </a></h1>
+        <div class="p-summary">
+        <p>How we created project <em>We Care!</em> in this COVID-19 themed hackathon</p>
+        </div>
+      </header>
+      <div class="m-clearfix-l"></div>
+<a href="https://brid.gy/publish/mastodon"></a>
+<!-- content -->
+<div class="e-content">
+<p>This weekend I was part of a great and amazing group of people working as a
+team.  We where coders, designers, ideators, jack-of-all-trades, creators,
+academics, researchers and doers. We all where part of even a bigger team in
+the Hack for Crisis Initiative in Sweden <a href="https://www.hackthecrisis.se/">https://www.hackthecrisis.se/</a></p>
+<p>We came together from all different parts, working purely online, never worked
+with each other before, We created <em>We Care!</em>, a <a href="https://covidmap.se">website</a> and an app
+concept to keep you safe in crisis, that we submitted.</p>
+<p>Here is a demo <a href="https://www.youtube.com/watch?v=rsBZuJEH1c0">video</a> of our solution:</p>
+<iframe id='ivplayer' width='100%' height='240px' src='https://invidious.snopyta.org/embed/rsBZuJEH1c0' style='border:none;'>
+</iframe><p>and a live <a href="https://covidmap.se">website</a> of our solution. The whole system was designed to function
+as follows:</p>
+<img src="https://raw.githubusercontent.com/covidmap-sweden/welcome/master/architecture.jpg" style="width: 100%" />
+<section id="nitty-gritty-details">
+<h2>Nitty-gritty details</h2>
+<p>The stack consists of a website (<a href="https://covidmap.se/">https://covidmap.se/</a>) where the user can enter
+symptom data as well as their postal code. This is then submitted to a Firebase
+database, from which a Python application downloads the data submitted and
+analyzes it in batches. The aggregated, anonymized results are then published
+back to the database and can be viewed in the map.</p>
+<p>A future improvement to this could either be to do the Python computation
+directly in the Firebase Cloud Function and then submitted to the Firebase
+database. Alternatively, to have the website publish its data to the Python
+backend which in turn will post the outcome of the analysis to the Firebase
+database. Either way, the user will get a response on their input.</p>
+<p>The motivation for using postal codes is to get a granular overview of the
+spread while still being within compliance of GDPR. Other suggestions have been
+using Bank-ID as a user id form, but that combined with medical data would be a
+GDPR issue we were not able to handle during the hackathon. We will also ensure
+compliance with Swedish laws on research ethics, submitting for ethical review
+if required so that collected data can be used for research purposes.</p>
+</section>
+<section id="the-backend-alley">
+<h2>The backend alley</h2>
+<p>On a personal note, I was working on getting the Python backend (written using
+SQL Alchemy and Pandas) up and running. The essential pieces were present
+thanks to the original Swiss team which open-sourced the project. The
+enhancements we added on top of it were:</p>
+<ul>
+<li>smoothening installation process by adding a basic Python packaging
+<code>setup.py</code>.</li>
+<li>post-processing scripts to calculate symptom risks with Pandas within the
+Python backend instead of doing it in the Vue.js frontend side</li>
+<li>a Flask microserver based REST API to reduce the data storage in the database
+and perform computation more frequently to keep the website up to date</li>
+<li>Creating a docker image of the application</li>
+</ul>
+<p>Our intention was the deploy the backend in the cloud, but because of the time
+constraint we were unable to achieve that target. For now the backend is
+semi-automated. In due time, yes we can!</p>
+<p>Did I mention our implementation was <a href="https://github.com/covidmap-sweden/">open-source</a> as well!</p>
+</section>
+<section id="the-fight-is-far-from-over">
+<h2>The fight is far from over</h2>
+<p>If you want to help us please go in and test <a href="https://covidmap.se">https://covidmap.se</a> and self report
+yourself and please share this post in your network if you want. You can also
+<a href="https://covidmap.se/visualize">visualize</a> the aggregated results.</p>
+<p>If you want to fast… go alone, if you want to go far go together. Thanks to
+everyone in my team for a great experience. I loved working with you and being
+part of this team.</p>
+</section>
+</div>
+<!-- /content -->
+      <footer>
+        <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-04-05T20:38:02.657040+02:00" class="dt-published">Sun 05 April 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>.</p>
+      </footer>
+    </article>
     <nav class="m-navpanel m-col-m-2">
       <h3>Categories</h3>
       <ol class="m-block-bar-m">
