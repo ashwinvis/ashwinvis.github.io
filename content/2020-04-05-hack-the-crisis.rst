@@ -23,9 +23,11 @@ Here is a demo video_ and a screenshot from the live website_ of our solution.
 
 .. raw:: html
 
+   <div align='center'>
    <iframe id='ivplayer' width='100%' height='500px' src='https://invidious.snopyta.org/embed/rsBZuJEH1c0' style='border:none;'>
    </iframe>
    <iframe src="https://pixelfed.social/p/ashwinvis/152654039161638912/embed?caption=true&likes=false&layout=full" class="pixelfed__embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"></iframe><script async defer src="https://pixelfed.social/embed.js"></script>
+   </div>
 
 
 Nitty-gritty details
