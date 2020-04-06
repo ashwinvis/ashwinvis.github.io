@@ -8,9 +8,11 @@ the Hack for Crisis Initiative in Sweden &lt;a href="https://www.hackthecrisis.s
 with each other before, We created &lt;em&gt;We Care!&lt;/em&gt;, a &lt;a href="https://covidmap.se"&gt;website&lt;/a&gt; and an app
 concept to keep you safe in crisis, that we submitted.&lt;/p&gt;
 &lt;p&gt;Here is a demo &lt;a href="https://www.youtube.com/watch?v=rsBZuJEH1c0"&gt;video&lt;/a&gt; and a screenshot from the live &lt;a href="https://covidmap.se"&gt;website&lt;/a&gt; of our solution.&lt;/p&gt;
+&lt;div align='center'&gt;
 &lt;iframe id='ivplayer' width='100%' height='500px' src='https://invidious.snopyta.org/embed/rsBZuJEH1c0' style='border:none;'&gt;
 &lt;/iframe&gt;
-&lt;iframe src="https://pixelfed.social/p/ashwinvis/152654039161638912/embed?caption=true&amp;likes=false&amp;layout=full" class="pixelfed__embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;&lt;script async defer src="https://pixelfed.social/embed.js"&gt;&lt;/script&gt;&lt;section id="nitty-gritty-details"&gt;
+&lt;iframe src="https://pixelfed.social/p/ashwinvis/152654039161638912/embed?caption=true&amp;likes=false&amp;layout=full" class="pixelfed__embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;&lt;script async defer src="https://pixelfed.social/embed.js"&gt;&lt;/script&gt;
+&lt;/div&gt;&lt;section id="nitty-gritty-details"&gt;
 &lt;h2&gt;Nitty-gritty details&lt;/h2&gt;
 &lt;p&gt;The stack consists of a website (&lt;a href="https://covidmap.se/"&gt;https://covidmap.se/&lt;/a&gt;) where the user can enter
 symptom data as well as their postal code. This is then submitted to a Firebase
