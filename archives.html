@@ -81,6 +81,87 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/hack-the-crisis.html" rel="bookmark" class="u-url" title="Permalink to Hack the Crisis: We Care!">
+            <time class="m-date" datetime="2020-04-05T20:38:02.657040+02:00">
+              Apr <span class="m-date-day">05</span> 2020
+            </time>
+            <div class="p-name">
+              Hack the Crisis: We Care!
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>How we created project <em>We Care!</em> in this COVID-19 themed hackathon</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>This weekend I was part of a great and amazing group of people working as a
+team.  We where coders, designers, ideators, jack-of-all-trades, creators,
+academics, researchers and doers. We all where part of even a bigger team in
+the Hack for Crisis Initiative in Sweden <a href="https://www.hackthecrisis.se/">https://www.hackthecrisis.se/</a></p>
+<p>We came together from all different parts, working purely online, never worked
+with each other before, We created <em>We Care!</em>, a <a href="https://covidmap.se">website</a> and an app
+concept to keep you safe in crisis, that we submitted.</p>
+<p>Here is a demo <a href="https://www.youtube.com/watch?v=rsBZuJEH1c0">video</a> and a screenshot from the live <a href="https://covidmap.se">website</a> of our solution.</p>
+<iframe id='ivplayer' width='100%' height='500px' src='https://invidious.snopyta.org/embed/rsBZuJEH1c0' style='border:none;'>
+</iframe>
+<iframe src="https://pixelfed.social/p/ashwinvis/152654039161638912/embed?caption=true&likes=false&layout=full" class="pixelfed__embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script async defer src="https://pixelfed.social/embed.js"></script><section id="nitty-gritty-details">
+<h2>Nitty-gritty details</h2>
+<p>The stack consists of a website (<a href="https://covidmap.se/">https://covidmap.se/</a>) where the user can enter
+symptom data as well as their postal code. This is then submitted to a Firebase
+database, from which a Python application downloads the data submitted and
+analyzes it in batches. The aggregated, anonymized results are then published
+back to the database and can be viewed in the map.</p>
+<p>The whole system was designed to function as follows:</p>
+<img src="https://raw.githubusercontent.com/covidmap-sweden/welcome/master/architecture.jpg" style="width: 100%" />
+<p>A future improvement to this could either be to do the Python computation
+directly in the Firebase Cloud Function and then submitted to the Firebase
+database. Alternatively, to have the website publish its data to the Python
+backend which in turn will post the outcome of the analysis to the Firebase
+database. Either way, the user will get a response on their input.</p>
+<p>The motivation for using postal codes is to get a granular overview of the
+spread while still being within compliance of GDPR. Other suggestions have been
+using Bank-ID as a user id form, but that combined with medical data would be a
+GDPR issue we were not able to handle during the hackathon. We will also ensure
+compliance with Swedish laws on research ethics, submitting for ethical review
+if required so that collected data can be used for research purposes.</p>
+</section>
+<section id="the-backend-alley">
+<h2>The backend alley</h2>
+<p>On a personal note, I was working on getting the Python backend (written using
+SQL Alchemy and Pandas) up and running. The essential pieces were present
+thanks to the original Swiss team which open-sourced the project. The
+enhancements we added on top of it were:</p>
+<ul>
+<li>smoothening installation process by adding a basic Python packaging
+<code>setup.py</code>.</li>
+<li>post-processing scripts to calculate symptom risks with Pandas within the
+Python backend instead of doing it in the Vue.js frontend side</li>
+<li>a Flask microserver based REST API to reduce the data storage in the database
+and perform computation more frequently to keep the website up to date</li>
+<li>Creating a docker image of the application</li>
+</ul>
+<p>Our intention was the deploy the backend in the cloud, but because of the time
+constraint we were unable to achieve that target. For now the backend is
+semi-automated. In due time, yes we can!</p>
+<p>Did I mention our implementation was <a href="https://github.com/covidmap-sweden/">open-source</a> as well!</p>
+</section>
+<section id="the-fight-is-far-from-over">
+<h2>The fight is far from over</h2>
+<p>If you want to help us please go in and test <a href="https://covidmap.se">https://covidmap.se</a> and self report
+yourself and please share this post in your network if you want. You can also
+<a href="https://covidmap.se/visualize">visualize</a> the aggregated results.</p>
+<p>If you want to fast… go alone, if you want to go far go together. Thanks to
+everyone in my team for a great experience. I loved working with you and being
+part of this team.</p>
+</section>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-04-05T20:38:02.657040+02:00" class="dt-published">Sun 05 April 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-04-06T08:01:00+02:00" class="dt-updated">Mon 06 April 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/open-source.html">open-source</a>, <a href="https://ashwin.info.tm/tag/covid-19.html">covid-19</a>.</p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="bookmark" class="u-url" title="Permalink to Tesing Indieweb Stack">
             <time class="m-date" datetime="2020-03-31T22:54:39.019340+02:00">
               Mar <span class="m-date-day">31</span> 2020
@@ -93,84 +174,10 @@
           <p>A simple test page to see what parts of Indieweb actually works</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>Indieweb consists of the following building blocks:</p>
-<ul>
-<li>Microformats 2</li>
-<li>Webmentions</li>
-</ul>
-<p>This allows one to Publish Own and Syndicate Somewhere Else (POSSE). I have
-logged in my progress in the <a href="https://indieweb.org/User:Ashwin.info.tm">Indieweb
-wiki</a>.</p>
-<h2>Update: POSSE works</h2>
-<p>I managed to publish this post, semi-automatically by sending Bridgy a
-webmention as follows:</p>
-<ul>
-<li>Embed a blank hyperlink to <code>https://brid.gy/publish/mastodon</code> as
-  <a href="https://brid.gy/about#webmentions">mentioned here</a></li>
-<li>Send a request <a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL">using cURL</a></li>
-</ul>
-<div class="highlight"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwin.info.tm/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
-HTTP/2 <span class="m">201</span> 
-content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
-cache-control: no-cache
-access-control-allow-origin: *
-content-security-policy: script-src https: localhost:8080 my.dev.com:8080 <span class="s1">&#39;unsafe-inline&#39;</span><span class="p">;</span> frame-ancestors <span class="s1">&#39;self&#39;</span><span class="p">;</span> report-uri /csp-report<span class="p">;</span>
-strict-transport-security: max-age<span class="o">=</span><span class="m">16070400</span><span class="p">;</span> preload
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-x-xss-protection: <span class="m">1</span><span class="p">;</span> <span class="nv">mode</span><span class="o">=</span>block
-location: https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082
-x-cloud-trace-context: 89f23f15ae3916e5ae535cfe3d1b5152<span class="p">;</span><span class="nv">o</span><span class="o">=</span><span class="m">1</span>
-date: Tue, <span class="m">31</span> Mar <span class="m">2020</span> <span class="m">23</span>:08:54 GMT
-server: Google Frontend
-content-length: <span class="m">3401</span>
-
-<span class="o">{</span>
-  <span class="s2">&quot;id&quot;</span>:<span class="s2">&quot;103920181819443082&quot;</span>,
-  <span class="s2">&quot;created_at&quot;</span>:<span class="s2">&quot;2020-03-31T23:08:53.759Z&quot;</span>,
-  ...
-</pre></div>
-
-
-<ul>
-<li>Ensure that accidental duplicate posts are avoided.</li>
-</ul>
-<div class="highlight"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwin.info.tm/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
-HTTP/2 <span class="m">400</span> 
-content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
-cache-control: no-cache
-access-control-allow-origin: *
-content-security-policy: script-src https: localhost:8080 my.dev.com:8080 <span class="s1">&#39;unsafe-inline&#39;</span><span class="p">;</span> frame-ancestors <span class="s1">&#39;self&#39;</span><span class="p">;</span> report-uri /csp-report<span class="p">;</span>
-strict-transport-security: max-age<span class="o">=</span><span class="m">16070400</span><span class="p">;</span> preload
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-x-xss-protection: <span class="m">1</span><span class="p">;</span> <span class="nv">mode</span><span class="o">=</span>block
-x-cloud-trace-context: 1691edd117aa780e68a530ff0f116824<span class="p">;</span><span class="nv">o</span><span class="o">=</span><span class="m">1</span>
-date: Tue, <span class="m">31</span> Mar <span class="m">2020</span> <span class="m">23</span>:09:55 GMT
-server: Google Frontend
-content-length: <span class="m">3731</span>
-
-<span class="o">{</span>
-  <span class="s2">&quot;error&quot;</span>:<span class="s2">&quot;Sorry, you&#39;ve already published that page, and Bridgy Publish doesn&#39;t support updating existing posts. Details: https://github.com/snarfed/bridgy/issues/84&quot;</span>,
-  <span class="s2">&quot;original&quot;</span>:<span class="o">{</span>
-    <span class="s2">&quot;id&quot;</span>:<span class="s2">&quot;103920181819443082</span>
-<span class="s2">    ...</span>
-</pre></div>
-
-
-<h3>End result</h3>
-<iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"></iframe>
-
-<script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
-
-<h3>Next steps</h3>
-<p>To automate this process into CI?</p>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-03-31T22:54:39.019340+02:00" class="dt-published">Tue 31 March 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-03-01T13:24:00+01:00" class="dt-updated">Sun 01 March 2020</time></span> Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>.</p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -948,7 +955,7 @@ content-length: <span class="m">3731</span>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/resolution.html">resolution</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/social-media.html">social media</a></li>
-        <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
+        <li class="m-tag-3"><a href="https://ashwin.info.tm/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/sympy.html">sympy</a></li>
