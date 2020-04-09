@@ -10,6 +10,9 @@ from pathlib import Path
 import click
 from cookiecutter import generate, prompt
 from jinja2 import Environment, FileSystemLoader
+from webmentiontools.send import WebmentionSend
+
+from publishconf import SITEURL
 
 
 def edit(filename):
@@ -50,12 +53,42 @@ def modify(files):
         edit(filename)
 
 
+def bridgy(slug, posse):
+    """
+    curl -i -d source=https://ashwin.info.tm/hack-the-crisis.html \
+            -d target=https://brid.gy/publish/mastodon \
+            https://brid.gy/publish/webmention
+    """
+    data = {
+        "source": str(Path(SITEURL) / slug) + ".html",
+        "target": "https://brid.gy/publish/" + posse,
+    }
+    #  headers = {"User-Agent": "Mozilla/5.0"}
+    #  r = requests.post(
+    #      "https://brid.gy/publish/webmention",
+    #      headers=headers,
+    #      data=payload,
+    #      timeout=2,
+    #  )
+    #  r.raise_for_status()
+    #  print(r.text)
+    #  print("Status: ", r.status_code)
+    mention = WebmentionSend(**data)
+    mention.send()
+
+
 @write.command(**click_kwargs)
 @click.option(
-    "--no-input", default=False, flag_value="no_input", help="Go with default options"
+    "--no-input",
+    default=False,
+    flag_value="no_input",
+    help="Go with default options",
 )
 @click.option(
-    "--write-post", default=True, flag_value="write_post", help="Write post to disk"
+    "--write-post",
+    default=True,
+    flag_value="write_post",
+    help="Write post to disk",
 )
 @click.option(
     "--open-editor",
@@ -73,7 +106,9 @@ def new(no_input, write_post, open_editor):
     os.chdir(here)
 
     env = Environment(loader=FileSystemLoader("templates"), autoescape=True,)
-    templates = {ext: env.get_template(f"post.{ext}.j2") for ext in template_filetypes}
+    templates = {
+        ext: env.get_template(f"post.{ext}.j2") for ext in template_filetypes
+    }
 
     context_file = here / "templates/cookiecutter.json"
 
@@ -107,7 +142,9 @@ def new(no_input, write_post, open_editor):
                 fp.write(post)
         except FileExistsError as e:
             print(e)
-            if not prompt.read_user_yes_no("Continue as if nothing happened?", False):
+            if not prompt.read_user_yes_no(
+                "Continue as if nothing happened?", False
+            ):
                 sys.exit()
 
     if open_editor:
@@ -121,6 +158,9 @@ def new(no_input, write_post, open_editor):
 
     if prompt.read_user_yes_no("Push changes?", False):
         subprocess.run(["git", "push"])
+
+    if prompt.read_user_yes_no("Webmention bridgy to syndicate?", False):
+        bridgy(cc["slug"], "mastodon")
 
 
 if __name__ == "__main__":
