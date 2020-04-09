@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-04-06T08:01:00+02:00</updated><entry><title>Hack the Crisis: We Care!</title><link href="https://ashwin.info.tm/hack-the-crisis.html" rel="alternate"></link><published>2020-04-05T20:38:02+02:00</published><updated>2020-04-06T08:01:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-05:/hack-the-crisis.html</id><summary type="html">&lt;p&gt;How we created project &lt;em&gt;We Care!&lt;/em&gt; in this COVID-19 themed hackathon&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-04-09T06:09:37+02:00</updated><entry><title>Buying a new phone</title><link href="https://ashwin.info.tm/buying-a-new-phone.html" rel="alternate"></link><published>2020-04-09T06:09:37+02:00</published><updated>2020-04-09T06:09:37+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-09:/buying-a-new-phone.html</id><summary type="html">&lt;p&gt;One that lasts&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have been witnessing the evolution of smart phones into fragile and data
+hungry beasts that they are today, crippling essential features such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3.5 mm headphone jacks&lt;/li&gt;
+&lt;li&gt;removable batteries&lt;/li&gt;
+&lt;li&gt;ability to unlock the bootloader (root)&lt;/li&gt;
+&lt;li&gt;install a new OS (flash)&lt;/li&gt;
+&lt;li&gt;reliance on Google Play Services for even mainstream apps such as BankID in
+  Sweden&lt;/li&gt;
+&lt;li&gt;lack of spare parts and support in a couple of years&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And as a result I have resisted the urge of getting a new phone for the past 2
+months. But with Covid-19, I accept that having a phone around is essential to
+stay in touch with close ones.&lt;/p&gt;
+&lt;p&gt;After much contemplation my criteria boiled down to the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Repairable with long-term support: both software updates and hardware
+   warranty.&lt;/li&gt;
+&lt;li&gt;Community support in an effort to develop towards a working Linux phone.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The candidates were
+&lt;a href="https://ubports.com/blog/ubports-blog-1/post/pinephone-ubports-community-edition-pre-orders-are-open-271"&gt;PinePhone&lt;/a&gt;
+at \$150 and &lt;a href="https://shop.fairphone.com/en/"&gt;Fairphone 3&lt;/a&gt; at €475. In
+comparison with the existing market these phones have have medium
+specifications. However I put the above two criteria over all shiny details
+that people tend to care more about like looks, performance and camera. I have
+a stand-alone camera and a gaming device, so why should I bother?&lt;/p&gt;
+&lt;h2&gt;Why and why not PinePhone&lt;/h2&gt;
+&lt;p&gt;The advantages of PinePhone is it already "works" with existing Linux projects
+such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://wiki.postmarketos.org/wiki/Devices"&gt;postmarketOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ubports.com/"&gt;UBports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and it is cheap. However the company only started working on phones &lt;a href="https://en.wikipedia.org/wiki/Pine_Microsystems#Smartphone"&gt;a year
+ago&lt;/a&gt; and when I
+checked the availability of spare parts, the most essential one which is a
+&lt;a href="https://store.pine64.org/?product=pinephone-lithium-battery-only-ship-in-us-2"&gt;battery&lt;/a&gt;
+only ships in US and was out of stock. Also there is hardly any warranty.&lt;/p&gt;
+&lt;h2&gt;But Fairphone...?&lt;/h2&gt;
+&lt;p&gt;At the cost it is selling it is as expensive as so-called "flagship" phones.
+The cost covers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sourcing rare materials from non war-torn regions&lt;/li&gt;
+&lt;li&gt;providing fair work conditions for factories in China&lt;/li&gt;
+&lt;li&gt;recycling old phones&lt;/li&gt;
+&lt;li&gt;modularity and support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While Fairphone 2 is no longer in sale, it is one of the featured phones by the
+UBPorts project. Fairphone 3 right now does not have a Linux OS option, and not
+even a "unGoogled" Android ROM such as &lt;a href="https://wiki.lineageos.org/devices/"&gt;Lineage
+OS&lt;/a&gt;. It will take some time for the
+developers to get it to working condition, because &lt;a href="https://fosdem.org/2020/schedule/event/smartphones/"&gt;ARM
+development&lt;/a&gt; is a lot of
+work. The /e/ foundation - a fork of Lineage OS is &lt;a href="https://mastodon.social/@e_mydata/103912398236907028"&gt;working on
+it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;All you need is a little push in the right direction.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is a hardware warranty for two years&lt;/li&gt;
+&lt;li&gt;Fairphone continues to sell spare parts for older phones&lt;/li&gt;
+&lt;li&gt;Assured software updates for 5 years&lt;/li&gt;
+&lt;li&gt;Official tutorial on &lt;a href="https://support.fairphone.com/hc/en-us/articles/360041655711-Unlock-the-bootloader-of-your-Fairphone-3"&gt;unlocking the
+  bootloader&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As for the price, if it is any consolation, compare the to an average grocery
+shopping which would be around €50 in Sweden, it is not so expensive.  I got a
+discount code at the end, which I wish I received earlier. So I might as well
+share it here.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Give your friends a €25 discount on a Fairphone 3 and get a €20 discount on
+your next order.
+http://fairphone.refr.cc/ashwinvishnum&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;No, I was not paid to write this, but I really like the concept and I hope more
+such projects emerge. Let's work towards a &lt;a href="https://en.wikipedia.org/wiki/Circular_economy"&gt;circular
+economy&lt;/a&gt;.&lt;/p&gt;</content><category term="life"></category><category term="covid-19"></category><category term="phone"></category></entry><entry><title>Hack the Crisis: We Care!</title><link href="https://ashwin.info.tm/hack-the-crisis.html" rel="alternate"></link><published>2020-04-05T20:38:02+02:00</published><updated>2020-04-06T08:01:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-05:/hack-the-crisis.html</id><summary type="html">&lt;p&gt;How we created project &lt;em&gt;We Care!&lt;/em&gt; in this COVID-19 themed hackathon&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;This weekend I was part of a great and amazing group of people working as a
 team.  We where coders, designers, ideators, jack-of-all-trades, creators,
 academics, researchers and doers. We all where part of even a bigger team in
