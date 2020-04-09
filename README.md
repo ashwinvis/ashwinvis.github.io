@@ -45,11 +45,11 @@ each instance, the copyright holder has released that source code under some
 kind of license.
 
 * All text and media under `content` is distributed under a CC-BY license a
-  copy of which is included in the file called `LICENSE`.
+  copy of which is included in the file called `content/LICENSE`.
 
 * `pelican`'s source code and the configuration files for `pelican` is distributed
   under the terms of the GNU Affero General Public License, a copy of which is
-  included in the file called `content/LICENSE`.
+  included in the file called `LICENSE`.
 
 * `m.css` is distributed under an MIT license, a copy of which is included in the
   file called `m.css/COPYING`.
