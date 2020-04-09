@@ -32,13 +32,10 @@ pip-compile && pip-sync
 make develop
 ```
 
-**Tip**: To conveniently work with submodules, install clustergit.
+**Tip**: To conveniently work with submodules:
 
 ```sh
-curl https://raw.githubusercontent.com/mnagel/clustergit/master/clustergit > $VIRTUAL_ENV/bin/clustergit
-chmod +x $VIRTUAL_ENV/bin/clustergit
-clustergit --recursive  # show status
-clustergit --recursive --push  # push recursive
+git config submodule.recurse true
 ```
 
 ## License
