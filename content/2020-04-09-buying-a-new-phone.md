@@ -32,7 +32,7 @@ After much contemplation my criteria boiled down to the following:
 
 The candidates were
 [PinePhone](https://ubports.com/blog/ubports-blog-1/post/pinephone-ubports-community-edition-pre-orders-are-open-271)
-at \$150 and [Fairphone 3](https://shop.fairphone.com/en/) at €475. In
+at USD 150 and [Fairphone 3](https://shop.fairphone.com/en/) at €475. In
 comparison with the existing market these phones have have medium
 specifications. However I put the above two criteria over all shiny details
 that people tend to care more about like looks, performance and camera. I have
@@ -87,7 +87,7 @@ share it here.
 
 > Give your friends a €25 discount on a Fairphone 3 and get a €20 discount on
 > your next order.
-> http://fairphone.refr.cc/ashwinvishnum
+> <http://fairphone.refr.cc/ashwinvishnum>
 
 No, I was not paid to write this, but I really like the concept and I hope more
 such projects emerge. Let's work towards a [circular

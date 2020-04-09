@@ -1,4 +1,4 @@
-#!/home/avmo/www/ashwinvis.github.io/venv/bin/python
+#!/home/avmo/.pyenv/versions/www/bin/python
 import json
 import os
 import shutil
@@ -11,6 +11,10 @@ import click
 from cookiecutter import generate, prompt
 from jinja2 import Environment, FileSystemLoader
 from webmentiontools.send import WebmentionSend
+
+here = Path(__file__).parent
+sys.path.append(here)
+os.chdir(here)
 
 from publishconf import SITEURL
 
@@ -150,17 +154,21 @@ def new(no_input, write_post, open_editor):
     if open_editor:
         edit(filename)
 
+    slug = cc["slug"]
     if prompt.read_user_yes_no("Track changes?", True):
         subprocess.run(["git", "add", filename])
 
+    if prompt.read_user_yes_no("New branch?", True):
+        subprocess.run(["git", "switch", "--create", "write/" + slug])
+
     if prompt.read_user_yes_no("Commit changes?", True):
-        subprocess.run(["git", "commit", "-m", f'"Add post {filename}"'])
+        subprocess.run(["git", "commit", "-m", f'"Add post {slug}"'])
 
     if prompt.read_user_yes_no("Push changes?", False):
-        subprocess.run(["git", "push"])
+        subprocess.run(["git", "push", "--set-upstream", "origin", "HEAD"])
 
     if prompt.read_user_yes_no("Webmention bridgy to syndicate?", False):
-        bridgy(cc["slug"], "mastodon")
+        bridgy(slug, "mastodon")
 
 
 if __name__ == "__main__":
