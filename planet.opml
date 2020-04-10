@@ -47,6 +47,8 @@
         <outline title="Alex Schroeder: Diary" text="Alex Schroeder: Diary" type="rss" htmlUrl="https://alexschroeder.ch/wiki" xmlUrl="https://alexschroeder.ch/wiki?action=journal;search=-tag:rpg%20-tag:rsp;lang=en;title=English%20Diary%20without%20RPG%20Pages"/>
         <outline title="Armin Ronacher's Thoughts and Writings" text="Armin Ronacher's Thoughts and Writings" type="rss" htmlUrl="https://lucumr.pocoo.org/" xmlUrl="https://lucumr.pocoo.org/feed.atom"/>
         <outline title="SciCombinator - Last 10 Days" text="SciCombinator - Last 10 Days" type="rss" htmlUrl="http://www.scicombinator.com/" xmlUrl="http://www.scicombinator.com/hot/ten-days.atom"/>
+        <outline title="Matplotblog" text="Matplotblog" type="rss" htmlUrl="https://matplotlib.org/matplotblog/" xmlUrl="https://matplotlib.org/matplotblog/index.xml"/>
+        <outline title="conda-forge blog" text="conda-forge blog" type="rss" htmlUrl="https://conda-forge.org/blog/" xmlUrl="https://conda-forge.org/blog/atom.xml"/>
     </outline>
     <outline title="Notes" text="Notes">
         <outline title="Raymond Hettinger" text="Raymond Hettinger" type="rss" htmlUrl="https://nitter.net/raymondh/" xmlUrl="https://nitter.net/raymondh/rss"/>
