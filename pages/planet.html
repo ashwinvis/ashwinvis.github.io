@@ -153,6 +153,38 @@ packages can be successfully built and uploaded. This is the result …</div>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-10_Watch_your_hands" rel="bookmark" class="u-url"
+       title="Watch your hands" target="_blank">
+      <time class="m-date" datetime="2020-04-10 12:35:56+00:00">
+        Apr
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Watch your hands
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div class="page" lang="en"><p>Yeah, so these days I also work from home. I recently <a class="local" href="https://alexschroeder.ch/wiki/2020-04-05_Covid-19_Pandemic">posted some pictures</a>. I also said: “I didn’t know my office was so ergonomic until I started to work from home.” Still true. My RSI came back. What’s that, you ask?</p><p>“Repeated Strain Injuries” can be anything that causes you pain in your hands, wrists or arms due to working with your hands. Many would say, that’s because I use Emacs. Let me tell you, that’s not it. If you live a life in text, you simply tend to have both the most powerful editor in the world 😁 and pains in your hands. 🥺</p><p>Yesterday I was looking at my keyboards again. I started buying keyboards Because I hoped they would help. At the time I sometimes, rarely, heard people say that they didn’t help …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-10 12:35:56+00:00" class="dt-published"></time>
+  Fri 10 Apr 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://labplot.kde.org/2020/04/10/touch-bar-on-mac/" rel="bookmark" class="u-url"
        title="Touch Bar on Mac" target="_blank">
       <time class="m-date" datetime="2020-04-10 10:01:51+00:00">
@@ -327,6 +359,38 @@ The screenshot above shows a simple session in LabPlot with a selected worksheet
   on <time datetime="2020-04-09 21:00:00+00:00" class="dt-published"></time>
   Thu 09 Apr 2020
   in Gregory Szorc's Digital Home.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-09_QWERTY_Atreus,_again" rel="bookmark" class="u-url"
+       title="QWERTY Atreus, again" target="_blank">
+      <time class="m-date" datetime="2020-04-09 20:34:05+00:00">
+        Apr
+        <span class="m-date-day">
+          09
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      QWERTY Atreus, again
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div class="page" lang="en"><p>I’d like to use the Atreus again. The <a class="local" href="https://alexschroeder.ch/wiki/Workman">Workman</a> layout is not working out for me. I just don’t get anything done. Plus, they say that different layouts don’t really improve your typing skill. So, back to QWERTY it is!</p><p>As my <code>qmk_firmware</code> tree was so out of date, it took me quite a while to discover what I needed to do:</p><pre>~/src/qmk_firmware$ make PCBDOWN=yes atreus/astar_mirrored:alex</pre><p>I remember, I have one of the really old models. If I forget <code>PCBDOWN=yes</code>, then Alt and Ctrl are swapped. If I forget the <code>mirrored</code>, then I get a POIUY keyboard instead of a QWERTY keyboard. Not good.</p><p>Also remember that the USB ports on the Purism laptop aren’t good enough to write the firmware. If I try, I’ll corrupt it, and then I …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-09 20:34:05+00:00" class="dt-published"></time>
+  Thu 09 Apr 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1613,83 +1677,6 @@ paid to …</p>
   on <time datetime="2020-01-21 22:18:58+00:00" class="dt-published"></time>
   Tue 21 Jan 2020
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://treyhunner.com/2020/01/passing-functions-as-arguments/" rel="bookmark" class="u-url"
-       title="Passing a function as an argument to another function in Python" target="_blank">
-      <time class="m-date" datetime="2020-01-14 08:00:00-08:00">
-        Jan
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Passing a function as an argument to another function in Python
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>One of the more hair-raising facts we learn in my introductory Python trainings is that <strong>you can pass functions into other functions</strong>.
-You can pass functions around because in Python, <strong>functions are objects</strong>.</p>
-
-<p>You likely don&rsquo;t need to know about this in your first week of using Python, but as you dive deeper into Python you&rsquo;ll find that it can be quite convenient to understand how to pass a function into another function.</p>
-
-<p>This is part 1 of what I expect to be a series on the various properties of &ldquo;function objects&rdquo;.
-This article focuses on what a new Python programmer should know and appreciate about <strong>the object-nature of Python&rsquo;s functions</strong>.</p>
-
-<ul></ul>
-
-
-<h2>Functions can be referenced</h2>
-
-<p>If you try to use a function without putting parentheses after it Python won&rsquo;t complain but it also won&rsquo;t do …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-01-14 08:00:00-08:00" class="dt-published"></time>
-  Tue 14 Jan 2020
-  in Trey Hunner.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://gregoryszorc.com/blog/2020/01/13/mercurial's-journey-to-and-reflections-on-python-3/" rel="bookmark" class="u-url"
-       title="Mercurial's Journey to and Reflections on Python 3" target="_blank">
-      <time class="m-date" datetime="2020-01-13 08:45:00+00:00">
-        Jan
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Mercurial's Journey to and Reflections on Python 3
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Mercurial's Journey to and Reflections on Python 3
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Gregory Szorc</b></span>
-  on <time datetime="2020-01-13 08:45:00+00:00" class="dt-published"></time>
-  Mon 13 Jan 2020
-  in Gregory Szorc's Digital Home.
 </footer>
 <div class="m-clearfix-l"></div>
 
