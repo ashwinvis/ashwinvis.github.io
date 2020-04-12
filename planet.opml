@@ -4,10 +4,6 @@
     <title>FeedReader Exported RSS Feeds</title>
 </head>
 <body>
-    <outline title="Academic" text="Academic">
-        <outline title="MISU - Events and News" text="MISU - Events and News" type="rss" htmlUrl="/cmlink/misu-events-news-1.23228" xmlUrl="http://www.misu.su.se/cmlink/misu-events-news-1.23228"/>
-        <outline title="KTH Mechanics - Seminars" text="KTH Mechanics - Seminars" type="rss" htmlUrl="" xmlUrl="https://www.mech.kth.se/mech/rss_seminars.xhtml"/>
-    </outline>
     <outline title="Blogroll" text="Blogroll">
         <outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
         <outline title="Excuse me please" text="Excuse me please" type="rss" htmlUrl="http://husemeplz.blogspot.com/feeds/posts/default" xmlUrl="http://husemeplz.blogspot.com/feeds/posts/default"/>
@@ -49,37 +45,12 @@
         <outline title="SciCombinator - Last 10 Days" text="SciCombinator - Last 10 Days" type="rss" htmlUrl="http://www.scicombinator.com/" xmlUrl="http://www.scicombinator.com/hot/ten-days.atom"/>
         <outline title="Matplotblog" text="Matplotblog" type="rss" htmlUrl="https://matplotlib.org/matplotblog/" xmlUrl="https://matplotlib.org/matplotblog/index.xml"/>
         <outline title="conda-forge blog" text="conda-forge blog" type="rss" htmlUrl="https://conda-forge.org/blog/" xmlUrl="https://conda-forge.org/blog/atom.xml"/>
-    </outline>
-    <outline title="Notes" text="Notes">
-        <outline title="Raymond Hettinger" text="Raymond Hettinger" type="rss" htmlUrl="https://nitter.net/raymondh/" xmlUrl="https://nitter.net/raymondh/rss"/>
-        <outline title="David Beazley" text="David Beazley" type="rss" htmlUrl="https://nitter.net/dabeaz/" xmlUrl="https://nitter.net/dabeaz/rss"/>
-    </outline>
-    <outline title="Comix" text="Comix">
-        <outline title="ZEN PENCILS" text="ZEN PENCILS" type="rss" htmlUrl="https://zenpencils.com" xmlUrl="http://feeds.feedburner.com/zenpencils?format=xml"/>
-        <outline title="Abstruse Goose" text="Abstruse Goose" type="rss" htmlUrl="https://abstrusegoose.com" xmlUrl="http://abstrusegoose.com/feed"/>
+        <outline title="Ekaitz's tech blog" text="Ekaitz's tech blog" type="rss" htmlUrl="https://ekaitz.elenq.tech/" xmlUrl="https://ekaitz.elenq.tech/feeds/all.atom.xml"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
         <outline title="Planet GNOME" text="Planet GNOME" type="rss" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml"/>
         <outline title="Planet KDE" text="Planet KDE" type="rss" htmlUrl="http://planet.kde.org/" xmlUrl="http://planet.kde.org/global/atom.xml"/>
-    </outline>
-    <outline title="News" text="News">
-        <outline title="BBC News - Home" text="BBC News - Home" type="rss" htmlUrl="https://www.bbc.co.uk/news/" xmlUrl="http://feeds.bbci.co.uk/news/rss.xml"/>
-        <outline title="NYT > Top Stories" text="NYT > Top Stories" type="rss" htmlUrl="https://www.nytimes.com?emc=rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"/>
-        <outline title="The Guardian" text="The Guardian" type="rss" htmlUrl="https://www.theguardian.com/international" xmlUrl="https://www.theguardian.com/international/rss"/>
-    </outline>
-    <outline title="Reddit" text="Reddit">
-        <outline title="top scoring links : coding_languages" text="top scoring links : coding_languages" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/coding_languages/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/coding_languages/top/.rss"/>
-        <outline title="top scoring links : linuxworld" text="top scoring links : linuxworld" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/linuxworld/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/linuxworld/top/.rss"/>
-        <outline title="top scoring links : topnews" text="top scoring links : topnews" type="rss" htmlUrl="https://www.reddit.com/user/jadelord/m/topnews/top/" xmlUrl="https://www.reddit.com/user/jadelord/m/topnews/top/.rss"/>
-        <outline title="top scoring links : ProgrammerHumor" text="top scoring links : ProgrammerHumor" type="rss" htmlUrl="https://www.reddit.com/r/programmerhumor/top/.rss" xmlUrl="https://www.reddit.com/r/programmerhumor/top/.rss"/>
-        <outline title="top scoring links : linux" text="top scoring links : linux" type="rss" htmlUrl="https://www.reddit.com/r/linux/top/.rss" xmlUrl="https://www.reddit.com/r/linux/top/.rss"/>
-        <outline title="top scoring links : programming" text="top scoring links : programming" type="rss" htmlUrl="https://www.reddit.com/r/programming/top/.rss" xmlUrl="https://www.reddit.com/r/programming/top/.rss"/>
-        <outline title="top scoring links : Python" text="top scoring links : Python" type="rss" htmlUrl="https://www.reddit.com/r/Python/top/.rss" xmlUrl="https://www.reddit.com/r/Python/top/.rss"/>
-    </outline>
-    <outline title="Tech" text="Tech">
-        <outline title="Phoronix" text="Phoronix" type="rss" htmlUrl="https://www.phoronix.com/" xmlUrl="http://www.phoronix.com/rss.php"/>
-        <outline title="Hacker News" text="Hacker News" type="rss" htmlUrl="https://news.ycombinator.com/" xmlUrl="https://news.ycombinator.com/rss"/>
     </outline>
     </body>
 </opml>
