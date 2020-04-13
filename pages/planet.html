@@ -100,6 +100,77 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://mjg59.dreamwidth.org/54923.html" rel="bookmark" class="u-url"
+       title="Implementing support for advanced DPTF policy in Linux" target="_blank">
+      <time class="m-date" datetime="2020-04-13 00:28:34+00:00">
+        Apr
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Implementing support for advanced DPTF policy in Linux
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  Intel's Dynamic Platform and Thermal Framework (DPTF) is a feature that's becoming increasingly common on highly portable Intel-based devices. The adaptive policy it implements is based around the idea that thermal management of a system is becoming increasingly complicated - the appropriate set of cooling constraints to place on a system may differ based on a whole bunch of criteria (eg, if a tablet is being held vertically rather than lying on a table, it's probably going to be able to dissipate heat more effectively, so you should impose different constraints). One way of providing these criteria to the OS is to embed them in the system firmware, allowing an OS-level agent to read that and then incorporate OS-level knowledge into a final policy decision.<br /><br />Unfortunately, while Intel have released some amount of support for <a href="https://github.com/intel/dptf">DPTF on Linux</a>, they haven't included …
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-13 00:28:34+00:00" class="dt-published"></time>
+  Mon 13 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.archlinux.org/news/nss3511-1-and-lib32-nss3511-1-updates-require-manual-intervention/" rel="bookmark" class="u-url"
+       title="nss>=3.51.1-1 and lib32-nss>=3.51.1-1 updates require manual intervention" target="_blank">
+      <time class="m-date" datetime="2020-04-13 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      nss>=3.51.1-1 and lib32-nss>=3.51.1-1 updates require manual intervention
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  The nss and lib32-nss packages prior to version 3.51.1-1 were missing a soname link each. This has been fixed in 3.51.1-1, so the upgrade will need to overwrite the untracked files created by ldconfig. If you get any of these errors
+<code>nss: /usr/lib/p11-kit-trust.so exists in filesystem
+lib32-nss: /usr/lib32/p11-kit-trust.so exists in filesystem
+</code>
+when updating, use
+<code>pacman -Syu --overwrite /usr/lib\*/p11-kit-trust.so
+</code>
+to perform the upgrade.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-13 00:00:00+00:00" class="dt-published"></time>
+  Mon 13 Apr 2020
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://blogs.gnome.org/alexm/2020/04/12/on-windows-and-titlebars/" rel="bookmark" class="u-url"
        title="On windows and titlebars" target="_blank">
       <time class="m-date" datetime="2020-04-12 16:00:15+00:00">
@@ -326,38 +397,6 @@ a personal contact with a stranger is actually …</p></div>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="http://nibblestew.blogspot.com/2020/04/your-statement-is-100-correct-but.html" rel="bookmark" class="u-url"
-       title="Your statement is 100% correct but misses the entire point" target="_blank">
-      <time class="m-date" datetime="2020-04-11 16:17:00+00:00">
-        Apr
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Your statement is 100% correct but misses the entire point
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Let's assume that there is a discussion going on on the Internet about programming languages. One of the design points that come up is a garbage collector. One participant mentions the advantages of garbage collection with something like this:<br /><blockquote class="tr_bq">Garbage collectors are nice and save a lot of work. If your application does not have strict latency requirements, not having to care about memory management is liberating and can improve developer efficiency by a lot.</blockquote>This is a fairly neutral statement that most people would agree with, even if they work on code that has strict real time requirements. Yet, inevitably, someone will present this counterpoint.<br /><blockquote class="tr_bq">No! If you have dangling references memory is never freed and you have to fix that by doing manual memory management <i>anyway</i>. Garbage collectors do not magically fix all bugs.</blockquote>If you read through …
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2020-04-11 16:17:00+00:00" class="dt-published"></time>
-  Sat 11 Apr 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-04-11_Jitsi_is_gone" rel="bookmark" class="u-url"
        title="Jitsi is gone" target="_blank">
       <time class="m-date" datetime="2020-04-11 13:29:54+00:00">
@@ -395,6 +434,70 @@ Do you want to continue? [Y/n]
   on <time datetime="2020-04-11 13:29:54+00:00" class="dt-published"></time>
   Sat 11 Apr 2020
   in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/5552296" rel="bookmark" class="u-url"
+       title="[Periodization of the history of acupuncture-moxibustion discipline and its research methods and challenges]" target="_blank">
+      <time class="m-date" datetime="2020-04-11 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      [Periodization of the history of acupuncture-moxibustion discipline and its research methods and challenges]
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  As a discipline, the independent knowledge system of acupuncture-moxibustion has been established in Wei-Jin Dynasties, while the education and management institutes have tended to be formalized since Northern and Southern Dynasties and continue to late imperial period. In the period of the Republic of China, acupuncture-moxibustion discipline began to be constructed intentionally, and the knowledge system, education institutes and institution have changed significantly with the characteristics of modern science. Now acupuncture has fully met the conditions of modern subjects. The study of the history of acupuncture-moxibustion discipline needs the perspective of internal and external history integration, focusing on the differences from academic history and educational history. In addition, four important topics in the current research of the history of acupuncture-moxibustion discipline are suggested: the relationship between acupuncture- moxibustion discipline and related disciplines, scientific value and technology philosophy, international recognition and …
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>BY Liu</b></span>
+  on <time datetime="2020-04-11 00:00:00+00:00" class="dt-published"></time>
+  Sat 11 Apr 2020
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/5552295" rel="bookmark" class="u-url"
+       title="[Fire needling on dysphagia due to pseudobulbar palsy after stroke: a randomized controlled trial]" target="_blank">
+      <time class="m-date" datetime="2020-04-11 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      [Fire needling on dysphagia due to pseudobulbar palsy after stroke: a randomized controlled trial]
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  To observe the clinical effect of fire needling on dysphagia due to pseudobulbar paralysis after stroke and to compare the difference in clinical effect between fire needling and swallowing function rehabilitation training.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>S Zhou</b></span>
+  on <time datetime="2020-04-11 00:00:00+00:00" class="dt-published"></time>
+  Sat 11 Apr 2020
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -622,70 +725,6 @@ such contact tracing system in a way where …</p></div>
   on <time datetime="2020-04-08 00:00:00+00:00" class="dt-published"></time>
   Wed 08 Apr 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5542953" rel="bookmark" class="u-url"
-       title="The Anti-Inflammatory and Cytoprotective Efficiency of Curvularin, a Fungal Macrolactone against Lipopolysaccharide-Induced Inflammatory Response in Nucleus Pulposus Cells: An In Vitro Study" target="_blank">
-      <time class="m-date" datetime="2020-04-08 00:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          08
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Anti-Inflammatory and Cytoprotective Efficiency of Curvularin, a Fungal Macrolactone against Lipopolysaccharide-Induced Inflammatory Response in Nucleus Pulposus Cells: An In Vitro Study
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Developing an in vitro model for assessing the anti-inflammatory properties of curvularin.
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>S Gpv</b></span>
-  on <time datetime="2020-04-08 00:00:00+00:00" class="dt-published"></time>
-  Wed 08 Apr 2020
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5539496" rel="bookmark" class="u-url"
-       title="Critically ill patients with COVID-19 in Hong Kong: a multicentre retrospective observational cohort study" target="_blank">
-      <time class="m-date" datetime="2020-04-07 00:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          07
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Critically ill patients with COVID-19 in Hong Kong: a multicentre retrospective observational cohort study
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  To report the first eight cases of critically ill patients with coronavirus disease 2019 (COVID-19) in Hong Kong, describing the treatments and supportive care they received and their 28-day outcomes.
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>CD Gomersall</b></span>
-  on <time datetime="2020-04-07 00:00:00+00:00" class="dt-published"></time>
-  Tue 07 Apr 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1496,50 +1535,6 @@ sans-serif">www.phdcomics.com</font></b></div>
   on <time datetime="2020-03-19 00:00:00+00:00" class="dt-published"></time>
   Thu 19 Mar 2020
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.archlinux.org/news/hplip-3203-2-update-requires-manual-intervention/" rel="bookmark" class="u-url"
-       title="hplip 3.20.3-2 update requires manual intervention" target="_blank">
-      <time class="m-date" datetime="2020-03-19 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      hplip 3.20.3-2 update requires manual intervention
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  The hplip package prior to version 3.20.3-2 was missing the compiled
-python modules. This has been fixed in 3.20.3-2, so the upgrade will
-need to overwrite the untracked pyc files that were created. If you get errors
-such as these
-<code>hplip: /usr/share/hplip/base/__pycache__/__init__.cpython-38.pyc exists in filesystem
-hplip: /usr/share/hplip/base/__pycache__/avahi.cpython-38.pyc exists in filesystem
-hplip: /usr/share/hplip/base/__pycache__/codes.cpython-38.pyc exists in filesystem
-...many more...
-</code>
-when updating, use
-<code>pacman -Suy --overwrite /usr/share/hplip/\*
-</code>
-to perform the upgrade.
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-19 00:00:00+00:00" class="dt-published"></time>
-  Thu 19 Mar 2020
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
