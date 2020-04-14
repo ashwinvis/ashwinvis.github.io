@@ -100,6 +100,80 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="http://wingolog.org/archives/2020/04/14/understanding-webassembly-code-generation-throughput" rel="bookmark" class="u-url"
+       title="understanding webassembly code generation throughput" target="_blank">
+      <time class="m-date" datetime="2020-04-14 08:59:17+00:00">
+        Apr
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      understanding webassembly code generation throughput
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>Greets!  Today's article looks at browser WebAssembly implementations from a compiler throughput point of view.  As I wrote in my article on <a href="https://wingolog.org/archives/2020/03/25/firefoxs-low-latency-webassembly-compiler">Firefox's WebAssembly baseline compiler</a>, web browsers have multiple wasm compilers: some that produce code fast, and some that produce fast code.  Implementors are willing to pay the cost of having multiple compilers in order to satisfy these conflicting needs.  So how well do they do their jobs?  Why bother?</p><p>In this article, I'm going to take the simple path and just look at code generation throughput on a single chosen WebAssembly module.  Think of it as X-ray diffraction to expose aspects of the inner structure of the WebAssembly implementations in SpiderMonkey (Firefox), V8 (Chrome), and JavaScriptCore (Safari).</p><p><b>experimental setup</b></p><p>As a workload, I am going to use a version of the "Zen Garden" demo.  This is a 40-megabyte …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2020-04-14 08:59:17+00:00" class="dt-published"></time>
+  Tue 14 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://olea.org/diario/2020/04/14/OmegaT_Flatpak.html" rel="bookmark" class="u-url"
+       title="OmegaT packaged with Flatpak" target="_blank">
+      <time class="m-date" datetime="2020-04-13 22:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      OmegaT packaged with Flatpak
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p><img alt="OmegaT logo" class="pull-right" src="http://olea.org/recursos/2017-08/omegat.svg" width="150" /></p>
+
+<p>It took me a while since <a href="http://olea.org/diario/2017/08/17/Retiring_OmegaT_from_Fedora.html">I announced I retired OmegaT from Fedora</a> and my <a href="http://olea.org/diario/2017/08/10/post-GUADEC.html">first try to deploy it with Flatpak</a> and, I hope, <a href="https://flathub.org">Flathub</a>. There were some reasons:</p>
+
+<ul>
+  <li>I was completely new to Flatpak,</li>
+  <li>the big amount of work to write the manifest of a non trivial application compiled completely from scratch,</li>
+  <li>the complexity at that time of working with Java and Flatpak.</li>
+</ul>
+
+<p>Well, it has been time to resume the task. I’m not really an <a href="https://omegat.org/">OmegaT</a> user (I’ve used it just a few times in all these years) but I feel committed helping it to be better known and used in the Linux Desktop. In the past I made a lot of work with technical translations and I fully understand the power of the tool for profesional users and it’s opensource: as far as …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-13 22:00:00+00:00" class="dt-published"></time>
+  Mon 13 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/micro/2020/04/staying-with-hugo/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-04-13 23:10:27+02:00">
@@ -208,38 +282,6 @@ This post contains some code snippets to give you an idea of how to use MauiKit.
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://swilmet.be/blog/2020/04/13/small-tip-with-gtk-doc-devhelp-jhbuild-and-fedora/?utm_source=rss&utm_medium=rss&utm_campaign=small-tip-with-gtk-doc-devhelp-jhbuild-and-fedora" rel="bookmark" class="u-url"
-       title="Small tip with GTK-Doc, Devhelp, JHBuild and Fedora" target="_blank">
-      <time class="m-date" datetime="2020-04-13 15:26:02+00:00">
-        Apr
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Small tip with GTK-Doc, Devhelp, JHBuild and Fedora
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  And docbook-style-xsl. docbook-style-xsl bug with GTK-Doc on Fedora On Fedora, building GTK-Doc API documentation is buggy since several years, normally each module contains the following indexes: For each version, the list of new symbols, for example “Index of new symbols in 3.36”. The “Index of deprecated symbols”. These indexes are very useful to keep up … <a class="more-link" href="https://swilmet.be/blog/2020/04/13/small-tip-with-gtk-doc-devhelp-jhbuild-and-fedora/">Continue reading <span class="screen-reader-text">Small tip with GTK-Doc, Devhelp, JHBuild and Fedora</span></a>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Sébastien Wilmet</b></span>
-  on <time datetime="2020-04-13 15:26:02+00:00" class="dt-published"></time>
-  Mon 13 Apr 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://jlelse.blog/links/2020/04/nitter-redirect/" rel="bookmark" class="u-url"
        title=""Nitter Redirect" add-on to redirect Twitter to Nitter" target="_blank">
       <time class="m-date" datetime="2020-04-13 14:03:01+02:00">
@@ -266,38 +308,6 @@ This post contains some code snippets to give you an idea of how to use MauiKit.
   on <time datetime="2020-04-13 14:03:01+02:00" class="dt-published"></time>
   Mon 13 Apr 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://mjg59.dreamwidth.org/54923.html" rel="bookmark" class="u-url"
-       title="Implementing support for advanced DPTF policy in Linux" target="_blank">
-      <time class="m-date" datetime="2020-04-13 00:28:34+00:00">
-        Apr
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Implementing support for advanced DPTF policy in Linux
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Intel's Dynamic Platform and Thermal Framework (DPTF) is a feature that's becoming increasingly common on highly portable Intel-based devices. The adaptive policy it implements is based around the idea that thermal management of a system is becoming increasingly complicated - the appropriate set of cooling constraints to place on a system may differ based on a whole bunch of criteria (eg, if a tablet is being held vertically rather than lying on a table, it's probably going to be able to dissipate heat more effectively, so you should impose different constraints). One way of providing these criteria to the OS is to embed them in the system firmware, allowing an OS-level agent to read that and then incorporate OS-level knowledge into a final policy decision.<br /><br />Unfortunately, while Intel have released some amount of support for <a href="https://github.com/intel/dptf">DPTF on Linux</a>, they haven't included …
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-13 00:28:34+00:00" class="dt-published"></time>
-  Mon 13 Apr 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
