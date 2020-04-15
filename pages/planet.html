@@ -100,6 +100,38 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="http://www.cookandcommit.eu/2020/04/hawktracer-low-overhead-instrumentation.html" rel="bookmark" class="u-url"
+       title="HawkTracer - low-overhead instrumentation-based profiler" target="_blank">
+      <time class="m-date" datetime="2020-04-14 23:07:00+00:00">
+        Apr
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      HawkTracer - low-overhead instrumentation-based profiler
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div dir="ltr" style="text-align: left;"><div dir="ltr" style="text-align: left;"><div dir="ltr" style="text-align: left;"><br />Disclaimer: this post introduces HawkTracer profiler but doesn't try to go deep into details of that. Follow the links attached to find all the features (and limitations) of the tool.<br /><br />A while ago, at Amazon we've open-sourced instrumentation-based profiler - <a href="https://www.hawktracer.org/" target="_blank">HawkTracer</a> - which introduces very low overhead so it can be used on low-end platforms, where development environment is somehow limited (e.g. no ssh access, <b>very</b> limited disk storage etc). We used it to fix performance issues of Prime Video app on living room devices (SmartTVs, Streaming sticks, Game consoles etc).<br /><br />The profiler can be used to measure resource usage (mainly time spend in scope, but also others like CPU usage etc) in your C/C++ code (but it's easy to write bindings for other languages, there are already some in <a href="https://github.com/amzn/hawktracer/blob/master/bindings/python3/instrumentation-base-example.py" target="_blank">Python</a> and <a href="https://github.com/alexene/rust_hawktracer" target="_blank">Rust</a>) and then visualize it using Trace Event …</div></div></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Loganek's DevCookLog (noreply@blogger.com)</b></span>
+  on <time datetime="2020-04-14 23:07:00+00:00" class="dt-published"></time>
+  Tue 14 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="http://pyfound.blogspot.com/2020/04/thank-you-to-donors-sponsors.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="Thank you to donors & sponsors" target="_blank">
       <time class="m-date" datetime="2020-04-14 18:02:57.103000-04:00">
@@ -236,38 +268,6 @@ Video edited in Kdenlive 19.12.3appimage, recorded with O.B.S.</p>
   on <time datetime="2020-04-14 17:04:44+02:00" class="dt-published"></time>
   Tue 14 Apr 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://wingolog.org/archives/2020/04/14/understanding-webassembly-code-generation-throughput" rel="bookmark" class="u-url"
-       title="understanding webassembly code generation throughput" target="_blank">
-      <time class="m-date" datetime="2020-04-14 08:59:17+00:00">
-        Apr
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      understanding webassembly code generation throughput
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>Greets!  Today's article looks at browser WebAssembly implementations from a compiler throughput point of view.  As I wrote in my article on <a href="https://wingolog.org/archives/2020/03/25/firefoxs-low-latency-webassembly-compiler">Firefox's WebAssembly baseline compiler</a>, web browsers have multiple wasm compilers: some that produce code fast, and some that produce fast code.  Implementors are willing to pay the cost of having multiple compilers in order to satisfy these conflicting needs.  So how well do they do their jobs?  Why bother?</p><p>In this article, I'm going to take the simple path and just look at code generation throughput on a single chosen WebAssembly module.  Think of it as X-ray diffraction to expose aspects of the inner structure of the WebAssembly implementations in SpiderMonkey (Firefox), V8 (Chrome), and JavaScriptCore (Safari).</p><p><b>experimental setup</b></p><p>As a workload, I am going to use a version of the "Zen Garden" demo.  This is a 40-megabyte …</p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Andy Wingo</b></span>
-  on <time datetime="2020-04-14 08:59:17+00:00" class="dt-published"></time>
-  Tue 14 Apr 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
