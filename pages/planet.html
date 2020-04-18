@@ -693,83 +693,6 @@ to perform the upgrade.
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-12_Flowering_Trees" rel="bookmark" class="u-url"
-       title="Flowering Trees" target="_blank">
-      <time class="m-date" datetime="2020-04-12 07:32:25+00:00">
-        Apr
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Flowering Trees
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>Spring, when trees are flowering, is breathtaking.</p><ul><li><a class="url https outside" href="https://alexschroeder.ch/gallery/2020-flowering-trees/">Flowering Trees Album</a></li></ul><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" rel="tag" title="Tag">Pictures</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-12 07:32:25+00:00" class="dt-published"></time>
-  Sun 12 Apr 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-11_Jitsi_is_gone" rel="bookmark" class="u-url"
-       title="Jitsi is gone" target="_blank">
-      <time class="m-date" datetime="2020-04-11 13:29:54+00:00">
-        Apr
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Jitsi is gone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>Well, I uninstalled Jitsi again. It seemed like a pretty big attack surface and didn’t get any use. I myself didn’t use it!</p><ul><li>DM Peter uses Skype</li><li>my players in one campaign switched to Zoom</li><li>the audio and video in the other campaign that did use Jitsi was terrible</li></ul><p>And so...</p><pre class="terminal">root@sibirocobombus:~# apt remove jitsi-meet
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  ca-certificates-java java-common jicofo jitsi-meet-prosody jitsi-meet-web jitsi-meet-web-config jitsi-videobridge libnspr4 libnss3 libpcsclite1
-  openjdk-11-jre-headless
-Use 'apt autoremove' to remove them.
-The following packages will be REMOVED:
-  jitsi-meet
-0 upgraded, 0 newly installed, 1 to remove and 9 not upgraded.
-After this operation, 11.3 kB disk space will be freed.
-Do you want to continue? [Y/n] 
-(Reading database ... 77038 files and directories …</pre></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-11 13:29:54+00:00" class="dt-published"></time>
-  Sat 11 Apr 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://morepypy.blogspot.com/2020/04/pypy-731-released.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
        title="PyPy 7.3.1 released" target="_blank">
       <time class="m-date" datetime="2020-04-10 15:29:12.156000+02:00">
@@ -1670,6 +1593,83 @@ paid to …</p>
   on <time datetime="2020-01-21 22:18:58+00:00" class="dt-published"></time>
   Tue 21 Jan 2020
   in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://treyhunner.com/2020/01/passing-functions-as-arguments/" rel="bookmark" class="u-url"
+       title="Passing a function as an argument to another function in Python" target="_blank">
+      <time class="m-date" datetime="2020-01-14 08:00:00-08:00">
+        Jan
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Passing a function as an argument to another function in Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>One of the more hair-raising facts we learn in my introductory Python trainings is that <strong>you can pass functions into other functions</strong>.
+You can pass functions around because in Python, <strong>functions are objects</strong>.</p>
+
+<p>You likely don&rsquo;t need to know about this in your first week of using Python, but as you dive deeper into Python you&rsquo;ll find that it can be quite convenient to understand how to pass a function into another function.</p>
+
+<p>This is part 1 of what I expect to be a series on the various properties of &ldquo;function objects&rdquo;.
+This article focuses on what a new Python programmer should know and appreciate about <strong>the object-nature of Python&rsquo;s functions</strong>.</p>
+
+<ul></ul>
+
+
+<h2>Functions can be referenced</h2>
+
+<p>If you try to use a function without putting parentheses after it Python won&rsquo;t complain but it also won&rsquo;t do …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-01-14 08:00:00-08:00" class="dt-published"></time>
+  Tue 14 Jan 2020
+  in Trey Hunner.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://gregoryszorc.com/blog/2020/01/13/mercurial's-journey-to-and-reflections-on-python-3/" rel="bookmark" class="u-url"
+       title="Mercurial's Journey to and Reflections on Python 3" target="_blank">
+      <time class="m-date" datetime="2020-01-13 08:45:00+00:00">
+        Jan
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Mercurial's Journey to and Reflections on Python 3
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  Mercurial's Journey to and Reflections on Python 3
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Gregory Szorc</b></span>
+  on <time datetime="2020-01-13 08:45:00+00:00" class="dt-published"></time>
+  Mon 13 Jan 2020
+  in Gregory Szorc's Digital Home.
 </footer>
 <div class="m-clearfix-l"></div>
 
