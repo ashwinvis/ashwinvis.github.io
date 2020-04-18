@@ -100,6 +100,38 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://tsdgeos.blogspot.com/2020/04/should-kde-fork-chmlib.html" rel="bookmark" class="u-url"
+       title="Should KDE fork CHMLib?" target="_blank">
+      <time class="m-date" datetime="2020-04-17 21:22:46+00:00">
+        Apr
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Should KDE fork CHMLib?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  CHMLib is a library to handle <a href="https://en.wikipedia.org/wiki/Microsoft_Compiled_HTML_Help">CHM files</a>.<br /><br />It is used by Okular and other applications to show those files.<br /><br />It hasn't had a release in 11 years.<br /><br />It is packaged by <a href="https://repology.org/project/chmlib/badges">all major distributions</a>.<br /><br />A few weeks ago I got annoyed because we need to carry <a href="https://github.com/flathub/org.kde.okular/blob/master/chmlib-arm.patch">a patch</a> in Okular flathub because the code is not great and it defines it's own int types.<br /><br />I tried contacting the upstream author, but unsurprisingly after 11 years he doesn't seem to care much and got no answer.<br /><br />Then i looked saw that various distributions carry different random set of patches, not great.<br /><br />So I said, OK, maybe we should just fork it, and emailed 14 people listed at repology as package maintainers for CHMLib saying how they would react to KDE forking CHMLib in an effort to do some basic maintenance …
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Albert Astals Cid</b></span>
+  on <time datetime="2020-04-17 21:22:46+00:00" class="dt-published"></time>
+  Fri 17 Apr 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://www.davidrevoy.com/article771/podcasts-interviews" rel="bookmark" class="u-url"
        title="Podcasts interviews" target="_blank">
       <time class="m-date" datetime="2020-04-17 19:17:00+02:00">
@@ -129,6 +161,38 @@ The second one (in French) was recorded by the young 13 years old host of Le Lib
   on <time datetime="2020-04-17 19:17:00+02:00" class="dt-published"></time>
   Fri 17 Apr 2020
   in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.nedrichards.com/2020/04/endless-3.8.0-beta-1-trip-report/" rel="bookmark" class="u-url"
+       title="Endless 3.8.0 Beta 1 Trip Report" target="_blank">
+      <time class="m-date" datetime="2020-04-17 17:03:58+00:00">
+        Apr
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Endless 3.8.0 Beta 1 Trip Report
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  Endless have recently released the first beta of the 3.8 series for their Linux based operating system. As someone who used to work there in product, and is still friends with a number of Endless-ers I upgraded my personal machine and checked it out. This is a “trip report” of my notes and may be a little bitty but I hope it’s useful feedback for the developers and designers and maybe encourages a few other people to give Endless a go.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-17 17:03:58+00:00" class="dt-published"></time>
+  Fri 17 Apr 2020
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -192,44 +256,6 @@ The second one (in French) was recorded by the young 13 years old host of Le Lib
   <p>Posted by
   <span class="p-author"><b>Martin Gräßlin</b></span>
   on <time datetime="2020-04-16 18:36:01+00:00" class="dt-published"></time>
-  Thu 16 Apr 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://agateau.com/2020/generating-reports-with-python-markdown-and-entr/" rel="bookmark" class="u-url"
-       title="Generating reports with Python, Markdown and entr" target="_blank">
-      <time class="m-date" datetime="2020-04-16 18:32:47+00:00">
-        Apr
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Generating reports with Python, Markdown and entr
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Let's say you need to parse and analyse some raw data, for example a log file, to generate a report.</p>
-<p>An easy way to get started with this is to write some Python, Perl, Ruby or shell code to work on your file and print meaningful information about it.</p>
-<p>To illustrate this article I am going to write a Python script to "analyze" the <code>var/log/syslog</code> log file, whose entries look like this:</p>
-<div class="codehilite"><pre><span></span><code>Apr 12 11:53:42 dozer org.kde.KScreen[6995]: kscreen.xrandr: #011Primary: false
-Apr 12 11:53:42 dozer org.kde.KScreen[6995]: kscreen.xrandr: Output 68 : connected = false , enabled = false
-Apr 12 11:53:43 dozer org.kde.KScreen[6995]: kscreen.xrandr: Emitting configChanged()
-Apr 12 11:53:47 dozer dbus-daemon[991]: [system] Activating service name='org.kde.powerdevil.backlighthelper' requested by ':1.416652' …</code></pre></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Aurelien Gateau</b></span>
-  on <time datetime="2020-04-16 18:32:47+00:00" class="dt-published"></time>
   Thu 16 Apr 2020
   in Planet KDE.
 </footer>
@@ -434,38 +460,6 @@ Apr 12 11:53:47 dozer dbus-daemon[991]: [system] Activating service name='org.kd
   on <time datetime="2020-04-15 17:15:00+02:00" class="dt-published"></time>
   Wed 15 Apr 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/shell-dev/2020/04/15/gnome-shell-ux-plans/" rel="bookmark" class="u-url"
-       title="GNOME Shell UX Plans" target="_blank">
-      <time class="m-date" datetime="2020-04-15 15:07:47+00:00">
-        Apr
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      GNOME Shell UX Plans
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  With GNOME 3.36 out the door, it’s time to start thinking about what comes next. Those of us who work on GNOME UX are really proud of the latest GNOME shell release. It includes some major updates, particular the new lock screen and updated visuals, as well as a host of smaller improvements. 3.36 feels … <p class="link-more"><a class="more-link" href="https://blogs.gnome.org/shell-dev/2020/04/15/gnome-shell-ux-plans/">Continue reading<span class="screen-reader-text"> "GNOME Shell UX Plans"</span></a></p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Allan</b></span>
-  on <time datetime="2020-04-15 15:07:47+00:00" class="dt-published"></time>
-  Wed 15 Apr 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
