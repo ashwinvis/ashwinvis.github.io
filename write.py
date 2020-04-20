@@ -66,6 +66,7 @@ def bridgy(slug, posse):
     data = {
         "source": str(Path(SITEURL) / slug) + ".html",
         "target": "https://brid.gy/publish/" + posse,
+        "endpoint": "https://brid.gy/publish/webmention"
     }
     #  headers = {"User-Agent": "Mozilla/5.0"}
     #  r = requests.post(
@@ -79,6 +80,7 @@ def bridgy(slug, posse):
     #  print("Status: ", r.status_code)
     mention = WebmentionSend(**data)
     mention.send()
+    return mention
 
 
 @write.command(**click_kwargs)
