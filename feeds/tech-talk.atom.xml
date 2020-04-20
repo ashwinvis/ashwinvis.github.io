@@ -2683,13 +2683,8 @@ Jedi is not installed, falling back to readline
 And now for something completely different: ``PyPy is an exciting technology
 that lets you to write fast, portable, multi-platform interpreters with less
 effort&amp;#39;&amp;#39;
-=
 &amp;gt;&amp;gt;&amp;gt;&amp;gt; 
-&amp;gt;
 KeyboardInterrupt
-=
-&amp;gt;&amp;gt;&amp;gt;&amp;gt; 
-&amp;gt;=
 &amp;gt;&amp;gt;&amp;gt;&amp;gt; &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
