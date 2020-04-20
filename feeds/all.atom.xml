@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-04-09T06:09:37+02:00</updated><entry><title>Buying a new phone</title><link href="https://ashwin.info.tm/buying-a-new-phone.html" rel="alternate"></link><published>2020-04-09T06:09:37+02:00</published><updated>2020-04-09T06:09:37+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-09:/buying-a-new-phone.html</id><summary type="html">&lt;p&gt;One that lasts&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have been witnessing the evolution of smart phones into fragile and data
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-04-20T11:13:51+02:00</updated><entry><title>Juggling roles as a parent / teacher / employee</title><link href="https://ashwin.info.tm/juggling-roles.html" rel="alternate"></link><published>2020-04-20T11:13:51+02:00</published><updated>2020-04-20T11:13:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-20:/juggling-roles.html</id><summary type="html">&lt;p&gt;Resources to keep your children entertained&lt;/p&gt;</summary><content type="html">&lt;p&gt;It is not exactly lock-down in Sweden, but it is a voluntary work-from-home for
+everyone. As a concerned parent, even if the preschools are open, we have
+chosen not to send our preschooler to school. It is easier said than done.&lt;/p&gt;
+&lt;p&gt;I should share resources that my daughter found interesting, and I really
+approve of.&lt;/p&gt;
+&lt;h2&gt;Apps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learn.khanacademy.org/khan-academy-kids/"&gt;Khan Academy Kids&lt;/a&gt; - A
+  really nice app with diverse tasks. Has enough material to function online and
+  offline.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ur.se/tripp-trapp-trad"&gt;Tripp Trapp Trad&lt;/a&gt; - A tree with some fun
+  activities around it.[^1]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gcompris.net/index-en.html"&gt;GCompris&lt;/a&gt; - FOSS Educational
+  cross-platform application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.svtplay.se/kanaler"&gt;SVT play&lt;/a&gt; [^1]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://urplay.se/bladdra/barn"&gt;UR play&lt;/a&gt; [^1]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://invidious.snopyta.org/channel/UCQ00zWTLrgRQJUb8MHQg21A"&gt;Come Play With Me&lt;/a&gt; [^2]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nfb.ca/channels/based-childrens-books/"&gt;NFB Canada Short films&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Things that I have not followed through&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://keeplearning.khanacademy.org/daily-schedule#Pre-K-1-2"&gt;Daily Schedule from Khan Academy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[1]: Sweden specific
+[2]: YouTube channel&lt;/p&gt;</content><category term="life"></category><category term="covid-19"></category></entry><entry><title>Buying a new phone</title><link href="https://ashwin.info.tm/buying-a-new-phone.html" rel="alternate"></link><published>2020-04-09T06:09:37+02:00</published><updated>2020-04-09T06:09:37+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-09:/buying-a-new-phone.html</id><summary type="html">&lt;p&gt;One that lasts&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have been witnessing the evolution of smart phones into fragile and data
 hungry beasts that they are today, crippling essential features such as:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;3.5 mm headphone jacks&lt;/li&gt;
@@ -21,7 +48,7 @@ stay in touch with close ones.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;The candidates were
 &lt;a href="https://ubports.com/blog/ubports-blog-1/post/pinephone-ubports-community-edition-pre-orders-are-open-271"&gt;PinePhone&lt;/a&gt;
-at \$150 and &lt;a href="https://shop.fairphone.com/en/"&gt;Fairphone 3&lt;/a&gt; at €475. In
+at USD 150 and &lt;a href="https://shop.fairphone.com/en/"&gt;Fairphone 3&lt;/a&gt; at €475. In
 comparison with the existing market these phones have have medium
 specifications. However I put the above two criteria over all shiny details
 that people tend to care more about like looks, performance and camera. I have
@@ -70,7 +97,7 @@ share it here.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Give your friends a €25 discount on a Fairphone 3 and get a €20 discount on
 your next order.
-http://fairphone.refr.cc/ashwinvishnum&lt;/p&gt;
+&lt;a href="http://fairphone.refr.cc/ashwinvishnum"&gt;http://fairphone.refr.cc/ashwinvishnum&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;No, I was not paid to write this, but I really like the concept and I hope more
 such projects emerge. Let's work towards a &lt;a href="https://en.wikipedia.org/wiki/Circular_economy"&gt;circular

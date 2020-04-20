@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/blog.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2019-12-12T00:00:00+01:00</updated><entry><title>About my postdoc project at Stockholm University</title><link href="https://ashwin.info.tm/project-eturb.html" rel="alternate"></link><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-12:/project-eturb.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/blog.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-04-20T11:13:51+02:00</updated><entry><title>Juggling roles as a parent / teacher / employee</title><link href="https://ashwin.info.tm/juggling-roles.html" rel="alternate"></link><published>2020-04-20T11:13:51+02:00</published><updated>2020-04-20T11:13:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-20:/juggling-roles.html</id><summary type="html">&lt;p&gt;Resources to keep your children entertained&lt;/p&gt;</summary><content type="html">&lt;p&gt;It is not exactly lock-down in Sweden, but it is a voluntary work-from-home for
+everyone. As a concerned parent, even if the preschools are open, we have
+chosen not to send our preschooler to school. It is easier said than done.&lt;/p&gt;
+&lt;p&gt;I should share resources that my daughter found interesting, and I really
+approve of.&lt;/p&gt;
+&lt;h2&gt;Apps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learn.khanacademy.org/khan-academy-kids/"&gt;Khan Academy Kids&lt;/a&gt; - A
+  really nice app with diverse tasks. Has enough material to function online and
+  offline.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ur.se/tripp-trapp-trad"&gt;Tripp Trapp Trad&lt;/a&gt; - A tree with some fun
+  activities around it.[^1]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gcompris.net/index-en.html"&gt;GCompris&lt;/a&gt; - FOSS Educational
+  cross-platform application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Videos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.svtplay.se/kanaler"&gt;SVT play&lt;/a&gt; [^1]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://urplay.se/bladdra/barn"&gt;UR play&lt;/a&gt; [^1]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://invidious.snopyta.org/channel/UCQ00zWTLrgRQJUb8MHQg21A"&gt;Come Play With Me&lt;/a&gt; [^2]&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nfb.ca/channels/based-childrens-books/"&gt;NFB Canada Short films&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Things that I have not followed through&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://keeplearning.khanacademy.org/daily-schedule#Pre-K-1-2"&gt;Daily Schedule from Khan Academy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[1]: Sweden specific
+[2]: YouTube channel&lt;/p&gt;</content><category term="life"></category><category term="covid-19"></category></entry><entry><title>About my postdoc project at Stockholm University</title><link href="https://ashwin.info.tm/project-eturb.html" rel="alternate"></link><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-12:/project-eturb.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
 University. There has been a couple of meetings with the group involved, and
 now the &lt;em&gt;who&lt;/em&gt; and the &lt;em&gt;what&lt;/em&gt; are more concrete. I wrote a short abstract for
 the &lt;a href="https://www.flow.kth.se/projects"&gt;annual FLOW catalogue&lt;/a&gt;, which I share
