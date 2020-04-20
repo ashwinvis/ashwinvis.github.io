@@ -923,6 +923,83 @@ to perform the upgrade.
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-12_Flowering_Trees" rel="bookmark" class="u-url"
+       title="Flowering Trees" target="_blank">
+      <time class="m-date" datetime="2020-04-12 07:32:25+00:00">
+        Apr
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Flowering Trees
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div class="page" lang="en"><p>Spring, when trees are flowering, is breathtaking.</p><ul><li><a class="url https outside" href="https://alexschroeder.ch/gallery/2020-flowering-trees/">Flowering Trees Album</a></li></ul><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" rel="tag" title="Tag">Pictures</a></p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-12 07:32:25+00:00" class="dt-published"></time>
+  Sun 12 Apr 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-11_Jitsi_is_gone" rel="bookmark" class="u-url"
+       title="Jitsi is gone" target="_blank">
+      <time class="m-date" datetime="2020-04-11 13:29:54+00:00">
+        Apr
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Jitsi is gone
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div class="page" lang="en"><p>Well, I uninstalled Jitsi again. It seemed like a pretty big attack surface and didn’t get any use. I myself didn’t use it!</p><ul><li>DM Peter uses Skype</li><li>my players in one campaign switched to Zoom</li><li>the audio and video in the other campaign that did use Jitsi was terrible</li></ul><p>And so...</p><pre class="terminal">root@sibirocobombus:~# apt remove jitsi-meet
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  ca-certificates-java java-common jicofo jitsi-meet-prosody jitsi-meet-web jitsi-meet-web-config jitsi-videobridge libnspr4 libnss3 libpcsclite1
+  openjdk-11-jre-headless
+Use 'apt autoremove' to remove them.
+The following packages will be REMOVED:
+  jitsi-meet
+0 upgraded, 0 newly installed, 1 to remove and 9 not upgraded.
+After this operation, 11.3 kB disk space will be freed.
+Do you want to continue? [Y/n] 
+(Reading database ... 77038 files and directories …</pre></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-11 13:29:54+00:00" class="dt-published"></time>
+  Sat 11 Apr 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://morepypy.blogspot.com/2020/04/pypy-731-released.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
        title="PyPy 7.3.1 released" target="_blank">
       <time class="m-date" datetime="2020-04-10 15:29:12.156000+02:00">
@@ -1641,100 +1718,6 @@ HPy is a new project to …
   on <time datetime="2020-03-17 23:09:12.964000+01:00" class="dt-published"></time>
   Tue 17 Mar 2020
   in PyPy Status Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://conda-forge.org/blog//2020/03/10/pypy" rel="bookmark" class="u-url"
-       title="PyPy builds on conda-forge" target="_blank">
-      <time class="m-date" datetime="2020-03-10 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PyPy builds on conda-forge
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>conda-forge now supports PyPy3.6 as the python interpreter in a conda environment</p>
-
-<p>Supported platforms are,</p>
-
-<ul>
-  <li>Linux-x86_64 (glibc 2.12 or newer)</li>
-  <li>OSX-x86_64 (OSX 10.9 or newer)</li>
-  <li>Linux-aarch64 (glibc 2.17 or newer)</li>
-  <li>Linux-ppc64le (glibc 2.17 or newer)</li>
-</ul>
-
-<h2 id="how-to-use-pypy">How to use PyPy</h2>
-
-<p>To use the PyPy builds you can do the following,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda config --set channel_priority strict
-   conda create -n pypy pypy
-   conda activate pypy
-</code></pre></div></div>
-
-<p>If you don’t have a conda installation already, you can use
-<a href="https://github.com/conda-forge/miniforge#miniforge-pypy3">miniforge-pypy3</a> which gives you a conda installation powered by
-pypy itself.</p>
-
-<p>However as of the writing of this post, not many conda packages
-can be installed into this environment, but noarch packages
-which do not depend on the python version nor the interpreter can be
-installed. For eg, mpmath is a noarch package without any dependencies.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda install mpmath    # succeeds
-   conda …</code></pre></div></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-10 00:00:00+00:00" class="dt-published"></time>
-  Tue 10 Mar 2020
-  in conda-forge blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://hynek.me/articles/python-github-actions/" rel="bookmark" class="u-url"
-       title="Python in GitHub Actions" target="_blank">
-      <time class="m-date" datetime="2020-03-09 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python in GitHub Actions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>GitHub&rsquo;s own CI called <em>GitHub Actions</em> has been out of closed beta for a while and offers generous free quotas and a seamless integration with the rest of the site. Let&rsquo;s have a look on how to use it for an open source Python package.</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
-  on <time datetime="2020-03-09 00:00:00+00:00" class="dt-published"></time>
-  Mon 09 Mar 2020
-  in Hynek Schlawak.
 </footer>
 <div class="m-clearfix-l"></div>
 
