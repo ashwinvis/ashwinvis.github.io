@@ -34,5 +34,5 @@ approve of.
 ## Things that I have not followed through
 - [Daily Schedule from Khan Academy](https://keeplearning.khanacademy.org/daily-schedule#Pre-K-1-2)
 
-[1]: Sweden specific
-[2]: YouTube channel
+[^1]: Sweden specific
+[^2]: YouTube channel
