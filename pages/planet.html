@@ -175,38 +175,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-20_Blogs" rel="bookmark" class="u-url"
-       title="Blogs" target="_blank">
-      <time class="m-date" datetime="2020-04-20 21:18:51+00:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Blogs
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>I’m really enjoying <a class="local" href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a class="url https outside" href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span style="display: inline-block; background: red; color: white; border-radius: 50%; width: 16pt; height: 16pt; text-align: center; line-height: 16pt; font-size: 11pt; font-weight: bold; font-family: mono;">99</p></span><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a class="url https outside" href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" rel="tag" title="Tag">Blogs</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-20 21:18:51+00:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://jlelse.blog/micro/2020/04/masks-spam/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-04-20 23:15:47+02:00">
@@ -898,38 +866,6 @@ to perform the upgrade.
   on <time datetime="2020-04-13 00:00:00+00:00" class="dt-published"></time>
   Mon 13 Apr 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-12_Flowering_Trees" rel="bookmark" class="u-url"
-       title="Flowering Trees" target="_blank">
-      <time class="m-date" datetime="2020-04-12 07:32:25+00:00">
-        Apr
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Flowering Trees
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>Spring, when trees are flowering, is breathtaking.</p><ul><li><a class="url https outside" href="https://alexschroeder.ch/gallery/2020-flowering-trees/">Flowering Trees Album</a></li></ul><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" rel="tag" title="Tag">Pictures</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-12 07:32:25+00:00" class="dt-published"></time>
-  Sun 12 Apr 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1681,6 +1617,95 @@ installed. For eg, mpmath is a noarch package without any dependencies.</p>
   on <time datetime="2020-03-09 00:00:00+00:00" class="dt-published"></time>
   Mon 09 Mar 2020
   in Hynek Schlawak.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://conda-forge.org/blog//2020/03/05/grayskull" rel="bookmark" class="u-url"
+       title="Grayskull" target="_blank">
+      <time class="m-date" datetime="2020-03-05 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          05
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Grayskull
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <h1 id="by-the-power-of-grayskull-i-have-the-conda-recipe">By the power of Grayskull… I have the Conda recipe!</h1>
+
+<p><em>The main goal of the Skeleto<s>n</s>r is to conquer Grayskull.</em></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>All jokes aside, the new project <a href="https://github.com/marcelotrevisani/grayskull">grayskull
+:skull:</a> was created with the
+<strong>intention</strong> of generating better Conda recipes that would allow to package
+properly projects available in different channels such as PyPI, CRAN, Conan,
+GitHub register, GitHub repositories and so on. On top of that, Grayskull is
+also being developed to help <a href="https://conda-forge.org/">conda-forge</a> to update
+recipes.</p>
+
+<h2 id="current-status">Current status</h2>
+
+<p>Currently, Grayskull (version <code class="language-plaintext highlighter-rouge">0.2.1</code>) is able to generate recipes just
+looking for packages on <a href="https://pypi.org/">PyPI</a>, and it is available on
+<a href="https://pypi.org/project/grayskull/">PyPI</a> and
+<a href="https://github.com/conda-forge/grayskull-feedstock">conda-forge</a>.
+The GitHub repository for this package is:
+<a href="https://github.com/marcelotrevisani/grayskull">https://github.com/marcelotrevisani/grayskull</a></p>
+
+<p>Before Grayskull, we just had <code class="language-plaintext highlighter-rouge">conda-build skeleton</code> to generate recipes
+for Python packages on PyPI. In all other aspects, the difference of …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-05 00:00:00+00:00" class="dt-published"></time>
+  Thu 05 Mar 2020
+  in conda-forge blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://ekaitz.elenq.tech/elenq-publishing.html" rel="bookmark" class="u-url"
+       title="ElenQ Publishing" target="_blank">
+      <time class="m-date" datetime="2020-02-18 00:00:00+02:00">
+        Feb
+        <span class="m-date-day">
+          18
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      ElenQ Publishing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>ElenQ Publishing is a technical book publishing project that aims to open
+the door of technical knowledge to&nbsp;everyone.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ekaitz Zárraga</b></span>
+  on <time datetime="2020-02-18 00:00:00+02:00" class="dt-published"></time>
+  Tue 18 Feb 2020
+  in Ekaitz's tech blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
