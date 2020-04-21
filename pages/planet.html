@@ -39,6 +39,13 @@
   <!-- Webmentions with webmentions.io -->
   <link rel="webmention" href="https://webmention.io/ashwin.info.tm/webmention" />
   <link rel="pingback" href="https://webmention.io/ashwin.info.tm/xmlrpc" />
+
+  <!-- Security -->
+  <!-- Stricter version:
+   default-src 'none'; font-src https://fontlibrary.org; img-src 'self'; script-src 'self''; style-src 'self'
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="upgrade-insecure-requests; default-src https:; style-src 'self' 'unsafe-inline'">
 </head>
 <body>
 <header><nav id="navigation">
@@ -96,6 +103,102 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 </style>
 
 <div id="planet">
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/04/bunnycdn-origin-shield/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-04-21 00:33:29+02:00">
+        Apr
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Fortunately I have a pretty high traffic limit, which I would never reach with my VPS at <a href="https://www.hetzner.com/cloud" target="_blank">Hetzner Cloud</a>, but BunnyCDN now offers a new feature called “<a href="https://bunnycdn.com/blog/origin-shield-released/" target="_blank">Origin Shield</a>", which can help to significantly reduce traffic to your own server by adding a second cache layer between edge server and the origin. Nice! 👍</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-21 00:33:29+02:00" class="dt-published"></time>
+  Tue 21 Apr 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-20_Blogs" rel="bookmark" class="u-url"
+       title="Blogs" target="_blank">
+      <time class="m-date" datetime="2020-04-20 21:18:51+00:00">
+        Apr
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Blogs
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div class="page" lang="en"><p>I’m really enjoying <a class="local" href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a class="url https outside" href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span style="display: inline-block; background: red; color: white; border-radius: 50%; width: 16pt; height: 16pt; text-align: center; line-height: 16pt; font-size: 11pt; font-weight: bold; font-family: mono;">99</p></span><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a class="url https outside" href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" rel="tag" title="Tag">Blogs</a></p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-20 21:18:51+00:00" class="dt-published"></time>
+  Mon 20 Apr 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/04/masks-spam/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-04-20 23:15:47+02:00">
+        Apr
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>It gets worse and worse… My spam folder collects more and more emails from some Chinese spammers who want to sell me masks against corona. No thanks, I’m not interested.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-20 23:15:47+02:00" class="dt-published"></time>
+  Mon 20 Apr 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
 
 <article class="h-cite">
 <header>
@@ -272,44 +375,6 @@ to …
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/04/email-wrapping/" rel="bookmark" class="u-url"
-       title="The problems with hard wrapping email body text" target="_blank">
-      <time class="m-date" datetime="2020-04-20 13:15:05+02:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The problems with hard wrapping email body text
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Martin Tournoij has written <a href="https://www.arp242.net/email-wrapping.html" target="_blank">an article about line breaks in emails</a>. Some people think that in text emails, lines should not be longer than ~78 characters. I also find that emails that have been adjusted to this limit look terrible on the smartphone because the maximum width is narrower than 78 characters.</p>
-<blockquote>
-<p>It seems to me that “hard-wrap all text at 78 characters” is a misreading of the standard and a confusion between “how things should be sent on the wire” and “how things should be displayed”.</p>
-</blockquote>
-<p>And a bit of criticism of the people who insist on wrapping lines in emails can also be found in the article:</p>
-<blockquote>
-<p>“Educating” an entire population on how to do it “correct” because they’re all “wrong” seems not just like a fool’s errand, but also rather arrogant. You’re essentially just …</p></blockquote>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-20 13:15:05+02:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://www.davidrevoy.com/article772/mysterious" rel="bookmark" class="u-url"
        title="Mysterious" target="_blank">
       <time class="m-date" datetime="2020-04-20 11:50:00+02:00">
@@ -390,6 +455,38 @@ If …</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://xkcd.com/2296/" rel="bookmark" class="u-url"
+       title="Sourdough Starter" target="_blank">
+      <time class="m-date" datetime="2020-04-20 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Sourdough Starter
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <img alt="Once the lockdown is over, let's all get together and swap starters!" src="https://imgs.xkcd.com/comics/sourdough_starter.png" title="Once the lockdown is over, let's all get together and swap starters!" />
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-20 00:00:00+00:00" class="dt-published"></time>
+  Mon 20 Apr 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://lleksah.wordpress.com/2020/04/19/report-of-gnome-peru-fest-2020/" rel="bookmark" class="u-url"
        title="Report of GNOME PERU FEST 2020" target="_blank">
       <time class="m-date" datetime="2020-04-19 23:17:23+00:00">
@@ -446,46 +543,6 @@ If …</p>
   on <time datetime="2020-04-19 11:28:00+00:00" class="dt-published"></time>
   Sun 19 Apr 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/posts/why-no-blog/" rel="bookmark" class="u-url"
-       title="Why HN readers don't have a blog" target="_blank">
-      <time class="m-date" datetime="2020-04-19 09:31:00+02:00">
-        Apr
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Why HN readers don't have a blog
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Yesterday, <a href="https://news.ycombinator.com/item?id=22910532" target="_blank">I asked the Hacker News community</a> why they don’t have blogs, even though they have the necessary technical skills.</p>
-<blockquote>
-<p>Many Hacker News readers and contributors have the technical skills to run their own blog and post their opinions. But instead they prefer to use Twitter or other social networks. Why is this so? Is it the effort?</p>
-</blockquote>
-<p>I want to respond to some of the answers in this post:</p>
-<blockquote>
-<p>I don’t want an extremely public record of my personal opinions or thoughts today, because I know they’re going to change tomorrow. (<a href="https://news.ycombinator.com/item?id=22911867" target="_blank">source</a>)</p>
-</blockquote>
-<p>This is a very interesting answer, which I also thought about and then found my individual solution, simply to mark all posts older than one year with <a href="https://jlelse.blog/thoughts/2020/02/opinions-change/">a note that opinions may have changed</a>. But otherwise I have to hope that I don’t …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-19 09:31:00+02:00" class="dt-published"></time>
-  Sun 19 Apr 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -780,38 +837,6 @@ and drop, and protocol extensions. On the code side of things, wlroots continues
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://xkcd.com/2294/" rel="bookmark" class="u-url"
-       title="Coronavirus Charts" target="_blank">
-      <time class="m-date" datetime="2020-04-15 00:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Coronavirus Charts
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <img alt="Adding data for South Korea but with their cases scaled to match the population of Japan and the land area of Australia, and vice versa." src="https://imgs.xkcd.com/comics/coronavirus_charts.png" title="Adding data for South Korea but with their cases scaled to match the population of Japan and the land area of Australia, and vice versa." />
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-15 00:00:00+00:00" class="dt-published"></time>
-  Wed 15 Apr 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://www.archlinux.org/news/zn_poly-092-2-update-requires-manual-intervention/" rel="bookmark" class="u-url"
        title="zn_poly 0.9.2-2 update requires manual intervention" target="_blank">
       <time class="m-date" datetime="2020-04-14 00:00:00+00:00">
@@ -946,51 +971,6 @@ to perform the upgrade.
   <span class="p-author"><b>Anonymous</b></span>
   on <time datetime="2020-04-12 07:32:25+00:00" class="dt-published"></time>
   Sun 12 Apr 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-11_Jitsi_is_gone" rel="bookmark" class="u-url"
-       title="Jitsi is gone" target="_blank">
-      <time class="m-date" datetime="2020-04-11 13:29:54+00:00">
-        Apr
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Jitsi is gone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>Well, I uninstalled Jitsi again. It seemed like a pretty big attack surface and didn’t get any use. I myself didn’t use it!</p><ul><li>DM Peter uses Skype</li><li>my players in one campaign switched to Zoom</li><li>the audio and video in the other campaign that did use Jitsi was terrible</li></ul><p>And so...</p><pre class="terminal">root@sibirocobombus:~# apt remove jitsi-meet
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages were automatically installed and are no longer required:
-  ca-certificates-java java-common jicofo jitsi-meet-prosody jitsi-meet-web jitsi-meet-web-config jitsi-videobridge libnspr4 libnss3 libpcsclite1
-  openjdk-11-jre-headless
-Use 'apt autoremove' to remove them.
-The following packages will be REMOVED:
-  jitsi-meet
-0 upgraded, 0 newly installed, 1 to remove and 9 not upgraded.
-After this operation, 11.3 kB disk space will be freed.
-Do you want to continue? [Y/n] 
-(Reading database ... 77038 files and directories …</pre></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-11 13:29:54+00:00" class="dt-published"></time>
-  Sat 11 Apr 2020
   in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
