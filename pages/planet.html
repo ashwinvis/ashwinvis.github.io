@@ -1473,38 +1473,6 @@ we talking about basic familiarity, or deep memorization?  Does something …</p
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/" rel="bookmark" class="u-url"
-       title="Hardening Your Web Server’s SSL Ciphers" target="_blank">
-      <time class="m-date" datetime="2020-03-23 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          23
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Hardening Your Web Server’s SSL Ciphers
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>There are many wordy articles on configuring your web server’s <a href="https://thoughtstreams.io/glyph/there-is-no-ssl/">TLS</a> ciphers. This is not one of them. Instead I will share a configuration which is both compatible enough for today’s needs and scores a straight “<a href="http://www.youtube.com/watch?v=WVzp4MJRKHc">A</a>” on <a href="https://www.ssllabs.com/ssltest/">Qualys’s SSL Server Test</a>.</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
-  on <time datetime="2020-03-23 00:00:00+00:00" class="dt-published"></time>
-  Mon 23 Mar 2020
-  in Hynek Schlawak.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://matplotlib.org/matplotblog/posts/matplotlib-rsef/" rel="bookmark" class="u-url"
        title="Elliott Sales de Andrade hired as Matplotlib Software Research Engineering Fellow" target="_blank">
       <time class="m-date" datetime="2020-03-20 15:51:00-04:00">
@@ -1674,6 +1642,68 @@ HPy is a new project to …
   on <time datetime="2020-03-17 23:09:12.964000+01:00" class="dt-published"></time>
   Tue 17 Mar 2020
   in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://conda-forge.org/blog//2020/03/10/pypy" rel="bookmark" class="u-url"
+       title="PyPy builds on conda-forge" target="_blank">
+      <time class="m-date" datetime="2020-03-10 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PyPy builds on conda-forge
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>conda-forge now supports PyPy3.6 as the python interpreter in a conda environment</p>
+
+<p>Supported platforms are,</p>
+
+<ul>
+  <li>Linux-x86_64 (glibc 2.12 or newer)</li>
+  <li>OSX-x86_64 (OSX 10.9 or newer)</li>
+  <li>Linux-aarch64 (glibc 2.17 or newer)</li>
+  <li>Linux-ppc64le (glibc 2.17 or newer)</li>
+</ul>
+
+<h2 id="how-to-use-pypy">How to use PyPy</h2>
+
+<p>To use the PyPy builds you can do the following,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda config --set channel_priority strict
+   conda create -n pypy pypy
+   conda activate pypy
+</code></pre></div></div>
+
+<p>If you don’t have a conda installation already, you can use
+<a href="https://github.com/conda-forge/miniforge#miniforge-pypy3">miniforge-pypy3</a> which gives you a conda installation powered by
+pypy itself.</p>
+
+<p>However as of the writing of this post, not many conda packages
+can be installed into this environment, but noarch packages
+which do not depend on the python version nor the interpreter can be
+installed. For eg, mpmath is a noarch package without any dependencies.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda install mpmath    # succeeds
+   conda …</code></pre></div></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-10 00:00:00+00:00" class="dt-published"></time>
+  Tue 10 Mar 2020
+  in conda-forge blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
