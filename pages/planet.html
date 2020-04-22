@@ -107,6 +107,55 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://jlelse.blog/dev/telegram-go/" rel="bookmark" class="u-url"
+       title="Use Telegram as a notification service with Go" target="_blank">
+      <time class="m-date" datetime="2020-04-22 11:21:00+02:00">
+        Apr
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Use Telegram as a notification service with Go
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Telegram is my favorite messenger for chatting. There are <a href="https://jlelse.blog/thoughts/2020/01/telegram-features/">many reasons for this</a>. But Telegram is also very suitable to use it as a notification service for your own projects. For example I get a daily overview of the number of page views of my blogs, but also notifications about new Webmentions, or likes and announcements via ActivityPub are sent to me via Telegram.</p>
+<p>That I use Telegram is because the <a href="https://core.telegram.org/bots" target="_blank">Bot API</a> is so easy to use. Here is the code I use to send messages via Telegram using Go:</p>
+<div class="highlight"><pre><code class="language-go"><span style="color: #f92672;">import</span> (
+<span style="color: #e6db74;">"errors"</span>
+<span style="color: #e6db74;">"net/http"</span>
+<span style="color: #e6db74;">"net/url"</span>
+)
+<span style="color: #66d9ef;">type</span> <span style="color: #a6e22e;">Telegram</span> <span style="color: #66d9ef;">struct</span> {
+<span style="color: #a6e22e;">chat</span> <span style="color: #66d9ef;">string</span>
+<span style="color: #a6e22e;">botToken</span> <span style="color: #66d9ef;">string</span>
+}
+<span style="color: #66d9ef;">var</span> <span style="color: #a6e22e;">telegramBaseUrl</span> = <span style="color: #e6db74;">"https://api.telegram.org/bot"</span>
+<span style="color: #66d9ef;">func</span> (<span style="color: #a6e22e;">t</span> <span style="color: #f92672;">*</span><span style="color: #a6e22e;">Telegram</span>) <span style="color: #a6e22e;">Post</span>(<span style="color: #a6e22e;">message</span> <span style="color: #66d9ef;">string</span>) <span style="color: #66d9ef;">error</span> {
+<span style="color: #a6e22e;">params</span> <span style="color: #f92672;">:=</span> <span style="color: #a6e22e;">url</span>.<span style="color: #a6e22e;">Values</span>{}
+<span style="color: #a6e22e;">params</span>.<span style="color: #a6e22e;">Add</span>(<span style="color: #e6db74;">"chat_id"</span>, <span style="color: #a6e22e;">t</span>.<span style="color: #a6e22e;">chat</span>)
+<span style="color: #a6e22e;">params</span>.<span style="color: #a6e22e;">Add</span>(<span style="color: #e6db74;">"text"</span>, <span style="color: #a6e22e;">message</span>)
+<span style="color: #a6e22e;">tgUrl</span>, <span style="color: #a6e22e;">err</span> <span style="color: #f92672;">:=</span> <span style="color: #a6e22e;">url</span>.<span style="color: #a6e22e;">Parse</span>(<span style="color: #a6e22e;">telegramBaseUrl</span> <span style="color: #f92672;">+</span> <span style="color: #a6e22e;">t</span>.<span style="color: #a6e22e;">botToken</span> <span style="color: #f92672;">+</span> <span style="color: #e6db74;">"/sendMessage"</span>)
+<span style="color: #66d9ef;">if</span> <span style="color: #a6e22e;">err …</span></code></pre></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-22 11:21:00+02:00" class="dt-published"></time>
+  Wed 22 Apr 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://shibumi.dev/posts/changing-the-expiration-date-of-your-yubikey/" rel="bookmark" class="u-url"
        title="Changing the expiration date of your Yubikey" target="_blank">
       <time class="m-date" datetime="2020-04-22 00:00:00+00:00">
@@ -208,6 +257,38 @@ We need to differentiate between two cases: Changing the expiration date of a su
 <article class="h-cite">
 <header>
   <h1>
+    <a href="http://www.scicombinator.com/articles/5570299" rel="bookmark" class="u-url"
+       title="Impact assessment of non-pharmaceutical interventions against coronavirus disease 2019 and influenza in Hong Kong: an observational study" target="_blank">
+      <time class="m-date" datetime="2020-04-21 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Impact assessment of non-pharmaceutical interventions against coronavirus disease 2019 and influenza in Hong Kong: an observational study
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  A range of public health measures have been implemented to suppress local transmission of coronavirus disease 2019 (COVID-19) in Hong Kong. We examined the effect of these interventions and behavioural changes of the public on the incidence of COVID-19, as well as on influenza virus infections, which might share some aspects of transmission dynamics with COVID-19.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>GM Leung</b></span>
+  on <time datetime="2020-04-21 00:00:00+00:00" class="dt-published"></time>
+  Tue 21 Apr 2020
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/micro/2020/04/bunnycdn-origin-shield/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-04-21 00:33:29+02:00">
@@ -264,38 +345,6 @@ We need to differentiate between two cases: Changing the expiration date of a su
   on <time datetime="2020-04-20 21:18:51+00:00" class="dt-published"></time>
   Mon 20 Apr 2020
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/04/masks-spam/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-04-20 23:15:47+02:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>It gets worse and worse… My spam folder collects more and more emails from some Chinese spammers who want to sell me masks against corona. No thanks, I’m not interested.</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-20 23:15:47+02:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -798,38 +847,6 @@ The second one (in French) was recorded by the young host of Le Libre Au Quotidi
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-17 00:00:00+00:00" class="dt-published"></time>
-  Fri 17 Apr 2020
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5562989" rel="bookmark" class="u-url"
-       title="Hospitalization Rates and Characteristics of Patients Hospitalized with Laboratory-Confirmed Coronavirus Disease 2019 - COVID-NET, 14 States, March 1-30, 2020" target="_blank">
-      <time class="m-date" datetime="2020-04-17 00:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Hospitalization Rates and Characteristics of Patients Hospitalized with Laboratory-Confirmed Coronavirus Disease 2019 - COVID-NET, 14 States, March 1-30, 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Since SARS-CoV-2, the novel coronavirus that causes coronavirus disease 2019 (COVID-19), was first detected in December 2019 (1), approximately 1.3 million cases have been reported worldwide (2), including approximately 330,000 in the United States (3). To conduct population-based surveillance for laboratory-confirmed COVID-19-associated hospitalizations in the United States, the COVID-19-Associated Hospitalization Surveillance Network (COVID-NET) was created using the existing infrastructure of the Influenza Hospitalization Surveillance Network (FluSurv-NET) (4) and the Respiratory Syncytial Virus Hospitalization Surveillance Network (RSV-NET). This report presents age-stratified COVID-19-associated hospitalization rates for patients admitted during March 1-28, 2020, and clinical data on patients admitted during March 1-30, 2020, the first month of U.S. surveillance. Among 1,482 patients hospitalized with COVID-19, 74.5% were aged ≥50 years, and 54.4% were male. The hospitalization rate among patients identified through COVID-NET during this 4-week period was …
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>A Fry</b></span>
   on <time datetime="2020-04-17 00:00:00+00:00" class="dt-published"></time>
   Fri 17 Apr 2020
   in SciCombinator - Last 10 Days.
@@ -1473,6 +1490,38 @@ we talking about basic familiarity, or deep memorization?  Does something …</p
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/" rel="bookmark" class="u-url"
+       title="Hardening Your Web Server’s SSL Ciphers" target="_blank">
+      <time class="m-date" datetime="2020-03-23 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Hardening Your Web Server’s SSL Ciphers
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>There are many wordy articles on configuring your web server’s <a href="https://thoughtstreams.io/glyph/there-is-no-ssl/">TLS</a> ciphers. This is not one of them. Instead I will share a configuration which is both compatible enough for today’s needs and scores a straight “<a href="http://www.youtube.com/watch?v=WVzp4MJRKHc">A</a>” on <a href="https://www.ssllabs.com/ssltest/">Qualys’s SSL Server Test</a>.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
+  on <time datetime="2020-03-23 00:00:00+00:00" class="dt-published"></time>
+  Mon 23 Mar 2020
+  in Hynek Schlawak.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://matplotlib.org/matplotblog/posts/matplotlib-rsef/" rel="bookmark" class="u-url"
        title="Elliott Sales de Andrade hired as Matplotlib Software Research Engineering Fellow" target="_blank">
       <time class="m-date" datetime="2020-03-20 15:51:00-04:00">
@@ -1642,68 +1691,6 @@ HPy is a new project to …
   on <time datetime="2020-03-17 23:09:12.964000+01:00" class="dt-published"></time>
   Tue 17 Mar 2020
   in PyPy Status Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://conda-forge.org/blog//2020/03/10/pypy" rel="bookmark" class="u-url"
-       title="PyPy builds on conda-forge" target="_blank">
-      <time class="m-date" datetime="2020-03-10 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PyPy builds on conda-forge
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>conda-forge now supports PyPy3.6 as the python interpreter in a conda environment</p>
-
-<p>Supported platforms are,</p>
-
-<ul>
-  <li>Linux-x86_64 (glibc 2.12 or newer)</li>
-  <li>OSX-x86_64 (OSX 10.9 or newer)</li>
-  <li>Linux-aarch64 (glibc 2.17 or newer)</li>
-  <li>Linux-ppc64le (glibc 2.17 or newer)</li>
-</ul>
-
-<h2 id="how-to-use-pypy">How to use PyPy</h2>
-
-<p>To use the PyPy builds you can do the following,</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda config --set channel_priority strict
-   conda create -n pypy pypy
-   conda activate pypy
-</code></pre></div></div>
-
-<p>If you don’t have a conda installation already, you can use
-<a href="https://github.com/conda-forge/miniforge#miniforge-pypy3">miniforge-pypy3</a> which gives you a conda installation powered by
-pypy itself.</p>
-
-<p>However as of the writing of this post, not many conda packages
-can be installed into this environment, but noarch packages
-which do not depend on the python version nor the interpreter can be
-installed. For eg, mpmath is a noarch package without any dependencies.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda install mpmath    # succeeds
-   conda …</code></pre></div></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-10 00:00:00+00:00" class="dt-published"></time>
-  Tue 10 Mar 2020
-  in conda-forge blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
