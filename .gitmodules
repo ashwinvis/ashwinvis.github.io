@@ -7,3 +7,6 @@
 [submodule "plugins/pelican-planet"]
 	path = plugins/pelican-planet
 	url = https://github.com/ashwinvis/pelican-planet
+[submodule "plugins/webring"]
+	path = plugins/webring
+	url = https://github.com/ashwinvis/webring
