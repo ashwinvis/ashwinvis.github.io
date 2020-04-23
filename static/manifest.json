@@ -1,0 +1,22 @@
+{
+	"dir" : "ltr",
+	"lang" : "en",
+	"name" : "Ashwin Vishnu's Website",
+	"scope" : "/",
+	"display" : "browser",
+	"start_url" : "https://ashwin.info.tm/",
+	"short_name" : "Ashwin Vishnu's",
+	"theme_color" : "#22272e",
+	"description" : "Blog / Showcase",
+	"orientation" : "any",
+	"background_color" : "transparent",
+	"related_applications" : [],
+	"prefer_related_applications" : false,
+	"icons" : [
+		{
+			"src": "https://ashwin.info.tm/images/logo_ashwin.png",
+			"sizes": "180x180"
+		}],
+	"url" : "https://ashwin.info.tm",
+	"generated" : "true"
+}

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://ashwin.info.tm/static/bibbase-m.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
-  <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
+  <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link rel="canonical" href="https://ashwin.info.tm/" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,14 +63,20 @@
           https://bibbase.org
           http://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org;
+         img-src 'self' https:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
         "
   >
+
+  <!-- Progressive web app -->
+  <link rel='manifest' href='/static/manifest.json'>
 </head>
 <body>
 <header><nav id="navigation" class="m-navbar-landing">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m m-navbar-brand-hidden"><img src="https://ashwin.info.tm/images/SU_logo.png" />Home</a>
+      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m m-navbar-brand-hidden"><img src="https://ashwin.info.tm/images/logo_ashwin.png" />ashwin.info™</a>
       <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
@@ -120,7 +126,7 @@
     <span class="landing-sym">(</span>
     <br/>
   </span>
-  <span class="landing-prompt">…&nbsp;</span><span>&nbsp;</span>
+  <span class="landing-prompt">...&nbsp;</span><span>&nbsp;</span>
   <a class="p-name u-url"
      href="https://ashwin.info.tm"
   >
@@ -129,7 +135,7 @@
   </a>
   <span class="m-thin">
     <br/>
-    <span class="landing-prompt">… </span>
+    <span class="landing-prompt">... </span>
     <span class="landing-sym">)</span>
     <span class="landing-ticker">|</span>
   </span>
@@ -137,8 +143,13 @@
 </div>
 <div class="m-row">
 <div class="m-col-l-6 m-push-l-1 m-col-m-7 m-nopadt">
-<p><em>Welcome!</em>
-I am a postdoctoral researcher at <span class="p-org">MISU, Stockholm University</span>.</p>
+<div class="m-block m-primary m-badge">
+<img alt="Portrait of Ashwin taken in Paris, 2016" src="/images/dp_ashwin_2016.jpg" />
+<h3>
+  <code>$ whoami</code>
+</h3><p>Postdoc at <span class="p-org">MISU, Stockholm University</span>,
+research software developer, blogger and a person</p>
+</div>
 <p>My current research concerns with atmospheric boundary layer
 turbulence studied using large-eddy simulations (LES).  <em>Other
 research interests:</em> geophysical flows, stratified flows,

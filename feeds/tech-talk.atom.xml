@@ -74,7 +74,7 @@ your next order.
 &lt;/blockquote&gt;
 &lt;p&gt;No, I was not paid to write this, but I really like the concept and I hope more
 such projects emerge. Let's work towards a &lt;a href="https://en.wikipedia.org/wiki/Circular_economy"&gt;circular
-economy&lt;/a&gt;.&lt;/p&gt;</content><category term="life"></category><category term="covid-19"></category><category term="phone"></category></entry><entry><title>Hack the Crisis: We Care!</title><link href="https://ashwin.info.tm/hack-the-crisis.html" rel="alternate"></link><published>2020-04-05T20:38:02+02:00</published><updated>2020-04-06T08:01:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-05:/hack-the-crisis.html</id><summary type="html">&lt;p&gt;How we created project &lt;em&gt;We Care!&lt;/em&gt; in this COVID-19 themed hackathon&lt;/p&gt;
+economy&lt;/a&gt;.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="life"></category><category term="covid-19"></category><category term="phone"></category></entry><entry><title>Hack the Crisis: We Care!</title><link href="https://ashwin.info.tm/hack-the-crisis.html" rel="alternate"></link><published>2020-04-05T20:38:02+02:00</published><updated>2020-04-06T08:01:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-04-05:/hack-the-crisis.html</id><summary type="html">&lt;p&gt;How we created project &lt;em&gt;We Care!&lt;/em&gt; in this COVID-19 themed hackathon&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;This weekend I was part of a great and amazing group of people working as a
 team.  We where coders, designers, ideators, jack-of-all-trades, creators,
 academics, researchers and doers. We all where part of even a bigger team in
@@ -137,7 +137,7 @@ yourself and please share this post in your network if you want. You can also
 everyone in my team for a great experience. I loved working with you and being
 part of this team.&lt;/p&gt;
 &lt;/section&gt;
-</content><category term="software"></category><category term="open-source"></category><category term="covid-19"></category></entry><entry><title>Tesing Indieweb Stack</title><link href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="alternate"></link><published>2020-03-31T22:54:39+02:00</published><updated>2020-03-01T13:24:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-31:/tesing-indieweb-stack.html</id><summary type="html">&lt;p&gt;A simple test page to see what parts of Indieweb actually works&lt;/p&gt;</summary><content type="html">&lt;p&gt;Indieweb consists of the following building blocks:&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="software"></category><category term="open-source"></category><category term="covid-19"></category></entry><entry><title>Tesing Indieweb Stack</title><link href="https://ashwin.info.tm/tesing-indieweb-stack.html" rel="alternate"></link><published>2020-03-31T22:54:39+02:00</published><updated>2020-03-01T13:24:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-31:/tesing-indieweb-stack.html</id><summary type="html">&lt;p&gt;A simple test page to see what parts of Indieweb actually works&lt;/p&gt;</summary><content type="html">&lt;p&gt;Indieweb consists of the following building blocks:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Microformats 2&lt;/li&gt;
 &lt;li&gt;Webmentions&lt;/li&gt;
@@ -208,7 +208,7 @@ content-length: &lt;span class="m"&gt;3731&lt;/span&gt;
 &lt;script src="https://mastodon.acc.sunet.se/embed.js" async="async"&gt;&lt;/script&gt;
 
 &lt;h3&gt;Next steps&lt;/h3&gt;
-&lt;p&gt;To automate this process into CI?&lt;/p&gt;</content><category term="software"></category></entry><entry><title>Cloud computing for research</title><link href="https://ashwin.info.tm/cloud-computing.html" rel="alternate"></link><published>2020-03-20T11:29:00+01:00</published><updated>2020-03-25T22:29:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-20:/cloud-computing.html</id><summary type="html">&lt;p&gt;A journal of how I setup BOINC and &lt;a href="mailto:Folding&amp;#64;home"&gt;Folding&amp;#64;home&lt;/a&gt; on my laptop running Arch Linux.&lt;/p&gt;
+&lt;p&gt;To automate this process into CI?&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Cloud computing for research</title><link href="https://ashwin.info.tm/cloud-computing.html" rel="alternate"></link><published>2020-03-20T11:29:00+01:00</published><updated>2020-03-25T22:29:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-03-20:/cloud-computing.html</id><summary type="html">&lt;p&gt;A journal of how I setup BOINC and &lt;a href="mailto:Folding&amp;#64;home"&gt;Folding&amp;#64;home&lt;/a&gt; on my laptop running Arch Linux.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;There is an ongoing effort in all disciplines to find solutions the Covid-19
 pandemic. Be it policy (social distancing, call for people to work from home),
 technology (repurposing auto, beverages and perfume industries to manufacture
@@ -374,7 +374,7 @@ client.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;/section&gt;
-</content><category term="software"></category><category term="research"></category><category term="covid-19"></category><category term="hpc"></category></entry><entry><title>Back to Arch Linux</title><link href="https://ashwin.info.tm/back-to-arch-linux.html" rel="alternate"></link><published>2020-01-03T10:00:41+01:00</published><updated>2020-01-13T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-03:/back-to-arch-linux.html</id><summary type="html">&lt;p&gt;Within a Ubuntu LTS pre-installed laptop&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="software"></category><category term="research"></category><category term="covid-19"></category><category term="hpc"></category></entry><entry><title>Back to Arch Linux</title><link href="https://ashwin.info.tm/back-to-arch-linux.html" rel="alternate"></link><published>2020-01-03T10:00:41+01:00</published><updated>2020-01-13T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-03:/back-to-arch-linux.html</id><summary type="html">&lt;p&gt;Within a Ubuntu LTS pre-installed laptop&lt;/p&gt;
 </summary><content type="html">&lt;section id="why"&gt;
 &lt;h2&gt;Why&lt;/h2&gt;
 &lt;p&gt;It was October 2019. New job, new laptop.&lt;/p&gt;
@@ -716,7 +716,7 @@ special user to do this:&lt;/p&gt;
 # passwd
 $ su - docker&lt;/pre&gt;
 &lt;/section&gt;
-</content><category term="software"></category><category term="linux"></category><category term="ubuntu"></category><category term="archlinux"></category></entry><entry><title>Turning Pelican into a mini-CMS</title><link href="https://ashwin.info.tm/pelican-mini-cms.html" rel="alternate"></link><published>2020-01-02T14:12:41+01:00</published><updated>2020-01-02T14:12:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-02:/pelican-mini-cms.html</id><summary type="html">&lt;p&gt;Lowering writing inhibitions with tech&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="software"></category><category term="linux"></category><category term="ubuntu"></category><category term="archlinux"></category></entry><entry><title>Turning Pelican into a mini-CMS</title><link href="https://ashwin.info.tm/pelican-mini-cms.html" rel="alternate"></link><published>2020-01-02T14:12:41+01:00</published><updated>2020-01-02T14:12:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-01-02:/pelican-mini-cms.html</id><summary type="html">&lt;p&gt;Lowering writing inhibitions with tech&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;I like automating things. This means I write small nifty tools to do
 boring / repetitive stuff for me. I have been relying on &lt;a href="https://pelican.readthedocs.io/"&gt;static site
 generator Pelican&lt;/a&gt; for my website. I
@@ -868,7 +868,7 @@ Push changes? &lt;span class="o"&gt;[&lt;/span&gt;False&lt;span class="o"&gt;]&l
 this&lt;/a&gt;
 is self explanatory, I hope!&lt;/p&gt;
 &lt;/section&gt;
-</content><category term="software"></category><category term="ci"></category><category term="automation"></category><category term="devops"></category></entry><entry><title>Licensing software to be permissive</title><link href="https://ashwin.info.tm/licensing-software.html" rel="alternate"></link><published>2019-12-21T00:00:00+01:00</published><updated>2019-12-21T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-21:/licensing-software.html</id><summary type="html">&lt;p&gt;Considerations while selecting a permissive license for your open-source project.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while back we were discussing changing the license of
+</content><category term="Tech Talk"></category><category term="software"></category><category term="ci"></category><category term="automation"></category><category term="devops"></category></entry><entry><title>Licensing software to be permissive</title><link href="https://ashwin.info.tm/licensing-software.html" rel="alternate"></link><published>2019-12-21T00:00:00+01:00</published><updated>2019-12-21T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-12-21:/licensing-software.html</id><summary type="html">&lt;p&gt;Considerations while selecting a permissive license for your open-source project.&lt;/p&gt;</summary><content type="html">&lt;p&gt;A while back we were discussing changing the license of
 &lt;a href="https://transonic.rtfd.io"&gt;transonic&lt;/a&gt; from CeCILL-B to a more recognizable,
 but still permissive license. We would soon make that move. The
 most obvious candidate was the 3-clause BSD license and I suggested Apache 2.0
@@ -920,7 +920,7 @@ by &lt;a href="https://www.gnu.org/licenses/license-list.html"&gt; GNU &lt;/a&gt
 &lt;a href="https://opensource.org/licenses"&gt; OSI &lt;/a&gt; we can start using it. I seems like a
 good license, but I am no expert, and most likely you are not too. Unfamiliar
 licenses slows down contributions and use of software.  It is listed on &lt;a href="https://spdx.org/licenses/BlueOak-1.0.0.html"&gt; SPDX
-&lt;/a&gt; though!&lt;/p&gt;</content><category term="licensing"></category><category term="open-source"></category></entry><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.info.tm/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-12-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
+&lt;/a&gt; though!&lt;/p&gt;</content><category term="Tech Talk"></category><category term="licensing"></category><category term="open-source"></category></entry><entry><title>At PyCon Sweden 2019</title><link href="https://ashwin.info.tm/pyconse2019.html" rel="alternate"></link><published>2019-10-31T00:00:00+01:00</published><updated>2019-12-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-10-31:/pyconse2019.html</id><summary type="html">&lt;p&gt;Representing Transonic&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am attending &lt;a href="http://pycon.se"&gt;PyCon Sweden 2019&lt;/a&gt; at Stockholm where I am presenting &lt;a href="https://transonic.rtfd.io"&gt;Transonic&lt;/a&gt;.
 Do check out the slides for my presentation:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://cicero.xyz/v3/remark/0.14.0/github.com/ashwinvis/talks/master/pyconse2019/talk.md/#1"&gt;Make your Python code fly at transonic speeds!&lt;/a&gt;.&lt;/p&gt;
@@ -1008,7 +1008,7 @@ packages that you develop. If you found &lt;code&gt;transonic&lt;/code&gt; usefu
 us, by &lt;a href="https://github.com/fluiddyn/transonic"&gt;starring the project on GitHub&lt;/a&gt;
 and &lt;a href="https://framaforms.org/transonic-declaration-of-interest-and-feedback-1570969704"&gt;sharing your
 experience&lt;/a&gt;
-with us.&lt;/p&gt;</content><category term="python"></category><category term="fluiddyn"></category><category term="transonic"></category><category term="pyconse"></category></entry><entry><title>Diversity amongst Python interpreters</title><link href="https://ashwin.info.tm/diversity-amongst-python-interpreters.html" rel="alternate"></link><published>2019-08-06T00:00:00+02:00</published><updated>2019-08-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-08-06:/diversity-amongst-python-interpreters.html</id><summary type="html">&lt;p&gt;We now have multiple Python interpreters and let's see what is in store.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+with us.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="python"></category><category term="fluiddyn"></category><category term="transonic"></category><category term="pyconse"></category></entry><entry><title>Diversity amongst Python interpreters</title><link href="https://ashwin.info.tm/diversity-amongst-python-interpreters.html" rel="alternate"></link><published>2019-08-06T00:00:00+02:00</published><updated>2019-08-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-08-06:/diversity-amongst-python-interpreters.html</id><summary type="html">&lt;p&gt;We now have multiple Python interpreters and let's see what is in store.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -2849,7 +2849,7 @@ Python 3.7.3 (GraalVM CE Native 19.1.1)
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="pypy"></category><category term="rust"></category><category term="java"></category><category term="csharp"></category></entry><entry><title>REPL for your data</title><link href="https://ashwin.info.tm/repl-for-your-data.html" rel="alternate"></link><published>2019-07-28T00:00:00+02:00</published><updated>2019-07-28T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-07-28:/repl-for-your-data.html</id><summary type="html">&lt;p&gt;Use ethical solutions. Archive your data. REPL.&lt;/p&gt;</summary><content type="html">&lt;p&gt;So we have heard this time and time again.&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="python"></category><category term="pypy"></category><category term="rust"></category><category term="java"></category><category term="csharp"></category></entry><entry><title>REPL for your data</title><link href="https://ashwin.info.tm/repl-for-your-data.html" rel="alternate"></link><published>2019-07-28T00:00:00+02:00</published><updated>2019-07-28T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-07-28:/repl-for-your-data.html</id><summary type="html">&lt;p&gt;Use ethical solutions. Archive your data. REPL.&lt;/p&gt;</summary><content type="html">&lt;p&gt;So we have heard this time and time again.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Data is the new oil.&lt;/li&gt;
 &lt;li&gt;Surveillance capitalism.&lt;/li&gt;
@@ -3041,7 +3041,7 @@ tail -f dislike.log
   should expire your posts.&amp;#160;&lt;a class="footnote-backref" href="#fnref:expire" title="Jump back to footnote 12 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="social media"></category><category term="privacy"></category><category term="fediverse"></category></entry><entry><title>Feigenbaum constant</title><link href="https://ashwin.info.tm/feigenbaum-constant.html" rel="alternate"></link><published>2019-07-24T00:00:00+02:00</published><updated>2019-07-24T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-07-24:/feigenbaum-constant.html</id><summary type="html">&lt;p&gt;Computing Feigenbaum constant using SymPy&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;/div&gt;</content><category term="Tech Talk"></category><category term="social media"></category><category term="privacy"></category><category term="fediverse"></category></entry><entry><title>Feigenbaum constant</title><link href="https://ashwin.info.tm/feigenbaum-constant.html" rel="alternate"></link><published>2019-07-24T00:00:00+02:00</published><updated>2019-07-24T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-07-24:/feigenbaum-constant.html</id><summary type="html">&lt;p&gt;Computing Feigenbaum constant using SymPy&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -4586,7 +4586,7 @@ height=450
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="sympy"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwin.info.tm/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html">&lt;style type="text/css"&gt;
+</content><category term="Tech Talk"></category><category term="python"></category><category term="sympy"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwin.info.tm/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -6104,7 +6104,7 @@ div.input_prompt {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category></entry><entry><title>Lightweight classes for scientific computing using "cached_property"</title><link href="https://ashwin.info.tm/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="alternate"></link><published>2018-12-25T00:00:00+01:00</published><updated>2018-12-26T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2018-12-25:/lightweight-classes-for-scientific-computing-using-cached_property.html</id><summary type="html">&lt;style type="text/css"&gt;
+</content><category term="Tech Talk"></category><category term="python"></category></entry><entry><title>Lightweight classes for scientific computing using "cached_property"</title><link href="https://ashwin.info.tm/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="alternate"></link><published>2018-12-25T00:00:00+01:00</published><updated>2018-12-26T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2018-12-25:/lightweight-classes-for-scientific-computing-using-cached_property.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -8340,7 +8340,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="fluidfft"></category><category term="fluidsim"></category><category term="optimization"></category></entry><entry><title>Intensely edgy cat with FluidFFT</title><link href="https://ashwin.info.tm/intensely-edgy-cat-with-fluidfft.html" rel="alternate"></link><published>2018-08-16T00:00:00+02:00</published><updated>2018-08-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2018-08-16:/intensely-edgy-cat-with-fluidfft.html</id><summary type="html">&lt;style type="text/css"&gt;
+</content><category term="Tech Talk"></category><category term="fluidfft"></category><category term="fluidsim"></category><category term="optimization"></category></entry><entry><title>Intensely edgy cat with FluidFFT</title><link href="https://ashwin.info.tm/intensely-edgy-cat-with-fluidfft.html" rel="alternate"></link><published>2018-08-16T00:00:00+02:00</published><updated>2018-08-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2018-08-16:/intensely-edgy-cat-with-fluidfft.html</id><summary type="html">&lt;style type="text/css"&gt;
 /* jupyter nbconvert */
 .rendered_html code {
   background: #272822
@@ -10155,4 +10155,4 @@ div.input_prompt {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="fluidfft"></category></entry></feed>
+</content><category term="Tech Talk"></category><category term="fluidfft"></category></entry></feed>

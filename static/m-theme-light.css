@@ -35,6 +35,7 @@
   --link-decoration-nav: none;
   --link-decoration-heading: none;
   --nav-brand-case: lowercase;
+  --nav-brand-family: monospace;
   --nav-menu-case: lowercase;
   --nav-heading-case: uppercase;
   --nav-categories-case: lowercase;
