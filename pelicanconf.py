@@ -11,9 +11,11 @@ import shutil
 import logging
 from datetime import datetime
 
-sys.path.append(os.curdir)
-from util import read_opml
-
+import m
+import pelican_ashwinvis as av
+import pelican_planet
+#  from pelican.plugins import webring
+from pelican_ashwinvis.util.util import read_opml
 
 
 AUTHOR = "Ashwin Vishnu Mohanan"
@@ -61,6 +63,8 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
+#  CACHE_CONTENT = True
+LOAD_CONTENT_CACHE = False
 
 M_CSS_FILES = [
     # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
@@ -81,13 +85,20 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGIN_PATHS = ["m.css/plugins", "plugins", "plugins/pelican-planet"]
-PLUGINS = ["m.htmlsanity", "m.components", "m.code"]
+PLUGIN_PATHS = [
+    #  "plugins/",
+    #  "m.css/plugins/",
+    #  "plugins/pelican-planet",
+    #  "plugins/webring/pelican/plugins/webring",
+]
+PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
 
-M_FAVICON = ("/images/SU_logo.png", "image/png")
+M_SITE_LOGO = "/images/logo_ashwin.png"
+M_SITE_LOGO_TEXT = "ashwin.info™"
+M_FAVICON = (M_SITE_LOGO, "image/png")
 M_BLOG_FAVICON = M_FAVICON
-M_SITE_LOGO = "/images/SU_logo.png"
-M_SITE_LOGO_TEXT = "Home"
+# m.metadata
+FORMATTED_FIELDS = ['description', 'badge']
 
 # Navbar
 M_LINKS_NAVBAR1 = [
@@ -157,8 +168,9 @@ if not shutil.which('latex'):
 M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
-    "ipynb.markup",
-    "pelican_planet",
+    #  webring,
+    av.ipynb.markup,
+    pelican_planet,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
@@ -174,13 +186,20 @@ IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
 IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
-# pelican_planet
-PLANET_FEEDS = {}  # read_opml("planet.opml", ("News", "Tech"))
+# pelican_planet / webring
+PLANET_FEEDS = read_opml("planet.opml", ["Planets"])
 PLANET_TEMPLATE = 'templates/planet.md.j2'
 PLANET_PAGE = 'content/pages/planet.md'
 PLANET_MAX_ARTICLES_PER_FEED = 2
 PLANET_MAX_ARTICLES = max(42, PLANET_MAX_ARTICLES_PER_FEED * len(PLANET_FEEDS))
 PLANET_MAX_SUMMARY_LENGTH = 140
+
+WEBRING_FEED_URLS = list(PLANET_FEEDS.values())
+WEBRING_ARTICLES_PER_FEED = 2
+WEBRING_MAX_ARTICLES = max(42, WEBRING_ARTICLES_PER_FEED * len(WEBRING_FEED_URLS))
+WEBRING_SUMMARY_LENGTH = 140
+TEMPLATE_PAGES = {"planet.html": "planet.html"}
+
 
 # Pagination
 DEFAULT_PAGINATION = 10
