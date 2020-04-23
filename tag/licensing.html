@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Posts tagged licensing | Ashwin Vishnu&#39;s Website</title>
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/source-code-pro.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/bibbase-m.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -253,6 +249,12 @@
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
+        <script>
+        if('serviceWorker' in navigator) {
+           navigator.serviceWorker.register('./static/sw.js');
+           console.log("serviceWorker registered");
+        };
+        </script>
       </div>
     </div>
   </div>
