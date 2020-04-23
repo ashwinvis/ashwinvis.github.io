@@ -187,7 +187,6 @@ IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # pelican_planet / webring
 WEBRING_FEED_URLS = list(read_opml("planet.opml", ("Planets",)).values())
-print(WEBRING_FEED_URLS)
 PLANET_TEMPLATE = 'templates/planet.md.j2'
 PLANET_PAGE = 'content/pages/planet.md'
 WEBRING_ARTICLES_PER_FEED = 2
