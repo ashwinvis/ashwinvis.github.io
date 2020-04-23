@@ -1,0 +1,22 @@
+{
+	"dir" : "ltr",
+	"lang" : "en",
+	"name" : "Ashwin Vishnu Mohanan",
+	"scope" : "/",
+	"display" : "fullscreen",
+	"start_url" : "https://ashwin.info.tm/",
+	"short_name" : "ashwin.info™",
+	"theme_color" : "#22272e",
+	"description" : "Personal blog / showcase",
+	"orientation" : "any",
+	"background_color" : "transparent",
+	"related_applications" : [],
+	"prefer_related_applications" : false,
+	"icons" : [
+		{
+			"src": "https://ashwin.info.tm/images/logo_ashwin.png",
+			"sizes": "180x180"
+		}],
+	"url" : "https://ashwin.info.tm",
+	"generated" : "true"
+}
