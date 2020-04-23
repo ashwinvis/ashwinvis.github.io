@@ -13,6 +13,7 @@ from datetime import datetime
 
 import m
 import pelican_ashwinvis as av
+import pelican_planet
 from pelican.plugins import webring
 from pelican_ashwinvis.util.util import read_opml
 
@@ -85,7 +86,7 @@ with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
 PLUGIN_PATHS = [
-    "plugins/",
+    #  "plugins/",
     #  "m.css/plugins/",
     #  "plugins/pelican-planet",
     #  "plugins/webring/pelican/plugins/webring",
@@ -169,7 +170,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 PLUGINS += [
     webring,
     av.ipynb.markup,
-    #  "pelican_planet",
+    pelican_planet,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
@@ -186,13 +187,18 @@ IPYNB_SKIP_CSS = False
 IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # pelican_planet / webring
-WEBRING_FEED_URLS = list(read_opml("planet.opml", ("Planets",)).values())
+PLANET_FEEDS = read_opml("planet.opml", ["Planets"])
 PLANET_TEMPLATE = 'templates/planet.md.j2'
 PLANET_PAGE = 'content/pages/planet.md'
+PLANET_MAX_ARTICLES_PER_FEED = 2
+PLANET_MAX_ARTICLES = max(42, PLANET_MAX_ARTICLES_PER_FEED * len(PLANET_FEEDS))
+PLANET_MAX_SUMMARY_LENGTH = 140
+
+WEBRING_FEED_URLS = list(PLANET_FEEDS.values())
 WEBRING_ARTICLES_PER_FEED = 2
 WEBRING_MAX_ARTICLES = max(42, WEBRING_ARTICLES_PER_FEED * len(WEBRING_FEED_URLS))
 WEBRING_SUMMARY_LENGTH = 140
-TEMPLATE_PAGES = {"planet.html": "pages/planet.html"}
+TEMPLATE_PAGES = {"planet.html": "planet.html"}
 
 
 # Pagination
