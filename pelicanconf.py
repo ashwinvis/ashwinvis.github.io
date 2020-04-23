@@ -14,7 +14,7 @@ from datetime import datetime
 import m
 import pelican_ashwinvis as av
 import pelican_planet
-from pelican.plugins import webring
+#  from pelican.plugins import webring
 from pelican_ashwinvis.util.util import read_opml
 
 
@@ -168,7 +168,7 @@ if not shutil.which('latex'):
 M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
-    webring,
+    #  webring,
     av.ipynb.markup,
     pelican_planet,
     # "representative_image",
