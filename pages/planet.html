@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://ashwin.info.tm/static/bibbase-m.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
-  <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
+  <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link rel="canonical" href="https://ashwin.info.tm/pages/planet.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,14 +59,20 @@
           https://bibbase.org
           http://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org;
+         img-src 'self' https:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
         "
   >
+
+  <!-- Progressive web app -->
+  <link rel='manifest' href='/static/manifest.json'>
 </head>
 <body>
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwin.info.tm/images/SU_logo.png" />Home</a>
+      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwin.info.tm/images/logo_ashwin.png" />ashwin.info™</a>
       <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
@@ -140,8 +146,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <p>I got the question how to solve the problem that when backing up the storage of a dockerized Postgres database (using Resticker) it could be that the backup is corrupt because the database is still running.</p>
 <p><em>This is an addition to <a href="https://jlelse.blog/dev/restic-docker/">my post of how to backup Docker volumes using resticker</a>.</em></p>
 <p>I had exactly the same problem. I wanted to backup a Postgres database running in a Docker container without having to stop the database or have a corrupt backup.</p>
-<p>Therefore I have extended Resticker, so that it is possible to <a href="https://github.com/djmaze/resticker#execute-commands-prior-to-backup" target="_blank">execute additional commands before the backup execution</a>. To access other Docker containers, the Docker socket must be mounted. So it is possible to create a database dump and backup it instead of the volume of the database itself.</p>
-<p>Here’s the relevant part from the <a href="https://github.com/djmaze/resticker" target="_blank">Resticker</a> documentation:</p>
+<p>Therefore I have extended Resticker, so that it is possible to <a href="https://github.com/djmaze/resticker#execute-commands-prior-to-backup">execute additional commands before the backup execution</a>. To access other Docker containers, the Docker socket must be mounted. So it is possible to create a database dump and backup it instead of the volume of the database itself.</p>
+<p>Here’s the relevant part from the <a href="https://github.com/djmaze/resticker">Resticker</a> documentation:</p>
 <blockquote>
 <p>To do …</p></blockquote>
   </div>
@@ -175,7 +181,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
     </a>
   </h1>
   <div class="p-summary">
-  <p>Ubuntu 20.04 (Focal Fossa) <a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes" target="_blank">got released today</a>. I’m already using it <a href="https://jlelse.blog/thoughts/2020/04/back-to-ubuntu-again/">for a week on my desktop</a> and have to say it’s an awesome version. Gnome 3.36 is really smooth and the new features (like dark mode) are really pleasant. Ubuntu is in my eyes the Linux distribution that “just works”.</p>
+  <p>Ubuntu 20.04 (Focal Fossa) <a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes">got released today</a>. I’m already using it <a href="https://jlelse.blog/thoughts/2020/04/back-to-ubuntu-again/">for a week on my desktop</a> and have to say it’s an awesome version. Gnome 3.36 is really smooth and the new features (like dark mode) are really pleasant. Ubuntu is in my eyes the Linux distribution that “just works”.</p>
 <p>Some other new features:</p>
 <ul>
 <li>Linux Kernel version 5.4 (with built-in support for Wireguard VPN)</li>
@@ -215,7 +221,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>We are happy to announce the release of Qt Creator 4.12!</p>  
-<img alt="" height="1" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.12-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss" style="width: 1px!important;" width="1" />
+<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.12-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
   </div>
 </header>
 <footer>
@@ -249,19 +255,19 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <div class="p-summary">
   <p>Past days have been very flatpaky to me and productive enough for creating some new material.</p>
 
-<h2 id="a-flatpak-getting-started-video-tutorial">A Flatpak getting started video tutorial</h2>
+A Flatpak getting started video tutorial
 
 <p>Joining my mates at <a href="https://hacklabalmeria.net">HackLab Almería</a>, who took the initiative of a set of video talks supporting the <a href="https://twitter.com/search?q=%23YoMeQuedoEnCasa">#YoMeQuedoEnCasa</a> initiative fighting against the boredom COVID-19 confinement in Spain (thanks <a href="https://github.com/zerasul">Víctor</a>), I felt ready enough to give <a href="https://hacklabalmeria.net/actividades/2020/04/14/Flatpak_introduccion_supervivencia.html">a talk about guerrilla Flatpak packaging</a> using as examples my work on recent bundles:</p>
 
 <div>
-  <div style="margin-left: auto; margin-right: auto; width: 480px;">
-    <div class="embed-container video "></div>
+  <div>
+    <div></div>
   </div>
 </div>
 
 <p>Talk is in Spanish. If interested you can ask or comment at the <a href="http://foro.hacklabalmeria.net/t/flatpak-de-supervivencia-para-recien-llegados-hacklab-almeria/11039/2">HLA forum entry</a>. The recording quality is not good enough: it’s the first time I record a talk with the amazing <a href="https://obsproject.com/">OBS</a> application. It’s not a great work but it does the job.</p>
 
-<h2 id="jclic-published-at-flathub">JClic published at Flathub</h2>
+JClic published at Flathub
 
 <p>I’m very happy to announce the JClic educative opensource application <a href="https://flathub.org/apps/details/cat.xtec.clic.JClic">it’s now published at …</a></p>
   </div>
@@ -327,7 +333,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
     </a>
   </h1>
   <div class="p-summary">
-  <a href="https://www.davidrevoy.com/data/images/blog/2020/2020-04-21_my-fav-keyboard-shortcut_net.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2020/2020-04-21_my-fav-keyboard-shortcut_net.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title="" /></a><br /><p><div align="center" class="frame"></div></p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2020/2020-04-21_my-fav-keyboard-shortcut_net.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2020/2020-04-21_my-fav-keyboard-shortcut_net.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p></p><div></div><p></p>
 <p>And here is a new video where I'm sharing eight keyboard shortcuts from my favorites; some of them are set by default, some other require the user to assign them manually. I'm showing how to setup them and speak why they became important for my workflow. This video exists to show to other user the flexibility of the custom keyboard shortcut and give them idea to visit this part of the software. </p>
 <ol>
 <li>The Selection Outline</li>
@@ -382,7 +388,7 @@ your data, but you’re not actively using it or putting wear on the storage
 medium. By contrast, hot storage is storage which is available immediately and
 undergoing frequent reads and writes.</p>
 
-<h2 id="what-storage-medium-to-use">What storage medium to use?</h2>
+What storage medium to use?
 
 <p>There are some bad ways to do it. The worst way I can think of is to store
 it on a microSD card. These fail <em>a …</em></p>
@@ -417,7 +423,7 @@ it on a microSD card. These fail <em>a …</em></p>
     </a>
   </h1>
   <div class="p-summary">
-  <img alt="One of the things of bear spray says that, and I'm not one to disobey safety instructions, but there are no bears around here. Guess it's time for a camping trip where we leave lots of food out!" src="https://imgs.xkcd.com/comics/use_or_discard_by.png" title="One of the things of bear spray says that, and I'm not one to disobey safety instructions, but there are no bears around here. Guess it's time for a camping trip where we leave lots of food out!" />
+  <img alt="One of the things of bear spray says that, and I'm not one to disobey safety instructions, but there are no bears around here. Guess it's time for a camping trip where we leave lots of food out!" src="https://imgs.xkcd.com/comics/use_or_discard_by.png" title="One of the things of bear spray says that, and I'm not one to disobey safety instructions, but there are no bears around here. Guess it's time for a camping trip where we leave lots of food out!">
   </div>
 </header>
 <footer>
@@ -482,7 +488,7 @@ We need to differentiate between two cases: Changing the expiration date of a su
     </a>
   </h1>
   <div class="p-summary">
-  The Linux kernel lockdown patches <a href="https://lwn.net/Articles/796866/">were merged into the 5.4 kernel</a> last year, which means they're now part of multiple distributions. For me this was a 7-year journey, which means it's easy to forget that others aren't as invested in the code as I am. Here's what these patches are intended to achieve, why they're implemented in the current form and what people should take into account when deploying the feature.<br /><br />Root is a user - a privileged user, but nevertheless a user. Root is not identical to the kernel. Processes running as root still can't dereference addresses that belong to the kernel, are still subject to the whims of the scheduler and so on. But historically that boundary has been very porous. Various interfaces make it straightforward for root to modify kernel code (such as loading modules or using …
+  The Linux kernel lockdown patches <a href="https://lwn.net/Articles/796866/">were merged into the 5.4 kernel</a> last year, which means they're now part of multiple distributions. For me this was a 7-year journey, which means it's easy to forget that others aren't as invested in the code as I am. Here's what these patches are intended to achieve, why they're implemented in the current form and what people should take into account when deploying the feature.Root is a user - a privileged user, but nevertheless a user. Root is not identical to the kernel. Processes running as root still can't dereference addresses that belong to the kernel, are still subject to the whims of the scheduler and so on. But historically that boundary has been very porous. Various interfaces make it straightforward for root to modify kernel code (such as loading modules or using …
   </div>
 </header>
 <footer>
@@ -514,11 +520,11 @@ We need to differentiate between two cases: Changing the expiration date of a su
     </a>
   </h1>
   <div class="p-summary">
-  <div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
-<span style="background-color: white; color: #1c1e29; font-family: Arial; font-size: 10.5pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">PyCons take place throughout many parts of the world.&nbsp;</span><span style="color: #1c1e29; font-family: Arial; font-size: 10.5pt; vertical-align: baseline; white-space: pre-wrap;">Each PyCon is different in its own way;&nbsp; drawing from its own geographical location as well as local history and culture. In 2017 another beautiful country opened its doors to a new PyCon, with the launch of <a href="https://2017.pycon.co/">PyCon Colombia</a>.</span><span style="color: #1c1e29; font-family: Arial; font-size: 10.5pt; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></div>
-<b id="docs-internal-guid-2c7b9eaa-7fff-cbfa-594b-40fc8e2f9b00" style="background-color: white; font-weight: normal;"><br /></b>
-<div dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;">
-<span style="background-color: white; color: #1c1e29; font-family: Arial; font-size: 10.5pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">PyCon Columbia stands out for its attention to detail, superb planning, and well-curated content. "What struck me about PyCon Colombia was how well thought out and organized it is. Particularly for a fairly new conference, it was exceptional in how carefully and completely things had been organized," says Naomi Ceder, Chair of the PSF Board of Directors, who delivered the keynote at PyCon Colombia 2018. Reflecting this dedication, on the PyCon Colombia website the conference comments that it is one "made with love." Like a ship needs a captain for smooth sailing …</span></div>
+  <div>
+<span>PyCons take place throughout many parts of the world.&nbsp;</span><span>Each PyCon is different in its own way;&nbsp; drawing from its own geographical location as well as local history and culture. In 2017 another beautiful country opened its doors to a new PyCon, with the launch of <a href="https://2017.pycon.co/">PyCon Colombia</a>.</span><span>&nbsp;</span></div>
+<b></b>
+<div>
+<span>PyCon Columbia stands out for its attention to detail, superb planning, and well-curated content. "What struck me about PyCon Colombia was how well thought out and organized it is. Particularly for a fairly new conference, it was exceptional in how carefully and completely things had been organized," says Naomi Ceder, Chair of the PSF Board of Directors, who delivered the keynote at PyCon Colombia 2018. Reflecting this dedication, on the PyCon Colombia website the conference comments that it is one "made with love." Like a ship needs a captain for smooth sailing …</span></div>
   </div>
 </header>
 <footer>
@@ -582,7 +588,7 @@ We need to differentiate between two cases: Changing the expiration date of a su
     </a>
   </h1>
   <div class="p-summary">
-  <div class="page" lang="en"><p>I’m really enjoying <a class="local" href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a class="url https outside" href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span style="display: inline-block; background: red; color: white; border-radius: 50%; width: 16pt; height: 16pt; text-align: center; line-height: 16pt; font-size: 11pt; font-weight: bold; font-family: mono;">99</p></span><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a class="url https outside" href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" rel="tag" title="Tag">Blogs</a></p></div>
+  <div><p>I’m really enjoying <a href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span>99</span></p><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" title="Tag">Blogs</a></p></div>
   </div>
 </header>
 <footer>
@@ -614,12 +620,12 @@ We need to differentiate between two cases: Changing the expiration date of a su
     </a>
   </h1>
   <div class="p-summary">
-  <div style="line-height: 16px; margin-bottom: 0cm; text-align: justify;"><div class="separator" style="clear: both; text-align: center;"><a href="https://github.com/psifidotos/Latte-Dock/"><img border="0" class="noBordersImage" src="//camo.githubusercontent.com/48c6397fd11941c944a77813bad6e9fd8f285aa2/687474703a2f2f692e696d6775722e636f6d2f4c4c6f5864674b2e706e67" /></a></div></div><div style="line-height: 16px; margin-bottom: 0cm; text-align: justify;"><br /></div><br />Hello everyone,<br /><br /><div style="text-align: justify;">I might start writing some articles with technical information in order to spread information that I consider them obvious but in KDE community might not be.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Many of you might find them boring but in the end I consider them just easy to read technical information.</div><br /><a name="more"></a><br />Contents;<br /><ul>
+  <div><div><a href="https://github.com/psifidotos/Latte-Dock/"><img src="//camo.githubusercontent.com/48c6397fd11941c944a77813bad6e9fd8f285aa2/687474703a2f2f692e696d6775722e636f6d2f4c4c6f5864674b2e706e67"></a></div></div><div></div>Hello everyone,<div>I might start writing some articles with technical information in order to spread information that I consider them obvious but in KDE community might not be.</div><div></div><div>Many of you might find them boring but in the end I consider them just easy to read technical information.</div><a></a>Contents;<ul>
 <li><a href="https://psifidotos.blogspot.com/2020/04/article-rounded-plasma-and-qt-csds.html#myth1"><b>Myth 1: Qt/QML Client Side Decoration buttons are hard to implement and draw them consistently</b></a></li>
 <li>
 <a href="https://psifidotos.blogspot.com/2020/04/article-rounded-plasma-and-qt-csds.html#myth2"><b>Myth 2: Plasma Themes can not have rounded corners</b></a><b> </b>
 </li>
-</ul><br /><div id="myth1" style="text-align: justify;"><span style="font-size: large;"><b>Myth 1: Qt/QML Client Side Decoration buttons are hard to implement and draw them consistently</b></span></div><br /><div style="text-align: justify;">Based on <a href="https://nxos.org/maui/maui-weekly-report-3/" target="_blank">Maui Weekly Report #3</a> I show there is interest for Qt/QML applications that can draw window buttons in window internal space. I even like them in some apps such as music and video players. </div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">For those that want a flame war between SSDs and CSDs I actually …</div>
+</ul><div><span><b>Myth 1: Qt/QML Client Side Decoration buttons are hard to implement and draw them consistently</b></span></div><div>Based on <a href="https://nxos.org/maui/maui-weekly-report-3/">Maui Weekly Report #3</a> I show there is interest for Qt/QML applications that can draw window buttons in window internal space. I even like them in some apps such as music and video players. </div><div></div><div>For those that want a flame war between SSDs and CSDs I actually …</div>
   </div>
 </header>
 <footer>
@@ -652,7 +658,7 @@ We need to differentiate between two cases: Changing the expiration date of a su
   </h1>
   <div class="p-summary">
   <p>In Mark Wilson’s 2019 documentary The Painted Warrior, Stephen offers himself up as his artist wife’s canvas, carrying her designs on his upper body whilst putting himself through gruelling physical ordeals. Both Stephen and Aeni are artists. The film documents an unusual collaboration through which Stephen embodies Aeni’s art and takes them across trails, running [&#8230;]</p>
-<p>The article <a href="https://www.unsungfilms.com/26522/the-painted-warrior/" rel="nofollow">The Painted Warrior</a> by <a href="https://www.unsungfilms.com/author/theo/" rel="nofollow">Theo Alexander</a> appeared first on <a href="https://www.unsungfilms.com" rel="nofollow">Unsung Films</a>.</p>
+<p>The article <a href="https://www.unsungfilms.com/26522/the-painted-warrior/">The Painted Warrior</a> by <a href="https://www.unsungfilms.com/author/theo/">Theo Alexander</a> appeared first on <a href="https://www.unsungfilms.com">Unsung Films</a>.</p>
   </div>
 </header>
 <footer>
@@ -684,20 +690,20 @@ We need to differentiate between two cases: Changing the expiration date of a su
     </a>
   </h1>
   <div class="p-summary">
-  The CPython core developers are pleased to announce the immediate availability of Python 2.7.18.<br />
-<br />
-Python 2.7.18 is the last Python 2.7<br />
-release and therefore the last Python 2 release. It's time for the CPython<br />
-community to say a fond but firm farewell to Python 2.<br />
-<br />
-Download this unique, commemorative Python release on <a href="https://www.python.org/downloads/release/python-2718/">python.org</a>.<br />
-<br />
-Python 2.7 has been under active development since the release of Python 2.6,<br />
-more than 11 years ago. Over all those years, CPython's core developers and<br />
-contributors sedulously applied bug fixes to the 2.7 branch, no small task as<br />
-the Python 2 and 3 branches diverged. There were large changes midway through<br />
-Python 2.7's life such as PEP 466's feature backports to the ssl module and<br />
-hash randomization. Traditionally, these features would never have been added<br />
+  The CPython core developers are pleased to announce the immediate availability of Python 2.7.18.
+
+Python 2.7.18 is the last Python 2.7
+release and therefore the last Python 2 release. It's time for the CPython
+community to say a fond but firm farewell to Python 2.
+
+Download this unique, commemorative Python release on <a href="https://www.python.org/downloads/release/python-2718/">python.org</a>.
+
+Python 2.7 has been under active development since the release of Python 2.6,
+more than 11 years ago. Over all those years, CPython's core developers and
+contributors sedulously applied bug fixes to the 2.7 branch, no small task as
+the Python 2 and 3 branches diverged. There were large changes midway through
+Python 2.7's life such as PEP 466's feature backports to the ssl module and
+hash randomization. Traditionally, these features would never have been added
 to …
   </div>
 </header>
@@ -730,10 +736,10 @@ to …
     </a>
   </h1>
   <div class="p-summary">
-  <a href="https://www.davidrevoy.com/data/images/blog/2020/2020-04-19_mysterious.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2020/2020-04-19_mysterious.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title="" /></a><br /><p>Here is one of the result of the graphical explorations I'm doing right now on the future episode 33 of Pepper&amp;Carrot. To understand what I'm training, I'll try to elaborate more under.</p>
-<p><strong>Drawing:</strong><br />
+  <a href="https://www.davidrevoy.com/data/images/blog/2020/2020-04-19_mysterious.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2020/2020-04-19_mysterious.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Here is one of the result of the graphical explorations I'm doing right now on the future episode 33 of Pepper&amp;Carrot. To understand what I'm training, I'll try to elaborate more under.</p>
+<p><strong>Drawing:</strong>
 I favor now accuracy of volumes over beauty of the lines. The preparatory sketch for this style disappears totally anyway under the next steps.  I switched to a low opacity thin brush preset very similar to a 4H pencil to slice volumes with more accuracy. My large IntuosXL and the QuadHD monitor mix perfectly for that. I enjoy sketching with it. I'm still trying to see how I can simplify this step further by drawing only the main volumes and big shapes (and not an early rendition of the artwork). it can save probably dozens of minute per panels.</p>
-<p><strong>Values:</strong><br />
+<p><strong>Values:</strong>
 On the previous episode, I used …</p>
   </div>
 </header>
@@ -774,7 +780,7 @@ personal aerc configuration that I thought were worth sharing briefly. This blog
 post will be boring and clerical, feel free to skip it unless it’s something
 you’re interested in.</p>
 
-<p>When I want to review a patch, I first tell aerc to <code class="highlighter-rouge">:cd sources/&lt;that
+<p>When I want to review a patch, I first tell aerc to <code>:cd sources/&lt;that
 project&gt;</code>, then I open up the patch and give it a read. If it needs work, I’ll
 use “rq” (“reply quoted”), a keybinding which is available by default, to open
 my editor with the patch pre-quoted to trim down and reply with feedback inline.
@@ -810,7 +816,7 @@ If …</p>
     </a>
   </h1>
   <div class="p-summary">
-  <img alt="Once the lockdown is over, let's all get together and swap starters!" src="https://imgs.xkcd.com/comics/sourdough_starter.png" title="Once the lockdown is over, let's all get together and swap starters!" />
+  <img alt="Once the lockdown is over, let's all get together and swap starters!" src="https://imgs.xkcd.com/comics/sourdough_starter.png" title="Once the lockdown is over, let's all get together and swap starters!">
   </div>
 </header>
 <footer>
@@ -875,15 +881,15 @@ If …</p>
   </h1>
   <div class="p-summary">
   <p>With more time on my hands during this quarantine time, I started doing the
-<a href="https://www.nytimes.com/puzzles/letter-boxed" rel="external noopener">Letter Boxed puzzle</a>.
+<a href="https://www.nytimes.com/puzzles/letter-boxed">Letter Boxed puzzle</a>.
 You are given a square with three letters on each side:
-</p><p class="figure"><img alt="A blank Letter Boxed puzzle: ECI AXY OTU HRN" height="965" src="//nedbatchelder.com/pix/letterboxed1.png" width="1770" /></p><p>You form words by choosing letters in sequence. The only rule is that the
+</p><p><img alt="A blank Letter Boxed puzzle: ECI AXY OTU HRN" src="//nedbatchelder.com/pix/letterboxed1.png"></p><p>You form words by choosing letters in sequence. The only rule is that the
 next letter must be on a different side of the square than the previous
-letter:</p><p class="figure"><img alt="The same puzzle with THEOCRACY played" height="965" src="//nedbatchelder.com/pix/letterboxed2.png" width="1770" /></p><p>Your next word has to start with the last letter of the previous word:</p><p class="figure"><img alt="The same puzzle with YENTA added in" height="965" src="//nedbatchelder.com/pix/letterboxed3.png" width="1770" /></p><p>The goal is to use all the letters in a certain number of words. For this
+letter:</p><p><img alt="The same puzzle with THEOCRACY played" src="//nedbatchelder.com/pix/letterboxed2.png"></p><p>Your next word has to start with the last letter of the previous word:</p><p><img alt="The same puzzle with YENTA added in" src="//nedbatchelder.com/pix/letterboxed3.png"></p><p>The goal is to use all the letters in a certain number of words. For this
 puzzle, the challenge is five words.</p><p>But if you look at the answers they provide for yesterday&#8217;s puzzle, it&#8217;s
 always just two words.  So now I&#8217;m tormenting myself trying to find two-word
 solutions.  And of course I started thinking about writing a program to find
-them.</p><p>I found a <a href="https://github.com/dwyl/english-words" rel="external noopener">giant …</a></p>
+them.</p><p>I found a <a href="https://github.com/dwyl/english-words">giant …</a></p>
   </div>
 </header>
 <footer>
@@ -947,13 +953,13 @@ them.</p><p>I found a <a href="https://github.com/dwyl/english-words" rel="exter
     </a>
   </h1>
   <div class="p-summary">
-  <div style="background-color: white; font-size: 14px; margin-bottom: 15px;"><span style="font-family: inherit;">PyCon 2020 in Pittsburgh, PA <a href="https://pycon.blogspot.com/2020/03/pycon-us-2020-in-pittsburgh.html" target="_blank">was cancelled</a> due to COVID-19 and that impacted the PSF's finances. <a href="http://pyfound.blogspot.com/2020/03/psfs-projected-2020-financial-outcome.html" target="_blank">Our blog from March 31st</a> estimated that the PSF would need to use $627,000 of its financial reserve to get through 2020.<span class="Apple-converted-space">&nbsp;</span></span><br />
-<span style="font-family: inherit;"><span class="Apple-converted-space"><br />
-</span></span> <span style="font-family: inherit;">Since the time we cancelled PyCon 2020, the PSF staff and PyCon volunteers have been working on PyCon 2020 Online, which is launching April 15 (<a href="https://us.pycon.org/2020/online/" target="_blank">subscribe here</a>&nbsp;to get the content launch emails)!</span><br />
-<span style="font-family: inherit;"><br />
-</span> <span style="font-family: inherit;">During our planning process, we have seen an overwhelming amount of support from sponsors and registrants.</span><br />
-<span style="font-family: inherit;"><br />
-</span> <span style="font-family: inherit;">Over 40 sponsors have agreed to participate in PyCon 2020 Online and 418 individuals donated and/or converted their registration fees to donations.</span><span class="Apple-converted-space" style="font-family: inherit;">&nbsp;</span></div><h2 id="toc_2" style="background-color: white; border-bottom: 1px solid rgb(204, 204, 204); cursor: text; font-size: 24px; margin: 20px 0px 10px; padding: 0px;"><span style="font-family: inherit;">Thank you individual donors!</span></h2><div style="background-color: white; font-size: 14px; margin-top: 15px;"><span style="font-family: inherit;">Thank you to the individuals that donated to the PSF as they registered for PyCon. Thank you to those that converted part or all of …</span></div>
+  <div><span>PyCon 2020 in Pittsburgh, PA <a href="https://pycon.blogspot.com/2020/03/pycon-us-2020-in-pittsburgh.html">was cancelled</a> due to COVID-19 and that impacted the PSF's finances. <a href="http://pyfound.blogspot.com/2020/03/psfs-projected-2020-financial-outcome.html">Our blog from March 31st</a> estimated that the PSF would need to use $627,000 of its financial reserve to get through 2020.<span>&nbsp;</span></span>
+<span><span>
+</span></span> <span>Since the time we cancelled PyCon 2020, the PSF staff and PyCon volunteers have been working on PyCon 2020 Online, which is launching April 15 (<a href="https://us.pycon.org/2020/online/">subscribe here</a>&nbsp;to get the content launch emails)!</span>
+<span>
+</span> <span>During our planning process, we have seen an overwhelming amount of support from sponsors and registrants.</span>
+<span>
+</span> <span>Over 40 sponsors have agreed to participate in PyCon 2020 Online and 418 individuals donated and/or converted their registration fees to donations.</span><span>&nbsp;</span></div><span>Thank you individual donors!</span><div><span>Thank you to the individuals that donated to the PSF as they registered for PyCon. Thank you to those that converted part or all of …</span></div>
   </div>
 </header>
 <footer>
@@ -1025,7 +1031,7 @@ to perform the upgrade.
     </a>
   </h1>
   <div class="p-summary">
-  <div class="page" lang="en"><p>Spring, when trees are flowering, is breathtaking.</p><ul><li><a class="url https outside" href="https://alexschroeder.ch/gallery/2020-flowering-trees/">Flowering Trees Album</a></li></ul><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" rel="tag" title="Tag">Pictures</a></p></div>
+  <div><p>Spring, when trees are flowering, is breathtaking.</p><ul><li><a href="https://alexschroeder.ch/gallery/2020-flowering-trees/">Flowering Trees Album</a></li></ul><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" title="Tag">Pictures</a></p></div>
   </div>
 </header>
 <footer>
@@ -1057,13 +1063,13 @@ to perform the upgrade.
     </a>
   </h1>
   <div class="p-summary">
-  <div dir="ltr" style="text-align: left;">
+  <div>
 The PyPy team is proud to release the version 7.3.1 of PyPy, which includes
-two different interpreters:<br />
+two different interpreters:
 
 <blockquote>
 <div>
-<ul class="simple">
+<ul>
 <li>PyPy2.7, which is an interpreter supporting the syntax and the features of
 Python 2.7 including the stdlib for CPython 2.7.13</li>
 <li>PyPy3.6: which is an interpreter supporting the syntax and the features of
@@ -1073,10 +1079,10 @@ Python 3.6, including the stdlib for CPython 3.6.9.</li>
 </blockquote>
 The interpreters are based on much the same codebase, thus the multiple
 release. This is a micro release, no APIs have changed since the 7.3.0 release
-in December, but read on to find out what is new.<br />
+in December, but read on to find out what is new.
 
-<br />
-Conda Forge now <a class="reference external" href="https://conda-forge.org/blog//2020/03/10/pypy">supports PyPy</a> as a Python interpreter. The support right now
+
+Conda Forge now <a href="https://conda-forge.org/blog//2020/03/10/pypy">supports PyPy</a> as a Python interpreter. The support right now
 is being built out. After this release, many more c-extension-based
 packages can be successfully built and uploaded. This is the result …</div>
   </div>
@@ -1142,16 +1148,16 @@ packages can be successfully built and uploaded. This is the result …</div>
     </a>
   </h1>
   <div class="p-summary">
-  <p>I have already talked here before about <a class="reference external" href="http://lucumr.pocoo.org/3/contact-tracing/">privacy preserving contact
+  <p>I have already talked here before about <a href="http://lucumr.pocoo.org/3/contact-tracing/">privacy preserving contact
 tracing</a> to fight Covid-19 but I figured I
 give an update to this.  I have spent the last week now investigating
 different approaches to this and my view has changed quite a bit.</p>
 <p>I strongly believe that contact tracing through phone apps is one of our
 best chances to return to normal and without losing our civil liberties.
-If you want to understand why, have a look at <a class="reference external" href="http://lucumr.pocoo.org/3/contact-tracing/">previous post about this
+If you want to understand why, have a look at <a href="http://lucumr.pocoo.org/3/contact-tracing/">previous post about this
 topic</a>.</p>
-<div class="section" id="two-fundamental-approaches">
-<h2>Two Fundamental Approaches</h2>
+<div>
+Two Fundamental Approaches
 <p>In the previous post I talked in favour of a partially centralized
 approach.  This was largely because I felt that one of the inherent
 problems of any privacy preserving contact tracing system could be
@@ -1189,7 +1195,7 @@ such contact tracing system in a way where …</p></div>
   </h1>
   <div class="p-summary">
   <p>(Original title: Eteros ego: Hamenes Psyhes) Eteros ego: Hamenes Psyhes (The Other Me: Lost Souls) is a Greek TV series, the spin-off of the movie Eteros Ego (The Other Me), by Sotiris Tsafoulias. The movie Eteros Ego refers to a series of crimes in modern Athens. In the crime scenes, the serial killer leaves quotes of [&#8230;]</p>
-<p>The article <a href="https://www.unsungfilms.com/26490/the-other-me-lost-souls/" rel="nofollow">The Other Me: Lost Souls</a> by <a href="https://www.unsungfilms.com/author/sofia-paftounou/" rel="nofollow">Sofia Paftounou</a> appeared first on <a href="https://www.unsungfilms.com" rel="nofollow">Unsung Films</a>.</p>
+<p>The article <a href="https://www.unsungfilms.com/26490/the-other-me-lost-souls/">The Other Me: Lost Souls</a> by <a href="https://www.unsungfilms.com/author/sofia-paftounou/">Sofia Paftounou</a> appeared first on <a href="https://www.unsungfilms.com">Unsung Films</a>.</p>
   </div>
 </header>
 <footer>
@@ -1221,9 +1227,9 @@ such contact tracing system in a way where …</p></div>
     </a>
   </h1>
   <div class="p-summary">
-  A first release candidate for Python 2.7.18 is <a href="https://www.python.org/downloads/release/python-2718rc1/">now available for download</a>. Python 2.7.18 will be the last release of the Python 2.7 series, and thus Python 2.<div class="feedflare">
-<a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:yIl2AUoC8zA"><img border="0" src="http://feeds.feedburner.com/~ff/PythonInsider?d=yIl2AUoC8zA" /></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:-BTjWOF_DHI"><img border="0" src="http://feeds.feedburner.com/~ff/PythonInsider?i=K1JPIqUkG1o:tnuUcy_nQzo:-BTjWOF_DHI" /></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:F7zBnMyn0Lo"><img border="0" src="http://feeds.feedburner.com/~ff/PythonInsider?i=K1JPIqUkG1o:tnuUcy_nQzo:F7zBnMyn0Lo" /></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:V_sGLiPBpWU"><img border="0" src="http://feeds.feedburner.com/~ff/PythonInsider?i=K1JPIqUkG1o:tnuUcy_nQzo:V_sGLiPBpWU" /></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:qj6IDK7rITs"><img border="0" src="http://feeds.feedburner.com/~ff/PythonInsider?d=qj6IDK7rITs" /></a>
-</div><img alt="" height="1" src="http://feeds.feedburner.com/~r/PythonInsider/~4/K1JPIqUkG1o" width="1" />
+  A first release candidate for Python 2.7.18 is <a href="https://www.python.org/downloads/release/python-2718rc1/">now available for download</a>. Python 2.7.18 will be the last release of the Python 2.7 series, and thus Python 2.<div>
+<a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/PythonInsider?d=yIl2AUoC8zA"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:-BTjWOF_DHI"><img src="http://feeds.feedburner.com/~ff/PythonInsider?i=K1JPIqUkG1o:tnuUcy_nQzo:-BTjWOF_DHI"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/PythonInsider?i=K1JPIqUkG1o:tnuUcy_nQzo:F7zBnMyn0Lo"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/PythonInsider?i=K1JPIqUkG1o:tnuUcy_nQzo:V_sGLiPBpWU"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=K1JPIqUkG1o:tnuUcy_nQzo:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/PythonInsider?d=qj6IDK7rITs"></a>
+</div><img alt="" src="http://feeds.feedburner.com/~r/PythonInsider/~4/K1JPIqUkG1o">
   </div>
 </header>
 <footer>
@@ -1260,7 +1266,7 @@ pandemic that prevents us from going outside was not what I was picturing.
 It's about three weeks now that I and my family are spending at home in
 Austria instead of going to work or having the kids at daycare, two of
 those weeks were under mandatory social distancing because of SARS-CoV-2.</p>
-<p>And as cute as <a class="reference external" href="https://en.wikipedia.org/wiki/Social_distancing">social distancing</a>
+<p>And as cute as <a href="https://en.wikipedia.org/wiki/Social_distancing">social distancing</a>
 and “flattening the curve” sounds at first, the consequences to our daily
 lives are beyond anything I could have imagined would happen in my
 lifetime.</p>
@@ -1330,7 +1336,7 @@ I'm not sure for how long our society will be able to do this.  Even …</p>
     </a>
   </h1>
   <div class="p-summary">
-  March 28, 2020 I am not an epidemiologist but do regression modeling for a living. I have done regression modeling to predict student grades just after the first test, and now we will be using adaptive learning metrics to improve our identification schemes even earlier in the semester. It is not to spell boom or &#8230; <a class="more-link" href="https://autarkaw.org/2020/03/28/covid19-regression-model-and-other-thoughts/">Continue reading<span class="screen-reader-text"> "COVID19 Regression Model and Other&#160;Thoughts"</span></a>
+  March 28, 2020 I am not an epidemiologist but do regression modeling for a living. I have done regression modeling to predict student grades just after the first test, and now we will be using adaptive learning metrics to improve our identification schemes even earlier in the semester. It is not to spell boom or &#8230; <a href="https://autarkaw.org/2020/03/28/covid19-regression-model-and-other-thoughts/">Continue reading<span> "COVID19 Regression Model and Other&#160;Thoughts"</span></a>
   </div>
 </header>
 <footer>
@@ -1441,7 +1447,7 @@ we talking about basic familiarity, or deep memorization?  Does something …</p
     </a>
   </h1>
   <div class="p-summary">
-  Before COVID19 hit our lives, it was so easy for the student to submit a hard copy.  Now with soft copies being asked for, they and the instructors have to learn a bit. So, I had this programming assignment before COVID19 closed our face-to-face classes. It involved handwritten pages, a published mfile and writing out &#8230; <a class="more-link" href="https://autarkaw.org/2020/03/26/how-to-make-a-pdf-file/">Continue reading<span class="screen-reader-text"> "How to Make a PDF&#160;file"</span></a>
+  Before COVID19 hit our lives, it was so easy for the student to submit a hard copy.  Now with soft copies being asked for, they and the instructors have to learn a bit. So, I had this programming assignment before COVID19 closed our face-to-face classes. It involved handwritten pages, a published mfile and writing out &#8230; <a href="https://autarkaw.org/2020/03/26/how-to-make-a-pdf-file/">Continue reading<span> "How to Make a PDF&#160;file"</span></a>
   </div>
 </header>
 <footer>
@@ -1570,33 +1576,32 @@ We are happy to announce that we have hired Elliott Sales de Andrade (QuLogic) a
     </a>
   </h1>
   <div class="p-summary">
-  <center>
-  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">        
-    <tr>
-      <td><b><font face="Arial, Helvetica, sans-serif" size="+1">Piled Higher
-        &amp; Deeper</font><font face="Arial, Helvetica, sans-serif"> <i> by Jorge
-        Cham</i></font></b></td>
-      <td> </td>
-      <td>
-        <div align="right"><b><font face="Arial, Helvetica, 
-sans-serif">www.phdcomics.com</font></b></div>
-      </td>
-    </tr>
-    <tr align="center">
-      <td colspan="3"><font face="Arial, Helvetica, sans-serif"><img align="top" alt="Click on the title below to read the comic" border="0" src="http://www.phdcomics.com/comics/archive/phd032020s.gif" /></font></td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        <div align="center"><font face="Arial, Helvetica, sans-serif" size="-2">title:
+
+
+
+      <b>Piled Higher
+        &amp; Deeper <i> by Jorge
+        Cham</i></b>
+
+
+        <div><b>www.phdcomics.com</b></div>
+
+
+
+      <img alt="Click on the title below to read the comic" src="http://www.phdcomics.com/comics/archive/phd032020s.gif">
+
+
+
+        <div>title:
           &quot;<a href="http://www.phdcomics.com/comics.php?f=2041">The PHD Movies - Free during the Coronavirus Crisis</a>&quot; - originally published 
 3/20/2018  
-        </font><p><font face="arial">For the latest news in PHD Comics, <a href="http://www.phdcomics.com/comics.php">CLICK HERE!</a></font></p>
+        <p>For the latest news in PHD Comics, <a href="http://www.phdcomics.com/comics.php">CLICK HERE!</a></p>
 
 </div>
-      </td>
-    </tr>
-  </table>
-</center>
+
+
+
+
   </div>
 </header>
 <footer>
@@ -1660,28 +1665,28 @@ sans-serif">www.phdcomics.com</font></b></div>
     </a>
   </h1>
   <div class="p-summary">
-  At the end of February ten of us gathered in Leysin, Switzerland to work on<br />
-a variety of topics including <a class="reference external" href="https://github.com/pyhandle/hpy/">HPy</a>, <a class="reference external" href="http://buildbot.pypy.org/summary?branch=py3.7">PyPy Python 3.7</a> support and the PyPy<br />
-migration to <a class="reference external" href="https://foss.heptapod.net/pypy/">Heptapod</a>.<br />
-<br />
-<div class="separator" style="clear: both; text-align: center;">
-<a href="https://1.bp.blogspot.com/-PIs_hVhn3RY/XnFDceuihNI/AAAAAAAAbRg/LKMOMWxeFw4jhcwqy8jx7iKzKE01fbfxQCEwYBhgL/s1600/2020_leysin_sprint_attendees.jpg" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="180" src="https://1.bp.blogspot.com/-PIs_hVhn3RY/XnFDceuihNI/AAAAAAAAbRg/LKMOMWxeFw4jhcwqy8jx7iKzKE01fbfxQCEwYBhgL/s320/2020_leysin_sprint_attendees.jpg" width="320" /></a></div>
-<br />
-We had a fun and productive week. The snow was beautiful. There was skiing<br />
-and lunch at the top of <a class="reference external" href="https://en.wikipedia.org/wiki/Berneuse">Berneuse</a>, cooking together, some late nights at<br />
-the pub next door, some even later nights coding, and of course the<br />
-obligatory cheese fondue outing.<br />
-<br />
-There were a few of us participating in a PyPy sprint for the first time<br />
-and a few familiar faces who had attended many sprints. Many different<br />
-projects were represented including PyPy, <a class="reference external" href="https://github.com/pyhandle/hpy/">HPy</a>, <a class="reference external" href="https://github.com/graalvm/graalpython">GraalPython</a>,<br />
-<a class="reference external" href="https://foss.heptapod.net/pypy/">Heptapod</a>, and <a class="reference external" href="https://github.com/dgrunwald/rust-cpython">rust-cpython</a>. The atmosphere was relaxed and welcoming, so if<br />
-you're thinking of attending the next one -- please do!<br />
-<br />
-Topics worked on:<br />
-<br />
-<h2>
-HPy</h2>
+  At the end of February ten of us gathered in Leysin, Switzerland to work on
+a variety of topics including <a href="https://github.com/pyhandle/hpy/">HPy</a>, <a href="http://buildbot.pypy.org/summary?branch=py3.7">PyPy Python 3.7</a> support and the PyPy
+migration to <a href="https://foss.heptapod.net/pypy/">Heptapod</a>.
+
+<div>
+<a href="https://1.bp.blogspot.com/-PIs_hVhn3RY/XnFDceuihNI/AAAAAAAAbRg/LKMOMWxeFw4jhcwqy8jx7iKzKE01fbfxQCEwYBhgL/s1600/2020_leysin_sprint_attendees.jpg"><img src="https://1.bp.blogspot.com/-PIs_hVhn3RY/XnFDceuihNI/AAAAAAAAbRg/LKMOMWxeFw4jhcwqy8jx7iKzKE01fbfxQCEwYBhgL/s320/2020_leysin_sprint_attendees.jpg"></a></div>
+
+We had a fun and productive week. The snow was beautiful. There was skiing
+and lunch at the top of <a href="https://en.wikipedia.org/wiki/Berneuse">Berneuse</a>, cooking together, some late nights at
+the pub next door, some even later nights coding, and of course the
+obligatory cheese fondue outing.
+
+There were a few of us participating in a PyPy sprint for the first time
+and a few familiar faces who had attended many sprints. Many different
+projects were represented including PyPy, <a href="https://github.com/pyhandle/hpy/">HPy</a>, <a href="https://github.com/graalvm/graalpython">GraalPython</a>,
+<a href="https://foss.heptapod.net/pypy/">Heptapod</a>, and <a href="https://github.com/dgrunwald/rust-cpython">rust-cpython</a>. The atmosphere was relaxed and welcoming, so if
+you're thinking of attending the next one -- please do!
+
+Topics worked on:
+
+
+HPy
 HPy is a new project to …
   </div>
 </header>

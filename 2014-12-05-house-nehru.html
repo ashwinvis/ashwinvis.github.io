@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://ashwin.info.tm/static/bibbase-m.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
-  <link rel="icon" href="https://ashwin.info.tm/images/SU_logo.png" type="image/png" />
+  <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link rel="canonical" href="https://ashwin.info.tm/2014-12-05-house-nehru.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <link href="https://ashwin.info.tm/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Blog" />
@@ -60,14 +60,20 @@
           https://bibbase.org
           http://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org;
+         img-src 'self' https:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
         "
   >
+
+  <!-- Progressive web app -->
+  <link rel='manifest' href='/static/manifest.json'>
 </head>
 <body>
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwin.info.tm/images/SU_logo.png" />Home</a>
+      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwin.info.tm/images/logo_ashwin.png" />ashwin.info™</a>
       <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
       <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
