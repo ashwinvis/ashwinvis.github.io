@@ -34,8 +34,7 @@
   --link-decoration: underline;
   --link-decoration-nav: none;
   --link-decoration-heading: none;
-  --nav-brand-case: lowercase;
-  --nav-brand-family: monospace;
+  --nav-brand-case: uppercase;
   --nav-menu-case: none;
   --nav-heading-case: uppercase;
   --nav-categories-case: lowercase;
@@ -61,7 +60,7 @@
      --background-color */
   --code-background-color: #282e36;
   --code-note-background-color: rgba(34, 39, 46, 0.5);
-  --console-background-color: #1a1c1d;
+  --console-background-color: #161616;
   --button-background-color: #22272e;
 
   /* Header */
