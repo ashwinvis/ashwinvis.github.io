@@ -44,8 +44,23 @@
   <!-- Stricter version:
    default-src 'none'; font-src https://fontlibrary.org; img-src 'self'; script-src 'self''; style-src 'self'
   -->
+  <!-- Milder CSP to permit mathjax, bibbase scripts
+  TODO: Find alternate CDN for mathjax
+  https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
+  https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
+  -->
   <meta http-equiv="Content-Security-Policy"
-        content="upgrade-insecure-requests; default-src https:; style-src 'self' 'unsafe-inline'">
+        content="
+        upgrade-insecure-requests;
+        default-src https:;
+        style-src https://bibbase.org 'unsafe-inline' 'self';
+        script-src
+          http://cdnjs.cloudflare.com
+          https://bibbase.org
+          http://ajax.googleapis.com
+          'unsafe-inline' 'unsafe-eval' 'self';
+        "
+  >
 </head>
 <body>
 <header><nav id="navigation">
@@ -103,6 +118,126 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 </style>
 
 <div id="planet">
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2020/04/ubuntu-2004/" rel="bookmark" class="u-url"
+       title="Ubuntu 20.04 - Focal Fossa" target="_blank">
+      <time class="m-date" datetime="2020-04-23 11:53:58+02:00">
+        Apr
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Ubuntu 20.04 - Focal Fossa
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Ubuntu 20.04 (Focal Fossa) <a href="https://wiki.ubuntu.com/FocalFossa/ReleaseNotes" target="_blank">got released today</a>. I’m already using it <a href="https://jlelse.blog/thoughts/2020/04/back-to-ubuntu-again/">for a week on my desktop</a> and have to say it’s an awesome version. Gnome 3.36 is really smooth and the new features (like dark mode) are really pleasant. Ubuntu is in my eyes the Linux distribution that “just works”.</p>
+<p>Some other new features:</p>
+<ul>
+<li>Linux Kernel version 5.4 (with built-in support for Wireguard VPN)</li>
+<li>Gnome 3.36 with a refreshed Yaru theme</li>
+<li>Python 3 by default</li>
+</ul>
+<p>It’s a LTS version, so it will also get updates and security fixes for the next 5 years (but I’ll probably upgrade to each new version though).</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-23 11:53:58+02:00" class="dt-published"></time>
+  Thu 23 Apr 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.qt.io/blog/qt-creator-4.12-released" rel="bookmark" class="u-url"
+       title="Qt Creator 4.12 released" target="_blank">
+      <time class="m-date" datetime="2020-04-23 09:42:37+00:00">
+        Apr
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Qt Creator 4.12 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>We are happy to announce the release of Qt Creator 4.12!</p>  
+<img alt="" height="1" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.12-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss" style="width: 1px!important;" width="1" />
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Qt Dev Loop</b></span>
+  on <time datetime="2020-04-23 09:42:37+00:00" class="dt-published"></time>
+  Thu 23 Apr 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://olea.org/diario/2020/04/23/flatpak_activity.html" rel="bookmark" class="u-url"
+       title="Recent activity on Flatpak: video workshop and new bundles" target="_blank">
+      <time class="m-date" datetime="2020-04-22 22:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Recent activity on Flatpak: video workshop and new bundles
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Past days have been very flatpaky to me and productive enough for creating some new material.</p>
+
+<h2 id="a-flatpak-getting-started-video-tutorial">A Flatpak getting started video tutorial</h2>
+
+<p>Joining my mates at <a href="https://hacklabalmeria.net">HackLab Almería</a>, who took the initiative of a set of video talks supporting the <a href="https://twitter.com/search?q=%23YoMeQuedoEnCasa">#YoMeQuedoEnCasa</a> initiative fighting against the boredom COVID-19 confinement in Spain (thanks <a href="https://github.com/zerasul">Víctor</a>), I felt ready enough to give <a href="https://hacklabalmeria.net/actividades/2020/04/14/Flatpak_introduccion_supervivencia.html">a talk about guerrilla Flatpak packaging</a> using as examples my work on recent bundles:</p>
+
+<div>
+  <div style="margin-left: auto; margin-right: auto; width: 480px;">
+    <div class="embed-container video "></div>
+  </div>
+</div>
+
+<p>Talk is in Spanish. If interested you can ask or comment at the <a href="http://foro.hacklabalmeria.net/t/flatpak-de-supervivencia-para-recien-llegados-hacklab-almeria/11039/2">HLA forum entry</a>. The recording quality is not good enough: it’s the first time I record a talk with the amazing <a href="https://obsproject.com/">OBS</a> application. It’s not a great work but it does the job.</p>
+
+<h2 id="jclic-published-at-flathub">JClic published at Flathub</h2>
+
+<p>I’m very happy to announce the JClic educative opensource application <a href="https://flathub.org/apps/details/cat.xtec.clic.JClic">it’s now published at …</a></p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-22 22:00:00+00:00" class="dt-published"></time>
+  Wed 22 Apr 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
 
 <article class="h-cite">
 <header>
@@ -443,117 +578,6 @@ We need to differentiate between two cases: Changing the expiration date of a su
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2020/04/bunnycdn-origin-shield/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-04-21 00:33:29+02:00">
-        Apr
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Fortunately I have a pretty high traffic limit, which I would never reach with my VPS at <a href="https://www.hetzner.com/cloud" target="_blank">Hetzner Cloud</a>, but BunnyCDN now offers a new feature called “<a href="https://bunnycdn.com/blog/origin-shield-released/" target="_blank">Origin Shield</a>", which can help to significantly reduce traffic to your own server by adding a second cache layer between edge server and the origin. Nice! 👍</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-21 00:33:29+02:00" class="dt-published"></time>
-  Tue 21 Apr 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-20_Blogs" rel="bookmark" class="u-url"
-       title="Blogs" target="_blank">
-      <time class="m-date" datetime="2020-04-20 21:18:51+00:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Blogs
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>I’m really enjoying <a class="local" href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a class="url https outside" href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span style="display: inline-block; background: red; color: white; border-radius: 50%; width: 16pt; height: 16pt; text-align: center; line-height: 16pt; font-size: 11pt; font-weight: bold; font-family: mono;">99</p></span><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a class="url https outside" href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" rel="tag" title="Tag">Blogs</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-20 21:18:51+00:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://people.gnome.org/~michael/blog/2020-04-20.html" rel="bookmark" class="u-url"
-       title="2020-04-20 Monday" target="_blank">
-      <time class="m-date" datetime="2020-04-20 21:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      2020-04-20 Monday
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <ul> 
-    <li>
-        <a href="http://www.gnome.org/~michael/blog/2002-04-20.html">Wedding</a>
-    Anniversary - 18 happy years; managed to triumph in the card stakes: having a
-    backup emergency card stash in case of dis-organization paid off.
-    </li>
-    <li>
-        Planning call, mail chew, admin &amp; budgeting. Great to see our
-    <a href="https://www.collaboraoffice.com/">website</a> getting
-    internationalized nicely.
-    </li>
-    <li>
-        Lunch; sync call with Kendy, walk with the babes; hacked on proxy
-    pieces for a while.
-    </li>
-</ul>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-20 21:00:00+00:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://psifidotos.blogspot.com/2020/04/article-rounded-plasma-and-qt-csds.html" rel="bookmark" class="u-url"
        title="Article: Rounded Plasma and Qt CSDs?" target="_blank">
       <time class="m-date" datetime="2020-04-20 17:46:17+00:00">
@@ -662,62 +686,6 @@ to …
   on <time datetime="2020-04-20 11:07:47.233000-04:00" class="dt-published"></time>
   Mon 20 Apr 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.javierllorente.com/2020/04/20/qactus-v2-0-0-is-out/" rel="bookmark" class="u-url"
-       title="Qactus v2.0.0 is out!" target="_blank">
-      <time class="m-date" datetime="2020-04-20 11:21:06+00:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Qactus v2.0.0 is out!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <figure class="wp-block-image"><img alt="" class="wp-image-418" src="//www.javierllorente.com/wp-content/uploads/2020/04/Screenshot_20200420_000235-1024x713.png" /></figure>
-
-
-
-<p>Here it is! Qactus v2.0.0 has been released <img alt="🙂" class="wp-smiley" src="//s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" style="height: 1em;" /><br /> The main focus of this version has been on improving the browser.<br /><br />New features:</p>
-
-
-
-<ul>
-<li>Improved UI: revamped toolbar, new action toolbars for projects, packages, files and build results, new side bar icons</li>
-<li>Bookmarks: first version for the watchlist</li>
-<li>New package actions: submit, copy, link and properties</li>
-<li>New project action: properties</li>
-<li>MetaConfigEditor (beta): now it is possible to edit a project/package properties such as general info, repository, repository flags, users and groups</li>
-<li>New search widget (Ctrl+F) for BuildLogViewer</li>
-<li>Showing outgoing and declined requests</li>
-</ul>
-
-
-
-<p>Miscellaneous bugfixes and «hidden features» <img alt="😉" class="wp-smiley" src="//s.w.org/images/core/emoji/12.0.0-1/72x72/1f609.png" style="height: 1em;" /></p>
-
-
-
-<p><a href="https://github.com/javierllorente/qactus">Source code</a> – <a href="https://software.opensuse.org/package/qactus">RPM packages</a></p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Javier Llorente</b></span>
-  on <time datetime="2020-04-20 11:21:06+00:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1013,38 +981,6 @@ to perform the upgrade.
   on <time datetime="2020-04-14 00:00:00+00:00" class="dt-published"></time>
   Tue 14 Apr 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-12_Flowering_Trees" rel="bookmark" class="u-url"
-       title="Flowering Trees" target="_blank">
-      <time class="m-date" datetime="2020-04-12 07:32:25+00:00">
-        Apr
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Flowering Trees
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div class="page" lang="en"><p>Spring, when trees are flowering, is breathtaking.</p><ul><li><a class="url https outside" href="https://alexschroeder.ch/gallery/2020-flowering-trees/">Flowering Trees Album</a></li></ul><p>Tags: <a class="outside tag" href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" rel="tag" title="Tag">Pictures</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-12 07:32:25+00:00" class="dt-published"></time>
-  Sun 12 Apr 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1702,6 +1638,100 @@ HPy is a new project to …
   on <time datetime="2020-03-17 23:09:12.964000+01:00" class="dt-published"></time>
   Tue 17 Mar 2020
   in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://conda-forge.org/blog//2020/03/10/pypy" rel="bookmark" class="u-url"
+       title="PyPy builds on conda-forge" target="_blank">
+      <time class="m-date" datetime="2020-03-10 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PyPy builds on conda-forge
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>conda-forge now supports PyPy3.6 as the python interpreter in a conda environment</p>
+
+<p>Supported platforms are,</p>
+
+<ul>
+  <li>Linux-x86_64 (glibc 2.12 or newer)</li>
+  <li>OSX-x86_64 (OSX 10.9 or newer)</li>
+  <li>Linux-aarch64 (glibc 2.17 or newer)</li>
+  <li>Linux-ppc64le (glibc 2.17 or newer)</li>
+</ul>
+
+<h2 id="how-to-use-pypy">How to use PyPy</h2>
+
+<p>To use the PyPy builds you can do the following,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda config --set channel_priority strict
+   conda create -n pypy pypy
+   conda activate pypy
+</code></pre></div></div>
+
+<p>If you don’t have a conda installation already, you can use
+<a href="https://github.com/conda-forge/miniforge#miniforge-pypy3">miniforge-pypy3</a> which gives you a conda installation powered by
+pypy itself.</p>
+
+<p>However as of the writing of this post, not many conda packages
+can be installed into this environment, but noarch packages
+which do not depend on the python version nor the interpreter can be
+installed. For eg, mpmath is a noarch package without any dependencies.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   conda install mpmath    # succeeds
+   conda …</code></pre></div></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-10 00:00:00+00:00" class="dt-published"></time>
+  Tue 10 Mar 2020
+  in conda-forge blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://hynek.me/articles/python-github-actions/" rel="bookmark" class="u-url"
+       title="Python in GitHub Actions" target="_blank">
+      <time class="m-date" datetime="2020-03-09 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python in GitHub Actions
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>GitHub&rsquo;s own CI called <em>GitHub Actions</em> has been out of closed beta for a while and offers generous free quotas and a seamless integration with the rest of the site. Let&rsquo;s have a look on how to use it for an open source Python package.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
+  on <time datetime="2020-03-09 00:00:00+00:00" class="dt-published"></time>
+  Mon 09 Mar 2020
+  in Hynek Schlawak.
 </footer>
 <div class="m-clearfix-l"></div>
 
