@@ -95,7 +95,7 @@ github: publish
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 lint:
-	find $(INPUTDIR)  -path $(INPUTDIR)/pages -prune -o -name '*.rst' -print | xargs ./lint.py
+	find $(INPUTDIR)  -path $(INPUTDIR)/pages -prune -o -name '*.rst' -print | xargs python -m pelican_ashwinvis.util.lint
 
 kill: clean
 	bash -c 'pgrep -f pelican | xargs kill -9'
