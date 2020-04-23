@@ -3,7 +3,7 @@
 	"lang" : "en",
 	"name" : "Ashwin Vishnu Mohanan",
 	"scope" : "/",
-	"display" : "browser",
+	"display" : "fullscreen",
 	"start_url" : "https://ashwin.info.tm/",
 	"short_name" : "ashwin.info™",
 	"theme_color" : "#22272e",
