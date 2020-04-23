@@ -86,7 +86,7 @@ PLUGIN_PATHS = [
     "m.css/plugins",
     "plugins",
     #  "plugins/pelican-planet",
-    "plugins/webring/pelican/plugins/webring",
+    #  "plugins/webring/pelican/plugins/webring",
 ]
 PLUGINS = ["m.htmlsanity", "m.components", "m.code", "m.metadata"]
 
@@ -166,6 +166,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
     "ipynb.markup",
+    "webring",
     #  "pelican_planet",
     # "representative_image",
     # "tipue_search",
@@ -183,12 +184,15 @@ IPYNB_SKIP_CSS = False
 IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # pelican_planet / webring
-WEBRING_FEED_URLS = tuple(read_opml("planet.opml", ("Planets")).values())
+WEBRING_FEED_URLS = list(read_opml("planet.opml", ("Planets",)).values())
+print(WEBRING_FEED_URLS)
 PLANET_TEMPLATE = 'templates/planet.md.j2'
 PLANET_PAGE = 'content/pages/planet.md'
 WEBRING_ARTICLES_PER_FEED = 2
 WEBRING_MAX_ARTICLES = max(42, WEBRING_ARTICLES_PER_FEED * len(WEBRING_FEED_URLS))
 WEBRING_SUMMARY_LENGTH = 140
+TEMPLATE_PAGES = {"planet.html": "pages/planet.html"}
+
 
 # Pagination
 DEFAULT_PAGINATION = 10
