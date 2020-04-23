@@ -72,13 +72,10 @@ M_CSS_FILES = [
     # "https://fontlibrary.org/face/source-code-pro",
     # "https://fontlibrary.org/face/source-sans-pro",
     ## Patched open font library css
-    "/static/source-code-pro.css",
-    "/static/source-sans-pro.css",
+    #  "/static/pygments-dark.css",
+    ## Generated using postprocess.sh
     "/static/m-dark.css",
-    "/static/bibbase-m.css",
-    "/static/custom.css",
-    # "/static/pygments-dark.css",
-    "/static/landing.css",
+    "/static/custom.compiled.css",
 ]
 M_THEME_COLOR = "#22272e"
 
