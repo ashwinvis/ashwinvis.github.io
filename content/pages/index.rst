@@ -31,7 +31,7 @@ Welcome
                     <span class="landing-sym">(</span>
                     <br/>
                   </span>
-                  <span class="landing-prompt">…&nbsp;</span><span>&nbsp;</span>
+                  <span class="landing-prompt">...&nbsp;</span><span>&nbsp;</span>
                   <a class="p-name u-url"
                      href="https://ashwin.info.tm"
                   >
@@ -40,7 +40,7 @@ Welcome
                   </a>
                   <span class="m-thin">
                     <br/>
-                    <span class="landing-prompt">… </span>
+                    <span class="landing-prompt">... </span>
                     <span class="landing-sym">)</span>
                     <span class="landing-ticker">|</span>
                   </span>
@@ -51,8 +51,19 @@ Welcome
         .. container:: m-col-l-6 m-push-l-1 m-col-m-7 m-nopadt
 
 
-            *Welcome!*
-            I am a postdoctoral researcher at :p-org:`MISU, Stockholm University`.
+            .. container:: m-block m-primary m-badge
+
+               .. image:: /images/dp_ashwin_2016.jpg
+                  :alt: Portrait of Ashwin taken in Paris, 2016
+
+               .. raw:: html
+
+                  <h3>
+                    <code>$ whoami</code>
+                  </h3>
+
+               Postdoc at :p-org:`MISU, Stockholm University`,
+               research software developer, blogger and a person
 
             My current research concerns with atmospheric boundary layer
             turbulence studied using large-eddy simulations (LES).  *Other

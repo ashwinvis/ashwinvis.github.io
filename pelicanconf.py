@@ -61,6 +61,7 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
+CACHE_CONTENT = True
 
 M_CSS_FILES = [
     # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
@@ -81,13 +82,20 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGIN_PATHS = ["m.css/plugins", "plugins", "plugins/pelican-planet"]
-PLUGINS = ["m.htmlsanity", "m.components", "m.code"]
+PLUGIN_PATHS = [
+    "m.css/plugins",
+    "plugins",
+    #  "plugins/pelican-planet",
+    "plugins/webring/pelican/plugins/webring",
+]
+PLUGINS = ["m.htmlsanity", "m.components", "m.code", "m.metadata"]
 
-M_FAVICON = ("/images/SU_logo.png", "image/png")
-M_BLOG_FAVICON = M_FAVICON
-M_SITE_LOGO = "/images/SU_logo.png"
+M_SITE_LOGO = "/images/logo_ashwin.png"
 M_SITE_LOGO_TEXT = "Home"
+M_FAVICON = (M_SITE_LOGO, "image/png")
+M_BLOG_FAVICON = M_FAVICON
+# m.metadata
+FORMATTED_FIELDS = ['description', 'badge']
 
 # Navbar
 M_LINKS_NAVBAR1 = [
@@ -158,7 +166,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
     "ipynb.markup",
-    "pelican_planet",
+    #  "pelican_planet",
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
@@ -174,13 +182,13 @@ IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
 IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
-# pelican_planet
-PLANET_FEEDS = {}  # read_opml("planet.opml", ("News", "Tech"))
+# pelican_planet / webring
+WEBRING_FEED_URLS = tuple(read_opml("planet.opml", ("Planets")).values())
 PLANET_TEMPLATE = 'templates/planet.md.j2'
 PLANET_PAGE = 'content/pages/planet.md'
-PLANET_MAX_ARTICLES_PER_FEED = 2
-PLANET_MAX_ARTICLES = max(42, PLANET_MAX_ARTICLES_PER_FEED * len(PLANET_FEEDS))
-PLANET_MAX_SUMMARY_LENGTH = 140
+WEBRING_ARTICLES_PER_FEED = 2
+WEBRING_MAX_ARTICLES = max(42, WEBRING_ARTICLES_PER_FEED * len(WEBRING_FEED_URLS))
+WEBRING_SUMMARY_LENGTH = 140
 
 # Pagination
 DEFAULT_PAGINATION = 10
