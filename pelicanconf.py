@@ -11,9 +11,10 @@ import shutil
 import logging
 from datetime import datetime
 
-sys.path.append(os.curdir)
-from util import read_opml
-
+import m
+import pelican_ashwinvis as av
+from pelican.plugins import webring
+from pelican_ashwinvis.util.util import read_opml
 
 
 AUTHOR = "Ashwin Vishnu Mohanan"
@@ -61,7 +62,8 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
-CACHE_CONTENT = True
+#  CACHE_CONTENT = True
+LOAD_CONTENT_CACHE = False
 
 M_CSS_FILES = [
     # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
@@ -83,15 +85,15 @@ with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
 PLUGIN_PATHS = [
-    "m.css/plugins",
-    "plugins",
+    "plugins/",
+    #  "m.css/plugins/",
     #  "plugins/pelican-planet",
     #  "plugins/webring/pelican/plugins/webring",
 ]
-PLUGINS = ["m.htmlsanity", "m.components", "m.code", "m.metadata"]
+PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
-M_SITE_LOGO_TEXT = "Home"
+M_SITE_LOGO_TEXT = "ashwin.info™"
 M_FAVICON = (M_SITE_LOGO, "image/png")
 M_BLOG_FAVICON = M_FAVICON
 # m.metadata
@@ -165,8 +167,8 @@ if not shutil.which('latex'):
 M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
-    "ipynb.markup",
-    "webring",
+    webring,
+    av.ipynb.markup,
     #  "pelican_planet",
     # "representative_image",
     # "tipue_search",
