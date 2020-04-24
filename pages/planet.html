@@ -132,6 +132,41 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://valdyas.org/fading/hacking/its-almost-a-day-job/" rel="bookmark" class="u-url"
+       title="It’s almost a day job…" target="_blank">
+      <time class="m-date" datetime="2020-04-24 09:48:36+00:00">
+        Apr
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      It’s almost a day job…
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Following the <a href="https://lists.qt-project.org/pipermail/development/2020-April/039278.html">discussions about QVector and QList</a> on the <a href="https://lists.qt-project.org/listinfo/development">qt development mailing list</a> is almost a dayjob, I sighed on krita’s irc channel, this morning. It’s also slightly amusing, and it ties in with something I’ve been thinking about lately.</p>
+<p><span></span></p>
+<p>When my KDE Neon installation updated to Qt 5.14, I noticed that I got a <em>lot</em> more warnings than before. And those warnings were all about fresh, new deprecations. I spent two days updating our code to weed out the deprecated constructions, and as a result, our code became buggier.</p>
+<p>In particular, the deprecation of QList::toSet, QList::fromSet, QSet::toList and QSet::fromList. Now, in Krita we used these methods a lot, mostly to make sure we’ve got only unique values in a list. All in all, about 72 times. The new equivalent is …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Boudewijn Rempt (boud)</b></span>
+  on <time datetime="2020-04-24 09:48:36+00:00" class="dt-published"></time>
+  Fri 24 Apr 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://kdenlive.org/en/2020/04/kdenlive-20-04-is-out/" rel="bookmark" class="u-url"
        title="Kdenlive 20.04 is out" target="_blank">
       <time class="m-date" datetime="2020-04-24 06:00:56+00:00">
@@ -329,41 +364,6 @@ Project Bin
   on <time datetime="2020-04-23 19:30:00+02:00" class="dt-published"></time>
   Thu 23 Apr 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://kde.org/announcements/releases/2020-04-apps-update/" rel="bookmark" class="u-url"
-       title="KDE's April 2020 Apps Update" target="_blank">
-      <time class="m-date" datetime="2020-04-23 13:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          23
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KDE's April 2020 Apps Update
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>A new bundle of KDE applications is here! In these releases, you can expect to find more features, stability improvements, and more user-friendly tools that will help you work more effectively.</p>
-<p>There are dozens of changes to look forward to in most of your favorite applications. Take Dolphin, for example. Windows Samba shares are now fully discoverable.</p>
-<p>On the topic of playing music: the Elisa music player is adding features by leaps and bounds. This release brings a new “Now Playing” view, easy accessibility through the system tray, and an option to minimize the playlist whenever you want. Thanks to the recently-added visual shuffle mode, it’s much easier to rearrange your music in the playlists.</p>
-<p>These are just the highlights of what’s new in KDE’s applications this month. Read on to find out about everything we’ve …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDE Release Service</b></span>
-  on <time datetime="2020-04-23 13:00:00+00:00" class="dt-published"></time>
-  Thu 23 Apr 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
