@@ -9,7 +9,14 @@
 
    <script>
    if('serviceWorker' in navigator) {{
-      navigator.serviceWorker.register('./static/sw.js');
-      console.log("serviceWorker registered");
+      navigator.serviceWorker.register('/sw.js').then(
+        (registration) => {{
+          console.log('serviceWorker registered with scope: ', registration.scope);
+        }}
+      ).catch(
+        (err) => {{
+          console.log('serviceWorker registration failed: ', err);
+        }}
+      );
    }};
    </script>

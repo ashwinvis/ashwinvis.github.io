@@ -49,10 +49,13 @@ DEFAULT_METADATA = {
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
-STATIC_PATHS = ["images", "showcase", "pdf", "static", "extra/robots.txt"]
+STATIC_PATHS = ["images", "showcase", "pdf", "static"]
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
+    f'extra/{resource}': {'path': resource}
+    for resource in ("robots.txt", "manifest.webmanifest", "sw.js")
 }
+STATIC_PATHS.extend(EXTRA_PATH_METADATA)
+
 DIRECT_TEMPLATES = (
     "index",
     "tags",
