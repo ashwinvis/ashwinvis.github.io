@@ -1,6 +1,10 @@
 /* https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
  * */
-var cacheName = 'ashwin-info-tm-v1'
+var currentDate = new Date()
+var date = currentDate.getDate().toString()
+var month = currentDate.getMonth().toString()
+var year = currentDate.getFullYear().toString()
+var cacheName = 'ashwin-info-tm-v' + year + '.' + month + '.' + date
 var contentToCache = [
   '/',
   '/app.js',
@@ -40,6 +44,19 @@ self.addEventListener('fetch', function (e) {
           return response
         })
       })
+    })
+  )
+})
+
+// Clear cache that we do not need
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function (key) {
+        if (key !== cacheName) {
+          return caches.delete(key)
+        }
+      }))
     })
   )
 })
