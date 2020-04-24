@@ -49,10 +49,13 @@ DEFAULT_METADATA = {
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
-STATIC_PATHS = ["images", "showcase", "pdf", "static", "extra/robots.txt"]
+STATIC_PATHS = ["images", "showcase", "pdf", "static"]
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
+    f'extra/{resource}': {'path': resource}
+    for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js")
 }
+STATIC_PATHS.extend(EXTRA_PATH_METADATA)
+
 DIRECT_TEMPLATES = (
     "index",
     "tags",
@@ -72,13 +75,10 @@ M_CSS_FILES = [
     # "https://fontlibrary.org/face/source-code-pro",
     # "https://fontlibrary.org/face/source-sans-pro",
     ## Patched open font library css
-    "/static/source-code-pro.css",
-    "/static/source-sans-pro.css",
+    #  "/static/pygments-dark.css",
+    ## Generated using postprocess.sh
     "/static/m-dark.css",
-    "/static/bibbase-m.css",
-    "/static/custom.css",
-    # "/static/pygments-dark.css",
-    "/static/landing.css",
+    "/static/custom.compiled.css",
 ]
 M_THEME_COLOR = "#22272e"
 

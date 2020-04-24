@@ -1,0 +1,16 @@
+{
+	"name" : "Ashwin Vishnu Mohanan",
+	"display" : "standalone",
+	"start_url" : "/archives.html",
+	"short_name" : "ashwin.info™",
+	"theme_color" : "#22272e",
+	"description" : "Personal website and blog",
+	"background_color" : "#22272e",
+	"icons" : [
+		{
+			"src": "/images/logo_ashwin.png",
+            "type": "image/png",
+			"sizes": "192x192"
+		}
+    ]
+}
