@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Posts tagged fluidsim | Ashwin Vishnu&#39;s Website</title>
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/source-code-pro.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/bibbase-m.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,24 +44,31 @@
   https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
   https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
   -->
-  <meta http-equiv="Content-Security-Policy"
-        content="
-        upgrade-insecure-requests;
-        default-src https:;
-        style-src https://bibbase.org 'unsafe-inline' 'self';
-        script-src
-          http://cdnjs.cloudflare.com
-          https://bibbase.org
-          http://ajax.googleapis.com
-          'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org;
-         img-src 'self' https:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
-        "
-  >
+  <!-- <meta http-equiv="Content-Security-Policy" -->
+  <!--       content=" -->
+  <!--       upgrade-insecure-requests; -->
+  <!--       default-src https:; -->
+  <!--       style-src https://bibbase.org 'unsafe-inline' 'self'; -->
+  <!--       script-src -->
+  <!--         http://cdnjs.cloudflare.com -->
+  <!--         https://bibbase.org -->
+  <!--         http://ajax.googleapis.com -->
+  <!--         'unsafe-inline' 'unsafe-eval' 'self'; -->
+  <!--        font-src https://fontlibrary.org; -->
+  <!--        img-src 'unsafe-inline' self' https:; -->
+  <!--        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se; -->
+  <!--        worker-src 'self'; -->
+  <!--       " -->
+  <!-- > -->
+
 
   <!-- Progressive web app -->
-  <link rel='manifest' href='/static/manifest.json'>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ashwin.info™">
+  <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
+  <link rel='manifest' href='/static/manifest.webmanifest'>
+  <script src="app.js" defer></script>
 </head>
 <body>
 <header><nav id="navigation">
