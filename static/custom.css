@@ -1,18 +1,3 @@
 .mastodon-embed {
 	width: 100% !important;
 }
-
-/* Fix accessibility issues */
-a {
-  color: #66b6ff;
-  text-decoration: none;
-}
-
-article a:hover {
-  text-decoration: underline;
-  text-decoration-style: dashed;
-}
-
-.m-button a:hover, header a:hover {
-  text-decoration: none;
-}
