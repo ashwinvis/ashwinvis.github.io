@@ -12,7 +12,7 @@ from cookiecutter import generate, prompt
 from jinja2 import Environment, FileSystemLoader
 from webmentiontools.send import WebmentionSend
 
-here = Path(__file__).parent
+here = Path(__file__).parent / ".." / ".." / ".."
 sys.path.append(here)
 os.chdir(here)
 
@@ -35,7 +35,7 @@ def write():
 @write.command(**click_kwargs)
 @click.argument("files", nargs=-1, type=click.Path())
 def modify(files):
-    content = Path(__file__).parent / "content"
+    content = here / "content"
     if not files:
         all_files = [f for f in content.glob("*") if f.is_file()]
         for i, f in enumerate(all_files):
@@ -55,6 +55,7 @@ def modify(files):
             filename = content / filename
 
         edit(filename)
+        git_prompt(filename)
 
 
 def bridgy(slug, posse):
@@ -105,7 +106,6 @@ def bridgy(slug, posse):
 def new(no_input, write_post, open_editor):
     template_filetypes = ["md", "rst", "ipynb"]
 
-    here = Path(__file__).parent
     now = datetime.utcnow()
     today = date.today()
 
@@ -157,6 +157,16 @@ def new(no_input, write_post, open_editor):
         edit(filename)
 
     slug = cc["slug"]
+    git_prompt(filename, slug)
+
+    if prompt.read_user_yes_no("Webmention bridgy to syndicate?", False):
+        bridgy(slug, "mastodon")
+
+
+def git_prompt(filename, slug=None):
+    if not slug:
+        slug = Path(filename).stem
+
     if prompt.read_user_yes_no("Track changes?", True):
         subprocess.run(["git", "add", filename])
 
@@ -168,9 +178,6 @@ def new(no_input, write_post, open_editor):
 
     if prompt.read_user_yes_no("Push changes?", False):
         subprocess.run(["git", "push", "--set-upstream", "origin", "HEAD"])
-
-    if prompt.read_user_yes_no("Webmention bridgy to syndicate?", False):
-        bridgy(slug, "mastodon")
 
 
 if __name__ == "__main__":
