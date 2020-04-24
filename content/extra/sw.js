@@ -1,7 +1,7 @@
 /* https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
  * */
 var cacheName = 'ashwin-info-tm-v1'
-var urlsToCache = [
+var contentToCache = [
   '/',
   '/index.html',
   '/archives.html',

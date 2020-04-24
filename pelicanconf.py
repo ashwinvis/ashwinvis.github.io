@@ -52,7 +52,7 @@ THEME_STATIC_DIR = "static"
 STATIC_PATHS = ["images", "showcase", "pdf", "static"]
 EXTRA_PATH_METADATA = {
     f'extra/{resource}': {'path': resource}
-    for resource in ("robots.txt", "manifest.webmanifest", "sw.js")
+    for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js")
 }
 STATIC_PATHS.extend(EXTRA_PATH_METADATA)
 
