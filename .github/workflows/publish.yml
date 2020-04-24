@@ -6,6 +6,10 @@ on:
       - develop
   schedule:
     - cron:  '* */6 * * *'
+      branches:
+        include:
+        - develop
+      always: true
 
 env:
   PIP_CACHE_DIR: ~/.cache/pip
