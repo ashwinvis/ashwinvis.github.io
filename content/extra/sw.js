@@ -47,3 +47,16 @@ self.addEventListener('fetch', function (e) {
     })
   )
 })
+
+// Clear cache that we do not need
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function (key) {
+        if (key !== cacheName) {
+          return caches.delete(key)
+        }
+      }))
+    })
+  )
+})
