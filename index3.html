@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/source-code-pro.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/source-sans-pro.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/bibbase-m.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/landing.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link rel="prev" href="https://ashwin.info.tm/index2.html" />
   <link rel="next" href="https://ashwin.info.tm/index4.html" />
@@ -46,30 +50,24 @@
   https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
   https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
   -->
-  <!-- <meta http-equiv="Content-Security-Policy" -->
-  <!--       content=" -->
-  <!--       upgrade-insecure-requests; -->
-  <!--       default-src https:; -->
-  <!--       style-src https://bibbase.org 'unsafe-inline' 'self'; -->
-  <!--       script-src -->
-  <!--         http://cdnjs.cloudflare.com -->
-  <!--         https://bibbase.org -->
-  <!--         http://ajax.googleapis.com -->
-  <!--         'unsafe-inline' 'unsafe-eval' 'self'; -->
-  <!--        font-src https://fontlibrary.org; -->
-  <!--        img-src 'unsafe-inline' self' https:; -->
-  <!--        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se; -->
-  <!--        worker-src 'self'; -->
-  <!--       " -->
-  <!-- > -->
-
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        upgrade-insecure-requests;
+        default-src https:;
+        style-src https://bibbase.org 'unsafe-inline' 'self';
+        script-src
+          http://cdnjs.cloudflare.com
+          https://bibbase.org
+          http://ajax.googleapis.com
+          'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org;
+         img-src 'self' https:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
+        "
+  >
 
   <!-- Progressive web app -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="ashwin.info™">
-  <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
-  <link rel='manifest' href='/static/manifest.webmanifest'>
+  <link rel='manifest' href='/static/manifest.json'>
 </head>
 <body>
 <header><nav id="navigation">
@@ -395,19 +393,6 @@
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
-        <script>
-        if('serviceWorker' in navigator) {
-           navigator.serviceWorker.register('/sw.js').then(
-             (registration) => {
-               console.log('serviceWorker registered with scope: ', registration.scope);
-             }
-           ).catch(
-             (err) => {
-               console.log('serviceWorker registration failed: ', err);
-             }
-           );
-        };
-        </script>
       </div>
     </div>
   </div>
