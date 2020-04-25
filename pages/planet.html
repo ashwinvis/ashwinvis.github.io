@@ -132,6 +132,89 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://jlelse.blog/micro/2020/04/blog-microservices/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-04-25 12:34:03+02:00">
+        Apr
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>While in the beginning I integrated almost everything directly into my <a href="https://jlel.se/hugomp">hugo-micropub</a> tool, I now build separate tools for new features that can be used independently (<a href="https://jlel.se/wmhelper">like this one</a> or <a href="https://jlel.se/jftg">this</a>). Most of them simply use the JSON Feed as a kind of API to get information about published articles. Not real microservices, but it goes in that direction.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-25 12:34:03+02:00" class="dt-published"></time>
+  Sat 25 Apr 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.volkerkrause.eu/2020/04/25/kpublictransport-contribute-line-metadata.html" rel="bookmark" class="u-url"
+       title="Contributing Public Transport Metadata" target="_blank">
+      <time class="m-date" datetime="2020-04-25 08:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Contributing Public Transport Metadata
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>In the last post I described how we handle <a href="/2020/04/18/kpublictransport-line-metadata.html">public transport line metadata</a>
+in <a href="https://phabricator.kde.org/project/profile/308/">KPublicTransport</a>, and what we use that for.
+Here’s now how you can help to review and improve these information in <a href="https://wikidata.org">Wikidata</a> and
+<a href="https://openstreetmap.org">OpenStreetMap</a>, where it not only benefits KPublicTransport, but everyone.</p>
+
+OpenStreetMap
+
+<p>Let’s consider <a href="https://en.wikipedia.org/wiki/U1_(Berlin_U-Bahn)">Berlin’s subway line U1</a> as an example
+on how things are ideally represented in OSM and Wikidata.</p>
+
+<p>As a single bi-directional line, there are three relevant elements in OSM for this:</p>
+<ul>
+  <li>A <code>route_master</code> relation describing the line: <a href="https://www.openstreetmap.org/relation/58767">relation 58767</a>.</li>
+  <li>Two <code>route</code> relations describing the routes back and forth: <a href="https://www.openstreetmap.org/relation/2669205">relation 2669205</a>
+and <a href="https://www.openstreetmap.org/relation/2669206">relation 2669206</a>. For lines with
+complex branching (such as e.g. London’s <a href="https://en.wikipedia.org/wiki/Northern_line">Northern Line</a>) there can be
+more of those as well.</li>
+</ul>
+
+<p>We have some heuristics to merge <code>route</code> elements without a <code>route_master</code> as well, but things …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-04-25 08:00:00+00:00" class="dt-published"></time>
+  Sat 25 Apr 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://pointieststick.com/2020/04/24/this-week-in-kde-so-many-videos-for-you/" rel="bookmark" class="u-url"
        title="This week in KDE: so many videos for you" target="_blank">
       <time class="m-date" datetime="2020-04-25 04:41:05+00:00">
@@ -151,13 +234,13 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <p>Work proceeds on the Breeze Evolution task for Plasma 5.19. In particular, the <a href="https://phabricator.kde.org/T10470">System Tray visual overhaul subtask</a> is nearly complete and our tray popups are looking better than ever:
 </p><div>
 
-<video><a href="http://s1.webmshare.com/7q3MK.webm">http://s1.webmshare.com/7q3MK.webm</a></video>
+<video><source src="//s1.webmshare.com/7q3MK.webm?_=1" type="video/webm"><a href="http://s1.webmshare.com/7q3MK.webm">http://s1.webmshare.com/7q3MK.webm</a></video>
 </div>
 <p>Other work is proceeding nicely as well!</p>
 New Features
 <ul>
 <li>Elisa’s top bar <a href="https://invent.kde.org/kde/elisa/-/merge_requests/94">is now responsive to the window size and device form factor, so it looks good with a portrait orientation window/device and can scale down to be really tiny</a> (Dami Erny, Elisa 20.08.0):
-<div><video><a href="http://s1.webmshare.com/Yzj1E.webm">http://s1.webmshare.com/Yzj1E.webm</a></video></div>
+<div><video><source src="//s1.webmshare.com/Yzj1E.webm?_=2" type="video/webm"><a href="http://s1.webmshare.com/Yzj1E.webm">http://s1.webmshare.com/Yzj1E.webm</a></video></div>
 </li>
 <li>Gwenview <a href="https://phabricator.kde.org/D28480">now saves the size of the last-used crop box, so you can quickly crop multiple images to the same size in rapid succession</a> (Mario Aichinger, Gwenview 20 …</li></ul>
   </div>
@@ -206,49 +289,6 @@ Python 2.7 has been under active development since the release of Python 2.6, mo
   on <time datetime="2020-04-24 23:42:42.239000-04:00" class="dt-published"></time>
   Fri 24 Apr 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://nxos.org/weekly-summaries/maui-weekly-report-4/" rel="bookmark" class="u-url"
-       title="Maui Weekly Report 4" target="_blank">
-      <time class="m-date" datetime="2020-04-25 00:01:57+00:00">
-        Apr
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Maui Weekly Report 4
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Today, we bring you a new report on the Maui Project progress.</p>
-<p>Are you a developer and want to start developing cross-platform and convergent apps, targeting, among other things, the upcoming Linux Mobile devices? Then join us on Telegram:<a href="https://t.me/mauiproject"> https://t.me/mauiproject</a>.</p>
-<p>If you are interested in testing this project and helping out with translations or documentation, you are also more than welcome.</p>
-<p>The Maui Project is free software from the KDE Community developed by the Nitrux team.
-This post contains some code snippets to give you an idea of how to use MauiKit. For more detailed documentation, get in touch with us or subscribe to the news feed to keep up to date with the upcoming tutorial.</p>
-<p>We are present on Twitter and Mastodon:
-<a href="https://twitter.com/maui_project">https://twitter.com/maui_project</a>
-<a href="https://mastodon.technology/@mauiproject">https://mastodon.technology/@mauiproject</a></p>
-
-MauiKit Controls
-ToolBar
-<p>New properties have …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Maui Project</b></span>
-  on <time datetime="2020-04-25 00:01:57+00:00" class="dt-published"></time>
-  Sat 25 Apr 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -412,44 +452,6 @@ ToolBar
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
   on <time datetime="2020-04-23 22:21:03+02:00" class="dt-published"></time>
-  Thu 23 Apr 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/dev/backup-postgres-resticker/" rel="bookmark" class="u-url"
-       title="Backup a dockerized Postgres database with Resticker" target="_blank">
-      <time class="m-date" datetime="2020-04-23 19:30:00+02:00">
-        Apr
-        <span class="m-date-day">
-          23
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Backup a dockerized Postgres database with Resticker
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>I got the question how to solve the problem that when backing up the storage of a dockerized Postgres database (using Resticker) it could be that the backup is corrupt because the database is still running.</p>
-<p><em>This is an addition to <a href="https://jlelse.blog/dev/restic-docker/">my post of how to backup Docker volumes using resticker</a>.</em></p>
-<p>I had exactly the same problem. I wanted to backup a Postgres database running in a Docker container without having to stop the database or have a corrupt backup.</p>
-<p>Therefore I have extended Resticker, so that it is possible to <a href="https://github.com/djmaze/resticker#execute-commands-prior-to-backup">execute additional commands before the backup execution</a>. To access other Docker containers, the Docker socket must be mounted. So it is possible to create a database dump and backup it instead of the volume of the database itself.</p>
-<p>Here’s the relevant part from the <a href="https://github.com/djmaze/resticker">Resticker</a> documentation:</p>
-<blockquote>
-<p>To do …</p></blockquote>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-23 19:30:00+02:00" class="dt-published"></time>
   Thu 23 Apr 2020
   in jlelse's Blog.
 </footer>
