@@ -280,6 +280,60 @@ What’s new
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-25_Island_generator_using_J" rel="bookmark" class="u-url"
+       title="Island generator using J" target="_blank">
+      <time class="m-date" datetime="2020-04-25 20:41:17+00:00">
+        Apr
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Island generator using J
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>I’m trying to write an island generator in J. It’s hard. Every time I look at the documentation I’m close to tears. I feel so dumb. But like many hard things in life, if it works, suddenly you feel so smart. Now I feel smart. 😁</p><p>These were my notes:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-04-25_Island_generator_using_J"><img alt="Image 1 for 2020-04-25 Island generator using J" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-04-25_Island_generator_using_J" title="Image 1 for 2020-04-25 Island generator using J"></a></p><p>Here’s what the code looks like:</p><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-04-25_Island_generator_using_J"><img alt="Image 2 for 2020-04-25 Island generator using J" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-04-25_Island_generator_using_J" title="Image 2 for 2020-04-25 Island generator using J"></a></p><p>That is:</p><pre>mx =: 30
+my =: 20
+
+NB. a table of complex numbers
+c =: (i. my) j./ i. mx
+
+NB. a table of altitudes
+a =: (my, mx) $ _2
+
+NB. a table with the hotspot
+hr =: 5
+hy =: hr + 1
+hx  =: &lt;. 0.5 + (my % 3) + ? &lt;. 0.5 + my % 3
+hc =: hx j. hy
+r =: ? (my, mx) $ 0
+h =: 0.8 &lt; r * hr &gt; {. &amp; *. c - hc
+
+NB. a list of translations
+d =: _1j0 0j1 0j1 1j0
+s =: ( ? 30 # # d ) { d
+
+NB. start loop
+m =: m …</pre></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-25 20:41:17+00:00" class="dt-published"></time>
+  Sat 25 Apr 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://samthursfield.wordpress.com/2020/04/25/tracker-documentation-improvements/" rel="bookmark" class="u-url"
        title="Tracker documentation improvements" target="_blank">
       <time class="m-date" datetime="2020-04-25 11:31:29+00:00">
@@ -757,6 +811,38 @@ We need to differentiate between two cases: Changing the expiration date of a su
   on <time datetime="2020-04-21 09:40:14.096000-04:00" class="dt-published"></time>
   Tue 21 Apr 2020
   in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-04-20_Blogs" rel="bookmark" class="u-url"
+       title="Blogs" target="_blank">
+      <time class="m-date" datetime="2020-04-20 21:18:51+00:00">
+        Apr
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Blogs
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>I’m really enjoying <a href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span>99</span></p><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" title="Tag">Blogs</a></p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-04-20 21:18:51+00:00" class="dt-published"></time>
+  Mon 20 Apr 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1609,100 +1695,6 @@ HPy is a new project to …
   on <time datetime="2020-03-17 23:09:12.964000+01:00" class="dt-published"></time>
   Tue 17 Mar 2020
   in PyPy Status Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://conda-forge.org/blog//2020/03/10/pypy" rel="bookmark" class="u-url"
-       title="PyPy builds on conda-forge" target="_blank">
-      <time class="m-date" datetime="2020-03-10 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PyPy builds on conda-forge
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>conda-forge now supports PyPy3.6 as the python interpreter in a conda environment</p>
-
-<p>Supported platforms are,</p>
-
-<ul>
-  <li>Linux-x86_64 (glibc 2.12 or newer)</li>
-  <li>OSX-x86_64 (OSX 10.9 or newer)</li>
-  <li>Linux-aarch64 (glibc 2.17 or newer)</li>
-  <li>Linux-ppc64le (glibc 2.17 or newer)</li>
-</ul>
-
-How to use PyPy
-
-<p>To use the PyPy builds you can do the following,</p>
-
-<div><div><pre><code>   conda config --set channel_priority strict
-   conda create -n pypy pypy
-   conda activate pypy
-</code></pre></div></div>
-
-<p>If you don’t have a conda installation already, you can use
-<a href="https://github.com/conda-forge/miniforge#miniforge-pypy3">miniforge-pypy3</a> which gives you a conda installation powered by
-pypy itself.</p>
-
-<p>However as of the writing of this post, not many conda packages
-can be installed into this environment, but noarch packages
-which do not depend on the python version nor the interpreter can be
-installed. For eg, mpmath is a noarch package without any dependencies.</p>
-
-<div><div><pre><code>   conda install mpmath    # succeeds
-   conda …</code></pre></div></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-10 00:00:00+00:00" class="dt-published"></time>
-  Tue 10 Mar 2020
-  in conda-forge blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://hynek.me/articles/python-github-actions/" rel="bookmark" class="u-url"
-       title="Python in GitHub Actions" target="_blank">
-      <time class="m-date" datetime="2020-03-09 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python in GitHub Actions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>GitHub&rsquo;s own CI called <em>GitHub Actions</em> has been out of closed beta for a while and offers generous free quotas and a seamless integration with the rest of the site. Let&rsquo;s have a look on how to use it for an open source Python package.</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
-  on <time datetime="2020-03-09 00:00:00+00:00" class="dt-published"></time>
-  Mon 09 Mar 2020
-  in Hynek Schlawak.
 </footer>
 <div class="m-clearfix-l"></div>
 
