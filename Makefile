@@ -83,6 +83,8 @@ endif
 
 publish:
 	$(PELICAN) -v $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+
+cname:
 	cd $(BASEDIR)
 	$(PY) -c "from publishconf import *; print(SITEURL, end='')" > $(OUTPUTDIR)/CNAME
 

@@ -54,11 +54,9 @@ jobs:
 
     - name: Deploy to GitHub Pages
       if: success()
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./output
-        SCRIPT_MODE: true
-      run: |
-        wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh
-        bash ./entrypoint.sh
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        actions_deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_branch: master
+        publish_dir: ./output
+        cname: ashwin.info.tm
