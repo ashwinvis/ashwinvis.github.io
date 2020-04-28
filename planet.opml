@@ -47,6 +47,7 @@
         <outline title="conda-forge blog" text="conda-forge blog" type="rss" htmlUrl="https://conda-forge.org/blog/" xmlUrl="https://conda-forge.org/blog/atom.xml"/>
         <outline title="Ekaitz's tech blog" text="Ekaitz's tech blog" type="rss" htmlUrl="https://ekaitz.elenq.tech/" xmlUrl="https://ekaitz.elenq.tech/feeds/all.atom.xml"/>
         <outline title="Fortran Newsletter" text="Fortran Newsletter" type="rss" htmlUrl="https://fortran-lang.org" xmlUrl="https://fortran-lang.org/news.xml"/>
+        <outline title="Research Software Hour" text="Research Software Hour" type="rss" htmlUrl="https://researchsoftwarehour.github.io" xmlUrl="https://researchsoftwarehour.github.io/feed.xml"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
