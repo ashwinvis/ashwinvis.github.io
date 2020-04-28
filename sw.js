@@ -1,10 +1,10 @@
-/* https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
- * */
-var currentDate = new Date()
-var date = currentDate.getDate().toString()
-var month = currentDate.getMonth().toString()
-var year = currentDate.getFullYear().toString()
-var cacheName = 'ashwin-info-tm-v' + year + '.' + month + '.' + date
+/* References
+-------------
+https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers
+https://serviceworke.rs/strategy-network-or-cache_service-worker_doc.html
+https://github.com/mozilla/serviceworker-cookbook
+ */
+var CACHE = 'ashwin-info-tm-v20.04'
 var contentToCache = [
   '/',
   '/app.js',
@@ -21,42 +21,55 @@ var contentToCache = [
   '/images/dp_ashwin_2016.jpg'
 ]
 
-// Installing Service Worker
-self.addEventListener('install', function (e) {
-  console.log('[Service Worker] Install')
-  e.waitUntil(
-    caches.open(cacheName).then(function (cache) {
-      console.log('[Service Worker] Caching all: app shell and content')
-      return cache.addAll(contentToCache)
-    })
-  )
+// On install, cache some resource.
+self.addEventListener('install', function (evt) {
+  console.log('[Service Worker] The service worker is being installed.')
+
+  // Ask the service worker to keep installing until the returning promise
+  // resolves.
+  evt.waitUntil(precache())
 })
 
-// Fetching content using Service Worker
-self.addEventListener('fetch', function (e) {
-  e.respondWith(
-    caches.match(e.request).then(function (r) {
-      console.log('[Service Worker] Fetching resource: ' + e.request.url)
-      return r || fetch(e.request).then(function (response) {
-        return caches.open(cacheName).then(function (cache) {
-          console.log('[Service Worker] Caching new resource: ' + e.request.url)
-          cache.put(e.request, response.clone())
-          return response
-        })
-      })
-    })
-  )
+// On fetch, use cache but update the entry with the latest contents
+// from the server.
+self.addEventListener('fetch', function (evt) {
+  console.log('[Service Worker] The service worker is serving the asset.')
+  // Try network and if it fails, go for the cached copy.
+  evt.respondWith(fromNetwork(evt.request, 400).catch(function () {
+    return fromCache(evt.request)
+  }))
 })
 
-// Clear cache that we do not need
-self.addEventListener('activate', function (e) {
-  e.waitUntil(
-    caches.keys().then(function (keyList) {
-      return Promise.all(keyList.map(function (key) {
-        if (key !== cacheName) {
-          return caches.delete(key)
-        }
-      }))
+// Open a cache and use `addAll()` with an array of assets to add all of them
+// to the cache. Return a promise resolving when all the assets are added.
+function precache () {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.addAll(contentToCache)
+  })
+}
+
+// Time limited network request. If the network fails or the response is not
+// served before timeout, the promise is rejected.
+function fromNetwork (request, timeout) {
+  return new Promise(function (resolve, reject) {
+    // Reject in case of timeout.
+    var timeoutId = setTimeout(reject, timeout)
+    // Fulfill in case of success.
+    fetch(request).then(function (response) {
+      clearTimeout(timeoutId)
+      resolve(response)
+    // Reject also if network fetch rejects.
+    }, reject)
+  })
+}
+
+// Open the cache where the assets were stored and search for the requested
+// resource. Notice that in case of no matching, the promise still resolves
+// but it does with `undefined` as value.
+function fromCache (request) {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      return matching || Promise.reject('no-match')
     })
-  )
-})
+  })
+}
