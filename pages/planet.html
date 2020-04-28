@@ -571,60 +571,6 @@ a problem, you …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-25_Island_generator_using_J" rel="bookmark" class="u-url"
-       title="Island generator using J" target="_blank">
-      <time class="m-date" datetime="2020-04-25 20:41:17+00:00">
-        Apr
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Island generator using J
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>I’m trying to write an island generator in J. It’s hard. Every time I look at the documentation I’m close to tears. I feel so dumb. But like many hard things in life, if it works, suddenly you feel so smart. Now I feel smart. 😁</p><p>These were my notes:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-04-25_Island_generator_using_J"><img alt="Image 1 for 2020-04-25 Island generator using J" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-04-25_Island_generator_using_J" title="Image 1 for 2020-04-25 Island generator using J"></a></p><p>Here’s what the code looks like:</p><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-04-25_Island_generator_using_J"><img alt="Image 2 for 2020-04-25 Island generator using J" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-04-25_Island_generator_using_J" title="Image 2 for 2020-04-25 Island generator using J"></a></p><p>That is:</p><pre>mx =: 30
-my =: 20
-
-NB. a table of complex numbers
-c =: (i. my) j./ i. mx
-
-NB. a table of altitudes
-a =: (my, mx) $ _2
-
-NB. a table with the hotspot
-hr =: 5
-hy =: hr + 1
-hx  =: &lt;. 0.5 + (my % 3) + ? &lt;. 0.5 + my % 3
-hc =: hx j. hy
-r =: ? (my, mx) $ 0
-h =: 0.8 &lt; r * hr &gt; {. &amp; *. c - hc
-
-NB. a list of translations
-d =: _1j0 0j1 0j1 1j0
-s =: ( ? 30 # # d ) { d
-
-NB. start loop
-m =: m …</pre></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-25 20:41:17+00:00" class="dt-published"></time>
-  Sat 25 Apr 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://pythoninsider.blogspot.com/2020/04/python-2718-last-release-of-python-2.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
        title="Python 2.7.18, the last release of Python 2" target="_blank">
       <time class="m-date" datetime="2020-04-24 23:42:42.239000-04:00">
@@ -1025,38 +971,6 @@ We need to differentiate between two cases: Changing the expiration date of a su
   on <time datetime="2020-04-21 09:40:14.096000-04:00" class="dt-published"></time>
   Tue 21 Apr 2020
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-04-20_Blogs" rel="bookmark" class="u-url"
-       title="Blogs" target="_blank">
-      <time class="m-date" datetime="2020-04-20 21:18:51+00:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Blogs
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>I’m really enjoying <a href="https://alexschroeder.ch/wiki/Jupiter">Jupiter</a>, my feed aggregator that creates a static web page (”no unread count, and thus no ever increasing pressure to catch up”). I’m following a ton of blogs on the <a href="https://campaignwiki.org/rpg/">RPG Planet</a>. But what about other blogs? I guess I need a similar setup for the other blogs I’d like to follow. Without a count of unread messages! <span>99</span></p><p>🙅 “person gesturing no!”</p><p>Since I’ve long since stopped reading all those other blogs, I guess I get to start a blog roll from scratch. I added Charlie Stross to it. You can find it <a href="https://alexschroeder.ch/blogs/">here</a>.</p><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Blogs" title="Tag">Blogs</a></p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-20 21:18:51+00:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1721,6 +1635,96 @@ plt.show()
   on <time datetime="2020-03-23 00:00:00+00:00" class="dt-published"></time>
   Mon 23 Mar 2020
   in Hynek Schlawak.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://matplotlib.org/matplotblog/posts/matplotlib-rsef/" rel="bookmark" class="u-url"
+       title="Elliott Sales de Andrade hired as Matplotlib Software Research Engineering Fellow" target="_blank">
+      <time class="m-date" datetime="2020-03-20 15:51:00-04:00">
+        Mar
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Elliott Sales de Andrade hired as Matplotlib Software Research Engineering Fellow
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  As has been discussed in detail in Nadia Eghbal's Roads and Bridges, the CZI EOSS program announcement, and in the NumFocus sustainability program goals, much of the critical software that science and industry are built on is maintained by a primarily volunteer community. While this has worked, it is not sustainable in the long term for the health of many projects or their contributors.
+We are happy to announce that we have hired Elliott Sales de Andrade (QuLogic) as the Matplotlib Software Research Engineering Fellow supported by the Chan Zuckerberg Initiative Essential Open Source Software for Science effective March 1, 2020!
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-20 15:51:00-04:00" class="dt-published"></time>
+  Fri 20 Mar 2020
+  in Matplotblog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://phdcomics.com/comics.php?f=2041" rel="bookmark" class="u-url"
+       title="03/20/18 PHD comic: 'The PHD Movies - Free during the Coronavirus Crisis'" target="_blank">
+      <time class="m-date" datetime="2020-03-20 02:33:14-07:00">
+        Mar
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      03/20/18 PHD comic: 'The PHD Movies - Free during the Coronavirus Crisis'
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+
+
+
+      <b>Piled Higher
+        &amp; Deeper <i> by Jorge
+        Cham</i></b>
+
+
+        <div><b>www.phdcomics.com</b></div>
+
+
+
+      <img alt="Click on the title below to read the comic" src="http://www.phdcomics.com/comics/archive/phd032020s.gif">
+
+
+
+        <div>title:
+          &quot;<a href="http://www.phdcomics.com/comics.php?f=2041">The PHD Movies - Free during the Coronavirus Crisis</a>&quot; - originally published 
+3/20/2018  
+        <p>For the latest news in PHD Comics, <a href="http://www.phdcomics.com/comics.php">CLICK HERE!</a></p>
+
+</div>
+
+
+
+
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-20 02:33:14-07:00" class="dt-published"></time>
+  Fri 20 Mar 2020
+  in PHD Comics.
 </footer>
 <div class="m-clearfix-l"></div>
 
