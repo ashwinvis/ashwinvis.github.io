@@ -65,6 +65,9 @@ kind of license.
 * `m.css` is distributed under an MIT license, a copy of which is included in the
   file called `m.css/COPYING`.
 
+* The PWA is distributed under an MIT license, a copy of which is included in
+  the file called `content/extra/LICENSE`.
+
 You should read the corresponding license carefully, as it defines your
 specific rights regarding the use of covered source code, as well as the
 conditions under which those rights are given to you.
