@@ -132,6 +132,85 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://www.volkerkrause.eu/2020/05/02/kde-itinerary-airport-locations.html" rel="bookmark" class="u-url"
+       title="Airport Locations in KDE Itinerary" target="_blank">
+      <time class="m-date" datetime="2020-05-02 10:15:00+00:00">
+        May
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Airport Locations in KDE Itinerary
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>In order to navigate you to and from an airport <a href="https://kde.org/applications/utilities/org.kde.itinerary">KDE Itinerary</a>
+needs to know where that airport actually is. That is a seemingly easy question,
+but surprisingly hard to answer with the level of precision we need. Since the recent work on
+<a href="/2020/04/18/kpublictransport-line-metadata.html">public transportation line metadata</a>
+left me with a local <a href="https://openstreetmap.org">OpenStreetMap</a> database, I tried to see if we can improve our
+airport coordinates a bit.</p>
+
+Where is an airport?
+
+<p>So far we use a simple mapping from airport <a href="https://en.wikipedia.org/wiki/IATA_airport_code">IATA codes</a> to a single geographic
+coordinate that we obtain from the airport’s <a href="https://wikidata.org">Wikidata</a> entry. That is, we have a single point somewhere
+in a often multiple kilometers wide area. Typically that’s somewhere around the center of the overall bounding box.</p>
+
+<p>In some cases, such as <a href="https://www.openstreetmap.org/way/487185364">Munich (MUC)</a> this happens to be exactly where
+we want it to …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-05-02 10:15:00+00:00" class="dt-published"></time>
+  Sat 02 May 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/05/seo-things/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-05-02 12:00:37+02:00">
+        May
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Inspired by the posts of <a href="https://kevq.uk/writing-with-seo-in-mind/">Kev Quirk</a> and <a href="https://www.paritybit.ca/blog/caring-about-seo">Jake Bauer</a>, I did a <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> test of my website. I wanted to see how good my blog is SEO wise. Some shortcomings were pointed out to me, for example I forgot to add <code>rel="noopener"</code> to external links with <code>target="_blank"</code> and in the mobile view some “tap targets” were too close together, so you could have clicked on the wrong one. I have addressed the problems and improved a few things in my theme. I don’t care that much about SEO, but somehow it’s nicer when Lighthouse confirms that you follow all the best practices, it’s the ambition. There are still a few things I could improve on, but I think then there is never an end.</p>
+<p>To do a Lighthouse test, you can either use the …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-02 12:00:37+02:00" class="dt-published"></time>
+  Sat 02 May 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="http://nibblestew.blogspot.com/2020/05/you-have-to-kill-your-perlings.html" rel="bookmark" class="u-url"
        title="You have to kill your perlings" target="_blank">
       <time class="m-date" datetime="2020-05-01 22:46:00+00:00">
@@ -250,113 +329,6 @@ Day 2
   on <time datetime="2020-05-01 10:01:37-05:00" class="dt-published"></time>
   Fri 01 May 2020
   in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-05-01_Island_map_generator_and_Text_Mapper" rel="bookmark" class="u-url"
-       title="Island map generator and Text Mapper" target="_blank">
-      <time class="m-date" datetime="2020-05-01 12:07:03+00:00">
-        May
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Island map generator and Text Mapper
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>OK, I’ve added code to my <a href="https://alexschroeder.ch/wiki/J">J</a> program to print the map in <a href="https://alexschroeder.ch/wiki/Text_Mapper">Text Mapper</a> format to stdout so that I can start taking a look at it. I added printing of a <em>Text Mapper</em> compatible output to my script... And I know how to generate the SVG from the command line... OK, let’s try!</p><p>The file I’m working on in JQt can be run from a terminal emulator.</p><pre>jconsole '~user/temp/2.ijs'</pre><p>To URL-encode the output, more or less:</p><pre>jconsole '~user/temp/2.ijs'
-| perl -p -e 's/ +$//ge;' -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge'</pre><p>So let’s store that in a variable:</p><pre>map=$( \
-  jconsole '~user/temp/2.ijs' \
-  | perl -p -e 's/ +$//ge;' \
-            -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge')</pre><p>This is what the viewer shows us:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper"><img alt="Image 1" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper" title="Image 1"></a></p><p>And now to call …</p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-01 12:07:03+00:00" class="dt-published"></time>
-  Fri 01 May 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://dimitris.cc/kde/2020/05/01/USB_Serial_Pinephone.html" rel="bookmark" class="u-url"
-       title="Creating a serial adapter for PinePhone" target="_blank">
-      <time class="m-date" datetime="2020-05-01 09:00:00+00:00">
-        May
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Creating a serial adapter for PinePhone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>The other day I wanted to connect to my PinePhone from my desktop computer. Since USB tethering is not functional yet on KDE Neon that runs on the phone, a wifi connection should have been established on the phone side to get access to a terminal. But if you would like to debug the booting process or wifi is not an option, serial communication is the way to go.</p>
-
-<p>PinePhone offers serial connectivity through the headphones connector. In specific, the earphone jack works as expected -as an audio jack- if the 6th hardware switch on the back of the phone is ON. Switch it off, and the audio jack works as a serial adapter; a USB-to-jack serial console cable is also needed.</p>
-
-<p>Unfortunately, ordering such a cable during the covid-19 lock down would mean long delays. Luckily, after asking on …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Dimitris Kardarakos (dkardarakos)</b></span>
-  on <time datetime="2020-05-01 09:00:00+00:00" class="dt-published"></time>
-  Fri 01 May 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/posts/april-2020/" rel="bookmark" class="u-url"
-       title="My April '20 in Review" target="_blank">
-      <time class="m-date" datetime="2020-05-01 10:09:00+02:00">
-        May
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      My April '20 in Review
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>April was somehow anything but exciting. Thanks to a contact ban it was now the first full month in home office.</p>
-<p>Anyway, home studying worked out quite well for me. Getting up at a convenient time, on average one telephone conference or lecture a day, and using the rest of the time quite flexibly. The online lectures also work better than expected, especially when I compare mine with the experiences of other students.</p>
-<p>Since I didn’t have to spend 1.5 hours a day almost every day to get to lectures, I had more time to <a href="https://jlelse.blog/de/posts/gewohnheit/">go running</a> (I feel I’m making real progress now) and to <a href="https://jlelse.blog/de/posts/dampfnudeln/">cook and bake</a> (sweet dishes may not be the most balanced dishes, but hey I prepared them myself).</p>
-<p>Apart from that, I also spent quite a bit of time blogging and …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-01 10:09:00+02:00" class="dt-published"></time>
-  Fri 01 May 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
