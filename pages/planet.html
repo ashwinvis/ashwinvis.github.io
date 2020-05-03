@@ -434,6 +434,42 @@ Day 2
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-01_Island_map_generator_and_Text_Mapper" rel="bookmark" class="u-url"
+       title="Island map generator and Text Mapper" target="_blank">
+      <time class="m-date" datetime="2020-05-01 12:07:03+00:00">
+        May
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Island map generator and Text Mapper
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>OK, I’ve added code to my <a href="https://alexschroeder.ch/wiki/J">J</a> program to print the map in <a href="https://alexschroeder.ch/wiki/Text_Mapper">Text Mapper</a> format to stdout so that I can start taking a look at it. I added printing of a <em>Text Mapper</em> compatible output to my script... And I know how to generate the SVG from the command line... OK, let’s try!</p><p>The file I’m working on in JQt can be run from a terminal emulator.</p><pre>jconsole '~user/temp/2.ijs'</pre><p>To URL-encode the output, more or less:</p><pre>jconsole '~user/temp/2.ijs'
+| perl -p -e 's/ +$//ge;' -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge'</pre><p>So let’s store that in a variable:</p><pre>map=$( \
+  jconsole '~user/temp/2.ijs' \
+  | perl -p -e 's/ +$//ge;' \
+            -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge')</pre><p>This is what the viewer shows us:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper"><img alt="Image 1" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper" title="Image 1"></a></p><p>And now to call …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-01 12:07:03+00:00" class="dt-published"></time>
+  Fri 01 May 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://xkcd.com/2301/" rel="bookmark" class="u-url"
        title="Turtle Sandwich Standard Model" target="_blank">
       <time class="m-date" datetime="2020-05-01 00:00:00+00:00">
