@@ -189,6 +189,39 @@ playlist</a>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://jlelse.blog/micro/2020/05/2020-05-03-hnygg/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-05-03 14:06:16+02:00">
+        May
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>They’re probably happy cows. 🐄🐮</p>
+<p><img alt="Cows in a green field" src="https://media.jlelse.blog/781c2971a40f26d9ed0c4846695b3769104eac3229c539bb7fc4df2467463ce8.jpg" title="Cows in a green field"></p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-03 14:06:16+02:00" class="dt-published"></time>
+  Sun 03 May 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://fortintam.com/blog/improving-developer-experience-and-attracting-open-source-project-contributors/" rel="bookmark" class="u-url"
        title="Overhauling your Open Source project’s “Developer Experience” and redefining the workflow" target="_blank">
       <time class="m-date" datetime="2020-05-02 20:17:20+00:00">
@@ -266,39 +299,6 @@ playlist</a>.</p>
   on <time datetime="2020-05-02 15:30:08+00:00" class="dt-published"></time>
   Sat 02 May 2020
   in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/05/seo-things/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-05-02 12:00:37+02:00">
-        May
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>Inspired by the posts of <a href="https://kevq.uk/writing-with-seo-in-mind/">Kev Quirk</a> and <a href="https://www.paritybit.ca/blog/caring-about-seo">Jake Bauer</a>, I did a <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> test of my website. I wanted to see how good my blog is SEO wise. Some shortcomings were pointed out to me, for example I forgot to add <code>rel="noopener"</code> to external links with <code>target="_blank"</code> and in the mobile view some “tap targets” were too close together, so you could have clicked on the wrong one. I have addressed the problems and improved a few things in my theme. I don’t care that much about SEO, but somehow it’s nicer when Lighthouse confirms that you follow all the best practices, it’s the ambition. There are still a few things I could improve on, but I think then there is never an end.</p>
-<p>To do a Lighthouse test, you can either use the …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-02 12:00:37+02:00" class="dt-published"></time>
-  Sat 02 May 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -426,6 +426,42 @@ Day 2
   on <time datetime="2020-05-01 10:01:37-05:00" class="dt-published"></time>
   Fri 01 May 2020
   in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-01_Island_map_generator_and_Text_Mapper" rel="bookmark" class="u-url"
+       title="Island map generator and Text Mapper" target="_blank">
+      <time class="m-date" datetime="2020-05-01 12:07:03+00:00">
+        May
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Island map generator and Text Mapper
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>OK, I’ve added code to my <a href="https://alexschroeder.ch/wiki/J">J</a> program to print the map in <a href="https://alexschroeder.ch/wiki/Text_Mapper">Text Mapper</a> format to stdout so that I can start taking a look at it. I added printing of a <em>Text Mapper</em> compatible output to my script... And I know how to generate the SVG from the command line... OK, let’s try!</p><p>The file I’m working on in JQt can be run from a terminal emulator.</p><pre>jconsole '~user/temp/2.ijs'</pre><p>To URL-encode the output, more or less:</p><pre>jconsole '~user/temp/2.ijs'
+| perl -p -e 's/ +$//ge;' -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge'</pre><p>So let’s store that in a variable:</p><pre>map=$( \
+  jconsole '~user/temp/2.ijs' \
+  | perl -p -e 's/ +$//ge;' \
+            -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge')</pre><p>This is what the viewer shows us:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper"><img alt="Image 1" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper" title="Image 1"></a></p><p>And now to call …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-01 12:07:03+00:00" class="dt-published"></time>
+  Fri 01 May 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
