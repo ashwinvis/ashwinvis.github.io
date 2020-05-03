@@ -31,7 +31,6 @@
         <outline title="Ned Batchelder's blog" text="Ned Batchelder's blog" type="rss" htmlUrl="https://nedbatchelder.com/blog" xmlUrl="https://nedbatchelder.com/blog/rss.xml"/>
         <outline title="PHD Comics" text="PHD Comics" type="rss" htmlUrl="https://www.phdcomics.com" xmlUrl="https://www.phdcomics.com/gradfeed.php"/>
         <outline title="xkcd.com" text="xkcd.com" type="rss" htmlUrl="https://xkcd.com/" xmlUrl="https://xkcd.com/atom.xml"/>
-        <outline title="The Numerical Methods Guy" text="The Numerical Methods Guy" type="rss" htmlUrl="https://autarkaw.org" xmlUrl="https://autarkaw.org/feed/"/>
         <outline title="Gilles Castel" text="Gilles Castel" type="rss" htmlUrl="https://castel.dev" xmlUrl="https://castel.dev/rss.xml"/>
         <outline title="David Revoy" text="David Revoy" type="rss" htmlUrl="https://www.davidrevoy.com/" xmlUrl="https://www.davidrevoy.com/feed/rss"/>
         <outline title="Hynek Schlawak" text="Hynek Schlawak" type="rss" htmlUrl="https://hynek.me/" xmlUrl="https://hynek.me/index.xml"/>
@@ -51,6 +50,7 @@
         <outline title="FYFD" text="FYFD" type="rss" htmlUrl="https://fuckyeahfluiddynamics.tumblr.com" xmlUrl="https://fuckyeahfluiddynamics.tumblr.com/rss"/>
         <outline title="the champaka" text="the champaka" type="rss" htmlUrl="https://blogdecjunior.tumblr.com" xmlUrl="https://blogdecjunior.tumblr.com/rss"/>
         <outline title="Aswin's tech blog" text="Aswin's tech blog" type="rss" htmlUrl="https://officialcjunior.github.io" xmlUrl="https://officialcjunior.github.io/feed.xml"/>
+        <outline title="Kitware blog - Paraview" text="Kitware blog - Paraview" type="rss" htmlUrl="https://blog.kitware.com/tag/paraview/feed" xmlUrl="https://blog.kitware.com/tag/paraview/feed/"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
