@@ -132,9 +132,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://eischmann.wordpress.com/2020/05/05/virtual-fedora-32-release-party/" rel="bookmark" class="u-url"
-       title="Virtual Fedora 32 release party" target="_blank">
-      <time class="m-date" datetime="2020-05-05 15:56:51+00:00">
+    <a href="https://swilmet.be/blog/2020/05/05/gedit-and-gcsvedit-on-the-microsoft-store/?utm_source=rss&utm_medium=rss&utm_campaign=gedit-and-gcsvedit-on-the-microsoft-store" rel="bookmark" class="u-url"
+       title="gedit and gCSVedit on the Microsoft Store" target="_blank">
+      <time class="m-date" datetime="2020-05-05 17:15:26+00:00">
         May
         <span class="m-date-day">
           05
@@ -142,18 +142,18 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Virtual Fedora 32 release party
+      gedit and gCSVedit on the Microsoft Store
       </div>
     </a>
   </h1>
   <div class="p-summary">
-  We’ve been organizing Fedora release parties for the Czech community since Fedora 15 (normally in Prague and Brno, once in KoÅ¡ice, Slovakia), but in those coronavirus times it seemed like we were out of luck. Not quite. We’ve decided to organize a virtual release party everyone can join from the comfort (and safety) of their […]
+  A short blog post to let you know that: gedit is now on the Microsoft Store! gedit for Windows. Yes, it works well, although as always there is room for improvement. It is just the beginning to have sources of funding that would make full-time development of gedit possible in the long run. I have … <a href="https://swilmet.be/blog/2020/05/05/gedit-and-gcsvedit-on-the-microsoft-store/">Continue reading <span>gedit and gCSVedit on the Microsoft Store</span></a>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>eischmann</b></span>
-  on <time datetime="2020-05-05 15:56:51+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Sébastien Wilmet</b></span>
+  on <time datetime="2020-05-05 17:15:26+00:00" class="dt-published"></time>
   Tue 05 May 2020
   in Planet GNOME.
 </footer>
@@ -537,6 +537,42 @@ happen.  It was a regular routine …</p>
   on <time datetime="2020-05-03 14:43:15-04:00" class="dt-published"></time>
   Sun 03 May 2020
   in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-01_Island_map_generator_and_Text_Mapper" rel="bookmark" class="u-url"
+       title="Island map generator and Text Mapper" target="_blank">
+      <time class="m-date" datetime="2020-05-01 12:07:03+00:00">
+        May
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Island map generator and Text Mapper
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>OK, I’ve added code to my <a href="https://alexschroeder.ch/wiki/J">J</a> program to print the map in <a href="https://alexschroeder.ch/wiki/Text_Mapper">Text Mapper</a> format to stdout so that I can start taking a look at it. I added printing of a <em>Text Mapper</em> compatible output to my script... And I know how to generate the SVG from the command line... OK, let’s try!</p><p>The file I’m working on in JQt can be run from a terminal emulator.</p><pre>jconsole '~user/temp/2.ijs'</pre><p>To URL-encode the output, more or less:</p><pre>jconsole '~user/temp/2.ijs'
+| perl -p -e 's/ +$//ge;' -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge'</pre><p>So let’s store that in a variable:</p><pre>map=$( \
+  jconsole '~user/temp/2.ijs' \
+  | perl -p -e 's/ +$//ge;' \
+            -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge')</pre><p>This is what the viewer shows us:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper"><img alt="Image 1" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper" title="Image 1"></a></p><p>And now to call …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-01 12:07:03+00:00" class="dt-published"></time>
+  Fri 01 May 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
