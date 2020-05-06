@@ -12,10 +12,6 @@ from cookiecutter import generate, prompt
 from jinja2 import Environment, FileSystemLoader
 from webmentiontools.send import WebmentionSend
 
-here = Path(__file__).parent / ".." / ".." / ".."
-sys.path.append(here)
-os.chdir(here)
-
 from .. import SITEURL
 
 
@@ -157,13 +153,14 @@ def new(no_input, write_post, open_editor):
         edit(filename)
 
     slug = cc["slug"]
-    git_prompt(filename, slug)
+    status = cc["status"]
+    git_prompt(filename, slug, status)
 
     if prompt.read_user_yes_no("Webmention bridgy to syndicate?", False):
         bridgy(slug, "mastodon")
 
 
-def git_prompt(filename, slug=None):
+def git_prompt(filename, slug=None, status=None):
     if not slug:
         slug = Path(filename).stem
 
@@ -179,6 +176,15 @@ def git_prompt(filename, slug=None):
     if prompt.read_user_yes_no("Push changes?", False):
         subprocess.run(["git", "push", "--set-upstream", "origin", "HEAD"])
 
+    if prompt.read_user_yes_no("Create a PR?", False):
+        if shutil.which("gh"):
+            # Do not prompt for title/body and just use commit info
+            cmd = ["gh", "pr", "create", "--fill"]
+            if status == "draft":
+                cmd.append("--draft")
+            subprocess.run(cmd)
+        else:
+            print("ERROR: This requires gh command. https://cli.github.com/manual/")
 
 if __name__ == "__main__":
     write()
