@@ -14,12 +14,12 @@ from webmentiontools.send import WebmentionSend
 
 from .. import SITEURL
 
-
 def edit(filename):
     editor = shutil.which(os.getenv("EDITOR", "vim"))
     subprocess.run([editor, filename])
 
 
+here = Path(__file__).parent / ".." / ".." / ".."
 click_kwargs = {"context_settings": dict(help_option_names=["-h", "--help"])}
 
 
@@ -187,4 +187,5 @@ def git_prompt(filename, slug=None, status=None):
             print("ERROR: This requires gh command. https://cli.github.com/manual/")
 
 if __name__ == "__main__":
+    os.chdir(here)
     write()
