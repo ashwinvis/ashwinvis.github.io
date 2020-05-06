@@ -52,6 +52,7 @@
         <outline title="the champaka" text="the champaka" type="rss" htmlUrl="https://blogdecjunior.tumblr.com" xmlUrl="https://blogdecjunior.tumblr.com/rss"/>
         <outline title="Aswin's tech blog" text="Aswin's tech blog" type="rss" htmlUrl="https://officialcjunior.github.io" xmlUrl="https://officialcjunior.github.io/feed.xml"/>
         <outline title="Kitware blog - Paraview" text="Kitware blog - Paraview" type="rss" htmlUrl="https://blog.kitware.com/tag/paraview/feed" xmlUrl="https://blog.kitware.com/tag/paraview/feed/"/>
+        <outline title="Pradyun Gedam" text="Pradyun Gedam" type="rss" htmlUrl="https://pradyunsg.me" xmlUrl="https://pradyunsg.me/feed.xml"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
