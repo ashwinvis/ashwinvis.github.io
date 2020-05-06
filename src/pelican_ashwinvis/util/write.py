@@ -16,7 +16,7 @@ here = Path(__file__).parent / ".." / ".." / ".."
 sys.path.append(here)
 os.chdir(here)
 
-from publishconf import SITEURL
+from .. import SITEURL
 
 
 def edit(filename):
