@@ -132,38 +132,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-05-07_Cowards" rel="bookmark" class="u-url"
-       title="Cowards" target="_blank">
-      <time class="m-date" datetime="2020-05-07 07:23:43+00:00">
-        May
-        <span class="m-date-day">
-          07
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Cowards
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>Ah, cowards. Yesterday, I was talking to <a href="https://tabletop.social/users/TQ">@TQ</a> and mentioned that I had one player who is very risk averse. We often joke that their character having the best armour, the best weapons, the best spells, the highest level, and yet there they are in the back, sending their retainers to the front. “He’d prefer to be playing Agricola instead!” we laugh. (Agricola being a board game where you play a farmer.) But at the same time, it’s also aggravating and I’m happy there aren’t more players like him in the group. Nothing would ever happen unless I make it a railroad, I fear.</p><p>Today I read a post by Jeremy Friesen, <a href="https://takeonrules.com/2020/05/06/highlighting-posts-from-my-rss-feed/">Highlighting Posts from my RSS Feed</a>, where he mentions a blog post by Daniel Bishop, <a href="https://ravencrowking.blogspot.com/2020/04/what-to-do-with-cowards.html">What to Do with the Cowards</a>. The suggestion is …</p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-07 07:23:43+00:00" class="dt-published"></time>
-  Thu 07 May 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://jlelse.blog/micro/2020/05/tiktok-jsonfeed/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-05-06 20:48:50+02:00">
@@ -679,6 +647,42 @@ happen.  It was a regular routine …</p>
   on <time datetime="2020-05-03 14:43:15-04:00" class="dt-published"></time>
   Sun 03 May 2020
   in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-01_Island_map_generator_and_Text_Mapper" rel="bookmark" class="u-url"
+       title="Island map generator and Text Mapper" target="_blank">
+      <time class="m-date" datetime="2020-05-01 12:07:03+00:00">
+        May
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Island map generator and Text Mapper
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>OK, I’ve added code to my <a href="https://alexschroeder.ch/wiki/J">J</a> program to print the map in <a href="https://alexschroeder.ch/wiki/Text_Mapper">Text Mapper</a> format to stdout so that I can start taking a look at it. I added printing of a <em>Text Mapper</em> compatible output to my script... And I know how to generate the SVG from the command line... OK, let’s try!</p><p>The file I’m working on in JQt can be run from a terminal emulator.</p><pre>jconsole '~user/temp/2.ijs'</pre><p>To URL-encode the output, more or less:</p><pre>jconsole '~user/temp/2.ijs'
+| perl -p -e 's/ +$//ge;' -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge'</pre><p>So let’s store that in a variable:</p><pre>map=$( \
+  jconsole '~user/temp/2.ijs' \
+  | perl -p -e 's/ +$//ge;' \
+            -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge')</pre><p>This is what the viewer shows us:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper"><img alt="Image 1" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper" title="Image 1"></a></p><p>And now to call …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-01 12:07:03+00:00" class="dt-published"></time>
+  Fri 01 May 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
