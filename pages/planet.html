@@ -147,7 +147,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
     </a>
   </h1>
   <div class="p-summary">
-  <div><p>OK, so Keybase was bought by Zoom and I deleted my Keybase identity. <a href="https://metacode.biz/users/wiktor">@wiktor</a> said he had a decentralized alternative.</p><p>You can find a simple description here: <a href="https://metacode.biz/openpgp/proofs">OpenPGP Proofs</a>.</p><p>Here’s how I understand it:</p><ol><li>add a special URL to your key</li><li>at the special URL mention your fingerprint in a special way</li><li>potentially use some software to verify it, or do it manually</li></ol><p>Let’s do it manually.</p><p>Determine my fingerprint:</p><pre>alex@melanobombus:~$ <strong>gpg --fingerprint alex@gnu.org</strong>
+  <div><p>OK, so Keybase was bought by Zoom and I deleted my Keybase identity. <a href="https://metacode.biz/users/wiktor">@wiktor</a> said he had a decentralized alternative.</p><p>You can find a simple description here: <a href="https://metacode.biz/openpgp/proofs">OpenPGP Proofs</a>.</p><p>Here’s how I understand it:</p><ol><li>add a special URL to your key</li><li>at the special URL mention your fingerprint in a special way</li><li>potentially use some software to verify it, or do it manually</li></ol><p>Let’s do this.</p><p>Determine my fingerprint:</p><pre>alex@melanobombus:~$ <strong>gpg --fingerprint alex@gnu.org</strong>
 pub   rsa8192 2015-03-01 [SC] [expires: 2021-05-07]
       DF94 46EB 7B78 4638 7CCC  018B C78C A29B ACEC FEAE
 uid           [ unknown] Alex Schroeder &lt;alex@gnu.org&gt;
@@ -156,7 +156,7 @@ uid           [ unknown] [jpeg image of size 5665]
 uid           [ unknown] Alex Schroeder &lt;alex@alexschroeder.ch&gt;
 sub   elg3072 2019-01-20 [E] [expires: 2021-01-30]
 
-(and many other expired and revoked keys)</pre><p>The fingerprint in question …</p></div>
+(and many other expired and revoked keys)</pre><p>The fingerprint in question, with …</p></div>
   </div>
 </header>
 <footer>
