@@ -132,6 +132,47 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-08_Replacing_Keybase" rel="bookmark" class="u-url"
+       title="Replacing Keybase" target="_blank">
+      <time class="m-date" datetime="2020-05-08 18:50:20+00:00">
+        May
+        <span class="m-date-day">
+          08
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Replacing Keybase
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>OK, so Keybase was bought by Zoom and I deleted my Keybase identity. <a href="https://metacode.biz/users/wiktor">@wiktor</a> said he had a decentralized alternative.</p><p>You can find a simple description here: <a href="https://metacode.biz/openpgp/proofs">OpenPGP Proofs</a>.</p><p>Here’s how I understand it:</p><ol><li>add a special URL to your key</li><li>at the special URL mention your fingerprint in a special way</li><li>potentially use some software to verify it, or do it manually</li></ol><p>Let’s do it manually.</p><p>Determine my fingerprint:</p><pre>alex@melanobombus:~$ <strong>gpg --fingerprint alex@gnu.org</strong>
+pub   rsa8192 2015-03-01 [SC] [expires: 2021-05-07]
+      DF94 46EB 7B78 4638 7CCC  018B C78C A29B ACEC FEAE
+uid           [ unknown] Alex Schroeder &lt;alex@gnu.org&gt;
+uid           [ unknown] Alex Schroeder &lt;kensanata@gmail.com&gt;
+uid           [ unknown] [jpeg image of size 5665]
+uid           [ unknown] Alex Schroeder &lt;alex@alexschroeder.ch&gt;
+sub   elg3072 2019-01-20 [E] [expires: 2021-01-30]
+
+(and many other expired and revoked keys)</pre><p>The fingerprint in question …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-08 18:50:20+00:00" class="dt-published"></time>
+  Fri 08 May 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://confifu.wordpress.com/2020/05/08/krita-and-me/" rel="bookmark" class="u-url"
        title="Krita and me" target="_blank">
       <time class="m-date" datetime="2020-05-08 17:25:06+00:00">
@@ -702,42 +743,6 @@ happen.  It was a regular routine …</p>
   on <time datetime="2020-05-03 14:43:15-04:00" class="dt-published"></time>
   Sun 03 May 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-05-01_Island_map_generator_and_Text_Mapper" rel="bookmark" class="u-url"
-       title="Island map generator and Text Mapper" target="_blank">
-      <time class="m-date" datetime="2020-05-01 12:07:03+00:00">
-        May
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Island map generator and Text Mapper
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <div><p>OK, I’ve added code to my <a href="https://alexschroeder.ch/wiki/J">J</a> program to print the map in <a href="https://alexschroeder.ch/wiki/Text_Mapper">Text Mapper</a> format to stdout so that I can start taking a look at it. I added printing of a <em>Text Mapper</em> compatible output to my script... And I know how to generate the SVG from the command line... OK, let’s try!</p><p>The file I’m working on in JQt can be run from a terminal emulator.</p><pre>jconsole '~user/temp/2.ijs'</pre><p>To URL-encode the output, more or less:</p><pre>jconsole '~user/temp/2.ijs'
-| perl -p -e 's/ +$//ge;' -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge'</pre><p>So let’s store that in a variable:</p><pre>map=$( \
-  jconsole '~user/temp/2.ijs' \
-  | perl -p -e 's/ +$//ge;' \
-            -e 's/([^a-zA-Z0-9_.!~()-])/sprintf("%%%02X",ord($1))/ge')</pre><p>This is what the viewer shows us:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper"><img alt="Image 1" src="https://alexschroeder.ch/wiki/download/Image_1_for_2020-05-01_Island_map_generator_and_Text_Mapper" title="Image 1"></a></p><p>And now to call …</p></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-01 12:07:03+00:00" class="dt-published"></time>
-  Fri 01 May 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
