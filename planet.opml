@@ -53,6 +53,7 @@
         <outline title="Aswin's tech blog" text="Aswin's tech blog" type="rss" htmlUrl="https://officialcjunior.github.io" xmlUrl="https://officialcjunior.github.io/feed.xml"/>
         <outline title="Kitware blog - Paraview" text="Kitware blog - Paraview" type="rss" htmlUrl="https://blog.kitware.com/tag/paraview/feed" xmlUrl="https://blog.kitware.com/tag/paraview/feed/"/>
         <outline title="Pradyun Gedam" text="Pradyun Gedam" type="rss" htmlUrl="https://pradyunsg.me" xmlUrl="https://pradyunsg.me/feed.xml"/>
+        <outline title="Doctor Fortran" text="Doctor Fortran" type="rss" htmlUrl="https://stevelionel.com/" xmlUrl="https://stevelionel.com/drfortran/feed/"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
