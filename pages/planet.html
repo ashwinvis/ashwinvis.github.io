@@ -182,6 +182,50 @@ playlist</a>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://people.gnome.org/~michael/blog/2020-05-11.html" rel="bookmark" class="u-url"
+       title="2020-05-11 Monday" target="_blank">
+      <time class="m-date" datetime="2020-05-11 21:00:00+00:00">
+        May
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      2020-05-11 Monday
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <ul> 
+    <li>
+        Planning call, E-mail left &amp; right; pleased to see
+    the nice <a href="https://www.collaboraoffice.com/online/collabora-online-demo-servers-provide-fast-and-easy-user-access/">Demo
+    Servers</a> to make it much easier for people to try out an integration
+    using any <a href="https://www.collaboraoffice.com/demo-servers.json">server</a>,
+    with more easy integrations coming.
+    </li>
+    <li>
+        Plugged away at admin &amp; E-mail much of the day until late;
+    Mondays!
+    </li>
+</ul>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-11 21:00:00+00:00" class="dt-published"></time>
+  Mon 11 May 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/617830630231801856/a-bioluminescent-phytoplankton-bloom-is-causing-a" rel="bookmark" class="u-url"
        title="A bioluminescent phytoplankton bloom is causing a stir among..." target="_blank">
       <time class="m-date" datetime="2020-05-11 10:00:03-05:00">
@@ -281,38 +325,6 @@ playlist</a>.</p>
   on <time datetime="2020-05-11 15:51:16+02:00" class="dt-published"></time>
   Mon 11 May 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://nibblestew.blogspot.com/2020/05/enforcing-locking-with-c-nonmovable.html" rel="bookmark" class="u-url"
-       title="Enforcing locking with C++ nonmovable types" target="_blank">
-      <time class="m-date" datetime="2020-05-11 13:14:00+00:00">
-        May
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Enforcing locking with C++ nonmovable types
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Let's say you have a struct with some variable protected by a mutex like this:<span>struct UnsafeData {</span><span>  int x;</span><span>  std::mutex ;</span><span>};</span>You should only be able to change <span>x</span> when the mutex is being held. A typical solution is to make x private and then create a method like this:<span>void UnsafeData::set_x(int newx) {</span><span>  // WHOOPS, forgot to lock mutex here.</span><span>  x = newx;</span><span>}</span>It is a common mistake that when code is changed, someone, somewhere forgots to add a lock guard. The problem is even bigger if the variable is a full object or a handle that you would like to "pass out" to the caller so they can use it outside the body of the struct. This caller also needs to release the lock when it's done.This brings up an interesting question: can we implement a scheme which …
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2020-05-11 13:14:00+00:00" class="dt-published"></time>
-  Mon 11 May 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
