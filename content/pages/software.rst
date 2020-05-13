@@ -13,6 +13,25 @@ A showcase of all the projects which I have **co-developed**, have
 Research Software
 ~~~~~~~~~~~~~~~~~
 
+snek5000_
+'''''''''
+
+On my postdoc role, I started using Nek5000_, is a really popular Fortran 77 HPC
+code. Using it is bittersweet experience:
+
+- loads of features
+- good performance 🚀
+- monolithic, uses in-house build tools
+- utilizes several legacy Fortran anti-features
+
+On the bright side, as a user there is a separation of the user code and
+parameters from the Nek5000_ core. This fact was exploited to create
+snek5000_ to create a pythonic API to effortlessly launch simulations with
+varying parameters.
+
+.. _snek5000: https://github.com/exabl/snek5000
+.. _Nek5000: https://github.com/Nek5000/Nek5000
+
 `FluidDyn project <https://fluiddyn.bitbucket.io>`__
 '''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -63,14 +82,17 @@ Open-Source contributions
 
 I have also contributed some serious projects such as:
 
--  `Pythran <https://pythran.readthedocs.io>`__: An ahead-of-time
-   compiler for creating blazing fast Python extensions from Pure python
-   or NumPy code. I contributed to:
+- `CPython <https://github.com/python/cpython>`__: the reference Python
+  interpreter. I helped in fixing:
 
-   -  improvements in Pythran extension build process
-      (`link <https://github.com/serge-sans-paille/pythran/pull/941>`__)
-   -  linting Pythran configuration files
-      (`link <https://github.com/serge-sans-paille/pythran/pull/1145>`__)
+  - A typo (`link <https://github.com/python/cpython/pull/15614>`__)!
+  - Detected broken docstrings (`link
+    <https://github.com/python/cpython/pull/13491>`__).
+
+- `fzf-bibtex <https://github.com/msprev/fzf-bibtex>`__: a BibTeX source for
+  fzf. I added:
+
+   - Biblatex support. (`link <https://github.com/msprev/fzf-bibtex/pull/14>`__)
 
 -  `JupyterLab <https://jupyterlab.readthedocs.io>`__: Next generation
    UI for Jupyter notebooks. I have:
@@ -86,22 +108,49 @@ I have also contributed some serious projects such as:
    -  improved the overall structure of documentation
       (`link <https://github.com/pymc-devs/pymc3/pull/3303>`__)
 
+-  `Pythran <https://pythran.readthedocs.io>`__: An ahead-of-time
+   compiler for creating blazing fast Python extensions from Pure python
+   or NumPy code. I contributed to:
+
+   -  improvements in Pythran extension build process
+      (`link <https://github.com/serge-sans-paille/pythran/pull/941>`__)
+   -  linting Pythran configuration files
+      (`link <https://github.com/serge-sans-paille/pythran/pull/1145>`__)
+
+- `vim-instant-markdown <https://github.com/suan/vim-instant-markdown>`__
+  & `Instant markdown server <https://github.com/suan/instant-markdown-d>`__: Write
+  markdown with instant preview. I added MathJax support and much more. I am
+  currently the main maintainer.
+
+- `We-Care analysis scripts
+  <https://github.com/We-Care-sweden/analysis-scripts>`__: Processing data collected from `covidmap.se
+  <https://covidmap.se>`__. I have:
+
+  - performed some basic maintenance, and implemented database logic
+    (`pull-requests
+    <https://github.com/We-Care-sweden/analysis-scripts/pulls?q=is%3Apr+author%3Aashwinvis+is%3Aclosed>`__)
+
 Humble projects
 ~~~~~~~~~~~~~~~
 
 Some repositories that I maintain for my personal use and possible
 reuse.
 
--  `Backdrop theme <https://github.com/ashwinvis/backdrop-theme>`__: A
-   responsive pelican theme compiled node, grunt, sass technologies.
--  `Awesome scientific
-   writing <https://github.com/ashwinvis/awesome-scientific-writing>`__:
-   A curated list of resources for writing scientific documents with
-   markup languages.
--  `vim-instant-markdown <https://github.com/ashwinvis/vim-instant-markdown>`__
-   & `Instant markdown
-   server <https://github.com/ashwinvis/instant-markdown-d>`__: Write
-   markdown with instant preview. Supports MathJax as well.
--  `xrandr-extend <https://github.com/ashwinvis/xrandr-extend>`__: CLI
-   tool to calculate and use non-HIDPI external displays along with
-   HIDPI monitors.
+- `awkupy <https://github.com/ashwinvis/awkupy>`__: AWK meets Python: API, CLI
+  and IPython / Jupyter magics for data wrangling with awk.
+- `Awesome scientific
+  writing <https://github.com/writing-resources/awesome-scientific-writing>`__:
+  A curated list of resources for writing scientific documents with
+  markup languages.
+- `Backdrop theme <https://github.com/ashwinvis/backdrop-theme>`__: A
+  responsive pelican theme compiled node, grunt, sass technologies.
+- `dotfiles <https://source.coderefinery.org/ashwinvis/dotfiles>`__: My Linux
+  configuration files a.k.a. dotfiles.
+- `jupyter-wordcloud <https://github.com/ashwinvis/jupyter-wordcloud>`__:
+  Generate wordclouds from Jupyter notebooks.
+- `pelican-planet <https://github.com/ashwinvis/pelican-planet>`__: Pelican
+  plugin which asynchronously aggregates feeds into the planet page in this
+  website.
+- `xrandr-extend <https://github.com/ashwinvis/xrandr-extend>`__: CLI
+  tool to calculate and use non-HIDPI external displays along with
+  HIDPI monitors.
