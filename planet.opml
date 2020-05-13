@@ -27,7 +27,6 @@
         <outline title="Python Insider" text="Python Insider" type="rss" htmlUrl="https://pythoninsider.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonInsider"/>
         <outline title="Peter Norvig" text="Peter Norvig" type="rss" htmlUrl="http://www.norvig.com" xmlUrl="http://norvig.com/rss-feed.xml"/>
         <outline title="PyMOTW – Doug Hellmann" text="PyMOTW – Doug Hellmann" type="rss" htmlUrl="https://doughellmann.com/blog" xmlUrl="http://feeds.doughellmann.com/PyMOTW"/>
-        <outline title="Artificial Intelligence" text="Artificial Intelligence" type="rss" htmlUrl="https://lexfridman.com/ai/" xmlUrl="https://lexfridman.com/category/ai/feed/"/>
         <outline title="Ned Batchelder's blog" text="Ned Batchelder's blog" type="rss" htmlUrl="https://nedbatchelder.com/blog" xmlUrl="https://nedbatchelder.com/blog/rss.xml"/>
         <outline title="PHD Comics" text="PHD Comics" type="rss" htmlUrl="https://www.phdcomics.com" xmlUrl="https://www.phdcomics.com/gradfeed.php"/>
         <outline title="xkcd.com" text="xkcd.com" type="rss" htmlUrl="https://xkcd.com/" xmlUrl="https://xkcd.com/atom.xml"/>
