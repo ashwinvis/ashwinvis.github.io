@@ -132,9 +132,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="http://pyfound.blogspot.com/2020/04/the-2020-python-language-summit.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="The 2020 Python Language Summit" target="_blank">
-      <time class="m-date" datetime="2020-05-13 08:26:03.304000-04:00">
+    <a href="https://blogdecjunior.tumblr.com/post/618019773791567872/a-midsummer-night" rel="bookmark" class="u-url"
+       title="A midsummer night" target="_blank">
+      <time class="m-date" datetime="2020-05-13 22:36:25+05:30">
         May
         <span class="m-date-day">
           13
@@ -142,46 +142,20 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      The 2020 Python Language Summit
+      A midsummer night
       </div>
     </a>
   </h1>
   <div class="p-summary">
-  <div>
-<div>
-<a href="https://1.bp.blogspot.com/-o6MVfNjmAzM/XqHoFu8yv5I/AAAAAAAAE1A/3dzN6tSd25I4Vnib3zDyWG80Lt7o_cEugCLcBGAsYHQ/s1600/rock-python-2.jpg"><img src="https://1.bp.blogspot.com/-o6MVfNjmAzM/XqHoFu8yv5I/AAAAAAAAE1A/3dzN6tSd25I4Vnib3zDyWG80Lt7o_cEugCLcBGAsYHQ/s320/rock-python-2.jpg"></a></div>
-
-The Python Language Summit is a small gathering of Python language implementers (both the core developers of CPython and alternative Pythons), as well third-party library authors and other Python community members. The Summit features short presentations followed by group discussions. In 2020, the Summit was held over two days by videoconference; questions were asked by a combination of voice and chat. It was led by&nbsp;Łukasz Langa and Mariatta Wijaya.
-
-Summaries of all presentations will be posted here as they are completed.
-
-Thanks to&nbsp;<a href="https://mongodb.com/">MongoDB</a>&nbsp;for sponsoring the Python Language Summit.</div>
-
-
-
-
-Day 1
-<b><a href="https://pyfound.blogspot.com/2020/04/all-strings-become-f-strings-python.html">Should All Strings Become f-strings?</a></b>
-Eric V. Smith
-
-<b><a href="https://pyfound.blogspot.com/2020/04/replacing-cpythons-parser-python.html">Replacing CPython’s Parser with a PEG-based parser</a></b>
-Pablo Galindo, Lysandros Nikolaou, Guido van Rossum
-
-<b><a href="https://pyfound.blogspot.com/2020/04/a-formal-specification-for-cpython.html">A Formal Specification for the (C)Python Virtual Machine</a></b>
-Mark Shannon
-
-<b><a href="https://pyfound.blogspot.com/2020/04/hpy-future-proof-way-of-extending.html">HPy: a Future-Proof Way of Extending Python?</a></b>
-Antonio Cuni
-
-<b><a href="https://pyfound.blogspot.com/2020/04/cpython-documentation-next-5-years.html">CPython Documentation: The Next …</a></b>
+  *makes a joke about JS*11:49 &lt;cjunior&gt;Going to post it on #memes when it&rsquo;s a bit...
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>A. Jesse Jiryu Davis (noreply@blogger.com)</b></span>
-  on <time datetime="2020-05-13 08:26:03.304000-04:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-13 22:36:25+05:30" class="dt-published"></time>
   Wed 13 May 2020
-  in Python Software Foundation News.
+  in the champaka.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -190,9 +164,9 @@ Antonio Cuni
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://sash2501.github.io/posts/GSoC-with-Kdenlive/" rel="bookmark" class="u-url"
-       title="GSoC with Kdenlive" target="_blank">
-      <time class="m-date" datetime="2020-05-13 12:10:00+00:00">
+    <a href="https://www.amyspark.me/blog/posts/2020/05/13/gsoc-setup-windows.html" rel="bookmark" class="u-url"
+       title="Developing Krita in Visual Studio Code, part 3" target="_blank">
+      <time class="m-date" datetime="2020-05-13 16:45:00+00:00">
         May
         <span class="m-date-day">
           13
@@ -200,18 +174,48 @@ Antonio Cuni
         2020
       </time>
       <div class="p-name">
-      GSoC with Kdenlive
+      Developing Krita in Visual Studio Code, part 3
       </div>
     </a>
   </h1>
   <div class="p-summary">
 
+    <img src="//www.amyspark.me/assets/posts/2020/05/Krita-building_for-cats_008-running-success_by-deevad.jpg">
+
+        Everyone uses deevad's pics for Krita's building instructions <span>😄</span> Credits: David Revoy, CC-BY-4.0
+
+
+
+<p>Hi again, everyone!
+This is the final post for this series, in which I’ll show you how to
+set Krita up in Visual Studio Code. For this post, we’ll cover the
+Windows operating system. I’ll show you how 
+to take advantage of the same build scripts maintainers use
+for building the Windows releases.</p>
+
+
+
+<p>In the spirit of David’s post and Krita’s docs, this post has the following sections:</p>
+
+<ul>
+  <li><a href="#preparing-your-development-environment">Preparing your development environment</a></li>
+  <li><a href="#getting-the-source-code">Getting the Source Code</a></li>
+  <li><a href="#getting-the-compiler-and-python">Getting the Compiler and Python</a></li>
+  <li><a href="#configuring-the-whole-build">Configuring the Whole Build</a></li>
+  <li><a href="#running-krita">Running Krita</a></li>
+  <li><a href="#updating">Updating</a></li>
+  <li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+
+<p>So, without further ado, let’s begin!</p>
+
+<p><strong>A warning:</strong> this is a distilled version of the <a href="https://docs.krita.org/en/untranslatable_pages/building_krita.html">official, updated documentation</a>, ported to Windows. It’s optimized to set you up under Visual Studio Code …</p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Sashmita Raghav (sassycode)</b></span>
-  on <time datetime="2020-05-13 12:10:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Amyspark</b></span>
+  on <time datetime="2020-05-13 16:45:00+00:00" class="dt-published"></time>
   Wed 13 May 2020
   in Planet KDE.
 </footer>
@@ -222,9 +226,9 @@ Antonio Cuni
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/shell-dev/2020/05/13/this-month-in-mutter-gnome-shell-april-2020/" rel="bookmark" class="u-url"
-       title="This Month in Mutter & GNOME Shell | April 2020" target="_blank">
-      <time class="m-date" datetime="2020-05-13 11:58:52+00:00">
+    <a href="http://pyfound.blogspot.com/2020/05/6-ways-salesforce-gets-things-done-with.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="6 Ways Salesforce Gets Things Done with Python" target="_blank">
+      <time class="m-date" datetime="2020-05-13 12:13:58.500000-04:00">
         May
         <span class="m-date-day">
           13
@@ -232,20 +236,139 @@ Antonio Cuni
         2020
       </time>
       <div class="p-name">
-      This Month in Mutter & GNOME Shell | April 2020
+      6 Ways Salesforce Gets Things Done with Python
       </div>
     </a>
   </h1>
   <div class="p-summary">
-  A bit later than usual, but nonetheless here the changes that happened during April on GNOME Shell and Mutter. GNOME Shell The command-line extensions tool received a round of improvements, and now reports extension errors better. Switching the scale of a monitor now should update all interface elements properly on GNOME Shell. Another quality of … <p><a href="https://blogs.gnome.org/shell-dev/2020/05/13/this-month-in-mutter-gnome-shell-april-2020/">Continue reading<span> "This Month in Mutter &amp; GNOME Shell | April 2020"</span></a></p>
+
+Salesforce Engineering puts Python to work across many areas of their business.&nbsp;
+Read on to see how they use python in machine learning, security, internal devops teams and more.
+
+The Python programming language has strong ties to both engineering and science disciplines, which gives its users access to a wide number of libraries to solve both practical and theoretical problems. We put it to work across Salesforce.org (our non-profit product arm), Heroku, Salesforce Einstein, Industries and Service Clouds, internal devops teams, and more.
+<div>
+
+<div>
+<a href="https://1.bp.blogspot.com/-zvEwFQOf8fo/Xrrhoh5R8GI/AAAAAAAAMHI/5tDbele4GIUuipihVpnmyD0Jlw0UIbo3wCLcBGAsYHQ/s1600/iStock-1136011446.jpg"><img src="https://1.bp.blogspot.com/-zvEwFQOf8fo/Xrrhoh5R8GI/AAAAAAAAMHI/5tDbele4GIUuipihVpnmyD0Jlw0UIbo3wCLcBGAsYHQ/s320/iStock-1136011446.jpg"></a></div>
+</div>
+<div>
+
+Here are 6 things we use Python to do (and you can too!) through projects we’ve open sourced:
+<div>
+</div>
+<div>
+<b>1. Conquer the Natural Language Decathlon by performing ten disparate natural language tasks (<a href="http://decanlp.com/">DecaNLP</a>).</b></div>
+<div>
+
+<i>Deep learning has significantly improved state-of-the-art performance for natural language processing (NLP) tasks, but each one is typically studied in isolation. The Natural …</i></div></div>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>feaneron</b></span>
-  on <time datetime="2020-05-13 11:58:52+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Betsy Waliszewski (noreply@blogger.com)</b></span>
+  on <time datetime="2020-05-13 12:13:58.500000-04:00" class="dt-published"></time>
+  Wed 13 May 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/alexl/2020/05/13/putting-container-updates-on-a-diet/" rel="bookmark" class="u-url"
+       title="Putting container updates on a diet" target="_blank">
+      <time class="m-date" datetime="2020-05-13 15:22:44+00:00">
+        May
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Putting container updates on a diet
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  For infrastructure reasons the Fedora flatpaks are delivered using the container registry, rather than OSTree (which is normally used for flatpaks). Container registries are quite inefficient for updates, so we have been getting complaints about large downloads. I’ve been working on ways to make this more efficient. That would help not only the desktop use-case, … <a href="https://blogs.gnome.org/alexl/2020/05/13/putting-container-updates-on-a-diet/">Continue reading <span>Putting container updates on a diet</span></a>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>alexl</b></span>
+  on <time datetime="2020-05-13 15:22:44+00:00" class="dt-published"></time>
   Wed 13 May 2020
   in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/618011933329768449/this-false-color-satellite-image-the-recent" rel="bookmark" class="u-url"
+       title="This false-color satellite image – the recent winner of..." target="_blank">
+      <time class="m-date" datetime="2020-05-13 10:01:48-05:00">
+        May
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      This false-color satellite image – the recent winner of...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <img src="https://66.media.tumblr.com/4e9e84491c358355d2759d9fe1aaa2e3/52abea0396202fb8-27/s500x750/ce6876f112efca10c19b9cacb26c22870513601b.jpg"><p>
+<a href="https://fyfluiddynamics.com/2020/05/colorful-tides/">This false-color satellite image – the recent winner of NASA Earth Observatory’s Tournament Earth 2020
+ – shows sands and seaweed off the coast of the Bahamas.</a> (Image credit: S. Andrefouet; via <a href="https://earthobservatory.nasa.gov/images/2780/ocean-sand-bahamas">NASA Earth Observatory</a>)
+
+</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-13 10:01:48-05:00" class="dt-published"></time>
+  Wed 13 May 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/05/colorful-tides/" rel="bookmark" class="u-url"
+       title="Colorful Tides" target="_blank">
+      <time class="m-date" datetime="2020-05-13 15:00:00+00:00">
+        May
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Colorful Tides
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  This false-color satellite image &#8212; the recent winner of NASA Earth Observatory&#8217;s Tournament Earth 2020 &#8212; shows sands and seaweed off the coast of the Bahamas. Ocean currents and tides <a href="https://fyfluiddynamics.com/2020/05/colorful-tides/">Keep reading</a>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-05-13 15:00:00+00:00" class="dt-published"></time>
+  Wed 13 May 2020
+  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -349,76 +472,6 @@ Antonio Cuni
   on <time datetime="2020-05-12 23:04:19+02:00" class="dt-published"></time>
   Tue 12 May 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/617921308564635648/eutectic-gallium-indium-alloy-is-a" rel="bookmark" class="u-url"
-       title="Eutectic gallium-indium alloy is a room-temperature liquid..." target="_blank">
-      <time class="m-date" datetime="2020-05-12 10:01:21-05:00">
-        May
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Eutectic gallium-indium alloy is a room-temperature liquid...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <img src="https://66.media.tumblr.com/94e93bbce1c3b1d29e8ed6218e85da8f/6e2f6cd6c78ff7fe-fe/s500x750/948154ffeae5dd208be775105f8069fe2042cfad.gifv"> <img src="https://66.media.tumblr.com/5de020f6c4353814128fda18fad5002e/6e2f6cd6c78ff7fe-b1/s500x750/e5815ad3016e7815f91c7472887ecdd4d1abf2ac.gifv"> <img src="https://66.media.tumblr.com/6b8a648f344dde3b9a3c0a301f6f3fe1/6e2f6cd6c78ff7fe-59/s500x750/8b2fca73cd654cc6ee4d2ccd7b229291234f6a45.gifv"> <p>
-<a href="https://fyfluiddynamics.com/2020/05/growing-metal-fingers/">Eutectic gallium-indium alloy is a room-temperature liquid metal with an extremely high surface tension.</a>
-
-
-(Image and video credit: <a href="https://doi.org/10.1103/APS.DFD.2019.GFM.V0068">K. Hillaire et al.</a>)
-
-</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-12 10:01:21-05:00" class="dt-published"></time>
-  Tue 12 May 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/05/growing-metal-fingers/" rel="bookmark" class="u-url"
-       title="Growing Metal Fingers" target="_blank">
-      <time class="m-date" datetime="2020-05-12 15:00:00+00:00">
-        May
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Growing Metal Fingers
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Eutectic gallium-indium alloy is a room-temperature liquid metal with an extremely high surface tension. Normally, that high surface tension would keep it from spreading easily. But once the metal oxidizes, <a href="https://fyfluiddynamics.com/2020/05/growing-metal-fingers/">Keep reading</a>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-05-12 15:00:00+00:00" class="dt-published"></time>
-  Tue 12 May 2020
-  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1144,38 +1197,6 @@ This release also contains an alpha version of pip's next generation resolver. I
   on <time datetime="2020-04-16 20:25:38+00:00" class="dt-published"></time>
   Thu 16 Apr 2020
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blogdecjunior.tumblr.com/post/615455727418507264/top-unexplained-bayos-facts" rel="bookmark" class="u-url"
-       title="top unexplained bayos facts" target="_blank">
-      <time class="m-date" datetime="2020-04-15 15:22:00+05:30">
-        Apr
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      top unexplained bayos facts
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  I had some boost(cricketer Dhoni&rsquo;s secret of energy) and found my mind in some different...
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-04-15 15:22:00+05:30" class="dt-published"></time>
-  Wed 15 Apr 2020
-  in the champaka.
 </footer>
 <div class="m-clearfix-l"></div>
 
