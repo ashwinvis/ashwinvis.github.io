@@ -113,7 +113,7 @@ M_LINKS_NAVBAR1 = [
     ),
     (
         "Showcase",
-        "\#",
+        "pages/showcase",
         "",
         [
             ("CV", "pages/cv", ""),

@@ -25,24 +25,9 @@ Welcome
                 <h1 id="landing">
                   <span class="m-thin">
                     <span class="landing-prompt">❯❯❯ </span>
-                    <span class="landing-kw">from</span>
-                    <span class="landing-mod">site</span>
                     <span class="landing-kw">import</span>
-                    <span class="landing-sym">(</span>
+                    <span class="landing-mod">site</span>
                     <br/>
-                  </span>
-                  <span class="landing-prompt">...&nbsp;</span><span>&nbsp;</span>
-                  <a class="p-name u-url"
-                     href="https://ashwin.info.tm"
-                  >
-                    <span class="p-given-name">Ashwin Vishnu</span>
-                    <span class="p-family-name">Mohanan</span>
-                  </a>
-                  <span class="m-thin">
-                    <br/>
-                    <span class="landing-prompt">... </span>
-                    <span class="landing-sym">)</span>
-                    <span class="landing-ticker">|</span>
                   </span>
                 </h1>
 
@@ -59,24 +44,50 @@ Welcome
                .. raw:: html
 
                   <h3>
-                    <code>$ whoami</code>
+                    <code>❯❯❯ site.hello()</code>
+                  </h3>
+                  <p>
+                    Welcome! My name is
+                    <a class="p-name u-url" href="https://ashwin.info.tm">
+                      <span class="p-given-name">Ashwin Vishnu</span>
+                      <span class="p-family-name">Mohanan</span>
+                    </a>
+                  </p>
+                  <h3>
+                    <code>❯❯❯ site.whoami() </code>
                   </h3>
 
                Postdoc at :p-org:`MISU, Stockholm University`,
                research software developer, blogger and a person
 
-            My current research concerns with atmospheric boundary layer
-            turbulence studied using large-eddy simulations (LES).  *Other
-            research interests:* geophysical flows, stratified flows,
-            instabilities, scientific computing
 
-            I am also passionate about building simple, efficient, open-source,
-            and reproducible software. Check out my blog posts and showcase!
+               My current research is about atmospheric boundary layer
+               turbulence studied using large-eddy simulations (LES).  *Other
+               research interests:* geophysical flows, stratified flows,
+               instabilities, scientific computing
+
+               Building simple, efficient, open-source, and reproducible software
+               fascinate me. You can find more what I do in my **showcase**.
+               Also, check out my **blog posts**.
+
+               .. raw:: html
+
+                  <h3>
+                    <code>❯❯❯ continue
+                       <span class="landing-ticker">|</span>
+                    </code>
+                  </h3>
+
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
+
+            .. button-info:: /pages/showcase.html
+                :class: m-fullwidth
+
+                Showcase
 
             .. button-primary:: /archives.html
                 :class: m-fullwidth
 
-                Read my blog posts
+                Blog posts
 
