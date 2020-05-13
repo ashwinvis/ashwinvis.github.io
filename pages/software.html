@@ -90,7 +90,7 @@
               </ol>
             </li>
             <li>
-              <a href="https://ashwin.info.tm/\">Showcase</a>
+              <a href="https://ashwin.info.tm/pages/showcase">Showcase</a>
               <ol>
                 <li><a href="https://ashwin.info.tm/pages/cv">CV</a></li>
                 <li><a href="https://ashwin.info.tm/pages/research">Research</a></li>
@@ -120,17 +120,33 @@
 <aside class="contents" id="contents">
 <h3>Contents</h3>
 <ul>
-<li><a href="#research-software" id="id1">Research Software</a><ul>
-<li><a href="#fluiddyn-project" id="id2">FluidDyn project</a></li>
-<li><a href="#caeroc" id="id3">Caeroc</a></li>
+<li><a href="#research-software" id="id2">Research Software</a><ul>
+<li><a href="#snek5000" id="id3">snek5000</a></li>
+<li><a href="#fluiddyn-project" id="id4">FluidDyn project</a></li>
+<li><a href="#caeroc" id="id5">Caeroc</a></li>
 </ul>
 </li>
-<li><a href="#open-source-contributions" id="id4">Open-Source contributions</a></li>
-<li><a href="#humble-projects" id="id5">Humble projects</a></li>
+<li><a href="#open-source-contributions" id="id6">Open-Source contributions</a></li>
+<li><a href="#humble-projects" id="id7">Humble projects</a></li>
 </ul>
 </aside>
 <section id="research-software">
-<h2><a href="#id1">Research Software</a></h2>
+<h2><a href="#id2">Research Software</a></h2>
+<section id="snek5000">
+<h3><a href="https://github.com/exabl/snek5000">snek5000</a></h3>
+<p>On my postdoc role, I started using <a href="https://github.com/Nek5000/Nek5000">Nek5000</a>, is a really popular Fortran 77 HPC
+code. Using it is bittersweet experience:</p>
+<ul>
+<li>loads of features</li>
+<li>good performance 🚀</li>
+<li>monolithic, uses in-house build tools</li>
+<li>utilizes several legacy Fortran anti-features</li>
+</ul>
+<p>On the bright side, as a user there is a separation of the user code and
+parameters from the <a href="https://github.com/Nek5000/Nek5000">Nek5000</a> core. This fact was exploited to create
+<a href="https://github.com/exabl/snek5000">snek5000</a> to create a pythonic API to effortlessly launch simulations with
+varying parameters.</p>
+</section>
 <section id="fluiddyn-project">
 <h3><a href="https://fluiddyn.bitbucket.io">FluidDyn project</a></h3>
 <p>An ecosystem of packages for research and teaching in fluid dynamics.</p>
@@ -171,49 +187,83 @@ src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775"
 frameborder="0" allowfullscreen> </iframe></section>
 </section>
 <section id="open-source-contributions">
-<h2><a href="#id4">Open-Source contributions</a></h2>
+<h2><a href="#id6">Open-Source contributions</a></h2>
 <p>I have also contributed some serious projects such as:</p>
 <ul>
-<li><a href="https://pythran.readthedocs.io">Pythran</a>: An ahead-of-time
-compiler for creating blazing fast Python extensions from Pure python
-or NumPy code. I contributed to:<ul>
-<li>improvements in Pythran extension build process
-(<a href="https://github.com/serge-sans-paille/pythran/pull/941">link</a>)</li>
-<li>linting Pythran configuration files
-(<a href="https://github.com/serge-sans-paille/pythran/pull/1145">link</a>)</li>
+<li><p><a href="https://github.com/python/cpython">CPython</a>: the reference Python
+interpreter. I helped in fixing:</p>
+<ul>
+<li>A typo (<a href="https://github.com/python/cpython/pull/15614">link</a>)!</li>
+<li>Detected broken docstrings (<a href="https://github.com/python/cpython/pull/13491">link</a>).</li>
 </ul>
 </li>
-<li><a href="https://jupyterlab.readthedocs.io">JupyterLab</a>: Next generation
-UI for Jupyter notebooks. I have:<ul>
+<li><p><a href="https://github.com/msprev/fzf-bibtex">fzf-bibtex</a>: a BibTeX source for
+fzf. I added:</p>
+<blockquote>
+<ul>
+<li>Biblatex support. (<a href="https://github.com/msprev/fzf-bibtex/pull/14">link</a>)</li>
+</ul>
+</blockquote>
+</li>
+<li><p><a href="https://jupyterlab.readthedocs.io">JupyterLab</a>: Next generation
+UI for Jupyter notebooks. I have:</p>
+<ul>
 <li>added access to solarized theme for the text editor
 (<a href="https://github.com/jupyterlab/jupyterlab/pull/4445">link</a>)</li>
 <li>fixed font rendering in the terminal
 (<a href="https://github.com/jupyterlab/jupyterlab/pull/5732">link</a>)</li>
 </ul>
 </li>
-<li><a href="https://github.com/ashwinvis/pymc3">PyMC3</a>: Probabilistic
-programming in Python. I have:<ul>
+<li><p><a href="https://github.com/ashwinvis/pymc3">PyMC3</a>: Probabilistic
+programming in Python. I have:</p>
+<ul>
 <li>improved the overall structure of documentation
 (<a href="https://github.com/pymc-devs/pymc3/pull/3303">link</a>)</li>
+</ul>
+</li>
+<li><p><a href="https://pythran.readthedocs.io">Pythran</a>: An ahead-of-time
+compiler for creating blazing fast Python extensions from Pure python
+or NumPy code. I contributed to:</p>
+<ul>
+<li>improvements in Pythran extension build process
+(<a href="https://github.com/serge-sans-paille/pythran/pull/941">link</a>)</li>
+<li>linting Pythran configuration files
+(<a href="https://github.com/serge-sans-paille/pythran/pull/1145">link</a>)</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/suan/vim-instant-markdown">vim-instant-markdown</a>
+&amp; <a href="https://github.com/suan/instant-markdown-d">Instant markdown server</a>: Write
+markdown with instant preview. I added MathJax support and much more. I am
+currently the main maintainer.</p>
+</li>
+<li><p><a href="https://github.com/We-Care-sweden/analysis-scripts">We-Care analysis scripts</a>: Processing data collected from <a href="https://covidmap.se">covidmap.se</a>. I have:</p>
+<ul>
+<li>performed some basic maintenance, and implemented database logic
+(<a href="https://github.com/We-Care-sweden/analysis-scripts/pulls?q=is%3Apr+author%3Aashwinvis+is%3Aclosed">pull-requests</a>)</li>
 </ul>
 </li>
 </ul>
 </section>
 <section id="humble-projects">
-<h2><a href="#id5">Humble projects</a></h2>
+<h2><a href="#id7">Humble projects</a></h2>
 <p>Some repositories that I maintain for my personal use and possible
 reuse.</p>
 <ul>
-<li><a href="https://github.com/ashwinvis/backdrop-theme">Backdrop theme</a>: A
-responsive pelican theme compiled node, grunt, sass technologies.</li>
-<li><a href="https://github.com/ashwinvis/awesome-scientific-writing">Awesome scientific
+<li><a href="https://github.com/ashwinvis/awkupy">awkupy</a>: AWK meets Python: API, CLI
+and IPython / Jupyter magics for data wrangling with awk.</li>
+<li><a href="https://github.com/writing-resources/awesome-scientific-writing">Awesome scientific
 writing</a>:
 A curated list of resources for writing scientific documents with
 markup languages.</li>
-<li><a href="https://github.com/ashwinvis/vim-instant-markdown">vim-instant-markdown</a>
-&amp; <a href="https://github.com/ashwinvis/instant-markdown-d">Instant markdown
-server</a>: Write
-markdown with instant preview. Supports MathJax as well.</li>
+<li><a href="https://github.com/ashwinvis/backdrop-theme">Backdrop theme</a>: A
+responsive pelican theme compiled node, grunt, sass technologies.</li>
+<li><a href="https://source.coderefinery.org/ashwinvis/dotfiles">dotfiles</a>: My Linux
+configuration files a.k.a. dotfiles.</li>
+<li><a href="https://github.com/ashwinvis/jupyter-wordcloud">jupyter-wordcloud</a>:
+Generate wordclouds from Jupyter notebooks.</li>
+<li><a href="https://github.com/ashwinvis/pelican-planet">pelican-planet</a>: Pelican
+plugin which asynchronously aggregates feeds into the planet page in this
+website.</li>
 <li><a href="https://github.com/ashwinvis/xrandr-extend">xrandr-extend</a>: CLI
 tool to calculate and use non-HIDPI external displays along with
 HIDPI monitors.</li>
