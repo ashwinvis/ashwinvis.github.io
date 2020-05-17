@@ -132,9 +132,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/05/email-logins/" rel="bookmark" class="u-url"
-       title="Experiences with email-based login" target="_blank">
-      <time class="m-date" datetime="2020-05-17 07:22:52+02:00">
+    <a href="https://jlelse.blog/micro/2020/05/post-mentioned-in/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-05-17 12:17:43+02:00">
         May
         <span class="m-date-day">
           17
@@ -142,29 +142,18 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Experiences with email-based login
+      💬
       </div>
     </a>
   </h1>
   <div class="p-summary">
-  <p>It is interesting to see that <a href="https://www.arp242.net/email-auth.html">I am not the only one</a> who has <a href="https://jlelse.blog/thoughts/2019/12/email-login/">a problem with email logins</a>. I find email logins make everything much more complicated than simple password-based authentication. I use a password manager both on the computer in the browser and on my smartphone and can easily have complex passwords filled in automatically.</p>
-<blockquote>
-<p>I found it annoying to use myself:</p>
-<ol>
-<li>Go to arp242.goatcounter.com</li>
-<li>Enter my email.</li>
-<li>Go to FastMail.</li>
-<li>Wait 10 seconds to 5 minutes for the email to arrive.</li>
-<li>Click the link, opening a new logged-in goatcounter tab.</li>
-<li>Close the old goatcounter tab where I filled in my email and FastMail tab.</li>
-</ol>
-</blockquote>
+  <p>To give readers a bit more context, I’ve extended <a href="https://git.jlel.se/jlelse/Indieroad">my Hugo theme</a> so that it will be displayed below each post if it is mentioned or linked in another post on my blog. This increases the build time from about 7 to about 17 seconds (on my machine it takes 2 seconds, but it is also much faster than the VPS), but I don’t know how I can make it more performant. After all, for each article it is necessary to iterate through all the other articles and see if the content contains a relative link to the post.</p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-17 07:22:52+02:00" class="dt-published"></time>
+  on <time datetime="2020-05-17 12:17:43+02:00" class="dt-published"></time>
   Sun 17 May 2020
   in jlelse's Blog.
 </footer>
@@ -207,9 +196,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2020/05/15/this-week-in-kde-plasma-5-19-beta-and-more/" rel="bookmark" class="u-url"
-       title="This week in KDE: Plasma 5.19 beta and more" target="_blank">
-      <time class="m-date" datetime="2020-05-16 04:33:56+00:00">
+    <a href="https://kdenlive.org/en/2020/05/kdenlive-20-04-1-released/" rel="bookmark" class="u-url"
+       title="Kdenlive 20.04.1 released" target="_blank">
+      <time class="m-date" datetime="2020-05-16 09:05:59+00:00">
         May
         <span class="m-date-day">
           16
@@ -217,28 +206,48 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      This week in KDE: Plasma 5.19 beta and more
+      Kdenlive 20.04.1 released
       </div>
     </a>
   </h1>
   <div class="p-summary">
-  <p>The <a href="https://kde.org/announcements/plasma-5.18.90.php">KDE Plasma 5.19 beta</a> has been released! We’re very proud of the work that’s gone into 5.19, but it is no doubt buggy and in need of QA. Please help us find all the bugs we missed! Go test it in your favorite distro; options include <a href="https://neon.kde.org/download">KDE Neon Testing or Unstable editions</a>, <a href="https://en.opensuse.org/SDB:Argon_and_Krypton">openSUSE Krypton</a> or <a href="https://en.opensuse.org/SDB:KDE_repositories#Unstable_Frameworks.2C_Plasma_and_Applications">KDE:Unstable repos</a>, <a href="https://wiki.archlinux.org/index.php/Official_repositories#kde-unstable">Arch’s kde-unstable repos</a>, and probably many more I’m not familiar with (please tell me!).</p>
-<p>But wait, there’s more…</p>
-New Features
+  <div>
+
+
+
+
+                    <div>
+                <div>
+
+
+                <div>
+
+
+                <span><img alt="" src="//kdenlive.org/wp-content/uploads/2020/05/Screenshot-20.04.1.png" title=""></span>
+            </div>
+<div>
+
+
+                <div>
+<p>We just released the first bugfix version for the 20.04 Kdenlive version. Despite our continued work, many issues were still affecting the 20.04.0 version. A lot of work has been done to fix crashes and other annoying issues, so the 20.04.1 version should be much more reliable and stable. We have a long list of fixed issues.</p>
+<p><strong>Windows:</strong> Motion Tracking effect integrated.</p>
+<p><strong>AppImage:</strong> Fix crash on older systems (remove OpenCV sse4 dependency)</p>
+<p>Most notably, we have now fixed:</p>
+<p><strong>Crash fixes:</strong></p>
 <ul>
-<li>Konsole tabs <a href="https://invent.kde.org/kde/konsole/-/merge_requests/77">can now be assigned colors!</a> (Gustavo Carneiro, Konsole 20.08.0):
-<img alt="Colorized Konsole tabs" src="//pointieststick.files.wordpress.com/2020/05/screenshot_20200515_171041.png?w=1100">
-</li>
-<li>Dolphin now has new actions to <a href="https://bugs.kde.org/show_bug.cgi?id=276167">quickly move or copy the selected files in one pane of a split view into the folder in the other pane</a> (Antonio Prcela, Dolphin 20.08.0):
-<img alt="Dolphin's new Move to inactive split view action" src="//pointieststick.files.wordpress.com/2020/05/screenshot_20200515_171333.png?w=1100">
-</li>
-<li>System Monitor widgets <a href="https://phabricator.kde.org/D28487">were completely redesigned and rewritten …</a></li></ul>
+<li>Disable loading of .mlt playlists with profile not equal to project profile (caused crash)</li>
+<li>Fix possible crash on subclip thumbnail creation</li>
+<li>Fix crash trying to move timeline clip to another track when bin clip had some effects</li>
+<li>Fix crash creating DVD chapters</li>
+<li>Fix playlist profile incorrectly detected, leading to crashes when seeking in timeline</li>
+</ul>
+<p><strong>Important …</strong></p></div></div></div></div></div>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-05-16 04:33:56+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2020-05-16 09:05:59+00:00" class="dt-published"></time>
   Sat 16 May 2020
   in Planet KDE.
 </footer>
@@ -892,6 +901,38 @@ Disassembler
   on <time datetime="2020-05-10 00:00:00+00:00" class="dt-published"></time>
   Sun 10 May 2020
   in Aswin's tech blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-09_Ethics_and_licensing" rel="bookmark" class="u-url"
+       title="Ethics and licensing" target="_blank">
+      <time class="m-date" datetime="2020-05-09 11:53:59+00:00">
+        May
+        <span class="m-date-day">
+          09
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Ethics and licensing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>In 2018, I wrote about <a href="https://alexschroeder.ch/wiki/2018-10-06_Programming_Ethics">ethics in programming</a> and today stumbled on a related thing when <a href="https://chaos.social/users/decentral1se">@decentral1se</a> mentioned the  <a href="https://firstdonoharm.dev/">Hippocratic License</a>:</p><blockquote><p>Politics and software are so tangled that they cannot be reasonably separated. … if those novel situations involve harming other people, we can and should feel responsible. … the Hippocratic License … specifically prohibits the use of software to violate universal standards of human rights</p></blockquote><p> I understand the problem of interoperability, the difficulty of enforcement, the headaches of assembly… and yet! And yet. Remember <a href="https://en.m.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace">Code is Law</a>? Software is politics and programming is about making ethical choices. Why should the license be a technocratic decision? We fought proprietary software and while we haven’t won that’s not a reason to avoid a second battle. We are humans. We can juggle many things. Our opponents do, too. We can do this.</p><p>As …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-09 11:53:59+00:00" class="dt-published"></time>
+  Sat 09 May 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
