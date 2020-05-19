@@ -132,6 +132,84 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://who-t.blogspot.com/2020/05/xisxwayland-checks-for-xwayland-or-not.html" rel="bookmark" class="u-url"
+       title="xisxwayland checks for Xwayland ... or not" target="_blank">
+      <time class="m-date" datetime="2020-05-19 02:15:00+00:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      xisxwayland checks for Xwayland ... or not
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>One of the more common issues we encounter debugging things is that users don't always know whether they're running on a Wayland or X11 session. Which I guess is a good advertisement for how far some of the compositors have come. The question "are you running on Xorg or Wayland" thus comes up a lot and suggestions previously included things like "run xeyes", "grep xinput list", "check xrandr" and so on and so forth. None of those are particularly scriptable, so there's a new tool around now: <a href="https://gitlab.freedesktop.org/xorg/app/xisxwayland/">xisxwayland</a>. </p><p>Run without arguments it simply exits with exit code 0 if the X server is Xwayland, or 1 otherwise. Which means use can use it like this: </p><pre>$ cat my-xorg-only-script.sh#!/bin/bashif xisxwayland; then   echo "I can't run this script against Xwayland";   exit 1fi...</pre>Or, in the case where you …
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Peter Hutterer (noreply@blogger.com)</b></span>
+  on <time datetime="2020-05-19 02:15:00+00:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jbbgameich.github.io/misc/2020/05/19/a-month-of-git-lab.html" rel="bookmark" class="u-url"
+       title="A month of git-lab" target="_blank">
+      <time class="m-date" datetime="2020-05-19 00:54:32+00:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      A month of git-lab
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>About a month ago I published the initial version of git-lab, a command line client for GitLab.
+Lots of new features have been added since then, and I hope you’ll find them useful.
+Tobias Fella and especially Benjamin Port joined and brought this project forward.</p>
+
+<ol>
+  <li>
+    <p>Benjamin Port refactored the command line interface to be more familiar to GitLab users, while keeping support for an arcanist-like cli. This means you can now use <code>git lab mr</code> instead of <code>git lab checkout</code> instead of the diff and patch commands known from arc if you like.</p>
+
+    <p><img alt="cli after the latest changes" src="//jbbgameich.github.io/img/git-lab-cli.png"></p>
+  </li>
+  <li>
+    <p>For more arc compatibility, there is now a <code>git lab feature</code> command for switching and creating branches. It does the same as <code>git branch</code> and <code>git checkout -b</code>, so if you didn’t previously use arc you can probably ignore it :)</p>
+  </li>
+  <li>
+    <p>A project search has been …</p></li></ol>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jonah Brüchert</b></span>
+  on <time datetime="2020-05-19 00:54:32+00:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://researchsoftwarehour.github.io/2020/05/19/rsh-004.html" rel="bookmark" class="u-url"
        title="Workflows and documentation, RSH 004" target="_blank">
       <time class="m-date" datetime="2020-05-19 00:00:00+00:00">
@@ -213,38 +291,6 @@ playlist</a>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/mcatanzaro/2020/05/18/patching-vendored-rust-dependencies/" rel="bookmark" class="u-url"
-       title="Patching Vendored Rust Dependencies" target="_blank">
-      <time class="m-date" datetime="2020-05-18 15:56:34+00:00">
-        May
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Patching Vendored Rust Dependencies
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  Recently I had a difficult time trying to patch a CVE in librsvg. The issue itself was simple to patch because Federico kindly backported the series of commits required to fix it to the branch we are using downstream. Problem was, one of the vendored deps in the old librsvg tarball did not build with … <p><a href="https://blogs.gnome.org/mcatanzaro/2020/05/18/patching-vendored-rust-dependencies/">Continue reading<span> "Patching Vendored Rust Dependencies"</span></a></p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Michael Catanzaro</b></span>
-  on <time datetime="2020-05-18 15:56:34+00:00" class="dt-published"></time>
-  Mon 18 May 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/618464919107551232/nasa-goddard-has-produced-another-gorgeous" rel="bookmark" class="u-url"
        title="NASA Goddard has produced another gorgeous visualization of how..." target="_blank">
       <time class="m-date" datetime="2020-05-18 10:01:48-05:00">
@@ -307,50 +353,6 @@ playlist</a>.</p>
   on <time datetime="2020-05-18 15:00:00+00:00" class="dt-published"></time>
   Mon 18 May 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.kdab.com/why-is-my-screen-still-black/" rel="bookmark" class="u-url"
-       title="Why is my screen still black" target="_blank">
-      <time class="m-date" datetime="2020-05-18 09:00:55+00:00">
-        May
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Why is my screen still black
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p><strong>Part 2</strong></p>
-<p>If you are here from Part 1, welcome back. If you are wondering why we started at Part 2, go to <a href="https://www.kdab.com/why-is-my-screen-black/">Part 1</a>.</p>
-<div>
-<div>
-<img alt="Black Screen" src="//www.kdab.com/wp-content/uploads/stories/black-screen-cursor-300x300.png"><p>Uncanny Valley!</p>
-</div>
-</div>
-<p>So, you tried everything from the first part (that was relative to you), and your screen is still a backlighting test? No problem. (Well.. I mean, clearly there is but you know what I mean) We’ve gathered <em>another</em> five reasons this could be happening and how to go about fixing them.</p>
-<p><strong>Issue 6</strong>:
-Directional light is pointing in the wrong direction.</p>
-<p>There are a few choices when it comes to choosing a light source for your scene. You can even add more than one.
-So we have Point lights, Directional lights, Spot lights and Area lights. You can then also have emissive textures that will act as a light source.
-Some of …</p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2020-05-18 09:00:55+00:00" class="dt-published"></time>
-  Mon 18 May 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
