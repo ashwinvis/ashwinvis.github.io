@@ -132,6 +132,103 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://pythoninsider.blogspot.com/2020/05/python-390b1-is-now-available-for.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
+       title="Python 3.9.0b1 is now available for testing" target="_blank">
+      <time class="m-date" datetime="2020-05-19 05:47:16.458000-04:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python 3.9.0b1 is now available for testing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  On behalf of the entire Python development community, and the currently 
+serving Python release team in particular, I’m pleased to announce the 
+release of Python 3.9.0b1. Get it here:
+
+<a href="https://www.python.org/downloads/release/python-390b1/">https://www.python.org/downloads/release/python-390b1/</a>
+
+
+
+This is a beta preview of Python 3.9
+Python 3.9 is still in development.  This release, 3.9.0b1, is the first of four planned beta release previews.
+Beta release previews are intended to give the wider community the 
+opportunity to test new features and bug fixes and to prepare their 
+projects to support the new feature release.
+
+
+Call to action
+We <b>strongly encourage</b> maintainers of third-party Python projects to <b>test with 3.9</b> during the beta phase and report issues found to <a href="https://bugs.python.org/">the Python bug tracker</a>
+ as soon as possible.  While the release is planned to be feature …
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
+  on <time datetime="2020-05-19 05:47:16.458000-04:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://rajeeshknambiar.wordpress.com/2020/05/19/complex-text-shaping-fixed-in-konsole-20-08/" rel="bookmark" class="u-url"
+       title="Complex text shaping fixed in Konsole 20.08" target="_blank">
+      <time class="m-date" datetime="2020-05-19 09:44:18+00:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Complex text shaping fixed in Konsole 20.08
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p><a href="https://kde.org/applications/en/system/org.kde.konsole">Konsole</a> was one of the few terminal emulators with proper complex text shaping support. Unfortunately, complex text (including Malayalam) shaping was broken around KDE Applications release 18.08 (see upstream bug <a href="https://bugs.kde.org/show_bug.cgi?id=401094">401094</a> for details).</p>
+
+
+
+<img alt="" src="//rajeeshknambiar.files.wordpress.com/2020/05/konsole-20.04-malayalam-vanilla.png?w=1264">Broken Malayalam text shaping in Konsole 20.04
+
+
+
+<p>Mariusz Glebocki fixed the code in January this year which I tested to work correctly. There’s a minor issue of glyphs with deep vertical components being cut-off (notice rendering of “സ്കൂ”), but otherwise the shaping and rendering is good. The patches are also merged upstream and will be part of the KDE Applications Bundle 20.08.</p>
+
+
+
+<img alt="" src="//rajeeshknambiar.files.wordpress.com/2020/05/konsole-20.04-malayalam-patched.png?w=1264">Proper Malayalam text shaping in Konsole 20.04 with shaping fixes.
+
+
+
+<p>If you don’t want to wait that long, I have made a 20.04 release with the fixes on top available for Fedora 31 &amp; 32 in this <a href="https://copr.fedorainfracloud.org/coprs/rajeeshknambiar/kf5-kde-apps/">COPR …</a></p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Rajeesh K Nambiar (rajeesh)</b></span>
+  on <time datetime="2020-05-19 09:44:18+00:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://who-t.blogspot.com/2020/05/xisxwayland-checks-for-xwayland-or-not.html" rel="bookmark" class="u-url"
        title="xisxwayland checks for Xwayland ... or not" target="_blank">
       <time class="m-date" datetime="2020-05-19 02:15:00+00:00">
@@ -147,7 +244,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
     </a>
   </h1>
   <div class="p-summary">
-  <p>One of the more common issues we encounter debugging things is that users don't always know whether they're running on a Wayland or X11 session. Which I guess is a good advertisement for how far some of the compositors have come. The question "are you running on Xorg or Wayland" thus comes up a lot and suggestions previously included things like "run xeyes", "grep xinput list", "check xrandr" and so on and so forth. None of those are particularly scriptable, so there's a new tool around now: <a href="https://gitlab.freedesktop.org/xorg/app/xisxwayland/">xisxwayland</a>. </p><p>Run without arguments it simply exits with exit code 0 if the X server is Xwayland, or 1 otherwise. Which means use can use it like this: </p><pre>$ cat my-xorg-only-script.sh#!/bin/bashif xisxwayland; then   echo "I can't run this script against Xwayland";   exit 1fi...</pre>Or, in the case where you …
+  <p>One of the more common issues we encounter debugging things is that users don't always know whether they're running on a Wayland or X11 session. Which I guess is a good advertisement for how far some of the compositors have come. The question "are you running on Xorg or Wayland" thus comes up a lot and suggestions previously included things like "run xeyes", "grep xinput list", "check xrandr" and so on and so forth. None of those are particularly scriptable, so there's a new tool around now: <a href="https://gitlab.freedesktop.org/xorg/app/xisxwayland/">xisxwayland</a>. </p><p>Run without arguments it simply exits with exit code 0 if the X server is Xwayland, or 1 otherwise. Which means use can use it like this: </p><pre>$ cat my-xorg-only-script.sh#!/bin/bashif xisxwayland; then   echo "This is an Xwayland server!";   exit 1fi...</pre>Or, in the case where you have a …
   </div>
 </header>
 <footer>
@@ -156,52 +253,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-05-19 02:15:00+00:00" class="dt-published"></time>
   Tue 19 May 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jbbgameich.github.io/misc/2020/05/19/a-month-of-git-lab.html" rel="bookmark" class="u-url"
-       title="A month of git-lab" target="_blank">
-      <time class="m-date" datetime="2020-05-19 00:54:32+00:00">
-        May
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      A month of git-lab
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>About a month ago I published the initial version of git-lab, a command line client for GitLab.
-Lots of new features have been added since then, and I hope you’ll find them useful.
-Tobias Fella and especially Benjamin Port joined and brought this project forward.</p>
-
-<ol>
-  <li>
-    <p>Benjamin Port refactored the command line interface to be more familiar to GitLab users, while keeping support for an arcanist-like cli. This means you can now use <code>git lab mr</code> instead of <code>git lab checkout</code> instead of the diff and patch commands known from arc if you like.</p>
-
-    <p><img alt="cli after the latest changes" src="//jbbgameich.github.io/img/git-lab-cli.png"></p>
-  </li>
-  <li>
-    <p>For more arc compatibility, there is now a <code>git lab feature</code> command for switching and creating branches. It does the same as <code>git branch</code> and <code>git checkout -b</code>, so if you didn’t previously use arc you can probably ignore it :)</p>
-  </li>
-  <li>
-    <p>A project search has been …</p></li></ol>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jonah Brüchert</b></span>
-  on <time datetime="2020-05-19 00:54:32+00:00" class="dt-published"></time>
-  Tue 19 May 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -613,55 +664,6 @@ Python packaging ideas for the future include:
   on <time datetime="2020-05-14 18:36:00+02:00" class="dt-published"></time>
   Thu 14 May 2020
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://pythoninsider.blogspot.com/2020/05/python-383-is-now-available.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
-       title="Python 3.8.3 is now available" target="_blank">
-      <time class="m-date" datetime="2020-05-14 04:48:27.445000-04:00">
-        May
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python 3.8.3 is now available
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <span>On behalf of the entire Python development community, and the currently serving Python release team in particular, I’m pleased to announce the release of Python 3.8.3, the third maintenance release of Python 3.8. You can find it here:</span>
-<div>
-</div>
-<div>
-<a href="https://www.python.org/downloads/release/python-383/">https://www.python.org/downloads/release/python-383/</a></div>
-<div>
-<div>
-</div>
-<div>
-It contains two months worth of bug fixes. Detailed information about all changes made in 3.8.3 can be found in<span>&nbsp;</span><a href="https://docs.python.org/release/3.8.3/whatsnew/changelog.html#python-3-8-3-final">its change log</a>. Note that compared to 3.8.2, version 3.8.3 also contains the changes introduced in 3.8.3rc1.</div>
-<div>
-</div>
-<div>
-The Python 3.8 series is the newest feature release of the Python language, and it contains many new features and optimizations. See the “<a href="https://docs.python.org/3.8/whatsnew/3.8.html">What’s New in Python 3.8</a>” document for more information about features included in the 3.8 series.</div>
-<div>
-</div>
-<div>
-Maintenance releases for …</div></div>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
-  on <time datetime="2020-05-14 04:48:27.445000-04:00" class="dt-published"></time>
-  Thu 14 May 2020
-  in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
 
