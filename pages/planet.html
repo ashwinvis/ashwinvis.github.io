@@ -132,6 +132,51 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://cfoch.github.io/tech/2020/05/20/playing-back-arbitrary-frames-with-appsrc.html" rel="bookmark" class="u-url"
+       title="Playing back arbitrary frames with appsrc" target="_blank">
+      <time class="m-date" datetime="2020-05-20 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Playing back arbitrary frames with appsrc
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>If you have used GStreamer you may have used source elements like <strong>filesrc</strong> or <strong>v4l2src</strong>. Both of them use an existing source to play back a video, for example, the former takes as an input a video file from the source and the latter takes input from the camera. But, imagine you want to create a video by hand, something like. For example, <a href="https://github.com/GStreamer/gst-plugins-base/blob/master/gst/videotestsrc/videotestsrc.c">videotestsrc</a>, the element that displays a <a href="https://en.wikipedia.org/wiki/Test_card">test (card) pattern</a>, creates this pattern by filling a buffer by hand.</p>
+
+<p>I will not talk about creating an element similar to <strong>videotestsrc</strong>. I will show an example program in which you tell programatically to GStreamer what to display at a given timestamp or frame.</p>
+
+
+
+<p>The following example, will display</p>
+
+<p><img alt="appsrc-example-colors.gif" src="https://cfoch.github.io/img/posts/appsrc-example-colors.gif"></p>
+
+<ul>
+  <li><strong>from second 0 to 1</strong>: a blue frame</li>
+  <li><strong>from second 1 to 2</strong>: a green frame</li>
+  <li><strong>from second 2 to 3 …</strong></li></ul>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-20 00:00:00+00:00" class="dt-published"></time>
+  Wed 20 May 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://patrickelectric.work/blog/2020/qmlonline-first-version/" rel="bookmark" class="u-url"
        title="QML Online - First stable version!" target="_blank">
       <time class="m-date" datetime="2020-05-20 00:00:00+00:00">
@@ -159,38 +204,6 @@ In this post, I'm going to show the idea behind the project and some code that m
   on <time datetime="2020-05-20 00:00:00+00:00" class="dt-published"></time>
   Wed 20 May 2020
   in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/engagement/2020/05/19/help-grow-webkitgtk/" rel="bookmark" class="u-url"
-       title="Help Grow WebKitGTK" target="_blank">
-      <time class="m-date" datetime="2020-05-19 21:09:25+00:00">
-        May
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Help Grow WebKitGTK
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  We’re asking you to help us set our priorities when you donate to the GNOME Foundation this spring. You have the option of asking us to focus on building GNOME in Africa or WebKitGTK development. WebKitGTK is not only an exciting project for GNOME, but a necessary step in preparing for our GTK4 release. We’ve … <a href="https://blogs.gnome.org/engagement/2020/05/19/help-grow-webkitgtk/">Continue reading<span> "Help Grow WebKitGTK"</span></a>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>mdeblanc</b></span>
-  on <time datetime="2020-05-19 21:09:25+00:00" class="dt-published"></time>
-  Tue 19 May 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
