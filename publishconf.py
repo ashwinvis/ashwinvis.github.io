@@ -20,7 +20,7 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 DELETE_OUTPUT_DIRECTORY = False
 
 try:
-    idx_css = M_CSS_FILES.index("/static/m-light.css")
+    idx_css = M_CSS_FILES.index(f"/static/m-{AV_THEME}.css")
     path_css = M_CSS_FILES.pop(idx_css)
     M_CSS_FILES.insert(idx_css, path_css[:-3] + "compiled.css")
 except NameError:

@@ -77,7 +77,6 @@ M_CSS_FILES = [
     ## Patched open font library css
     #  "/static/pygments-dark.css",
     ## Generated using postprocess.sh
-    "/static/m-light.css",
     "/static/custom.compiled.css",
 ]
 M_THEME_COLOR = "#22272e"
@@ -180,11 +179,8 @@ PLUGINS += [
 MARKUP = ("md", "ipynb")
 IGNORE_FILES = [".ipynb_checkpoints"]
 IPYNB_USE_METACELL = True
-#  IPYNB_COLORSCHEME = "solarized-dark"
-IPYNB_COLORSCHEME = "monokai"
 IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
-IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # pelican_planet / webring
 PLANET_FEEDS = read_opml("planet.opml", ["Planets"])
@@ -220,3 +216,13 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
+
+AV_THEME = "light"
+
+if AV_THEME == "light":
+    M_CSS_FILES.insert(0, "/static/m-light.css")
+    IPYNB_COLORSCHEME = "solarized-light"
+if AV_THEME == "dark":
+    M_CSS_FILES.insert(0, "/static/m-dark.css")
+    IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
+    IPYNB_COLORSCHEME = "monokai"

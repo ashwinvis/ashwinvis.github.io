@@ -29,7 +29,7 @@ Highlights
         .. block-info:: Talks
 
             Conferences and seminars
-            :raw-html:`<br/><br/><br/>`
+            :raw-html:`<br/><br/>`
 
             .. button-info:: https://ashwinvis.github.io/talks
                 :class: m-fullwidth
