@@ -3,9 +3,6 @@ Research
 :date: 2019-02-18 15:10
 :slug: research
 :status: published
-:css:
-    {static}/static/bibbase-dark.css
-
 
 Highlights
 ==========
