@@ -66,18 +66,8 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
-#  CACHE_CONTENT = True
-LOAD_CONTENT_CACHE = False
 
 M_CSS_FILES = [
-    # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
-    ##  Open font library instead of Google Fonts
-    # "https://fontlibrary.org/face/source-code-pro",
-    # "https://fontlibrary.org/face/source-sans-pro",
-    ## Patched open font library css
-    #  "/static/pygments-dark.css",
-    ## Generated using postprocess.sh
-    "/static/m-dark.css",
     "/static/custom.compiled.css",
 ]
 M_THEME_COLOR = "#22272e"
@@ -85,12 +75,6 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGIN_PATHS = [
-    #  "plugins/",
-    #  "m.css/plugins/",
-    #  "plugins/pelican-planet",
-    #  "plugins/webring/pelican/plugins/webring",
-]
 PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
@@ -113,20 +97,20 @@ M_LINKS_NAVBAR1 = [
     ),
     (
         "Showcase",
-        "pages/showcase",
+        "pages/showcase.html",
         "",
         [
-            ("CV", "pages/cv", ""),
-            ("Research", "pages/research", ""),
-            ("Software", "pages/software", ""),
+            ("CV", "pages/cv.html", ""),
+            ("Research", "pages/research.html", ""),
+            ("Software", "pages/software.html", ""),
             ("Talks", "talks", "[talks]",)
         ],
     ),
 ]
 
 M_LINKS_NAVBAR2 = [
-    ("Planet", "pages/planet", "[planet]", []),
-    ("Contact", "pages/contact", "[contact]", []),
+    ("Planet", "pages/planet.html", "[planet]", []),
+    ("Contact", "pages/contact.html", "[contact]", []),
 ]
 M_LINKS_FOOTER1 = [
     ("Social", ""),
@@ -180,11 +164,8 @@ PLUGINS += [
 MARKUP = ("md", "ipynb")
 IGNORE_FILES = [".ipynb_checkpoints"]
 IPYNB_USE_METACELL = True
-#  IPYNB_COLORSCHEME = "solarized-dark"
-IPYNB_COLORSCHEME = "monokai"
 IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
-IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
 
 # pelican_planet / webring
 PLANET_FEEDS = read_opml("planet.opml", ["Planets"])
@@ -220,3 +201,14 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
+
+AV_THEME = "light"
+
+if AV_THEME == "light":
+    M_CSS_FILES.insert(0, "/static/m-light.css")
+    IPYNB_COLORSCHEME = "solarized-light"
+elif AV_THEME == "dark":
+    M_CSS_FILES.insert(0, "/static/m-dark.css")
+    M_CSS_FILES.append("/static/bibbase-m-dark.css")
+    IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
+    IPYNB_COLORSCHEME = "monokai"

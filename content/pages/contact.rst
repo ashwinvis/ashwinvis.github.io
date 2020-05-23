@@ -34,8 +34,8 @@ research_ or software_ that I maintain.
    <tbody>
      <tr>
        <td class="m-text-center">
-                   <div class="m-big">Visiting address</div>
-                   <span class="m-text m-small m-dim">
+                   <div class="m-big"><b>Visiting address</b></div>
+                   <span class="m-text m-small">
                        Arrhenius Laboratory, 6th Floor<br/>
                        Svante Arrhenius Väg 16C<br/>
                        Frescati Campus
@@ -45,8 +45,8 @@ research_ or software_ that I maintain.
 
        <td>
          <div class="m-button m-info m-fullwidth" align-content="normal">
-                   <div class="m-big">Mailing address</div>
-                   <span class="m-text m-small m-dim">
+                   <div class="m-big"><b>Mailing address</b></div>
+                   <span class="m-text m-small">
                        Department of Meteorology<br/>
                        Stockholm University</br>
                        106 91 Stockholm

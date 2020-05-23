@@ -10,3 +10,6 @@
 [submodule "plugins/webring"]
 	path = src/webring
 	url = https://github.com/ashwinvis/webring
+[submodule "tufte-css"]
+	path = content/static/tufte-css
+	url = https://github.com/ashwinvis/tufte-css.git

@@ -3,9 +3,6 @@ Research
 :date: 2019-02-18 15:10
 :slug: research
 :status: published
-:css:
-    {static}/static/bibbase-dark.css
-
 
 Highlights
 ==========
@@ -32,7 +29,7 @@ Highlights
         .. block-info:: Talks
 
             Conferences and seminars
-            :raw-html:`<br/><br/><br/>`
+            :raw-html:`<br/><br/>`
 
             .. button-info:: https://ashwinvis.github.io/talks
                 :class: m-fullwidth
