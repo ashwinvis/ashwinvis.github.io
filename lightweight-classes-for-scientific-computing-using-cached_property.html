@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Lightweight classes for scientific computing using "cached_property" | Ashwin Vishnu&#39;s Website</title>
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/m-light.compiled.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link rel="canonical" href="https://ashwin.info.tm/lightweight-classes-for-scientific-computing-using-cached_property.html" />
@@ -15,8 +15,8 @@
   <meta property="og:title" content="Lightweight classes for scientific computing using "cached_property"" />
   <meta name="twitter:title" content="Lightweight classes for scientific computing using "cached_property"" />
   <meta property="og:url" content="https://ashwin.info.tm/lightweight-classes-for-scientific-computing-using-cached_property.html" />
-  <meta property="og:description" content="/* jupyter nbconvert */ .rendered_html code { background: #272822 color: #f8f8f2; } div.text_cell_render { color: #f8f8f2 !important; } div.input_area { background: #272822 !important; border-color: #272822 !important; } div.output_area pre, div.output_stderr { background: var(--background-color) !important; color: #f8f8f2; !important; } div.input_prompt { color: #6E759D; !important; } .MathJax_Display, .MathJax { color: #fff !important; } .MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn { color: #fff !important; }" />
-  <meta name="twitter:description" content="/* jupyter nbconvert */ .rendered_html code { background: #272822 color: #f8f8f2; } div.text_cell_render { color: #f8f8f2 !important; } div.input_area { background: #272822 !important; border-color: #272822 !important; } div.output_area pre, div.output_stderr { background: var(--background-color) !important; color: #f8f8f2; !important; } div.input_prompt { color: #6E759D; !important; } .MathJax_Display, .MathJax { color: #fff !important; } .MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn { color: #fff !important; }" />
+  <meta property="og:description" content="In the quest for optimization and fast computation, while using object-oriented programming, it is a typical technique to initialize the linear algebra array operators as class attributes. Especially in fluidfft we encounter pseudospectral operator classes that look like: import numpy as np from fluiddyn.util import mpi class Operator: def __init__" />
+  <meta name="twitter:description" content="In the quest for optimization and fast computation, while using object-oriented programming, it is a typical technique to initialize the linear algebra array operators as class attributes. Especially in fluidfft we encounter pseudospectral operator classes that look like: import numpy as np from fluiddyn.util import mpi class Operator: def __init__" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="article" />
   <!-- Mastodon Link verification -->
@@ -59,7 +59,7 @@
           https://bibbase.org
           http://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org;
+         font-src https://fontlibrary.org 'self';
          img-src 'unsafe-inline' 'self' https:;
          frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
          worker-src 'self';
@@ -125,35 +125,15 @@
           </div>
         </a></h1>
         <div class="p-summary">
-        <style type="text/css">
-        /* jupyter nbconvert */
-        .rendered_html code {
-          background: #272822
-          color: #f8f8f2;
-        }
+        <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+        </div><div class="inner_cell">
+        <div class="text_cell_render border-box-sizing rendered_html">
+        <p>In the quest for optimization and fast computation, while using object-oriented programming, it is a typical technique to initialize the linear algebra array operators as class attributes. Especially in <code>fluidfft</code> we encounter pseudospectral operator classes that look like:</p>
+        <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+        <span class="kn">from</span> <span class="nn">fluiddyn.util</span> <span class="kn">import</span> <span class="n">mpi</span>
 
-        div.text_cell_render {
-          color: #f8f8f2 !important;
-        }
-        div.input_area {
-         background: #272822 !important;
-         border-color: #272822 !important;
-        }
-        div.output_area pre, div.output_stderr {
-          background: var(--background-color) !important;
-          color: #f8f8f2; !important;
-        }
-        div.input_prompt {
-        	color: #6E759D; !important;
-        }
-        .MathJax_Display,
-        .MathJax {
-          color: #fff !important;
-        }
-        .MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn {
-          color: #fff !important;
-        }
-        </style>
+        <span class="k">class</span> <span class="nc">Operator</span><span class="p">:</span>
+            <span class="k">def</span> <span class="fm">__init__</span>
         </div>
       </header>
       <div class="m-clearfix-l"></div>
@@ -1203,108 +1183,84 @@ h6:hover .anchor-link {
   font-style: italic;
 }
 </style>
-<style type="text/css"> .highlight pre  .hll { background-color: #49483e }
- .highlight pre   { background: #272822; color: #f8f8f2 }
- .highlight pre  .c { color: #75715e } /* Comment */
- .highlight pre  .err { color: #960050; background-color: #1e0010 } /* Error */
- .highlight pre  .k { color: #66d9ef } /* Keyword */
- .highlight pre  .l { color: #ae81ff } /* Literal */
- .highlight pre  .n { color: #f8f8f2 } /* Name */
- .highlight pre  .o { color: #f92672 } /* Operator */
- .highlight pre  .p { color: #f8f8f2 } /* Punctuation */
- .highlight pre  .ch { color: #75715e } /* Comment.Hashbang */
- .highlight pre  .cm { color: #75715e } /* Comment.Multiline */
- .highlight pre  .cp { color: #75715e } /* Comment.Preproc */
- .highlight pre  .cpf { color: #75715e } /* Comment.PreprocFile */
- .highlight pre  .c1 { color: #75715e } /* Comment.Single */
- .highlight pre  .cs { color: #75715e } /* Comment.Special */
- .highlight pre  .gd { color: #f92672 } /* Generic.Deleted */
- .highlight pre  .ge { font-style: italic } /* Generic.Emph */
- .highlight pre  .gi { color: #a6e22e } /* Generic.Inserted */
- .highlight pre  .go { color: #66d9ef } /* Generic.Output */
- .highlight pre  .gp { color: #f92672; font-weight: bold } /* Generic.Prompt */
- .highlight pre  .gs { font-weight: bold } /* Generic.Strong */
- .highlight pre  .gu { color: #75715e } /* Generic.Subheading */
- .highlight pre  .kc { color: #66d9ef } /* Keyword.Constant */
- .highlight pre  .kd { color: #66d9ef } /* Keyword.Declaration */
- .highlight pre  .kn { color: #f92672 } /* Keyword.Namespace */
- .highlight pre  .kp { color: #66d9ef } /* Keyword.Pseudo */
- .highlight pre  .kr { color: #66d9ef } /* Keyword.Reserved */
- .highlight pre  .kt { color: #66d9ef } /* Keyword.Type */
- .highlight pre  .ld { color: #e6db74 } /* Literal.Date */
- .highlight pre  .m { color: #ae81ff } /* Literal.Number */
- .highlight pre  .s { color: #e6db74 } /* Literal.String */
- .highlight pre  .na { color: #a6e22e } /* Name.Attribute */
- .highlight pre  .nb { color: #f8f8f2 } /* Name.Builtin */
- .highlight pre  .nc { color: #a6e22e } /* Name.Class */
- .highlight pre  .no { color: #66d9ef } /* Name.Constant */
- .highlight pre  .nd { color: #a6e22e } /* Name.Decorator */
- .highlight pre  .ni { color: #f8f8f2 } /* Name.Entity */
- .highlight pre  .ne { color: #a6e22e } /* Name.Exception */
- .highlight pre  .nf { color: #a6e22e } /* Name.Function */
- .highlight pre  .nl { color: #f8f8f2 } /* Name.Label */
- .highlight pre  .nn { color: #f8f8f2 } /* Name.Namespace */
- .highlight pre  .nx { color: #a6e22e } /* Name.Other */
- .highlight pre  .py { color: #f8f8f2 } /* Name.Property */
- .highlight pre  .nt { color: #f92672 } /* Name.Tag */
- .highlight pre  .nv { color: #f8f8f2 } /* Name.Variable */
- .highlight pre  .ow { color: #f92672 } /* Operator.Word */
- .highlight pre  .w { color: #f8f8f2 } /* Text.Whitespace */
- .highlight pre  .mb { color: #ae81ff } /* Literal.Number.Bin */
- .highlight pre  .mf { color: #ae81ff } /* Literal.Number.Float */
- .highlight pre  .mh { color: #ae81ff } /* Literal.Number.Hex */
- .highlight pre  .mi { color: #ae81ff } /* Literal.Number.Integer */
- .highlight pre  .mo { color: #ae81ff } /* Literal.Number.Oct */
- .highlight pre  .sa { color: #e6db74 } /* Literal.String.Affix */
- .highlight pre  .sb { color: #e6db74 } /* Literal.String.Backtick */
- .highlight pre  .sc { color: #e6db74 } /* Literal.String.Char */
- .highlight pre  .dl { color: #e6db74 } /* Literal.String.Delimiter */
- .highlight pre  .sd { color: #e6db74 } /* Literal.String.Doc */
- .highlight pre  .s2 { color: #e6db74 } /* Literal.String.Double */
- .highlight pre  .se { color: #ae81ff } /* Literal.String.Escape */
- .highlight pre  .sh { color: #e6db74 } /* Literal.String.Heredoc */
- .highlight pre  .si { color: #e6db74 } /* Literal.String.Interpol */
- .highlight pre  .sx { color: #e6db74 } /* Literal.String.Other */
- .highlight pre  .sr { color: #e6db74 } /* Literal.String.Regex */
- .highlight pre  .s1 { color: #e6db74 } /* Literal.String.Single */
- .highlight pre  .ss { color: #e6db74 } /* Literal.String.Symbol */
- .highlight pre  .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
- .highlight pre  .fm { color: #a6e22e } /* Name.Function.Magic */
- .highlight pre  .vc { color: #f8f8f2 } /* Name.Variable.Class */
- .highlight pre  .vg { color: #f8f8f2 } /* Name.Variable.Global */
- .highlight pre  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
- .highlight pre  .vm { color: #f8f8f2 } /* Name.Variable.Magic */
- .highlight pre  .il { color: #ae81ff } /* Literal.Number.Integer.Long */</style><body><style type="text/css">
-/* jupyter nbconvert */
-.rendered_html code {
-  background: #272822
-  color: #f8f8f2;
-}
-
-div.text_cell_render {
-  color: #f8f8f2 !important;
-}
-div.input_area {
- background: #272822 !important;
- border-color: #272822 !important;
-}
-div.output_area pre, div.output_stderr {
-  background: var(--background-color) !important;
-  color: #f8f8f2; !important;
-}
-div.input_prompt {
-	color: #6E759D; !important;
-}
-.MathJax_Display,
-.MathJax {
-  color: #fff !important;
-}
-.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn {
-  color: #fff !important;
-}
-</style>
-
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<style type="text/css"> .highlight pre  .hll { background-color: #eee8d5 }
+ .highlight pre   { background: #fdf6e3; color: #657b83 }
+ .highlight pre  .c { color: #93a1a1; font-style: italic } /* Comment */
+ .highlight pre  .err { color: #657b83; background-color: #dc322f } /* Error */
+ .highlight pre  .esc { color: #657b83 } /* Escape */
+ .highlight pre  .g { color: #657b83 } /* Generic */
+ .highlight pre  .k { color: #859900 } /* Keyword */
+ .highlight pre  .l { color: #657b83 } /* Literal */
+ .highlight pre  .n { color: #657b83 } /* Name */
+ .highlight pre  .o { color: #93a1a1 } /* Operator */
+ .highlight pre  .x { color: #657b83 } /* Other */
+ .highlight pre  .p { color: #657b83 } /* Punctuation */
+ .highlight pre  .ch { color: #93a1a1; font-style: italic } /* Comment.Hashbang */
+ .highlight pre  .cm { color: #93a1a1; font-style: italic } /* Comment.Multiline */
+ .highlight pre  .cp { color: #d33682 } /* Comment.Preproc */
+ .highlight pre  .cpf { color: #93a1a1 } /* Comment.PreprocFile */
+ .highlight pre  .c1 { color: #93a1a1; font-style: italic } /* Comment.Single */
+ .highlight pre  .cs { color: #93a1a1; font-style: italic } /* Comment.Special */
+ .highlight pre  .gd { color: #dc322f } /* Generic.Deleted */
+ .highlight pre  .ge { color: #657b83; font-style: italic } /* Generic.Emph */
+ .highlight pre  .gr { color: #dc322f } /* Generic.Error */
+ .highlight pre  .gh { color: #657b83; font-weight: bold } /* Generic.Heading */
+ .highlight pre  .gi { color: #859900 } /* Generic.Inserted */
+ .highlight pre  .go { color: #657b83 } /* Generic.Output */
+ .highlight pre  .gp { color: #657b83 } /* Generic.Prompt */
+ .highlight pre  .gs { color: #657b83; font-weight: bold } /* Generic.Strong */
+ .highlight pre  .gu { color: #657b83; text-decoration: underline } /* Generic.Subheading */
+ .highlight pre  .gt { color: #268bd2 } /* Generic.Traceback */
+ .highlight pre  .kc { color: #2aa198 } /* Keyword.Constant */
+ .highlight pre  .kd { color: #2aa198 } /* Keyword.Declaration */
+ .highlight pre  .kn { color: #cb4b16 } /* Keyword.Namespace */
+ .highlight pre  .kp { color: #859900 } /* Keyword.Pseudo */
+ .highlight pre  .kr { color: #859900 } /* Keyword.Reserved */
+ .highlight pre  .kt { color: #b58900 } /* Keyword.Type */
+ .highlight pre  .ld { color: #657b83 } /* Literal.Date */
+ .highlight pre  .m { color: #2aa198 } /* Literal.Number */
+ .highlight pre  .s { color: #2aa198 } /* Literal.String */
+ .highlight pre  .na { color: #657b83 } /* Name.Attribute */
+ .highlight pre  .nb { color: #268bd2 } /* Name.Builtin */
+ .highlight pre  .nc { color: #268bd2 } /* Name.Class */
+ .highlight pre  .no { color: #268bd2 } /* Name.Constant */
+ .highlight pre  .nd { color: #268bd2 } /* Name.Decorator */
+ .highlight pre  .ni { color: #268bd2 } /* Name.Entity */
+ .highlight pre  .ne { color: #268bd2 } /* Name.Exception */
+ .highlight pre  .nf { color: #268bd2 } /* Name.Function */
+ .highlight pre  .nl { color: #268bd2 } /* Name.Label */
+ .highlight pre  .nn { color: #268bd2 } /* Name.Namespace */
+ .highlight pre  .nx { color: #657b83 } /* Name.Other */
+ .highlight pre  .py { color: #657b83 } /* Name.Property */
+ .highlight pre  .nt { color: #268bd2 } /* Name.Tag */
+ .highlight pre  .nv { color: #268bd2 } /* Name.Variable */
+ .highlight pre  .ow { color: #859900 } /* Operator.Word */
+ .highlight pre  .w { color: #657b83 } /* Text.Whitespace */
+ .highlight pre  .mb { color: #2aa198 } /* Literal.Number.Bin */
+ .highlight pre  .mf { color: #2aa198 } /* Literal.Number.Float */
+ .highlight pre  .mh { color: #2aa198 } /* Literal.Number.Hex */
+ .highlight pre  .mi { color: #2aa198 } /* Literal.Number.Integer */
+ .highlight pre  .mo { color: #2aa198 } /* Literal.Number.Oct */
+ .highlight pre  .sa { color: #2aa198 } /* Literal.String.Affix */
+ .highlight pre  .sb { color: #2aa198 } /* Literal.String.Backtick */
+ .highlight pre  .sc { color: #2aa198 } /* Literal.String.Char */
+ .highlight pre  .dl { color: #2aa198 } /* Literal.String.Delimiter */
+ .highlight pre  .sd { color: #93a1a1 } /* Literal.String.Doc */
+ .highlight pre  .s2 { color: #2aa198 } /* Literal.String.Double */
+ .highlight pre  .se { color: #2aa198 } /* Literal.String.Escape */
+ .highlight pre  .sh { color: #2aa198 } /* Literal.String.Heredoc */
+ .highlight pre  .si { color: #2aa198 } /* Literal.String.Interpol */
+ .highlight pre  .sx { color: #2aa198 } /* Literal.String.Other */
+ .highlight pre  .sr { color: #cb4b16 } /* Literal.String.Regex */
+ .highlight pre  .s1 { color: #2aa198 } /* Literal.String.Single */
+ .highlight pre  .ss { color: #2aa198 } /* Literal.String.Symbol */
+ .highlight pre  .bp { color: #268bd2 } /* Name.Builtin.Pseudo */
+ .highlight pre  .fm { color: #268bd2 } /* Name.Function.Magic */
+ .highlight pre  .vc { color: #268bd2 } /* Name.Variable.Class */
+ .highlight pre  .vg { color: #268bd2 } /* Name.Variable.Global */
+ .highlight pre  .vi { color: #268bd2 } /* Name.Variable.Instance */
+ .highlight pre  .vm { color: #268bd2 } /* Name.Variable.Magic */
+ .highlight pre  .il { color: #2aa198 } /* Literal.Number.Integer.Long */</style><body><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the quest for optimization and fast computation, while using object-oriented programming, it is a typical technique to initialize the linear algebra array operators as class attributes. Especially in <code>fluidfft</code> we encounter pseudospectral operator classes that look like:</p>

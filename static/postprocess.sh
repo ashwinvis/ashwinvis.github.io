@@ -1,7 +1,7 @@
 #!/bin/sh
 ../../m.css/css/postprocess.py \
   source-code-pro.css \
-  source-sans-pro.css \
+  tufte-css/et-book.css \
   bibbase-m.css \
   custom.css \
   landing.css \

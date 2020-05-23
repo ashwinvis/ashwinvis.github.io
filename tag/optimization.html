@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Posts tagged optimization | Ashwin Vishnu&#39;s Website</title>
-  <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/m-light.compiled.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
@@ -55,7 +55,7 @@
           https://bibbase.org
           http://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org;
+         font-src https://fontlibrary.org 'self';
          img-src 'unsafe-inline' 'self' https:;
          frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
          worker-src 'self';
@@ -125,35 +125,15 @@
             </div>
           </a></h1>
           <div class="p-summary">
-          <style type="text/css">
-          /* jupyter nbconvert */
-          .rendered_html code {
-            background: #272822
-            color: #f8f8f2;
-          }
+          <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+          </div><div class="inner_cell">
+          <div class="text_cell_render border-box-sizing rendered_html">
+          <p>In the quest for optimization and fast computation, while using object-oriented programming, it is a typical technique to initialize the linear algebra array operators as class attributes. Especially in <code>fluidfft</code> we encounter pseudospectral operator classes that look like:</p>
+          <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+          <span class="kn">from</span> <span class="nn">fluiddyn.util</span> <span class="kn">import</span> <span class="n">mpi</span>
 
-          div.text_cell_render {
-            color: #f8f8f2 !important;
-          }
-          div.input_area {
-           background: #272822 !important;
-           border-color: #272822 !important;
-          }
-          div.output_area pre, div.output_stderr {
-            background: var(--background-color) !important;
-            color: #f8f8f2; !important;
-          }
-          div.input_prompt {
-          	color: #6E759D; !important;
-          }
-          .MathJax_Display,
-          .MathJax {
-            color: #fff !important;
-          }
-          .MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn {
-            color: #fff !important;
-          }
-          </style>
+          <span class="k">class</span> <span class="nc">Operator</span><span class="p">:</span>
+              <span class="k">def</span> <span class="fm">__init__</span>
           </div>
         </header>
         <footer>
