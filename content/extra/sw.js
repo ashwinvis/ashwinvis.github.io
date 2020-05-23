@@ -10,7 +10,7 @@ var contentToCache = [
   '/app.js',
   '/index.html',
   '/archives.html',
-  '/pages/research.html',
+  '/pages/showcase.html',
   '/pages/software.html',
   '/pages/cv.html',
   '/pages/contact.html',
