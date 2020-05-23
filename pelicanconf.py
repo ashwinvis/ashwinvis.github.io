@@ -12,8 +12,8 @@ import logging
 from datetime import datetime
 
 import m
-import pelican_ashwinvis as av
 import pelican_planet
+from pelican_jupyter import markup
 #  from pelican.plugins import webring
 from pelican_ashwinvis.util.util import read_opml
 
@@ -49,7 +49,7 @@ DEFAULT_METADATA = {
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
-STATIC_PATHS = ["images", "showcase", "pdf", "static"]
+STATIC_PATHS = ["images", "pdf", "static"]
 EXTRA_PATH_METADATA = {
     f'extra/{resource}': {'path': resource}
     for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js")
@@ -153,7 +153,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
     #  webring,
-    av.ipynb.markup,
+    markup,
     pelican_planet,
     # "representative_image",
     # "tipue_search",
@@ -163,7 +163,7 @@ PLUGINS += [
 # ipynb
 MARKUP = ("md", "ipynb")
 IGNORE_FILES = [".ipynb_checkpoints"]
-IPYNB_USE_METACELL = True
+IPYNB_MARKUP_USE_FIRST_CELL = True
 IPYNB_FIX_CSS = True
 IPYNB_SKIP_CSS = False
 

@@ -1,9 +1,6 @@
 [submodule "m.css"]
 	path = m.css
 	url = https://github.com/ashwinvis/m.css.git
-[submodule "src/plugins/ipynb"]
-	path = src/pelican_ashwinvis/ipynb
-	url = https://github.com/ashwinvis/pelican-ipynb
 [submodule "plugins/pelican-planet"]
 	path = src/pelican-planet
 	url = https://github.com/ashwinvis/pelican-planet
