@@ -98,20 +98,20 @@ M_LINKS_NAVBAR1 = [
     ),
     (
         "Showcase",
-        "pages/showcase",
+        "pages/showcase.html",
         "",
         [
-            ("CV", "pages/cv", ""),
-            ("Research", "pages/research", ""),
-            ("Software", "pages/software", ""),
+            ("CV", "pages/cv.html", ""),
+            ("Research", "pages/research.html", ""),
+            ("Software", "pages/software.html", ""),
             ("Talks", "talks", "[talks]",)
         ],
     ),
 ]
 
 M_LINKS_NAVBAR2 = [
-    ("Planet", "pages/planet", "[planet]", []),
-    ("Contact", "pages/contact", "[contact]", []),
+    ("Planet", "pages/planet.html", "[planet]", []),
+    ("Contact", "pages/contact.html", "[contact]", []),
 ]
 M_LINKS_FOOTER1 = [
     ("Social", ""),
