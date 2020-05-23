@@ -358,7 +358,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
   padding-top: 5rem;
 }
 #m-landing-image {
-  color: #ffffff;
+  color: var(--color);
 }
 #m-cover-image {
   height: 30rem;

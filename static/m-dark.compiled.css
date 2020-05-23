@@ -268,7 +268,7 @@ body { margin: 0; }
   }
 }
 @media screen and (min-width: 992px) {
-  .m-container { width: 960px; }
+  .m-container { width: 1280px; }
   .m-container-inflatable .m-col-l-10 .m-container-inflate:not([class*='m-left-']):not([class*='m-right-']) {
     margin-left: -10%;
     margin-right: -10%;
@@ -339,18 +339,18 @@ body { margin: 0; }
 }
 
 html {
-  font-size: 16px;
+  font-size: 1.25rem;
   background-color: #2f363f;
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'et-book', serif;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.5rem;
   color: #dcdcdc;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-weight: 600;
+  font-weight: normal;
 }
 h1 {
   margin-bottom: 1rem;
@@ -407,7 +407,7 @@ abbr {
   text-decoration: underline dotted;
 }
 a {
-  color: #5b9dd9;
+  color: #66b6ff;
 }
 a.m-flat {
   text-decoration: none;
@@ -424,7 +424,7 @@ mark {
 }
 pre, code {
   font-family: 'Source Code Pro', monospace, monospace, monospace;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #e6e6e6;
   background-color: #282e36;
 }
@@ -892,7 +892,7 @@ figure.m-figure.m-fullwidth:after {
 figure.m-figure figcaption, .m-code-figure figcaption, .m-console-figure figcaption {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1.17rem;
 }
 .m-imagegrid > div {
@@ -1174,7 +1174,7 @@ div.m-button.m-flat a:hover svg.m-math, div.m-button.m-default a:focus svg.m-mat
 div.m-button.m-default a:active svg.m-math {
   fill: #a5c9ea;
 }
-.m-graph { font-size: 16px; }
+.m-graph { font-size: 1.25rem; }
 div.m-plot svg, div.m-graph svg {
   max-width: 100%;
   margin-left: auto;
@@ -1216,7 +1216,7 @@ figure.m-figure:not(.m-flat) > svg.m-graph:first-child {
   color: #dcdcdc;
 }
 .m-block.m-default h3 a, .m-block.m-default h4 a, .m-block.m-default h5 a, .m-block.m-default h6 a {
-  color: #5b9dd9;
+  color: #66b6ff;
 }
 .m-block.m-primary { border-left-color: #a5c9ea; }
 .m-block.m-primary h3, .m-block.m-primary h4, .m-block.m-primary h5, .m-block.m-primary h6,
@@ -1824,7 +1824,7 @@ body > header > nav a {
   color: #ffffff;
 }
 body > header > nav #m-navbar-brand, body > header > nav a#m-navbar-show, body > header > nav a#m-navbar-hide {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 1.125rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2094,7 +2094,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
   padding-top: 5rem;
 }
 #m-landing-image {
-  color: #ffffff;
+  color: #dcdcdc;
 }
 #m-cover-image {
   height: 30rem;
