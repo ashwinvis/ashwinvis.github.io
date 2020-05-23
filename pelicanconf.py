@@ -77,7 +77,7 @@ M_CSS_FILES = [
     ## Patched open font library css
     #  "/static/pygments-dark.css",
     ## Generated using postprocess.sh
-    "/static/m-dark.css",
+    "/static/m-light.css",
     "/static/custom.compiled.css",
 ]
 M_THEME_COLOR = "#22272e"

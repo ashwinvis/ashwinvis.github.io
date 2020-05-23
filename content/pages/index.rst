@@ -5,7 +5,7 @@ Welcome
 :save_as: index.html
 :summary: My blog / showcase
 :url:
-:cover: {static}/static/cover.svg
+:cover: {static}/static/cover-light.svg
 :hide_navbar_brand: True
 :landing:
 
