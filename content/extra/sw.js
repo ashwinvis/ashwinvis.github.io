@@ -4,7 +4,7 @@ https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Servic
 https://serviceworke.rs/strategy-network-or-cache_service-worker_doc.html
 https://github.com/mozilla/serviceworker-cookbook
  */
-var CACHE = 'ashwin-info-tm-v20.04'
+var CACHE = 'ashwin-info-tm-v20.05'
 var contentToCache = [
   '/',
   '/app.js',
@@ -14,7 +14,6 @@ var contentToCache = [
   '/pages/software.html',
   '/pages/cv.html',
   '/pages/contact.html',
-  '/pages/planet.html',
   '/static/custom.compiled.css',
   '/static/m-dark.compiled.css',
   '/images/logo_ashwin.png',
