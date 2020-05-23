@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>Planet Avium | Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/m-dark.compiled.css" />
+  <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
+  <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
+  <link rel="canonical" href="https://ashwin.info.tm/pages/planet.html" />
+  <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="Planet Avium" />
+  <meta name="twitter:title" content="Planet Avium" />
+  <meta property="og:url" content="https://ashwin.info.tm/pages/planet.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="page" />
+  <!-- Mastodon Link verification -->
+  <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
+
+  <!-- indieauth.com -->
+  <link rel="me" href="https://github.com/ashwinvis">
+  <link rel="pgpkey" href="/static/ashwin.asc">
+
+  <!-- Micropub with indiekit:
+    source code: https://github.com/paulrobertlloyd/indiekit
+    docs: https://paulrobertlloyd.github.io/indiekit
+    fork and deploy as: https://www.heroku.com/deploy?template=https://github.com/ashwinvis/indiekit
+  -->
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+  <link rel="micropub" href="https://ashwin-micropub.herokuapp.com/micropub">
+
+  <!-- Webmentions with webmentions.io -->
+  <link rel="webmention" href="https://webmention.io/ashwin.info.tm/webmention" />
+  <link rel="pingback" href="https://webmention.io/ashwin.info.tm/xmlrpc" />
+
+  <!-- Security -->
+  <!-- Stricter version:
+   default-src 'none'; font-src https://fontlibrary.org; img-src 'self'; script-src 'self''; style-src 'self'
+  -->
+  <!-- Milder CSP to permit mathjax, bibbase scripts
+  TODO: Find alternate CDN for mathjax
+  https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
+  https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        upgrade-insecure-requests;
+        default-src https:;
+        style-src https://bibbase.org 'unsafe-inline' 'self';
+        script-src
+          http://ashwinvis.github.io
+          http://cdnjs.cloudflare.com
+          https://bibbase.org
+          http://ajax.googleapis.com
+          'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org;
+         img-src 'unsafe-inline' 'self' https:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se;
+         worker-src 'self';
+        "
+  >
+
+
+  <!-- Progressive web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ashwin.info™">
+  <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwin.info.tm/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwin.info.tm/images/logo_ashwin.png" />ashwin.info™</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li>
+              <a href="https://ashwin.info.tm/archives">Posts</a>
+              <ol>
+                <li><a href="https://ashwin.info.tm/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="https://ashwin.info.tm/pages/showcase">Showcase</a>
+              <ol>
+                <li><a href="https://ashwin.info.tm/pages/cv">CV</a></li>
+                <li><a href="https://ashwin.info.tm/pages/research">Research</a></li>
+                <li><a href="https://ashwin.info.tm/pages/software">Software</a></li>
+                <li><a href="https://ashwin.info.tm/talks">Talks</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="https://ashwin.info.tm/pages/planet">Planet</a></li>
+            <li><a href="https://ashwin.info.tm/pages/contact">Contact</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>Planet Avium</h1>
+<!-- content -->
+<blockquote>
+<p>A <a href="https://indieweb.org/planet">river of news</a> from a <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/planet.opml">selection of
+feeds</a>
+I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
+</blockquote>
+<style>
+#planet img{
+    max-width: 100%;
+    height: auto;
+}
+</style>
+
+<div id="planet">
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://researchsoftwarehour.github.io/2020/05/26/rsh-005.html" rel="bookmark" class="u-url"
+       title="???, RSH 005" target="_blank">
+      <time class="m-date" datetime="2020-05-26 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      ???, RSH 005
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Our fifth broadcast is on Tuesday, May 19, 2020, at 20:30 Oslo time/ 21:30 Helsinki time
+(<a href="https://researchsoftwarehour.github.io/time/">convert to your time</a>).</p>
+
+<p><strong>After this week, we will stop making a separate announcement post
+for each thing separately, and just post the final hackmd questions.</strong></p>
+
+
+
+<p>The stream starts 10
+minutes early and you can use this time to already start asking
+questions you may have.</p>
+
+<p>Follow this website, or Twitter
+<a href="https://twitter.com/__radovan">@__radovan</a> or
+<a href="https://twitter.com/SciCompAalto">@SciCompAalto</a> for updates.</p>
+
+<p>Videos are posted at the <a href="https://www.youtube.com/playlist?list=PLpLblYHCzJAB6blBBa0O2BEYadVZV3JYf">youtube
+playlist</a>.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-26 00:00:00+00:00" class="dt-published"></time>
+  Tue 26 May 2020
+  in Research Software Hour.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://krita.org/en/item/first-krita-beta-for-android-and-chromeos-in-play-store/" rel="bookmark" class="u-url"
+       title="First Krita Beta for Android and ChromeOS in Play Store" target="_blank">
+      <time class="m-date" datetime="2020-05-23 09:24:01+00:00">
+        May
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      First Krita Beta for Android and ChromeOS in Play Store
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Thanks to the hard work of Sharaf Zaman, Krita is now available in the Google Play Store for Android tablets and Chromebooks (not for Android phones).</p>
+<p>This beta, based on Krita 4.2.9, is the full desktop version of Krita, so it doesn’t have a special touch user interface. But it’s there, and you can play with it.</p>
+<p>Unlike the Windows and Steam store, we don’t ask for money for Krita in the store, since it’s the only way people can install Krita on those devices, but you can buy a supporter badge from within Krita to support development.</p>
+<p>You can read here <a href="https://support.google.com/googleplay/answer/7003180?hl=en">the official instructions on getting beta releases</a> in Google’s Play Store. (It’s not hard at all! Just go to “<strong>Early access</strong>” and search for org.krita. Until we’ve got …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Krita News</b></span>
+  on <time datetime="2020-05-23 09:24:01+00:00" class="dt-published"></time>
+  Sat 23 May 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://priyankasaggu11929.github.io/outreachy/2020/05/23/Experience-applying-to-Outreachy.html" rel="bookmark" class="u-url"
+       title="My experience applying to Outreachy (back in september, 2019)!" target="_blank">
+      <time class="m-date" datetime="2020-05-23 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      My experience applying to Outreachy (back in september, 2019)!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>May 23, 2020</p>
+
+<p><strong><em>I always saw this incomplete, half written draft about my experience applying to Outreachy internship, in my folder. At first I thought I should just delete it because I’m already done with the internship &amp; I’ve already written my <a href="https://priyankasaggu11929.github.io/outreachy/2020/03/03/Outreachy-final-post.html">wrap-up post</a> describing a little about my experience. But then I just couldn’t do it only.</em></strong></p>
+
+<p><strong><em>So, today, I gave it an another reading, finally added the left overs, and decided to post it (more for my-own-self). Because now I know Outreachy was once-in-a-lifetime experience for me. And I’m never going to feel the same way how I felt during the first week of my outreachy internship.</em></strong></p>
+
+<p><strong><em>Here is what I wrote some 5 months back, with a little more of what I added today. Now that I have added experience from the time after …</em></strong></p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-23 00:00:00+00:00" class="dt-published"></time>
+  Sat 23 May 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/thoughts/2020/05/habits/" rel="bookmark" class="u-url"
+       title="Habits" target="_blank">
+      <time class="m-date" datetime="2020-05-22 23:27:55+02:00">
+        May
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Habits
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>I use one of my domains mainly for services that I use personally. My <a href="https://jlelse.blog/posts/miniflux/">Miniflux</a> instance for example. For a long time I ran Miniflux on a device from home, before I moved it to my virtual private server in the “cloud” a few weeks ago. To also adapt the subdomain I use for it to the scheme of the other subdomains, Miniflux now runs on a different subdomain than before. However, I have set up a redirection so that even if I enter the old subdomain, I will be redirected to the new one.</p>
+<p>But since it is by far the page I visit most in the browser, whether on the desktop or mobile, - <em>after all I consume almost all news, <a href="https://jlelse.blog/posts/youtube-rss/">videos</a> etc. (<a href="https://jlelse.blog/micro/2020/05/tiktok-jsonfeed/">even TikToks</a>) via this feed reader</em> - I intuitively still enter the old subdomain by default. It …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-22 23:27:55+02:00" class="dt-published"></time>
+  Fri 22 May 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/618827305440165888/this-short-film-from-photographer-roman-de-giuli" rel="bookmark" class="u-url"
+       title="This short film from photographer Roman De Giuli focuses on..." target="_blank">
+      <time class="m-date" datetime="2020-05-22 10:01:47-05:00">
+        May
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      This short film from photographer Roman De Giuli focuses on...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <img src="https://66.media.tumblr.com/cdb50ed0fc22e26d5d46b6c19a1f8924/684d7d32d2518ce2-63/s500x750/0680a49a7e9204c14f8b0f05413f1fb4ddfb2f95.gifv"> <img src="https://66.media.tumblr.com/7d9ae08d34e5f0a676507abc018d17c3/684d7d32d2518ce2-4e/s500x750/039f901062a8c8a9b40a629db87775afa223b776.gifv"> <img src="https://66.media.tumblr.com/ab4956541875a4f35104115b0ad58489/684d7d32d2518ce2-ca/s500x750/6a0faa9350247942c492fc5a1ba01c96fb74f290.gifv"> <p>
+<a href="https://fyfluiddynamics.com/2020/05/focus-vol-2/">This short film from photographer Roman De Giuli focuses on ethereal and abstract fluids. </a>
+
+
+(Image and video credit: <a href="https://www.terracollage.com/">R. De Giuli</a>)
+
+</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-22 10:01:47-05:00" class="dt-published"></time>
+  Fri 22 May 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/05/focus-vol-2/" rel="bookmark" class="u-url"
+       title="“Focus, Vol. 2”" target="_blank">
+      <time class="m-date" datetime="2020-05-22 15:00:00+00:00">
+        May
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      “Focus, Vol. 2”
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  This short film from photographer Roman De Giuli focuses on ethereal and abstract fluids. What you&#8217;re watching is primarily paint, with a little in the way of flow additives. There&#8217;s <a href="https://fyfluiddynamics.com/2020/05/focus-vol-2/">Keep reading</a>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-05-22 15:00:00+00:00" class="dt-published"></time>
+  Fri 22 May 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2310/" rel="bookmark" class="u-url"
+       title="Great Attractor" target="_blank">
+      <time class="m-date" datetime="2020-05-22 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Great Attractor
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <img alt="Living in the southern hemisphere was nice because I could jump extra high, but I like it here too. Besides, if I ever want to move back, I can just curl up in a ball and wait!" src="https://imgs.xkcd.com/comics/great_attractor.png" title="Living in the southern hemisphere was nice because I could jump extra high, but I like it here too. Besides, if I ever want to move back, I can just curl up in a ball and wait!">
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-22 00:00:00+00:00" class="dt-published"></time>
+  Fri 22 May 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://hynek.me/articles/waiting-in-asyncio/" rel="bookmark" class="u-url"
+       title="Waiting in asyncio" target="_blank">
+      <time class="m-date" datetime="2020-05-21 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Waiting in asyncio
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>One of the main appeals of using Python’s <code>asyncio</code> is being able to fire off many coroutines and run them concurrently. How many ways do you know for waiting for their results?</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
+  on <time datetime="2020-05-21 00:00:00+00:00" class="dt-published"></time>
+  Thu 21 May 2020
+  in Hynek Schlawak.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://mylette.rs/revisiting-the-mechanism-behind-the-for-statement/" rel="bookmark" class="u-url"
+       title="Revisiting the Mechanism Behind the `for` Statement" target="_blank">
+      <time class="m-date" datetime="2020-05-20 22:00:00+00:00">
+        May
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Revisiting the Mechanism Behind the `for` Statement
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Python is a high-level programming language that promotes code readability. At
+the same time, it is an imperative programming language that makes heavy use of
+the flow control statements. One of the flow control statements is the <code>for</code>
+statement which is used for iterating over a part of code until a certain
+condition is met.</p>Common Usage<p>A common anti-pattern is to use the <code>for</code> statement together with the <code>range</code>
+and <code>len</code> functions to iterate over objects using indexes. Here&#x27;s an example:</p><div><pre><div><span>&gt;&gt;</span><span>&gt;</span><span> planets </span><span>=</span><span> </span><span>(</span><span>&quot;Mercury&quot;</span><span>,</span><span> </span><span>&quot;Venus&quot;</span><span>,</span><span> </span><span>&quot;Earth&quot;</span><span>,</span><span> </span><span>&quot;Mars&quot;</span><span>)</span><span></span></div><div><span></span><span>&gt;&gt;</span><span>&gt;</span><span> </span><span>for</span><span> i </span><span>in</span><span> </span><span>range</span><span>(</span><span>len</span><span>(</span><span>planets</span><span>)</span><span>)</span><span>:</span><span></span></div><div><span></span><span>.</span><span>.</span><span>.</span><span>     </span><span>print</span><span>(</span><span>planets</span><span>[</span><span>i</span><span>]</span><span>)</span><span></span></div><div><span></span><span>.</span><span>.</span><span>.</span><span></span></div><div><span>Mercury</span></div><div><span>Venus</span></div><div><span>Earth</span></div><div><span>Mars</span></div></pre></div><p>This example shows how to iterate over a range-type object. Even though
+retrieving items from a sequence performs as O(1), this way of iterating over
+objects with indexes is considered a bad practice. It indicates that programmer
+has …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-20 22:00:00+00:00" class="dt-published"></time>
+  Wed 20 May 2020
+  in Velibor Zeli.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://pythoninsider.blogspot.com/2020/05/python-390b1-is-now-available-for.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
+       title="Python 3.9.0b1 is now available for testing" target="_blank">
+      <time class="m-date" datetime="2020-05-19 05:47:16.458000-04:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python 3.9.0b1 is now available for testing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  On behalf of the entire Python development community, and the currently 
+serving Python release team in particular, I’m pleased to announce the 
+release of Python 3.9.0b1. Get it here:
+
+<a href="https://www.python.org/downloads/release/python-390b1/">https://www.python.org/downloads/release/python-390b1/</a>
+
+
+
+This is a beta preview of Python 3.9
+Python 3.9 is still in development.  This release, 3.9.0b1, is the first of four planned beta release previews.
+Beta release previews are intended to give the wider community the 
+opportunity to test new features and bug fixes and to prepare their 
+projects to support the new feature release.
+
+
+Call to action
+We <b>strongly encourage</b> maintainers of third-party Python projects to <b>test with 3.9</b> during the beta phase and report issues found to <a href="https://bugs.python.org/">the Python bug tracker</a>
+ as soon as possible.  While the release is planned to be feature …
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
+  on <time datetime="2020-05-19 05:47:16.458000-04:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/5644960" rel="bookmark" class="u-url"
+       title="Infectious SARS-CoV-2 in Feces of Patient with Severe COVID-19" target="_blank">
+      <time class="m-date" datetime="2020-05-19 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Infectious SARS-CoV-2 in Feces of Patient with Severe COVID-19
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  Severe acute respiratory syndrome coronavirus 2 was isolated from feces of a patient in China with coronavirus disease who died. Confirmation of infectious virus in feces affirms the potential for fecal-oral or fecal-respiratory transmission and warrants further study.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>J Zhao</b></span>
+  on <time datetime="2020-05-19 00:00:00+00:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://shibumi.dev/posts/fix-pdf-display-on-chrome/" rel="bookmark" class="u-url"
+       title="Fix PDF Display on Chrome" target="_blank">
+      <time class="m-date" datetime="2020-05-19 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fix PDF Display on Chrome
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  For many months I had a weird issue with displaying PDFs in chrome on my website. I always thought this is a browser issue and would be fixed soon, but actually it was an issue with my Content Security Policy (CSP).
+If you ever stumbled upon my CV you might have looked on this:
+Finally I could fix this, after finding this Chrome issue here:
+https://bugs.chromium.org/p/chromium/issues/detail?id=271452
+The problem got triggered via my strong CSP.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-19 00:00:00+00:00" class="dt-published"></time>
+  Tue 19 May 2020
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://stevelionel.com/drfortran/2020/05/16/doctor-fortran-in-military-strength/?utm_source=rss&utm_medium=rss&utm_campaign=doctor-fortran-in-military-strength" rel="bookmark" class="u-url"
+       title="Doctor Fortran in “Military Strength”" target="_blank">
+      <time class="m-date" datetime="2020-05-16 17:01:31+00:00">
+        May
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Doctor Fortran in “Military Strength”
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  In my Twitter feed today was this gem from user @science_dot: There is very little proper Fortran 77 in the world. Legacy Fortran almost always uses extension from MIL-STD-1753 and we should call most legacy Fortran “Fortran 80” to reflect when those compiler features would have been broadly available. I agree completely &#8211; nearly every [&#8230;]
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Steve Lionel</b></span>
+  on <time datetime="2020-05-16 17:01:31+00:00" class="dt-published"></time>
+  Sat 16 May 2020
+  in Doctor Fortran.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2020/05/15/Status-update.html" rel="bookmark" class="u-url"
+       title="Status update, May 2020" target="_blank">
+      <time class="m-date" datetime="2020-05-15 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Status update, May 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Hello, future readers! I am writing to you from one day in the past. I finished
+my plans for today early and thought I’d get a head start on writing the status
+updates for tomorrow, or rather, for today. From your reference frame, that is.</p>
+
+<p>Let’s start with Wayland. First, as you might have heard, <a href="https://wayland-book.com">The Wayland
+Protocol</a> is now free for anyone to read, and has been
+relicensed as CC-BY-SA. Enjoy! It’s still not quite done, but most of it’s
+there. In development news, wlroots continues to enjoy incremental improvements,
+and is being refined further and further towards a perfect citizen of the
+ecosystem in which it resides. Sway as well has seen many small bugfixes and
+improvements. Both have been been stable for a while now: the only meaningful
+changes will be, for the …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-15 00:00:00+00:00" class="dt-published"></time>
+  Fri 15 May 2020
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://pyfound.blogspot.com/2020/04/lightning-talks-part-1.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="Lightning Talks Part 1 - Python Language Summit 2020" target="_blank">
+      <time class="m-date" datetime="2020-05-14 14:03:46.317000-04:00">
+        May
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Lightning Talks Part 1 - Python Language Summit 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <a href="http://3.bp.blogspot.com/-6oU0kt4rj-I/XquIvXEoWiI/AAAAAAAAE3w/DEFADH8dH1ELQYDV1EuEZ80O6ZGxaZWggCK4BGAYYCw/s1600/sumana-and-eric-snow.jpg"><img src="https://3.bp.blogspot.com/-6oU0kt4rj-I/XquIvXEoWiI/AAAAAAAAE3w/DEFADH8dH1ELQYDV1EuEZ80O6ZGxaZWggCK4BGAYYCw/s1600/sumana-and-eric-snow.jpg"></a>
+
+Sumana Harihareswara
+
+What do you need from pip, PyPI, and packaging? 
+
+Python packaging has seen relatively quick development in recent years as a result of increased funding; most famously the new <a href="https://pypi.org/">PyPI.org</a> website was launched in 2018. The current work in progress includes <a href="https://pyfound.blogspot.com/2018/12/upcoming-pypi-improvements-for-2019.html">malware detection</a> and <a href="https://www.python.org/dev/peps/pep-0458/">signed packages</a> on PyPI, a new dependency resolver for pip, and a revamp of virtualenv. Much of this work is funded by grants from companies. (<a href="https://wiki.python.org/psf/Fundable%20Packaging%20Improvements">Details on the Working Group page</a>.) Sumana Harihareswara from the <a href="https://wiki.python.org/psf/PackagingWG">Packaging Working Group</a> is a prolific grant proposal writer; she <a href="https://www.harihareswara.net/need-from-pip.pdf">presented ideas for further development</a>.
+
+<a href="https://pyfound.blogspot.com/2020/04/the-2020-python-language-summit.html">Read more 2020 Python Language Summit coverage</a>.
+
+Python packaging ideas for the future include:
+
+<ul>
+<li>Better specifications, toolchain, and services for building distributions
+</li>
+<li>Robust interoperability testing
+</li>
+<li>Revamp PyPI API
+</li>
+<li>Make setuptools the reference implementation of the distutils API
+</li>
+<li>Provide more standardized editable installations
+</li>
+<li>Add …</li></ul>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>A. Jesse Jiryu Davis (noreply@blogger.com)</b></span>
+  on <time datetime="2020-05-14 14:03:46.317000-04:00" class="dt-published"></time>
+  Thu 14 May 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article776/ep33-wip-grayscale-step" rel="bookmark" class="u-url"
+       title="ep33 WIP: grayscale step" target="_blank">
+      <time class="m-date" datetime="2020-05-14 18:36:00+02:00">
+        May
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      ep33 WIP: grayscale step
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <a href="https://www.davidrevoy.com/data/images/blog/2020/2020-05-14_episode-33_workin-progress-grayscale-panel.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2020/2020-05-14_episode-33_workin-progress-grayscale-panel.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>A comic panel of the episode I'm working on (part.2 of the battlefield story arc), grayscale step and work-in-progress.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2020-05-14 18:36:00+02:00" class="dt-published"></time>
+  Thu 14 May 2020
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blogdecjunior.tumblr.com/post/618019773791567872/a-midsummer-night" rel="bookmark" class="u-url"
+       title="A midsummer night" target="_blank">
+      <time class="m-date" datetime="2020-05-13 22:36:25+05:30">
+        May
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      A midsummer night
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  *makes a joke about JS*11:49 &lt;cjunior&gt;Going to post it on #memes when it&rsquo;s a bit...
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-13 22:36:25+05:30" class="dt-published"></time>
+  Wed 13 May 2020
+  in the champaka.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://snarky.ca/thoughts-on-a-tooling-workflow/" rel="bookmark" class="u-url"
+       title="Thoughts on where tools fit into a workflow" target="_blank">
+      <time class="m-date" datetime="2020-05-13 03:40:44+00:00">
+        May
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Thoughts on where tools fit into a workflow
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>I am going to admit upfront that this is a thought piece, a brain dump, me thinking out loud. Do not assume there is a lesson here, nor some goal I have in mind. No, this blog post is providing me a place to write out what tools I use</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2020-05-13 03:40:44+00:00" class="dt-published"></time>
+  Wed 13 May 2020
+  in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://gregoryszorc.com/blog/2020/05/10/using-rust-to-power-python-importing-with-oxidized_importer/" rel="bookmark" class="u-url"
+       title="Using Rust to Power Python Importing With oxidized_importer" target="_blank">
+      <time class="m-date" datetime="2020-05-10 13:15:00+00:00">
+        May
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Using Rust to Power Python Importing With oxidized_importer
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  Using Rust to Power Python Importing With oxidized_importer
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Gregory Szorc</b></span>
+  on <time datetime="2020-05-10 13:15:00+00:00" class="dt-published"></time>
+  Sun 10 May 2020
+  in Gregory Szorc's Digital Home.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://husemeplz.blogspot.com/2020/05/its-not-easy.html" rel="bookmark" class="u-url"
+       title="it's not easy..." target="_blank">
+      <time class="m-date" datetime="2020-05-10 11:15:38.583000+05:30">
+        May
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      it's not easy...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  It's not easy being a mom.<div></div><div>Who knew right?</div><div></div><div>Think back to the first day on your first job. In a completely new surrounding, you might have been asked to take care of an issue without any prior training. Becoming a mom is like that, but nothing like that.</div><div></div><div>Overnight, you are made the keyholder to the self destruct button of the entire world. One wrong step and kaboom. There is a glaring lack of an authoritative instruction manual, which leads to the void being supplemented by a plethora of unofficial, "friendly neighbor" advices. And that's always helpful.</div><div></div><div>***</div><div></div><div>It's not easy to be a working mom.&nbsp;</div><div></div><div>To be a committed employee to your job and to meet the needs of a toddler. I don't need to say much. You are the superhero every kid deserves.</div><div></div><div>***</div><div></div><div>It's not easy to be …</div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Harisankar S A (noreply@blogger.com)</b></span>
+  on <time datetime="2020-05-10 11:15:38.583000+05:30" class="dt-published"></time>
+  Sun 10 May 2020
+  in Excuse me please.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-09_Ethics_and_licensing" rel="bookmark" class="u-url"
+       title="Ethics and licensing" target="_blank">
+      <time class="m-date" datetime="2020-05-09 11:53:59+00:00">
+        May
+        <span class="m-date-day">
+          09
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Ethics and licensing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><p>In 2018, I wrote about <a href="https://alexschroeder.ch/wiki/2018-10-06_Programming_Ethics">ethics in programming</a> and today stumbled on a related thing when <a href="https://chaos.social/users/decentral1se">@decentral1se</a> mentioned the  <a href="https://firstdonoharm.dev/">Hippocratic License</a>:</p><blockquote><p>Politics and software are so tangled that they cannot be reasonably separated. … if those novel situations involve harming other people, we can and should feel responsible. … the Hippocratic License … specifically prohibits the use of software to violate universal standards of human rights</p></blockquote><p> I understand the problem of interoperability, the difficulty of enforcement, the headaches of assembly… and yet! And yet. Remember <a href="https://en.m.wikipedia.org/wiki/Code_and_Other_Laws_of_Cyberspace">Code is Law</a>? Software is politics and programming is about making ethical choices. Why should the license be a technocratic decision? We fought proprietary software and while we haven’t won that’s not a reason to avoid a second battle. We are humans. We can juggle many things. Our opponents do, too. We can do this.</p><p>As …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-09 11:53:59+00:00" class="dt-published"></time>
+  Sat 09 May 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://matplotlib.org/matplotblog/posts/draw-all-graphs-of-n-nodes/" rel="bookmark" class="u-url"
+       title="Draw all graphs of N nodes" target="_blank">
+      <time class="m-date" datetime="2020-05-07 09:05:32+01:00">
+        May
+        <span class="m-date-day">
+          07
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Draw all graphs of N nodes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  The other day I was homeschooling my kids, and they asked me: &ldquo;Daddy, can you draw us all possible non-isomorphic graphs of 3 nodes&rdquo;? Or maybe I asked them that? Either way, we happily drew all possible graphs of 3 nodes, but already for 4 nodes it got hard, and for 5 nodes - plain impossible!
+So I thought: let me try to write a brute-force program to do it! I spent a few hours sketching some smart dynamic programming solution to generate these graphs, and went nowhere, as apparently the problem is quite hard.
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-07 09:05:32+01:00" class="dt-published"></time>
+  Thu 07 May 2020
+  in Matplotblog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com//blog/202005/not_much.html" rel="bookmark" class="u-url"
+       title="Not much" target="_blank">
+      <time class="m-date" datetime="2020-05-03 14:43:15-04:00">
+        May
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Not much
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>My son Nat is 30 and has autism.  His expressive language is somewhat
+limited, and he relies on rote answers when he can.  A few years ago, one of his
+caregivers taught him that if someone asks, &#8220;What&#8217;s up?&#8221; you can answer, &#8220;Not
+much.&#8221;</p><p>At first I thought, &#8220;that&#8217;s not always a good answer,&#8221; but then I started
+paying attention to how people around me responded, and sure enough, not only is
+it a good answer, but it&#8217;s almost always the answer people give.</p><p>It&#8217;s especially appropriate these days. Nat has been living with us through
+these COVID-19 times since the middle of March, and he is frustrated at how
+limited his days have become.</p><p>One of Nat&#8217;s favorite things is a three-week calendar showing what&#8217;s going to
+happen.  It was a regular routine …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-05-03 14:43:15-04:00" class="dt-published"></time>
+  Sun 03 May 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.python.org/dev/peps/pep-0618/" rel="bookmark" class="u-url"
+       title="PEP 618: Add Optional Length-Checking To zip" target="_blank">
+      <time class="m-date" datetime="2020-05-01 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PEP 618: Add Optional Length-Checking To zip
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  Author: Brandt Bucher
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-01 00:00:00+00:00" class="dt-published"></time>
+  Fri 01 May 2020
+  in Newest Python PEPs.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fortran-lang.org/newsletter/2020/05/01/Fortran-Newsletter-May-2020/" rel="bookmark" class="u-url"
+       title="Fortran newsletter: May 2020" target="_blank">
+      <time class="m-date" datetime="2020-05-01 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fortran newsletter: May 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div><div><pre><code><span>print</span><span> </span><span>*</span><span>,</span><span> </span><span>'Hello, World!'</span><span> 
+</span></code></pre></div></div>
+
+<p>Welcome to the first monthly Fortran newsletter.
+It will come out on the first calendar day of every month, 
+detailing Fortran news from the previous month.</p>
+
+<ul>
+  <li><a href="#this-website">This website</a></li>
+  <li><a href="#standard-library">Standard Library</a></li>
+  <li><a href="#package-manager">Package Manager</a></li>
+  <li><a href="#wg5-convenor-candidates">WG5 Convenor candidates</a></li>
+  <li><a href="#events">Events</a></li>
+  <li><a href="#whos-hiring">Who’s hiring?</a></li>
+</ul>
+
+This website
+
+<p>If you came to this newsletter from elsewhere, welcome to the new Fortran website.
+We built this site mid-April and hope for it to be <em>the</em> home of Fortran on the internet,
+which traditionally there hasn’t been any to date.
+Look around and <a href="https://github.com/fortran-lang/fortran-lang.github.io/issues">let us know</a> 
+if you have any suggestions for improvement.
+Specifically, <a href="/learn">Learn</a> and <a href="/packages">Packages</a> are the pages that 
+we’ll be focusing on in the coming months. 
+Please help us make them better!</p>
+
+Standard Library
+
+<p>Here’s what’s new in Fortran Standard Library:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/fortran-lang/stdlib/pull/172">#172</a>
+New function <code>cov</code> in the <code>stdlib_experimental_stats</code> module …</p></li></ul>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-01 00:00:00+00:00" class="dt-published"></time>
+  Fri 01 May 2020
+  in Fortran Newsletter.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.unsungfilms.com/26522/the-painted-warrior/" rel="bookmark" class="u-url"
+       title="The Painted Warrior" target="_blank">
+      <time class="m-date" datetime="2020-04-20 17:00:40+00:00">
+        Apr
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The Painted Warrior
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>In Mark Wilson’s 2019 documentary The Painted Warrior, Stephen offers himself up as his artist wife’s canvas, carrying her designs on his upper body whilst putting himself through gruelling physical ordeals. Both Stephen and Aeni are artists. The film documents an unusual collaboration through which Stephen embodies Aeni’s art and takes them across trails, running [&#8230;]</p>
+<p>The article <a href="https://www.unsungfilms.com/26522/the-painted-warrior/">The Painted Warrior</a> by <a href="https://www.unsungfilms.com/author/theo/">Theo Alexander</a> appeared first on <a href="https://www.unsungfilms.com">Unsung Films</a>.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Theo Alexander</b></span>
+  on <time datetime="2020-04-20 17:00:40+00:00" class="dt-published"></time>
+  Mon 20 Apr 2020
+  in Unsung Films.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blog.kitware.com/paraview-glance-v4-9-find-analyze-and-visualize-your-data-on-the-web/" rel="bookmark" class="u-url"
+       title="ParaView Glance v4.9: Find, analyze, and visualize your data on the web" target="_blank">
+      <time class="m-date" datetime="2020-04-16 20:25:38+00:00">
+        Apr
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      ParaView Glance v4.9: Find, analyze, and visualize your data on the web
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>Where is your data? &#8220;Data&#8221; is often one of the most valuable yet neglected elements of a research project or a commercial product. It is ... <a href="https://blog.kitware.com/paraview-glance-v4-9-find-analyze-and-visualize-your-data-on-the-web/">Read More</a></p>
+<p>The post <a href="https://blog.kitware.com/paraview-glance-v4-9-find-analyze-and-visualize-your-data-on-the-web/">ParaView Glance v4.9: Find, analyze, and visualize your data on the web</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Stephen Aylward</b></span>
+  on <time datetime="2020-04-16 20:25:38+00:00" class="dt-published"></time>
+  Thu 16 Apr 2020
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://morepypy.blogspot.com/2020/04/pypy-731-released.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
+       title="PyPy 7.3.1 released" target="_blank">
+      <time class="m-date" datetime="2020-04-10 15:29:12.156000+02:00">
+        Apr
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PyPy 7.3.1 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <div>
+The PyPy team is proud to release the version 7.3.1 of PyPy, which includes
+two different interpreters:
+
+<blockquote>
+<div>
+<ul>
+<li>PyPy2.7, which is an interpreter supporting the syntax and the features of
+Python 2.7 including the stdlib for CPython 2.7.13</li>
+<li>PyPy3.6: which is an interpreter supporting the syntax and the features of
+Python 3.6, including the stdlib for CPython 3.6.9.</li>
+</ul>
+</div>
+</blockquote>
+The interpreters are based on much the same codebase, thus the multiple
+release. This is a micro release, no APIs have changed since the 7.3.0 release
+in December, but read on to find out what is new.
+
+
+Conda Forge now <a href="https://conda-forge.org/blog//2020/03/10/pypy">supports PyPy</a> as a Python interpreter. The support right now
+is being built out. After this release, many more c-extension-based
+packages can be successfully built and uploaded. This is the result …</div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>mattip (noreply@blogger.com)</b></span>
+  on <time datetime="2020-04-10 15:29:12.156000+02:00" class="dt-published"></time>
+  Fri 10 Apr 2020
+  in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2020/4/9/tcn-contact-tracing/" rel="bookmark" class="u-url"
+       title="Temporary Contact Number based Contact Tracing" target="_blank">
+      <time class="m-date" datetime="2020-04-09 00:00:00+00:00">
+        Apr
+        <span class="m-date-day">
+          09
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Temporary Contact Number based Contact Tracing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>I have already talked here before about <a href="http://lucumr.pocoo.org/3/contact-tracing/">privacy preserving contact
+tracing</a> to fight Covid-19 but I figured I
+give an update to this.  I have spent the last week now investigating
+different approaches to this and my view has changed quite a bit.</p>
+<p>I strongly believe that contact tracing through phone apps is one of our
+best chances to return to normal and without losing our civil liberties.
+If you want to understand why, have a look at <a href="http://lucumr.pocoo.org/3/contact-tracing/">previous post about this
+topic</a>.</p>
+<div>
+Two Fundamental Approaches
+<p>In the previous post I talked in favour of a partially centralized
+approach.  This was largely because I felt that one of the inherent
+problems of any privacy preserving contact tracing system could be
+somewhat mitigated.  That downside is that a person could always use any
+such contact tracing system in a way where …</p></div>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2020-04-09 00:00:00+00:00" class="dt-published"></time>
+  Thu 09 Apr 2020
+  in Armin Ronacher's Thoughts and Writings.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://pradyunsg.me/blog/2020/03/27/pip-resolver-testing/" rel="bookmark" class="u-url"
+       title="Testing the next-gen pip dependency resolver" target="_blank">
+      <time class="m-date" datetime="2020-03-27 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Testing the next-gen pip dependency resolver
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>This is an attempt to summarize the broader software architecture around dependency resolution in pip and how testing is being done around this area.</p>
+
+<p>The motivation behind writing this, is to make sure all the developers working on this project are on the same page, and to have a written record about the state of affairs.</p>
+
+Architecture
+
+<p>The “legacy” resolver in pip, is implemented as part of pip’s codebase and has been a part of it for many years. It’s very tightly coupled with the existing code, isn’t easy to work with and has severe backward compatibility concerns with modifying directly – which is why we’re implementing a separate “new” resolver in this project, instead of trying to improve the existing one.</p>
+
+<p>The “new” resolver that is under development, is not implemented as part of pip’s …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-27 00:00:00+00:00" class="dt-published"></time>
+  Fri 27 Mar 2020
+  in Pradyun Gedam.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://phdcomics.com/comics.php?f=2041" rel="bookmark" class="u-url"
+       title="03/20/18 PHD comic: 'The PHD Movies - Free during the Coronavirus Crisis'" target="_blank">
+      <time class="m-date" datetime="2020-03-20 02:33:14-07:00">
+        Mar
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      03/20/18 PHD comic: 'The PHD Movies - Free during the Coronavirus Crisis'
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+
+
+
+      <b>Piled Higher
+        &amp; Deeper <i> by Jorge
+        Cham</i></b>
+
+
+        <div><b>www.phdcomics.com</b></div>
+
+
+
+      <img alt="Click on the title below to read the comic" src="http://www.phdcomics.com/comics/archive/phd032020s.gif">
+
+
+
+        <div>title:
+          &quot;<a href="http://www.phdcomics.com/comics.php?f=2041">The PHD Movies - Free during the Coronavirus Crisis</a>&quot; - originally published 
+3/20/2018  
+        <p>For the latest news in PHD Comics, <a href="http://www.phdcomics.com/comics.php">CLICK HERE!</a></p>
+
+</div>
+
+
+
+
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-03-20 02:33:14-07:00" class="dt-published"></time>
+  Fri 20 Mar 2020
+  in PHD Comics.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://ekaitz.elenq.tech/elenq-publishing.html" rel="bookmark" class="u-url"
+       title="ElenQ Publishing" target="_blank">
+      <time class="m-date" datetime="2020-02-18 00:00:00+02:00">
+        Feb
+        <span class="m-date-day">
+          18
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      ElenQ Publishing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>ElenQ Publishing is a technical book publishing project that aims to open
+the door of technical knowledge to&nbsp;everyone.</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ekaitz Zárraga</b></span>
+  on <time datetime="2020-02-18 00:00:00+02:00" class="dt-published"></time>
+  Tue 18 Feb 2020
+  in Ekaitz's tech blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://treyhunner.com/2020/01/passing-functions-as-arguments/" rel="bookmark" class="u-url"
+       title="Passing a function as an argument to another function in Python" target="_blank">
+      <time class="m-date" datetime="2020-01-14 08:00:00-08:00">
+        Jan
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Passing a function as an argument to another function in Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>One of the more hair-raising facts we learn in my introductory Python trainings is that <strong>you can pass functions into other functions</strong>.
+You can pass functions around because in Python, <strong>functions are objects</strong>.</p>
+
+<p>You likely don&rsquo;t need to know about this in your first week of using Python, but as you dive deeper into Python you&rsquo;ll find that it can be quite convenient to understand how to pass a function into another function.</p>
+
+<p>This is part 1 of what I expect to be a series on the various properties of &ldquo;function objects&rdquo;.
+This article focuses on what a new Python programmer should know and appreciate about <strong>the object-nature of Python&rsquo;s functions</strong>.</p>
+
+<ul></ul>
+
+
+Functions can be referenced
+
+<p>If you try to use a function without putting parentheses after it Python won&rsquo;t complain but it also won&rsquo;t do …</p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-01-14 08:00:00-08:00" class="dt-published"></time>
+  Tue 14 Jan 2020
+  in Trey Hunner.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+</div>
+<!-- /content -->
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://foss.heptapod.net/avmo">Heptapod</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwin.info.tm/">Research</a></h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwin.info.tm/">Posts</a></h3>
+        <ul>
+          <li><a href="https://ashwin.info.tm/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>
+        <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
+        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
+        <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
+        </p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

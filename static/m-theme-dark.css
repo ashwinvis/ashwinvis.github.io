@@ -24,12 +24,11 @@
 
 :root {
   /* Text properties */
-  --font: 'et-book', serif;
-  --ui-font: 'Source Sans Pro', sans-serif;
+  --font: 'Source Sans Pro', sans-serif;
   --code-font: 'Source Code Pro', monospace;
-  --font-size: 1.25rem;
-  --code-font-size: 0.8em; /* *not* rem, so it follows surrounding font size */
-  --line-height: 1.5rem;
+  --font-size: 16px;
+  --code-font-size: 0.9em; /* *not* rem, so it follows surrounding font size */
+  --line-height: normal;
   --paragraph-indent: 1.5rem;
   --paragraph-align: justify;
   --link-decoration: underline;
@@ -41,7 +40,7 @@
   --nav-heading-case: uppercase;
   --nav-categories-case: lowercase;
   --landing-header-case: none;
-  --heading-font-weight: normal;
+  --heading-font-weight: 600;
 
   /* Shapes */
   --border-radius: 0.2rem;
@@ -50,7 +49,7 @@
   --background-color: #2f363f;
   --color: #dcdcdc;
   --line-color: #405363;
-  --link-color: #66b6ff;
+  --link-color: #5b9dd9;
   --link-active-color: #a5c9ea;
   --mark-color: #2f83cc;
   --mark-background-color: #c7cf2f;

@@ -24,12 +24,11 @@
 
 :root {
   /* Text properties */
-  --font: 'et-book', serif;
-  --ui-font: 'Source Sans Pro', sans-serif;
+  --font: 'Libre Baskerville', serif;
   --code-font: 'Source Code Pro', monospace;
-  --font-size: 1.25rem;
-  --code-font-size: 0.8em; /* *not* rem, so it follows surrounding font size */
-  --line-height: 1.5rem;
+  --font-size: 14px;
+  --code-font-size: 1em; /* *not* rem, so it follows surrounding font size */
+  --line-height: normal;
   --paragraph-indent: 1.5rem;
   --paragraph-align: justify;
   --link-decoration: underline;
@@ -37,7 +36,7 @@
   --link-decoration-heading: none;
   --nav-brand-case: lowercase;
   --nav-brand-family: monospace;
-  --nav-menu-case: none;
+  --nav-menu-case: lowercase;
   --nav-heading-case: uppercase;
   --nav-categories-case: lowercase;
   --landing-header-case: none;
@@ -47,7 +46,7 @@
   --border-radius: 0.2rem;
 
   /* Basics */
-  --background-color: #fffff8;
+  --background-color: #ffffff;
   --color: #000000;
   --line-color: #f7e3db;
   --link-color: #ea7944;
@@ -69,17 +68,18 @@
   --header-border-width: 0.25rem 0 0 0;
   --header-color: #000000;
   --header-breadcrumb-color: #bdbdbd; /* same as --dim-color */
-  --header-background-color: #eeeeee;
-  --header-background-color-landing: var(--header-background-color);
+  --header-background-color: #ffffff;
+  --header-background-color-landing: rgba(255, 255, 255, 0.75);
   --header-background-color-jumbo: rgba(255, 255, 255, 0.25);
   --header-link-color: #000000;
   --header-link-active-color: #cb4b16;
   --header-link-current-color: #ea7944;
-  --header-link-active-background-color: var(--header-background-color);
+  --header-link-active-background-color: #ffffff;
+  --header-link-active-background-color: rgba(255, 255, 255, 0.5);
 
   /* Footer */
   --footer-font-size: 0.85rem;
-  --footer-color: #000000;
+  --footer-color: #7c7c7c;
   --footer-background-color: #eeeeee;
   --footer-link-color: #191919;
   --footer-link-active-color: #494949;

@@ -268,7 +268,7 @@ body { margin: 0; }
   }
 }
 @media screen and (min-width: 992px) {
-  .m-container { width: 1280px; }
+  .m-container { width: 960px; }
   .m-container-inflatable .m-col-l-10 .m-container-inflate:not([class*='m-left-']):not([class*='m-right-']) {
     margin-left: -10%;
     margin-right: -10%;
@@ -339,13 +339,13 @@ body { margin: 0; }
 }
 
 html {
-  font-size: 1.25rem;
-  background-color: #fffff8;
+  font-size: 14px;
+  background-color: #ffffff;
 }
 body {
-  font-family: 'et-book', serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: normal;
   color: #000000;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -424,7 +424,7 @@ mark {
 }
 pre, code {
   font-family: 'Source Code Pro', monospace, monospace, monospace;
-  font-size: 0.8em;
+  font-size: 1em;
   color: #5b5b5b;
   background-color: #fbf0ec;
 }
@@ -581,7 +581,7 @@ dl.m-footnote dd span.m-footnote a {
   padding: 1rem;
 }
 .m-frame {
-  background-color: #fffff8;
+  background-color: #ffffff;
   border-style: solid;
   border-width: 0.125rem;
   border-radius: 0.2rem;
@@ -736,7 +736,7 @@ table.m-table tr.m-info td, table.m-table td.m-info,
 table.m-table tr.m-info th, table.m-table th.m-info,
 table.m-table tr.m-dim td, table.m-table td.m-dim,
 table.m-table tr.m-dim th, table.m-table th.m-dim {
-  border-color: #fffff8;
+  border-color: #ffffff;
 }
 .m-note pre, .m-note code,
 table.m-table tr.m-default pre, table.m-table tr.m-default code,
@@ -896,7 +896,7 @@ figure.m-figure figcaption, .m-code-figure figcaption, .m-console-figure figcapt
   font-size: 1.17rem;
 }
 .m-imagegrid > div {
-  background-color: #fffff8;
+  background-color: #ffffff;
 }
 .m-imagegrid > div > figure {
   display: block;
@@ -913,7 +913,7 @@ figure.m-figure figcaption, .m-code-figure figcaption, .m-console-figure figcapt
   left: 0;
   width: 100%;
   height: 100%;
-  border-color: #fffff8;
+  border-color: #ffffff;
   border-style: solid;
   border-width: 0.25rem;
   padding: 0.5rem;
@@ -1174,7 +1174,7 @@ div.m-button.m-flat a:hover svg.m-math, div.m-button.m-default a:focus svg.m-mat
 div.m-button.m-default a:active svg.m-math {
   fill: #cb4b16;
 }
-.m-graph { font-size: 1.25rem; }
+.m-graph { font-size: 14px; }
 div.m-plot svg, div.m-graph svg {
   max-width: 100%;
   margin-left: auto;
@@ -1779,7 +1779,7 @@ li:last-child > div.m-plot:last-child, li:last-child > div.m-plot.m-nopadb {
 
 body > header > nav {
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   min-height: 3rem;
 }
 body > header > nav.m-navbar-landing,
@@ -1796,12 +1796,12 @@ body > header > nav.m-navbar-cover {
 }
 body > header > nav.m-navbar-landing:hover,
 body > header > nav.m-navbar-cover:hover {
-  background-color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.75);
   opacity: 1;
 }
 body> header > nav.m-navbar-landing:target,
 body> header > nav.m-navbar-cover:target {
-  background-color: #eeeeee;
+  background-color: #ffffff;
   opacity: 1;
 }
 body > header > nav.m-navbar-landing #m-navbar-brand.m-navbar-brand-hidden {
@@ -1817,7 +1817,7 @@ body > header > nav {
 }
 body > header > nav a {
   text-decoration: none;
-  text-transform: none;
+  text-transform: lowercase;
   display: inline-block;
   vertical-align: middle;
   line-height: 2.75rem;
@@ -1895,7 +1895,7 @@ body > header > nav #m-navbar-collapse li a:hover,
 body > header > nav #m-navbar-collapse li a:focus,
 body > header > nav #m-navbar-collapse li a:active {
   border-color: #cb4b16;
-  background-color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 body > header > nav.m-navbar-landing #m-navbar-collapse li a:hover,
 body > header > nav.m-navbar-cover #m-navbar-collapse li a:hover,
@@ -1935,7 +1935,7 @@ body > header > nav:target #m-navbar-hide {
     padding-bottom: 0;
   }
   body > header > nav #m-navbar-collapse li ol {
-    background-color: #eeeeee;
+    background-color: #ffffff;
   }
   body > header > nav #m-navbar-collapse ol ol li {
     margin-left: 0;
@@ -1976,7 +1976,7 @@ body > footer > nav {
   padding-bottom: 1rem;
   font-size: 0.85rem;
   text-align: center;
-  color: #000000;
+  color: #7c7c7c;
   background-color: #eeeeee;
 }
 body > footer > nav h3, body > footer > nav h3 a {
@@ -1990,7 +1990,7 @@ body > footer > nav ul {
 }
 body > footer > nav a {
   text-decoration: none;
-  text-transform: none;
+  text-transform: lowercase;
   color: #191919;
 }
 body > footer > nav a:hover, body > footer > nav a:focus, body > footer > nav a:active {
@@ -2094,7 +2094,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
   padding-top: 5rem;
 }
 #m-landing-image {
-  color: #000000;
+  color: #ffffff;
 }
 #m-cover-image {
   height: 30rem;
@@ -2115,7 +2115,7 @@ article#m-jumbo {
   margin-top: -1rem;
 }
 #m-landing-cover, #m-cover-image > div, article#m-jumbo > header #m-jumbo-cover {
-  background: linear-gradient(transparent 0%, transparent 50%, #fffff8 100%);
+  background: linear-gradient(transparent 0%, transparent 50%, #ffffff 100%);
   width: 100%;
   height: 100%;
 }
