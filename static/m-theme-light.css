@@ -85,7 +85,7 @@
   --footer-link-active-color: #494949;
 
   /* Cover image */
-  --cover-image-background-color: #666666;
+  --cover-image-background-color: var(--background-color);
 
   /* Search (used only by m-documentation.css) */
   --search-overlay-color: var(--header-background-color-landing);

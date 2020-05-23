@@ -2087,7 +2087,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
 }
 #m-landing-image, #m-cover-image, article#m-jumbo > header #m-jumbo-image {
   background-size: cover;
-  background-color: #666666;
+  background-color: #fffff8;
   background-position: center center;
   background-repeat: no-repeat;
   margin-top: -4rem;
