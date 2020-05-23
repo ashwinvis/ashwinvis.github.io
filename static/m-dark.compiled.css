@@ -267,8 +267,8 @@ body { margin: 0; }
     float: none;
   }
 }
-@media screen and (min-width: 992px) {
-  .m-container { width: 1280px; }
+@media screen and (min-width: 1280px) {
+  .m-container { width: 1250px; }
   .m-container-inflatable .m-col-l-10 .m-container-inflate:not([class*='m-left-']):not([class*='m-right-']) {
     margin-left: -10%;
     margin-right: -10%;
