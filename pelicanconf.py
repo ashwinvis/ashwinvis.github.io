@@ -84,12 +84,6 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGIN_PATHS = [
-    #  "plugins/",
-    #  "m.css/plugins/",
-    "plugins/pelican-planet",
-    #  "plugins/webring/pelican/plugins/webring",
-]
 PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
@@ -169,7 +163,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 PLUGINS += [
     #  webring,
     av.ipynb.markup,
-    #  pelican_planet,
+    pelican_planet,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
