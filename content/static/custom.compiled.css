@@ -1,4 +1,4 @@
-/* Generated using `./postprocess.py source-code-pro.css et-book.css bibbase-m.css custom.css landing.css -o custom.compiled.css`. Do not edit. */
+/* Generated using `./postprocess.py source-code-pro.css tufte-css/et-book.css custom.css landing.css -o custom.compiled.css`. Do not edit. */
 
 /*
     This file is part of m.css.
@@ -222,10 +222,6 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-.well {
-    background-color: #282e36 !important;
 }
 
 .mastodon-embed {

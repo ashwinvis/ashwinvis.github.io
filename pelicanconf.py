@@ -66,17 +66,9 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
-#  CACHE_CONTENT = True
-LOAD_CONTENT_CACHE = False
+CACHE_CONTENT = True
 
 M_CSS_FILES = [
-    # "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600",
-    ##  Open font library instead of Google Fonts
-    # "https://fontlibrary.org/face/source-code-pro",
-    # "https://fontlibrary.org/face/source-sans-pro",
-    ## Patched open font library css
-    #  "/static/pygments-dark.css",
-    ## Generated using postprocess.sh
     "/static/custom.compiled.css",
 ]
 M_THEME_COLOR = "#22272e"
@@ -216,7 +208,8 @@ AV_THEME = "light"
 if AV_THEME == "light":
     M_CSS_FILES.insert(0, "/static/m-light.css")
     IPYNB_COLORSCHEME = "solarized-light"
-if AV_THEME == "dark":
+elif AV_THEME == "dark":
     M_CSS_FILES.insert(0, "/static/m-dark.css")
+    M_CSS_FILES.append("/static/bibbase-m-dark.css")
     IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
     IPYNB_COLORSCHEME = "monokai"
