@@ -88,7 +88,7 @@ with open("header.html") as header:
 PLUGIN_PATHS = [
     #  "plugins/",
     #  "m.css/plugins/",
-    #  "plugins/pelican-planet",
+    "plugins/pelican-planet",
     #  "plugins/webring/pelican/plugins/webring",
 ]
 PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
