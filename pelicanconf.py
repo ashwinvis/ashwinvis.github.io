@@ -170,7 +170,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 PLUGINS += [
     #  webring,
     av.ipynb.markup,
-    pelican_planet,
+    #  pelican_planet,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
