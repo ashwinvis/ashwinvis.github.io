@@ -11,7 +11,7 @@ Showcase
         .. block-success:: Curriculum Vitae
 
             The latest iteration of my CV.
-            :raw-html:`<br/><br/><br/>`
+            :raw-html:`<br/><br/>`
 
             .. button-default:: /pages/cv.html
                 :class: m-fullwidth
@@ -39,7 +39,7 @@ Showcase
             .. button-default:: /pages/software.html
                 :class: m-fullwidth
 
-                Show me the code
+                My codes
 
 
 Sponsors
