@@ -66,7 +66,6 @@ DIRECT_TEMPLATES = (
     # Requires pybtex
     #  "publications",
 )
-CACHE_CONTENT = True
 
 M_CSS_FILES = [
     "/static/custom.compiled.css",
