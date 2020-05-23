@@ -3,7 +3,7 @@ Sheer pleasure of Going Places
 :date: 2011-03-02 04:06
 :author: azuwish
 :tags: Uncategorized
-:category: Blog
+:category: Blogger archive
 :slug: sheer-pleasure-of-going-places
 :status: published
 

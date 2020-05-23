@@ -3,7 +3,7 @@ Time is Life
 :date: 2010-02-12 13:04
 :author: azuwish
 :tags: friends, life
-:category: Blog
+:category: Blogger archive
 :slug: time-is-life
 :status: published
 

@@ -3,7 +3,7 @@
 :date: 2011-09-15 11:45
 :author: azuwish
 :tags: life, travel
-:category: Blog
+:category: Blogger archive
 :slug: oru-agra-yatra
 :status: published
 :attachments: 2011/09/140820111761.jpg, 2011/09/1.jpg, 2011/09/14082011185.jpg, 2011/09/14082011182.jpg, 2011/09/14082011176.jpg, 2011/09/11.jpg, 2011/09/140820111821.jpg, 2011/09/140820111851.jpg

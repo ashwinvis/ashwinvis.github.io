@@ -3,7 +3,7 @@ Age 21: Where are you now?
 :date: 2011-02-07 12:29
 :author: azuwish
 :tags: life
-:category: Blog
+:category: Blogger archive
 :slug: age-21-where-are-you-now
 :status: published
 

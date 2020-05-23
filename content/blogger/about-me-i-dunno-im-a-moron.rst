@@ -3,7 +3,7 @@
 :date: 2010-06-02 15:10
 :author: azuwish
 :tags: Uncategorized
-:category: Blog
+:category: Blogger archive
 :slug: about-me-i-dunno-im-a-moron
 :status: published
 :attachments: 2010/06/its-all-about-me.jpg, 2010/06/its-all-about-me1.jpg

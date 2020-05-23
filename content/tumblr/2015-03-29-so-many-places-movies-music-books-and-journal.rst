@@ -2,7 +2,7 @@ Quote
 #####
 :date: 2015-03-29 13:15:09
 :author: Ashwin Vishnu
-:category: Blog
+:category: Tumblr archive
 :tags: rant, life, tumblr
 :slug: 2015-03-29-so-many-places-movies-music-books-and-journal
 :status: published

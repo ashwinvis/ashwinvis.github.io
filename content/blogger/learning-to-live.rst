@@ -3,7 +3,7 @@ Learning to Live
 :date: 2012-02-03 17:23
 :author: azuwish
 :tags: friends, life, teenage
-:category: Blog
+:category: Blogger archive
 :slug: learning-to-live
 :status: published
 

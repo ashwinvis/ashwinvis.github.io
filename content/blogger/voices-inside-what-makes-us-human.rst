@@ -3,7 +3,7 @@ Voices inside: What makes us human
 :date: 2012-10-05 14:45
 :author: azuwish
 :tags: emotion, life, psychology
-:category: Blog
+:category: Blogger archive
 :slug: voices-inside-what-makes-us-human
 :status: published
 :attachments: 2012/10/devilandangel.jpg

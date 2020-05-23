@@ -2,7 +2,7 @@ Random acts of Kindness
 #######################
 :date: 2014-12-13 10:55:03
 :author: Ashwin Vishnu
-:category: Blog
+:category: Tumblr archive
 :tags: kindness, strangers, tumblr
 :slug: 2014-12-13-random-acts-of-kindness
 :status: published
@@ -54,7 +54,7 @@ An hour later, I went down to go to the supermarket. And hey! There it was…. M
    <p>
 
 .. figure:: https://78.media.tumblr.com/ea4cf12bdb4fce8e9ed9794d019da07d/tumblr_inline_pfjaz1p6R01t4yejq_540.jpg
-   :alt: 
+   :alt: Lost and found access card!
 
 .. raw:: html
 

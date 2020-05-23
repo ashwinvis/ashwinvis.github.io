@@ -3,7 +3,7 @@ Musings in a train journey - Pt.1
 :date: 2010-04-13 06:02
 :author: azuwish
 :tags: Uncategorized
-:category: Blog
+:category: Blogger archive
 :slug: musings-in-a-train-journey-pt-1
 :status: published
 

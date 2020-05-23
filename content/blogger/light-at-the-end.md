@@ -8,5 +8,5 @@ Status: draft
 ---
 
 Nearly 5 years ago, in the new year of 2014 [I wrote a
-post]({filename}blog/looking-back.rst)
+post]({filename}/blogger/looking-back.rst)
 

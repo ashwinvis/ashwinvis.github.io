@@ -3,7 +3,7 @@ The Dive
 :date: 2013-07-15 04:28
 :author: azuwish
 :tags: poetry
-:category: Blog
+:category: Blogger archive
 :slug: the-dive
 :status: published
 

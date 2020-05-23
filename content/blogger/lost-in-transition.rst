@@ -3,7 +3,7 @@ Lost in Transition
 :date: 2011-08-02 10:01
 :author: azuwish
 :tags: life, travel
-:category: Blog
+:category: Blogger archive
 :slug: lost-in-transition
 :status: published
 :attachments: 2011/08/untitled.jpg, 2011/08/114257295.jpg

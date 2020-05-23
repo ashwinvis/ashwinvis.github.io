@@ -3,7 +3,7 @@ Words of Change
 :date: 2018-02-26 06:02
 :author: azuwish
 :tags: Uncategorized
-:category: Blog
+:category: Blogger archive
 :slug: 48
 :status: draft
 :attachments: 2018/02/neo.jpg, 2018/02/neo1.jpg
