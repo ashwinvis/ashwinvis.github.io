@@ -12,7 +12,6 @@ import logging
 from datetime import datetime
 
 import m
-import pelican_planet
 from pelican_jupyter import markup
 #  from pelican.plugins import webring
 from pelican_ashwinvis.util.util import read_opml
@@ -109,6 +108,7 @@ M_LINKS_NAVBAR1 = [
 ]
 
 M_LINKS_NAVBAR2 = [
+    ("Sponsors", "pages/sponsors.html", "[sponsors]", []),
     ("Planet", "pages/planet.html", "[planet]", []),
     ("Contact", "pages/contact.html", "[contact]", []),
 ]
@@ -131,6 +131,11 @@ M_LINKS_FOOTER2 = [
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
 ]
+M_LINKS_FOOTER3 = (
+    [("Showcase", "/pages/showcase.html")] +
+    [(title, url) for title, url, _ in M_LINKS_NAVBAR1[1][3]] +
+    [(title, url) for title, url, _, _ in M_LINKS_NAVBAR2]
+)
 
 with open("footer.rst") as footer:
     M_FINE_PRINT = footer.read().format(year=datetime.now().year)
@@ -154,7 +159,6 @@ M_BRIDGY_PUBLISH = "mastodon"
 PLUGINS += [
     #  webring,
     markup,
-    pelican_planet,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",

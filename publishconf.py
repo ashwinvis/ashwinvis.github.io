@@ -8,6 +8,8 @@ from __future__ import unicode_literals
 import os
 import sys
 
+import pelican_planet
+
 sys.path.append(os.curdir)
 from pelicanconf import *
 from pelican_ashwinvis import SITEURL
@@ -26,6 +28,7 @@ try:
 except NameError:
     pass
 
+PLUGINS += [pelican_planet]
 PLANET_FEEDS = read_opml("planet.opml", ("Blogroll", "Planets"))
 PLANET_RESOLVE_REDIRECTS = True
 
