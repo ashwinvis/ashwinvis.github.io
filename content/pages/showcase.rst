@@ -42,62 +42,16 @@ Showcase
                 My codes
 
 
-Sponsors
-========
+.. container:: m-row
 
-.. note-dim:: None so far 🤔
+    .. container:: m-col-m-4
 
-Most of the things I write and code are out of my own sheer passion. Only space and
-time limit my output. I do have a full-time job to keep me busy, but that said
-, I would not mind some encouragement from readers like you.  If you feel like,
-head over to either of the following:
+        .. block-success:: Sponsors
 
-Liberapay
----------
+            Say thanks
 
-Many flexible ways to chip in a tip:
+            .. button-default:: /pages/sponsors.html
+                :class: m-fullwidth
 
-.. image:: https://liberapay.com/assets/widgets/donate.svg
-   :target: https://liberapay.com/ashwinvis/donate
-   :alt: Donate using Liberapay
-   :height: 2em
-
-GitHub sponsors
----------------
-.. raw:: html
-
-   <style>
-      div.gh-sponsors-button a {
-         display: block;
-         text-decoration: none;
-         font-size: 0.9em;
-         font-family: sans-serif;
-         font-weight: bold;
-         color: #000;
-         padding: 0.2em 1em;
-     }
-     div.gh-sponsors-button {
-         display: inline-block;
-         background-color: #ddd;
-         border: none;
-         border-radius: 0.5rem;
-         text-align: center;
-     }
-   </style>
-
-.. container:: gh-sponsors-button m-default
-
-    `💓 Sponsor <https://github.com/sponsors/ashwinvis>`__
-
-Currently there are two sponsorship tiers, with which you could:
-
-- receive a special *thank you* email
-- be added to the list of *sponsors* in my blog
-
-
-Once things start looking up, I might open up more sponsorship tiers like one
-for:
-
-- allowing me to spare an hour per month to *talk about anything* you want via instant message / video call
-- requesting *features or bug fixes on a project* that I have already contributed to
+                My sponsors
 

@@ -36,7 +36,7 @@ Welcome
         .. container:: m-col-l-6 m-push-l-1 m-col-m-7 m-nopadt
 
 
-            .. container:: m-block m-primary m-badge
+            .. container:: m-block m-primary m-badge landing-float-right
 
                .. image:: /images/dp_ashwin_2016.jpg
                   :alt: Portrait of Ashwin taken in Paris, 2016
@@ -53,6 +53,7 @@ Welcome
                       <span class="p-family-name">Mohanan</span>
                     </a>
                   </p>
+
                   <h3>
                     <code>❯❯❯ site.whoami() </code>
                   </h3>
@@ -67,8 +68,8 @@ Welcome
                instabilities, scientific computing
 
                Building simple, efficient, open-source, and reproducible software
-               fascinate me. You can find more what I do in my **showcase**.
-               Also, check out my **blog posts**.
+               fascinate me. You can find more what I do in my showcase_.
+               Also, check out my `blog posts`_.
 
                .. raw:: html
 
@@ -91,3 +92,5 @@ Welcome
 
                 Blog posts
 
+.. _showcase: /pages/showcase.html
+.. _blog posts: /archives.html

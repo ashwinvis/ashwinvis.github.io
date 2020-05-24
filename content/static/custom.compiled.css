@@ -277,3 +277,10 @@ span.landing-ticker {
   color: #a5c9ea;
   font-weight: 600;
 }
+.m-block.m-badge.landing-float-right h3, .m-block.m-badge.landing-float-right p {
+  margin-left: auto;
+}
+.m-block.m-badge.landing-float-right img {
+  float: right;
+  margin-left: 1em;
+}

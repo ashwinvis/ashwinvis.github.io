@@ -54,7 +54,7 @@ Some key features include:
    .. raw:: html
 
       <iframe width="560" height="315"
-      src="https://www.youtube-nocookie.com/embed/QHKBOQQJ8XE" frameborder="0"
+      src="https://invidious.snopyta.org/embed/QHKBOQQJ8XE" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope;
       picture-in-picture" allowfullscreen> </iframe>
 
@@ -92,7 +92,7 @@ I have also contributed some serious projects such as:
 - `fzf-bibtex <https://github.com/msprev/fzf-bibtex>`__: a BibTeX source for
   fzf. I added:
 
-   - Biblatex support. (`link <https://github.com/msprev/fzf-bibtex/pull/14>`__)
+  - Biblatex support. (`link <https://github.com/msprev/fzf-bibtex/pull/14>`__)
 
 -  `JupyterLab <https://jupyterlab.readthedocs.io>`__: Next generation
    UI for Jupyter notebooks. I have:
