@@ -10,6 +10,8 @@ A showcase of all the projects which I have **co-developed**, have
 
 .. contents::
 
+----
+
 Research Software
 ~~~~~~~~~~~~~~~~~
 
@@ -77,6 +79,8 @@ of `scikit-aero <https://github.com/AeroPython/scikit-aero>`__. Demo:
    src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775"
    frameborder="0" allowfullscreen> </iframe>
 
+----
+
 Open-Source contributions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -129,6 +133,8 @@ I have also contributed some serious projects such as:
   - performed some basic maintenance, and implemented database logic
     (`pull-requests
     <https://github.com/We-Care-sweden/analysis-scripts/pulls?q=is%3Apr+author%3Aashwinvis+is%3Aclosed>`__)
+
+----
 
 Humble projects
 ~~~~~~~~~~~~~~~

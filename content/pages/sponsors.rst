@@ -9,7 +9,7 @@ time limit my output. I do have a full-time job to keep me busy, but that said
 head over to either of the following:
 
 Liberapay
----------
+=========
 
 Many flexible ways to chip in a tip:
 
@@ -19,7 +19,7 @@ Many flexible ways to chip in a tip:
    :height: 2em
 
 GitHub sponsors
----------------
+===============
 .. raw:: html
 
    <style>
@@ -56,3 +56,21 @@ for:
 - allowing me to spare an hour per month to *talk about anything* you want via instant message / video call
 - requesting *features or bug fixes on a project* that I have already contributed to
 
+----
+
+Giving back
+===========
+
+A lot of essential services are run by volunteers or non-profit and often
+underfunded. Consider supporting your favourite individual / organization.
+
+I am currently supporting:
+
+- `Numfocus <https://numfocus.salsalabs.org/donate>`_
+
+I have donated in the past to:
+
+- `MSF <https://www.msf.org/>`__
+- `Red Cross <https://www.rodakorset.se/>`__
+- `Wikipedia
+  <https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&utm_medium=sidebar&utm_campaign=C13_en.wikipedia.org&uselang=en>`__
