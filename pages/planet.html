@@ -100,6 +100,7 @@
             </li>
           </ol>
           <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="https://ashwin.info.tm/pages/sponsors.html">Sponsors</a></li>
             <li><a href="https://ashwin.info.tm/pages/planet.html">Planet</a></li>
             <li><a href="https://ashwin.info.tm/pages/contact.html">Contact</a></li>
           </ol>
@@ -183,9 +184,9 @@ playlist</a>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/05/reddit-hnblogs/" rel="bookmark" class="u-url"
-       title="Bringing back the 90s Internet" target="_blank">
-      <time class="m-date" datetime="2020-05-24 14:29:08+02:00">
+    <a href="https://tsdgeos.blogspot.com/2020/05/chmk-simple-chm-viewer.html" rel="bookmark" class="u-url"
+       title="chmk a simple CHM viewer" target="_blank">
+      <time class="m-date" datetime="2020-05-24 22:34:40+00:00">
         May
         <span class="m-date-day">
           24
@@ -193,22 +194,57 @@ playlist</a>.</p>
         2020
       </time>
       <div class="p-name">
-      Bringing back the 90s Internet
+      chmk a simple CHM viewer
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>There was <a href="https://news.ycombinator.com/item?id=23237559">a discussion on Hacker News</a> the other day about whether blogs are dead or not.</p>
-<p>I think that there are still many blogs, more than you could ever read. (You can find some of them in <a href="https://jlelse.blog/blogroll/">my blogroll</a>.) What is different today is that blogs are harder to find. Sure, sometimes when you search for something specific on Google, you find blogs too, but most blogs are more likely to be found via links or aggregators (Hacker News, Lobste.rs, Reddit…).</p>
-<p>As a result of the discussion on Hacker News, <a href="https://www.reddit.com/r/hnblogs/">a new subreddit</a> with the title “Bringing back the 90s Internet” has been created in which only authors are allowed to present their own blogs. A nice initiative, I think, which will probably lead to a few more subscriptions in my feed reader.</p>
+  Okular can view CHM files, to do so it uses KHTML, makes sense CHM is basically HTML with images all compressed into a single file.This is somewhat problematic since KHTML is largely unmaintained and i doubt it'll get a Qt6 port.The problem is that the only other Qt based HTML rendering engine is QtWebEngine and while great it doesn't support stuff we would need to use it in Okular, since Okular needs to access to the rendered image of the page and also to the text since it uses the same API for all formats, be it CHM, PDF, epub, wathever.The easiest plan to move forward is probably drop CHM from Okular, but that means no more chm viewing in KDE software, which would be a bit sad.So I thought, ok maybe I can do a …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Albert Astals Cid</b></span>
+  on <time datetime="2020-05-24 22:34:40+00:00" class="dt-published"></time>
+  Sun 24 May 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/thoughts/2020/05/serverless-fassd/" rel="bookmark" class="u-url"
+       title="Self-hosted server(less) functions" target="_blank">
+      <time class="m-date" datetime="2020-05-24 23:26:23+02:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Self-hosted server(less) functions
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>One thing which I have never looked more closely at, but which I think is very interesting, are “Serverless Functions”, although they are not so serverless because they run on a server. Whatever. On Hacker News, I found <a href="https://github.com/openfaas/faasd">a GitHub repository</a> and <a href="https://blog.alexellis.io/deploy-serverless-faasd-with-cloud-init/">an article about it</a>.</p>
+<p>With fassd, it’s easy (and possible without Kubernetes) to install a runtime for serverless functions on a single server. Sort of like Lambda from Amazon, but open source and self-hosted.</p>
+<p>Serverless functions could be a good and simple alternative to small (permanently running and listening) web services that are only supposed to provide a simple function and ideally do not need any storage or similar. For my blog, for example, something like this would be a good solution to send <a href="https://indieweb.org/Webmention">webmentions</a>.</p>
+<p>I will take a closer look at it soon and try to …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-24 14:29:08+02:00" class="dt-published"></time>
+  on <time datetime="2020-05-24 23:26:23+02:00" class="dt-published"></time>
   Sun 24 May 2020
   in jlelse's Blog.
 </footer>
@@ -219,9 +255,9 @@ playlist</a>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://cmollekopf.wordpress.com/2020/05/24/last-week-in-kube-15/" rel="bookmark" class="u-url"
-       title="Last week in Kube" target="_blank">
-      <time class="m-date" datetime="2020-05-24 12:23:41+00:00">
+    <a href="https://matplotlib.org/matplotblog/posts/emoji-mosaic-art/" rel="bookmark" class="u-url"
+       title="Emoji Mosaic Art" target="_blank">
+      <time class="m-date" datetime="2020-05-24 19:11:01+05:30">
         May
         <span class="m-date-day">
           24
@@ -229,26 +265,24 @@ playlist</a>.</p>
         2020
       </time>
       <div class="p-name">
-      Last week in Kube
+      Emoji Mosaic Art
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <ul>
-<li>You can now view “flagged”/”starred” messages per account. This is a short-cut to getting that functionality eventually folded into the todo view (I think…), and allows you to quickly show a list of messages that you have marked as important so you can deal with them. The view works best if there is a small number of marked messages, and you unflag them once you have dealt with them.</li>
-<li>The experimental flatpak now contains spellcheck-highlighting support based on sonata. There is no configuration (language is autodetected per sentence), and there is also no UI to get to corrections, so it’s primarily useful to spot typos (which is good enough for the time being).</li>
-<li>Quotes in plaintext emails are now highlighted, which makes for a better reading experiece.</li>
-<li>Lot’s of enhancements to the todo view, which is now …</li></ul>
+  A while back, I came across this cool repository to create emoji-art from images. I wanted to use it to transform my mundane Facebook profile picture to something more snazzy. The only trouble? It was written in Rust.
+So instead of going through the process of installing Rust, I decided to take the easy route and spin up some code to do the same in Python using matplotlib.
+Because that's what anyone sane would do, right?
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Christian Mollekopf (cmollekopf)</b></span>
-  on <time datetime="2020-05-24 12:23:41+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-24 19:11:01+05:30" class="dt-published"></time>
   Sun 24 May 2020
-  in Planet KDE.
+  in Matplotblog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -295,6 +329,55 @@ sophisticated sentiment analysis.</p><p>Finding out what I liked and didn&#8217;
   on <time datetime="2020-05-24 07:23:00-04:00" class="dt-published"></time>
   Sun 24 May 2020
   in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2020/5/24/my-standard-desktop/" rel="bookmark" class="u-url"
+       title="My Standard Desktop" target="_blank">
+      <time class="m-date" datetime="2020-05-24 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      My Standard Desktop
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Like many others I'm spending a lot more time working from home now.  This
+in no way is a new situation for me, but I figured I might as well write a
+bit about how I work from home given the increased interest.  Mostly
+because after seeing so many complex dev setups recently I wanted to share
+something that's <em>largely</em> bland.</p>
+<img alt="/static/desktop-2020.jpg" src="http://lucumr.pocoo.org/static/desktop-2020.jpg">
+<div>
+What's There
+<p>Most of what I have here is from IKEA, like pretty much everything we own
+in this flat.  This is for a handful of reasons.  The first one is —&nbsp;and
+that's quite consistent with my general approach to most things —&nbsp;that
+it's standardized, mass produced and if something breaks you can get it
+repaired easily.</p>
+<p>The most important items are the <a href="https://www.ikea.com/at/de/p/idasen-schreibtisch-sitz-steh-braun-dunkelgrau-s79280955/">IDÅSEN</a>
+standing desk and the <a href="https://www.ikea.com/at/de/p/markus-drehstuhl-vissle-dunkelgrau-70261150/">MARKUS</a>
+swivel chair.  Since it's a standing desk that is moving …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2020-05-24 00:00:00+00:00" class="dt-published"></time>
+  Sun 24 May 2020
+  in Armin Ronacher's Thoughts and Writings.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -990,41 +1073,6 @@ Python packaging ideas for the future include:
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://matplotlib.org/matplotblog/posts/draw-all-graphs-of-n-nodes/" rel="bookmark" class="u-url"
-       title="Draw all graphs of N nodes" target="_blank">
-      <time class="m-date" datetime="2020-05-07 09:05:32+01:00">
-        May
-        <span class="m-date-day">
-          07
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Draw all graphs of N nodes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The other day I was homeschooling my kids, and they asked me: &ldquo;Daddy, can you draw us all possible non-isomorphic graphs of 3 nodes&rdquo;? Or maybe I asked them that? Either way, we happily drew all possible graphs of 3 nodes, but already for 4 nodes it got hard, and for 5 nodes - plain impossible!
-So I thought: let me try to write a brute-force program to do it! I spent a few hours sketching some smart dynamic programming solution to generate these graphs, and went nowhere, as apparently the problem is quite hard.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-07 09:05:32+01:00" class="dt-published"></time>
-  Thu 07 May 2020
-  in Matplotblog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://www.python.org/dev/peps/pep-0618/" rel="bookmark" class="u-url"
        title="PEP 618: Add Optional Length-Checking To zip" target="_blank">
       <time class="m-date" datetime="2020-05-01 00:00:00+00:00">
@@ -1252,54 +1300,6 @@ packages can be successfully built and uploaded. This is the result …</div>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://lucumr.pocoo.org/2020/4/9/tcn-contact-tracing/" rel="bookmark" class="u-url"
-       title="Temporary Contact Number based Contact Tracing" target="_blank">
-      <time class="m-date" datetime="2020-04-09 00:00:00+00:00">
-        Apr
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Temporary Contact Number based Contact Tracing
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I have already talked here before about <a href="http://lucumr.pocoo.org/3/contact-tracing/">privacy preserving contact
-tracing</a> to fight Covid-19 but I figured I
-give an update to this.  I have spent the last week now investigating
-different approaches to this and my view has changed quite a bit.</p>
-<p>I strongly believe that contact tracing through phone apps is one of our
-best chances to return to normal and without losing our civil liberties.
-If you want to understand why, have a look at <a href="http://lucumr.pocoo.org/3/contact-tracing/">previous post about this
-topic</a>.</p>
-<div>
-Two Fundamental Approaches
-<p>In the previous post I talked in favour of a partially centralized
-approach.  This was largely because I felt that one of the inherent
-problems of any privacy preserving contact tracing system could be
-somewhat mitigated.  That downside is that a person could always use any
-such contact tracing system in a way where …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Armin Ronacher</b></span>
-  on <time datetime="2020-04-09 00:00:00+00:00" class="dt-published"></time>
-  Thu 09 Apr 2020
-  in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://pradyunsg.me/blog/2020/03/27/pip-resolver-testing/" rel="bookmark" class="u-url"
        title="Testing the next-gen pip dependency resolver" target="_blank">
       <time class="m-date" datetime="2020-03-27 00:00:00+00:00">
@@ -1512,6 +1512,16 @@ Functions can be referenced
       </div>
       <div class="m-clearfix-t"></div>
       <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwin.info.tm/pages/showcase.html">Showcase</a></h3>
+        <ul>
+          <li><a href="https://ashwin.info.tm/pages/cv.html">CV</a></li>
+          <li><a href="https://ashwin.info.tm/pages/research.html">Research</a></li>
+          <li><a href="https://ashwin.info.tm/pages/software.html">Software</a></li>
+          <li><a href="https://ashwin.info.tm/talks">Talks</a></li>
+          <li><a href="https://ashwin.info.tm/pages/sponsors.html">Sponsors</a></li>
+          <li><a href="https://ashwin.info.tm/pages/planet.html">Planet</a></li>
+          <li><a href="https://ashwin.info.tm/pages/contact.html">Contact</a></li>
+        </ul>
       </div>
       <div class="m-col-s-3 m-col-t-6">
         <h3><a href="https://ashwin.info.tm/">Posts</a></h3>
