@@ -11,7 +11,9 @@ var contentToCache = [
   '/index.html',
   '/archives.html',
   '/pages/showcase.html',
+  '/pages/research.html',
   '/pages/software.html',
+  '/pages/sponsors.html',
   '/pages/cv.html',
   '/pages/contact.html',
   '/static/custom.compiled.css',
@@ -69,7 +71,7 @@ function fromNetwork (request, timeout) {
 function fromCache (request) {
   return caches.open(CACHE).then(function (cache) {
     return cache.match(request).then(function (matching) {
-      return matching || Promise.reject('no-match')
+      return matching || Promise.reject(new Error('[Service worker] No-matching cache'))
     })
   })
 }
