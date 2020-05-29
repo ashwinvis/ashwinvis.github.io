@@ -27,4 +27,5 @@
 @import url('m-components.css');
 @import url('m-layout.css');
 /* TODO: pygments-light.css */
+@import url('pygments-light.css');
 @import url('pygments-console.css');
