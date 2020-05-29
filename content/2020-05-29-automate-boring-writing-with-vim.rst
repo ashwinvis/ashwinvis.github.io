@@ -4,7 +4,7 @@ Automate boring writing with Vim
 :author: Ashwin Vishnu Mohanan
 :date: 2020-05-29T18:23:23.230821
 :slug: automate-boring-writing-with-vim
-:status: draft
+:status: published
 :summary: Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier
 :category: Tech Talk
 :tags: software, markdown, rst, vim, writing
