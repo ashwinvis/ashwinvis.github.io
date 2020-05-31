@@ -1,6 +1,7 @@
 Things to do before I turn 25
 #############################
 :date: 2011-04-22 13:12
+:archived: True
 :author: azuwish
 :tags: life, resolution
 :category: Blogger archive

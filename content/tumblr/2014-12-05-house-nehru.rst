@@ -1,6 +1,7 @@
 House Nehru
 ###########
 :date: 2014-12-05 22:47:05
+:archived: True
 :author: Ashwin Vishnu
 :category: Tumblr archive
 :tags: game of thrones, congress, indian politics, tumblr

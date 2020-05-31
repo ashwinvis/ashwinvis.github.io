@@ -34,6 +34,7 @@ research_ or software_ that I maintain.
    <tbody>
      <tr>
        <td class="m-text-center">
+         <div class="m-button m-info m-fullwidth" align-content="normal">
                    <div class="m-big"><b>Visiting address</b></div>
                    <span class="m-text m-small">
                        Arrhenius Laboratory, 6th Floor<br/>
@@ -41,6 +42,7 @@ research_ or software_ that I maintain.
                        Frescati Campus
                        Stockholm
                    </span>
+         </div>
        </td>
 
        <td>

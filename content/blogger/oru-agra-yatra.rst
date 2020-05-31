@@ -1,6 +1,7 @@
 ഒരു ആഗ്ര യാത്ര.
 #############
 :date: 2011-09-15 11:45
+:archived: True
 :author: azuwish
 :tags: life, travel
 :category: Blogger archive

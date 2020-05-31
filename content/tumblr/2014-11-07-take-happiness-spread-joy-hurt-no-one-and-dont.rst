@@ -1,6 +1,7 @@
 Quote
 #####
 :date: 2014-11-07 23:44:00
+:archived: True
 :author: Ashwin Vishnu
 :category: Tumblr archive
 :tags: motto, tumblr

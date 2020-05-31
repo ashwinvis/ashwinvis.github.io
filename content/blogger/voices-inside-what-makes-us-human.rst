@@ -1,6 +1,7 @@
 Voices inside: What makes us human
 ##################################
 :date: 2012-10-05 14:45
+:archived: True
 :author: azuwish
 :tags: emotion, life, psychology
 :category: Blogger archive

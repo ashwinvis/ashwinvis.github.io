@@ -1,6 +1,7 @@
 Time is Life
 ############
 :date: 2010-02-12 13:04
+:archived: True
 :author: azuwish
 :tags: friends, life
 :category: Blogger archive

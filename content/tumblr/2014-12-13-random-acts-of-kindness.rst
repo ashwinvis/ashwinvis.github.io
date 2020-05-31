@@ -1,6 +1,7 @@
 Random acts of Kindness
 #######################
 :date: 2014-12-13 10:55:03
+:archived: True
 :author: Ashwin Vishnu
 :category: Tumblr archive
 :tags: kindness, strangers, tumblr

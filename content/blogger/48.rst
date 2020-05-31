@@ -1,6 +1,7 @@
 Words of Change
 ###############
 :date: 2018-02-26 06:02
+:archived: True
 :author: azuwish
 :tags: Uncategorized
 :category: Blogger archive

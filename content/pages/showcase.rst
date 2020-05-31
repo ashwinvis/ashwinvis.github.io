@@ -1,6 +1,14 @@
 Showcase
 ########
 
+My current research is about atmospheric boundary layer turbulence studied
+using large-eddy simulations (LES).  *Other research interests* include
+geophysical flows, stratified flows, instabilities, scientific computing.
+Building simple, efficient, open-source, and reproducible software fascinate
+me.
+
+I have curated some of my works in this website. Take a look.
+
 .. role:: raw-html(raw)
     :format: html
 

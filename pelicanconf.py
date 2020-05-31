@@ -14,6 +14,7 @@ from datetime import datetime
 import m
 from pelican_jupyter import markup
 #  from pelican.plugins import webring
+from pelican_ashwinvis import post_stats
 from pelican_ashwinvis.util.util import read_opml
 
 
@@ -80,6 +81,8 @@ M_SITE_LOGO = "/images/logo_ashwin.png"
 M_SITE_LOGO_TEXT = "ashwin.info™"
 M_FAVICON = (M_SITE_LOGO, "image/png")
 M_BLOG_FAVICON = M_FAVICON
+
+
 # m.metadata
 FORMATTED_FIELDS = ['description', 'badge']
 
@@ -140,6 +143,8 @@ M_LINKS_FOOTER3 = (
 with open("footer.rst") as footer:
     M_FINE_PRINT = footer.read().format(year=datetime.now().year)
 
+with open("archived_badge.rst") as badge:
+    M_ARCHIVED_ARTICLE_BADGE = badge.read()
 
 # For landing page
 FORMATTED_FIELDS = ['summary', 'landing',
@@ -158,6 +163,7 @@ M_BRIDGY_PUBLISH = "mastodon"
 
 PLUGINS += [
     #  webring,
+    post_stats,
     markup,
     # "representative_image",
     # "tipue_search",
