@@ -111,6 +111,15 @@ M_LINKS_NAVBAR1 = [
 ]
 
 M_LINKS_NAVBAR2 = [
+    (
+        "Feeds",
+        "feeds/all.atom.xml",
+        "",
+        [
+            ("Feeds: Blog", "feeds/blog.atom.xml", ""),
+            ("Feeds: Tech Talk", "feeds/tech-talk.atom.xml", ""),
+        ],
+    ),
     ("Sponsors", "pages/sponsors.html", "[sponsors]", []),
     ("Planet", "pages/planet.html", "[planet]", []),
     ("Contact", "pages/contact.html", "[contact]", []),
