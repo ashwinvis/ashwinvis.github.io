@@ -369,7 +369,7 @@ ul ol, ul ul, ol ol, ol ul {
 }
 main p {
   text-indent: 1.5rem;
-  text-align: justify;
+  text-align: left;
 }
 main p.m-noindent, li > p, dd > p, table.m-table td > p {
   text-indent: 0;
@@ -615,6 +615,7 @@ dl.m-footnote dd span.m-footnote a {
   float: left;
 }
 div.m-button {
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 div.m-button a {

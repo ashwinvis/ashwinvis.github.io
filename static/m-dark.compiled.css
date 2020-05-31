@@ -615,6 +615,7 @@ dl.m-footnote dd span.m-footnote a {
   float: left;
 }
 div.m-button {
+  font-family: var(--button-font);
   text-align: center;
 }
 div.m-button a {
