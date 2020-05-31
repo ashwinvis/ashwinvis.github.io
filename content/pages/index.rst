@@ -25,8 +25,12 @@ Welcome
                 <h1 id="landing">
                   <span class="m-thin">
                     <span class="landing-prompt">❯❯❯ </span>
+                    <span class="landing-kw">from</span>
+                    <a class="p-name u-url" href="https://ashwin.info.tm">
+                    <span class="landing-mod">ashwin.info.tm</span>
+                    </a>
                     <span class="landing-kw">import</span>
-                    <span class="landing-mod">site</span>
+                    <span class="landing-mod">say</span>
                     <br/>
                   </span>
                 </h1>
@@ -44,32 +48,22 @@ Welcome
                .. raw:: html
 
                   <h3>
-                    <code>❯❯❯ site.hello()</code>
+                    <code>❯❯❯ say.hello()</code>
                   </h3>
                   <p>
-                    Welcome! My name is
-                    <a class="p-name u-url" href="https://ashwin.info.tm">
-                      <span class="p-given-name">Ashwin Vishnu</span>
-                      <span class="p-family-name">Mohanan</span>
-                    </a>
+                    <i>Welcome!</i> My name is
+                    <span class="p-given-name">Ashwin Vishnu</span>
+                    <span class="p-family-name">Mohanan</span>.
                   </p>
 
                   <h3>
-                    <code>❯❯❯ site.whoami() </code>
+                    <code>❯❯❯ say.whoami() </code>
                   </h3>
 
                Postdoc at :p-org:`MISU, Stockholm University`,
-               research software developer, blogger and a person
-
-
-               My current research is about atmospheric boundary layer
-               turbulence studied using large-eddy simulations (LES).  *Other
-               research interests:* geophysical flows, stratified flows,
-               instabilities, scientific computing
-
-               Building simple, efficient, open-source, and reproducible software
-               fascinate me. You can find more what I do in my showcase_.
-               Also, check out my `blog posts`_.
+               research software developer, blogger and a person.
+               Find more what I do in my showcase_ or
+               check out my `blog posts`_.
 
                .. raw:: html
 

@@ -54,7 +54,6 @@ Once things start looking up, I might open up more sponsorship tiers like one
 for:
 
 - allowing me to spare an hour per month to *talk about anything* you want via instant message / video call
-- requesting *features or bug fixes on a project* that I have already contributed to
 
 ----
 
