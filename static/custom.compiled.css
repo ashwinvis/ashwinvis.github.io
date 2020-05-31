@@ -239,11 +239,15 @@ article a:hover {
 }
 
 h1#landing {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: monospace;
-  padding-left: 1rem;
 }
-@media (width <= 1280px) {
+@media (width <= 990px) {
+  h1#landing {
+    font-size: 1.5rem;
+  }
+}
+@media (width <= 404px) {
   h1#landing {
     font-size: 1rem;
   }

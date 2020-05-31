@@ -369,7 +369,7 @@ ul ol, ul ul, ol ol, ol ul {
 }
 main p {
   text-indent: 1.5rem;
-  text-align: left;
+  text-align: justify;
 }
 main p.m-noindent, li > p, dd > p, table.m-table td > p {
   text-indent: 0;
