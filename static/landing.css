@@ -22,19 +22,14 @@ Normalizing styles have been helped along thanks to the fine work of Nicolas Gal
 */
 
 h1#landing {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: monospace;
+  padding-left: 1rem;
 }
 
 /* Responsive design: decrease title size to stay consistent */
 
-@media (width <= 990px) {
-  h1#landing {
-    font-size: 1.5rem;
-  }
-}
-
-@media (width <= 404px) {
+@media (width <= 1280px) {
   h1#landing {
     font-size: 1rem;
   }

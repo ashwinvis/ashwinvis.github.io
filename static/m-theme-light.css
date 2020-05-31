@@ -31,7 +31,7 @@
   --code-font-size: 0.8em; /* *not* rem, so it follows surrounding font size */
   --line-height: 1.5rem;
   --paragraph-indent: 1.5rem;
-  --paragraph-align: justify;
+  --paragraph-align: left;
   --link-decoration: underline;
   --link-decoration-nav: none;
   --link-decoration-heading: none;
