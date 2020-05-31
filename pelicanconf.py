@@ -136,7 +136,7 @@ M_LINKS_FOOTER1 = [
     ("Mastodon", "https://mastodon.acc.sunet.se/@ashwinvis"),
 ]
 M_LINKS_FOOTER2 = [
-    ("Research", "/"),
+    ("Research", ""),
     ("Zotero", "https://zotero.org/ashwinvis"),
     ("ResearchGate", "https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"),
     ("Google-Scholar", "https://scholar.google.se/citations?user=zv4wwKoAAAAJ"),
@@ -144,7 +144,10 @@ M_LINKS_FOOTER2 = [
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
 ]
 M_LINKS_FOOTER3 = (
-    [("Showcase", "/pages/showcase.html")] +
+    [
+        ("Sitemap", ""),
+        M_LINKS_NAVBAR1[1][:2],
+    ] +
     [(title, url) for title, url, _ in M_LINKS_NAVBAR1[1][3]] +
     [(title, url) for title, url, _, _ in M_LINKS_NAVBAR2]
 )
