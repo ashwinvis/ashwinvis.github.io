@@ -1,6 +1,7 @@
 Quote
 #####
 :date: 2015-03-29 13:15:09
+:archived: True
 :author: Ashwin Vishnu
 :category: Tumblr archive
 :tags: rant, life, tumblr

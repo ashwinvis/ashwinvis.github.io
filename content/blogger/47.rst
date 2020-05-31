@@ -1,6 +1,7 @@
 Double meaning jokes hit a new low
 ##################################
 :date: 2018-02-25 22:00
+:archived: True
 :author: azuwish
 :tags: Uncategorized
 :category: Blogger archive

@@ -1,6 +1,7 @@
 Looking Back
 ############
 :date: 2014-01-01 20:46
+:archived: True
 :author: azuwish
 :tags: life, resolution
 :category: Blogger archive

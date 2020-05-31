@@ -1,6 +1,7 @@
 Lost in Transition
 ##################
 :date: 2011-08-02 10:01
+:archived: True
 :author: azuwish
 :tags: life, travel
 :category: Blogger archive

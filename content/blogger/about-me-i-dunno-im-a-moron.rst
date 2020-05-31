@@ -1,6 +1,7 @@
 "About Me? I dunno, I'm a moron"
 ################################
 :date: 2010-06-02 15:10
+:archived: True
 :author: azuwish
 :tags: Uncategorized
 :category: Blogger archive

@@ -1,6 +1,7 @@
 Learning to Live
 ################
 :date: 2012-02-03 17:23
+:archived: True
 :author: azuwish
 :tags: friends, life, teenage
 :category: Blogger archive

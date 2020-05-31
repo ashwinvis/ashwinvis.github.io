@@ -1,6 +1,7 @@
 Sheer pleasure of Going Places
 ##############################
 :date: 2011-03-02 04:06
+:archived: True
 :author: azuwish
 :tags: Uncategorized
 :category: Blogger archive

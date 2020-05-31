@@ -26,9 +26,7 @@ Welcome
                   <span class="m-thin">
                     <span class="landing-prompt">❯❯❯ </span>
                     <span class="landing-kw">from</span>
-                    <a class="p-name u-url" href="https://ashwin.info.tm">
-                    <span class="landing-mod">ashwin.info.tm</span>
-                    </a>
+                    <a class="p-name u-url" href="https://ashwin.info.tm"><span class="landing-mod">ashwin.info.tm</span></a>
                     <span class="landing-kw">import</span>
                     <span class="landing-mod">say</span>
                     <br/>

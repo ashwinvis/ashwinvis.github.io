@@ -1,6 +1,7 @@
 A World of Zombie Blogs
 #######################
 :date: 2014-11-07 23:23:00
+:archived: True
 :author: Ashwin Vishnu
 :category: Tumblr archive
 :tags: helloworld, introduction, tumblr

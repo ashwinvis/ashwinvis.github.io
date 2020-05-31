@@ -1,6 +1,7 @@
 Being a Malayali
 ################
 :date: 2013-05-08 19:33
+:archived: True
 :author: azuwish
 :tags: life, survival
 :category: Blogger archive
