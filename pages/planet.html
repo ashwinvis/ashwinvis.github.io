@@ -140,9 +140,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jyeno.home.blog/2020/06/01/google-summer-of-code-2020-community-bonding-a-bit-about-text-annotation/" rel="bookmark" class="u-url"
-       title="Google Summer of Code 2020 – Community bonding a bit about text annotation" target="_blank">
-      <time class="m-date" datetime="2020-06-02 00:03:25+00:00">
+    <a href="https://www.kdab.com/kuesa-3d-1-2-release/" rel="bookmark" class="u-url"
+       title="Kuesa 3D 1.2 release!" target="_blank">
+      <time class="m-date" datetime="2020-06-02 11:00:19+00:00">
         Jun
         <span class="m-date-day">
           02
@@ -150,38 +150,80 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Google Summer of Code 2020 – Community bonding a bit about text annotation
+      Kuesa 3D 1.2 release!
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Hello! As I said in the previous post I will be posting in this blog about my experiences in GSoC 2020 (if you do not know about it, see <a href="https://jyeno.home.blog/2020/05/12/gsoc-2020-community-bonding-introduction/">my first post</a>).</p>
-
-
-
-<p>Community bonding period has ended and officially the coding period begins now. This is my second (and late) post and I will talk about one of my main objectives in this project, text annotation, but first a little introduction:</p>
-
-
-
-<p>In a supervised learning stage, data annotation is indispensable to machine learning models, so it can learn to recognize predetermined patterns and the algorithm can treat new, non-annotated data and successfully do its task. marK is a machine learning dataset annotation tool that aims to facilitate the important process of annotating data.</p>
-
-
-
-Text annotation
-
-
-
-<p>Text annotation, one type of data annotation, is the task of labeling text-based data. The …</p>
+  <p>Today, KDAB is releasing version 1.2 of the 3D integration workflow <strong><a href="https://www.kdab.com/kuesa/">Kuesa 3D</a></strong>, built on top of <a href="https://doc.qt.io/qt-5/qt3d-index.html">Qt 3D</a>.</p>
+<p><strong>Kuesa™ 3D is a complete design-to-code workflow solution for 3D in real-time applications, centered around the open glTF™ 2 format, supported by Blender, Maya and 3ds Max.</strong></p>
+<p><a href="https://www.kdab.com/kuesa-3d-studio-1-2-press-release/">Read the Press Release…</a></p>
+<p>In short, Kuesa provides a workflow that simplifies work for both designers and developers. It is centered around the glTF 2 format. The idea behind Kuesa 3D is that changes made on 3D models shouldn’t require much, if any, work on the developer’s side. As a consequence, you can iterate more frequently, get feedback more often and release on time.</p>
+<p>In this blog post, we will highlight some of the new features we have introduced. You can get the full details <a href="https://www.kdab.com/kuesa/">here.</a></p>
+What’s new since 1 …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jean Lima Andrade</b></span>
-  on <time datetime="2020-06-02 00:03:25+00:00" class="dt-published"></time>
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2020-06-02 11:00:19+00:00" class="dt-published"></time>
   Tue 02 Jun 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://hunden.linuxkompis.se/2020/06/02/how-to-check-how-long-it-took-to-install-a-package-in-gentoo.html" rel="bookmark" class="u-url"
+       title="How to check how long it took to install a package in Gentoo" target="_blank">
+      <time class="m-date" datetime="2020-06-02 00:00:00+02:00">
+        Jun
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to check how long it took to install a package in Gentoo
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>With the help of the tool <code>qlop</code> from the collection of utilities called <a href="https://wiki.gentoo.org/wiki/Q_applets">q applets</a> you can check how long it took to install a package in Gentoo.</p>
+
+<div><div><pre><code># qlop -Ht qtwebengine
+
+[...]
+2020-02-19T16:58:02 &gt;&gt;&gt; dev-qt/qtwebengine: 2 hours, 14 minutes, 17 seconds
+2020-03-31T01:27:45 &gt;&gt;&gt; dev-qt/qtwebengine: 2 hours, 12 minutes, 43 seconds
+2020-05-28T10:24:16 &gt;&gt;&gt; dev-qt/qtwebengine: 2 hours, 22 minutes, 6 seconds
+</code></pre></div></div>
+
+<p>The flag <code>-t</code> lists all installations and the flag <code>-H</code> prints the time in a human readable format.
+If you would like to see the average time it has taken to install a certain package you can do so with the flag <code>-a</code>:</p>
+
+<div><div><pre><code># qlop -Ha qtwebengine
+
+dev-qt/qtwebengine: 2 hours, 6 minutes, 24 seconds average for 19 merges
+dev-qt/qtwebengine: 2 seconds average for 1 unmerge
+</code></pre></div></div>
+
+<p>Don’t forget to check out all the available features …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-02 00:00:00+02:00" class="dt-published"></time>
+  Tue 02 Jun 2020
+  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -396,59 +438,6 @@ Specifically, we’ll be focusing on the <a href="/learn">Learn</a> page …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://hunden.linuxkompis.se/2020/06/01/how-to-automatically-run-a-resume-script-with-pm-utils-as-a-regular-user.html" rel="bookmark" class="u-url"
-       title="How to automatically run a resume script with pm-utils as a regular user" target="_blank">
-      <time class="m-date" datetime="2020-06-01 00:00:00+02:00">
-        Jun
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How to automatically run a resume script with pm-utils as a regular user
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I’m using Gentoo with OpenRC and I use the tool <a href="https://pm-utils.freedesktop.org/">pm-utils</a> to suspend my computer. The only issue I have with their way of automatically running a command when you resume your computer is the fact that it’s executed as root.</p>
-
-The command
-
-<p>If you want to run a command as any user you easily do that by using <code>sudo</code>:</p>
-
-<div><div><pre><code><span>$ </span><span>sudo</span> <span>-H</span> <span>-u</span> &lt;user&gt; sh <span>-c</span> <span>"&lt;command&gt;"</span>
-</code></pre></div></div>
-
-<p>Here’s an explanation of the flags I’m using:</p>
-
-
-
-
-      <code>-H, --set-home</code>
-      Request that the security policy set the HOME environment variable to the home directory specified by the target user’s password database entry.  Depending on the policy, this may be the default behavior.
-
-
-      <code>-U user, --other-user=user</code>
-      Used in conjunction with the -l option to list the privileges for user instead of for the invoking user.  The security policy …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-01 00:00:00+02:00" class="dt-published"></time>
-  Mon 01 Jun 2020
-  in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="http://www.scicombinator.com/articles/5676529" rel="bookmark" class="u-url"
        title="Targets of T Cell Responses to SARS-CoV-2 Coronavirus in Humans with COVID-19 Disease and Unexposed Individuals" target="_blank">
       <time class="m-date" datetime="2020-05-31 00:00:00+00:00">
@@ -475,6 +464,40 @@ The command
   on <time datetime="2020-05-31 00:00:00+00:00" class="dt-published"></time>
   Sun 31 May 2020
   in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-05-30_This_site_via_Gemini" rel="bookmark" class="u-url"
+       title="This site via Gemini" target="_blank">
+      <time class="m-date" datetime="2020-05-30 22:11:04+00:00">
+        May
+        <span class="m-date-day">
+          30
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      This site via Gemini
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>You know I like the small web, the self-hosted sites, feeds, the text life, and sometimes I like older technology, like Gopher. But sometimes these old things have issues. I mean, I like Gopher, but <a href="https://alexschroeder.ch/wiki/2019-06-12_What_I_want_from_Gopher">what I want from Gopher</a> is this:</p><ul><li>UTF-8</li><li>TLS</li><li>No dot at the end of the transmission, just hang up</li><li>and a new item type „w“ where you can post text („write“ or „wiki“)</li></ul><p>I wrote <a href="https://alexschroeder.ch/wiki/2019-06-18_A_Simple_Text_Server">a simple text server</a> that does that. Sadly, it didn’t take off. What did take off, however, was <a href="https://tilde.zone/users/solderpunk">@solderpunk</a>’s <a href="https://gemini.circumlunar.space/">Project Gemini</a>. Well, “take off” as in “more than three people seem to be using it.” But still, that’s cool. I had lots of things <a href="https://alexschroeder.ch/wiki/2019-06-21_Solderpunk's_Gemini_Protocol">I disagreed with</a>, but I’m not going to argue with success.</p><p>I feel like we all need to keep that 🔥 <em>fire …</em></p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-05-30 22:11:04+00:00" class="dt-published"></time>
+  Sat 30 May 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -693,6 +716,41 @@ $$ S = 0.5 \times a \times t^{2} $$
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://blog.kitware.com/paraview-hackathon-still-happening-last-one-was-on-may-6/" rel="bookmark" class="u-url"
+       title="ParaView Hackathon still happening ! Last one was on may 6." target="_blank">
+      <time class="m-date" datetime="2020-05-26 05:25:54+00:00">
+        May
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      ParaView Hackathon still happening ! Last one was on may 6.
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>On Wednesday, May 6, 2020, Kitware organized an online ParaView Hackathon. It was open to anyone, Kitwarean or not, programmer or not. The objectives of ... <a href="https://blog.kitware.com/paraview-hackathon-still-happening-last-one-was-on-may-6/">Read More</a></p>
+<p>The post <a href="https://blog.kitware.com/paraview-hackathon-still-happening-last-one-was-on-may-6/">ParaView Hackathon still happening ! Last one was on may 6.</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Mathieu Westphal</b></span>
+  on <time datetime="2020-05-26 05:25:54+00:00" class="dt-published"></time>
+  Tue 26 May 2020
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://researchsoftwarehour.github.io/2020/05/26/rsh-005.html" rel="bookmark" class="u-url"
        title="???, RSH 005" target="_blank">
       <time class="m-date" datetime="2020-05-26 00:00:00+00:00">
@@ -770,41 +828,6 @@ playlist</a>.</p>
   on <time datetime="2020-05-25 19:27:45+00:00" class="dt-published"></time>
   Mon 25 May 2020
   in Doctor Fortran.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/analyzing-ensembles-of-curves/" rel="bookmark" class="u-url"
-       title="Analyzing Ensembles of Curves with ParaView using the Functional Box Plots and Bag Plots" target="_blank">
-      <time class="m-date" datetime="2020-05-25 16:45:57+00:00">
-        May
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Analyzing Ensembles of Curves with ParaView using the Functional Box Plots and Bag Plots
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In recent years ParaView has been enriched with several views for the analysis of ensembles of curves. In this post we overview the use of ... <a href="https://blog.kitware.com/analyzing-ensembles-of-curves/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/analyzing-ensembles-of-curves/">Analyzing Ensembles of Curves with ParaView using the Functional Box Plots and Bag Plots</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Alejandro Ribes</b></span>
-  on <time datetime="2020-05-25 16:45:57+00:00" class="dt-published"></time>
-  Mon 25 May 2020
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
