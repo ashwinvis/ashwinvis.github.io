@@ -140,6 +140,157 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="http://wingolog.org/archives/2020/06/03/a-baseline-compiler-for-guile" rel="bookmark" class="u-url"
+       title="a baseline compiler for guile" target="_blank">
+      <time class="m-date" datetime="2020-06-03 20:39:36+00:00">
+        Jun
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      a baseline compiler for guile
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Greets, my peeps!  Today's article is on a new compiler for Guile.  I made things better by making things worse!</p><p>The new compiler is a <a href="https://wingolog.org/archives/2020/03/25/firefoxs-low-latency-webassembly-compiler">"baseline compiler"</a>, in the spirit of what modern web browsers use to get things running quickly.  It is a very simple compiler whose goal is speed of compilation, not speed of generated code.</p><p>Honestly I didn't think Guile needed such a thing.  Guile's distribution model isn't like the web, where every page you visit requires the browser to compile fresh hot mess; in Guile I thought it would be reasonable for someone to compile once and run many times.  I was never happy with compile latency but I thought it was inevitable and anyway amortized over time.  Turns out I was wrong on both points!</p><p>The straw that broke the camel's back was <a href="https://guix.gnu.org/">Guix</a>, which …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2020-06-03 20:39:36+00:00" class="dt-published"></time>
+  Wed 03 Jun 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/dev/drone-hugo-cache/" rel="bookmark" class="u-url"
+       title="Cache Hugo modules in Drone CI" target="_blank">
+      <time class="m-date" datetime="2020-06-03 21:47:00+02:00">
+        Jun
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Cache Hugo modules in Drone CI
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Today I modified my theme <a href="https://jlelse.blog/micro/2020/06/twemoji/">to use Twemoji for emojis</a>. To add the SVG files to the theme, I used a Hugo module mount in the config of my theme:</p>
+<pre><code>module:
+imports:
+- path: github.com/twitter/twemoji
+mounts:
+- source: assets/svg
+target: static/twemoji/svg
+</code></pre>
+<p>The problem now is that Hugo needs to download more then 3000 SVG files from GitHub when there is no cache. And because my blog builds on Drone CI, each time in a new container, there’s no cache and the build time increased by about 10 seconds.</p>
+<p>To reduce this time and cache downloaded Hugo modules, it’s first necessary to make your user on your self-hosted Drone installation an admin. When using Docker-Compose it’s as easy as adding an environment variable:</p>
+<pre><code>DRONE_USER_CREATE=username:jlelse,admin:true
+</code></pre>
+<p>Then restart Drone, go to the …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-03 21:47:00+02:00" class="dt-published"></time>
+  Wed 03 Jun 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/619914446643625985/periodic-high-flow-releases-from-dams-help-refresh" rel="bookmark" class="u-url"
+       title="Periodic high flow releases from dams help refresh and renew..." target="_blank">
+      <time class="m-date" datetime="2020-06-03 10:01:26-05:00">
+        Jun
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Periodic high flow releases from dams help refresh and renew...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/0f2ade282e543c4ef8f7544543f16da8/9c48d69b71c4c738-b1/s500x750/21df09bbe32ae96e541b9a744441995ddc3bfea2.gifv"> <img src="https://66.media.tumblr.com/81d9a16ca9b10d0a4bc8cee5943a5cf4/9c48d69b71c4c738-3e/s500x750/0e318bfba00d9ae9c5b6097d3030b7cb2f659633.gifv"> <img src="https://66.media.tumblr.com/fb623b9461cce752bc3547abfd4bfe33/9c48d69b71c4c738-93/s500x750/ec3ba93b7805e27a1a3931968e0f4cb22344e8a2.gifv"> <p><a href="https://fyfluiddynamics.com/2020/06/renewing-the-colorado-river/">Periodic high flow releases from dams help refresh and renew sand bars downstream. </a>
+(Video and image credits: Bureau of Reclamation, <a href="https://www.youtube.com/watch?v=OaZjO6zF28E">1</a>, <a href="https://www.youtube.com/watch?v=H3UIW_KZddg">2</a>)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-03 10:01:26-05:00" class="dt-published"></time>
+  Wed 03 Jun 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/06/renewing-the-colorado-river/" rel="bookmark" class="u-url"
+       title="Renewing the Colorado River" target="_blank">
+      <time class="m-date" datetime="2020-06-03 15:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Renewing the Colorado River
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The Glen Canyon Dam lies on the Colorado River, upstream of the Grand Canyon. Because the dam blocks sediment from upstream, the region&#8217;s only sediment sources are two tributary rivers <a href="https://fyfluiddynamics.com/2020/06/renewing-the-colorado-river/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-06-03 15:00:00+00:00" class="dt-published"></time>
+  Wed 03 Jun 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://www.qt.io/blog/qt-creator-4.12.2-released" rel="bookmark" class="u-url"
        title="Qt Creator 4.12.2 released" target="_blank">
       <time class="m-date" datetime="2020-06-03 10:28:24+00:00">
@@ -175,9 +326,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://sigquit.wordpress.com/2020/06/03/qmi-and-mbim-in-python-javascript/" rel="bookmark" class="u-url"
-       title="QMI and MBIM in Python, Javascript…" target="_blank">
-      <time class="m-date" datetime="2020-06-03 09:56:43+00:00">
+    <a href="https://xkcd.com/2315/" rel="bookmark" class="u-url"
+       title="Eventual Consistency" target="_blank">
+      <time class="m-date" datetime="2020-06-03 00:00:00+00:00">
         Jun
         <span class="m-date-day">
           03
@@ -185,219 +336,84 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      QMI and MBIM in Python, Javascript…
+      Eventual Consistency
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  The libqmi and libmbim libraries are every day getting more popular to control your QMI or MBIM based devices. One of the things I’ve noticed, though, is that lots of users are writing applications in e.g. Python but then running qmicli or mbimcli commands, and parsing the outputs. This approach may work, but there is […]
+  <img alt="Later I'm going to get a head start on the heat bath." src="https://imgs.xkcd.com/comics/eventual_consistency.png" title="Later I'm going to get a head start on the heat bath.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>aleksander</b></span>
-  on <time datetime="2020-06-03 09:56:43+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-03 00:00:00+00:00" class="dt-published"></time>
   Wed 03 Jun 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/06/twemoji/" rel="bookmark" class="u-url"
-       title="🤩 Emojis 🤩" target="_blank">
-      <time class="m-date" datetime="2020-06-03 10:09:53+02:00">
-        Jun
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      🤩 Emojis 🤩
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I stumbled over <a href="https://github.com/twitter/twemoji">Twemoji by Twitter 🐦</a> and a <a href="https://github.com/jakejarvis/hugo-mod-twemoji">Hugo module for Twemoji</a> and thought it might be a good idea to use Twemoji on my blog (I didn’t use the Hugo module, but integrated it directly into my theme - with a few optimizations). In my Flatpak Firefox on Ubuntu most emojis don’t have a color and it isn’t really fun to use emojis in my blog posts when they don’t look great everywhere. Twemoji replaces the Unicode emojis in the browser with SVG images. So if you have JavaScript enabled in your browser, you’ll see emojis that look like on Twitter, otherwise you’ll see the default Unicode emojis from your operating system. So expect an increased use of emojis here. 🤓😂</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-03 10:09:53+02:00" class="dt-published"></time>
-  Wed 03 Jun 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/619823867100266496/when-looking-at-mars-and-other-parts-of-our-solar" rel="bookmark" class="u-url"
-       title="When looking at Mars
- and other parts of our solar system,..." target="_blank">
-      <time class="m-date" datetime="2020-06-02 10:01:42-05:00">
-        Jun
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      When looking at Mars
- and other parts of our solar system,...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/3ccd183757a4101ddba1385a0a9bea6d/622459f15b2b1747-19/s500x750/97a1d6a751a46892b3c8a8cd1ca17ece4db1fbba.gifv"><p>
-<a href="http://fyfluiddynamics.com/2020/06/exploring-martian-mud-flows/">When looking at Mars
- and other parts of our solar system, planetary scientists are faced 
-with a critical question: if what I’m looking at is similar to something
- on Earth, did it form the same way it does here?</a>
-
-
-(Image and research credit: <a href="https://doi.org/10.1038/s41561-020-0577-2">P. Brož et al.</a>; see also <a href="https://astronomycommunity.nature.com/users/389738-petr-broz/posts/when-a-dream-from-childhood-came-true-playing-with-mud-on-mars">P. Brož</a>; submitted by <a href="https://twitter.com/sohkamyung/status/1262538162791870467">Kam-Yung Soh</a>)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-02 10:01:42-05:00" class="dt-published"></time>
-  Tue 02 Jun 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/exploring-martian-mud-flows/" rel="bookmark" class="u-url"
-       title="Exploring Martian Mud Flows" target="_blank">
-      <time class="m-date" datetime="2020-06-02 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Exploring Martian Mud Flows
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  When looking at Mars and other parts of our solar system, planetary scientists are faced with a critical question: if what I&#8217;m looking at is similar to something on Earth, <a href="https://fyfluiddynamics.com/2020/06/exploring-martian-mud-flows/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-02 15:00:00+00:00" class="dt-published"></time>
-  Tue 02 Jun 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/06/02/how-to-check-how-long-it-took-to-install-a-package-in-gentoo.html" rel="bookmark" class="u-url"
-       title="How to check how long it took to install a package in Gentoo" target="_blank">
-      <time class="m-date" datetime="2020-06-02 00:00:00+02:00">
-        Jun
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How to check how long it took to install a package in Gentoo
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>With the help of the tool <code>qlop</code> from the collection of utilities called <a href="https://wiki.gentoo.org/wiki/Q_applets">q applets</a> you can check how long it took to install a package in Gentoo. qlop reads from your log <code>$EMERGE_LOG_DIR/emerge.log</code> and extracts relevant information.</p>
-
-<div><div><pre><code># qlop -Ht qtwebengine
-
-[...]
-2020-02-19T16:58:02 &gt;&gt;&gt; dev-qt/qtwebengine: 2 hours, 14 minutes, 17 seconds
-2020-03-31T01:27:45 &gt;&gt;&gt; dev-qt/qtwebengine: 2 hours, 12 minutes, 43 seconds
-2020-05-28T10:24:16 &gt;&gt;&gt; dev-qt/qtwebengine: 2 hours, 22 minutes, 6 seconds
-</code></pre></div></div>
-
-<p>The flag <code>-t</code> lists all installations and the flag <code>-H</code> prints the time in a human readable format.
-If you would like to see the average time it has taken to install a certain package you can do so with the flag <code>-a</code>:</p>
-
-<div><div><pre><code># qlop -Ha qtwebengine
-
-dev-qt/qtwebengine: 2 hours, 6 minutes, 24 seconds average for 19 merges
-dev-qt/qtwebengine: 2 seconds average for …</code></pre></div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-02 00:00:00+02:00" class="dt-published"></time>
-  Tue 02 Jun 2020
-  in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2314/" rel="bookmark" class="u-url"
-       title="Carcinization" target="_blank">
-      <time class="m-date" datetime="2020-06-01 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Carcinization
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Nature abhors a vacuum and also anything that's not a crab." src="https://imgs.xkcd.com/comics/carcinization.png" title="Nature abhors a vacuum and also anything that's not a crab.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-01 00:00:00+00:00" class="dt-published"></time>
-  Mon 01 Jun 2020
   in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://hunden.linuxkompis.se/2020/06/03/how-to-view-posts-in-alphabetical-order-by-tags-and-title-in-jekyll.html" rel="bookmark" class="u-url"
+       title="How to view posts in alphabetical order by tags and title in Jekyll" target="_blank">
+      <time class="m-date" datetime="2020-06-03 00:00:00+02:00">
+        Jun
+        <span class="m-date-day">
+          03
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to view posts in alphabetical order by tags and title in Jekyll
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This issue was driving me nuts the other day, I could not find a solution to it and I’m not knowledeable enough to have figured it out myself. All credits goes to a user called Sheogorath on the IRC-channel #Jekyll at freenode.net for helping me with this.</p>
+
+<p>So. I wanted to be able to list all my posts in an alphabetical order by tags and then sort each of these posts by title, not by date like it would by default.</p>
+
+Example
+
+<blockquote>
+  My desktop
+
+  <ul>
+    <li>I went from a multi monitor setup to just a single monitor setup</li>
+    <li>My Desktop - Mars 2019</li>
+  </ul>
+
+  My keyboards
+
+  <ul>
+    <li>My keyboard - KBParadise V60</li>
+    <li>My keyboard - Let’s Split</li>
+    <li>My keyboard - The Black Diamond</li>
+  </ul>
+</blockquote>
+
+The code
+
+<p>And this is how it can be done:</p>
+
+<div><div><pre><code>{% assign tags_sorted = site.tags | sort %}
+{% assign posts_sorted = site.posts | sort: 'title' …</code></pre></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-03 00:00:00+02:00" class="dt-published"></time>
+  Wed 03 Jun 2020
+  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
