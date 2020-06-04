@@ -140,6 +140,58 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://hunden.linuxkompis.se/2020/06/04/how-to-install-rtorrent-with-the-colour-patch-in-debian.html" rel="bookmark" class="u-url"
+       title="How to install rTorrent with the colour-patch in Debian" target="_blank">
+      <time class="m-date" datetime="2020-06-04 00:00:00+02:00">
+        Jun
+        <span class="m-date-day">
+          04
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to install rTorrent with the colour-patch in Debian
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I installed <a href="https://rakshasa.github.io/rtorrent/">rTorrent</a> from source code so I could patch it with the colour-patch on my Raspberry Pi the other day and I thought I would document it here as well.</p>
+
+<p>As of writing this post the latest version of rTorrent is <a href="http://rtorrent.net/downloads/rtorrent-0.9.8.tar.gz">0.9.8</a> and the latest version of libtorrent is <a href="http://rtorrent.net/downloads/libtorrent-0.13.8.tar.gz">0.13.8</a>.</p>
+
+Downloading the required files
+
+<p>Start by downloading the source code for rTorrent and libtorrent from <a href="https://rakshasa.github.io/rtorrent/">their website</a>:</p>
+
+<div><div><pre><code>$ wget http://rtorrent.net/downloads/rtorrent-0.9.8.tar.gz http://rtorrent.net/downloads/libtorrent-0.13.8.tar.gz
+</code></pre></div></div>
+
+<p>We then need to download the patch that adds some lovely colours to rTorrent. I used the patch from the package <a href="https://aur.archlinux.org/packages/rtorrent-color/">rtorrent-color</a> from the Arch User Repository:</p>
+
+<div><div><pre><code>$ wget https://aur.archlinux.org/cgit/aur.git/snapshot/rtorrent-color.tar.gz
+</code></pre></div></div>
+
+<p>Continue to unpack the archives:</p>
+
+<div><div><pre><code>$ tar -xvzf rtorrent-0.9.8 …</code></pre></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-04 00:00:00+02:00" class="dt-published"></time>
+  Thu 04 Jun 2020
+  in Hund[en].
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="http://wingolog.org/archives/2020/06/03/a-baseline-compiler-for-guile" rel="bookmark" class="u-url"
        title="a baseline compiler for guile" target="_blank">
       <time class="m-date" datetime="2020-06-03 20:39:36+00:00">
@@ -360,9 +412,9 @@ target: static/twemoji/svg
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://hunden.linuxkompis.se/2020/06/03/how-to-view-posts-in-alphabetical-order-by-tags-and-title-in-jekyll.html" rel="bookmark" class="u-url"
-       title="How to view posts in alphabetical order by tags and title in Jekyll" target="_blank">
-      <time class="m-date" datetime="2020-06-03 00:00:00+02:00">
+    <a href="http://www.scicombinator.com/articles/5688177" rel="bookmark" class="u-url"
+       title="Vertebrates on the brink as indicators of biological annihilation and the sixth mass extinction" target="_blank">
+      <time class="m-date" datetime="2020-06-03 00:00:00+00:00">
         Jun
         <span class="m-date-day">
           03
@@ -370,50 +422,22 @@ target: static/twemoji/svg
         2020
       </time>
       <div class="p-name">
-      How to view posts in alphabetical order by tags and title in Jekyll
+      Vertebrates on the brink as indicators of biological annihilation and the sixth mass extinction
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This issue was driving me nuts the other day, I could not find a solution to it and I’m not knowledeable enough to have figured it out myself. All credits goes to a user called Sheogorath on the IRC-channel #Jekyll at freenode.net for helping me with this.</p>
-
-<p>So. I wanted to be able to list all my posts in an alphabetical order by tags and then sort each of these posts by title, not by date like it would by default.</p>
-
-Example
-
-<blockquote>
-  My desktop
-
-  <ul>
-    <li>I went from a multi monitor setup to just a single monitor setup</li>
-    <li>My Desktop - Mars 2019</li>
-  </ul>
-
-  My keyboards
-
-  <ul>
-    <li>My keyboard - KBParadise V60</li>
-    <li>My keyboard - Let’s Split</li>
-    <li>My keyboard - The Black Diamond</li>
-  </ul>
-</blockquote>
-
-The code
-
-<p>And this is how it can be done:</p>
-
-<div><div><pre><code>{% assign tags_sorted = site.tags | sort %}
-{% assign posts_sorted = site.posts | sort: 'title' …</code></pre></div></div>
+  The ongoing sixth mass species extinction is the result of the destruction of component populations leading to eventual extirpation of entire species. Populations and species extinctions have severe implications for society through the degradation of ecosystem services. Here we assess the extinction crisis from a different perspective. We examine 29,400 species of terrestrial vertebrates, and determine which are on the brink of extinction because they have fewer than 1,000 individuals. There are 515 species on the brink (1.7% of the evaluated vertebrates). Around 94% of the populations of 77 mammal and bird species on the brink have been lost in the last century. Assuming all species on the brink have similar trends, more than 237,000 populations of those species have vanished since 1900. We conclude the human-caused sixth mass extinction is likely accelerating for several reasons …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-03 00:00:00+02:00" class="dt-published"></time>
+  <span class="p-author"><b>PH Raven</b></span>
+  on <time datetime="2020-06-03 00:00:00+00:00" class="dt-published"></time>
   Wed 03 Jun 2020
-  in Hund[en].
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -473,40 +497,6 @@ Specifically, we’ll be focusing on the <a href="/learn">Learn</a> page …</p>
   on <time datetime="2020-06-01 00:00:00+00:00" class="dt-published"></time>
   Mon 01 Jun 2020
   in Fortran Newsletter.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5676529" rel="bookmark" class="u-url"
-       title="Targets of T Cell Responses to SARS-CoV-2 Coronavirus in Humans with COVID-19 Disease and Unexposed Individuals" target="_blank">
-      <time class="m-date" datetime="2020-05-31 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          31
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Targets of T Cell Responses to SARS-CoV-2 Coronavirus in Humans with COVID-19 Disease and Unexposed Individuals
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Understanding adaptive immunity to SARS-CoV-2 is important for vaccine development, interpreting coronavirus disease 2019 (COVID-19) pathogenesis, and calibration of pandemic control measures. Using HLA class I and II predicted peptide "megapools," circulating SARS-CoV-2-specific CD8+ and CD4+ T cells were identified in ∼70% and 100% of COVID-19 convalescent patients, respectively. CD4+ T cell responses to spike, the main target of most vaccine efforts, were robust and correlated with the magnitude of the anti-SARS-CoV-2 IgG and IgA titers. The M, spike, and N proteins each accounted for 11%-27% of the total CD4+ response, with additional responses commonly targeting nsp3, nsp4, ORF3a, and ORF8, among others. For CD8+ T cells, spike and M were recognized, with at least eight SARS-CoV-2 ORFs targeted. Importantly, we detected SARS-CoV-2-reactive CD4+ T cells in ∼40%-60% of unexposed individuals, suggesting cross-reactive T cell recognition between circulating …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>A Sette</b></span>
-  on <time datetime="2020-05-31 00:00:00+00:00" class="dt-published"></time>
-  Sun 31 May 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
