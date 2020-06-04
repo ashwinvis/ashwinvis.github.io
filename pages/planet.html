@@ -140,6 +140,44 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-04_Gemini_Upload" rel="bookmark" class="u-url"
+       title="Gemini Upload" target="_blank">
+      <time class="m-date" datetime="2020-06-04 12:19:56+00:00">
+        Jun
+        <span class="m-date-day">
+          04
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Gemini Upload
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I’m talking with <a href="https://fedi.absturztau.be/users/baschdel">@baschdel</a> on Mastodon about a possible extension to Gemini that would allow us to return to the read-write web. So how about a protocol variant via the scheme?</p><p><code>gemini+write://alexschroeder.ch/Test</code> → an attempt to write the resource that would be served by requesting <code>gemini://alexschroeder.ch/Test</code> – and we’d like to indicate a MIME type of the data and length (important because the server can’t tell when an upload is finished unless we mandate a timeout). How about simply sending that along on separate lines?</p><p>My goal, as always, is to make this work from the command line first. Here’s how it might work:</p><pre>(echo "gemini+upload://alexschroeder.ch/Test" \
+ &amp;&amp; file --brief --mime-type test.txt \
+ &amp;&amp; wc -c test.txt \
+ &amp;&amp; cat test.txt) \
+ | nc alexschroeder.ch 1965</pre><p>If the server doesn’t …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-04 12:19:56+00:00" class="dt-published"></time>
+  Thu 04 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://hunden.linuxkompis.se/2020/06/04/how-to-install-rtorrent-with-the-colour-patch-in-debian.html" rel="bookmark" class="u-url"
        title="How to install rTorrent with the colour-patch in Debian" target="_blank">
       <time class="m-date" datetime="2020-06-04 00:00:00+02:00">
@@ -1263,6 +1301,41 @@ Python packaging ideas for the future include:
   on <time datetime="2020-05-10 11:15:38.583000+05:30" class="dt-published"></time>
   Sun 10 May 2020
   in Excuse me please.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.unsungfilms.com/26522/the-painted-warrior/" rel="bookmark" class="u-url"
+       title="The Painted Warrior" target="_blank">
+      <time class="m-date" datetime="2020-04-20 17:00:40+00:00">
+        Apr
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The Painted Warrior
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In Mark Wilson’s 2019 documentary The Painted Warrior, Stephen offers himself up as his artist wife’s canvas, carrying her designs on his upper body whilst putting himself through gruelling physical ordeals. Both Stephen and Aeni are artists. The film documents an unusual collaboration through which Stephen embodies Aeni’s art and takes them across trails, running [&#8230;]</p>
+<p>The article <a href="https://www.unsungfilms.com/26522/the-painted-warrior/">The Painted Warrior</a> by <a href="https://www.unsungfilms.com/author/theo/">Theo Alexander</a> appeared first on <a href="https://www.unsungfilms.com">Unsung Films</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Theo Alexander</b></span>
+  on <time datetime="2020-04-20 17:00:40+00:00" class="dt-published"></time>
+  Mon 20 Apr 2020
+  in Unsung Films.
 </footer>
 <div class="m-clearfix-l"></div>
 
