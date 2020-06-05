@@ -140,9 +140,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-04_Gemini_Upload" rel="bookmark" class="u-url"
-       title="Gemini Upload" target="_blank">
-      <time class="m-date" datetime="2020-06-04 12:19:56+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-06-04_DMARC_an_Mailing_Lists" rel="bookmark" class="u-url"
+       title="DMARC an Mailing Lists" target="_blank">
+      <time class="m-date" datetime="2020-06-04 22:21:56+00:00">
         Jun
         <span class="m-date-day">
           04
@@ -150,26 +150,136 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Gemini Upload
+      DMARC an Mailing Lists
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>I’m talking with <a href="https://fedi.absturztau.be/users/baschdel">@baschdel</a> on Mastodon about a possible extension to Gemini that would allow us to return to the read-write web. So how about a protocol variant via the scheme?</p><p><code>gemini+write://alexschroeder.ch/Test</code> → an attempt to write the resource that would be served by requesting <code>gemini://alexschroeder.ch/Test</code> – and we’d like to indicate a MIME type of the data and length (important because the server can’t tell when an upload is finished unless we mandate a timeout). How about simply sending that along on separate lines?</p><p>My goal, as always, is to make this work from the command line first. Here’s how it might work:</p><pre>(echo "gemini+upload://alexschroeder.ch/Test" \
- &amp;&amp; file --brief --mime-type test.txt \
- &amp;&amp; wc -c test.txt \
- &amp;&amp; cat test.txt) \
- | nc alexschroeder.ch 1965</pre><p>If the server doesn’t …</p></div>
+  <div><p>A while ago I moved my main mail account to my own domain, using migadu.com. They have an excellent setup guide, and a diagnostics page. There’s MX delegation, DKIM public keys, SPF policy, DMARC policy, and so on.</p><p>Recently, I subscribed to a mailing list using Mailman. Today I got a friendly email from a mailing list member telling me about a setup problem: the DMARC policy for my domain was causing them problems, as they were getting messages like the following:</p><blockquote><p>Your membership in the mailing list … has been disabled due to                                                                               excessive bounces</p></blockquote><p> Oops! Apparently my config causes servers to send bounces when my emails get sent via the mailing list, and those bounces are triggering Mailman’s bounce protection for other members. Not good!</p><p>But relaxing those rules is also not good. Some searching on …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-04 12:19:56+00:00" class="dt-published"></time>
+  on <time datetime="2020-06-04 22:21:56+00:00" class="dt-published"></time>
   Thu 04 Jun 2020
   in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/620005057053769728/lens-shaped-lenticular-clouds-are-not-terribly" rel="bookmark" class="u-url"
+       title="Lens-shaped lenticular clouds
+ are not terribly rare in..." target="_blank">
+      <time class="m-date" datetime="2020-06-04 10:01:38-05:00">
+        Jun
+        <span class="m-date-day">
+          04
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Lens-shaped lenticular clouds
+ are not terribly rare in...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/0d30f8e4fad2465ab35673bc6e0ee165/66ee200e781028cb-4a/s500x750/031384503fb629dd5a440425543f3d5fcd7c1d58.png"><p>
+<a href="https://fyfluiddynamics.com/2020/06/a-lenticular-cloud-with-a-curl/">Lens-shaped lenticular clouds
+ are not terribly rare in mountainous areas, but observers at Mount 
+Washington caught a very unusual cloud near sunrise in late February.</a>
+
+
+(Image credit: <a href="https://twitter.com/MWObs/status/1231927616099274752">Mount Washington Observatory</a>; via <a href="https://www.smithsonianmag.com/smart-news/two-rare-cloud-features-appear-over-new-hampshires-mount-washington-180974286/?utm_source=twitter.com&amp;utm_medium=socialmedia">Smithsonian Magazine</a>; submitted by <a href="https://twitter.com/sohkamyung/status/1233225546751856640">Kam-Yung Soh</a>)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-04 10:01:38-05:00" class="dt-published"></time>
+  Thu 04 Jun 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/06/a-lenticular-cloud-with-a-curl/" rel="bookmark" class="u-url"
+       title="A Lenticular Cloud With a Curl" target="_blank">
+      <time class="m-date" datetime="2020-06-04 15:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          04
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      A Lenticular Cloud With a Curl
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Lens-shaped lenticular clouds are not terribly rare in mountainous areas, but observers at Mount Washington caught a very unusual cloud near sunrise in late February. This lenticular cloud had an <a href="https://fyfluiddynamics.com/2020/06/a-lenticular-cloud-with-a-curl/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-06-04 15:00:00+00:00" class="dt-published"></time>
+  Thu 04 Jun 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://timotheegiet.com/blog/floss/lgm-2020-my-experience-running-an-online-international-conference.html" rel="bookmark" class="u-url"
+       title="LGM 2020 : my experience running an online international conference" target="_blank">
+      <time class="m-date" datetime="2020-06-04 14:50:07+00:00">
+        Jun
+        <span class="m-date-day">
+          04
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      LGM 2020 : my experience running an online international conference
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Last week was the <a href="https://libregraphicsmeeting.org/2020/en/index.html">Libre Graphics Meeting</a> (LGM) 2020 online conference. The LGM is normally an occasion for all the contributors of graphics related Free Software to meet physically, and this year we had planned to organize it in our city of Rennes, France. But of course, with the current situation, we were forced to cancel the physical event. We hesitated to make an online event instead, as the biggest interest in this event is to have a physical meeting. We ran a poll to see if there was enough interest for an online event, and the result showed us that there was.</p>
+<p>As several people asked me about the technical setup used for the stream, I’m going to explain it here.</p>
+<p>I was inspired a lot by the solution used for the <a href="https://www.fsf.org/blogs/community/how-to-livestream-a-conference-in-just-under-a-week">Libre Planet conference</a>, which used a …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Timothee Giet (Animtim)</b></span>
+  on <time datetime="2020-06-04 14:50:07+00:00" class="dt-published"></time>
+  Thu 04 Jun 2020
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -302,112 +412,6 @@ target: static/twemoji/svg
   on <time datetime="2020-06-03 21:47:00+02:00" class="dt-published"></time>
   Wed 03 Jun 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/619914446643625985/periodic-high-flow-releases-from-dams-help-refresh" rel="bookmark" class="u-url"
-       title="Periodic high flow releases from dams help refresh and renew..." target="_blank">
-      <time class="m-date" datetime="2020-06-03 10:01:26-05:00">
-        Jun
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Periodic high flow releases from dams help refresh and renew...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/0f2ade282e543c4ef8f7544543f16da8/9c48d69b71c4c738-b1/s500x750/21df09bbe32ae96e541b9a744441995ddc3bfea2.gifv"> <img src="https://66.media.tumblr.com/81d9a16ca9b10d0a4bc8cee5943a5cf4/9c48d69b71c4c738-3e/s500x750/0e318bfba00d9ae9c5b6097d3030b7cb2f659633.gifv"> <img src="https://66.media.tumblr.com/fb623b9461cce752bc3547abfd4bfe33/9c48d69b71c4c738-93/s500x750/ec3ba93b7805e27a1a3931968e0f4cb22344e8a2.gifv"> <p><a href="https://fyfluiddynamics.com/2020/06/renewing-the-colorado-river/">Periodic high flow releases from dams help refresh and renew sand bars downstream. </a>
-(Video and image credits: Bureau of Reclamation, <a href="https://www.youtube.com/watch?v=OaZjO6zF28E">1</a>, <a href="https://www.youtube.com/watch?v=H3UIW_KZddg">2</a>)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-03 10:01:26-05:00" class="dt-published"></time>
-  Wed 03 Jun 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/renewing-the-colorado-river/" rel="bookmark" class="u-url"
-       title="Renewing the Colorado River" target="_blank">
-      <time class="m-date" datetime="2020-06-03 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Renewing the Colorado River
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The Glen Canyon Dam lies on the Colorado River, upstream of the Grand Canyon. Because the dam blocks sediment from upstream, the region&#8217;s only sediment sources are two tributary rivers <a href="https://fyfluiddynamics.com/2020/06/renewing-the-colorado-river/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-03 15:00:00+00:00" class="dt-published"></time>
-  Wed 03 Jun 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.qt.io/blog/qt-creator-4.12.2-released" rel="bookmark" class="u-url"
-       title="Qt Creator 4.12.2 released" target="_blank">
-      <time class="m-date" datetime="2020-06-03 10:28:24+00:00">
-        Jun
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Qt Creator 4.12.2 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We are happy to announce the release of Qt Creator 4.12.2!</p>  
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.12.2-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2020-06-03 10:28:24+00:00" class="dt-published"></time>
-  Wed 03 Jun 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
