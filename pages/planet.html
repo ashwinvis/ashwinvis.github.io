@@ -140,9 +140,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2020/06/05/this-week-in-kde-okular-konsole-plasma-and-wayland/" rel="bookmark" class="u-url"
-       title="This week in KDE: Okular, Konsole, Plasma, and Wayland" target="_blank">
-      <time class="m-date" datetime="2020-06-06 05:01:40+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-06-06_Bundle_for_Racial_Justice_and_Equality" rel="bookmark" class="u-url"
+       title="Bundle for Racial Justice and Equality" target="_blank">
+      <time class="m-date" datetime="2020-06-06 21:52:17+00:00">
         Jun
         <span class="m-date-day">
           06
@@ -150,34 +150,114 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      This week in KDE: Okular, Konsole, Plasma, and Wayland
+      Bundle for Racial Justice and Equality
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>It’s early in the Plasma 5.20 development cycle and some very nice new features landed this week! Various KDE apps–in particular Okular and Konsole–also got new features. It’s a feature-palooza!</p>
-
-
-
-<p>Yes, yes, I know what some of you are thinking: “Why are you writing new features while there’s still so much buggy stuff?” In this case, one of the answers is that new features can often solve bugs. For example the Okular work you’ll read about below resulted in a dozen bug reports getting closed! Sometimes you really can have your cake and eat it, too. <img alt="🙂" src="//s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png"> And of course the Wayland work continues as well…</p>
-
-
-
-New Features
-
-
-
-<p>Okular’s annotations toolbar <a href="https://invent.kde.org/graphics/okular/-/merge_requests/105">has been completely re-done and is now much more discoverable and easier to use</a>! This improvement has been in development for over …</p>
+  <div><p>Today, I bought the <a href="https://itch.io/b/520/bundle-for-racial-justice-and-equality">Bundle
+for Racial Justice and Equality</a> with over 700 games and I have no idea about how to start exploring this. I’m actually expecting that I can’t play most of them as I don’t run Steam on this GNU/Linux box.</p><p>Any recommendations?</p><p>I tried Guppy and DreamingSarah. Guppy had an Ubuntu version, which didn’t run on my system because it couldn’t find libz. I installed wine and tried to run the Windows versions of both but they wouldn’t run and wine told me to install win32 which I can’t find – and I’m on an amd64 architecture. Thus, when I try to install the Debian package (even though I’m not on Debian) it tells me: “package architecture (i386) does not match system (amd64)” – and I cannot fond …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-06-06 05:01:40+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-06 21:52:17+00:00" class="dt-published"></time>
+  Sat 06 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://dilsonguim.github.io/kde/gsoc/2020/06/06/gsoc-week1.html" rel="bookmark" class="u-url"
+       title="Google Summer of Code 2020 - Week 1" target="_blank">
+      <time class="m-date" datetime="2020-06-06 21:35:00+00:00">
+        Jun
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Google Summer of Code 2020 - Week 1
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This week, I started working on the <a href="https://kde.org/applications/education/org.kde.rocs">Rocs</a> graph layout capabilities.
+The Fruchtermani-Reingold [1] algorithm seems to be the most common option for drawing graphs automatically when no extra
+information about the graph is known. In fact, the Boost library implementation of this algorithm is currently being used
+by Rocs. However, the  Fruchtermani-Reingold algorithm has some parameters that can change its results deeply.
+In order to better understand the algorithm and how different parameterizations lead to different results, I wrote my
+own C++ implementation directly in the Rocs’ libgraphtheory. This allowed me to generate debug information during the
+execution of the algorithm.</p>
+
+<p>Unfortunately, tuning the parameters directly into the implementation is time consuming.
+Automatic parameter tuning solutions can not be applied in a trivial way,
+because the quality of the result obtained for a given parameterization is quite subjective.
+Therefore …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Dilson Guimarães (dilsonguim)</b></span>
+  on <time datetime="2020-06-06 21:35:00+00:00" class="dt-published"></time>
   Sat 06 Jun 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2020/06/06/Add-a-contrib-directory.html" rel="bookmark" class="u-url"
+       title="Add a "contrib" directory to your projects" target="_blank">
+      <time class="m-date" datetime="2020-06-06 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Add a "contrib" directory to your projects
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>There’s a common pattern among free- and open-source software projects to
+include a “contrib” directory at the top of their source code tree. I’ve seen
+this in many projects for many years, but I’ve seen it discussed only rarely
+— so here we are!</p>
+
+<p>The contrib directory is used as an unorganized (or, at best, lightly organized)
+bin of various useful things <strong>contrib</strong>uted by the community around the
+software, but which is not necessarily a good candidate for being a proper part
+of the software. Things in contrib should not be wired into your build system,
+shouldn’t be part of your automated testing, shouldn’t be included in your
+documentation, and should not be installed with your packages. contrib entries
+are not supported by the maintainers, and are given only a light code review at
+the …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-06 00:00:00+00:00" class="dt-published"></time>
+  Sat 06 Jun 2020
+  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -287,40 +367,6 @@ New Features
   on <time datetime="2020-06-05 15:00:00+00:00" class="dt-published"></time>
   Fri 05 Jun 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-05_Gemini_Write" rel="bookmark" class="u-url"
-       title="Gemini Write" target="_blank">
-      <time class="m-date" datetime="2020-06-05 12:16:14+00:00">
-        Jun
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Gemini Write
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>OK, I think it works! My new package <a href="https://alexschroeder.ch/cgit/gemini-write/about/">gemini-write</a> can be used to edit this site!</p><p>In order to browse Gemini sites, use <a href="https://thelambdalab.xyz/elpher/">Elpher</a>.</p><p>In order to get Gemini highlighting, use <a href="https://git.carcosa.net/jmcbray/gemini.el">Gemini Mode</a>.</p><p>Once you have all three packages installed, use <code>e</code> to edit a Gemini page on a site that has Gemini+Write enabled. Use <code>C-c C-c</code> to save, use <code>C-c C-k</code> to cancel. Customize <code>elpher-gemini-tokens</code> to set passwords, tokens, or whatever you need in order to edit sites.</p><p>Currently this only works <a href="">on this site</a>, I guess.</p><p>And I currently don’t have a markup rule to render Gemini links, but I’ll add that as soon as somebody posts one. &#x1f600;</p><p>Test it here: <a href="">Gemini Test</a>.</p><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Web" title="Tag">Web</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Gemini" title="Tag">Gemini</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Emacs" title="Tag">Emacs</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Elpher" title="Tag">Elpher</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Wiki" title="Tag">Wiki</a></p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-05 12:16:14+00:00" class="dt-published"></time>
-  Fri 05 Jun 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1082,51 +1128,6 @@ We <b>strongly encourage</b> maintainers of third-party Python projects to <b>te
   on <time datetime="2020-05-19 05:47:16.458000-04:00" class="dt-published"></time>
   Tue 19 May 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2020/05/15/Status-update.html" rel="bookmark" class="u-url"
-       title="Status update, May 2020" target="_blank">
-      <time class="m-date" datetime="2020-05-15 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Status update, May 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello, future readers! I am writing to you from one day in the past. I finished
-my plans for today early and thought I’d get a head start on writing the status
-updates for tomorrow, or rather, for today. From your reference frame, that is.</p>
-
-<p>Let’s start with Wayland. First, as you might have heard, <a href="https://wayland-book.com">The Wayland
-Protocol</a> is now free for anyone to read, and has been
-relicensed as CC-BY-SA. Enjoy! It’s still not quite done, but most of it’s
-there. In development news, wlroots continues to enjoy incremental improvements,
-and is being refined further and further towards a perfect citizen of the
-ecosystem in which it resides. Sway as well has seen many small bugfixes and
-improvements. Both have been been stable for a while now: the only meaningful
-changes will be, for the …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-15 00:00:00+00:00" class="dt-published"></time>
-  Fri 15 May 2020
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
