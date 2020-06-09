@@ -69,6 +69,7 @@ I am currently supporting:
 
 I have donated in the past to:
 
+- `Arch Linux <https://www.archlinux.org/donate/>`__
 - `KDE e.V. <https://kde.org/community/donations/index.php>`__
 - `MSF <https://www.msf.org/>`__
 - `Red Cross <https://www.rodakorset.se/>`__
