@@ -55,6 +55,7 @@
         <outline title="Doctor Fortran" text="Doctor Fortran" type="rss" htmlUrl="https://stevelionel.com/" xmlUrl="https://stevelionel.com/drfortran/feed/"/>
         <outline title="Velibor Zeli" text="Velibor Zeli" type="rss" htmlUrl="https://mylette.rs" xmlUrl="https://mylette.rs/rss.xml"/>
         <outline title="Hund[en]" text="Hund[en]" type="rss" htmlUrl="https://hunden.linuxkompis.se" xmlUrl="https://hunden.linuxkompis.se/feed.xml"/>
+        <outline title="Michael Hirsch, Ph.D." text="Michael Hirsch, Ph.D." type="rss" htmlUrl="https://www.scivision.dev" xmlUrl="https://www.scivision.dev/index.xml"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
