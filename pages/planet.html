@@ -140,6 +140,76 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://valdyas.org/fading/hacking/krita-hacking/nightmares-and-bugs/" rel="bookmark" class="u-url"
+       title="Nightmares and Bugs" target="_blank">
+      <time class="m-date" datetime="2020-06-10 10:54:53+00:00">
+        Jun
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Nightmares and Bugs
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><em>(Recommended music while reading this: Peggy Seeger singing “The Housewive’s Lament)</em></p>
+<p>I’ve been having nightmares, well, really weird dreams for quite some time now. Things like finding myself trying to clear up the floor of a large DIY store just before the first opening day, and not managing it, no matter how many friends were helping. Trying to pack all my luggage when leaving a rented holiday home, and never being able to fit everything in. Trying to pack furniture and stuff into boxes before moving out because someone needs to replace the floor, and having to squash ancient china cups in a carton box, breaking them all in the process. If I manage to wake up, I’m exhausted and tired.</p>
+<p>And I guess I’ve grokked <em>why</em> I keep having these dreams. And it’s not …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Boudewijn Rempt (boud)</b></span>
+  on <time datetime="2020-06-10 10:54:53+00:00" class="dt-published"></time>
+  Wed 10 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-10_Radicale_for_Calendar_and_Contacts" rel="bookmark" class="u-url"
+       title="Radicale for Calendar and Contacts" target="_blank">
+      <time class="m-date" datetime="2020-06-10 09:59:15+00:00">
+        Jun
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Radicale for Calendar and Contacts
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>So, in an attempt to further degoogle my life, I installed <a href="https://radicale.org/">Radicale</a>. It’s a small but powerful CalDAV (calendars, to-do lists) and CardDAV (contacts) server written in Python. It comes with Debian.</p><p>Sadly, things aren’t as smooth as I would want them.</p><p>The first problem was that authentication via Apache didn’t work. It was weird. When I didn’t have the password file, Apache complained. When I had it, with a user and a password, Apache would let me in but I’d get to the Radicale login box, and there no login worked.</p><p>I guess what happened is that somehow Radicale either did not receive the username from Apache, or looked it up and didn’t find it, so I don’t know.</p><p>I decided to use Radicale directly, based on the page <a href="https://wiki.debian.org/Radicale">on the Debian …</a></p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-10 09:59:15+00:00" class="dt-published"></time>
+  Wed 10 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/links/2020/06/best-mf-website/" rel="bookmark" class="u-url"
        title="Best Motherf*cking Website" target="_blank">
       <time class="m-date" datetime="2020-06-09 21:43:03+02:00">
@@ -296,9 +366,9 @@ detective work to break down what we’re hearing.</a> (Video credit: KPIX CBS N
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://confifu.wordpress.com/2020/06/09/week-1-gsoc-project-report-2/" rel="bookmark" class="u-url"
-       title="Week 1 : GSoC Project Report" target="_blank">
-      <time class="m-date" datetime="2020-06-09 11:47:46+00:00">
+    <a href="https://www.scivision.dev/git-pull-linear-history/" rel="bookmark" class="u-url"
+       title="Git pull don't merge or rebase by default" target="_blank">
+      <time class="m-date" datetime="2020-06-09 00:00:00+00:00">
         Jun
         <span class="m-date-day">
           09
@@ -306,34 +376,35 @@ detective work to break down what we’re hearing.</a> (Video credit: KPIX CBS N
         2020
       </time>
       <div class="p-name">
-      Week 1 : GSoC Project Report
+      Git pull don't merge or rebase by default
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This week corresponds to Week 3 in the planned timeline.</p>
-
-
-
-<p>I created the MVC classes, namely, StoryboardModel, StoryboardDelegate and StoryboardView and implemented a bare bone GUI without much interactivity.</p>
-
-
-
-<p>The StoryboardModel provides an interface to the delegate and view classes to handle the underlying data. The model consists of a list of StoryboardItem objects that correspond to individual storyboard items. Each StoryboardItem object consists of multiple StoryboardChild objects, which store data such as frame number, item name, duration and comment fields. This was set up in this way so as to get a tree based model where the index to a storyboard item is different from the individual data index. Now we can have an index for the storyboard item and also have an index for individual field in it, such as duration or comment field.</p>
-
-
-
-<p>The StoryboardDelegate class paints …</p>
+  <p>Git 2.27 has default <code>git pull</code> behavior that we feel is beneficial.
+The Git 2.27 default is to not merge or rebase by default, unless the user specifies a default behavior.
+With Git ≥ 2.0, explicitly specify &ldquo;safe&rdquo; default behavior for <code>git pull</code> as follows.
+This setting that linear Git history is maintained unless manually specifying <code>git pull</code> options.
+Git services such as
+<a href="https://help.github.com/en/github/administering-a-repository/requiring-a-linear-commit-history">GitHub</a>
+allow enforcing linear history.</p>
+<div><pre><code>git config --global pull.ff only
+</code></pre></div><p>That adds to &ldquo;~/.gitconfig&rdquo;</p>
+<div><pre><code><span>[pull]</span>
+<span>ff</span> <span>=</span> <span>only</span>
+</code></pre></div><p>If encountering a Git remote that cannot be fast-forwarded, the user can then either <code>git rebase</code> or <code>git merge</code>.</p>
+Notes
+<p><a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Git: rebase vs. merge</a></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Saurabh Kumar</b></span>
-  on <time datetime="2020-06-09 11:47:46+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-09 00:00:00+00:00" class="dt-published"></time>
   Tue 09 Jun 2020
-  in Planet KDE.
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -376,40 +447,6 @@ including <code>len(planets)</code>. The index variable is …</p>
   on <time datetime="2020-06-08 22:00:00+00:00" class="dt-published"></time>
   Mon 08 Jun 2020
   in Velibor Zeli.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-08_aerc_config" rel="bookmark" class="u-url"
-       title="aerc config" target="_blank">
-      <time class="m-date" datetime="2020-06-08 19:28:43+00:00">
-        Jun
-        <span class="m-date-day">
-          08
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      aerc config
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>I’m <a href="https://alexschroeder.ch/wiki/2020-05-26_Email_client">using aerc</a> as my email client, for the moment. And I’m an Emacs user, of course. so, how is that going to work?</p><p>First, I need completion of some email addresses. I’ve decided to use a text file called <code>~/.addresses</code> – the format is simple: each line consists of an email address, a tab character, and a name. The reason for the format is that <code>aerc</code> allows me to specificy a program that provides possible expansions for a something I’ve typed in just that format. Thus, I can use <code>grep</code>!</p><p>In <code>~/.config/aerc/aerc.conf</code> I have this:</p><pre>address-book-cmd=grep "%s" /home/alex/.addresses</pre><p>When composing an email, I want to use Emacs. But there’s a problem: it’s easy to edit the header fields before you’re done editing. Once you’re done editing …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-08 19:28:43+00:00" class="dt-published"></time>
-  Mon 08 Jun 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -581,31 +618,31 @@ the …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/5694244" rel="bookmark" class="u-url"
-       title="Evidence for Limited Early Spread of COVID-19 Within the United States, January-February 2020" target="_blank">
-      <time class="m-date" datetime="2020-06-05 00:00:00+00:00">
+    <a href="http://www.scicombinator.com/articles/5698113" rel="bookmark" class="u-url"
+       title="Interleukin-1 blockade with high-dose anakinra in patients with COVID-19, acute respiratory distress syndrome, and hyperinflammation: a retrospective cohort study" target="_blank">
+      <time class="m-date" datetime="2020-06-06 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          05
+          06
         </span>
         2020
       </time>
       <div class="p-name">
-      Evidence for Limited Early Spread of COVID-19 Within the United States, January-February 2020
+      Interleukin-1 blockade with high-dose anakinra in patients with COVID-19, acute respiratory distress syndrome, and hyperinflammation: a retrospective cohort study
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  From January 21 through February 23, 2020, public health agencies detected 14 U.S. cases of coronavirus disease 2019 (COVID-19), all related to travel from China (1,2). The first nontravel-related U.S. case was confirmed on February 26 in a California resident who had become ill on February 13 (3). Two days later, on February 28, a second nontravel-related case was confirmed in the state of Washington (4,5). Examination of four lines of evidence provides insight into the timing of introduction and early transmission of SARS-CoV-2, the virus that causes COVID-19, into the United States before the detection of these two cases. First, syndromic surveillance based on emergency department records from counties affected early by the pandemic did not show an increase in visits for COVID-19-like illness before February 28. Second, retrospective SARS-CoV-2 testing of approximately 11,000 …
+  Mortality of patients with coronavirus disease 2019 (COVID-19), acute respiratory distress syndrome (ARDS), and systemic inflammation is high. In areas of pandemic outbreak, the number of patients can exceed maximum capacity of intensive care units (ICUs), and, thus, these individuals often receive non-invasive ventilation outside of the ICU. Effective treatments for this population are needed urgently. Anakinra is a recombinant interleukin-1 receptor antagonist that might be beneficial in this patient population.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>LM Starita</b></span>
-  on <time datetime="2020-06-05 00:00:00+00:00" class="dt-published"></time>
-  Fri 05 Jun 2020
+  <span class="p-author"><b>L Dagna</b></span>
+  on <time datetime="2020-06-06 00:00:00+00:00" class="dt-published"></time>
+  Sat 06 Jun 2020
   in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
