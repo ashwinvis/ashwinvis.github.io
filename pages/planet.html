@@ -140,32 +140,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-11_Demonstrating_Gemini_Wiki" rel="bookmark" class="u-url"
-       title="Demonstrating Gemini Wiki" target="_blank">
-      <time class="m-date" datetime="2020-06-11 18:11:33+00:00">
+    <a href="https://aledomu.github.io/gnome/refactoring-fractal-remove-backend-i/" rel="bookmark" class="u-url"
+       title="Refactoring Fractal: Remove Backend (I)" target="_blank">
+      <time class="m-date" datetime="2020-06-12 07:00:00+00:00">
         Jun
         <span class="m-date-day">
-          11
+          12
         </span>
         2020
       </time>
       <div class="p-name">
-      Demonstrating Gemini Wiki
+      Refactoring Fractal: Remove Backend (I)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>This wiki is also served via the <a href="https://alexschroeder.ch/wiki/Gemini">Gemini</a> protocol (something between Gopher and the Web as we know it). I’ve <a href="https://alexschroeder.ch/wiki/2020-06-05_Gemini_Write">proposed an extension</a> that allows me to write back to the wiki (and not just leave a single line of comments). In case you’re curious, today I made a short 50s video!</p><video src="https://alexschroeder.ch/videos/gemini_write_demo.mp4"></video><p>Made using <a href="https://alexschroeder.ch/wiki/Emacs">Emacs</a>, <a href="https://alexschroeder.ch/wiki?action=edit;id=Elpher" title="Click to edit this page">Elpher</a>, <a href="https://alexschroeder.ch/wiki/Gemini">Gemini</a>, <a href="https://alexschroeder.ch/wiki/Oddmuse">Oddmuse</a>, <a href="https://github.com/phw/peek">Peek</a>, and <em>Garage Band</em>. &#x1f600;</p><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Gemini" title="Tag">Gemini</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Emacs" title="Tag">Emacs</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Elpher" title="Tag">Elpher</a></p></div>
+  <p>After a week and a half of starting work on Fractal in the GSoC and figuring things out, I could remove all state from one half of the backend, or what is called in Fractal as <code>Backend</code>.</p>
+
+<p>Confusing, right? Let me explain further.</p>
+
+<p>Actually the core of the application is split between two structs: one called <code>AppOp</code>, where most of the data is managed, and another one called <code>Backend</code>, out of the app crate, in <em>fractal-matrix-api</em>, where the calls to the server are done. They communicate between through message passing, but <code>Backend</code> stores some state that isn’t present in <code>AppOp</code>, or it’s even duplicated. So there are two sources of truth for state.</p>
+
+<p>That makes the process of implementing multi-account support harder and more error-prone than it should be.</p>
+
+<p>There are two paths to the solution here: remove …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-11 18:11:33+00:00" class="dt-published"></time>
-  Thu 11 Jun 2020
-  in Alex Schroeder: Diary.
+  <span class="p-author"><b>Alejandro Domínguez</b></span>
+  on <time datetime="2020-06-12 07:00:00+00:00" class="dt-published"></time>
+  Fri 12 Jun 2020
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -174,9 +182,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://tsdgeos.blogspot.com/2020/06/2008-releases-schedule-finalized.html" rel="bookmark" class="u-url"
-       title="20.08 releases schedule finalized" target="_blank">
-      <time class="m-date" datetime="2020-06-11 17:54:00+00:00">
+    <a href="https://euroquis.nl//calamares/2020/06/12/cala-extensions.html" rel="bookmark" class="u-url"
+       title="Calamares extensions and out-of-tree modules" target="_blank">
+      <time class="m-date" datetime="2020-06-11 22:00:00+00:00">
         Jun
         <span class="m-date-day">
           11
@@ -184,20 +192,35 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      20.08 releases schedule finalized
+      Calamares extensions and out-of-tree modules
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  It is available at the usual place <a href="https://community.kde.org/Schedules/release_service/20.08_Release_Schedule">https://community.kde.org/Schedules/release_service/20.08_Release_Schedule</a>Dependency freeze is in four weeks (July 9) and Feature Freeze a week after that, make sure you start finishing your stuff!
+  <p><a href="https://calamares.io/">Calamares</a> is a universal Linux installer framework.
+It provides a distribution- and desktop-agnostic set of tools that
+Linux distributions (and potentially FreeBSD as well) can use to
+build an installer for Live media (that is, ISO images).
+It is broadly themable, brandable, configurable and tweakable – the
+core repository contains 54 modules for various parts of the install process.</p>
+
+<p>Even 54 modules can’t do justice to all the breadth of things-people-might-want
+for Linux, so Calamares encourages people to write their own modules
+to solve specific problems. Calamares is also an <em>eager upstream</em>,
+so if the problem is specific, but affects lots of people, or can be
+made generally useful, then Calamares is eager to incorporate
+those modules into the “core” of the software product.</p>
+
+<p>To help and support people developing modules, Calamares
+<strong>should</strong> provide all the necessary bits for development …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Albert Astals Cid</b></span>
-  on <time datetime="2020-06-11 17:54:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Adriaan de Groot ([ade])</b></span>
+  on <time datetime="2020-06-11 22:00:00+00:00" class="dt-published"></time>
   Thu 11 Jun 2020
   in Planet KDE.
 </footer>
@@ -274,40 +297,6 @@ surface can completely alter their behavior.</a>
   on <time datetime="2020-06-11 15:00:00+00:00" class="dt-published"></time>
   Thu 11 Jun 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/engagement/2020/06/10/a-conversation-with-outreachy-student-sonja-heinze-about-fratcal/" rel="bookmark" class="u-url"
-       title="A conversation with Outreachy student Sonja Heinze about Fractal" target="_blank">
-      <time class="m-date" datetime="2020-06-10 11:32:58+00:00">
-        Jun
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      A conversation with Outreachy student Sonja Heinze about Fractal
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Sonja Heinze was an Outreachy intern for GNOME from December 2019 – March 2020. She worked on Fractal, GNOME’s Matrix client. She was interviewed by Oliver Propst during her internship. Do you want to introduce yourself? I’m a mathematician and have just finished a PhD in algebraic singularity theory. Last year, I went to a … <a href="https://blogs.gnome.org/engagement/2020/06/10/a-conversation-with-outreachy-student-sonja-heinze-about-fratcal/">Continue reading<span> "A conversation with Outreachy student Sonja Heinze about Fractal"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>oliverp</b></span>
-  on <time datetime="2020-06-10 11:32:58+00:00" class="dt-published"></time>
-  Wed 10 Jun 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
