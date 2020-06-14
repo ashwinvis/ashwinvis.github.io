@@ -4,4 +4,5 @@
   tufte-css/et-book.css \
   custom.css \
   landing.css \
+  print.css \
   -o custom.compiled.css

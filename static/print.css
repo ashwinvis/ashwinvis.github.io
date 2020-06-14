@@ -1,0 +1,19 @@
+/* Print media emulation, better printer friendly layout.
+See
+- print preview or
+- Firefox Inspector: click "toggle print media simulation for the page"
+*/
+@media print {
+	/* Top bar */
+    nav#navigation {
+        display: none;
+    }
+	/* Side bar */
+    .m-navpanel {
+        display: none;
+    }
+	/* Footer links */
+    footer > nav > div > #m-links-footer {
+        display: none;
+    }
+}
