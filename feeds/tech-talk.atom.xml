@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-05-29T18:23:23+02:00</updated><entry><title>Automate boring writing with Vim</title><link href="https://ashwin.info.tm/automate-boring-writing-with-vim.html" rel="alternate"></link><published>2020-05-29T18:23:23+02:00</published><updated>2020-05-29T18:23:23+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-05-29:/automate-boring-writing-with-vim.html</id><summary type="html">&lt;p&gt;Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-06-15T17:23:27+02:00</updated><entry><title>Think before you monospace</title><link href="https://ashwin.info.tm/ultimate-monospace.html" rel="alternate"></link><published>2020-06-15T17:23:27+02:00</published><updated>2020-06-15T17:23:27+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-06-15:/ultimate-monospace.html</id><summary type="html">&lt;p&gt;Put your programming font to the ultimate test case.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;I conducted a &lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;poll&lt;/a&gt; on Mastodon to see if what fonts are used in programming
+these days.&lt;/p&gt;
+&lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;&lt;img alt="Poll on monospace font preference." src="/images/monospace_poll.png" /&gt;&lt;/a&gt;
+&lt;p&gt;Despite the limited sample size, the poll seemed representative of package
+installation &lt;a href="https://pkgstats.archlinux.de/compare/packages#packages=adobe-source-code-pro-fonts,ttf-anonymous-pro,ttf-bitstream-vera,ttf-cascadia-code,ttf-dejavu,ttf-hack,ttf-liberation,ttf-ms-fonts"&gt;statistics&lt;/a&gt;. After going through the replies to the &lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;poll&lt;/a&gt;, I
+discovered a web application called &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt; where you can try out 98
+monospace fonts with syntax highlighting on the fly. However, a good test case was
+missing.&lt;/p&gt;
+&lt;p&gt;It is unlikely that a font would meet all features, while being &lt;em&gt;aesthetic&lt;/em&gt;.
+Features include how similar characters are &lt;em&gt;distinguishable&lt;/em&gt; and eye-candy
+like &lt;a href="https://www.hanselman.com/blog/MonospacedProgrammingFontsWithLigatures.aspx"&gt;ligatures&lt;/a&gt; (which can be useful or &lt;a href="https://nedbatchelder.com/blog/201604/latos_unfortunate_ligatures.html"&gt;weird&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;As they say,&lt;/p&gt;
+&lt;blockquote&gt;
+“Beauty lies in the eyes of the beholder.”&lt;/blockquote&gt;
+&lt;p&gt;Here is a test case with some pseudo-code to identify common pitfalls and
+features. See if it fits your needs and ensure no surprises.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="m-code"&gt;&lt;span class="nd"&gt;@test&lt;/span&gt;                                 &lt;span class="c1"&gt;# INFO: How @ gets rendered&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ultimate_monospace&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="c1"&gt;# INFO: Ligature for arrow&lt;/span&gt;
+    &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;nfo&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;lnfo&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;Info&lt;/span&gt;       &lt;span class="c1"&gt;# WARN: 1, l, I should be distinguishable&lt;/span&gt;
+    &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="n"&gt;O&lt;/span&gt;                     &lt;span class="c1"&gt;# WARN: 0 and O should be distinguishable&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;ifnd&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;                 &lt;span class="c1"&gt;# WARN: Ligature for fi&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;    &lt;span class="c1"&gt;# INFO: Ligature for ==, &amp;gt;=&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Octave&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="m-code"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;logic&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;oper&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;not&lt;/span&gt; &lt;span class="o"&gt;~=&lt;/span&gt; &lt;span class="n"&gt;equals&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c"&gt;% INFO: Ligature for &amp;amp;&amp;amp;; WARN: for ~=&lt;/span&gt;
+     &lt;span class="n"&gt;ans&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Javascript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="m-code"&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;arrow_operator&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;              &lt;span class="c1"&gt;// INFO: Ligatures for arrow operator&lt;/span&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;lt;!-- INFO: Ligatures for HTML  --&amp;gt;&lt;/span&gt;
+&lt;span class="err"&gt;&amp;lt;&lt;/span&gt;/&amp;gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;empty&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; tag &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;empty&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Perl / Ruby / PHP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="m-code"&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;                               &lt;span class="c1"&gt;# INFO: Ligatures for spaceship operator&lt;/span&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Haskell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;-- INFO: Ligatures for Haskell operators: ++, &amp;gt;&amp;gt;=,&amp;lt;&amp;lt;=, &amp;gt;=&amp;gt;, &amp;lt;=&amp;lt;&lt;/span&gt;
+&lt;span class="nf"&gt;a&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- instead of&lt;/span&gt;
+&lt;span class="nf"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
+&lt;span class="c1"&gt;-- simply go with&lt;/span&gt;
+&lt;span class="nf"&gt;f&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
+
+&lt;span class="c1"&gt;-- instead of&lt;/span&gt;
+&lt;span class="nf"&gt;\&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
+&lt;span class="c1"&gt;-- simply go with&lt;/span&gt;
+&lt;span class="nf"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
+&lt;span class="c1"&gt;-- or&lt;/span&gt;
+&lt;span class="nf"&gt;g&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;Here is how the above test case renders with Python syntax highlighting and
+Fira Code font:&lt;/p&gt;
+&lt;a href="https://www.programmingfonts.org/"&gt;&lt;img alt="Monospace font preview on programmingfonts.org" src="/images/monospace_preview.png" /&gt;&lt;/a&gt;
+&lt;p&gt;Feel free to copy the &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst"&gt;raw-text&lt;/a&gt; and try it out on &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="software"></category><category term="typography"></category><category term="ligatures"></category><category term="programming"></category></entry><entry><title>Automate boring writing with Vim</title><link href="https://ashwin.info.tm/automate-boring-writing-with-vim.html" rel="alternate"></link><published>2020-05-29T18:23:23+02:00</published><updated>2020-05-29T18:23:23+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-05-29:/automate-boring-writing-with-vim.html</id><summary type="html">&lt;p&gt;Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Two of my most used markup languages these days are Markdown and
 reStructuredText. For instance, a common operation is two add hyperlinks while
 blogging.  Both languages provide concise syntaxes to make links, but they tend

@@ -121,6 +121,101 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwin.info.tm/ultimate-monospace.html" rel="bookmark" class="u-url" title="Permalink to Think before you monospace">
+            <time class="m-date" datetime="2020-06-15T17:23:27.332143+02:00">
+              Jun <span class="m-date-day">15</span> 2020
+            </time>
+            <div class="p-name">
+              Think before you monospace
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Put your programming font to the ultimate test case.</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>I conducted a <a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635">poll</a> on Mastodon to see if what fonts are used in programming
+these days.</p>
+<a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"><img alt="Poll on monospace font preference." src="/images/monospace_poll.png" /></a>
+<p>Despite the limited sample size, the poll seemed representative of package
+installation <a href="https://pkgstats.archlinux.de/compare/packages#packages=adobe-source-code-pro-fonts,ttf-anonymous-pro,ttf-bitstream-vera,ttf-cascadia-code,ttf-dejavu,ttf-hack,ttf-liberation,ttf-ms-fonts">statistics</a>. After going through the replies to the <a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635">poll</a>, I
+discovered a web application called <a href="https://www.programmingfonts.org/">programming-fonts</a> where you can try out 98
+monospace fonts with syntax highlighting on the fly. However, a good test case was
+missing.</p>
+<p>It is unlikely that a font would meet all features, while being <em>aesthetic</em>.
+Features include how similar characters are <em>distinguishable</em> and eye-candy
+like <a href="https://www.hanselman.com/blog/MonospacedProgrammingFontsWithLigatures.aspx">ligatures</a> (which can be useful or <a href="https://nedbatchelder.com/blog/201604/latos_unfortunate_ligatures.html">weird</a>).</p>
+<p>As they say,</p>
+<blockquote>
+“Beauty lies in the eyes of the beholder.”</blockquote>
+<p>Here is a test case with some pseudo-code to identify common pitfalls and
+features. See if it fits your needs and ensure no surprises.</p>
+<ul>
+<li>Python</li>
+</ul>
+<pre class="m-code"><span class="nd">@test</span>                                 <span class="c1"># INFO: How @ gets rendered</span>
+<span class="k">def</span> <span class="nf">ultimate_monospace</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>     <span class="c1"># INFO: Ligature for arrow</span>
+    <span class="k">assert</span> <span class="mi">1</span><span class="n">nfo</span> <span class="o">!=</span> <span class="n">lnfo</span> <span class="o">!=</span> <span class="n">Info</span>       <span class="c1"># WARN: 1, l, I should be distinguishable</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">!=</span> <span class="n">O</span>                     <span class="c1"># WARN: 0 and O should be distinguishable</span>
+    <span class="k">if</span> <span class="n">find</span> <span class="ow">and</span> <span class="n">ifnd</span><span class="p">:</span>                 <span class="c1"># WARN: Ligature for fi</span>
+        <span class="k">if</span> <span class="n">this</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">that</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>    <span class="c1"># INFO: Ligature for ==, &gt;=</span>
+            <span class="k">return</span> <span class="kc">True</span></pre>
+<ul>
+<li>Octave</li>
+</ul>
+<pre class="m-code"><span class="k">if</span> <span class="p">(</span><span class="n">logic</span> <span class="o">&amp;&amp;</span> <span class="n">oper</span> <span class="o">||</span> <span class="nb">not</span> <span class="o">~=</span> <span class="n">equals</span> <span class="p">)</span>  <span class="c">% INFO: Ligature for &amp;&amp;; WARN: for ~=</span>
+     <span class="n">ans</span> <span class="p">=</span> <span class="nb">true</span>
+<span class="k">end</span></pre>
+<ul>
+<li>Javascript</li>
+</ul>
+<pre class="m-code"><span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">arrow_operator</span> <span class="p">}</span>              <span class="c1">// INFO: Ligatures for arrow operator</span></pre>
+<ul>
+<li>HTML</li>
+</ul>
+<pre class="m-code"><span class="c">&lt;!-- INFO: Ligatures for HTML  --&gt;</span>
+<span class="err">&lt;</span>/&gt; <span class="p">&lt;</span><span class="nt">empty</span><span class="p">&gt;</span> tag <span class="p">&lt;/</span><span class="nt">empty</span><span class="p">&gt;</span></pre>
+<ul>
+<li>Perl / Ruby / PHP</li>
+</ul>
+<pre class="m-code"><span class="mi">1</span> <span class="o">&lt;=&gt;</span> <span class="mi">1</span>                               <span class="c1"># INFO: Ligatures for spaceship operator</span></pre>
+<ul>
+<li>Haskell</li>
+</ul>
+<pre class="m-code"><span class="c1">-- INFO: Ligatures for Haskell operators: ++, &gt;&gt;=,&lt;&lt;=, &gt;=&gt;, &lt;=&lt;</span>
+<span class="nf">a</span> <span class="o">++</span> <span class="n">b</span>
+
+<span class="c1">-- instead of</span>
+<span class="nf">return</span> <span class="n">x</span> <span class="o">&gt;&gt;=</span> <span class="n">f</span> <span class="o">&gt;&gt;=</span> <span class="n">g</span>
+<span class="c1">-- simply go with</span>
+<span class="nf">f</span> <span class="n">x</span> <span class="o">&gt;&gt;=</span> <span class="n">g</span>
+
+<span class="c1">-- instead of</span>
+<span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="n">return</span> <span class="n">x</span> <span class="o">&gt;&gt;=</span> <span class="n">f</span> <span class="o">&gt;&gt;=</span> <span class="n">g</span>
+<span class="c1">-- simply go with</span>
+<span class="nf">f</span> <span class="o">&gt;=&gt;</span> <span class="n">g</span>
+<span class="c1">-- or</span>
+<span class="nf">g</span> <span class="o">&lt;=&lt;</span> <span class="n">f</span></pre>
+<p>Here is how the above test case renders with Python syntax highlighting and
+Fira Code font:</p>
+<a href="https://www.programmingfonts.org/"><img alt="Monospace font preview on programmingfonts.org" src="/images/monospace_preview.png" /></a>
+<p>Feel free to copy the <a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst">raw-text</a> and try it out on <a href="https://www.programmingfonts.org/">programming-fonts</a>.</p>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-06-15T17:23:27.332143+02:00" class="dt-published">Mon 15 June 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/typography.html">typography</a>, <a href="https://ashwin.info.tm/tag/ligatures.html">ligatures</a>, <a href="https://ashwin.info.tm/tag/programming.html">programming</a>.<time class="dt-read-mins">
+              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              2
+          minutes
+            </time></p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwin.info.tm/automate-boring-writing-with-vim.html" rel="bookmark" class="u-url" title="Permalink to Automate boring writing with Vim">
             <time class="m-date" datetime="2020-05-29T18:23:23.230821+02:00">
               May <span class="m-date-day">29</span> 2020
@@ -133,132 +228,6 @@
           <p>Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>Two of my most used markup languages these days are Markdown and
-reStructuredText. For instance, a common operation is two add hyperlinks while
-blogging.  Both languages provide concise syntaxes to make links, but they tend
-to need a lot more keystrokes to get it right. Another pain-point is the need for
-escaping certain special characters while searching and replacing text.</p>
-<p>Well, not anymore!</p>
-<section id="requirements">
-<h2>Requirements</h2>
-<p><a href="https://github.com/tpope/vim-surround">vim-surround</a>, <a href="https://github.com/neovim/pynvim">pynvim</a> + Neovim / Vim compiled with Python bindings</p>
-</section>
-<section id="how-it-works">
-<h2>How it works</h2>
-<p>Vim can be configured to behave differently based on the state it is in (reading to
-buffer, file type, vim mode etc.). Keyboard shortcuts can be <em>mapped</em> for such
-scenarios either of these commands <code>map, nmap, imap, vmap, noremap, nnoremap,
-inoremap, vnoremap</code>.</p>
-<section id="markdown">
-<h3>Markdown</h3>
-<p>The following maps <code>Shift+Enter</code> in the normal mode:</p>
-<pre class="m-code"><span class="c">&quot;&quot;Markdown: inline-link maker</span>
-<span class="c">&quot;surround with [], find ], append ()</span>
-<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>pandoc nmap <span class="p">&lt;</span>S<span class="p">-</span>CR<span class="p">&gt;</span> ysiW]<span class="k">f</span>]<span class="k">a</span><span class="p">()&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span></pre>
-<p>to add an inline link:</p>
-<pre class="m-code"><span class="k">&gt; </span><span class="ge">before</span>
-A sample sentence with a link
-
-<span class="k">&gt; </span><span class="ge">after</span>
-A sample sentence with a [link]()</pre>
-<p>The following maps <code>Enter</code> in the normal mode:</p>
-<pre class="m-code"><span class="c">&quot;&quot;Markdown: link maker</span>
-<span class="c">&quot;yank inner word, surround with [], find ], append [, paste, append ],</span>
-<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>pandoc nmap <span class="p">&lt;</span>CR<span class="p">&gt;</span> yiWysiW]<span class="k">f</span>]<span class="k">a</span>[<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="nb">pa</span>]<span class="p">&lt;</span>ESC<span class="p">&gt;</span>Go<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span>[<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">p</span><span class="p">&lt;</span>ESC<span class="p">&gt;</span>$<span class="k">a</span>:<span class="p">&lt;</span>SPACE<span class="p">&gt;</span></pre>
-<p>to add a link with a handle:</p>
-<pre class="m-code"><span class="k">&gt; </span><span class="ge">before</span>
-A sample passage with a link and containing
-a lot of text.
-
-<span class="k">&gt; </span><span class="ge">after</span>
-A sample passage with a [<span class="nt">link</span>][<span class="nl">link</span>] and containing
-a lot of text.
-[link]:</pre>
-</section>
-<section id="restructuredtext">
-<h3>reStructuredText</h3>
-<p>The following maps <code>Shift+Enter</code> in the normal mode:</p>
-<pre class="m-code"><span class="c">&quot;&quot;rST: inline-link maker</span>
-<span class="c">&quot;surround with ``, find `, append __, move left by 2 characters, insert &lt;&gt;</span>
-<span class="k">au</span> <span class="nb">FileType</span> rst nmap <span class="p">&lt;</span>S<span class="p">-</span>CR<span class="p">&gt;</span> ysiW`<span class="k">f</span>`a__<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="m">2</span>hi<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span><span class="k">lt</span><span class="p">&gt;&gt;&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span></pre>
-<p>to add an inline link:</p>
-<pre class="m-code"><span class="cp">.. before</span>
-A sample sentence with a link
-
-<span class="cp">.. after</span>
-A sample sentence with a <span class="s">`link &lt;&gt;`__</span></pre>
-<p>The following maps <code>Enter</code> in the normal mode:</p>
-<pre class="m-code"><span class="c">&quot;&quot;rST: link maker</span>
-<span class="c">&quot;yank inner word, go to end of word, append _, mark l, end of document, add a</span>
-<span class="c">&quot;new line, insert .. _, paste, append:</span>
-<span class="k">au</span> <span class="nb">FileType</span> rst nmap <span class="p">&lt;</span>CR<span class="p">&gt;</span> yiWEa_<span class="p">&lt;</span>ESC<span class="p">&gt;</span>mlGo<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span>..<span class="p">&lt;</span>SPACE<span class="p">&gt;</span>_<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="nb">pa</span>:</pre>
-<p>to add a link with a handle:</p>
-<pre class="m-code"><span class="cp">.. before</span>
-A sample passage with a link and containing
-a lot of text.
-
-<span class="cp">.. after</span>
-A sample passage with a link_ and containing
-a lot of text.
-<span class="p">..</span> <span class="nt">_link:</span></pre>
-<p>You can also return back to the text by visiting the mark with <code>`l</code>.</p>
-<aside class="m-block m-default">
-<h3>Warning</h3>
-<p>Mapping <code>Shift-Enter</code> might require some <a href="https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter">extra configuration</a> in your terminal.</p>
-</aside>
-</section>
-<section id="search-and-replace">
-<h3>Search and replace</h3>
-<p>In most editors, you could use <code>Ctrl+f</code> to search text and <code>Ctrl+r</code> to
-search and replace text. While searching in Vim is a piece of cake with <code>/</code>
-key, search and replace is often a bit more painful.</p>
-<pre class="m-code"><span class="c">&quot;{{{ Select (visual mode) and search / replace</span>
-<span class="c">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
-<span class="k">if</span> has<span class="p">(</span><span class="s1">&#39;python3&#39;</span><span class="p">)</span>
-<span class="k">python3</span> <span class="p">&lt;&lt;</span> endpython3
-import <span class="k">re</span>
-import <span class="k">vim</span>
-
-<span class="nb">def</span> py_regex_escape<span class="p">(</span>string<span class="p">=</span>None<span class="p">)</span>:
-    <span class="k">h</span> <span class="p">=</span> string <span class="k">if</span> string <span class="k">else</span> <span class="k">vim</span>.eval<span class="p">(</span><span class="s1">&#39;@h&#39;</span><span class="p">)</span>
-    <span class="k">h</span> <span class="p">=</span> <span class="k">re</span>.escape<span class="p">(</span><span class="k">h</span><span class="p">)</span>.replace<span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;&#39;&quot;</span><span class="p">)</span>
-    <span class="k">if</span> string:
-      print<span class="p">(</span><span class="k">h</span><span class="p">)</span>
-    <span class="k">else</span>:
-      <span class="k">vim</span>.command<span class="p">(</span><span class="s2">&quot;let @h=&#39;{}&#39;&quot;</span>.format<span class="p">(</span><span class="k">h</span><span class="p">))</span>
-
-endpython3
-
-command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span>? RegexEscape :<span class="k">py3</span> py_regex_escape<span class="p">(&lt;</span><span class="k">f</span><span class="p">-</span>args<span class="p">&gt;)</span>
-
-<span class="c">&quot; http://stackoverflow.com/questions/676600/#676619</span>
-<span class="c">&quot; Below h is used as a register to yank into</span>
-<span class="c">&quot; Also search with \v prefix for searching with very magic and</span>
-<span class="c">&quot; if needed \V prefix with very nomagic. See `:help magic`</span>
-<span class="nb">vnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">f</span><span class="p">&gt;</span> <span class="c">&quot;hy:RegexEscape&lt;CR&gt;/\v&lt;C-r&gt;h</span>
-<span class="nb">vnoremap</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">r</span><span class="p">&gt;</span> <span class="c">&quot;hy:RegexEscape&lt;CR&gt;:%s/\v&lt;C-r&gt;h//gc&lt;left&gt;&lt;left&gt;&lt;left&gt;</span>
-<span class="k">endif</span>
-<span class="c">&quot;}}}</span></pre>
-<p>This powerful mapping would automatically try to do <strong>a Python regular expression
-escape and fill the search or search-and-replace command</strong> with a sample text
-you selected in visual mode. An obvious caveat is that Python regex and Vim
-regex are not identical. I have found the <em>very-magic</em> mode to be close to
-Python regex.</p>
-</section>
-<section id="improvements">
-<h3>Improvements?</h3>
-<p>Before you say it, I agree these solutions are <em>far from elegant</em>. Perhaps
-<a href="https://github.com/SirVer/ultisnips">UltiSnips</a> can come in handy to create links. Let me know you find it useful or
-you can improve it.</p>
-<aside class="m-block m-info">
-<h3>License</h3>
-<p>The code snippets above can be reused with an <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a> license.</p>
-</aside>
-</section>
-</section>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwin.info.tm/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-05-29T18:23:23.230821+02:00" class="dt-published">Fri 29 May 2020</time> in <a class="p-category" href="https://ashwin.info.tm/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwin.info.tm/tag/software.html">software</a>, <a href="https://ashwin.info.tm/tag/markdown.html">markdown</a>, <a href="https://ashwin.info.tm/tag/rst.html">rst</a>, <a href="https://ashwin.info.tm/tag/vim.html">vim</a>, <a href="https://ashwin.info.tm/tag/writing.html">writing</a>.<time class="dt-read-mins">
               <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
@@ -270,6 +239,7 @@ you can improve it.</p>
           minutes
             </time></p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -1401,6 +1371,7 @@ you can improve it.</p>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/kindness.html">kindness</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/licensing.html">licensing</a></li>
         <li class="m-tag-5"><a href="https://ashwin.info.tm/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ligatures.html">ligatures</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/linux.html">linux</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/list.html">list</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/markdown.html">markdown</a></li>
@@ -1414,6 +1385,7 @@ you can improve it.</p>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/poetry.html">poetry</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/postdoc.html">postdoc</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/privacy.html">privacy</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/programming.html">programming</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/psychology.html">psychology</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/pyconse.html">pyconse</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/pypy.html">pypy</a></li>
@@ -1437,6 +1409,7 @@ you can improve it.</p>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/transonic.html">transonic</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/travel.html">travel</a></li>
         <li class="m-tag-3"><a href="https://ashwin.info.tm/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/typography.html">typography</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/ubuntu.html">ubuntu</a></li>
         <li class="m-tag-2"><a href="https://ashwin.info.tm/tag/uncategorized.html">Uncategorized</a></li>
         <li class="m-tag-1"><a href="https://ashwin.info.tm/tag/vim.html">vim</a></li>

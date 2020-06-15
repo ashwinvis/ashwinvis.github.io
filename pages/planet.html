@@ -140,9 +140,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2020/06/15/laptop-update-2/" rel="bookmark" class="u-url"
-       title="Laptop update 2" target="_blank">
-      <time class="m-date" datetime="2020-06-15 17:41:48+00:00">
+    <a href="https://kdenlive.org/en/2020/06/gsoc-20-progress-week-1-and-2/" rel="bookmark" class="u-url"
+       title="GSoC’ 20 Progress: Week 1 and 2" target="_blank">
+      <time class="m-date" datetime="2020-06-15 19:17:41+00:00">
         Jun
         <span class="m-date-day">
           15
@@ -150,65 +150,24 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Laptop update 2
+      GSoC’ 20 Progress: Week 1 and 2
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Here’s an update on the <a href="https://pointieststick.com/2020/06/08/lenovo-thinkpad-x1-yoga-impressions-bugs-workarounds-and-thoughts-about-the-future/">trials and tribulations encountered with my new Lenovo ThinkPad X1 Yoga gen 4</a>.</p>
-
-
-
-Audio
-
-
-
-<p>I have <a href="https://invent.kde.org/plasma/plasma-pa/-/merge_requests/5">submitted a merge request</a> to clean up the audio display by <a href="https://bugs.kde.org/show_bug.cgi?id=422612">filtering out inactive devices</a>, which takes it from this:</p>
-
-
-
-<div><img alt="" src="//pointieststick.files.wordpress.com/2020/06/insane.png?w=1024"></div>
-
-
-
-<p>… to this:</p>
-
-
-
-<div><img alt="" src="//pointieststick.files.wordpress.com/2020/06/screenshot_20200613_202703.png?w=1024"></div>
-
-
-
-High DPI Scaling
-
-
-
-<p>The issue with <a href="https://bugs.kde.org/show_bug.cgi?id=422559">plasma shadows not respecting the scale factor</a> has been fixed.</p>
-
-
-
-Upstream (i.e. non-KDE) issues
-
-
-
-<p>I have filed Kernel and PulseAudio bugs to track the issues with audio and power management:</p>
-
-
-
-<ul>
-<li>Audio jack input source does not work: <a href="https://bugzilla.kernel.org/show_bug.cgi?id=208145">https://bugzilla.kernel.org/show_bug.cgi?id=208145</a>
-</li>
-<li>No bass, max volume too low: <a href="https://bugzilla.kernel.org/show_bug.cgi?id=208133">https://bugzilla.kernel.org/show_bug.cgi?id=208133</a> and <a href="https://bugzilla.kernel.org/show_bug.cgi?id=207407">https://bugzilla.kernel.org/show_bug.cgi?id=207407</a>
-</li>
-<li>Keyboard mic mute button does not mute microphones plugged into the audio jack: <a href="https://bugzilla.kernel.org/show_bug.cgi?id=208139">https://bugzilla.kernel.org/show_bug.cgi?id=208139 …</a></li></ul>
+  <p><span>Greetings!</span></p>
+<p><span>It’s been two weeks since the coding period began and I would love to share with the community the progress I have made so far. </span></p>
+<p><span>In the past two weeks, I focused on implementing a basic class for handling subtitles.</span></p>
+<p><span>First, I created a class called <a href="https://invent.kde.org/sassycode/kdenlive/-/blob/subparser/src/bin/model/subtitlemodel.hpp">SubtitleModel</a>. This class would contain the list of subtitle content included in the uploaded subtitle file. Since the SubtitleModel class would be utilized to implement a basic model based upon a list of strings, the QAbstractListModel provided an ideal base class on which to build. Subtitle files are usually of two basic formats: <a href="https://en.wikipedia.org/wiki/SubRip#File_format">SubRipText</a> file (.srt) and <a href="https://en.wikipedia.org/wiki/SubStation_Alpha">SubStation Alpha</a> (.ass) type. Subtitles are maintained in these files in totally different formats based on their file type, so the function ought to parse through each file type in a distinctive way.</span></p>
+<p><span>In the …</span></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-06-15 17:41:48+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2020-06-15 19:17:41+00:00" class="dt-published"></time>
   Mon 15 Jun 2020
   in Planet KDE.
 </footer>
