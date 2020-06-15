@@ -174,56 +174,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-14_Using_Titan_to_edit_a_Gemini_wiki" rel="bookmark" class="u-url"
-       title="Using Titan to edit a Gemini wiki" target="_blank">
-      <time class="m-date" datetime="2020-06-14 20:35:39+00:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Using Titan to edit a Gemini wiki
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>I’ve set up a Gemini wiki for testing on gemini:<em>communitywiki.org:1966 – note the non-standard port!</em></p><p>If you want to edit or create a page, use the following shell script if you’re not using <a href="https://alexschroeder.ch/wiki/2020-06-05_Gemini_Write">Gemini Write</a>, my <em>Elpher</em> extension. Use your regular Gemini client to read, of course.</p><pre>#!/bin/bash
-
-# If you set HOST, PORT, TOKEN, or PAGE as environment variables,
-# those values are used instead. If you want to edit Alex' wiki,
-# for example:
-# HOST=alexschroeder.ch PORT=1965 TOKEN=hello PAGE=Test ./gemini-wiki
-
-HOST=${HOST:-communitywiki.org}
-PORT=${PORT:-1966}
-TOKEN=${TOKEN:-Elrond}
-FILE=$(tempfile)
-PAGE=${PAGE:-$(date --iso-8601=date)}
-read -p "Edit which page on $HOST? [$PAGE] "
-PAGE=${REPLY:-$PAGE}
-PAGE=$(echo "$PAGE" | perl -p -e 'chomp; s/ /_/g; s/([^A-Za-z0-9_-])/sprintf("%%%02X", ord($1))/seg')
-echo "Requesting gemini://$HOST/raw/$PAGE"
-echo …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-14 20:35:39+00:00" class="dt-published"></time>
-  Sun 14 Jun 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://blog.broulik.de/2020/06/virtual-plasma-sprint-2020/" rel="bookmark" class="u-url"
        title="Virtual Plasma Sprint 2020" target="_blank">
       <time class="m-date" datetime="2020-06-14 20:30:03+00:00">
