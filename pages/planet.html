@@ -56,8 +56,8 @@
           https://bibbase.org
           http://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org 'self';
-         img-src 'unsafe-inline' 'self' https:;
+         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+         img-src 'unsafe-inline' 'self' https: data:;
          frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://peertube.social;
          worker-src 'self';
         "
@@ -140,6 +140,107 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-15_Why_Wiki%E2%80%BD" rel="bookmark" class="u-url"
+       title="Why Wiki‽" target="_blank">
+      <time class="m-date" datetime="2020-06-15 08:54:37+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Why Wiki‽
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Indeed, why? I’m writing this because I want a wiki and I’m interested in <a href="https://alexschroeder.ch/wiki/Gemini">Gemini</a> and I’ve read some things on the mailing list that make me think other people don’t love wiki as much as I do. (<a href="https://lists.orbitalfox.eu/archives/gemini/2020/001611.html">Start with Sean Conner’s post</a> if you’re interested. Some quotes from that thread can be found in the comments on <a href="https://alexschroeder.ch/wiki/2020-06-04_Gemini_Upload">2020-06-04 Gemini Upload</a>.)</p><p>Some people think that we should all self-host the things we write. This is a good idea. We don’t want to depend on faceless corporations that can take away our online presence on a whim.</p><p>At the same time, however, not all of us have the means to self-host. Some of us have no time, because system administration takes time to learn, takes time to practice, takes time to do. Some of …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-15 08:54:37+00:00" class="dt-published"></time>
+  Mon 15 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/posts/costs-blog/" rel="bookmark" class="u-url"
+       title="Costs to run this blog" target="_blank">
+      <time class="m-date" datetime="2020-06-15 09:57:00+02:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Costs to run this blog
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://kevq.uk/how-much-does-it-cost-to-run-this-blog/">Kev Quirk</a> and <a href="https://zerokspot.com/weblog/2020/06/15/how-much-does-it-cost-to-run-this-blog/">Horst Gutmann</a> recently wrote about how much it cost them to run their blogs. So I thought, I could write about it too.</p>
+<p>Let’s start with a simple list of services I use for this blog:</p>
+
+
+
+Service
+Monthly costs
+
+
+
+
+Porkbun: Domain name ($ 22,09 per year)
+&lt; 2 €
+
+
+Cloudflare: DNS
+0 €
+
+
+Hetzner: Virtual Private Server
+2,96 €
+
+
+BunnyCDN: CDN + Media Storage
+&lt; 0,10 €
+
+
+<strong>Total</strong>
+~ 5 €
+
+
+
+<p>I registered the domain name <em>jlelse.blog</em> with <a href="https://porkbun.com/">Porkbun</a>, because they are usually the cheapest register, but still support important features like DNSSEC. To compare prices between registers, I use <a href="https://tld-list.com/">TLD List</a>.</p>
+<p>For DNS hosting (and as a registrar of a few other domains) I use <a href="https://www.cloudflare.com/">Cloudflare</a>. They provide DNS hosting for free and also have an API, <a href="https://jlelse.blog/links/2020/05/dnscontrol/">which I use with dnscontrol</a>. I don’t use the proxy or CDN though …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-15 09:57:00+02:00" class="dt-published"></time>
+  Mon 15 Jun 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://diegoe.be/2020/06/14/fix-hdmi-audio-lag-on-retina-macbookpro-2013-macbook111-in-linux/" rel="bookmark" class="u-url"
        title="Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux" target="_blank">
       <time class="m-date" datetime="2020-06-14 23:37:05+00:00">
@@ -166,56 +267,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-06-14 23:37:05+00:00" class="dt-published"></time>
   Sun 14 Jun 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-14_Using_Titan_to_edit_a_Gemini_wiki" rel="bookmark" class="u-url"
-       title="Using Titan to edit a Gemini wiki" target="_blank">
-      <time class="m-date" datetime="2020-06-14 20:35:39+00:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Using Titan to edit a Gemini wiki
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>I’ve set up a Gemini wiki for testing on gemini:<em>communitywiki.org:1966 – note the non-standard port!</em></p><p>If you want to edit or create a page, use the following shell script if you’re not using <a href="https://alexschroeder.ch/wiki/2020-06-05_Gemini_Write">Gemini Write</a>, my <em>Elpher</em> extension. Use your regular Gemini client to read, of course.</p><pre>#!/bin/bash
-
-# If you set HOST, PORT, TOKEN, or PAGE as environment variables,
-# those values are used instead. If you want to edit Alex' wiki,
-# for example:
-# HOST=alexschroeder.ch PORT=1965 TOKEN=hello PAGE=Test ./gemini-wiki
-
-HOST=${HOST:-communitywiki.org}
-PORT=${PORT:-1966}
-TOKEN=${TOKEN:-Elrond}
-FILE=$(tempfile)
-PAGE=${PAGE:-$(date --iso-8601=date)}
-read -p "Edit which page on $HOST? [$PAGE] "
-PAGE=${REPLY:-$PAGE}
-PAGE=$(echo "$PAGE" | perl -p -e 'chomp; s/ /_/g; s/([^A-Za-z0-9_-])/sprintf("%%%02X", ord($1))/seg')
-echo "Requesting gemini://$HOST/raw/$PAGE"
-echo …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-14 20:35:39+00:00" class="dt-published"></time>
-  Sun 14 Jun 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -310,42 +361,6 @@ testing his Mac …
   on <time datetime="2020-06-14 08:30:14.730000-04:00" class="dt-published"></time>
   Sun 14 Jun 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/dev/print-css/" rel="bookmark" class="u-url"
-       title="Make your website more printable with @print CSS" target="_blank">
-      <time class="m-date" datetime="2020-06-14 08:05:00+02:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Make your website more printable with @print CSS
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I just added some CSS rules to <a href="https://git.jlel.se/jlelse/Indiego">my Hugo theme</a> to make my blog more printable. Why and how does this work?</p>
-<p>Have you ever tried to print out your website? This often does not look optimal. Because even elements that are not very useful on a printout (menus etc.) are printed. Firefox allows to display the print view in the inspector (Ctrl + Shift + C) and of course there is also a print preview in most browsers.</p>
-<p>Since I also offer a dark mode on my blog (when the user has set his system to dark), I have to make sure that the printout is displayed as in light mode. Firefox automatically did this correctly, but with Chromium this was not the case. Also, the print CSS uses <code>font-family</code> as <code>serif</code>, as I read at some point that fonts with …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-14 08:05:00+02:00" class="dt-published"></time>
-  Sun 14 Jun 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -535,40 +550,6 @@ But that is not evidence that all is …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/how-did-pterosaurs-fly/" rel="bookmark" class="u-url"
-       title="How Did Pterosaurs Fly?" target="_blank">
-      <time class="m-date" datetime="2020-06-12 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How Did Pterosaurs Fly?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  One of my favorite aspects of fluid dynamics is how well it pairs with so many other fields, from mathematics and space exploration to biology, medicine, and even paleontology. That <a href="https://fyfluiddynamics.com/2020/06/how-did-pterosaurs-fly/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-12 15:00:00+00:00" class="dt-published"></time>
-  Fri 12 Jun 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://matplotlib.org/matplotblog/posts/animated-polar-plot/" rel="bookmark" class="u-url"
        title="Animated polar plot with oceanographic data" target="_blank">
       <time class="m-date" datetime="2020-06-12 09:56:36+02:00">
@@ -682,44 +663,50 @@ cryptography is involved at any step, and it’s easy for either …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/git-pull-linear-history/" rel="bookmark" class="u-url"
-       title="Git pull don't merge or rebase by default" target="_blank">
-      <time class="m-date" datetime="2020-06-09 00:00:00+00:00">
+    <a href="https://www.scivision.dev/easy-setup-of-cmake/" rel="bookmark" class="u-url"
+       title="One-step build/install CMake" target="_blank">
+      <time class="m-date" datetime="2020-06-10 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          09
+          10
         </span>
         2020
       </time>
       <div class="p-name">
-      Git pull don't merge or rebase by default
+      One-step build/install CMake
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Git 2.27 has default <code>git pull</code> behavior that we feel is beneficial.
-The Git 2.27 default is to not merge or rebase by default, unless the user specifies a default behavior.
-With Git ≥ 2.0, explicitly specify &ldquo;safe&rdquo; default behavior for <code>git pull</code> as follows.
-This setting that linear Git history is maintained unless manually specifying <code>git pull</code> options.
-Git services such as
-<a href="https://help.github.com/en/github/administering-a-repository/requiring-a-linear-commit-history">GitHub</a>
-allow enforcing linear history.</p>
-<div><pre><code>git config --global pull.ff only
-</code></pre></div><p>That adds to &ldquo;~/.gitconfig&rdquo;</p>
-<div><pre><code><span>[pull]</span>
-<span>ff</span> <span>=</span> <span>only</span>
-</code></pre></div><p>If encountering a Git remote that cannot be fast-forwarded, the user can then either <code>git rebase</code> or <code>git merge</code>.</p>
-Notes
-<p><a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Git: rebase vs. merge</a></p>
+  <p>CMake ≥ 3.15 is strongly recommended in general for more robust and easy syntax.</p>
+Compile/Install CMake
+<p>This will get you the latest release of CMake.
+For Linux and Mac, admin/sudo is NOT required.</p>
+<ul>
+<li>Linux: Download/build/install Cmake 3 using <a href="https://github.com/scivision/cmake-utils">cmake_setup.py</a></li>
+<li>Mac: <code>brew install cmake</code> or use <a href="https://cmake.org/download/">.dmg</a></li>
+<li>Windows: use Windows win64-x64 <a href="https://cmake.org/download/">installer</a></li>
+</ul>
+pip
+<p>There is an unoffical PyPi CMake package:</p>
+<div><pre><code>pip install cmake
+</code></pre></div>CMake major versions
+<ul>
+<li><a href="https://cmake.org/cmake/help/latest/release/3.18.html">3.18</a>: CMake Profiler <code>cmake -B build --profiling-output=perf.json --profiling-format=google-trace</code></li>
+<li><a href="https://cmake.org/cmake/help/latest/release/3.17.html">3.17</a>: <a href="https://www.scivision.dev/cmake-ninja-multi-config">Ninja Multi-Config generator</a>, <code>--debug-find</code> to see what find_package() is trying to do,</li>
+<li><a href="https://cmake.org/cmake/help/latest/release/3.16.html">3.16</a>: Precompiled headers, unity builds, many advanced project features</li>
+<li><a href="https://cmake.org/cmake/help/latest/release/3.15.html">3.15</a>: <code>CMAKE_GENERATOR</code> environment variable works like <code>-G</code> option, enhanced Python interpreter finding</li>
+<li><a href="https://cmake.org/cmake/help/latest/release/3.14.html">3.14</a>: <code>check_fortran_source_runs()</code>, better <code>FetchContent</code></li>
+<li><a href="https://cmake.org/cmake/help/latest/release/3.13.html">3.13</a>: <code>ctest --progress</code>, better Matlab compiler support, lots of new linking options, fixes to Fortran …</li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-09 00:00:00+00:00" class="dt-published"></time>
-  Tue 09 Jun 2020
+  on <time datetime="2020-06-10 00:00:00+00:00" class="dt-published"></time>
+  Wed 10 Jun 2020
   in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
