@@ -140,6 +140,132 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://diegoe.be/2020/06/14/fix-hdmi-audio-lag-on-retina-macbookpro-2013-macbook111-in-linux/" rel="bookmark" class="u-url"
+       title="Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux" target="_blank">
+      <time class="m-date" datetime="2020-06-14 23:37:05+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux by adding intel_iommu=on,igfx_off to your kernel options.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Diego Escalante Urrelo</b></span>
+  on <time datetime="2020-06-14 23:37:05+00:00" class="dt-published"></time>
+  Sun 14 Jun 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-14_Using_Titan_to_edit_a_Gemini_wiki" rel="bookmark" class="u-url"
+       title="Using Titan to edit a Gemini wiki" target="_blank">
+      <time class="m-date" datetime="2020-06-14 20:35:39+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Using Titan to edit a Gemini wiki
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I’ve set up a Gemini wiki for testing on gemini:<em>communitywiki.org:1966 – note the non-standard port!</em></p><p>If you want to edit or create a page, use the following shell script if you’re not using <a href="https://alexschroeder.ch/wiki/2020-06-05_Gemini_Write">Gemini Write</a>, my <em>Elpher</em> extension. Use your regular Gemini client to read, of course.</p><pre>#!/bin/bash
+
+# If you set HOST, PORT, TOKEN, or PAGE as environment variables,
+# those values are used instead. If you want to edit Alex' wiki,
+# for example:
+# HOST=alexschroeder.ch PORT=1965 TOKEN=hello PAGE=Test ./gemini-wiki
+
+HOST=${HOST:-communitywiki.org}
+PORT=${PORT:-1966}
+TOKEN=${TOKEN:-Elrond}
+FILE=$(tempfile)
+PAGE=${PAGE:-$(date --iso-8601=date)}
+read -p "Edit which page on $HOST? [$PAGE] "
+PAGE=${REPLY:-$PAGE}
+PAGE=$(echo "$PAGE" | perl -p -e 'chomp; s/ /_/g; s/([^A-Za-z0-9_-])/sprintf("%%%02X", ord($1))/seg')
+echo "Requesting gemini://$HOST/raw/$PAGE"
+echo …</pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-14 20:35:39+00:00" class="dt-published"></time>
+  Sun 14 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blog.broulik.de/2020/06/virtual-plasma-sprint-2020/" rel="bookmark" class="u-url"
+       title="Virtual Plasma Sprint 2020" target="_blank">
+      <time class="m-date" datetime="2020-06-14 20:30:03+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Virtual Plasma Sprint 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This weekend the Plasma team’s annual sprint took place. Due to the Corona pandemic we had to cancel our original week-long in-person meet up end of April in Augsburg, Germany hosted by our friends at <a href="https://www.tuxedocomputers.com/">TUXEDO</a> and settled for an online sprint instead. In anticipation of more virtual sprints KDE has set up its own <a href="https://meet.kde.org/">BigBlueButton instance</a> – an open source web conferencing system for online learning.</p>
+
+
+
+<img alt="Plasma logo, at sign, house icon, in front of the colorful Plasma 5.19 wallpaper (hexagonal patterns with green, orange, black)" src="//blog.broulik.de/wp-content/uploads/2020/06/plasmaathome.png">Plasma @ Home
+
+
+
+<p>While a four day online event can’t fully replace an entire week in a room with one of the most talented and dedicated people I know hacking and discussing from 9 till midnight, I was pleasantly surprised how productive it was. Huge thanks to <a href="https://bigbluebutton.org/">BigBlueButton</a> for creating a great tool to work with and to KDE Sysadmin, and Bhushan Shah in particular, for making this happen! Also check out this …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kai Uwe Broulik</b></span>
+  on <time datetime="2020-06-14 20:30:03+00:00" class="dt-published"></time>
+  Sun 14 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://pythoninsider.blogspot.com/2020/06/python-390b3-is-now-available-for.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
        title="Python 3.9.0b3 is now available for testing" target="_blank">
       <time class="m-date" datetime="2020-06-14 08:30:14.730000-04:00">
@@ -184,56 +310,6 @@ testing his Mac …
   on <time datetime="2020-06-14 08:30:14.730000-04:00" class="dt-published"></time>
   Sun 14 Jun 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blog.bembel.net/2020/06/kmymoney-5-1-0-released/" rel="bookmark" class="u-url"
-       title="KMyMoney 5.1.0 released" target="_blank">
-      <time class="m-date" datetime="2020-06-14 11:03:48+00:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KMyMoney 5.1.0 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The KMyMoney development team today announces the immediate availability of <a href="https://download.kde.org/stable/kmymoney/5.1.0/src/kmymoney-5.1.0.tar.xz.mirrorlist">version 5.1.0</a> of its open source Personal Finance Manager.</p>
-
-
-
-<p>With additional development manpower we were able to tackle a lot of issues and will continue to do so in the upcoming time. If you think you can support the project with some code changes or your artistic or writing talent, please take a look at the some low hanging fruits at the <a href="https://invent.kde.org/office/kmymoney/-/issues?scope=all&amp;utf8=%E2%9C%93&amp;state=opened&amp;label_name%5B%5D=JuniorJob">KMyMoney junior job list</a>. Any contribution is welcome.</p>
-
-
-
-<p>Despite the ongoing permanent testing we understand that some bugs may have slipped past our best efforts. If you find one of them, please forgive us, and be sure to report it, either to the <a href="mailto:kmymoney-devel@kde.org">mailing list</a> or on <a href="https://bugs.kde.org/enter_bug.cgi?product=kmymoney%26format=guided">bugs.kde.org</a>.</p>
-
-
-
-The details
-
-
-
-<p>Here is the list of the bugs which have been fixed. A list of …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Thomas Baumgart (ipwizard)</b></span>
-  on <time datetime="2020-06-14 11:03:48+00:00" class="dt-published"></time>
-  Sun 14 Jun 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -354,40 +430,6 @@ But that is not evidence that all is …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://blogofkiritosan.wordpress.com/2020/06/13/community-engagement-challenge/" rel="bookmark" class="u-url"
-       title="Community Engagement Challenge" target="_blank">
-      <time class="m-date" datetime="2020-06-13 15:52:36+00:00">
-        Jun
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Community Engagement Challenge
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I think I speak for many when I say that each one of us in the FOSS world  loves opportunities that give rewards and compensation for working on FOSS projects.  And, it’s even better when these opportunities have little technical or conditional restraints.   That’s why I’m excited for the inaugural GNOME Foundation 2020 Community Engagement… <a href="https://blogofkiritosan.wordpress.com/2020/06/13/community-engagement-challenge/">Continue reading <span>Community Engagement Challenge</span> <span>→</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>agrawalgaurav1999</b></span>
-  on <time datetime="2020-06-13 15:52:36+00:00" class="dt-published"></time>
-  Sat 13 Jun 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://snarky.ca/why-i-dont-like-semver/" rel="bookmark" class="u-url"
        title="Why I don't like SemVer anymore" target="_blank">
       <time class="m-date" datetime="2020-06-13 00:01:01+00:00">
@@ -448,46 +490,6 @@ But that is not evidence that all is …</p>
   on <time datetime="2020-06-13 00:00:00+00:00" class="dt-published"></time>
   Sat 13 Jun 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-12_Serving_image_galleries_via_Gemini" rel="bookmark" class="u-url"
-       title="Serving image galleries via Gemini" target="_blank">
-      <time class="m-date" datetime="2020-06-12 23:43:01+00:00">
-        Jun
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Serving image galleries via Gemini
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>As an experiment, I’m serving images <a href="">via Gemini</a>! Let me know what you think of the user interface. It’s a bit weird since you can’t actually scan the thumbnails. If you’re looking at newer galleries, there’s going to be textual descriptions. For older galleries, it’s just a long list of thumbnail and image links. I don’t see how that can be improved, so there you have it.</p><p>In order to do this, I added support for a <code>gemini_config</code> file in the wiki’s data directory. There, you can add more links to the main menu, and add your own selector interpretations.</p><p>And this is my <code>gemini_config</code> with the gallery support for <a href="https://alexschroeder.ch/wiki/Sitelen_Mute">Sitelen Mute</a>.</p><pre># -*- mode: perl -*-
-use Modern::Perl;
-use Mojo::JSON;
-use Mojo::DOM;
-use File::Slurper qw(read_text read_binary read_dir);
-
-our (@extensions …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-12 23:43:01+00:00" class="dt-published"></time>
-  Fri 12 Jun 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
