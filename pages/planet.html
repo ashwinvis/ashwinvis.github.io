@@ -396,6 +396,41 @@ that wlroots is a crucial core component tying together a lot of …</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://researchsoftwarehour.github.io/2020/06/15/summer-break.html" rel="bookmark" class="u-url"
+       title="Summer break!" target="_blank">
+      <time class="m-date" datetime="2020-06-15 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Summer break!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>We will be back in August! With fun topics, tools, pair programming sessions,
+guests. See you there!</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-15 00:00:00+00:00" class="dt-published"></time>
+  Mon 15 Jun 2020
+  in Research Software Hour.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://diegoe.be/2020/06/14/fix-hdmi-audio-lag-on-retina-macbookpro-2013-macbook111-in-linux/" rel="bookmark" class="u-url"
        title="Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux" target="_blank">
       <time class="m-date" datetime="2020-06-14 23:37:05+00:00">
@@ -830,81 +865,6 @@ including <code>len(planets)</code>. The index variable is …</p>
   on <time datetime="2020-06-08 00:00:00+02:00" class="dt-published"></time>
   Mon 08 Jun 2020
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://researchsoftwarehour.github.io/2020/06/02/rsh-006.html" rel="bookmark" class="u-url"
-       title="Testing, RSH 006" target="_blank">
-      <time class="m-date" datetime="2020-06-02 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Testing, RSH 006
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-
-
-Questions, answers, and comments from our collaborative document
-
-<ul>
-  <li>What did you work on in the past week?
-    <ul>
-      <li>Writing unit tests for (my own) older code.</li>
-    </ul>
-  </li>
-  <li>Suggestion for next week:
-    <ul>
-      <li>byobu, tmux (screen) how to use a shell (connected via ssh) properly
-        <ul>
-          <li>followed-up here: https://github.com/ResearchSoftwareHour/rsh-notes/issues/36</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-Testing
-
-<ul>
-  <li>testing private methods:
-    <ul>
-      <li>depending on the language (Java) you can use introspection to make it non-private</li>
-      <li>in C++ maybe use friend and a second class to make stuff public just for the test</li>
-      <li>in Python, there should not be private methods, simply call the <code>_foo()</code>, <code>__bar()</code></li>
-    </ul>
-  </li>
-  <li>Redirecting <code>print</code> output in Python:
-    <div><div><pre><code><span>import</span> <span>io</span>
-<span>import</span> <span>contextlib</span>
-<span>my_io_buffer</span> <span>=</span> <span>io</span><span>.</span><span>StringIO</span><span>()</span>
-<span>with</span> <span>contextlib</span><span>.</span><span>redirect_stdout</span><span>(</span><span>my_io_buffer</span><span>):</span>
-  <span>import</span> <span>my_chatty_module</span> <span># all output is now in the io buffer
-</span>  <span>print</span><span>(</span><span>'abcd'</span><span>)</span> <span># abcd is now in the io buffer
-</span></code></pre></div>    </div>
-    <ul>
-      <li>[name=Radovan] Nice!</li>
-      <li>pytest has capture output: https …</li></ul></li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-02 00:00:00+00:00" class="dt-published"></time>
-  Tue 02 Jun 2020
-  in Research Software Hour.
 </footer>
 <div class="m-clearfix-l"></div>
 
