@@ -16,6 +16,17 @@ like &lt;a href="https://www.hanselman.com/blog/MonospacedProgrammingFontsWithLi
 “Beauty lies in the eyes of the beholder.”&lt;/blockquote&gt;
 &lt;p&gt;Here is a test case with some pseudo-code to identify common pitfalls and
 features. See if it fits your needs and ensure no surprises.&lt;/p&gt;
+&lt;style&gt;
+ pre, code {
+     font-family: monospace;
+ }
+ &lt;/style&gt;&lt;aside class="m-note m-info"&gt;
+The test case below should render with the default monospace font
+configured in your system. There are instructions in the end of the article
+to try out a different font online by copying this test case template
+as raw text.&lt;/aside&gt;
+&lt;section id="test-case-template"&gt;
+&lt;h2&gt;Test case template&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Python&lt;/li&gt;
 &lt;/ul&gt;
@@ -62,10 +73,15 @@ features. See if it fits your needs and ensure no surprises.&lt;/p&gt;
 &lt;span class="nf"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
 &lt;span class="c1"&gt;-- or&lt;/span&gt;
 &lt;span class="nf"&gt;g&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="try-it-yourself"&gt;
+&lt;h2&gt;Try it yourself&lt;/h2&gt;
 &lt;p&gt;Here is how the above test case renders with Python syntax highlighting and
 Fira Code font:&lt;/p&gt;
 &lt;a href="https://www.programmingfonts.org/"&gt;&lt;img alt="Monospace font preview on programmingfonts.org" src="/images/monospace_preview.png" /&gt;&lt;/a&gt;
-&lt;p&gt;Feel free to copy the &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst"&gt;raw-text&lt;/a&gt; and try it out on &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt;.&lt;/p&gt;
+&lt;aside class="m-note m-primary"&gt;
+Feel free to copy the &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst"&gt;raw-text&lt;/a&gt; and try it out on &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt;.&lt;/aside&gt;
+&lt;/section&gt;
 </content><category term="Tech Talk"></category><category term="software"></category><category term="typography"></category><category term="ligatures"></category><category term="programming"></category></entry><entry><title>Automate boring writing with Vim</title><link href="https://ashwin.info.tm/automate-boring-writing-with-vim.html" rel="alternate"></link><published>2020-05-29T18:23:23+02:00</published><updated>2020-05-29T18:23:23+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-05-29:/automate-boring-writing-with-vim.html</id><summary type="html">&lt;p&gt;Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Two of my most used markup languages these days are Markdown and
 reStructuredText. For instance, a common operation is two add hyperlinks while
