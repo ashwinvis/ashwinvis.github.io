@@ -57,6 +57,7 @@ And as potential reviewers, this campaign_ is relevant:
    :target: campaign_
    :alt: No free view? No review!
    :width: 50%
+   :class: m-image
 
 I think it is our turn as researchers and academics to say no to review articles
 which would end up behind a paywall. It is simply not ethical in today's world.

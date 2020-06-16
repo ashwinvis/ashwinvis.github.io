@@ -137,3 +137,4 @@ An inspiring quote to end with:
 .. image:: ../images/why-open-source-quote.png
    :width: 75%
    :alt: Quote from the video
+   :class: m-image
