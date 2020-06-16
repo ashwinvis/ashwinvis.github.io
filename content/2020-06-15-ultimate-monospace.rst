@@ -35,6 +35,25 @@ As they say,
 Here is a test case with some pseudo-code to identify common pitfalls and
 features. See if it fits your needs and ensure no surprises.
 
+.. raw:: html
+
+   <style>
+    pre, code {
+        font-family: monospace;
+    }
+    </style>
+
+
+.. note-info::
+
+    The test case below should render with the default monospace font
+    configured in your system. There are instructions in the end of the article
+    to try out a different font online by copying this test case template
+    as raw text.
+
+Test case template
+------------------
+
 - Python
 
 .. code:: python
@@ -93,6 +112,8 @@ features. See if it fits your needs and ensure no surprises.
     -- or
     g <=< f
 
+Try it yourself
+---------------
 
 Here is how the above test case renders with Python syntax highlighting and
 Fira Code font:
@@ -101,7 +122,9 @@ Fira Code font:
     :alt: Monospace font preview on programmingfonts.org
     :target: programming-fonts_
 
-Feel free to copy the raw-text_ and try it out on programming-fonts_.
+.. note-primary::
+
+    Feel free to copy the raw-text_ and try it out on programming-fonts_.
 
 .. _poll: https://mastodon.acc.sunet.se/web/statuses/104329832337934635
 .. _programming-fonts: https://www.programmingfonts.org/
