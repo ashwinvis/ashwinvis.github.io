@@ -43,6 +43,7 @@ The whole system was designed to function as follows:
 
 .. image:: https://raw.githubusercontent.com/covidmap-sweden/welcome/master/architecture.jpg
    :width: 100%
+   :class: m-image
 
 A future improvement to this could either be to do the Python computation
 directly in the Firebase Cloud Function and then submitted to the Firebase

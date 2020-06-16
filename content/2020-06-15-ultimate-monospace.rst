@@ -15,6 +15,7 @@ these days.
 .. image:: /images/monospace_poll.png
     :alt: Poll on monospace font preference.
     :target: poll_
+    :class: m-image
 
 Despite the limited sample size, the poll seemed representative of package
 installation statistics_. After going through the replies to the poll_, I
@@ -121,6 +122,7 @@ Fira Code font:
 .. image:: /images/monospace_preview.png
     :alt: Monospace font preview on programmingfonts.org
     :target: programming-fonts_
+    :class: m-image
 
 .. note-primary::
 
