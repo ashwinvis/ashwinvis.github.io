@@ -98,10 +98,11 @@ M_LINKS_NAVBAR1 = [
         ],
     ),
     (
-        "Feeds",
-        "feeds/all.atom.xml",
-        "",
+        "Subscribe",
+        "pages/subscribe.html",
+        "[subscribe]",
         [
+            ("Feeds", "feeds/all.atom.xml", ""),
             ("Feeds: Blog", "feeds/blog.atom.xml", ""),
             ("Feeds: Tech Talk", "feeds/tech-talk.atom.xml", ""),
         ],
