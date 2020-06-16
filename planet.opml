@@ -56,6 +56,7 @@
         <outline title="Velibor Zeli" text="Velibor Zeli" type="rss" htmlUrl="https://mylette.rs" xmlUrl="https://mylette.rs/rss.xml"/>
         <outline title="Hund[en]" text="Hund[en]" type="rss" htmlUrl="https://hunden.linuxkompis.se" xmlUrl="https://hunden.linuxkompis.se/feed.xml"/>
         <outline title="Michael Hirsch, Ph.D." text="Michael Hirsch, Ph.D." type="rss" htmlUrl="https://www.scivision.dev" xmlUrl="https://www.scivision.dev/index.xml"/>
+        <outline title="Nikita Prokopov's blog" text="Nikita Prokopov's blog" type="rss" htmlUrl="https://tonsky.me/" xmlUrl="https://tonsky.me/blog/atom.xml"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
