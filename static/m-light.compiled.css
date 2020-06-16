@@ -1823,6 +1823,7 @@ body > header > nav a {
   vertical-align: middle;
   line-height: 2.75rem;
   color: #000000;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 body > header > nav #m-navbar-brand, body > header > nav a#m-navbar-show, body > header > nav a#m-navbar-hide {
   font-weight: normal;
