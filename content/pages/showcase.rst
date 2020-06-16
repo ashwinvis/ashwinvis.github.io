@@ -48,18 +48,3 @@ I have curated some of my works in this website. Take a look.
                 :class: m-fullwidth
 
                 My codes
-
-
-.. container:: m-row
-
-    .. container:: m-col-m-4
-
-        .. block-success:: Sponsors
-
-            Say thanks
-
-            .. button-default:: /pages/sponsors.html
-                :class: m-fullwidth
-
-                My sponsors
-
