@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwin.info.tm/" rel="alternate"></link><link href="https://ashwin.info.tm/feeds/all.atom.xml" rel="self"></link><id>https://ashwin.info.tm/</id><updated>2020-06-15T17:23:27+02:00</updated><entry><title>Think before you monospace</title><link href="https://ashwin.info.tm/ultimate-monospace.html" rel="alternate"></link><published>2020-06-15T17:23:27+02:00</published><updated>2020-06-15T17:23:27+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwin.info.tm,2020-06-15:/ultimate-monospace.html</id><summary type="html">&lt;p&gt;Put your programming font to the ultimate test case.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;I conducted a &lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;poll&lt;/a&gt; on Mastodon to see if what fonts are used in programming
 these days.&lt;/p&gt;
-&lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;&lt;img alt="Poll on monospace font preference." src="/images/monospace_poll.png" /&gt;&lt;/a&gt;
+&lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;&lt;img alt="Poll on monospace font preference." class="m-image" src="/images/monospace_poll.png" /&gt;&lt;/a&gt;
 &lt;p&gt;Despite the limited sample size, the poll seemed representative of package
 installation &lt;a href="https://pkgstats.archlinux.de/compare/packages#packages=adobe-source-code-pro-fonts,ttf-anonymous-pro,ttf-bitstream-vera,ttf-cascadia-code,ttf-dejavu,ttf-hack,ttf-liberation,ttf-ms-fonts"&gt;statistics&lt;/a&gt;. After going through the replies to the &lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;poll&lt;/a&gt;, I
 discovered a web application called &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt; where you can try out 98
@@ -78,7 +78,7 @@ as raw text.&lt;/aside&gt;
 &lt;h2&gt;Try it yourself&lt;/h2&gt;
 &lt;p&gt;Here is how the above test case renders with Python syntax highlighting and
 Fira Code font:&lt;/p&gt;
-&lt;a href="https://www.programmingfonts.org/"&gt;&lt;img alt="Monospace font preview on programmingfonts.org" src="/images/monospace_preview.png" /&gt;&lt;/a&gt;
+&lt;a href="https://www.programmingfonts.org/"&gt;&lt;img alt="Monospace font preview on programmingfonts.org" class="m-image" src="/images/monospace_preview.png" /&gt;&lt;/a&gt;
 &lt;aside class="m-note m-primary"&gt;
 Feel free to copy the &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst"&gt;raw-text&lt;/a&gt; and try it out on &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt;.&lt;/aside&gt;
 &lt;/section&gt;
@@ -240,7 +240,7 @@ should be willing to share our research at different stages to preprint servers
 be archived for public-consumption. Also, check with your library to find out
 if they could cover the APC charges.&lt;/p&gt;
 &lt;p&gt;And as potential reviewers, this &lt;a href="https://nofreeviewnoreview.org/"&gt;campaign&lt;/a&gt; is relevant:&lt;/p&gt;
-&lt;a href="https://nofreeviewnoreview.org/"&gt;&lt;img alt="No free view? No review!" src="/static/nfvnr-button.svg" style="width: 50%" /&gt;&lt;/a&gt;
+&lt;a href="https://nofreeviewnoreview.org/"&gt;&lt;img alt="No free view? No review!" class="m-image" src="/static/nfvnr-button.svg" style="width: 50%" /&gt;&lt;/a&gt;
 &lt;p&gt;I think it is our turn as researchers and academics to say no to review articles
 which would end up behind a paywall. It is simply not ethical in today’s world.&lt;/p&gt;
 &lt;/section&gt;
@@ -376,7 +376,7 @@ database, from which a Python application downloads the data submitted and
 analyzes it in batches. The aggregated, anonymized results are then published
 back to the database and can be viewed in the map.&lt;/p&gt;
 &lt;p&gt;The whole system was designed to function as follows:&lt;/p&gt;
-&lt;img src="https://raw.githubusercontent.com/covidmap-sweden/welcome/master/architecture.jpg" style="width: 100%" /&gt;
+&lt;img class="m-image" src="https://raw.githubusercontent.com/covidmap-sweden/welcome/master/architecture.jpg" style="width: 100%" /&gt;
 &lt;p&gt;A future improvement to this could either be to do the Python computation
 directly in the Firebase Cloud Function and then submitted to the Firebase
 database. Alternatively, to have the website publish its data to the Python
@@ -11605,7 +11605,7 @@ notebooks, JupyterHub). An example of this is the &lt;a href="http://turbulence.
 buying laboratory apparatus and commercial software.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;An inspiring quote to end with:&lt;/p&gt;
-&lt;img alt="Quote from the video" src="../images/why-open-source-quote.png" style="width: 75%" /&gt;
+&lt;img alt="Quote from the video" class="m-image" src="../images/why-open-source-quote.png" style="width: 75%" /&gt;
 </content><category term="Blog"></category><category term="open-source"></category><category term="conference"></category></entry><entry><title>Quote</title><link href="https://ashwin.info.tm/2015-04-06-tmesis.html" rel="alternate"></link><published>2015-04-06T11:58:33+02:00</published><updated>2015-04-06T11:58:33+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwin.info.tm,2015-04-06:/2015-04-06-tmesis.html</id><summary type="html">&lt;p&gt;Tmesis&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="definition" src="https://beckisbookblog.files.wordpress.com/2015/01/tmesis1.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;That is legen-wait-for-the-tmesis-dary!&lt;/p&gt;</content><category term="Tumblr archive"></category><category term="wordporm"></category><category term="til"></category><category term="today i learned"></category><category term="tumblr"></category></entry><entry><title>Quote</title><link href="https://ashwin.info.tm/2015-03-29-so-many-places-movies-music-books-and-journal.html" rel="alternate"></link><published>2015-03-29T13:15:09+02:00</published><updated>2015-03-29T13:15:09+02:00</updated><author><name>Ashwin Vishnu</name></author><id>tag:ashwin.info.tm,2015-03-29:/2015-03-29-so-many-places-movies-music-books-and-journal.html</id><summary type="html"></summary><content type="html">&lt;p&gt;So many places, movies, music, books and journal papers. So little time.&lt;/p&gt;
 &lt;p&gt;—&lt;/p&gt;

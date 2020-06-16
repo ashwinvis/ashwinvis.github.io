@@ -33,7 +33,7 @@ should be willing to share our research at different stages to preprint servers
 be archived for public-consumption. Also, check with your library to find out
 if they could cover the APC charges.&lt;/p&gt;
 &lt;p&gt;And as potential reviewers, this &lt;a href="https://nofreeviewnoreview.org/"&gt;campaign&lt;/a&gt; is relevant:&lt;/p&gt;
-&lt;a href="https://nofreeviewnoreview.org/"&gt;&lt;img alt="No free view? No review!" src="/static/nfvnr-button.svg" style="width: 50%" /&gt;&lt;/a&gt;
+&lt;a href="https://nofreeviewnoreview.org/"&gt;&lt;img alt="No free view? No review!" class="m-image" src="/static/nfvnr-button.svg" style="width: 50%" /&gt;&lt;/a&gt;
 &lt;p&gt;I think it is our turn as researchers and academics to say no to review articles
 which would end up behind a paywall. It is simply not ethical in today’s world.&lt;/p&gt;
 &lt;/section&gt;
@@ -1413,5 +1413,5 @@ notebooks, JupyterHub). An example of this is the &lt;a href="http://turbulence.
 buying laboratory apparatus and commercial software.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;An inspiring quote to end with:&lt;/p&gt;
-&lt;img alt="Quote from the video" src="../images/why-open-source-quote.png" style="width: 75%" /&gt;
+&lt;img alt="Quote from the video" class="m-image" src="../images/why-open-source-quote.png" style="width: 75%" /&gt;
 </content><category term="Blog"></category><category term="open-source"></category><category term="conference"></category></entry></feed>
