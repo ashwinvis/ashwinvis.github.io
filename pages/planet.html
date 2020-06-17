@@ -141,6 +141,97 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://jlelse.blog/thoughts/2020/06/apple-sucks/" rel="bookmark" class="u-url"
+       title="Apple sucks 🙅‍♂️" target="_blank">
+      <time class="m-date" datetime="2020-06-17 14:54:50+02:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Apple sucks 🙅‍♂️
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I’m currently looking for a possible replacement to my Xiaomi Mi A1 (it’s showing signs of aging and has an annoying GPS bug). I’m evaluating previous-generation refurbished phones as well. While iPhones look great on the surface and aren’t really more expensive than premium phones from Samsung etc., I won’t buy an iPhone though. First, iOS is locked down so much, the only smartwatch you can use without problems is the Apple Watch and I won’t buy one to replace my Galaxy Watch. You also can’t install any apps Apple hasn’t approved. Second, <a href="https://www.theverge.com/2020/6/16/21293419/hey-apple-rejection-ios-app-store-dhh-gangsters-antitrust">the whole drama about in-app-purchases</a> and <a href="https://jlelse.blog/links/2020/02/apple-monopoly/">Apple’s uncompetitive behavior</a> is annoying as well. I won’t take an iPhone unless someone gives me one for free. <strong>Apple sucks!</strong> 🙅‍♂️</p>
+<p>There’s a little hope though, even when I think …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 14:54:50+02:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://kart1kx.wordpress.com/2020/06/17/automatic-assignment-of-tag-icons-in-digikam/" rel="bookmark" class="u-url"
+       title="Automatic Assignment of Tag Icons in DigiKam" target="_blank">
+      <time class="m-date" datetime="2020-06-17 12:53:10+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Automatic Assignment of Tag Icons in DigiKam
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Last week I implemented <strong>Automatic Addition/Removal of Tag Icons</strong>. DigiKam provides users with the option to assign Icons to Tags, to allow easy visibility of these tags. For Face Tags in particular, Users may assign a Face associated with that Tag as the Tag Icon. However, in the current implementation, most users don’t make use of the Tag Icon assignment. This is because the process involves 2 steps:</p>
+
+
+
+<ul>
+<li>Confirm a face to a tag (which may lead to the creation of a new tag)</li>
+<li>Manually assign the face as the Tag Icon.</li>
+</ul>
+
+
+
+<div>
+<a href="https://media.giphy.com/media/Ur7xdyRAwdh3LXOZSQ/giphy.gif"><img src="//media.giphy.com/media/Ur7xdyRAwdh3LXOZSQ/giphy.gif"></a>
+</div>
+Watch on Imgur for higher resolution: <a href="https://imgur.com/a/ME34rht">https://imgur.com/a/ME34rht</a>
+
+
+
+<p>This can be annoying for the User if there are a large number of Tags.</p>
+
+
+
+<p>These two processes can be easily automated, so that whenever a new Tag is created (as a consequence of Face …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kartik Ramesh</b></span>
+  on <time datetime="2020-06-17 12:53:10+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-06-17_Tiny_Gemini_Client_in_Bash" rel="bookmark" class="u-url"
        title="Tiny Gemini Client in Bash" target="_blank">
       <time class="m-date" datetime="2020-06-17 11:06:40+00:00">
@@ -199,98 +290,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://www.kdab.com/how-to-declare-a-qhash-overload/" rel="bookmark" class="u-url"
-       title="How to declare a qHash overload" target="_blank">
-      <time class="m-date" datetime="2020-06-17 09:00:15+00:00">
-        Jun
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How to declare a qHash overload
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today’s blog post is about something that should be simple and apparently it causes trouble: how to declare a qHash overload for a custom datatype. This is necessary when we want to use custom datatypes as keys in a QHash. From the documentation:</p>
-<blockquote><p>A QHash’s key type has additional requirements other than being an assignable data type: it must provide operator==(), and there must also be a qHash() function in the type’s namespace that returns a hash value for an argument of the key’s type.</p></blockquote>
-<p>In other words, given a class like:</p>
-<pre>namespace NS &#123;
-
-class EXPORT MyClass
-&#123;
-    A m_a;
-    B m_b;
-    C m_c; 
-    D m_d;
-    ~~~
-};
-
-}
-</pre>
-<p>How do we implement its qHash() overload? Let’s find out! (Most of this applies to std::hash too.)</p>
-Look at its operator==
-
-<p>The first thing to look at is the …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2020-06-17 09:00:15+00:00" class="dt-published"></time>
-  Wed 17 Jun 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/links/2020/06/blogging-easy/" rel="bookmark" class="u-url"
-       title="Blogging is easy" target="_blank">
-      <time class="m-date" datetime="2020-06-17 10:06:13+02:00">
-        Jun
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Blogging is easy
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>If I had to make a list of my 5 favorite blogs, <a href="https://buttondown.email/weeklymusings/archive">Weekly Musings by Scott Nesbitt</a> would be included. <a href="https://buttondown.email/weeklymusings/archive/weekly-musings-072-on-blogging-again/">Issue 72</a> is about blogging:</p>
-<blockquote>
-<p>Blogging should be as easy as composing and sending an email. It <em>can</em> be that easy.. Actually, it is. In the end, how complex blogging gets doesn’t depend on the technology you use. It depends on you. You can choose to make blogging easy. You can choose to make it difficult. But if blogging is important to you, why not eliminate as much entropy as possible and take the easier route?</p>
-</blockquote>
-<p>It’s kind of a response to <a href="https://www.robinrendle.com/notes/blogging-should-be-easy.html">a post by Robin Rendle</a> who is using a quite complex blogging setup. But it is so complex because he himself has made it so complex.</p>
-<p>There are platforms like <a href="https://write.as/">Write.as</a> where blogging is very …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-17 10:06:13+02:00" class="dt-published"></time>
-  Wed 17 Jun 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://who-t.blogspot.com/2020/06/its-templates-all-way-down-part-2.html" rel="bookmark" class="u-url"
        title="It's templates all the way down - part 2" target="_blank">
       <time class="m-date" datetime="2020-06-17 04:36:00+00:00">
@@ -317,6 +316,40 @@ Look at its operator==
   on <time datetime="2020-06-17 04:36:00+00:00" class="dt-published"></time>
   Wed 17 Jun 2020
   in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://tonsky.me/blog/monitors/" rel="bookmark" class="u-url"
+       title="Time to upgrade your monitor" target="_blank">
+      <time class="m-date" datetime="2020-06-17 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Time to upgrade your monitor
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  A non-comprehensive and opinionated guide to best monitor for programming
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
+  on <time datetime="2020-06-17 00:00:00+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -571,40 +604,6 @@ guests. See you there!</p>
   on <time datetime="2020-06-15 00:00:00+00:00" class="dt-published"></time>
   Mon 15 Jun 2020
   in Research Software Hour.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://tonsky.me/blog/syncthing/" rel="bookmark" class="u-url"
-       title="Computers as I used to love them" target="_blank">
-      <time class="m-date" datetime="2020-06-15 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Computers as I used to love them
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  File synchronization can be fun and painless if you don’t have to deal with corporate bullshit.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2020-06-15 00:00:00+00:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
