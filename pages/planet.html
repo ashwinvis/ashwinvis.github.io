@@ -90,8 +90,9 @@
               </ol>
             </li>
             <li>
-              <a href="https://ashwin.info.tm/feeds/all.atom.xml">Feeds</a>
+              <a href="https://ashwin.info.tm/pages/subscribe.html">Subscribe</a>
               <ol>
+                <li><a href="https://ashwin.info.tm/feeds/all.atom.xml">Feeds</a></li>
                 <li><a href="https://ashwin.info.tm/feeds/blog.atom.xml">Feeds: Blog</a></li>
                 <li><a href="https://ashwin.info.tm/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
               </ol>
@@ -140,6 +141,230 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://jlelse.blog/thoughts/2020/06/successful-day/" rel="bookmark" class="u-url"
+       title="A successful day" target="_blank">
+      <time class="m-date" datetime="2020-06-17 00:03:46+02:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      A successful day
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Today (or already yesterday at the time of publication of this article) was a quite successful day. 💪</p>
+<p>I managed to convert my girlfriend to a Firefox and Bitwarden user. Since her computer was acting crazy and marked all downloaded files as viruses, we not only removed the McAfee antivirus program and activated Windows Defender instead, but also installed Firefox (even with uBlock Origin!). Now she can finally download and view PDF files again without any problems. 😄</p>
+<p>But also she now uses Bitwarden (with <a href="https://jlelse.blog/links/2019/10/bitwardenrs/">my bitwarden_rs server</a>) instead of storing her passwords in OneNote. Since Bitwarden also offers autofill functions and synchronization between all devices, I think she is actually quite excited about it. 😁</p>
+<p>And last but not least, since Samsung Internet does not seem to support autofill, she now also uses Firefox Preview (with uBlock Origin) on her mobile phone …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 00:03:46+02:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://pointieststick.com/2020/06/16/laptop-update-3-fixed-the-audio-jack-input-source/" rel="bookmark" class="u-url"
+       title="Laptop update 3: fixed the audio jack input source" target="_blank">
+      <time class="m-date" datetime="2020-06-16 21:24:26+00:00">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Laptop update 3: fixed the audio jack input source
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I found a way to get external microphones connected to the audio jack working for <a href="https://pointieststick.com/2020/06/08/lenovo-thinkpad-x1-yoga-impressions-bugs-workarounds-and-thoughts-about-the-future/">my laptop</a> ! KDE contributor Debarpan Debnath pointed me to <a href="https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Correctly_detect_microphone_plugged_in_a_4-pin_3.5mm_(TRRS)_jack">an Arch wiki page</a> that helped me reach a solution:</p>
+
+
+
+<ol>
+<li>Open/create the file <code>/etc/modprobe.d/alsa.conf</code> and add the following  on a new line: <code>options snd_hda_intel index=0 model=dell-headset-multi</code>
+</li>
+<li>go to System Settings &gt; Audio &gt; Advanced &gt; and check the checkbox saying “Automatically switch all running streams when a new output becomes available” (this applies to inputs too)</li>
+<li>Reboot</li>
+<li>Mute the microphone using the keyboard’s microphone mute button</li>
+</ol>
+
+
+
+<p>Now the audio jack microphone is detected and will be automatically switched to! This also fixes <a href="https://bugzilla.kernel.org/show_bug.cgi?id=208139">the issue I was having with the mute button not muting the right microphone</a>; it was in fact the same problem as the external microphone itself not working. I …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nate Graham</b></span>
+  on <time datetime="2020-06-16 21:24:26+00:00" class="dt-published"></time>
+  Tue 16 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://cocoonfly.wordpress.com/2020/06/16/the-first-milestone/" rel="bookmark" class="u-url"
+       title="The First Milestone" target="_blank">
+      <time class="m-date" datetime="2020-06-16 17:58:41+00:00">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The First Milestone
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Meet Bob, I am sure most of us remember him from ‘Bob the Builder’. An animated series many of us would’ve watched as children. Bob the Builder and his machine team are ready to tackle any project. Bob and the Can-Do Crew demonstrate the power of positive thinking, problem-solving, teamwork, and follow-through. The team always … <p><a href="https://cocoonfly.wordpress.com/2020/06/16/the-first-milestone/">Continue reading <span>The First Milestone</span></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>apoosmaximus</b></span>
+  on <time datetime="2020-06-16 17:58:41+00:00" class="dt-published"></time>
+  Tue 16 Jun 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621092205527023616/in-nature-erosion-patterns-are-driven-by-the" rel="bookmark" class="u-url"
+       title="In nature, erosion patterns are driven by the interactions of..." target="_blank">
+      <time class="m-date" datetime="2020-06-16 10:01:24-05:00">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      In nature, erosion patterns are driven by the interactions of...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/f8781de3298b4129280f1c48d154a5c7/75857f93bf842dae-d6/s500x750/01ee52ce6f111f36127ceb19be62f14316d78066.gifv"> <img src="https://66.media.tumblr.com/316991097a9df2d5bed5335737420510/75857f93bf842dae-87/s500x750/271b2ce59d41fce102d7a8b0700c5bc7de9fade1.gifv"> <img src="https://66.media.tumblr.com/1269018b7635fc5486573ad35d06c734/75857f93bf842dae-83/s500x750/33b191080de69a173d4271c27051ee41397e6a4d.gifv"> <p><a href="https://fyfluiddynamics.com/2020/06/dissolving-caramel/">In nature, erosion patterns are driven by the interactions of flow and topography. Here, researchers study that process by watching caramel dissolve. </a>
+(Image and research credit: <a href="https://doi.org/10.1103/PhysRevFluids.5.053802">C. Cohen et al.</a>)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-16 10:01:24-05:00" class="dt-published"></time>
+  Tue 16 Jun 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/06/dissolving-caramel/" rel="bookmark" class="u-url"
+       title="Dissolving Caramel" target="_blank">
+      <time class="m-date" datetime="2020-06-16 15:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Dissolving Caramel
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In nature, erosion patterns are driven by the interactions of flow and topography. Here, researchers study that process in the lab by placing an inclined block of caramel in quiescent <a href="https://fyfluiddynamics.com/2020/06/dissolving-caramel/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-06-16 15:00:00+00:00" class="dt-published"></time>
+  Tue 16 Jun 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blogdecjunior.tumblr.com/post/621088420041736192/going-to-amrita" rel="bookmark" class="u-url"
+       title="going to amrita" target="_blank">
+      <time class="m-date" datetime="2020-06-16 19:31:14+05:30">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      going to amrita
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I have two long skinny hands;A heart pumping blood,And a playlist from ninteen sixty nine,on my...
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-16 19:31:14+05:30" class="dt-published"></time>
+  Tue 16 Jun 2020
+  in the champaka.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://nedbatchelder.com//blog/202006/math_factoid_of_the_day_58.html" rel="bookmark" class="u-url"
        title="Math factoid of the day: 58" target="_blank">
       <time class="m-date" datetime="2020-06-16 07:35:20-04:00">
@@ -166,213 +391,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-06-16 07:35:20-04:00" class="dt-published"></time>
   Tue 16 Jun 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://ashwindhakaita.blogspot.com/2020/06/the-mypaint-brush-engine-is-now-working.html" rel="bookmark" class="u-url"
-       title="The MyPaint Brush Engine is now working" target="_blank">
-      <time class="m-date" datetime="2020-06-16 04:42:09+00:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The MyPaint Brush Engine is now working
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>It has been more than 2 weeks since the coding period began and I didn't post much because the project was just begun and there was no big progress. Coming to the project, the MyPaint brush engine plugin has been integrated into Krita and is working. Though, it is very rudimentary as of now, we can't customize it, we can't load/save brushes and there is no settings widget. All we can do as of now is just use the default settings for painting. The rest of the things will be taken care of during this summer.Work Done:
-<div>Over the last two weeks, I worked on the KisMyPaintBrush, KisMyPaintSurface, MyPaintopPlugin classes.  Last week I solely worked on draw_dab and get_color methods which are responsible for painting the dabs over the canvas. Those methods occupied most of the week.<div><a href="https://1.bp.blogspot.com/-DM4_zBrOT8k/XuhKJtm2_nI/AAAAAAAAChk/irm4GQiYSlYHR6MpnbjReFPQhAm3eJn_QCLcBGAsYHQ/s1600/bubble.png"><img src="//1.bp.blogspot.com/-DM4_zBrOT8k/XuhKJtm2_nI/AAAAAAAAChk/irm4GQiYSlYHR6MpnbjReFPQhAm3eJn_QCLcBGAsYHQ/s640/bubble.png"></a></div>                                                                                          Bubble …</div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ashwin Dhakaita</b></span>
-  on <time datetime="2020-06-16 04:42:09+00:00" class="dt-published"></time>
-  Tue 16 Jun 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621001601441759232/in-roman-hills-as-above-we-see-expansive" rel="bookmark" class="u-url"
-       title="In Roman Hill’s “As Above,” we see expansive..." target="_blank">
-      <time class="m-date" datetime="2020-06-15 10:01:17-05:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      In Roman Hill’s “As Above,” we see expansive...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/4f7b51f96a88cc5b15ac1691ceb51278/62d91dbba514ea05-41/s500x750/1d6e27f724923d7c862f3582b7030ab4ea666e92.gifv"> <img src="https://66.media.tumblr.com/44a266eb962e2083cdc9b111525a0ce5/62d91dbba514ea05-c4/s500x750/7bfac0228234f4bd43dce2b13263776584c92065.gifv"> <img src="https://66.media.tumblr.com/84263b74142cb024b11bcc01886f1a89/62d91dbba514ea05-39/s500x750/4abb51e552ec31f28c801bb894d2f800e7118e8b.gifv"> <p><a href="https://fyfluiddynamics.com/2020/06/as-above/">In Roman Hill’s “As Above,” we see expansive celestial landscapes. Except, in reality, we are watching fluids undergoing a chemical reaction on an 8 sq mm canvas.</a> 
-(Video and image credit: <a href="http://www.romanhill.fr/">R. Hill</a>)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-15 10:01:17-05:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/as-above/" rel="bookmark" class="u-url"
-       title="“As Above”" target="_blank">
-      <time class="m-date" datetime="2020-06-15 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      “As Above”
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In Roman Hill&#8217;s &#8220;As Above,&#8221; we see expansive celestial landscapes: nebulae, the corona of a star, and expanding interstellar dust clouds. Except, in reality, we are watching fluids undergoing a <a href="https://fyfluiddynamics.com/2020/06/as-above/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-15 15:00:00+00:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-15_Why_Wiki%E2%80%BD" rel="bookmark" class="u-url"
-       title="Why Wiki‽" target="_blank">
-      <time class="m-date" datetime="2020-06-15 08:54:37+00:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Why Wiki‽
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Indeed, why? I’m writing this because I want a wiki and I’m interested in <a href="https://alexschroeder.ch/wiki/Gemini">Gemini</a> and I’ve read some things on the mailing list that make me think other people don’t love wiki as much as I do. (<a href="https://lists.orbitalfox.eu/archives/gemini/2020/001611.html">Start with Sean Conner’s post</a> if you’re interested. Some quotes from that thread can be found in the comments on <a href="https://alexschroeder.ch/wiki/2020-06-04_Gemini_Upload">2020-06-04 Gemini Upload</a>.)</p><p>Some people think that we should all self-host the things we write. This is a good idea. We don’t want to depend on faceless corporations that can take away our online presence on a whim.</p><p>At the same time, however, not all of us have the means to self-host. Some of us have no time, because system administration takes time to learn, takes time to practice, takes time to do. Some of …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-15 08:54:37+00:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/posts/costs-blog/" rel="bookmark" class="u-url"
-       title="Costs to run this blog" target="_blank">
-      <time class="m-date" datetime="2020-06-15 09:57:00+02:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Costs to run this blog
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://kevq.uk/how-much-does-it-cost-to-run-this-blog/">Kev Quirk</a> and <a href="https://zerokspot.com/weblog/2020/06/15/how-much-does-it-cost-to-run-this-blog/">Horst Gutmann</a> recently wrote about how much it cost them to run their blogs. So I thought, I could write about it too.</p>
-<p>Let’s start with a simple list of services I use for this blog:</p>
-
-
-
-Service
-Monthly costs
-
-
-
-
-Porkbun: Domain name ($ 22,09 per year)
-&lt; 2 €
-
-
-Cloudflare: DNS
-0 €
-
-
-Hetzner: Virtual Private Server
-2,96 €
-
-
-BunnyCDN: CDN + Media Storage
-&lt; 0,10 €
-
-
-<strong>Total</strong>
-~ 5 €
-
-
-
-<p>I registered the domain name <em>jlelse.blog</em> with <a href="https://porkbun.com/">Porkbun</a>, because they are usually the cheapest register, but still support important features like DNSSEC. To compare prices between registers, I use <a href="https://tld-list.com/">TLD List</a>.</p>
-<p>For DNS hosting (and as a registrar of a few other domains) I use <a href="https://www.cloudflare.com/">Cloudflare</a>. They provide DNS hosting for free and also have an API, <a href="https://jlelse.blog/links/2020/05/dnscontrol/">which I use with dnscontrol</a>. I don’t use the proxy or CDN though …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-15 09:57:00+02:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -496,32 +514,32 @@ guests. See you there!</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://diegoe.be/2020/06/14/fix-hdmi-audio-lag-on-retina-macbookpro-2013-macbook111-in-linux/" rel="bookmark" class="u-url"
-       title="Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux" target="_blank">
-      <time class="m-date" datetime="2020-06-14 23:37:05+00:00">
+    <a href="https://tonsky.me/blog/syncthing/" rel="bookmark" class="u-url"
+       title="Computers as I used to love them" target="_blank">
+      <time class="m-date" datetime="2020-06-15 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          14
+          15
         </span>
         2020
       </time>
       <div class="p-name">
-      Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux
+      Computers as I used to love them
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Fix HDMI audio lag on Retina MacBookPro 2013 (macbook11,1) in Linux by adding intel_iommu=on,igfx_off to your kernel options.
+  File synchronization can be fun and painless if you don’t have to deal with corporate bullshit.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Diego Escalante Urrelo</b></span>
-  on <time datetime="2020-06-14 23:37:05+00:00" class="dt-published"></time>
-  Sun 14 Jun 2020
-  in Planet GNOME.
+  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
+  on <time datetime="2020-06-15 00:00:00+00:00" class="dt-published"></time>
+  Mon 15 Jun 2020
+  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1023,555 +1041,6 @@ I changed my file sharing scripts I moved from rofi to bemenu I changed my scrip
 
 </article>
 
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/paraview-hackathon-still-happening-last-one-was-on-may-6/" rel="bookmark" class="u-url"
-       title="ParaView Hackathon still happening ! Last one was on may 6." target="_blank">
-      <time class="m-date" datetime="2020-05-26 05:25:54+00:00">
-        May
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      ParaView Hackathon still happening ! Last one was on may 6.
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>On Wednesday, May 6, 2020, Kitware organized an online ParaView Hackathon. It was open to anyone, Kitwarean or not, programmer or not. The objectives of ... <a href="https://blog.kitware.com/paraview-hackathon-still-happening-last-one-was-on-may-6/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/paraview-hackathon-still-happening-last-one-was-on-may-6/">ParaView Hackathon still happening ! Last one was on may 6.</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Mathieu Westphal</b></span>
-  on <time datetime="2020-05-26 05:25:54+00:00" class="dt-published"></time>
-  Tue 26 May 2020
-  in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.python.org/dev/peps/pep-0619/" rel="bookmark" class="u-url"
-       title="PEP 619: Python 3.10 Release Schedule" target="_blank">
-      <time class="m-date" datetime="2020-05-25 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PEP 619: Python 3.10 Release Schedule
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Author: Pablo Galindo Salgado
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-25 00:00:00+00:00" class="dt-published"></time>
-  Mon 25 May 2020
-  in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://lucumr.pocoo.org/2020/5/24/my-standard-desktop/" rel="bookmark" class="u-url"
-       title="My Standard Desktop" target="_blank">
-      <time class="m-date" datetime="2020-05-24 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      My Standard Desktop
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Like many others I'm spending a lot more time working from home now.  This
-in no way is a new situation for me, but I figured I might as well write a
-bit about how I work from home given the increased interest.  Mostly
-because after seeing so many complex dev setups recently I wanted to share
-something that's <em>largely</em> bland.</p>
-<img alt="/static/desktop-2020.jpg" src="http://lucumr.pocoo.org/static/desktop-2020.jpg">
-<div>
-What's There
-<p>Most of what I have here is from IKEA, like pretty much everything we own
-in this flat.  This is for a handful of reasons.  The first one is —&nbsp;and
-that's quite consistent with my general approach to most things —&nbsp;that
-it's standardized, mass produced and if something breaks you can get it
-repaired easily.</p>
-<p>The most important items are the <a href="https://www.ikea.com/at/de/p/idasen-schreibtisch-sitz-steh-braun-dunkelgrau-s79280955/">IDÅSEN</a>
-standing desk and the <a href="https://www.ikea.com/at/de/p/markus-drehstuhl-vissle-dunkelgrau-70261150/">MARKUS</a>
-swivel chair.  Since it's a standing desk that is moving …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Armin Ronacher</b></span>
-  on <time datetime="2020-05-24 00:00:00+00:00" class="dt-published"></time>
-  Sun 24 May 2020
-  in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://hynek.me/articles/waiting-in-asyncio/" rel="bookmark" class="u-url"
-       title="Waiting in asyncio" target="_blank">
-      <time class="m-date" datetime="2020-05-21 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Waiting in asyncio
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>One of the main appeals of using Python’s <code>asyncio</code> is being able to fire off many coroutines and run them concurrently. How many ways do you know for waiting for their results?</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
-  on <time datetime="2020-05-21 00:00:00+00:00" class="dt-published"></time>
-  Thu 21 May 2020
-  in Hynek Schlawak.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://pyfound.blogspot.com/2020/04/lightning-talks-part-1.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="Lightning Talks Part 1 - Python Language Summit 2020" target="_blank">
-      <time class="m-date" datetime="2020-05-14 14:03:46.317000-04:00">
-        May
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Lightning Talks Part 1 - Python Language Summit 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="http://3.bp.blogspot.com/-6oU0kt4rj-I/XquIvXEoWiI/AAAAAAAAE3w/DEFADH8dH1ELQYDV1EuEZ80O6ZGxaZWggCK4BGAYYCw/s1600/sumana-and-eric-snow.jpg"><img src="https://3.bp.blogspot.com/-6oU0kt4rj-I/XquIvXEoWiI/AAAAAAAAE3w/DEFADH8dH1ELQYDV1EuEZ80O6ZGxaZWggCK4BGAYYCw/s1600/sumana-and-eric-snow.jpg"></a>
-
-Sumana Harihareswara
-
-What do you need from pip, PyPI, and packaging? 
-
-Python packaging has seen relatively quick development in recent years as a result of increased funding; most famously the new <a href="https://pypi.org/">PyPI.org</a> website was launched in 2018. The current work in progress includes <a href="https://pyfound.blogspot.com/2018/12/upcoming-pypi-improvements-for-2019.html">malware detection</a> and <a href="https://www.python.org/dev/peps/pep-0458/">signed packages</a> on PyPI, a new dependency resolver for pip, and a revamp of virtualenv. Much of this work is funded by grants from companies. (<a href="https://wiki.python.org/psf/Fundable%20Packaging%20Improvements">Details on the Working Group page</a>.) Sumana Harihareswara from the <a href="https://wiki.python.org/psf/PackagingWG">Packaging Working Group</a> is a prolific grant proposal writer; she <a href="https://www.harihareswara.net/need-from-pip.pdf">presented ideas for further development</a>.
-
-<a href="https://pyfound.blogspot.com/2020/04/the-2020-python-language-summit.html">Read more 2020 Python Language Summit coverage</a>.
-
-Python packaging ideas for the future include:
-
-<ul>
-<li>Better specifications, toolchain, and services for building distributions
-</li>
-<li>Robust interoperability testing
-</li>
-<li>Revamp PyPI API
-</li>
-<li>Make setuptools the reference implementation of the distutils API
-</li>
-<li>Provide more standardized editable installations
-</li>
-<li>Add …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>A. Jesse Jiryu Davis (noreply@blogger.com)</b></span>
-  on <time datetime="2020-05-14 14:03:46.317000-04:00" class="dt-published"></time>
-  Thu 14 May 2020
-  in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blogdecjunior.tumblr.com/post/618019773791567872/a-midsummer-night" rel="bookmark" class="u-url"
-       title="A midsummer night" target="_blank">
-      <time class="m-date" datetime="2020-05-13 22:36:25+05:30">
-        May
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      A midsummer night
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  *makes a joke about JS*11:49 &lt;cjunior&gt;Going to post it on #memes when it&rsquo;s a bit...
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-13 22:36:25+05:30" class="dt-published"></time>
-  Wed 13 May 2020
-  in the champaka.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://gregoryszorc.com/blog/2020/05/10/using-rust-to-power-python-importing-with-oxidized_importer/" rel="bookmark" class="u-url"
-       title="Using Rust to Power Python Importing With oxidized_importer" target="_blank">
-      <time class="m-date" datetime="2020-05-10 13:15:00+00:00">
-        May
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Using Rust to Power Python Importing With oxidized_importer
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Using Rust to Power Python Importing With oxidized_importer
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Gregory Szorc</b></span>
-  on <time datetime="2020-05-10 13:15:00+00:00" class="dt-published"></time>
-  Sun 10 May 2020
-  in Gregory Szorc's Digital Home.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://husemeplz.blogspot.com/2020/05/its-not-easy.html" rel="bookmark" class="u-url"
-       title="it's not easy..." target="_blank">
-      <time class="m-date" datetime="2020-05-10 11:15:38.583000+05:30">
-        May
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      it's not easy...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  It's not easy being a mom.<div></div><div>Who knew right?</div><div></div><div>Think back to the first day on your first job. In a completely new surrounding, you might have been asked to take care of an issue without any prior training. Becoming a mom is like that, but nothing like that.</div><div></div><div>Overnight, you are made the keyholder to the self destruct button of the entire world. One wrong step and kaboom. There is a glaring lack of an authoritative instruction manual, which leads to the void being supplemented by a plethora of unofficial, "friendly neighbor" advices. And that's always helpful.</div><div></div><div>***</div><div></div><div>It's not easy to be a working mom.&nbsp;</div><div></div><div>To be a committed employee to your job and to meet the needs of a toddler. I don't need to say much. You are the superhero every kid deserves.</div><div></div><div>***</div><div></div><div>It's not easy to be …</div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Harisankar S A (noreply@blogger.com)</b></span>
-  on <time datetime="2020-05-10 11:15:38.583000+05:30" class="dt-published"></time>
-  Sun 10 May 2020
-  in Excuse me please.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.unsungfilms.com/26522/the-painted-warrior/" rel="bookmark" class="u-url"
-       title="The Painted Warrior" target="_blank">
-      <time class="m-date" datetime="2020-04-20 17:00:40+00:00">
-        Apr
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Painted Warrior
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In Mark Wilson’s 2019 documentary The Painted Warrior, Stephen offers himself up as his artist wife’s canvas, carrying her designs on his upper body whilst putting himself through gruelling physical ordeals. Both Stephen and Aeni are artists. The film documents an unusual collaboration through which Stephen embodies Aeni’s art and takes them across trails, running [&#8230;]</p>
-<p>The article <a href="https://www.unsungfilms.com/26522/the-painted-warrior/">The Painted Warrior</a> by <a href="https://www.unsungfilms.com/author/theo/">Theo Alexander</a> appeared first on <a href="https://www.unsungfilms.com">Unsung Films</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Theo Alexander</b></span>
-  on <time datetime="2020-04-20 17:00:40+00:00" class="dt-published"></time>
-  Mon 20 Apr 2020
-  in Unsung Films.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://morepypy.blogspot.com/2020/04/pypy-731-released.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
-       title="PyPy 7.3.1 released" target="_blank">
-      <time class="m-date" datetime="2020-04-10 15:29:12.156000+02:00">
-        Apr
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PyPy 7.3.1 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>
-The PyPy team is proud to release the version 7.3.1 of PyPy, which includes
-two different interpreters:
-
-<blockquote>
-<div>
-<ul>
-<li>PyPy2.7, which is an interpreter supporting the syntax and the features of
-Python 2.7 including the stdlib for CPython 2.7.13</li>
-<li>PyPy3.6: which is an interpreter supporting the syntax and the features of
-Python 3.6, including the stdlib for CPython 3.6.9.</li>
-</ul>
-</div>
-</blockquote>
-The interpreters are based on much the same codebase, thus the multiple
-release. This is a micro release, no APIs have changed since the 7.3.0 release
-in December, but read on to find out what is new.
-
-
-Conda Forge now <a href="https://conda-forge.org/blog//2020/03/10/pypy">supports PyPy</a> as a Python interpreter. The support right now
-is being built out. After this release, many more c-extension-based
-packages can be successfully built and uploaded. This is the result …</div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>mattip (noreply@blogger.com)</b></span>
-  on <time datetime="2020-04-10 15:29:12.156000+02:00" class="dt-published"></time>
-  Fri 10 Apr 2020
-  in PyPy Status Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://pradyunsg.me/blog/2020/03/27/pip-resolver-testing/" rel="bookmark" class="u-url"
-       title="Testing the next-gen pip dependency resolver" target="_blank">
-      <time class="m-date" datetime="2020-03-27 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Testing the next-gen pip dependency resolver
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This is an attempt to summarize the broader software architecture around dependency resolution in pip and how testing is being done around this area.</p>
-
-<p>The motivation behind writing this, is to make sure all the developers working on this project are on the same page, and to have a written record about the state of affairs.</p>
-
-Architecture
-
-<p>The “legacy” resolver in pip, is implemented as part of pip’s codebase and has been a part of it for many years. It’s very tightly coupled with the existing code, isn’t easy to work with and has severe backward compatibility concerns with modifying directly – which is why we’re implementing a separate “new” resolver in this project, instead of trying to improve the existing one.</p>
-
-<p>The “new” resolver that is under development, is not implemented as part of pip’s …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-27 00:00:00+00:00" class="dt-published"></time>
-  Fri 27 Mar 2020
-  in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://phdcomics.com/comics.php?f=2041" rel="bookmark" class="u-url"
-       title="03/20/18 PHD comic: 'The PHD Movies - Free during the Coronavirus Crisis'" target="_blank">
-      <time class="m-date" datetime="2020-03-20 02:33:14-07:00">
-        Mar
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      03/20/18 PHD comic: 'The PHD Movies - Free during the Coronavirus Crisis'
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-
-
-
-      <b>Piled Higher
-        &amp; Deeper <i> by Jorge
-        Cham</i></b>
-
-
-        <div><b>www.phdcomics.com</b></div>
-
-
-
-      <img alt="Click on the title below to read the comic" src="http://www.phdcomics.com/comics/archive/phd032020s.gif">
-
-
-
-        <div>title:
-          &quot;<a href="http://www.phdcomics.com/comics.php?f=2041">The PHD Movies - Free during the Coronavirus Crisis</a>&quot; - originally published 
-3/20/2018  
-        <p>For the latest news in PHD Comics, <a href="http://www.phdcomics.com/comics.php">CLICK HERE!</a></p>
-
-</div>
-
-
-
-
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-03-20 02:33:14-07:00" class="dt-published"></time>
-  Fri 20 Mar 2020
-  in PHD Comics.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://treyhunner.com/2020/01/passing-functions-as-arguments/" rel="bookmark" class="u-url"
-       title="Passing a function as an argument to another function in Python" target="_blank">
-      <time class="m-date" datetime="2020-01-14 08:00:00-08:00">
-        Jan
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Passing a function as an argument to another function in Python
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>One of the more hair-raising facts we learn in my introductory Python trainings is that <strong>you can pass functions into other functions</strong>.
-You can pass functions around because in Python, <strong>functions are objects</strong>.</p>
-
-<p>You likely don&rsquo;t need to know about this in your first week of using Python, but as you dive deeper into Python you&rsquo;ll find that it can be quite convenient to understand how to pass a function into another function.</p>
-
-<p>This is part 1 of what I expect to be a series on the various properties of &ldquo;function objects&rdquo;.
-This article focuses on what a new Python programmer should know and appreciate about <strong>the object-nature of Python&rsquo;s functions</strong>.</p>
-
-<ul></ul>
-
-
-Functions can be referenced
-
-<p>If you try to use a function without putting parentheses after it Python won&rsquo;t complain but it also won&rsquo;t do …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-01-14 08:00:00-08:00" class="dt-published"></time>
-  Tue 14 Jan 2020
-  in Trey Hunner.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
 </div>
 <!-- /content -->
       </div>
@@ -1606,6 +1075,7 @@ Functions can be referenced
       <div class="m-col-s-3 m-col-t-6">
         <h3>Sitemap</h3>
         <ul>
+          <li><a href="https://ashwin.info.tm/pages/subscribe.html">Subscribe</a></li>
           <li><a href="https://ashwin.info.tm/feeds/all.atom.xml">Feeds</a></li>
           <li><a href="https://ashwin.info.tm/feeds/blog.atom.xml">Feeds: Blog</a></li>
           <li><a href="https://ashwin.info.tm/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>

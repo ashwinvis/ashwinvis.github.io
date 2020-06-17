@@ -2,18 +2,18 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Software | Ashwin Vishnu&#39;s Website</title>
+  <title>How to Subscribe | Ashwin Vishnu&#39;s Website</title>
   <link rel="stylesheet" href="https://ashwin.info.tm/static/m-light.compiled.css" />
   <link rel="stylesheet" href="https://ashwin.info.tm/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwin.info.tm/images/logo_ashwin.png" type="image/png" />
-  <link rel="canonical" href="https://ashwin.info.tm/pages/software.html" />
+  <link rel="canonical" href="https://ashwin.info.tm/pages/subscribe.html" />
   <link href="https://ashwin.info.tm/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
-  <meta property="og:title" content="Software" />
-  <meta name="twitter:title" content="Software" />
-  <meta property="og:url" content="https://ashwin.info.tm/pages/software.html" />
+  <meta property="og:title" content="How to Subscribe" />
+  <meta name="twitter:title" content="How to Subscribe" />
+  <meta property="og:url" content="https://ashwin.info.tm/pages/subscribe.html" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="page" />
   <!-- Mastodon Link verification -->
@@ -122,155 +122,36 @@
   <div class="m-container m-container-inflatable">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <h1>Software</h1>
+        <h1>How to Subscribe</h1>
 <!-- content -->
-<p>A showcase of all the projects which I have <strong>co-developed</strong>, have
-<strong>contributed</strong> to, or <strong>maintain</strong> myself:</p>
-<aside class="contents" id="contents">
-<h3>Contents</h3>
+<p>Two ways: <a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom</a> feed or <a href="https://joinmastodon.org/">Mastodon</a>.</p>
+<section id="atom">
+<h2><a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom</a></h2>
+<p>This blog delivers updates via <a href="https://en.wikipedia.org/wiki/Atom_(Web_standard)">Atom</a> feeds, a sibling of <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> format. To use
+it, you need a reader – you can find some <a href="https://switching.software/replace/google-news/">suggestions here</a>.</p>
+<aside class="m-note m-info">
+<p>I publish atom feeds for</p>
 <ul>
-<li><a href="#research-software" id="id2">Research Software</a><ul>
-<li><a href="#snek5000" id="id3">snek5000</a></li>
-<li><a href="#fluiddyn-project" id="id4">FluidDyn project</a></li>
-<li><a href="#caeroc" id="id5">Caeroc</a></li>
-</ul>
-</li>
-<li><a href="#open-source-contributions" id="id6">Open-Source contributions</a></li>
-<li><a href="#humble-projects" id="id7">Humble projects</a></li>
+<li><a href="feeds/all.atom.xml">All articles</a></li>
+<li><a href="feeds/blog.atom.xml">Category: Blog</a></li>
+<li><a href="feeds/tech-talk.atom.xml">Category: Tech Talk</a></li>
 </ul>
 </aside>
-<hr />
-<section id="research-software">
-<h2><a href="#id2">Research Software</a></h2>
-<section id="snek5000">
-<h3><a href="https://github.com/exabl/snek5000">snek5000</a></h3>
-<p>On my postdoc role, I started using <a href="https://github.com/Nek5000/Nek5000">Nek5000</a>, is a really popular Fortran 77 HPC
-code. Using it is bittersweet experience:</p>
-<ul>
-<li>loads of features</li>
-<li>good performance 🚀</li>
-<li>monolithic, uses in-house build tools</li>
-<li>utilizes several legacy Fortran anti-features</li>
-</ul>
-<p>On the bright side, as a user there is a separation of the user code and
-parameters from the <a href="https://github.com/Nek5000/Nek5000">Nek5000</a> core. This fact was exploited to create
-<a href="https://github.com/exabl/snek5000">snek5000</a> to create a pythonic API to effortlessly launch simulations with
-varying parameters.</p>
+<p>You can send responses via <a href="/pages/contact.html">email</a>.</p>
 </section>
-<section id="fluiddyn-project">
-<h3><a href="https://fluiddyn.bitbucket.io">FluidDyn project</a></h3>
-<p>An ecosystem of packages for research and teaching in fluid dynamics.</p>
-<p>Some key features include:</p>
+<section id="mastodon">
+<h2><a href="https://joinmastodon.org/">Mastodon</a></h2>
+<p>I often announce my blog posts on <a href="https://mastodon.acc.sunet.se/&#64;ashwinvis">my Mastodon profile</a> - where you could
+follow and even send responses too.</p>
+<p>For the uninitiated, <a href="https://joinmastodon.org/">Mastodon</a> is like e-mail. More accurately, it is
+one among many software solutions which forms a network called <a href="https://fediverse.party/">fediverse</a>.
+There are several server instances you can <a href="https://instances.social/">join</a>.</p>
+<aside class="m-note m-info">
 <ul>
-<li><p><a href="https://fluiddyn.readthedocs.io">FluidDyn</a>: Classes to manage
-parameters, large sets of files, named numpy arrays, scripting job
-submissions in clusters, MPI wrappers to easily implement sequential
-and parallel programming.</p>
-</li>
-<li><p><a href="https://fluidfft.readthedocs.io">FluidFFT</a>: Unified Python and
-C++ API for various sequential and MPI &amp; GPU accelerated FFT
-implementations.</p>
-</li>
-<li><p><a href="https://fluidsim.readthedocs.io">FluidSim</a>: Arguably one of
-fastest CFD framework specializing in pseudospectral solvers, with
-on-the-fly post processing. Example of a research done using
-FluidSim:</p>
-<iframe width="560" height="315"
-src="https://invidious.snopyta.org/embed/QHKBOQQJ8XE" frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen> </iframe></li>
-<li><p><a href="https://fluidimage.readthedocs.io">FluidImage</a>: Calibrate,
-pre-process and perform PIV on large sets of images asynchronously
-and with open-source software.</p>
-</li>
-<li><p><a href="https://bitbucket.org/fluiddyn/fluiddevops">FluidDevOps</a>: Nifty
-CLI tools to help ease the development workflow.</p>
-</li>
+<li><a href="https://mastodon.acc.sunet.se/&#64;ashwinvis">My Mastodon profile</a></li>
+<li><a href="https://mastodon.acc.sunet.se/users/ashwinvis/remote_follow">Follow me</a></li>
 </ul>
-</section>
-<section id="caeroc">
-<h3><a href="https://github.com/ashwinvis/caeroc">Caeroc</a></h3>
-<p>A toy desktop GUI calculator for compressible aerodynamics built on top
-of <a href="https://github.com/AeroPython/scikit-aero">scikit-aero</a>. Demo:</p>
-<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts"
-src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775"
-frameborder="0" allowfullscreen> </iframe></section>
-</section>
-<hr />
-<section id="open-source-contributions">
-<h2><a href="#id6">Open-Source contributions</a></h2>
-<p>I have also contributed some serious projects such as:</p>
-<ul>
-<li><a href="https://github.com/python/cpython">CPython</a>: the reference Python
-interpreter. I helped in fixing:<ul>
-<li>A typo (<a href="https://github.com/python/cpython/pull/15614">link</a>)!</li>
-<li>Detected broken docstrings (<a href="https://github.com/python/cpython/pull/13491">link</a>).</li>
-</ul>
-</li>
-<li><a href="https://github.com/msprev/fzf-bibtex">fzf-bibtex</a>: a BibTeX source for
-fzf. I added:<ul>
-<li>Biblatex support. (<a href="https://github.com/msprev/fzf-bibtex/pull/14">link</a>)</li>
-</ul>
-</li>
-<li><a href="https://jupyterlab.readthedocs.io">JupyterLab</a>: Next generation
-UI for Jupyter notebooks. I have:<ul>
-<li>added access to solarized theme for the text editor
-(<a href="https://github.com/jupyterlab/jupyterlab/pull/4445">link</a>)</li>
-<li>fixed font rendering in the terminal
-(<a href="https://github.com/jupyterlab/jupyterlab/pull/5732">link</a>)</li>
-</ul>
-</li>
-<li><a href="https://github.com/ashwinvis/pymc3">PyMC3</a>: Probabilistic
-programming in Python. I have:<ul>
-<li>improved the overall structure of documentation
-(<a href="https://github.com/pymc-devs/pymc3/pull/3303">link</a>)</li>
-</ul>
-</li>
-<li><a href="https://pythran.readthedocs.io">Pythran</a>: An ahead-of-time
-compiler for creating blazing fast Python extensions from Pure python
-or NumPy code. I contributed to:<ul>
-<li>improvements in Pythran extension build process
-(<a href="https://github.com/serge-sans-paille/pythran/pull/941">link</a>)</li>
-<li>linting Pythran configuration files
-(<a href="https://github.com/serge-sans-paille/pythran/pull/1145">link</a>)</li>
-</ul>
-</li>
-<li><a href="https://github.com/suan/vim-instant-markdown">vim-instant-markdown</a>
-&amp; <a href="https://github.com/suan/instant-markdown-d">Instant markdown server</a>: Write
-markdown with instant preview. I added MathJax support and much more. I am
-currently the main maintainer.</li>
-<li><a href="https://github.com/We-Care-sweden/analysis-scripts">We-Care analysis scripts</a>: Processing data collected from <a href="https://covidmap.se">covidmap.se</a>. I have:<ul>
-<li>performed some basic maintenance, and implemented database logic
-(<a href="https://github.com/We-Care-sweden/analysis-scripts/pulls?q=is%3Apr+author%3Aashwinvis+is%3Aclosed">pull-requests</a>)</li>
-</ul>
-</li>
-</ul>
-</section>
-<hr />
-<section id="humble-projects">
-<h2><a href="#id7">Humble projects</a></h2>
-<p>Some repositories that I maintain for my personal use and possible
-reuse.</p>
-<ul>
-<li><a href="https://github.com/ashwinvis/awkupy">awkupy</a>: AWK meets Python: API, CLI
-and IPython / Jupyter magics for data wrangling with awk.</li>
-<li><a href="https://github.com/writing-resources/awesome-scientific-writing">Awesome scientific
-writing</a>:
-A curated list of resources for writing scientific documents with
-markup languages.</li>
-<li><a href="https://github.com/ashwinvis/backdrop-theme">Backdrop theme</a>: A
-responsive pelican theme compiled node, grunt, sass technologies.</li>
-<li><a href="https://source.coderefinery.org/ashwinvis/dotfiles">dotfiles</a>: My Linux
-configuration files a.k.a. dotfiles.</li>
-<li><a href="https://github.com/ashwinvis/jupyter-wordcloud">jupyter-wordcloud</a>:
-Generate wordclouds from Jupyter notebooks.</li>
-<li><a href="https://github.com/ashwinvis/pelican-planet">pelican-planet</a>: Pelican
-plugin which asynchronously aggregates feeds into the planet page in this
-website.</li>
-<li><a href="https://github.com/ashwinvis/xrandr-extend">xrandr-extend</a>: CLI
-tool to calculate and use non-HIDPI external displays along with
-HIDPI monitors.</li>
-</ul>
+</aside>
 </section>
 <!-- /content -->
       </div>
