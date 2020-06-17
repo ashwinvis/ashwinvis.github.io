@@ -47,7 +47,7 @@ alias blog="/path/to/venv/bin/python -m pelican_ashwinvis.util.write"
 ```
 
 which is a script encourage writing. [See here for more
-details]](https://ashwin.info.tm/pelican-mini-cms.html).
+details]](https://ashwinvis.github.io/pelican-mini-cms.html).
 
 ## License
 
