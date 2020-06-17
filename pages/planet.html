@@ -141,9 +141,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jlelse.blog/thoughts/2020/06/successful-day/" rel="bookmark" class="u-url"
-       title="A successful day" target="_blank">
-      <time class="m-date" datetime="2020-06-17 00:03:46+02:00">
+    <a href="https://alexschroeder.ch/wiki/2020-06-17_Tiny_Gemini_Client_in_Bash" rel="bookmark" class="u-url"
+       title="Tiny Gemini Client in Bash" target="_blank">
+      <time class="m-date" datetime="2020-06-17 11:06:40+00:00">
         Jun
         <span class="m-date-day">
           17
@@ -151,23 +151,136 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      A successful day
+      Tiny Gemini Client in Bash
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Today (or already yesterday at the time of publication of this article) was a quite successful day. 💪</p>
-<p>I managed to convert my girlfriend to a Firefox and Bitwarden user. Since her computer was acting crazy and marked all downloaded files as viruses, we not only removed the McAfee antivirus program and activated Windows Defender instead, but also installed Firefox (even with uBlock Origin!). Now she can finally download and view PDF files again without any problems. 😄</p>
-<p>But also she now uses Bitwarden (with <a href="https://jlelse.blog/links/2019/10/bitwardenrs/">my bitwarden_rs server</a>) instead of storing her passwords in OneNote. Since Bitwarden also offers autofill functions and synchronization between all devices, I think she is actually quite excited about it. 😁</p>
-<p>And last but not least, since Samsung Internet does not seem to support autofill, she now also uses Firefox Preview (with uBlock Origin) on her mobile phone …</p>
+  <div><p>This defines the function “gemini” such that you can visit a Gemini URL from the command line.</p><pre>function gemini () {
+    if [[ $1 =~ gemini://([^/:]+)(:([0-9]+))? ]]; then
+    host=${BASH_REMATCH[1]}
+    port=${BASH_REMATCH[3]:-1965}
+    echo Contacting $host:$port...
+    echo "$1" | openssl s_client -quiet -connect $host:$port 2&gt;/dev/null
+    else
+    echo $1 is not a Gemini URL
+    fi
+}</pre><p>I should write another one that uses a client certificate, too. &#x1f642;</p><p>And here’s an uploader using Titan.</p><pre>function titan () {
+    if [[ -z "$2" ]]; then
+        echo Usage: $0 URL TOKEN [FILE]
+    exit
+    else
+    token=$2
+    fi
+    if [[ $1 =~ titan://([^/:]+)(:([0-9]+))? ]]; then
+    host=${BASH_REMATCH[1]}
+    port=${BASH_REMATCH[3]:-1965}
+    echo Reading ${2:-/dev/stdin}
+    read -d "" file &lt; "${3:-/dev/stdin}"
+    size=${#file}
+    echo Posting $size bytes to $host:$port...
+    printf "$1;token=$token;mime=text/plain;size=$size\r\n$file" \
+        | openssl s_client -quiet -connect $host:$port …</pre></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-17 00:03:46+02:00" class="dt-published"></time>
+  on <time datetime="2020-06-17 11:06:40+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.kdab.com/how-to-declare-a-qhash-overload/" rel="bookmark" class="u-url"
+       title="How to declare a qHash overload" target="_blank">
+      <time class="m-date" datetime="2020-06-17 09:00:15+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to declare a qHash overload
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Today’s blog post is about something that should be simple and apparently it causes trouble: how to declare a qHash overload for a custom datatype. This is necessary when we want to use custom datatypes as keys in a QHash. From the documentation:</p>
+<blockquote><p>A QHash’s key type has additional requirements other than being an assignable data type: it must provide operator==(), and there must also be a qHash() function in the type’s namespace that returns a hash value for an argument of the key’s type.</p></blockquote>
+<p>In other words, given a class like:</p>
+<pre>namespace NS &#123;
+
+class EXPORT MyClass
+&#123;
+    A m_a;
+    B m_b;
+    C m_c; 
+    D m_d;
+    ~~~
+};
+
+}
+</pre>
+<p>How do we implement its qHash() overload? Let’s find out! (Most of this applies to std::hash too.)</p>
+Look at its operator==
+
+<p>The first thing to look at is the …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2020-06-17 09:00:15+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2020/06/blogging-easy/" rel="bookmark" class="u-url"
+       title="Blogging is easy" target="_blank">
+      <time class="m-date" datetime="2020-06-17 10:06:13+02:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Blogging is easy
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>If I had to make a list of my 5 favorite blogs, <a href="https://buttondown.email/weeklymusings/archive">Weekly Musings by Scott Nesbitt</a> would be included. <a href="https://buttondown.email/weeklymusings/archive/weekly-musings-072-on-blogging-again/">Issue 72</a> is about blogging:</p>
+<blockquote>
+<p>Blogging should be as easy as composing and sending an email. It <em>can</em> be that easy.. Actually, it is. In the end, how complex blogging gets doesn’t depend on the technology you use. It depends on you. You can choose to make blogging easy. You can choose to make it difficult. But if blogging is important to you, why not eliminate as much entropy as possible and take the easier route?</p>
+</blockquote>
+<p>It’s kind of a response to <a href="https://www.robinrendle.com/notes/blogging-should-be-easy.html">a post by Robin Rendle</a> who is using a quite complex blogging setup. But it is so complex because he himself has made it so complex.</p>
+<p>There are platforms like <a href="https://write.as/">Write.as</a> where blogging is very …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 10:06:13+02:00" class="dt-published"></time>
   Wed 17 Jun 2020
   in jlelse's Blog.
 </footer>
@@ -178,79 +291,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2020/06/16/laptop-update-3-fixed-the-audio-jack-input-source/" rel="bookmark" class="u-url"
-       title="Laptop update 3: fixed the audio jack input source" target="_blank">
-      <time class="m-date" datetime="2020-06-16 21:24:26+00:00">
+    <a href="https://who-t.blogspot.com/2020/06/its-templates-all-way-down-part-2.html" rel="bookmark" class="u-url"
+       title="It's templates all the way down - part 2" target="_blank">
+      <time class="m-date" datetime="2020-06-17 04:36:00+00:00">
         Jun
         <span class="m-date-day">
-          16
+          17
         </span>
         2020
       </time>
       <div class="p-name">
-      Laptop update 3: fixed the audio jack input source
+      It's templates all the way down - part 2
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I found a way to get external microphones connected to the audio jack working for <a href="https://pointieststick.com/2020/06/08/lenovo-thinkpad-x1-yoga-impressions-bugs-workarounds-and-thoughts-about-the-future/">my laptop</a> ! KDE contributor Debarpan Debnath pointed me to <a href="https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture#Correctly_detect_microphone_plugged_in_a_4-pin_3.5mm_(TRRS)_jack">an Arch wiki page</a> that helped me reach a solution:</p>
-
-
-
-<ol>
-<li>Open/create the file <code>/etc/modprobe.d/alsa.conf</code> and add the following  on a new line: <code>options snd_hda_intel index=0 model=dell-headset-multi</code>
-</li>
-<li>go to System Settings &gt; Audio &gt; Advanced &gt; and check the checkbox saying “Automatically switch all running streams when a new output becomes available” (this applies to inputs too)</li>
-<li>Reboot</li>
-<li>Mute the microphone using the keyboard’s microphone mute button</li>
-</ol>
-
-
-
-<p>Now the audio jack microphone is detected and will be automatically switched to! This also fixes <a href="https://bugzilla.kernel.org/show_bug.cgi?id=208139">the issue I was having with the mute button not muting the right microphone</a>; it was in fact the same problem as the external microphone itself not working. I …</p>
+  <p>In <a href="https://who-t.blogspot.com/2020/03/its-templates-all-way-down.html">Part 1</a> I've shown you how to create your own distribution image using <a href="https://freedesktop.pages.freedesktop.org/ci-templates/">the freedesktop.org CI templates</a>. In Part 2, we'll go a bit further than that by truly embracing nested images.</p> <p>Our assumption here is that we have two projects (or jobs), with the second one relying heavily on the first one. For example, the base project and a plugin, or a base project and its language bindings. What we'll get out of this blog post is a setup where we have  </p><ul><li>a base image in the base project</li><li>an image extending that base image in a different project</li><li>automatic rebuilds of that extended image when the base image changes</li></ul>And none of your contributors have to care about this. It's all handled automatically and filing a MR against a project will build against the right image …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-06-16 21:24:26+00:00" class="dt-published"></time>
-  Tue 16 Jun 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://cocoonfly.wordpress.com/2020/06/16/the-first-milestone/" rel="bookmark" class="u-url"
-       title="The First Milestone" target="_blank">
-      <time class="m-date" datetime="2020-06-16 17:58:41+00:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The First Milestone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Meet Bob, I am sure most of us remember him from ‘Bob the Builder’. An animated series many of us would’ve watched as children. Bob the Builder and his machine team are ready to tackle any project. Bob and the Can-Do Crew demonstrate the power of positive thinking, problem-solving, teamwork, and follow-through. The team always … <p><a href="https://cocoonfly.wordpress.com/2020/06/16/the-first-milestone/">Continue reading <span>The First Milestone</span></a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>apoosmaximus</b></span>
-  on <time datetime="2020-06-16 17:58:41+00:00" class="dt-published"></time>
-  Tue 16 Jun 2020
+  <span class="p-author"><b>Peter Hutterer (noreply@blogger.com)</b></span>
+  on <time datetime="2020-06-17 04:36:00+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -391,40 +456,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-06-16 07:35:20-04:00" class="dt-published"></time>
   Tue 16 Jun 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-15_Why_Wiki%E2%80%BD" rel="bookmark" class="u-url"
-       title="Why Wiki‽" target="_blank">
-      <time class="m-date" datetime="2020-06-15 08:54:37+00:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Why Wiki‽
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Indeed, why? I’m writing this because I want a wiki and I’m interested in <a href="https://alexschroeder.ch/wiki/Gemini">Gemini</a> and I’ve read some things on the mailing list that make me think other people don’t love wiki as much as I do. (<a href="https://lists.orbitalfox.eu/archives/gemini/2020/001611.html">Start with Sean Conner’s post</a> if you’re interested. Some quotes from that thread can be found in the comments on <a href="https://alexschroeder.ch/wiki/2020-06-04_Gemini_Upload">2020-06-04 Gemini Upload</a>.)</p><p>Some people think that we should all self-host the things we write. This is a good idea. We don’t want to depend on faceless corporations that can take away our online presence on a whim.</p><p>At the same time, however, not all of us have the means to self-host. Some of us have no time, because system administration takes time to learn, takes time to practice, takes time to do. Some of …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-15 08:54:37+00:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
