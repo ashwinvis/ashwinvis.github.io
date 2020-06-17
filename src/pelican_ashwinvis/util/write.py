@@ -56,7 +56,7 @@ def modify(files):
 
 def bridgy(slug, posse):
     """
-    curl -i -d source=https://ashwin.info.tm/hack-the-crisis.html \
+    curl -i -d source=https://ashwinvis.github.io/hack-the-crisis.html \
             -d target=https://brid.gy/publish/mastodon \
             https://brid.gy/publish/webmention
     """
