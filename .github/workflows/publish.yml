@@ -59,4 +59,4 @@ jobs:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_branch: master
         publish_dir: ./output
-        cname: ashwinvis.github.io
+        # cname: ashwinvis.github.io
