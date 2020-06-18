@@ -141,6 +141,80 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621182923199201280/with-spring-heading-into-summer-many-parts-of-the" rel="bookmark" class="u-url"
+       title="With spring heading into summer, many parts of the United..." target="_blank">
+      <time class="m-date" datetime="2020-06-17 10:03:19-05:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      With spring heading into summer, many parts of the United...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/26de759f89f465e4b475522097008b80/b0d8690d92b8c55a-aa/s500x750/6187671017340a5a2796709d3740a9f5562d000d.jpg"><p>
+<a href="https://fyfluiddynamics.com/2020/06/toad-singing/">With spring heading into summer, many parts of the United States enjoy a nighttime chorus of frogs and toads.</a>
+
+
+(Image credit: <a href="https://pixabay.com/photos/water-nature-pool-wildlife-3074593/">cassiescisco</a>)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 10:03:19-05:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/06/toad-singing/" rel="bookmark" class="u-url"
+       title="Toad Singing" target="_blank">
+      <time class="m-date" datetime="2020-06-17 15:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Toad Singing
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  With spring heading into summer, many parts of the United States enjoy a nighttime chorus of frogs and toads. These amphibians are singing to attract mates and delineate territory. Some, <a href="https://fyfluiddynamics.com/2020/06/toad-singing/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-06-17 15:00:00+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/thoughts/2020/06/apple-sucks/" rel="bookmark" class="u-url"
        title="Apple sucks 🙅‍♂️" target="_blank">
       <time class="m-date" datetime="2020-06-17 14:54:50+02:00">
@@ -232,6 +306,64 @@ Watch on Imgur for higher resolution: <a href="https://imgur.com/a/ME34rht">http
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-17_Tiny_Gemini_Client_in_Bash" rel="bookmark" class="u-url"
+       title="Tiny Gemini Client in Bash" target="_blank">
+      <time class="m-date" datetime="2020-06-17 11:06:40+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Tiny Gemini Client in Bash
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>This defines the function “gemini” such that you can visit a Gemini URL from the command line.</p><pre>function gemini () {
+    if [[ $1 =~ gemini://([^/:]+)(:([0-9]+))? ]]; then
+    host=${BASH_REMATCH[1]}
+    port=${BASH_REMATCH[3]:-1965}
+    echo Contacting $host:$port...
+    echo "$1" | openssl s_client -quiet -connect $host:$port 2&gt;/dev/null
+    else
+    echo $1 is not a Gemini URL
+    fi
+}</pre><p>I should write another one that uses a client certificate, too. &#x1f642;</p><p>And here’s an uploader using Titan.</p><pre>function titan () {
+    if [[ -z "$2" ]]; then
+        echo Usage: $0 URL TOKEN [FILE]
+    exit
+    else
+    token=$2
+    fi
+    if [[ $1 =~ titan://([^/:]+)(:([0-9]+))? ]]; then
+    host=${BASH_REMATCH[1]}
+    port=${BASH_REMATCH[3]:-1965}
+    echo Reading ${2:-/dev/stdin}
+    read -d "" file &lt; "${3:-/dev/stdin}"
+    size=${#file}
+    echo Posting $size bytes to $host:$port...
+    printf "$1;token=$token;mime=text/plain;size=$size\r\n$file" \
+        | openssl s_client -quiet -connect $host:$port …</pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 11:06:40+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://who-t.blogspot.com/2020/06/its-templates-all-way-down-part-2.html" rel="bookmark" class="u-url"
        title="It's templates all the way down - part 2" target="_blank">
       <time class="m-date" datetime="2020-06-17 04:36:00+00:00">
@@ -266,6 +398,40 @@ Watch on Imgur for higher resolution: <a href="https://imgur.com/a/ME34rht">http
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://xkcd.com/2321/" rel="bookmark" class="u-url"
+       title="Low-Background Metal" target="_blank">
+      <time class="m-date" datetime="2020-06-17 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Low-Background Metal
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="The only effect on the history books were a few confusing accounts of something called 'Greek fire.'" src="https://imgs.xkcd.com/comics/low_background_metal.png" title="The only effect on the history books were a few confusing accounts of something called 'Greek fire.'">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 00:00:00+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://tonsky.me/blog/monitors/" rel="bookmark" class="u-url"
        title="Time to upgrade your monitor" target="_blank">
       <time class="m-date" datetime="2020-06-17 00:00:00+00:00">
@@ -292,77 +458,6 @@ Watch on Imgur for higher resolution: <a href="https://imgur.com/a/ME34rht">http
   on <time datetime="2020-06-17 00:00:00+00:00" class="dt-published"></time>
   Wed 17 Jun 2020
   in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621092205527023616/in-nature-erosion-patterns-are-driven-by-the" rel="bookmark" class="u-url"
-       title="In nature, erosion patterns are driven by the interactions of..." target="_blank">
-      <time class="m-date" datetime="2020-06-16 10:01:24-05:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      In nature, erosion patterns are driven by the interactions of...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/f8781de3298b4129280f1c48d154a5c7/75857f93bf842dae-d6/s500x750/01ee52ce6f111f36127ceb19be62f14316d78066.gifv"> <img src="https://66.media.tumblr.com/316991097a9df2d5bed5335737420510/75857f93bf842dae-87/s500x750/271b2ce59d41fce102d7a8b0700c5bc7de9fade1.gifv"> <img src="https://66.media.tumblr.com/1269018b7635fc5486573ad35d06c734/75857f93bf842dae-83/s500x750/33b191080de69a173d4271c27051ee41397e6a4d.gifv"> <p><a href="https://fyfluiddynamics.com/2020/06/dissolving-caramel/">In nature, erosion patterns are driven by the interactions of flow and topography. Here, researchers study that process by watching caramel dissolve. </a>
-(Image and research credit: <a href="https://doi.org/10.1103/PhysRevFluids.5.053802">C. Cohen et al.</a>)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-16 10:01:24-05:00" class="dt-published"></time>
-  Tue 16 Jun 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/dissolving-caramel/" rel="bookmark" class="u-url"
-       title="Dissolving Caramel" target="_blank">
-      <time class="m-date" datetime="2020-06-16 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Dissolving Caramel
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In nature, erosion patterns are driven by the interactions of flow and topography. Here, researchers study that process in the lab by placing an inclined block of caramel in quiescent <a href="https://fyfluiddynamics.com/2020/06/dissolving-caramel/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-16 15:00:00+00:00" class="dt-published"></time>
-  Tue 16 Jun 2020
-  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -477,40 +572,6 @@ that wlroots is a crucial core component tying together a lot of …</p>
   on <time datetime="2020-06-15 00:00:00+00:00" class="dt-published"></time>
   Mon 15 Jun 2020
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2320/" rel="bookmark" class="u-url"
-       title="Millennium Problems" target="_blank">
-      <time class="m-date" datetime="2020-06-15 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Millennium Problems
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="The hard part about opening a hole in the proof of the Poincaré conjecture is that Grigori Perelman will come out of retirement to try to fix it by drawing a loop around the hole and contracting it to a point." src="https://imgs.xkcd.com/comics/millennium_problems.png" title="The hard part about opening a hole in the proof of the Poincaré conjecture is that Grigori Perelman will come out of retirement to try to fix it by drawing a loop around the hole and contracting it to a point.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-15 00:00:00+00:00" class="dt-published"></time>
-  Mon 15 Jun 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1007,41 +1068,6 @@ Plugins! Livestream! and more features planned: <a href="https://joinpeertube.or
   on <time datetime="2020-05-28 10:25:00+02:00" class="dt-published"></time>
   Thu 28 May 2020
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://shibumi.dev/posts/wayland-in-2020/" rel="bookmark" class="u-url"
-       title="Wayland in 2020" target="_blank">
-      <time class="m-date" datetime="2020-05-28 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Wayland in 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  It is nearly a year since my last blog article about Wayland on Linux. Thus I thought it is time for an update on how my desktop with sway developed. What happened?
-I changed my file sharing scripts I moved from rofi to bemenu I changed my scripts, that were based on rofi For my file sharing scripts I introduced a new helper script with the generic name share.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-05-28 00:00:00+00:00" class="dt-published"></time>
-  Thu 28 May 2020
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
