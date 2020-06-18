@@ -319,6 +319,64 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-17_Tiny_Gemini_Client_in_Bash" rel="bookmark" class="u-url"
+       title="Tiny Gemini Client in Bash" target="_blank">
+      <time class="m-date" datetime="2020-06-17 11:06:40+00:00">
+        Jun
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Tiny Gemini Client in Bash
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>This defines the function “gemini” such that you can visit a Gemini URL from the command line.</p><pre>function gemini () {
+    if [[ $1 =~ gemini://([^/:]+)(:([0-9]+))? ]]; then
+    host=${BASH_REMATCH[1]}
+    port=${BASH_REMATCH[3]:-1965}
+    echo Contacting $host:$port...
+    echo "$1" | openssl s_client -quiet -connect $host:$port 2&gt;/dev/null
+    else
+    echo $1 is not a Gemini URL
+    fi
+}</pre><p>I should write another one that uses a client certificate, too. &#x1f642;</p><p>And here’s an uploader using Titan.</p><pre>function titan () {
+    if [[ -z "$2" ]]; then
+        echo Usage: $0 URL TOKEN [FILE]
+    exit
+    else
+    token=$2
+    fi
+    if [[ $1 =~ titan://([^/:]+)(:([0-9]+))? ]]; then
+    host=${BASH_REMATCH[1]}
+    port=${BASH_REMATCH[3]:-1965}
+    echo Reading ${2:-/dev/stdin}
+    read -d "" file &lt; "${3:-/dev/stdin}"
+    size=${#file}
+    echo Posting $size bytes to $host:$port...
+    printf "$1;token=$token;mime=text/plain;size=$size\r\n$file" \
+        | openssl s_client -quiet -connect $host:$port …</pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-17 11:06:40+00:00" class="dt-published"></time>
+  Wed 17 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://who-t.blogspot.com/2020/06/its-templates-all-way-down-part-2.html" rel="bookmark" class="u-url"
        title="It's templates all the way down - part 2" target="_blank">
       <time class="m-date" datetime="2020-06-17 04:36:00+00:00">
