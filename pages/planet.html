@@ -141,6 +141,140 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://nedbatchelder.com//blog/202006/pickles_nine_flaws.html" rel="bookmark" class="u-url"
+       title="Pickle’s nine flaws" target="_blank">
+      <time class="m-date" datetime="2020-06-20 16:07:39-04:00">
+        Jun
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Pickle’s nine flaws
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Python&#8217;s <a href="https://docs.python.org/3/library/pickle.html">pickle</a>
+module is a very convenient way to serialize and de-serialize objects. It needs
+no schema, and can handle arbitrary Python objects. But it has problems. This
+post briefly explains the problems.</p><p>Some people will tell you to never use pickle because it&#8217;s bad.  I won&#8217;t go
+that far.  I&#8217;ll say, only use pickle if you are OK with its nine flaws:</p><ul>
+
+<li>Insecure</li>
+<li>Old pickles look like old code</li>
+<li>Implicit</li>
+<li>Over-serializes</li>
+<li>__init__ isn&#8217;t called</li>
+<li>Python only</li>
+<li>Unreadable</li>
+<li>Appears to pickle code</li>
+<li>Slow</li>
+
+</ul>The flaws<a href="#h_the_flaws"></a><p>Here is a brief explanation of each flaw, in roughly the order of
+importance.</p>Insecure<a href="#h_insecure"></a><p>Pickles can be hand-crafted that will have malicious effects when you
+unpickle them. As a result, you should never unpickle data that you do not
+trust.</p><p>The insecurity is not because pickles contain code, but …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-06-20 16:07:39-04:00" class="dt-published"></time>
+  Sat 20 Jun 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-20_Glasses" rel="bookmark" class="u-url"
+       title="Glasses" target="_blank">
+      <time class="m-date" datetime="2020-06-20 19:55:05+00:00">
+        Jun
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Glasses
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I’ve been using reading glasses for a few years, now. I think I bought them in 2016. I used to read a lot. Then I started disliking it. It must have taken me a year or two before I realised what was happening. I was getting a headache! The glasses took some getting used to, but so far so good.</p><p>Sadly, the age-related deterioration of my eye sight kept picking up speed and when I started doing home office this year, began to sit in front of a small laptop screen for hours instead of hooking it up to a large monitor that is more than an arm’s length away from my eyes, I had to put on my reading glasses while sitting at the laptop, too.</p><p>Over the weeks, I started to get more headaches, though. Headaches …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-20 19:55:05+00:00" class="dt-published"></time>
+  Sat 20 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://kate-editor.org/post/2020/2020-06-20-windows-store-monthly-statistics/" rel="bookmark" class="u-url"
+       title="Windows Store Monthly Statistics" target="_blank">
+      <time class="m-date" datetime="2020-06-20 15:40:00+00:00">
+        Jun
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Windows Store Monthly Statistics
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://www.microsoft.com/store/apps/9NWMW7BB59HW">Kate</a> and <a href="https://www.microsoft.com/store/apps/9N41MSQ1WNM8">Okular</a> 20.04 are now available in the store!</p>
+<p>I hope this update solves some issues of the 19.12 versions available before.</p>
+<p>Here are the number of acquisitions for the last 30 days (roughly equal to the number of installations, not mere downloads) for our applications:</p>
+<ul>
+<li><p><a href="https://www.microsoft.com/store/apps/9NWMW7BB59HW">Kate - Advanced Text Editor</a> - 4,465 acquisitions</p></li>
+<li><p><a href="https://www.microsoft.com/store/apps/9N41MSQ1WNM8">Okular - More than a reader</a> - 4,399 acquisitions</p></li>
+<li><p><a href="https://www.microsoft.com/store/apps/9PFXCD722M2C">Filelight - Disk Usage Visualizer</a> - 1,193 acquisitions</p></li>
+<li><p><a href="https://www.microsoft.com/store/apps/9PMBNG78PFK3">Kile - A user-friendly TeX/LaTeX editor</a> - 617 acquisitions</p></li>
+<li><p><a href="https://www.microsoft.com/store/apps/9PPRZ2QHLXTG">KStars - Astronomy Software</a> - 163 acquisitions</p></li>
+<li><p><a href="https://www.microsoft.com/store/apps/9PB5MD7ZH8TL">Elisa - Modern Music Player</a> - 138 acquisitions</p></li>
+</ul>
+<p>A nice stream of new users for our software on the Windows platform.</p>
+<p>If you want to help to bring more stuff KDE develops on Windows, we have some meta <a href="https://phabricator.kde.org/T9575">Phabricator task</a> were you can show up and tell for which parts you want to do work on.</p>
+<p>A guide …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kate News</b></span>
+  on <time datetime="2020-06-20 15:40:00+00:00" class="dt-published"></time>
+  Sat 20 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/links/2020/06/feeds-page/" rel="bookmark" class="u-url"
        title="Making RSS more visible again with a /feeds page" target="_blank">
       <time class="m-date" datetime="2020-06-20 12:32:36+02:00">
@@ -205,87 +339,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-06-20 09:18:48+00:00" class="dt-published"></time>
   Sat 20 Jun 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2020/06/20/kde-itinerary-osm-indoor-map-data.html" rel="bookmark" class="u-url"
-       title="Getting OSM Indoor Map Data for KDE Itinerary" target="_blank">
-      <time class="m-date" datetime="2020-06-20 07:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Getting OSM Indoor Map Data for KDE Itinerary
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Last week I wrote about <a href="/2020/06/13/kde-itinerary-osm-indoor-maps.html">train station and airport maps</a>
-for <a href="https://kde.org/applications/en/office/org.kde.itinerary">KDE Itinerary</a>.
-One important challenge for deploying this is how to get the necessary <a href="https://openstreetmap.org">OpenStreetMap</a> data
-to our users, a prototype that requires a local OSM database doesn’t help with that. There’s currently two likely contenders,
-explained below.</p>
-
-Determining Relevant Areas
-
-<p>Before we obtain the map data we have to solve another problem first: which area do we actually want to display? In
-typical map applications the area that is presented is usually not constraint, you can scroll in any direction as long
-as you want. That’s not what we need here though, we are only interested in a single (large) building.</p>
-
-<p>Constraining the map display to that area has a number of advantages, such as having a well-defined memory bounds.
-Even a big station mapped …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2020-06-20 07:00:00+00:00" class="dt-published"></time>
-  Sat 20 Jun 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-06-19_Wikipedia_via_Gemini" rel="bookmark" class="u-url"
-       title="Wikipedia via Gemini" target="_blank">
-      <time class="m-date" datetime="2020-06-19 20:41:55+00:00">
-        Jun
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Wikipedia via Gemini
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>When is this Gemini posting finally going to stop‽ I don’t know.</p><p>I don’t know.</p><p>It’s easy to work with, and so it’s easy to write new software for it. And so, when I saw a post <a href="https://lists.orbitalfox.eu/archives/gemini/2020/">on the mailing list</a> jokingly ask when Wikipedia was going to be available via Gemini, I sat down and wrote <a href="">a little server that acts as a proxy</a>. It asks for the language and page, it goes and looks at Wikipedia and returns with some plain text, which the server then translates into some form of Gemini response and returns to you.</p><p>Here’s an example page: <a href="">Project Gemini on Wikipedia</a>. If you’re interested in the source code, take a look at <a href="https://alexschroeder.ch/cgit/gemini-wikipedia/">the source repository</a>. It’s written in a few lines of Perl 5.</p><p>Peter Vernigorov also …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-19 20:41:55+00:00" class="dt-published"></time>
-  Fri 19 Jun 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -649,40 +702,6 @@ If you would like to participate as a voter in the next election join as a Suppo
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://nedbatchelder.com//blog/202006/math_factoid_of_the_day_58.html" rel="bookmark" class="u-url"
-       title="Math factoid of the day: 58" target="_blank">
-      <time class="m-date" datetime="2020-06-16 07:35:20-04:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Math factoid of the day: 58
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://en.wikipedia.org/wiki/58_(number)">58</a> is the sum of the first seven primes: 2 + 3 + 5 + 7 + 11 + 13 + 17.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-06-16 07:35:20-04:00" class="dt-published"></time>
-  Tue 16 Jun 2020
-  in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://researchsoftwarehour.github.io/2020/06/15/summer-break.html" rel="bookmark" class="u-url"
        title="Summer break!" target="_blank">
       <time class="m-date" datetime="2020-06-15 00:00:00+00:00">
@@ -1038,40 +1057,6 @@ Specifically, we’ll be focusing on the <a href="/learn">Learn</a> page …</p>
   on <time datetime="2020-06-01 00:00:00+00:00" class="dt-published"></time>
   Mon 01 Jun 2020
   in Fortran Newsletter.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://ekaitz.elenq.tech/donations-chibi-02.html" rel="bookmark" class="u-url"
-       title="ElenQ Donations — Chibi Scheme" target="_blank">
-      <time class="m-date" datetime="2020-05-31 00:00:00+03:00">
-        May
-        <span class="m-date-day">
-          31
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      ElenQ Donations — Chibi Scheme
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Donation to Chibi Scheme programming&nbsp;language</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ekaitz Zárraga</b></span>
-  on <time datetime="2020-05-31 00:00:00+03:00" class="dt-published"></time>
-  Sun 31 May 2020
-  in Ekaitz's tech blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
