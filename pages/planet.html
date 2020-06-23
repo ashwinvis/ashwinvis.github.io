@@ -141,75 +141,142 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2020/06/22/2020-kde-roadmap-mid-year-update/" rel="bookmark" class="u-url"
-       title="2020 KDE roadmap: mid-year update" target="_blank">
-      <time class="m-date" datetime="2020-06-22 22:17:24+00:00">
+    <a href="https://confifu.wordpress.com/2020/06/23/week-3-gsoc-project-report/" rel="bookmark" class="u-url"
+       title="Week 3: GSoC Project Report" target="_blank">
+      <time class="m-date" datetime="2020-06-23 10:13:18+00:00">
         Jun
         <span class="m-date-day">
-          22
+          23
         </span>
         2020
       </time>
       <div class="p-name">
-      2020 KDE roadmap: mid-year update
+      Week 3: GSoC Project Report
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Here’s a mid-year update on the <a href="https://pointieststick.com/2020/01/01/kde-roadmap-for-2020">2020 roadmap I proposed</a> six months ago:</p>
+  <p>This week I implemented views, drag and drop of storyboard items in the central view and made some small changes. I also ran unit-tests, checked for memory leaks and debugged code, but unfortunately we couldn’t get it tested by users as we got some crashes.</p>
 
 
 
-FUSE mounts to better support accessing remote locations in non-KDE apps: <span>DONE</span>
+<p>There are three views to customize what part of the storyboard item you see. Namely they are Thumbnail only, Comments only and Both. This was easy to implement as we only had to make changes to delegate and view class to draw the right parts based on the chosen view. </p>
 
 
 
-
-<p><code>kio-fuse</code> was released in beta form early this year and is already packaged in many distros. It’s working great! The final release will happen later this year.</p>
-
+<div><img alt="" src="//confifu.files.wordpress.com/2020/06/screenshot-from-2020-06-23-14-54-08.png?w=611">All view</div>
 
 
 
+<div><img alt="" src="//confifu.files.wordpress.com/2020/06/screenshot-from-2020-06-23-14-53-52.png?w=604">Comments Only View</div>
 
 
 
-Privilege escalation in KIO and Dolphin: <span>AT RISK</span>
+<div><img alt="" src="//confifu.files.wordpress.com/2020/06/screenshot-from-2020-06-23-14-53-59.png?w=612">Thumbnails only View</div>
 
 
 
-
-<p>It turned out that there was more work remaining here than I had anticipated. Unfortunately nobody seems to have the critical combination of domain knowledge, interest in working on it, and time to do so. Assistance on <a href="https://phabricator.kde.org/D7563">https://phabricator.kde.org/D7563</a> would be appreciated to help make it happen this year.</p>
-
+<p>I also implemented drag and drop of storyboard items. For this I implemented the mimeData and dropMimeData functions and then called the moveRows function in the dropMimeData function to move the rows.</p>
 
 
 
+<img alt="" src="//confifu.files.wordpress.com/2020/06/drag_and_drop.gif?w=600">Drag and drop
 
 
 
-Improved Samba share discovery in Dolphin: <span>DONE</span>
-
-
-
-
-<p>This was implemented for Dolphin 20.04. By all accounts, it’s working quite well!</p>
-
-
-
-
-
-
-
-Auto-rotation for tablets, convertibles …
+<p>Also …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-06-22 22:17:24+00:00" class="dt-published"></time>
-  Mon 22 Jun 2020
+  <span class="p-author"><b>Saurabh Kumar</b></span>
+  on <time datetime="2020-06-23 10:13:18+00:00" class="dt-published"></time>
+  Tue 23 Jun 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://www.figuiere.net/hub/blog/?2020/06/22/881-flatpak-extensions" rel="bookmark" class="u-url"
+       title="Flatpak extensions" target="_blank">
+      <time class="m-date" datetime="2020-06-23 04:30:17+00:00">
+        Jun
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Flatpak extensions
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Linux Audio
+
+
+When I started packaging music applications in Flatpak, I was confronted to the issue of audio plugins: lot of music software has effects, software instruments and others implemented as plugins colloquially called VST. When packaging Ardour, it became clear that supported these plugins...
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>hub</b></span>
+  on <time datetime="2020-06-23 04:30:17+00:00" class="dt-published"></time>
+  Tue 23 Jun 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/macos-hardware-requirements-by-version/" rel="bookmark" class="u-url"
+       title="MacOS hardware requirements vs. version" target="_blank">
+      <time class="m-date" datetime="2020-06-23 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      MacOS hardware requirements vs. version
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Older MacOS hardware is often of relevance for development or maintenance purposes.
+Like Windows, MacOS requirements increase over time.
+If the Apple computer is too old for a currently supported MacOS version, consider installing Linux, which normally works very well on Apple computer hardware.
+Apple maintains a list of
+<a href="https://support.apple.com/en-us/HT201624">no longer supported Apple hardware</a>.</p>
+
+<img alt="MacOS hardware requirement vs version" src="https://www.scivision.dev/images/2020/macos_hardware.png"> 
+MacOS requirements by version.
+
+
+<p><a href="https://github.com/scivision/macos-requirements">Plotted data</a>
+source is Wikipedia and Apple.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-23 00:00:00+00:00" class="dt-published"></time>
+  Tue 23 Jun 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -360,46 +427,6 @@ Auto-rotation for tablets, convertibles …
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/windows-nearby-sharing-bluetooth-slow/" rel="bookmark" class="u-url"
-       title="Windows Nearby sharing via slow Bluetooth" target="_blank">
-      <time class="m-date" datetime="2020-06-22 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Windows Nearby sharing via slow Bluetooth
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>When files need to be shared between two computers, whether at office, home or conference, major operating systems have peer-to-peer file sharing built in.</p>
-Windows
-<p><a href="https://support.microsoft.com/en-us/help/4091344/windows-10-share-things-with-nearby-devices">Windows Nearby sharing</a>
-uses Bluetooth only, which means file transfer speeds are a tiny fraction (far slower) than even 3G tethered internet.
-Windows Nearby has the advantage like other operating systems of not requiring internet, but the real-world file transfer throughput is on the order of 1 Mbps, due to the limitations of Bluetooth itself and interference from other 2.4 GHz devices, even when the two laptops are less than 3 meters apart.</p>
-<p>Windows Nearby file sharing is generally not practical for files over about 10 megabytes, due to the transfer rate of about 100..200 kilobytes / second in real-world use.
-That is, a 10 megabyte file takes about 2 minutes to transfer using …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-22 00:00:00+00:00" class="dt-published"></time>
-  Mon 22 Jun 2020
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://hunden.linuxkompis.se/2020/06/22/how-to-use-reddit-via-web-feeds.html" rel="bookmark" class="u-url"
        title="How to use Reddit via web feeds" target="_blank">
       <time class="m-date" datetime="2020-06-22 00:00:00+02:00">
@@ -477,40 +504,6 @@ The default web feeds
   on <time datetime="2020-06-21 18:04:10+02:00" class="dt-published"></time>
   Sun 21 Jun 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://medium.com/@mahmoudkhalil11/back-on-track-ba8e04b5ae9e?source=rss-9e65ff6fc1e8------2" rel="bookmark" class="u-url"
-       title="Back On Track" target="_blank">
-      <time class="m-date" datetime="2020-06-21 15:43:15+00:00">
-        Jun
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Back On Track
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In this blog post, I would like to give an overview of what had been done in the last couple of weeks, and the plan for the next few weeks. You can see my Project on GSoC GNOME Projects Page (<a href="https://summerofcode.withgoogle.com/projects/#6096970302619648">https://summerofcode.withgoogle.com/projects/#6096970302619648</a>), also you can see the Project Issue on GitLab (<a href="https://gitlab.gnome.org/GNOME/gitg/-/issues/270">https://gitlab.gnome.org/GNOME/gitg/-/issues/270</a>).</p><p>During the Community Bonding Period, I met with Alberto(my mentor) on Hangouts. We got to know each other more, and he gave me a task so that I get more familiar with the libgit2 and it’s wrapper that we use in Vala and in gitg libgit2-glib. During the implementation of the task, I got more comfortable with the workflow of gtk development, and I read more about the Meson Build System and how to build …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Mahmoud Ahmed Khalil</b></span>
-  on <time datetime="2020-06-21 15:43:15+00:00" class="dt-published"></time>
-  Sun 21 Jun 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -613,6 +606,40 @@ trust.</p><p>The insecurity is not because pickles contain code, but …</p>
   on <time datetime="2020-06-20 16:07:39-04:00" class="dt-published"></time>
   Sat 20 Jun 2020
   in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-20_Glasses" rel="bookmark" class="u-url"
+       title="Glasses" target="_blank">
+      <time class="m-date" datetime="2020-06-20 19:55:05+00:00">
+        Jun
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Glasses
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I’ve been using reading glasses for a few years, now. I think I bought them in 2016. I used to read a lot. Then I started disliking it. It must have taken me a year or two before I realised what was happening. I was getting a headache! The glasses took some getting used to, but so far so good.</p><p>Sadly, the age-related deterioration of my eye sight kept picking up speed and when I started doing home office this year, began to sit in front of a small laptop screen for hours instead of hooking it up to a large monitor that is more than an arm’s length away from my eyes, I had to put on my reading glasses while sitting at the laptop, too.</p><p>Over the weeks, I started to get more headaches, though. Headaches …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-20 19:55:05+00:00" class="dt-published"></time>
+  Sat 20 Jun 2020
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
