@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2020-06-15T17:23:27+02:00</updated><entry><title>Think before you monospace</title><link href="https://ashwinvis.github.io/ultimate-monospace.html" rel="alternate"></link><published>2020-06-15T17:23:27+02:00</published><updated>2020-06-15T17:23:27+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-06-15:/ultimate-monospace.html</id><summary type="html">&lt;p&gt;Put your programming font to the ultimate test case.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2020-06-24T09:30:09+02:00</updated><entry><title>Power to the user (CSS)</title><link href="https://ashwinvis.github.io/power-to-the-usercss.html" rel="alternate"></link><published>2020-06-24T09:30:09+02:00</published><updated>2020-06-24T09:30:09+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-06-24:/power-to-the-usercss.html</id><summary type="html">&lt;p&gt;Tweaking the world wide web, one CSS stylesheet at a time&lt;/p&gt;</summary><content type="html">&lt;p&gt;You probably know that you can tweak appearance of websites with add-ons like
+Stylus.  Ever since I figured out &lt;a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector"&gt;how to use
+Inspector&lt;/a&gt; and
+&lt;a href="https://github.com/openstyles/stylus/wiki/Writing-styles"&gt;how to write&lt;/a&gt;
+"installable" CSS stylesheets myself, I cannot resist the urge to fix websites
+with a uneasy appearance. I try to fix it with a few lines of CSS and share it
+with others.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107"&gt;GitHub Retro&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;GitHub quickly rolled out a new wider interface, which could be done a bit better,
+IMHO.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Before&lt;/th&gt;
+&lt;th align="center"&gt;After&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;img src="https://user-images.githubusercontent.com/9155111/85446389-ac604900-b594-11ea-8a1f-1018031719e0.png" width="100%"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="https://user-images.githubusercontent.com/9155111/85515309-42c85500-b5fd-11ea-94d1-057e972bdc8c.png" width="100%"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107"&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="https://github.com/ashwinvis/mastodon-relax"&gt;Mastodon Relax&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This is more advanced as it uses &lt;a href="https://github.com/FirefoxBar/xStyle/wiki/Style-format#use-advanced-options-in-styles"&gt;configurable
+parameters&lt;/a&gt;.
+The CSS rules are also less hacky, thanks to identifiable CSS classes in
+Mastodon's frontend.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Before&lt;/th&gt;
+&lt;th align="center"&gt;After&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;img alt="mr-before" src="https://raw.githubusercontent.com/ashwinvis/mastodon-relax/master/images/before.png"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img alt="mr-after" src="https://raw.githubusercontent.com/ashwinvis/mastodon-relax/master/images/after.png"&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://github.com/ashwinvis/mastodon-relax"&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The stylesheets are CC-BY-SA licensed. Hope it is useful for you.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category><category term="css"></category></entry><entry><title>Think before you monospace</title><link href="https://ashwinvis.github.io/ultimate-monospace.html" rel="alternate"></link><published>2020-06-15T17:23:27+02:00</published><updated>2020-06-15T17:23:27+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-06-15:/ultimate-monospace.html</id><summary type="html">&lt;p&gt;Put your programming font to the ultimate test case.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;I conducted a &lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;poll&lt;/a&gt; on Mastodon to see if what fonts are used in programming
 these days.&lt;/p&gt;
 &lt;a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"&gt;&lt;img alt="Poll on monospace font preference." class="m-image" src="/images/monospace_poll.png" /&gt;&lt;/a&gt;

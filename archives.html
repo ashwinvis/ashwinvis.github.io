@@ -122,6 +122,80 @@
     <div class="m-col-m-10">
       <article>
         <header>
+          <h1><a href="https://ashwinvis.github.io/power-to-the-usercss.html" rel="bookmark" class="u-url" title="Permalink to Power to the user (CSS)">
+            <time class="m-date" datetime="2020-06-24T09:30:09.977624+02:00">
+              Jun <span class="m-date-day">24</span> 2020
+            </time>
+            <div class="p-name">
+              Power to the user (CSS)
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Tweaking the world wide web, one CSS stylesheet at a time</p>
+          </div>
+        </header>
+        <div class="m-clearfix-l"></div>
+<!-- content -->
+<p>You probably know that you can tweak appearance of websites with add-ons like
+Stylus.  Ever since I figured out <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector">how to use
+Inspector</a> and
+<a href="https://github.com/openstyles/stylus/wiki/Writing-styles">how to write</a>
+"installable" CSS stylesheets myself, I cannot resist the urge to fix websites
+with a uneasy appearance. I try to fix it with a few lines of CSS and share it
+with others.</p>
+<h2><a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107">GitHub Retro</a></h2>
+<p>GitHub quickly rolled out a new wider interface, which could be done a bit better,
+IMHO.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Before</th>
+<th align="center">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://user-images.githubusercontent.com/9155111/85446389-ac604900-b594-11ea-8a1f-1018031719e0.png" width="100%"></td>
+<td align="center"><img src="https://user-images.githubusercontent.com/9155111/85515309-42c85500-b5fd-11ea-94d1-057e972bdc8c.png" width="100%"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107">Get it here</a>.</p>
+<h2><a href="https://github.com/ashwinvis/mastodon-relax">Mastodon Relax</a></h2>
+<p>This is more advanced as it uses <a href="https://github.com/FirefoxBar/xStyle/wiki/Style-format#use-advanced-options-in-styles">configurable
+parameters</a>.
+The CSS rules are also less hacky, thanks to identifiable CSS classes in
+Mastodon's frontend.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Before</th>
+<th align="center">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="mr-before" src="https://raw.githubusercontent.com/ashwinvis/mastodon-relax/master/images/before.png"></td>
+<td align="center"><img alt="mr-after" src="https://raw.githubusercontent.com/ashwinvis/mastodon-relax/master/images/after.png"></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/ashwinvis/mastodon-relax">Get it here</a>.</p>
+<p>The stylesheets are CC-BY-SA licensed. Hope it is useful for you.</p>
+<!-- /content -->
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-06-24T09:30:09.977624+02:00" class="dt-published">Wed 24 June 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/css.html">css</a>.<time class="dt-read-mins">
+              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              1
+                minute  </time></p>
+        </footer>
+      </article>
+      <article>
+        <header>
           <h1><a href="https://ashwinvis.github.io/ultimate-monospace.html" rel="bookmark" class="u-url" title="Permalink to Think before you monospace">
             <time class="m-date" datetime="2020-06-15T17:23:27.332143+02:00">
               Jun <span class="m-date-day">15</span> 2020
@@ -134,91 +208,6 @@
           <p>Put your programming font to the ultimate test case.</p>
           </div>
         </header>
-        <div class="m-clearfix-l"></div>
-<!-- content -->
-<p>I conducted a <a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635">poll</a> on Mastodon to see if what fonts are used in programming
-these days.</p>
-<a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635"><img alt="Poll on monospace font preference." class="m-image" src="/images/monospace_poll.png" /></a>
-<p>Despite the limited sample size, the poll seemed representative of package
-installation <a href="https://pkgstats.archlinux.de/compare/packages#packages=adobe-source-code-pro-fonts,ttf-anonymous-pro,ttf-bitstream-vera,ttf-cascadia-code,ttf-dejavu,ttf-hack,ttf-liberation,ttf-ms-fonts">statistics</a>. After going through the replies to the <a href="https://mastodon.acc.sunet.se/web/statuses/104329832337934635">poll</a>, I
-discovered a web application called <a href="https://www.programmingfonts.org/">programming-fonts</a> where you can try out 98
-monospace fonts with syntax highlighting on the fly. However, a good test case was
-missing.</p>
-<p>It is unlikely that a font would meet all features, while being <em>aesthetic</em>.
-Features include how similar characters are <em>distinguishable</em> and eye-candy
-like <a href="https://www.hanselman.com/blog/MonospacedProgrammingFontsWithLigatures.aspx">ligatures</a> (which can be useful or <a href="https://nedbatchelder.com/blog/201604/latos_unfortunate_ligatures.html">weird</a>).</p>
-<p>As they say,</p>
-<blockquote>
-“Beauty lies in the eyes of the beholder.”</blockquote>
-<p>Here is a test case with some pseudo-code to identify common pitfalls and
-features. See if it fits your needs and ensure no surprises.</p>
-<style>
- pre, code {
-     font-family: monospace;
- }
- </style><aside class="m-note m-info">
-The test case below should render with the default monospace font
-configured in your system. There are instructions in the end of the article
-to try out a different font online by copying this test case template
-as raw text.</aside>
-<section id="test-case-template">
-<h2>Test case template</h2>
-<ul>
-<li>Python</li>
-</ul>
-<pre class="m-code"><span class="nd">@test</span>                                 <span class="c1"># INFO: How @ gets rendered</span>
-<span class="k">def</span> <span class="nf">ultimate_monospace</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>     <span class="c1"># INFO: Ligature for arrow</span>
-    <span class="k">assert</span> <span class="mi">1</span><span class="n">nfo</span> <span class="o">!=</span> <span class="n">lnfo</span> <span class="o">!=</span> <span class="n">Info</span>       <span class="c1"># WARN: 1, l, I should be distinguishable</span>
-    <span class="k">assert</span> <span class="mi">0</span> <span class="o">!=</span> <span class="n">O</span>                     <span class="c1"># WARN: 0 and O should be distinguishable</span>
-    <span class="k">if</span> <span class="n">find</span> <span class="ow">and</span> <span class="n">ifnd</span><span class="p">:</span>                 <span class="c1"># WARN: Ligature for fi</span>
-        <span class="k">if</span> <span class="n">this</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">that</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>    <span class="c1"># INFO: Ligature for ==, &gt;=</span>
-            <span class="k">return</span> <span class="kc">True</span></pre>
-<ul>
-<li>Octave</li>
-</ul>
-<pre class="m-code"><span class="k">if</span> <span class="p">(</span><span class="n">logic</span> <span class="o">&amp;&amp;</span> <span class="n">oper</span> <span class="o">||</span> <span class="nb">not</span> <span class="o">~=</span> <span class="n">equals</span> <span class="p">)</span>  <span class="c">% INFO: Ligature for &amp;&amp;; WARN: for ~=</span>
-     <span class="n">ans</span> <span class="p">=</span> <span class="nb">true</span>
-<span class="k">end</span></pre>
-<ul>
-<li>Javascript</li>
-</ul>
-<pre class="m-code"><span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">arrow_operator</span> <span class="p">}</span>              <span class="c1">// INFO: Ligatures for arrow operator</span></pre>
-<ul>
-<li>HTML</li>
-</ul>
-<pre class="m-code"><span class="c">&lt;!-- INFO: Ligatures for HTML  --&gt;</span>
-<span class="err">&lt;</span>/&gt; <span class="p">&lt;</span><span class="nt">empty</span><span class="p">&gt;</span> tag <span class="p">&lt;/</span><span class="nt">empty</span><span class="p">&gt;</span></pre>
-<ul>
-<li>Perl / Ruby / PHP</li>
-</ul>
-<pre class="m-code"><span class="mi">1</span> <span class="o">&lt;=&gt;</span> <span class="mi">1</span>                               <span class="c1"># INFO: Ligatures for spaceship operator</span></pre>
-<ul>
-<li>Haskell</li>
-</ul>
-<pre class="m-code"><span class="c1">-- INFO: Ligatures for Haskell operators: ++, &gt;&gt;=,&lt;&lt;=, &gt;=&gt;, &lt;=&lt;</span>
-<span class="nf">a</span> <span class="o">++</span> <span class="n">b</span>
-
-<span class="c1">-- instead of</span>
-<span class="nf">return</span> <span class="n">x</span> <span class="o">&gt;&gt;=</span> <span class="n">f</span> <span class="o">&gt;&gt;=</span> <span class="n">g</span>
-<span class="c1">-- simply go with</span>
-<span class="nf">f</span> <span class="n">x</span> <span class="o">&gt;&gt;=</span> <span class="n">g</span>
-
-<span class="c1">-- instead of</span>
-<span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="n">return</span> <span class="n">x</span> <span class="o">&gt;&gt;=</span> <span class="n">f</span> <span class="o">&gt;&gt;=</span> <span class="n">g</span>
-<span class="c1">-- simply go with</span>
-<span class="nf">f</span> <span class="o">&gt;=&gt;</span> <span class="n">g</span>
-<span class="c1">-- or</span>
-<span class="nf">g</span> <span class="o">&lt;=&lt;</span> <span class="n">f</span></pre>
-</section>
-<section id="try-it-yourself">
-<h2>Try it yourself</h2>
-<p>Here is how the above test case renders with Python syntax highlighting and
-Fira Code font:</p>
-<a href="https://www.programmingfonts.org/"><img alt="Monospace font preview on programmingfonts.org" class="m-image" src="/images/monospace_preview.png" /></a>
-<aside class="m-note m-primary">
-Feel free to copy the <a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst">raw-text</a> and try it out on <a href="https://www.programmingfonts.org/">programming-fonts</a>.</aside>
-</section>
-<!-- /content -->
         <footer>
           <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-06-15T17:23:27.332143+02:00" class="dt-published">Mon 15 June 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/typography.html">typography</a>, <a href="https://ashwinvis.github.io/tag/ligatures.html">ligatures</a>, <a href="https://ashwinvis.github.io/tag/programming.html">programming</a>.<time class="dt-read-mins">
               <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
@@ -230,6 +219,7 @@ Feel free to copy the <a href="https://raw.githubusercontent.com/ashwinvis/ashwi
           minutes
             </time></p>
         </footer>
+        <div class="m-clearfix-l"></div>
       </article>
       <article>
         <header>
@@ -1368,6 +1358,7 @@ Feel free to copy the <a href="https://raw.githubusercontent.com/ashwinvis/ashwi
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/congress.html">congress</a></li>
         <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/covid-19.html">covid-19</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/css.html">css</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/devops.html">devops</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/economy.html">economy</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a></li>
@@ -1414,7 +1405,7 @@ Feel free to copy the <a href="https://raw.githubusercontent.com/ashwinvis/ashwi
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rst.html">rst</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
-        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
+        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
