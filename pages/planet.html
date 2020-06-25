@@ -141,6 +141,95 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="http://blog.davidedmundson.co.uk/blog/plasma-6-porting-work-we-need-help-doing-now/" rel="bookmark" class="u-url"
+       title="Plasma 6 porting work we need help doing now!" target="_blank">
+      <time class="m-date" datetime="2020-06-25 08:00:29+00:00">
+        Jun
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Plasma 6 porting work we need help doing now!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>"6.0" is a word that brings a lot of excitement but also a lot of aprehension and for good reason. The reason our .0 releases sometimes struggle to match the quality isn't due to changes in the underlying libraries changing but how much we have to port away from the things that we've deprecated internally and have put off porting to.</p>
+<p>Too many changes in one release becomes overwhelming and bugs creep in without time to get address them.</p>
+<p>We want to be proactive in avoiding that.</p>
+<p>At a recent Plasma sprint, we went through some of our bigger targets that we want to finish completely porting away from in time for the 6.0 release that we can actively start doing within the 5.x series where we can do things more gradually and inrecementally.</p>
+<p>I've listed two …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David Edmundson</b></span>
+  on <time datetime="2020-06-25 08:00:29+00:00" class="dt-published"></time>
+  Thu 25 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/matplotlib-3-d-mesh-wiregrid-example/" rel="bookmark" class="u-url"
+       title="Matplotlib 3-D mesh wiregrid example" target="_blank">
+      <time class="m-date" datetime="2020-06-25 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Matplotlib 3-D mesh wiregrid example
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Matplotlib no longer needs cumbersome
+<a href="https://matplotlib.org/3.2.1/tutorials/toolkits/mplot3d.html">extra imports</a>
+to make 3-D plots.</p>
+Example
+<p>3-D mesh wiregrid: minimal working example for the current version of Matplotlib.
+You can pan, rotate, etc. in the figure window that opens.</p>
+<div><pre><code><span>from</span> matplotlib.pyplot <span>import</span> figure,show
+<span>import</span> numpy <span>as</span> np
+<span>def</span> <span>plot3</span>():
+x,y <span>=</span> np<span>.</span>meshgrid(np<span>.</span>linspace(<span>0</span>,<span>2</span><span>*</span>np<span>.</span>pi), np<span>.</span>linspace(<span>0</span>,<span>2</span><span>*</span>np<span>.</span>pi))
+z <span>=</span> np<span>.</span>sin(x<span>+</span><span>0.5</span><span>*</span>y)
+ax <span>=</span> figure()<span>.</span>gca(projection<span>=</span><span>'3d'</span>)
+ax<span>.</span>plot_wireframe(x,y,z)
+show()
+<span>if</span> __name__ <span>==</span> <span>'__main__'</span>:
+plot3()
+</code></pre></div>Alternative
+<p><a href="https://www.scivision.dev/tags/mayavi">Mayavi</a> for advanced 3-D plotting in Python</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-25 00:00:00+00:00" class="dt-published"></time>
+  Thu 25 Jun 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621816983244161024/mimicking-supernovas-in-the-lab-will-help" rel="bookmark" class="u-url"
        title="Mimicking supernovas in the lab will help scientists understand..." target="_blank">
       <time class="m-date" datetime="2020-06-24 10:01:26-05:00">
@@ -384,8 +473,8 @@ Completion of the demo package We successfully created the demo app and uploaded
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/windows-symbolic-link-permission-enable/" rel="bookmark" class="u-url"
-       title="enable Windows user to create symbolic links" target="_blank">
+    <a href="http://www.scicombinator.com/articles/5743402" rel="bookmark" class="u-url"
+       title="Experimental evidence of dispersal of invasive cyprinid eggs inside migratory waterfowl" target="_blank">
       <time class="m-date" datetime="2020-06-24 00:00:00+00:00">
         Jun
         <span class="m-date-day">
@@ -394,36 +483,22 @@ Completion of the demo package We successfully created the demo app and uploaded
         2020
       </time>
       <div class="p-name">
-      enable Windows user to create symbolic links
+      Experimental evidence of dispersal of invasive cyprinid eggs inside migratory waterfowl
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Windows users may not have permission to create a symbolic link by default.
-This can result in errors from Python like:</p>
-<div><pre><code><span>from</span> pathlib <span>import</span> Path
-Path(<span>'x'</span>)<span>.</span>touch()
-Path(<span>'x'</span>)<span>.</span>symlink_to(<span>'y'</span>)
-</code></pre></div><blockquote>
-<p>OSError: symbolic link privilege not held</p>
-</blockquote>
-Fix
-<p>press Windows + R key (run dialog) and type</p>
-<div><pre><code>gpedit.msc
-</code></pre></div><p>Navigate to create user permission to create symbolic links:</p>
-<p>Computer Configuration → Windows Settings → Security Settings → Local Policies → User Rights Assignment → Create symbolic links</p>
-<p>type the user name and click &ldquo;Check Names&rdquo; then OK.</p>
-<p><strong>Reboot the computer</strong> (or logoff, logon) to make the permissions take effect.</p>
+  Fish have somehow colonized isolated water bodies all over the world without human assistance. It has long been speculated that these colonization events are assisted by waterbirds, transporting fish eggs attached to their feet and feathers, yet empirical support for this is lacking. Recently, it was suggested that endozoochory (i.e., internal transport within the gut) might play a more important role, but only highly resistant diapause eggs of killifish have been found to survive passage through waterbird guts. Here, we performed a controlled feeding experiment, where developing eggs of two cosmopolitan, invasive cyprinids (common carp, Prussian carp) were fed to captive mallards. Live embryos of both species were retrieved from fresh feces and survived beyond hatching. Our study identifies an overlooked dispersal mechanism in fish, providing evidence for bird-mediated dispersal ability of soft-membraned eggs undergoing active development. Only 0 …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
+  <span class="p-author"><b>BA Lukács</b></span>
   on <time datetime="2020-06-24 00:00:00+00:00" class="dt-published"></time>
   Wed 24 Jun 2020
-  in Michael Hirsch, Ph.D..
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -492,68 +567,6 @@ Debian
   on <time datetime="2020-06-24 00:00:00+02:00" class="dt-published"></time>
   Wed 24 Jun 2020
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://confifu.wordpress.com/2020/06/23/week-3-gsoc-project-report/" rel="bookmark" class="u-url"
-       title="Week 3: GSoC Project Report" target="_blank">
-      <time class="m-date" datetime="2020-06-23 10:13:18+00:00">
-        Jun
-        <span class="m-date-day">
-          23
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Week 3: GSoC Project Report
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This week I implemented views, drag and drop of storyboard items in the central view and made some small changes. I also ran unit-tests, checked for memory leaks and debugged code, but unfortunately we couldn’t get it tested by users as we got some crashes.</p>
-
-
-
-<p>There are three views to customize what part of the storyboard item you see. Namely they are Thumbnail only, Comments only and Both. This was easy to implement as we only had to make changes to delegate and view class to draw the right parts based on the chosen view. </p>
-
-
-
-<div><img alt="" src="//confifu.files.wordpress.com/2020/06/screenshot-from-2020-06-23-14-54-08.png?w=611">All view</div>
-
-
-
-<div><img alt="" src="//confifu.files.wordpress.com/2020/06/screenshot-from-2020-06-23-14-53-52.png?w=604">Comments Only View</div>
-
-
-
-<div><img alt="" src="//confifu.files.wordpress.com/2020/06/screenshot-from-2020-06-23-14-53-59.png?w=612">Thumbnails only View</div>
-
-
-
-<p>I also implemented drag and drop of storyboard items. For this I implemented the mimeData and dropMimeData functions and then called the moveRows function in the dropMimeData function to move the rows.</p>
-
-
-
-<img alt="" src="//confifu.files.wordpress.com/2020/06/drag_and_drop.gif?w=600">Drag and drop
-
-
-
-<p>Also …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Saurabh Kumar</b></span>
-  on <time datetime="2020-06-23 10:13:18+00:00" class="dt-published"></time>
-  Tue 23 Jun 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -637,40 +650,6 @@ session …</p>
   on <time datetime="2020-06-21 00:00:00+00:00" class="dt-published"></time>
   Sun 21 Jun 2020
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5735405" rel="bookmark" class="u-url"
-       title="Saturated Fats and Health: A Reassessment and Proposal for Food-based Recommendations: JACC State-of -the-Art Review" target="_blank">
-      <time class="m-date" datetime="2020-06-21 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Saturated Fats and Health: A Reassessment and Proposal for Food-based Recommendations: JACC State-of -the-Art Review
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The recommendation to limit dietary saturated fatty acid (SFA) intake has persisted despite mounting evidence to the contrary. Most recent meta-analyses of randomized trials and observational studies found no beneficial effects of reducing SFA intake on cardiovascular disease (CVD) and total mortality, and instead found protective effects against stroke. Although SFAs increase low-density lipoprotein (LDL)-cholesterol, in most individuals, this is not due to increasing levels of small, dense LDL particles, but rather larger LDL which are much less strongly related to CVD risk. It is also apparent that the health effects of foods cannot be predicted by their content in any nutrient group, without considering the overall macronutrient distribution. Whole-fat dairy, unprocessed meat, eggs and dark chocolate are SFA-rich foods with a complex matrix that are not associated with increased risk of CVD. The totality of available evidence does …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>RM Krauss</b></span>
-  on <time datetime="2020-06-21 00:00:00+00:00" class="dt-published"></time>
-  Sun 21 Jun 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
