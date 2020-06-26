@@ -53,7 +53,7 @@ STATIC_PATHS = ["images", "pdf", "static"]
 EXTRA_PATH_METADATA = {
     f'extra/{resource}': {'path': resource}
     for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js",
-                     "webmention.js")
+                     "webmention.min.js")
 }
 STATIC_PATHS.extend(EXTRA_PATH_METADATA)
 
