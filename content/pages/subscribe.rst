@@ -25,17 +25,18 @@ You can send responses via email_.
 Mastodon_
 =========
 I often announce my blog posts on `my Mastodon profile`_ - where you could
-follow and even send responses too.
+follow  and even send responses too.
 
-For the uninitiated, Mastodon_ is like e-mail. More accurately, it is
-one among many software solutions which forms a network called fediverse_.
-There are several server instances you can join_.
+For the uninitiated, Mastodon_ is a micro blog which talks to other servers
+like e-mail. More accurately, it is one among many software solutions which
+forms a network called Fediverse_.  There are several server instances you can
+join_.
 
 .. note-info::
 
    - `My Mastodon profile`_
-   - `Follow me`_
-
+   - `Follow me with an account on Fediverse`_
+   - `Follow me without an account via RSS`_
 
 .. _Atom: https://en.wikipedia.org/wiki/Atom_(Web_standard)
 .. _RSS: https://en.wikipedia.org/wiki/RSS
@@ -43,6 +44,7 @@ There are several server instances you can join_.
 .. _mastodon: https://joinmastodon.org/
 .. _join: https://instances.social/
 .. _my mastodon profile: https://mastodon.acc.sunet.se/@ashwinvis
-.. _Follow me: https://mastodon.acc.sunet.se/users/ashwinvis/remote_follow
+.. _follow me with an account on fediverse: https://mastodon.acc.sunet.se/users/ashwinvis/remote_follow
+.. _follow me without an account via RSS: https://mastodon.acc.sunet.se/@ashwinvis.rss
 .. _fediverse: https://fediverse.party/
 .. _email: /pages/contact.html

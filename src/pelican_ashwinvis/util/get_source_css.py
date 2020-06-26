@@ -36,7 +36,7 @@ def debug(arg):
 @curry
 def save_css(text, url):
     path = Path(urlparse(url).path)
-    path_file = Path(__file__).parent / "content/static" / (path.name + ".css")
+    path_file = Path.cwd() / "content/static" / (path.name + ".css")
     with open(path_file, "w+") as f:
         f.write(text)
 
