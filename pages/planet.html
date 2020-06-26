@@ -141,6 +141,95 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/cmake-http-user-agent/" rel="bookmark" class="u-url"
+       title="Cmake HTTP UserAgent" target="_blank">
+      <time class="m-date" datetime="2020-06-26 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Cmake HTTP UserAgent
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>CMake&rsquo;s
+<a href="https://gitlab.kitware.com/yrHeTaTeJlb/cmake/-/commit/14aff4daf45a3cf0af59de60a464af9abe6a013c">UserAgent</a>
+is like</p>
+<pre><code>curl/$curl_version
+</code></pre><p>as seen with CMake script:</p>
+<div><pre><code>file(<span>DOWNLOAD</span> <span>${</span>url<span>}</span> <span>result.html</span>)<span>
+</span></code></pre></div><p>examining result.html at a diagnostic website that returns user agent will have like:</p>
+<pre><code>curl/7.69.0
+</code></pre><p>This is worth noting if you find an HTTP server that blocks CMake HTTP traffic such as
+<a href="https://cmake.org/cmake/help/latest/command/file.html#download">file(DOWNLOAD &hellip;)</a>,
+but not a web browser.
+This same problem can happen with Python as server operators may tire of scripts scraping their content.
+So web scrapers simply get more sophisticated and the &ldquo;war&rdquo; rages on&hellip;.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-26 00:00:00+00:00" class="dt-published"></time>
+  Fri 26 Jun 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://hunden.linuxkompis.se/2020/06/26/how-to-automatically-change-the-current-working-directory-in-neovim.html" rel="bookmark" class="u-url"
+       title="How to automatically change the current working directory in Neovim" target="_blank">
+      <time class="m-date" datetime="2020-06-26 00:00:00+02:00">
+        Jun
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to automatically change the current working directory in Neovim
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Something that has been overly annoying ever since I switched over to Neovim from Vim is the fact that my working directory has alway been my home folder, no matter what file I’m editing.</p>
+
+<p>I first though it was an issue with the plugin <a href="https://github.com/francoiscabrol/ranger.vim">Ranger.vim</a> and I didn’t do anything about it. I exclusively use that plugin to navigate my filesystem and open files in Neovim using Ranger (and previously in Vim) and I can’t live without it.</p>
+
+<p>It wasn’t until I recently that I noticed that I had the same issue when using the built in command <code>:edit</code> that I did some research about it and found out about the feature <code>autochdir</code>:</p>
+
+<div><div><pre><code><span>'autochdir'</span> <span>'acd'</span>       boolean <span>(</span>default off<span>)</span>
+                        global
+        When on, Vim will change the current working directory whenever you
+        open a file, switch buffers …</code></pre></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-26 00:00:00+02:00" class="dt-published"></time>
+  Fri 26 Jun 2020
+  in Hund[en].
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621907603375652864/as-part-of-its-shakedown-the-new-inouye-solar" rel="bookmark" class="u-url"
        title="As part of its shakedown, the new Inouye Solar Telescope has..." target="_blank">
       <time class="m-date" datetime="2020-06-25 10:01:48-05:00">
@@ -281,57 +370,6 @@ the surface of the sun in stunning new detail. Seen here are some of the
   on <time datetime="2020-06-25 00:00:00+00:00" class="dt-published"></time>
   Thu 25 Jun 2020
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/matplotlib-3-d-mesh-wiregrid-example/" rel="bookmark" class="u-url"
-       title="Matplotlib 3-D mesh wiregrid example" target="_blank">
-      <time class="m-date" datetime="2020-06-25 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Matplotlib 3-D mesh wiregrid example
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Matplotlib no longer needs cumbersome
-<a href="https://matplotlib.org/3.2.1/tutorials/toolkits/mplot3d.html">extra imports</a>
-to make 3-D plots.</p>
-Example
-<p>3-D mesh wiregrid: minimal working example for the current version of Matplotlib.
-You can pan, rotate, etc. in the figure window that opens.</p>
-<div><pre><code><span>from</span> matplotlib.pyplot <span>import</span> figure,show
-<span>import</span> numpy <span>as</span> np
-<span>def</span> <span>plot3</span>():
-x,y <span>=</span> np<span>.</span>meshgrid(np<span>.</span>linspace(<span>0</span>,<span>2</span><span>*</span>np<span>.</span>pi), np<span>.</span>linspace(<span>0</span>,<span>2</span><span>*</span>np<span>.</span>pi))
-z <span>=</span> np<span>.</span>sin(x<span>+</span><span>0.5</span><span>*</span>y)
-ax <span>=</span> figure()<span>.</span>gca(projection<span>=</span><span>'3d'</span>)
-ax<span>.</span>plot_wireframe(x,y,z)
-show()
-<span>if</span> __name__ <span>==</span> <span>'__main__'</span>:
-plot3()
-</code></pre></div>Alternative
-<p><a href="https://www.scivision.dev/tags/mayavi">Mayavi</a> for advanced 3-D plotting in Python</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-25 00:00:00+00:00" class="dt-published"></time>
-  Thu 25 Jun 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -538,74 +576,6 @@ Completion of the demo package We successfully created the demo app and uploaded
   on <time datetime="2020-06-24 00:00:00+00:00" class="dt-published"></time>
   Wed 24 Jun 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/06/24/keep-track-of-your-uptime-with-uptimed.html" rel="bookmark" class="u-url"
-       title="Keep track of your uptime with uptimed" target="_blank">
-      <time class="m-date" datetime="2020-06-24 00:00:00+02:00">
-        Jun
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Keep track of your uptime with uptimed
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>If you’re curious about your uptime statistics there’s a tool called <a href="https://github.com/rpodgorny/uptimed">uptimed</a> that can help you keep track of your uptime records.</p>
-
-<div><div><pre><code><span>$ </span>uprecords 
-     <span>#               Uptime | System                                     Boot up</span>
-<span>----------------------------</span>+---------------------------------------------------
--&gt;   1    29 days, 04:57:14 | Linux 5.4.38-gentoo-x86_  Tue May 26 15:23:46 2020
-<span>----------------------------</span>+---------------------------------------------------
-NewRec    29 days, 04:57:13 | since                     Tue May 26 15:23:46 2020
-    up    29 days, 04:57:14 | since                     Tue May 26 15:23:46 2020
-  down     0 days, 00:00:00 | since                     Tue May 26 15:23:46 2020
-   %up              100.000 | since                     Tue May 26 15:23:46 2020
-</code></pre></div></div>
-
-Installation
-
-Gentoo
-
-<p>Install the package <code>app-misc/uptimed</code>:</p>
-
-<div><div><pre><code># emerge --ask app-misc/uptimed
-</code></pre></div></div>
-
-<p>After the installation you need to start the service:</p>
-
-<div><div><pre><code># service uptimed start
-</code></pre></div></div>
-
-<p>And preferable add it to the default system runlevel:</p>
-
-<div><div><pre><code># rc-update add uptimed default
-</code></pre></div></div>
-
-Debian
-
-<p>Install the package <code>uptimed …</code></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-24 00:00:00+02:00" class="dt-published"></time>
-  Wed 24 Jun 2020
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
