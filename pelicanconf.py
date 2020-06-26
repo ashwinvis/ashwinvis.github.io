@@ -52,7 +52,8 @@ THEME_STATIC_DIR = "static"
 STATIC_PATHS = ["images", "pdf", "static"]
 EXTRA_PATH_METADATA = {
     f'extra/{resource}': {'path': resource}
-    for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js")
+    for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js",
+                     "webmention.min.js")
 }
 STATIC_PATHS.extend(EXTRA_PATH_METADATA)
 
@@ -173,6 +174,8 @@ if not shutil.which('latex'):
     M_MATH_RENDER_AS_CODE = True
 
 M_BRIDGY_PUBLISH = "mastodon"
+
+M_WEBMENTIONS = True
 
 PLUGINS += [
     #  webring,
