@@ -72,6 +72,7 @@
   <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <script src="/app.js" defer></script>
+  <script src="/webmention.js" defer></script>
 </head>
 <body>
 <header><nav id="navigation">
@@ -196,7 +197,35 @@ survives.</p>
             2
         minutes
           </time></p>
-      </footer>
+        <div class="webmentions">
+          <details><summary>Interactions</summary>
+            <p>Below you can find the interactions that this page has had using <a
+                href="http://indieweb.org/webmention">WebMention</a>.
+            </p>
+            <div class="manual-webmention">
+              <p>Have you written a <a
+                  href="https://indieweb.org/responses">response</a> to this post? Let
+                  me know the URL:
+                <form id="manual-webmention"
+                      action="https://webmention.io/https://ashwinvis.github.io/webmention"
+                  method="post"><input type="url" name="source">
+
+                  <input type="hidden" name="target" value="https://ashwinvis.github.io/lost-in-transition.html">
+                  <input type="submit" name="submit" value="Send Webmention">
+                </form>
+              </p>
+              <p>Do you not have a website set up with WebMention capabilities? You can
+                use <a
+                      href="https://quill.p3k.io/?dontask=1&me=https://commentpara.de&reply=https://ashwinvis.github.io/lost-in-transition.html">Comment Parade</a>.
+              </p>
+            </div>
+            <div id="webmentions">
+              <noscript>Due to laziness, this site uses client-side JavaScript to render the webmentions, rather than them being rendered server-side. If you do not wish to enable JavaScript, that's fair enough, but you won't be able to automagically see what Webmentions I've received - sorry!
+              </noscript>
+          </div>
+          </details>
+        </div>
+</footer>
     </article>
     <nav class="m-navpanel m-col-m-2">
       <h3>Categories</h3>
