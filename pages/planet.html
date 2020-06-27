@@ -142,6 +142,52 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://www.volkerkrause.eu/2020/06/27/kde-itinerary-osm-indoor-map-styling.html" rel="bookmark" class="u-url"
+       title="Rendering OSM Maps with MapCSS" target="_blank">
+      <time class="m-date" datetime="2020-06-27 07:45:00+00:00">
+        Jun
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Rendering OSM Maps with MapCSS
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>After having written about <a href="/2020/06/20/kde-itinerary-osm-indoor-map-data.html">where we get the data</a>
+for <a href="https://kde.org/applications/utilities/org.kde.itinerary">KDE Itinerary’s</a>
+<a href="/2020/06/13/kde-itinerary-osm-indoor-maps.html">train station and airport maps</a> from,
+this post is about how we actually render this data.</p>
+
+Rendering OSM Data
+
+<p>When looking at the geometry, OSM data consists basically just of lines and polygons, so technically there’s only few primitives to render.
+To make this look like a useful map though, a lot depends on the map styling. That is, the decision with which colors, line strokes, fill patterns,
+z order, and iconographic or textual labels those geometric primitives should be rendered. Here we are talking about hundreds of rules to make a good map.</p>
+
+<p>Since writing all those rules in code is hard to work with and to maintain, using a declarative way to define the rules is attractive.
+Several such systems exist in the OSM …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-06-27 07:45:00+00:00" class="dt-published"></time>
+  Sat 27 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="http://pyfound.blogspot.com/2020/06/2020-python-software-foundation-board_26.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="2020 Python Software Foundation Board of Directors Election Retrospective and Next Steps" target="_blank">
       <time class="m-date" datetime="2020-06-26 17:27:54.625000-04:00">
@@ -262,47 +308,6 @@ Maria Fernanda Petri Betto184 …
   on <time datetime="2020-06-26 15:00:00+00:00" class="dt-published"></time>
   Fri 26 Jun 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://agateau.com/2020/simplifying-unit-tests-using-a-custom-markup-language/" rel="bookmark" class="u-url"
-       title="Simplifying unit tests using a custom markup language" target="_blank">
-      <time class="m-date" datetime="2020-06-26 12:33:31+00:00">
-        Jun
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Simplifying unit tests using a custom markup language
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today I want to present a testing technique I now use in <a href="https://github.com/agateau/nanonote">Nanonote</a> unit tests.</p>
-<p>Nanonote main component is a QTextEdit with several "extensions" to provide custom behaviors such as indenting/unindenting selected lines with tab/shift+tab or moving selected lines up and down with alt+shift+arrow keys (next version feature, #spoileralert!).</p>
-<p>Testing these extensions is not particularly difficult but it requires tedious setup to set the text, position the cursor, define the selection. Then you perform the action and have to write more tedious code to check the new text, cursor position and selection match your expectations. Not only is it tedious to write, it is also error-prone and hard to read.</p>
-<p>Here is an example:</p>
-<div><pre><span></span><code><span>SECTION</span><span>(</span><span>"indent whole lines"</span><span>)</span> <span>&#123;</span>
-    <span>// GIVEN a TextEdit with 3 lines, the first two being selected</span>
-    <span>edit</span><span>-&gt;</span><span>setPlainText</span><span>(</span><span>"1</span><span>\n</span><span>"</span>
-                       <span>"2</span><span>\n …</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Aurelien Gateau</b></span>
-  on <time datetime="2020-06-26 12:33:31+00:00" class="dt-published"></time>
-  Fri 26 Jun 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
