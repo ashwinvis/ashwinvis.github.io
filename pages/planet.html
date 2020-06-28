@@ -142,6 +142,49 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://nedbatchelder.com//blog/202006/2500.html" rel="bookmark" class="u-url"
+       title="2500" target="_blank">
+      <time class="m-date" datetime="2020-06-28 07:10:00-04:00">
+        Jun
+        <span class="m-date-day">
+          28
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      2500
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This is the 2500th post on this blog. That&#8217;s a lot of writing. I estimate
+this site has about 480,000 words in total, enough for five books.</p><p>I&#8217;ve been writing here for more than 18 years.  The pace is different than
+when I started: last year I wrote <a href="//nedbatchelder.com/blog/archive/year2019.html">33
+posts</a>.  Compare that to 2003, when I wrote more than ten times as many:
+<a href="//nedbatchelder.com/blog/archive/year2003.html">441 posts</a>!
+<a href="https://twitter.com/nedbat">Twitter</a> has siphoned off some of the
+short-post energy, but also interests shift over time.</p><p>Writing is a good way to understand things, and to learn things.  People
+mostly think of writing as a way to teach and explain, and I am glad when my
+posts can do that. But I also really value the feedback loop of learning as I
+explain, and the deeper understanding I find when I teach.</p><p>Here …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-06-28 07:10:00-04:00" class="dt-published"></time>
+  Sun 28 Jun 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/micro/2020/06/restic-pr-prune/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-06-27 15:46:10+02:00">
@@ -684,59 +727,6 @@ Completion of the demo package We successfully created the demo app and uploaded
   on <time datetime="2020-06-24 00:00:00+00:00" class="dt-published"></time>
   Wed 24 Jun 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202006/pickles_nine_flaws.html" rel="bookmark" class="u-url"
-       title="Pickle’s nine flaws" target="_blank">
-      <time class="m-date" datetime="2020-06-20 16:07:39-04:00">
-        Jun
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Pickle’s nine flaws
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Python&#8217;s <a href="https://docs.python.org/3/library/pickle.html">pickle</a>
-module is a very convenient way to serialize and de-serialize objects. It needs
-no schema, and can handle arbitrary Python objects. But it has problems. This
-post briefly explains the problems.</p><p>Some people will tell you to never use pickle because it&#8217;s bad.  I won&#8217;t go
-that far.  I&#8217;ll say, only use pickle if you are OK with its nine flaws:</p><ul>
-
-<li>Insecure</li>
-<li>Old pickles look like old code</li>
-<li>Implicit</li>
-<li>Over-serializes</li>
-<li>__init__ isn&#8217;t called</li>
-<li>Python only</li>
-<li>Unreadable</li>
-<li>Appears to pickle code</li>
-<li>Slow</li>
-
-</ul>The flaws<a href="#h_the_flaws"></a><p>Here is a brief explanation of each flaw, in roughly the order of
-importance.</p>Insecure<a href="#h_insecure"></a><p>Pickles can be hand-crafted that will have malicious effects when you
-unpickle them. As a result, you should never unpickle data that you do not
-trust.</p><p>The insecurity is not because pickles contain code, but …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-06-20 16:07:39-04:00" class="dt-published"></time>
-  Sat 20 Jun 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
