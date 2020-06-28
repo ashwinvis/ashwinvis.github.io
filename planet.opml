@@ -57,6 +57,8 @@
         <outline title="Hund[en]" text="Hund[en]" type="rss" htmlUrl="https://hunden.linuxkompis.se" xmlUrl="https://hunden.linuxkompis.se/feed.xml"/>
         <outline title="Michael Hirsch, Ph.D." text="Michael Hirsch, Ph.D." type="rss" htmlUrl="https://www.scivision.dev" xmlUrl="https://www.scivision.dev/index.xml"/>
         <outline title="Nikita Prokopov's blog" text="Nikita Prokopov's blog" type="rss" htmlUrl="https://tonsky.me/" xmlUrl="https://tonsky.me/blog/atom.xml"/>
+        <outline title="Julia Evans" text="Julia Evans" type="rss" htmlUrl="https://jvns.ca" xmlUrl="https://jvns.ca/atom.xml"/>
+        <outline title="Wizard Zines" text="Wizard Zines" type="rss" htmlUrl="https://wizardzines.com" xmlUrl="https://wizardzines.com/index.xml"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
