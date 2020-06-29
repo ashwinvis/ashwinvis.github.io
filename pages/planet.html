@@ -142,36 +142,122 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://coderunner20.blogspot.com/2020/06/cantor-integrated-documentation-week-3.html" rel="bookmark" class="u-url"
-       title="Cantor Integrated Documentation : Week 3 and 4 Progress" target="_blank">
-      <time class="m-date" datetime="2020-06-28 18:33:23+00:00">
+    <a href="https://ashwindhakaita.blogspot.com/2020/06/phase-1-evaluation-status-report.html" rel="bookmark" class="u-url"
+       title="Phase 1 Evaluation Status Report" target="_blank">
+      <time class="m-date" datetime="2020-06-29 11:05:17+00:00">
         Jun
         <span class="m-date-day">
-          28
+          29
         </span>
         2020
       </time>
       <div class="p-name">
-      Cantor Integrated Documentation : Week 3 and 4 Progress
+      Phase 1 Evaluation Status Report
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-<div>Hello KDE people. First phase evaluations is due from today onward until 3rd of July. It has been coupe of weeks since I had posted about my project. I was quite busy writing code implementing the documentation panel for the various backends supported by Cantor. In the last post I have explained about how I generated the help files namely qhc (Qt Help Collection) and qch (Qt Compressed Help) from the documentation's source file. In today's post I will explain how I utilized Maxima's help files to actually display help inside the Cantor application itself. So here are the things done:-</div>
-Things Done
-<div><b>1. Implementation of Documentation Panel<code> </code></b></div>
-<div>Cantor has dedicated panels for Variable manager and some general Help. So I have created a new panel dedicated to display the documentation of the backend which is currently active. To implement …</div></div>
+  <div>It has been over a month since the start of GSoC. Phase #1 evaluations will start today. This post is to summarise all the work done by me during phase #1<i>Implementing the MyPaint Brush engine</i>
+<div>This involved writing the core brush engine classes like KisMyPaintBrush, KisMyPaintSurface, MyPaintOpPlugin, KisMyPaintOp and KisMyPaintOpFactory. At a very high level, all I had to do was override the draw_dab and get_color methods of MyPaintBrushSurface with my own version to draw over a Krita Paintdevice (Krita Surface class). While working on this, I faced a problem related to lagging that I have discussed in the previous posts. With the help of my mentors, I was able to solve this and bring the lag under acceptable limits. Then, I went on to fix some bugs, which occurred in using some specific presets. The brush engine seems …</div></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Shubham (shubham)</b></span>
-  on <time datetime="2020-06-28 18:33:23+00:00" class="dt-published"></time>
-  Sun 28 Jun 2020
+  <span class="p-author"><b>Ashwin Dhakaita</b></span>
+  on <time datetime="2020-06-29 11:05:17+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/06/semester-done/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-06-29 12:52:39+02:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I am finally done with the exams and presentations for this semester! Next semester is bachelor. 🙈</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-29 12:52:39+02:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/latex-wrapfigure-debug/" rel="bookmark" class="u-url"
+       title="LaTeX wrapfigure debugging" target="_blank">
+      <time class="m-date" datetime="2020-06-29 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      LaTeX wrapfigure debugging
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>LaTeX
+<a href="https://ctan.org/pkg/wrapfig">wrapfig.sty \wrapfigure</a>
+is a great way to save space, but has several quirks to workaround.
+Overleaf also
+<a href="https://www.overleaf.com/learn/latex/wrapping_text_around_figures">notes the touchiness</a>
+of wrapfigure.
+The typical failure mode is that the wrapped figure will not appear, and the document text is wrapped for a few pages with blank column.
+The LaTeX log doesn&rsquo;t give an error, just a warning about a missing figure reference.</p>
+Workarounds
+<ol>
+<li>Don&rsquo;t have wrapfigure next to a list (enumerated or itemized).</li>
+<li>put a blank line before and after wrapfigure stanza in the document body</li>
+</ol>
+Example
+<p>For #2, in the .tex file have like</p>
+<div><pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut faucibus ex.
+<span>\begin</span>{wrapfigure}{R}{0.5<span>\textwidth</span>}
+<span>\includegraphics</span>{...}
+...
+<span>\end</span>{wrapfigure}
+Donec sed commodo eros. Sed vehicula elit ac tincidunt lacinia.
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-29 00:00:00+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -311,98 +397,6 @@ explain, and the deeper understanding I find when I teach.</p><p>Here …</p>
   on <time datetime="2020-06-28 07:10:00-04:00" class="dt-published"></time>
   Sun 28 Jun 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/06/restic-pr-prune/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-06-27 15:46:10+02:00">
-        Jun
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://restic.net/">restic</a> is my tool of choice <a href="https://jlelse.blog/dev/restic-docker/">to do backups</a>. I&rsquo;m just eagerly waiting for <a href="https://github.com/restic/restic/pull/2718">this a(a)wsome PR</a> to get merged and a new version released! I&rsquo;m backing up my Nextcloud (currently ~50 GB), but I never pruned the backup and now the backup is taking up more than 160 GB. That&rsquo;s still just peanuts with <a href="https://www.backblaze.com/">Backblaze B2</a> as online storage, but I like to have things clean and tidy and a prune is overdue.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-27 15:46:10+02:00" class="dt-published"></time>
-  Sat 27 Jun 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-python3-executable/" rel="bookmark" class="u-url"
-       title="Using Python in CMake script" target="_blank">
-      <time class="m-date" datetime="2020-06-27 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Using Python in CMake script
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Finding Python is made more robust in CMake &gt;= 3.15, which prioritizes location over version number.
-Prior to CMake 3.15, even specifying <code>Python3_ROOT</code> could be overridden if the other Python was a higher version.</p>
-<p>Using the Python interpreter in CMake should generally be via <code>PYTHON3_EXECUTABLE</code> and not <code>Python3::Interpreter</code>.
-CMake provides the imported target
-<a href="https://cmake.org/cmake/help/latest/module/FindPython3.html">Python3::Interpreter</a>
-only when the
-<a href="https://cmake.org/cmake/help/latest/prop_gbl/CMAKE_ROLE.html">CMAKE_ROLE</a>
-is <code>PROJECT</code>.
-This means that <code>Python3::Interpreter</code> is not available when using CTest, which is often when using the Python3 interpreter is desired.
-Normally, to use Python interpreter from a CMake script, including in
-<a href="https://cmake.org/cmake/help/latest/command/execute_process.html">execute_process</a>
-or
-<a href="https://cmake.org/cmake/help/latest/command/add_test.html">add_test</a>,
-use <code>PYTHON3_EXECUTABLE</code>.</p>
-Example
-<p>Either specify minimum CMake version 3.15:</p>
-<div><pre><code>cmake_minimum_required(<span>VERSION</span> <span>3.15</span>)<span>
-</span></code></pre></div><p>OR where older CMake versions must be accommodated:</p>
-<div><pre><code>if(<span>CMAKE_VERSION</span> <span>VERSION_GREATER_EQUAL</span> <span>3.15</span>)<span>
-</span><span></span> cmake_policy(<span>SET</span> <span>CMP0094</span> <span>NEW</span>)<span>
-</span><span></span>endif()<span>
-</span></code></pre></div><p>then do like:</p>
-<div><pre><code>find_package(<span>Python3</span> <span>COMPONENTS</span> <span>Interpreter</span> <span>REQUIRED</span>)<span>
-</span><span>
-</span><span></span>add_test(<span>NAME …</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-27 00:00:00+00:00" class="dt-published"></time>
-  Sat 27 Jun 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
