@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://ashwindhakaita.blogspot.com/2020/06/phase-1-evaluation-status-report.html" rel="bookmark" class="u-url"
-       title="Phase 1 Evaluation Status Report" target="_blank">
-      <time class="m-date" datetime="2020-06-29 11:05:17+00:00">
+    <a href="https://dilsonguim.github.io/kde/gsoc/2020/06/29/gsoc-week3.html" rel="bookmark" class="u-url"
+       title="Google Summer of Code 2020 - Week 3" target="_blank">
+      <time class="m-date" datetime="2020-06-29 23:00:00+00:00">
         Jun
         <span class="m-date-day">
           29
@@ -152,23 +152,242 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Phase 1 Evaluation Status Report
+      Google Summer of Code 2020 - Week 3
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>It has been over a month since the start of GSoC. Phase #1 evaluations will start today. This post is to summarise all the work done by me during phase #1<i>Implementing the MyPaint Brush engine</i>
-<div>This involved writing the core brush engine classes like KisMyPaintBrush, KisMyPaintSurface, MyPaintOpPlugin, KisMyPaintOp and KisMyPaintOpFactory. At a very high level, all I had to do was override the draw_dab and get_color methods of MyPaintBrushSurface with my own version to draw over a Krita Paintdevice (Krita Surface class). While working on this, I faced a problem related to lagging that I have discussed in the previous posts. With the help of my mentors, I was able to solve this and bring the lag under acceptable limits. Then, I went on to fix some bugs, which occurred in using some specific presets. The brush engine seems …</div></div>
+  <p>This week, I spent most of my time testing the <a href="https://kde.org/applications/education/org.kde.rocs">Rocs</a> graph-layout-plugin.
+I needed to test the method that applies the force-based layout algorithm to a graph, whose signature is the following.</p>
+
+<div><div><pre><code><span>static</span> <span>void</span> <span>applyForceBasedLayout</span><span>(</span><span>GraphDocumentPtr</span> <span>document</span><span>,</span> <span>const</span> <span>qreal</span> <span>nodeRadius</span><span>,</span>
+                                  <span>const</span> <span>qreal</span> <span>margin</span><span>,</span> <span>const</span> <span>qreal</span> <span>areaFactor</span><span>,</span>
+                                  <span>const</span> <span>qreal</span> <span>repellingForce</span><span>,</span> <span>const</span> <span>qreal</span> <span>attractionForce</span><span>,</span>
+                                  <span>const</span> <span>bool</span> <span>randomizeInitialPositions</span><span>,</span> <span>const</span> <span>quint32</span> <span>seed</span><span>);</span>
+</code></pre></div></div>
+
+<p>Unfortunately, there is not much that is guaranteed by this method. Basically, given a graph and some parameters, it tries
+to find positions for each node in such a way that, if we draw the graph using these positions, it will look nice.
+What does it mean for the drawing of a graph to look nice? How can we test it? 
+This is a subjective concept, and there is no clear way to test it. But there is still something that can …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Ashwin Dhakaita</b></span>
-  on <time datetime="2020-06-29 11:05:17+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Dilson Guimarães (dilsonguim)</b></span>
+  on <time datetime="2020-06-29 23:00:00+00:00" class="dt-published"></time>
   Mon 29 Jun 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://sylvaindeville.net/2020/06/29/de-lart-de-chercher-les-moyens-de-travailler/" rel="bookmark" class="u-url"
+       title="De l’art de chercher … les moyens de travailler" target="_blank">
+      <time class="m-date" datetime="2020-06-29 21:00:43+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      De l’art de chercher … les moyens de travailler
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Ces dernières années, j’ai développé une nouvelle approche expérimentale pour étudier la congélation, réorientant mes recherches de la science des matériaux (synthèse et mise en forme) à la physique, la matière molle et la biophysique. Nous avons mis quelques années &#8230; <a href="https://sylvaindeville.net/2020/06/29/de-lart-de-chercher-les-moyens-de-travailler/">Continue reading <span>&#8594;</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Sylvain Deville</b></span>
+  on <time datetime="2020-06-29 21:00:43+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in Sylvain Deville.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-06-27_Gemini_Wiki" rel="bookmark" class="u-url"
+       title="Gemini Wiki" target="_blank">
+      <time class="m-date" datetime="2020-06-29 20:04:10+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Gemini Wiki
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>It’s done! A simple wiki, for a simple protocol: <a href="https://alexschroeder.ch/cgit/gemini-wiki/about/?h=main">Gemini Wiki</a>. Visit the <a href="">demo wiki</a>.</p><p>Written in about 1000 lines of Perl code. From the documentation:</p><p>This server serves a wiki as a Gemini site.</p><p>It does two things:</p><ul><li>It’s a program that you run on a computer and other people connect to it using their <a href="https://gemini.circumlunar.space/clients.html">client</a> in order to read the pages on it.</li><li>It’s a wiki, which means that people can edit the pages without needing an account. All they need is a client that speaks both <a href="https://gemini.circumlunar.space/">Gemini</a> and Titan, and the password. The default password is “hello”. 😃</li></ul>How do you edit a Gemini Wiki?<p>You need to use a Titan-enabled client.</p><p>Known clients:</p><ul><li><a href="https://alexschroeder.ch/cgit/gemini-write/">Gemini Write</a> is an extension for the Emacs Gopher and Gemini client <a href="https://thelambdalab.xyz/elpher/">Elpher</a></li><li><a href="https://alexschroeder.ch/cgit/gemini-titan/about/?h=main">Gemini &amp; Titan for Bash</a> are two shell functions …</li></ul></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-29 20:04:10+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article780/episode-33-spell-of-war" rel="bookmark" class="u-url"
+       title="Episode 33: Spell of War" target="_blank">
+      <time class="m-date" datetime="2020-06-29 19:38:00+02:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Episode 33: Spell of War
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/webcomics/peppercarrot/pepper-and-carrot_by-david-revoy_e33.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/webcomics/peppercarrot/pepper-and-carrot_by-david-revoy_e33.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Hi! I just posted a new Pepper&amp;Carrot episode on peppercarrot website:
+<a href="https://www.peppercarrot.com/en/article466/episode-33-spell-of-war">https://www.peppercarrot.com/en/article466/episode-33-spell-of-war</a></p>
+<p>Have a good read !</p>
+<p>(I'll add more infos in the comments later)</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2020-06-29 19:38:00+02:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/hughsie/2020/06/29/now-firmware-can-depend-on-available-client-features/" rel="bookmark" class="u-url"
+       title="Now firmware can depend on available client features" target="_blank">
+      <time class="m-date" datetime="2020-06-29 15:56:25+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Now firmware can depend on available client features
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  At the moment we just blindly assume the capabilities of the front-end client when installing firmware. We can somewhat work around this limitation by requiring a new enough fwupd daemon version, but the GUI client software may be much older than the fwupd version or just incomplete. If you maintain a text or graphical client … <a href="https://blogs.gnome.org/hughsie/2020/06/29/now-firmware-can-depend-on-available-client-features/">Continue reading <span>Now firmware can depend on available client features</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>hughsie</b></span>
+  on <time datetime="2020-06-29 15:56:25+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/622269946405224449/getting-wet-can-be-a-big-problem-for-little" rel="bookmark" class="u-url"
+       title="Getting wet can be a big problem for little creatures. But these..." target="_blank">
+      <time class="m-date" datetime="2020-06-29 10:01:05-05:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Getting wet can be a big problem for little creatures. But these...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/76c8ae48af72bc5fbc81c45da26cb290/82f8368f5b54162b-ab/s500x750/18536b81f35c5e8112f63689728f5e89cd681aad.png"> <img src="https://66.media.tumblr.com/7ddc902df0de8427f3e897c55f1d4fab/82f8368f5b54162b-6b/s500x750/1093e5e0b3264bf3a57de57d0149822043541d2a.gifv"> <img src="https://66.media.tumblr.com/802a299e799cc818fcc4efe3753c081b/82f8368f5b54162b-3c/s500x750/5f5b657593d8343ec885e871d7b2e7158de71675.png"> <img src="https://66.media.tumblr.com/291482f62b3a69eef2d6115f9de8a35d/82f8368f5b54162b-19/s500x750/41489e49a61548dcffd048c6ccf92f4597c84531.gifv"> <img src="https://66.media.tumblr.com/6929894f3254803ed36f00ae09a8af3a/82f8368f5b54162b-81/s500x750/481b36dd8d39631b132f37c50d339b6603ffc46e.png"> <img src="https://66.media.tumblr.com/125fee88b0d3c9d23845c0f8b9f13bca/82f8368f5b54162b-b0/s500x750/91933b417ccb22eeb004d37793be28c773c2aa7b.gifv"> <img src="https://66.media.tumblr.com/47797c0100a67931abadf9fefe8d00e4/82f8368f5b54162b-02/s500x750/d5908489a8580160b6be44bf7db69c1068410d7c.png"> <p><a href="https://fyfluiddynamics.com/2020/06/how-animals-stay-dry-in-the-rain/">Getting wet can be a big problem for little creatures. But these animals have a secret weapon: tiny roughness on their scales and feathers that helps them shed water. </a>
+(Image and video credit: N. Sharp; research credit: <a href="https://doi.org/10.1073/pnas.2002924117">S. Kim et al.</a>) </p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-29 10:01:05-05:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/06/how-animals-stay-dry-in-the-rain/" rel="bookmark" class="u-url"
+       title="How Animals Stay Dry in the Rain" target="_blank">
+      <time class="m-date" datetime="2020-06-29 15:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How Animals Stay Dry in the Rain
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Getting wet can be a problem for many animals. A wet insect could quickly become too heavy to fly, and a wet bird can struggle to stay warm. But these <a href="https://fyfluiddynamics.com/2020/06/how-animals-stay-dry-in-the-rain/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-06-29 15:00:00+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -203,6 +422,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-06-29 12:52:39+02:00" class="dt-published"></time>
   Mon 29 Jun 2020
   in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2326/" rel="bookmark" class="u-url"
+       title="Five Word Jargon" target="_blank">
+      <time class="m-date" datetime="2020-06-29 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Five Word Jargon
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="My other (much harder) hobby is trying to engineer situations where I have an excuse to use more than one of them in short succession." src="https://imgs.xkcd.com/comics/five_word_jargon.png" title="My other (much harder) hobby is trying to engineer situations where I have an excuse to use more than one of them in short succession.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-29 00:00:00+00:00" class="dt-published"></time>
+  Mon 29 Jun 2020
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -258,59 +511,6 @@ Donec sed commodo eros. Sed vehicula elit ac tincidunt lacinia.
   on <time datetime="2020-06-29 00:00:00+00:00" class="dt-published"></time>
   Mon 29 Jun 2020
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://k-d-w.org/blog/2020/06/scikit-survival-0.13-released/" rel="bookmark" class="u-url"
-       title="scikit-survival 0.13 Released" target="_blank">
-      <time class="m-date" datetime="2020-06-28 16:02:50+00:00">
-        Jun
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      scikit-survival 0.13 Released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today, I released version 0.13.0 of
-<a href="https://github.com/sebp/scikit-survival">scikit-survival</a>.
-Most notably, this release adds
-<a href="https://scikit-survival.readthedocs.io/en/v0.13.0/generated/sksurv.metrics.brier_score.html#sksurv.metrics.brier_score">sksurv.metrics.brier_score</a> and <a href="https://scikit-survival.readthedocs.io/en/v0.13.0/generated/sksurv.metrics.integrated_brier_score.html#sksurv.metrics.integrated_brier_score">sksurv.metrics.integrated_brier_score</a>,
-an updated PEP 517/518 compatible build system,
-and support for scikit-learn 0.23.</p>
-<p>For a full list of changes in scikit-survival 0.13.0, please see the
-<a href="https://scikit-survival.readthedocs.io/en/latest/release_notes.html">release notes</a>.</p>
-<p>Pre-built conda packages are available for Linux, macOS, and Windows via</p>
-<pre><code> conda install -c sebp scikit-survival
-</code></pre>
-<p>Alternatively, scikit-survival can be installed from source following
-<a href="https://scikit-survival.readthedocs.io/en/v0.13.0/install.html">these instructions</a>.</p>
-The time-dependent Brier score
-<p>The time-dependent Brier score is an extension of the mean squared
-error to <a href="https://scikit-survival.readthedocs.io/en/latest/understanding_predictions.html">right censored data</a>:</p>
-<p>$$
-\mathrm{BS}^c(t) = \frac{1}{n} \sum_{i=1}^n I(y_i \leq t \land \delta_i = 1)
-\frac{(0 - \hat{\pi}(t | \mathbf{x}_i))^2}{\hat{G}(y_i)} + I(y_i &gt; t)
-\frac{(1 - \hat{\pi}(t | \mathbf{x}_i))^2}{\hat …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-28 16:02:50+00:00" class="dt-published"></time>
-  Sun 28 Jun 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -459,80 +659,6 @@ Maria Fernanda Petri Betto184 …
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/621998193235869696/weve-all-experienced-the-frustration-of-traffic" rel="bookmark" class="u-url"
-       title="We’ve all experienced the frustration of traffic jams..." target="_blank">
-      <time class="m-date" datetime="2020-06-26 10:01:41-05:00">
-        Jun
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      We’ve all experienced the frustration of traffic jams...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/41f81f40559617d6549dff613d4c6e3d/99e2ca991d0aae18-b9/s500x750/1b40fdabd3492cc1fa2e90bd9b485fd2b7885dfe.gifv"> <img src="https://66.media.tumblr.com/192fbae99ef8229afd627799b035ebb1/99e2ca991d0aae18-2a/s500x750/ca7802315a44128ce49fe6f5208e901c723476bc.gifv"> <img src="https://66.media.tumblr.com/6e1a4791bb29c9edc068ed31cd49b964/99e2ca991d0aae18-52/s500x750/de15bbea3486b177afca3101cf167848c88a070b.gifv"> <p>
-<a href="https://fyfluiddynamics.com/2020/06/traffic-flow-and-phantom-jams/">We’ve all experienced the frustration of traffic jams that seem to come from nowhere – standstills that occur with no accident, construction, or obstacle in sight.</a>
-
-
-(Video and image credit: TED-Ed)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-26 10:01:41-05:00" class="dt-published"></time>
-  Fri 26 Jun 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/traffic-flow-and-phantom-jams/" rel="bookmark" class="u-url"
-       title="Traffic Flow and Phantom Jams" target="_blank">
-      <time class="m-date" datetime="2020-06-26 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Traffic Flow and Phantom Jams
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  We&#8217;ve all experienced the frustration of traffic jams that seem to come from nowhere &#8212; standstills that occur with no accident, construction, or obstacle in sight. Traffic shares a lot <a href="https://fyfluiddynamics.com/2020/06/traffic-flow-and-phantom-jams/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-26 15:00:00+00:00" class="dt-published"></time>
-  Fri 26 Jun 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://drewdevault.com/2020/06/26/Vendor-purpose-OS.html" rel="bookmark" class="u-url"
        title="General-purpose OS, special-purpose OS, and now: vendor-purpose OS" target="_blank">
       <time class="m-date" datetime="2020-06-26 00:00:00+00:00">
@@ -581,8 +707,8 @@ propose “vendor-purpose operating system”.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://xkcd.com/2325/" rel="bookmark" class="u-url"
-       title="Endorheic Basin" target="_blank">
+    <a href="http://www.scicombinator.com/articles/5748927" rel="bookmark" class="u-url"
+       title="Characteristics of Women of Reproductive Age with Laboratory-Confirmed SARS-CoV-2 Infection by Pregnancy Status - United States, January 22-June 7, 2020" target="_blank">
       <time class="m-date" datetime="2020-06-26 00:00:00+00:00">
         Jun
         <span class="m-date-day">
@@ -591,22 +717,22 @@ propose “vendor-purpose operating system”.</p>
         2020
       </time>
       <div class="p-name">
-      Endorheic Basin
+      Characteristics of Women of Reproductive Age with Laboratory-Confirmed SARS-CoV-2 Infection by Pregnancy Status - United States, January 22-June 7, 2020
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="My biggest fear is that colonial engineers will try to flood me to generate electricity. My biggest hope is that I'll develop sailing stones." src="https://imgs.xkcd.com/comics/endorheic_basin.png" title="My biggest fear is that colonial engineers will try to flood me to generate electricity. My biggest hope is that I'll develop sailing stones.">
+  As of June 16, 2020, the coronavirus disease 2019 (COVID-19) pandemic has resulted in 2,104,346 cases and 116,140 deaths in the United States.* During pregnancy, women experience immunologic and physiologic changes that could increase their risk for more severe illness from respiratory infections (1,2). To date, data to assess the prevalence and severity of COVID-19 among pregnant U.S. women and determine whether signs and symptoms differ among pregnant and nonpregnant women are limited. During January 22-June 7, as part of COVID-19 surveillance, CDC received reports of 326,335 women of reproductive age (15-44 years) who had positive test results for SARS-CoV-2, the virus that causes COVID-19. Data on pregnancy status were available for 91,412 (28.0%) women with laboratory-confirmed infections; among these, 8,207 (9.0%) were pregnant. Symptomatic pregnant and nonpregnant women with …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
+  <span class="p-author"><b>SM Gilboa</b></span>
   on <time datetime="2020-06-26 00:00:00+00:00" class="dt-published"></time>
   Fri 26 Jun 2020
-  in xkcd.com.
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -753,79 +879,6 @@ Completion of the demo package We successfully created the demo app and uploaded
   on <time datetime="2020-06-24 01:16:13+00:00" class="dt-published"></time>
   Wed 24 Jun 2020
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5743402" rel="bookmark" class="u-url"
-       title="Experimental evidence of dispersal of invasive cyprinid eggs inside migratory waterfowl" target="_blank">
-      <time class="m-date" datetime="2020-06-24 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Experimental evidence of dispersal of invasive cyprinid eggs inside migratory waterfowl
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Fish have somehow colonized isolated water bodies all over the world without human assistance. It has long been speculated that these colonization events are assisted by waterbirds, transporting fish eggs attached to their feet and feathers, yet empirical support for this is lacking. Recently, it was suggested that endozoochory (i.e., internal transport within the gut) might play a more important role, but only highly resistant diapause eggs of killifish have been found to survive passage through waterbird guts. Here, we performed a controlled feeding experiment, where developing eggs of two cosmopolitan, invasive cyprinids (common carp, Prussian carp) were fed to captive mallards. Live embryos of both species were retrieved from fresh feces and survived beyond hatching. Our study identifies an overlooked dispersal mechanism in fish, providing evidence for bird-mediated dispersal ability of soft-membraned eggs undergoing active development. Only 0 …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>BA Lukács</b></span>
-  on <time datetime="2020-06-24 00:00:00+00:00" class="dt-published"></time>
-  Wed 24 Jun 2020
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article779/production-report-making-episode-33" rel="bookmark" class="u-url"
-       title="Production report: making episode 33" target="_blank">
-      <time class="m-date" datetime="2020-06-19 19:14:00+02:00">
-        Jun
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Production report: making episode 33
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2020/ep33-makingof/2020-06-18_ep33d-thumbnails-network_4.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2020/ep33-makingof/2020-06-18_ep33d-thumbnails-network_4.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p></p><div>
-<strong>Disclaimer:</strong>
-Screenshot here might spoil parts of the story (I selected them to minify this effect).
-</div><p></p>
-<p>In about ten days, I'll post the future episode 33 of Pepper&amp;Carrot and while the English version is in its final validation step, I'm taking the time to show you what I have done so far on this adventure. </p>
-<p>It took me a lot of time reach this step. First, the episode is slightly longer than usual (8 pages long against an average of 6,5 pages long). Then,  I have a lot of shots with many soldiers, characters and army. And to finish; (cherry on top) I felt exhausted during the confinement and my attention was happy to flee into other tasks where I had more control and less frustration: Krita beta for 4.3, Inkscape 1.0 release, Peertube v3 Crowdfunding …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2020-06-19 19:14:00+02:00" class="dt-published"></time>
-  Fri 19 Jun 2020
-  in David Revoy.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1008,48 +1061,6 @@ guests. See you there!</p>
   on <time datetime="2020-06-13 19:45:02+00:00" class="dt-published"></time>
   Sat 13 Jun 2020
   in Doctor Fortran.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://mylette.rs/revisiting-the-mechanism-behind-the-for-statement/" rel="bookmark" class="u-url"
-       title="Revisiting the Mechanism Behind the `for` Statement" target="_blank">
-      <time class="m-date" datetime="2020-06-08 22:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          08
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Revisiting the Mechanism Behind the `for` Statement
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In Python the <code>for</code> statement is an important tool used for specifying
-iteration. This article (literally) goes over the <code>for</code> statement and uncovers
-the mechanism that makes it tick. Before disassembling the <code>for</code> statement
-we&#x27;ll first look at the way it is used and from there slowly start diving into
-the internals.</p>The <code>for</code> Statement 101<p>The <code>for</code> statement acts as an interface for iterating over elements
-inside objects. The most obvious way for a C programmer to iterate
-over an object in Python is the following:</p><div><pre><div><span>&gt;&gt;</span><span>&gt;</span><span> planets </span><span>=</span><span> </span><span>(</span><span>&quot;Mercury&quot;</span><span>,</span><span> </span><span>&quot;Venus&quot;</span><span>,</span><span> </span><span>&quot;Earth&quot;</span><span>,</span><span> </span><span>&quot;Mars&quot;</span><span>,</span><span> </span><span>)</span><span></span></div><div><span></span><span>&gt;&gt;</span><span>&gt;</span><span> </span><span>for</span><span> i </span><span>in</span><span> </span><span>range</span><span>(</span><span>len</span><span>(</span><span>planets</span><span>)</span><span>)</span><span>:</span><span></span></div><div><span></span><span>.</span><span>.</span><span>.</span><span>     </span><span>print</span><span>(</span><span>planets</span><span>[</span><span>i</span><span>]</span><span>)</span><span></span></div><div><span></span><span>.</span><span>.</span><span>.</span><span></span></div><div><span>Mercury</span></div><div><span>Venus</span></div><div><span>Earth</span></div><div><span>Mars</span></div></pre></div><p>The idea here is to create an index variable <code>i</code> from an arithmetic progression
-using the built-in <code>range</code> function which goes from zero up to but not
-including <code>len(planets)</code>. The index variable is …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-08 22:00:00+00:00" class="dt-published"></time>
-  Mon 08 Jun 2020
-  in Velibor Zeli.
 </footer>
 <div class="m-clearfix-l"></div>
 
