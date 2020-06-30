@@ -142,9 +142,54 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://dilsonguim.github.io/kde/gsoc/2020/06/29/gsoc-week3.html" rel="bookmark" class="u-url"
-       title="Google Summer of Code 2020 - Week 3" target="_blank">
-      <time class="m-date" datetime="2020-06-29 23:00:00+00:00">
+    <a href="https://dot.kde.org/2020/06/30/kdes-gitlab-now-live" rel="bookmark" class="u-url"
+       title="KDE's GitLab is now Live" target="_blank">
+      <time class="m-date" datetime="2020-06-30 08:28:04+00:00">
+        Jun
+        <span class="m-date-day">
+          30
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      KDE's GitLab is now Live
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><div><div>
+
+<p>
+    <a href="https://dot.kde.org/sites/dot.kde.org/files/GitLab_Logo_with_KDE_peoplex1000.png">
+        <img src="//dot.kde.org/sites/dot.kde.org/files/GitLab_Logo_with_KDE_peoplex1000.png">
+    </a>
+ </p>
+<p>After our final decision to adopt <a href="https://about.gitlab.com/">GitLab</a> in November 2019, KDE started the work of tackling the many challenges that come with moving a whole development platform for a large open source community. KDE has now officially completed Phase One of the adoption and contributors have begun to use GitLab on a daily basis.</p>
+Why did we migrate to GitLab?
+<p>By switching to GitLab we will be offering our community one of the most popular and latest, fully-featured, actively developed, and supported DevOps platforms in existence today. This will contribute to boosting collaboration and productivity, and making our workflow more transparent and accessible to everyone who wants to contribute.</p>
+How will it benefit the wider community?
+<p>By using a platform offering an interface that most open source developers are nowadays familiar with, we will be lowering the bar for new …</p></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDE Dot News</b></span>
+  on <time datetime="2020-06-30 08:28:04+00:00" class="dt-published"></time>
+  Tue 30 Jun 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://danigm.net/gsoc-2020-1.html" rel="bookmark" class="u-url"
+       title="Fractal: Refactoring and the review process" target="_blank">
+      <time class="m-date" datetime="2020-06-29 22:00:00+00:00">
         Jun
         <span class="m-date-day">
           29
@@ -152,34 +197,33 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Google Summer of Code 2020 - Week 3
+      Fractal: Refactoring and the review process
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This week, I spent most of my time testing the <a href="https://kde.org/applications/education/org.kde.rocs">Rocs</a> graph-layout-plugin.
-I needed to test the method that applies the force-based layout algorithm to a graph, whose signature is the following.</p>
-
-<div><div><pre><code><span>static</span> <span>void</span> <span>applyForceBasedLayout</span><span>(</span><span>GraphDocumentPtr</span> <span>document</span><span>,</span> <span>const</span> <span>qreal</span> <span>nodeRadius</span><span>,</span>
-                                  <span>const</span> <span>qreal</span> <span>margin</span><span>,</span> <span>const</span> <span>qreal</span> <span>areaFactor</span><span>,</span>
-                                  <span>const</span> <span>qreal</span> <span>repellingForce</span><span>,</span> <span>const</span> <span>qreal</span> <span>attractionForce</span><span>,</span>
-                                  <span>const</span> <span>bool</span> <span>randomizeInitialPositions</span><span>,</span> <span>const</span> <span>quint32</span> <span>seed</span><span>);</span>
-</code></pre></div></div>
-
-<p>Unfortunately, there is not much that is guaranteed by this method. Basically, given a graph and some parameters, it tries
-to find positions for each node in such a way that, if we draw the graph using these positions, it will look nice.
-What does it mean for the drawing of a graph to look nice? How can we test it? 
-This is a subjective concept, and there is no clear way to test it. But there is still something that can …</p>
+  <p>In this year GSoC, <a href="https://aledomu.github.io/gnome/refactoring-fractal-remove-backend-i/">Alejandro</a> is working on Fractal, moving code from the
+backend to the client, to try to simplify the code used to communicate with the
+matrix.org server and maybe in the future we can replace <code>fractal-matrix-api</code>
+with the <a href="https://matrix.org/sdks/#matrix-rust-sdk">matrix-rust-sdk</a>. And then we'll have less code in our project to
+maintain.</p>
+<p>This is a great work, something needed in a project with a technological debt
+of several years. I created this project to learn Rust, and also I was learning
+about the matrix protocol during the project build. And other contributors do
+the same. So we've been building one thing on top another for a lot of years.</p>
+<p>In this kind of community driven projects it's the way to go. For some time
+we've people interested and developers think about the design and start change
+some parts …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Dilson Guimarães (dilsonguim)</b></span>
-  on <time datetime="2020-06-29 23:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>danigm</b></span>
+  on <time datetime="2020-06-29 22:00:00+00:00" class="dt-published"></time>
   Mon 29 Jun 2020
-  in Planet KDE.
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -285,40 +329,6 @@ This is a subjective concept, and there is no clear way to test it. But there is
   on <time datetime="2020-06-29 19:38:00+02:00" class="dt-published"></time>
   Mon 29 Jun 2020
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/hughsie/2020/06/29/now-firmware-can-depend-on-available-client-features/" rel="bookmark" class="u-url"
-       title="Now firmware can depend on available client features" target="_blank">
-      <time class="m-date" datetime="2020-06-29 15:56:25+00:00">
-        Jun
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Now firmware can depend on available client features
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  At the moment we just blindly assume the capabilities of the front-end client when installing firmware. We can somewhat work around this limitation by requiring a new enough fwupd daemon version, but the GUI client software may be much older than the fwupd version or just incomplete. If you maintain a text or graphical client … <a href="https://blogs.gnome.org/hughsie/2020/06/29/now-firmware-can-depend-on-available-client-features/">Continue reading <span>Now firmware can depend on available client features</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>hughsie</b></span>
-  on <time datetime="2020-06-29 15:56:25+00:00" class="dt-published"></time>
-  Mon 29 Jun 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -464,8 +474,8 @@ This is a subjective concept, and there is no clear way to test it. But there is
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/latex-wrapfigure-debug/" rel="bookmark" class="u-url"
-       title="LaTeX wrapfigure debugging" target="_blank">
+    <a href="https://www.scivision.dev/python-pycache-eliminate/" rel="bookmark" class="u-url"
+       title="Eliminate Python 3.8+ __pycache__ directories" target="_blank">
       <time class="m-date" datetime="2020-06-29 00:00:00+00:00">
         Jun
         <span class="m-date-day">
@@ -474,33 +484,25 @@ This is a subjective concept, and there is no clear way to test it. But there is
         2020
       </time>
       <div class="p-name">
-      LaTeX wrapfigure debugging
+      Eliminate Python 3.8+ __pycache__ directories
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>LaTeX
-<a href="https://ctan.org/pkg/wrapfig">wrapfig.sty \wrapfigure</a>
-is a great way to save space, but has several quirks to workaround.
-Overleaf also
-<a href="https://www.overleaf.com/learn/latex/wrapping_text_around_figures">notes the touchiness</a>
-of wrapfigure.
-The typical failure mode is that the wrapped figure will not appear, and the document text is wrapped for a few pages with blank column.
-The LaTeX log doesn&rsquo;t give an error, just a warning about a missing figure reference.</p>
-Workarounds
-<ol>
-<li>Don&rsquo;t have wrapfigure next to a list (enumerated or itemized).</li>
-<li>put a blank line before and after wrapfigure stanza in the document body</li>
-</ol>
+  <p>Python 3.8 brought the capability to put Python cache files under <strong>pycache</strong>/ anywhere.
+Control this behavior by setting the
+<a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPYCACHEPREFIX">PYTHONPYCACHEPREFIX</a>
+environment variable.</p>
 Example
-<p>For #2, in the .tex file have like</p>
-<div><pre><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut faucibus ex.
-<span>\begin</span>{wrapfigure}{R}{0.5<span>\textwidth</span>}
-<span>\includegraphics</span>{...}
-...
-<span>\end</span>{wrapfigure}
-Donec sed commodo eros. Sed vehicula elit ac tincidunt lacinia.
+<ul>
+<li>Windows: set environment variable PYTHONPYCACHEPREFIX to %temp%</li>
+<li>MacOS: <code>export PYTHONPYCACHEPREFIX=/tmp</code></li>
+<li>Linux: <code>export PYTHONPYCACHEPREFIX=/tmp</code></li>
+</ul>
+Workaround
+<p>Python older than 3.8 can avoid writing .pyc files anywhere by setting environment variable:</p>
+<div><pre><code><span>PYTHONDONTWRITEBYTECODE</span><span>=</span><span>1</span>
 </code></pre></div>
   </p>
   </div>
