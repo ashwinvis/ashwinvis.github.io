@@ -142,6 +142,98 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
+    <a href="https://aledomu.github.io/gnome/refactoring-fractal-remove-backend-ii/" rel="bookmark" class="u-url"
+       title="Refactoring Fractal: Remove Backend (II)" target="_blank">
+      <time class="m-date" datetime="2020-07-01 07:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Refactoring Fractal: Remove Backend (II)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>So the time came for removing the <code>Backend</code> struct finally! The bits that were left in the previous patch have been removed, which were not just state but a <code>ThreadPool</code> and a cache for some info. Those were fitted in <code>AppOp</code> without too much thought on consistency of it.</p>
+
+<p>But what does this actually mean for the internal structure of the code?</p>
+
+<p>The result is that any state or utility that was needed for requests and modifying the UI is held only from a single place in the app. With it, the loop in <code>Backend</code> has been removed as well, and instead of sending messages to the receiver loop from the backend, those are sent from a spawned thread (to keep the UI thread unlocked) that sends the HTTP request directly and retrieves the response. Put in a simpler way …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Alejandro Domínguez</b></span>
+  on <time datetime="2020-07-01 07:00:00+00:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jyeno.home.blog/2020/07/01/google-summer-of-code-2020-week-4-and-5/" rel="bookmark" class="u-url"
+       title="Google Summer of Code 2020 – week 4 and 5" target="_blank">
+      <time class="m-date" datetime="2020-07-01 04:11:04+00:00">
+        Jul
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Google Summer of Code 2020 – week 4 and 5
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hi, today I will talk about my week 4 and week 5 and bring some news!</p>
+
+
+
+<p>The last post was short but this one will make up for it, explaining some important bits, and changes, in the structure of mark that changed/improved during the first month of coding in GSoC.</p>
+
+
+
+<p>In week 4, I documented a huge part of the existing code, although there is still a need for some updates. Currently in week 5, I am fixing some bugs of the new logic and I will document the newly created Painter class (more information below), also start developing the logic for text annotation.</p>
+
+
+
+<p>The structure of marK had some changes that I had like to highlight and explain. this diagram represents the current structure, with marK also being the main window class.</p>
+
+
+
+<img alt="" src="//lh4.googleusercontent.com/MjERtHh2HMZBUi9NyIjVWaqd-7OCgwOxZ2UegTTgKHzLcgBM5LnGg0iAGWaUd87C0O1vBTu2rOWT_N1Gfnal01gemBDi60EG1zJqv00ytk3LZ4SFjn7aoby_EE9-7T3ibSc38av9">Current relationship of classes.
+
+
+
+<p>Container was …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jean Lima Andrade</b></span>
+  on <time datetime="2020-07-01 04:11:04+00:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
     <a href="https://jlelse.blog/links/2020/06/productivity-musing/" rel="bookmark" class="u-url"
        title="On Productivity" target="_blank">
       <time class="m-date" datetime="2020-06-30 23:15:51+02:00">
@@ -171,43 +263,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-06-30 23:15:51+02:00" class="dt-published"></time>
   Tue 30 Jun 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://kdenlive.org/en/2020/06/gsoc-20-progress-week-3-and-4/" rel="bookmark" class="u-url"
-       title="GSoC ’ 20 Progress: Week 3 and 4" target="_blank">
-      <time class="m-date" datetime="2020-06-30 19:11:56+00:00">
-        Jun
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      GSoC ’ 20 Progress: Week 3 and 4
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Greetings!</p>
-<p>The past two weeks did not see as much progress as I would have liked because of my university exams and evaluations. Now, let’s focus on the work that I could do before I got swamped with the academic work and term exams.</p>
-<p>I started the third week by working on drafting a basic QML display of the subtitle model items, like the position of the subtitles in the timeline.  I drafted a basic delegate QML model to display the start positions of each subtitle line.  Then I began working on integrating the back-end part (which I had mentioned in the <a href="https://kdenlive.org/en/2020/06/gsoc-20-progress-week-1-and-2/">previous post</a>) with the basic front-end part (displaying the position of the subtitles).</p>
-<p>In this process of integrating the subtitle model with the QML delegate model, I encountered a few logical errors with my code and some …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Kdenlive</b></span>
-  on <time datetime="2020-06-30 19:11:56+00:00" class="dt-published"></time>
-  Tue 30 Jun 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -284,6 +339,57 @@ The Python 3.8 series is the newest feature release of the Python  language, and
   on <time datetime="2020-06-30 12:19:06.341000-04:00" class="dt-published"></time>
   Tue 30 Jun 2020
   in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2020/06/30/tell-candidates-what-to-expect-from-your-job-interviews/" rel="bookmark" class="u-url"
+       title="Tell candidates what to expect from your job interviews" target="_blank">
+      <time class="m-date" datetime="2020-06-30 15:24:34+00:00">
+        Jun
+        <span class="m-date-day">
+          30
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Tell candidates what to expect from your job interviews
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In my last job, I helped with a few projects (like <a href="https://jvns.ca/blog/brag-documents/">brag
+documents</a> and the engineering levels) to
+help make the engineering culture a little more inclusive, and I want to talk
+about one of them today: making the interview process a little easier to
+understand for candidates.</p>
+
+<p>I worked on this project for a few days way back in 2015 and I’m pretty happy
+with how it turned out.</p>
+
+giving everyone a little information helps level the playing field
+
+<p>Different tech companies run their interviews in very different ways, and I
+think it’s silly to expect candidates to magically intuit how your company’s
+interview process works.</p>
+
+<p>It sucks for everyone when a candidate is surprised with an unexpected
+interview. For example, at the time the debugging interview required candidates
+to have a dev environment set up …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-06-30 15:24:34+00:00" class="dt-published"></time>
+  Tue 30 Jun 2020
+  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -434,51 +540,6 @@ The Python 3.8 series is the newest feature release of the Python  language, and
   on <time datetime="2020-06-30 00:00:00+02:00" class="dt-published"></time>
   Tue 30 Jun 2020
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://danigm.net/gsoc-2020-1.html" rel="bookmark" class="u-url"
-       title="Fractal: Refactoring and the review process" target="_blank">
-      <time class="m-date" datetime="2020-06-29 22:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Fractal: Refactoring and the review process
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In this year GSoC, <a href="https://aledomu.github.io/gnome/refactoring-fractal-remove-backend-i/">Alejandro</a> is working on Fractal, moving code from the
-backend to the client, to try to simplify the code used to communicate with the
-matrix.org server and maybe in the future we can replace <code>fractal-matrix-api</code>
-with the <a href="https://matrix.org/sdks/#matrix-rust-sdk">matrix-rust-sdk</a>. And then we'll have less code in our project to
-maintain.</p>
-<p>This is a great work, something needed in a project with a technological debt
-of several years. I created this project to learn Rust, and also I was learning
-about the matrix protocol during the project build. And other contributors do
-the same. So we've been building one thing on top another for a lot of years.</p>
-<p>In this kind of community driven projects it's the way to go. For some time
-we've people interested and developers think about the design and start change
-some parts …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>danigm</b></span>
-  on <time datetime="2020-06-29 22:00:00+00:00" class="dt-published"></time>
-  Mon 29 Jun 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -947,51 +1008,6 @@ Completion of the demo package We successfully created the demo app and uploaded
   on <time datetime="2020-06-24 01:16:13+00:00" class="dt-published"></time>
   Wed 24 Jun 2020
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2020/06/19/a-little-bit-of-plain-javascript-can-do-a-lot/" rel="bookmark" class="u-url"
-       title="A little bit of plain Javascript can do a lot" target="_blank">
-      <time class="m-date" datetime="2020-06-19 08:58:47+00:00">
-        Jun
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      A little bit of plain Javascript can do a lot
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I&rsquo;ve never worked as a professional frontend developer, so even though I&rsquo;ve
-been writing HTML/CSS/JS for 15 years for little side projects, all of the
-projects have been pretty small, sometimes I don&rsquo;t write any Javascript for
-years in between, and I often don&rsquo;t quite feel like I know what I&rsquo;m doing.</p>
-
-<p>Partly because of that, I&rsquo;ve leaned on libraries a lot! Ten years ago I used to
-use jQuery, and since maybe 2017 I&rsquo;ve been using a lot of vue.js for my little
-Javascript projects (you can see a <a href="https://jvns.ca/blog/2017/06/26/vue-js-fun/">little whack-a-mole game I made here as an
-intro to Vue</a>).</p>
-
-<p>But last week, for the first time in a while, I wrote some plain
-Javascript without a library and it was fun so I wanted to talk about it …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-19 08:58:47+00:00" class="dt-published"></time>
-  Fri 19 Jun 2020
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
