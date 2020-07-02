@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://aledomu.github.io/gnome/refactoring-fractal-remove-backend-ii/" rel="bookmark" class="u-url"
-       title="Refactoring Fractal: Remove Backend (II)" target="_blank">
-      <time class="m-date" datetime="2020-07-01 07:00:00+00:00">
+    <a href="http://pyfound.blogspot.com/2020/07/announcing-psf-project-funding-working.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="Announcing the PSF Project Funding Working Group" target="_blank">
+      <time class="m-date" datetime="2020-07-01 18:21:05.310000-04:00">
         Jul
         <span class="m-date-day">
           01
@@ -152,24 +152,61 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Refactoring Fractal: Remove Backend (II)
+      Announcing the PSF Project Funding Working Group
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>So the time came for removing the <code>Backend</code> struct finally! The bits that were left in the previous patch have been removed, which were not just state but a <code>ThreadPool</code> and a cache for some info. Those were fitted in <code>AppOp</code> without too much thought on consistency of it.</p>
-
-<p>But what does this actually mean for the internal structure of the code?</p>
-
-<p>The result is that any state or utility that was needed for requests and modifying the UI is held only from a single place in the app. With it, the loop in <code>Backend</code> has been removed as well, and instead of sending messages to the receiver loop from the backend, those are sent from a spawned thread (to keep the UI thread unlocked) that sends the HTTP request directly and retrieves the response. Put in a simpler way …</p>
+  <div>
+<span><span></span></span></div>
+<div>
+<span></span>
+<div>
+<span><span>For the past 3 years, the PSF </span><a href="https://pyfound.blogspot.com/search/label/pypi"><span>has been working on</span></a><span> grant funded projects to improve our internal systems and platforms. This work has been done with the Packaging Working Group, and focused on our packaging ecosystem of PyPI and pip. We have been able to show that applying directed funding to open source projects has the ability to dramatically increase the speed of development, and move our community forward in a much more sustained way than relying solely on volunteer effort.</span></span></div>
+<span><div>
+<span>Along with the external grant funding of PSF projects, we have also committed PSF funds in the past to improve developments of community projects. This shows that the experience of directed funding is applicable to our community projects, as well as our own. An example here is the BeeWare project that was given funding via our Education Grants …</span></div></span></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Alejandro Domínguez</b></span>
-  on <time datetime="2020-07-01 07:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Eric Holscher (noreply@blogger.com)</b></span>
+  on <time datetime="2020-07-01 18:21:05.310000-04:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://ml4711.blogspot.com/2020/07/summer-maps.html" rel="bookmark" class="u-url"
+       title="Summer Maps" target="_blank">
+      <time class="m-date" datetime="2020-07-01 21:23:00+00:00">
+        Jul
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Summer Maps
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Since it's been a while since the last post, I thought I should share a little update about some going ons with Maps.There's now a new night mode, utilizing Mapbox' dark street tile set:<div><a href="https://1.bp.blogspot.com/-1RMLM3G5uBY/Xvz1hz5tGhI/AAAAAAAAEQ8/R1czb2qKFRYf0_SvXf4q6wayKfT3nHzxQCLcBGAsYHQ/s1600/hamburger-night-mode.png"><img src="https://1.bp.blogspot.com/-1RMLM3G5uBY/Xvz1hz5tGhI/AAAAAAAAEQ8/R1czb2qKFRYf0_SvXf4q6wayKfT3nHzxQCLcBGAsYHQ/s1600/hamburger-night-mode.png"></a></div><div><a href="https://1.bp.blogspot.com/-hBBKW_-9vqY/Xvz1lri4z0I/AAAAAAAAERA/tLfYXIueDwgY6EKwr5-sh5LL4VbgW41FgCLcBGAsYHQ/s1600/night-mode.png"><img src="https://1.bp.blogspot.com/-hBBKW_-9vqY/Xvz1lri4z0I/AAAAAAAAERA/tLfYXIueDwgY6EKwr5-sh5LL4VbgW41FgCLcBGAsYHQ/s640/night-mode.png"></a></div>Another thing that has been requested from time to time is showing labels on the satellite mode (“hybrid” aerial). Originally the plan was more along the line of rendering vector tile data on the client-side and have this rendered as a separate layer on top of the regular “vanilla” aerial tile set. But since vector tile support has not materialized yet, another idea has been to take advantage of Mapbox' hybrid raster tiles (”satellite-streets” as they call them). So I decided to implement that, to finally have this feature:<div><a href="https://1.bp.blogspot.com/-kGIMA138mUg/Xvz3QLOOnHI/AAAAAAAAERM/4YrSHsu8zRgu2hlX2LCaAM4XuqDmhvsTwCLcBGAsYHQ/s1600/hybrid-aerial.png"><img src="https://1.bp.blogspot.com/-kGIMA138mUg/Xvz3QLOOnHI/AAAAAAAAERM/4YrSHsu8zRgu2hlX2LCaAM4XuqDmhvsTwCLcBGAsYHQ/s640/hybrid-aerial.png"></a></div> So, when selecting the aerial view, a checkbox appears allowing to switch on the hybrid mode …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Marcus Lundblad (noreply@blogger.com)</b></span>
+  on <time datetime="2020-07-01 21:23:00+00:00" class="dt-published"></time>
   Wed 01 Jul 2020
   in Planet GNOME.
 </footer>
@@ -180,9 +217,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jyeno.home.blog/2020/07/01/google-summer-of-code-2020-week-4-and-5/" rel="bookmark" class="u-url"
-       title="Google Summer of Code 2020 – week 4 and 5" target="_blank">
-      <time class="m-date" datetime="2020-07-01 04:11:04+00:00">
+    <a href="https://jlelse.blog/links/2020/07/whimsical-web/" rel="bookmark" class="u-url"
+       title="The Whimsical Web" target="_blank">
+      <time class="m-date" datetime="2020-07-01 20:35:34+02:00">
         Jul
         <span class="m-date-day">
           01
@@ -190,40 +227,130 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Google Summer of Code 2020 – week 4 and 5
+      The Whimsical Web
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Hi, today I will talk about my week 4 and week 5 and bring some news!</p>
-
-
-
-<p>The last post was short but this one will make up for it, explaining some important bits, and changes, in the structure of mark that changed/improved during the first month of coding in GSoC.</p>
-
-
-
-<p>In week 4, I documented a huge part of the existing code, although there is still a need for some updates. Currently in week 5, I am fixing some bugs of the new logic and I will document the newly created Painter class (more information below), also start developing the logic for text annotation.</p>
-
-
-
-<p>The structure of marK had some changes that I had like to highlight and explain. this diagram represents the current structure, with marK also being the main window class.</p>
-
-
-
-<img alt="" src="//lh4.googleusercontent.com/MjERtHh2HMZBUi9NyIjVWaqd-7OCgwOxZ2UegTTgKHzLcgBM5LnGg0iAGWaUd87C0O1vBTu2rOWT_N1Gfnal01gemBDi60EG1zJqv00ytk3LZ4SFjn7aoby_EE9-7T3ibSc38av9">Current relationship of classes.
-
-
-
-<p>Container was …</p>
+  <p>Max Böck <a href="https://mxb.dev/blog/the-whimsical-web/">created</a> <a href="https://whimsical.club/">a nice site</a> featuring &ldquo;whimsical websites&rdquo;. Websites that have special features and &ldquo;spark joy&rdquo;. A nice idea. 👍</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jean Lima Andrade</b></span>
-  on <time datetime="2020-07-01 04:11:04+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-01 20:35:34+02:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/622451169022836736/leidenfrost-droplets-levitating-over-liquid-baths" rel="bookmark" class="u-url"
+       title="Leidenfrost droplets levitating over liquid baths induce a..." target="_blank">
+      <time class="m-date" datetime="2020-07-01 10:01:33-05:00">
+        Jul
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Leidenfrost droplets levitating over liquid baths induce a...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/a47dc43c52ca7cca23adf77cabba0f50/6b1c334736e193ab-78/s500x750/510d23b1e47a6832767a84a0e9fbb6da8a778ba8.jpg"><p><a href="https://fyfluiddynamics.com/2020/07/the-vortex-beneath-a-drop/">Leidenfrost droplets levitating over liquid baths induce a vortex ring beneath the surface. </a>
+(Image credit: F. Cavagnon; research credit: <a href="https://doi.org/10.1103/PhysRevFluids.5.062701">B. Sobac et al.</a>)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-01 10:01:33-05:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/07/the-vortex-beneath-a-drop/" rel="bookmark" class="u-url"
+       title="The Vortex Beneath a Drop" target="_blank">
+      <time class="m-date" datetime="2020-07-01 15:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The Vortex Beneath a Drop
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  While we&#8217;re most used to seeing levitating Leidenfrost droplets on a solid surface, such drops can also form above a liquid bath. In fact, the smoothness of the bath&#8217;s surface, <a href="https://fyfluiddynamics.com/2020/07/the-vortex-beneath-a-drop/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-07-01 15:00:00+00:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite">
+<header>
+  <h1>
+    <a href="http://blog.davidedmundson.co.uk/blog/modern-process-management-on-the-desktop/" rel="bookmark" class="u-url"
+       title="Bringing modern process management to the desktop" target="_blank">
+      <time class="m-date" datetime="2020-07-01 13:03:58+00:00">
+        Jul
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Bringing modern process management to the desktop
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A desktop environment's sole role is to connect users to their applications. This includes everything from launching apps to actually displaying apps but also managing them and making sure they run fairly. Everyone is familiar the concept of a "Task manager" (like ksysguard), but over time they haven't kept up with the way applications are being developed or the latest developments from Linux.</p>
+The problem
+Managing running processes
+<p>There used to be a time where one PID == one "application". The kwrite process represents Kwrite, the firefox process represents Firefox, easy. but this has changed. To pick an extreme example:
+<strong>Discord in a flatpak is 13 processes!</strong></p>
+<p>It basically renders our task manager's process view unusable. All the names are random gibberish, trying to kill the application or setting nice levels becomes a guessing game.  Parent trees can help, but they …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David Edmundson</b></span>
+  on <time datetime="2020-07-01 13:03:58+00:00" class="dt-published"></time>
   Wed 01 Jul 2020
   in Planet KDE.
 </footer>
@@ -234,35 +361,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/06/productivity-musing/" rel="bookmark" class="u-url"
-       title="On Productivity" target="_blank">
-      <time class="m-date" datetime="2020-06-30 23:15:51+02:00">
-        Jun
+    <a href="https://xkcd.com/2327/" rel="bookmark" class="u-url"
+       title="Oily House Index" target="_blank">
+      <time class="m-date" datetime="2020-07-01 00:00:00+00:00">
+        Jul
         <span class="m-date-day">
-          30
+          01
         </span>
         2020
       </time>
       <div class="p-name">
-      On Productivity
+      Oily House Index
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>As always, a real nice essay (musing) by Scott Nesbit. This time <a href="https://buttondown.email/weeklymusings/archive/weekly-musings-074-on-productivity/">it’s about productivity</a>:</p>
-<blockquote>
-<p>Productivity never an end in itself. Productivity is a means to an end. That end is to be able to live your life outside of work. To be able to pursue the interests and passions that grab your attention. Being productive gives you the time and space to enjoy the company of family and friends. Being productive enables you to relax. All without that big clock casting its shadow over you.</p>
-</blockquote>
+  <img alt="We're underwater on our mortgage thanks to the low price of water." src="https://imgs.xkcd.com/comics/oily_house_index.png" title="We're underwater on our mortgage thanks to the low price of water.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-30 23:15:51+02:00" class="dt-published"></time>
-  Tue 30 Jun 2020
-  in jlelse's Blog.
+  on <time datetime="2020-07-01 00:00:00+00:00" class="dt-published"></time>
+  Wed 01 Jul 2020
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -390,80 +514,6 @@ to have a dev environment set up …</p>
   on <time datetime="2020-06-30 15:24:34+00:00" class="dt-published"></time>
   Tue 30 Jun 2020
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/622360557655310336/the-seoul-aquarium-is-now-home-to-an-enormous" rel="bookmark" class="u-url"
-       title="The Seoul Aquarium is now home to an enormous crashing wave,..." target="_blank">
-      <time class="m-date" datetime="2020-06-30 10:01:19-05:00">
-        Jun
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Seoul Aquarium is now home to an enormous crashing wave,...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/47008f5e359d5f13ee2deeee672d5fa4/8b63ead709d6f1d2-f4/s500x750/33b4550d7c9746e7f5a2d294b78b0f0a2d00d783.gifv"> <img src="https://66.media.tumblr.com/6e4c844d3e9ab55d2b8275863c906ed8/8b63ead709d6f1d2-10/s500x750/3ce8e54ce4d624ecee6338b86244af7f5c57c584.gifv"> <img src="https://66.media.tumblr.com/9f84835b52a96b2bd8cafa03efd9f986/8b63ead709d6f1d2-74/s500x750/93d6d15f2b058b603946dbd9effd5919a79ce818.gifv"> <p>
-<a href="https://fyfluiddynamics.com/2020/06/making-waves/">The Seoul Aquarium is now home to an enormous crashing wave, courtesy of design company d'strict.</a>
-
-
-(Image and video credit: <a href="http://www.dstrict.com/arttechfactory/kr/65-Public_Media_Art_1.html">d'strict</a>; via <a href="https://www.thisiscolossal.com/2020/05/anamorphic-wave-aquarium-seoul/">Colossal</a>)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-30 10:01:19-05:00" class="dt-published"></time>
-  Tue 30 Jun 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/06/making-waves/" rel="bookmark" class="u-url"
-       title="Making Waves" target="_blank">
-      <time class="m-date" datetime="2020-06-30 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Making Waves
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The Seoul Aquarium is now home to an enormous crashing wave, courtesy of design company d&#8217;strict. Check out several different views of the anamorphic illusion in their video above. There&#8217;s <a href="https://fyfluiddynamics.com/2020/06/making-waves/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-06-30 15:00:00+00:00" class="dt-published"></time>
-  Tue 30 Jun 2020
-  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -653,40 +703,6 @@ to have a dev environment set up …</p>
 <article class="h-cite">
 <header>
   <h1>
-    <a href="https://xkcd.com/2326/" rel="bookmark" class="u-url"
-       title="Five Word Jargon" target="_blank">
-      <time class="m-date" datetime="2020-06-29 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Five Word Jargon
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="My other (much harder) hobby is trying to engineer situations where I have an excuse to use more than one of them in short succession." src="https://imgs.xkcd.com/comics/five_word_jargon.png" title="My other (much harder) hobby is trying to engineer situations where I have an excuse to use more than one of them in short succession.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-29 00:00:00+00:00" class="dt-published"></time>
-  Mon 29 Jun 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
     <a href="https://www.scivision.dev/python-pycache-eliminate/" rel="bookmark" class="u-url"
        title="Eliminate Python 3.8+ __pycache__ directories" target="_blank">
       <time class="m-date" datetime="2020-06-29 00:00:00+00:00">
@@ -769,60 +785,6 @@ explain, and the deeper understanding I find when I teach.</p><p>Here …</p>
   on <time datetime="2020-06-28 07:10:00-04:00" class="dt-published"></time>
   Sun 28 Jun 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite">
-<header>
-  <h1>
-    <a href="http://pyfound.blogspot.com/2020/06/2020-python-software-foundation-board_26.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="2020 Python Software Foundation Board of Directors Election Retrospective and Next Steps" target="_blank">
-      <time class="m-date" datetime="2020-06-26 17:27:54.625000-04:00">
-        Jun
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      2020 Python Software Foundation Board of Directors Election Retrospective and Next Steps
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>
-With the&nbsp;<a href="http://pyfound.blogspot.com/2020/06/2020-python-software-foundation-board.html">2020 Board of Directors Election Results</a>&nbsp;announced, a new class of directors will officially be joining June 30th!</div>
-<div>
-In light of the results and narrow margins, the Python Software Foundation (PSF) staff, incoming directors, existing directors, and community have already taken time to consider and&nbsp;<a href="https://discuss.python.org/t/psf-board-election-reform/4527">discuss</a>&nbsp;the participation and representation of our global community on the PSF Board of Directors. These facets are crucial to the long term direction and resilience of our community.</div>
-<div>
-For now, the PSF staff would like to share information on&nbsp;<strong>participation</strong>,&nbsp;<strong>representation</strong>, and the&nbsp;<strong>next steps&nbsp;</strong>we plan to take to improve these facets of our membership.</div>
-
-Full Results
-
-CandidateVotes
-
-<strong>Nina Zakharenko</strong>263
-<strong>Dustin Ingram</strong>249
-<strong>Jeff Triplett</strong>240
-<strong>Thomas Wouters</strong>237
-Valeria Calderon234
-Débora Azevedo219
-Manuel Kaufmann217
-Ngazetungue Muheue201
-Mannie Young194
-Maria Fernanda Petri Betto184 …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ernest W. Durbin III (noreply@blogger.com)</b></span>
-  on <time datetime="2020-06-26 17:27:54.625000-04:00" class="dt-published"></time>
-  Fri 26 Jun 2020
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
