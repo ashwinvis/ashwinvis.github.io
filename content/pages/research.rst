@@ -12,29 +12,33 @@ Highlights
 
 .. container:: m-row
 
-    .. container:: m-col-m-6
+     .. container:: m-col-l-10 m-push-l-1
 
-        .. block-success:: Ph.D. thesis
+      .. container:: m-row m-container-inflate
 
-            Title: *Advancements in stratified flows through simulation, experiment and open
-            research software development*
+        .. container:: m-col-m-5
 
-            .. button-success:: https://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Akth%3Adiva-256564
-                :class: m-fullwidth
+            .. block-success:: Ph.D. thesis
 
-                Get full text
+                Title: *Advancements in stratified flows through simulation,
+                experiment and open research software development*
 
-    .. container:: m-col-m-6
+                .. button-success:: https://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Akth%3Adiva-256564
+                    :class: m-fullwidth
 
-        .. block-info:: Talks
+                    Get full text
 
-            Conferences and seminars
-            :raw-html:`<br/><br/><br/>`
 
-            .. button-info:: https://ashwinvis.github.io/talks
-                :class: m-fullwidth
+        .. container:: m-col-m-5
 
-                See the slides
+            .. block-info:: Talks
+
+                Conferences and seminars. :raw-html:`<br/><br/><br/>`
+
+                .. button-info:: https://ashwinvis.github.io/talks
+                    :class: m-fullwidth
+
+                    See the slides
 
 Publications [1]_
 =================
@@ -52,4 +56,4 @@ Publications [1]_
 .. check out a `statically generated list`_ of publications (could be out of date) or
 
 .. _statically generated list: /publications.html
-.. _Zotero profile: https://www.zotero.org/ashwinvis
+.. _Zotero profile: https://www.zotero.org/ashwinvis/cv
