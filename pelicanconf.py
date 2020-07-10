@@ -173,6 +173,10 @@ if not shutil.which('latex'):
     logging.warning("LaTeX not found, fallback to rendering math as code")
     M_MATH_RENDER_AS_CODE = True
 
+# The first article is by default fully expanded on index and archive page.
+# This disables it
+M_COLLAPSE_FIRST_ARTICLE = True
+
 M_BRIDGY_PUBLISH = "mastodon"
 
 M_WEBMENTIONS = True

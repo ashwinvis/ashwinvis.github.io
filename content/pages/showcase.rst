@@ -19,7 +19,7 @@ I have curated some of my works in this website. Take a look.
         .. block-success:: Curriculum Vitae
 
             The latest iteration of my CV.
-            :raw-html:`<br/><br/>`
+            :raw-html:`<br/><br/><br/>`
 
             .. button-default:: /pages/cv.html
                 :class: m-fullwidth
