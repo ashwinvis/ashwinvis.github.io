@@ -1,5 +1,5 @@
-How to Subscribe
-################
+How to subscribe (and send responses)
+#####################################
 :date: 2020-06-16
 :slug: subscribe
 :status: published
@@ -20,12 +20,13 @@ it, you need a reader -- you can find some `suggestions here`_.
     - `Category: Blog <//feeds/blog.atom.xml>`__
     - `Category: Tech Talk <//feeds/tech-talk.atom.xml>`__
 
-You can send responses via email_.
+You can send responses via email_ or using the webmentions_-based
+*interactions* form at the end of the every article.
 
 Mastodon_
 =========
 I often announce my blog posts on `my Mastodon profile`_ - where you could
-follow  and even send responses too.
+follow  and even send responses.
 
 For the uninitiated, Mastodon_ is a micro blog which talks to other servers
 like e-mail. More accurately, it is one among many software solutions which
@@ -48,3 +49,4 @@ join_.
 .. _follow me without an account via RSS: https://mastodon.acc.sunet.se/@ashwinvis.rss
 .. _fediverse: https://fediverse.party/
 .. _email: /pages/contact.html
+.. _webmentions: https://indieweb.org/Webmention
