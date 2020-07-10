@@ -214,9 +214,14 @@ which would end up behind a paywall. It is simply not ethical in today’s world
                   <input type="submit" name="submit" value="Send Webmention">
                 </form>
               </p>
-              <p>Do you not have a website set up with WebMention capabilities? You can
-                use <a
-                      href="https://quill.p3k.io/?dontask=1&me=https://commentpara.de&reply=https://ashwinvis.github.io/open-access-peer-review.html">Comment Parade</a>.
+              <p>Do you not have a website set up with WebMention capabilities? You
+                can:
+              <form method="get" action="https://quill.p3k.io/" target="_blank">
+                <input type="hidden" name="dontask" value="1">
+                <input type="hidden" name="me" value="https://commentpara.de/">
+                <input type="hidden" name="reply" value="https://ashwinvis.github.io/open-access-peer-review.html">
+                <input type="submit" value="Comment anonymously (via Comment Parade)">
+              </form>
               </p>
             </div>
             <div id="webmentions">
