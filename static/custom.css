@@ -15,3 +15,28 @@ article a:hover {
 .m-button a:hover, header a:hover {
   text-decoration: none;
 }
+
+
+main p {
+	text-indent: unset;
+}
+
+article section > h2, article section > h2 a, article section > h3, article section > h3 a, article section > h4, article section > h4 a, article section > h5, article section > h5 a, article section > h6, article section > h6 a {
+    font-style: italic !important;
+	color: black !important;
+}
+
+article section > h2 {
+	margin-top: 2.1rem;
+	margin-bottom: 1.4rem;
+}
+
+article section > h3 {
+	margin-top: 2rem;
+	margin-bottom: 1.4rem;
+}
+
+article.m-article-list {
+	border-bottom: 1px dashed #969696;
+	padding: 0 0 0.5rem 0;
+}

@@ -368,7 +368,7 @@ ul ol, ul ul, ol ol, ol ul {
   margin-bottom: 0;
 }
 main p {
-  text-indent: 1.5rem;
+  text-indent: unset;
   text-align: left;
 }
 main p.m-noindent, li > p, dd > p, table.m-table td > p {
@@ -523,7 +523,7 @@ ul[class*='m-block-dot-'] li:not(:last-child)::after, ol[class*='m-block-dot-'] 
 p.m-poem {
   text-indent: 0;
   text-align: left;
-  margin-left: 1.5rem;
+  margin-left: unset;
 }
 p.m-transition {
   color: #f7e3db;
@@ -2105,7 +2105,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
 #m-landing-cover h1 {
   font-size: 2.8rem;
   margin-top: -0.5rem;
-  padding-left: 1.5rem;
+  padding-left: unset;
   padding-bottom: 1rem;
   text-transform: none;
 }
