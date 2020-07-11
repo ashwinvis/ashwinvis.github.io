@@ -16,9 +16,9 @@ it, you need a reader -- you can find some `suggestions here`_.
 
     I publish atom feeds for
 
-    - `All articles <//feeds/all.atom.xml>`__
-    - `Category: Blog <//feeds/blog.atom.xml>`__
-    - `Category: Tech Talk <//feeds/tech-talk.atom.xml>`__
+    - `All articles </feeds/all.atom.xml>`__
+    - `Category: Blog </feeds/blog.atom.xml>`__
+    - `Category: Tech Talk </feeds/tech-talk.atom.xml>`__
 
 You can send responses via email_ or using the WebMentions_-based
 *interactions* form at the end of the every article.
