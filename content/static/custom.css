@@ -17,6 +17,7 @@ article a:hover {
 }
 
 
+/* Whitespace and font-style closer to tufte-css */
 main p {
 	text-indent: unset;
 }
@@ -39,4 +40,13 @@ article section > h3 {
 article.m-article-list {
 	border-bottom: 1px dashed #969696;
 	padding: 0 0 0.5rem 0;
+}
+
+/* Drop caps */
+article > .e-content > p:first-child::first-letter {
+	float: left;
+	font-family: serif;
+	font-size: 4rem;
+	padding-top: 0.5rem;
+	padding-right: 0.5rem;
 }
