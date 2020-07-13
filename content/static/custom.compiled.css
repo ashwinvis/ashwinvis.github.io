@@ -256,6 +256,13 @@ article.m-article-list {
 	border-bottom: 1px dashed #969696;
 	padding: 0 0 0.5rem 0;
 }
+article > .e-content > p:first-child::first-letter {
+	float: left;
+	font-family: serif;
+	font-size: 4rem;
+	padding-top: 0.5rem;
+	padding-right: 0.5rem;
+}
 
 h1#landing {
   font-size: 1.5rem;
