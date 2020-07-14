@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://ashwindhakaita.blogspot.com/2020/07/week-6-progress-mypaint-engine.html" rel="bookmark" class="u-url"
-       title="Week #6 Progress [MyPaint Engine]" target="_blank">
-      <time class="m-date" datetime="2020-07-13 11:42:55+00:00">
+    <a href="https://nedbatchelder.com//blog/202007/dark_mode.html" rel="bookmark" class="u-url"
+       title="Dark mode" target="_blank">
+      <time class="m-date" datetime="2020-07-13 19:41:08-04:00">
         Jul
         <span class="m-date-day">
           13
@@ -152,25 +152,306 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Week #6 Progress [MyPaint Engine]
+      Dark mode
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>Last week my prime focus was to add more and more settings in the preset editor and so as to make mypaint brushes a bit more customizable. I used KisCurveOptionWidget class which Krita already has and modified it so that it can accomodate the settings and dynamic mypaint brush options. This went on to become a lot more complicated than I anticipated. Although, it works fine there are still a lot of bugs and finishing required to mark this as complete.<div></div>
-
-<a href="https://1.bp.blogspot.com/-tfEve2O9Y-w/XwxGWIW2Z2I/AAAAAAAACkg/_FrCCy4RYi4mFCQzFA9P4MuXUtrmaKEhwCLcBGAsYHQ/s1600/preset_editor2_impl.png"><img src="//1.bp.blogspot.com/-tfEve2O9Y-w/XwxGWIW2Z2I/AAAAAAAACkg/_FrCCy4RYi4mFCQzFA9P4MuXUtrmaKEhwCLcBGAsYHQ/s640/preset_editor2_impl.png"></a>
-Preset Editor
-
-<div> This is the layout of how the preset editor looks like and it is still far from complete. I need to categorise all the settings in the form of a tree view. I am also quite sceptical about the way of handling mypaint settings internally. I will check if that is right or some alternative approach would …</div></div>
+  <p>Recently I released <a href="https://pypi.org/project/coverage/5.2/">Coverage.py 5.2</a>,
+which included a dark-mode for the HTML report, contributed by
+<a href="https://twitter.com/vincesalvino">Vince Salvino</a>.  I hadn&#8217;t seen a
+dark-mode implementation for HTML before, so it piqued my interest.</p><p>Now I&#8217;ve implemented a dark mode for this site. There is no manual control
+for it, it uses the &#8220;prefers-color-scheme&#8221; CSS media query to follow the current
+operating system setting.  If you use a Mac in dark mode, Chrome or Safari
+should show you this site in dark mode.</p><p>Implementing it was fun, as fiddling with this site always is. It&#8217;s a good
+chance to learn new things.  In this case, CSS variables were new to me.</p><p>The article &#8220;<a href="https://web.dev/prefers-color-scheme/">prefers-color-scheme: Hello
+darkness, my old friend</a>&#8221; by Thomas Steiner was very helpful. Luckily, for
+this simple site I could skip over many parts of Thomas …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Ashwin Dhakaita</b></span>
-  on <time datetime="2020-07-13 11:42:55+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-07-13 19:41:08-04:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://pyfound.blogspot.com/2020/07/pip-team-midyear-report.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="Pip team midyear report" target="_blank">
+      <time class="m-date" datetime="2020-07-13 18:23:13.544000-04:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Pip team midyear report
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>
+
+<span></span>
+</div>
+<div>
+</div>
+<div>
+<span>The <a href="https://pyfound.blogspot.com/2020/03/new-pip-resolver-to-roll-out-this-year.html">grant-funded team working on improvements to pip</a></span><span> in 2020 has now passed the halfway mark. Here's an update on where are so far and what's next.</span></div>
+<div>
+
+<span>Funding and Timeline Status</span>
+</div>
+<div>
+<span>The plan that we proposed last year said that, by now, we would have finished Foundational work (Phase I) and Resolver work (Phase II), and the team would be doing Maintenance and Sustainability work (Phase III). Please see </span><a href="https://wiki.python.org/psf/Pip2020DonorFundedRoadmap"><span></span></a><span><a href="https://wiki.python.org/psf/Pip2020DonorFundedRoadmap">the timeline for user experience work</a> and </span><span><a href="https://github.com/python/request-for/blob/master/2020-pip/RFP.md#scope">the timelines for development work</a>.</span></div>
+<div>
+</div>
+<div>
+<span>We are behind where we had planned to be in the work roadmap. This is partially because the COVID-19 pandemic disrupted our work, but also because of policy and architecture decisions the project needed, and because foundational user experience research work has taken more time than we originally allotted. Thus, we have finished <a href="https://github.com/python/request-for/blob/master/2020-pip/RFP.md#scope">the Phase I and Phase II …</a></span></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Sumana Harihareswara (noreply@blogger.com)</b></span>
+  on <time datetime="2020-07-13 18:23:13.544000-04:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pythoninsider.blogspot.com/2020/07/python-384-is-now-available.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
+       title="Python 3.8.4 is now available" target="_blank">
+      <time class="m-date" datetime="2020-07-13 17:06:52.200000-04:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python 3.8.4 is now available
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Python 3.8.4 is the fourth maintenance release of Python 3.8. Go get it here:
+
+<a href="https://www.python.org/downloads/release/python-384/">https://www.python.org/downloads/release/python-384/</a> 
+
+Maintenance releases for the 3.8 series will continue at regular bi-monthly intervals, with <strong>3.8.5</strong> planned for mid-September 2020.
+
+
+
+What’s new?
+The Python 3.8 series is the newest feature release of the Python 
+language, and it contains many new features and optimizations. See the “<a href="https://docs.python.org/3.8/whatsnew/3.8.html">What’s New in Python 3.8</a>” document for more information about features included in the 3.8 series.
+
+
+This is the first bugfix release that is considerably smaller than 
+the previous three. There’s almost 20% fewer changes at 162 commits than
+ the average of previous three bugfix releases. Detailed information 
+about all changes made in version 3.8.4 specifically can be found in <a href="https://docs.python.org/release/3.8.4/whatsnew/changelog.html#python-3-8-4-final">its change …</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
+  on <time datetime="2020-07-13 17:06:52.200000-04:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/07/webmentiond/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-07-13 21:37:02+02:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I just switched from my Hugo-based webmention storing method (that triggered a site rebuild for every webmention) to <a href="https://zerokspot.com/">Horst Gutmanns</a>&rsquo;s <a href="https://github.com/zerok/webmentiond">webmentiond</a>. There are still a few things to improve, but I will try to submit more pull requests, like support for Telegram as a notification service and a few other issues.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-13 21:37:02+02:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/623538324785790976/when-shear-meets-slip-unexpected-behaviors" rel="bookmark" class="u-url"
+       title="When shear meets slip, unexpected behaviors result. 
+(Image and..." target="_blank">
+      <time class="m-date" datetime="2020-07-13 10:01:25-05:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      When shear meets slip, unexpected behaviors result. 
+(Image and...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://66.media.tumblr.com/c1f134060254c7b014db446f626fa181/0ae3dbda022fb952-10/s400x600/4be90a0644c7624d22644dc48a55048746b49f82.gifv"><p><a href="https://fyfluiddynamics.com/2020/07/when-shear-meets-slip/">When shear meets slip, unexpected behaviors result.</a> 
+(Image and research credit: <a href="https://doi.org/10.1038/s41467-020-15939-w">C. Kamal et al.</a>; submitted by Simon G.)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-13 10:01:25-05:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/07/when-shear-meets-slip/" rel="bookmark" class="u-url"
+       title="When Shear Meets Slip" target="_blank">
+      <time class="m-date" datetime="2020-07-13 15:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      When Shear Meets Slip
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  One of the classic concepts students learn early in their fluids education is the no-slip condition. In essence, this idea says that friction between a solid object &#8212; say, a <a href="https://fyfluiddynamics.com/2020/07/when-shear-meets-slip/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-07-13 15:00:00+00:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/engagement/2020/07/13/some-highlights-from-guadec/" rel="bookmark" class="u-url"
+       title="(Some) Highlights from GUADEC" target="_blank">
+      <time class="m-date" datetime="2020-07-13 14:01:46+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      (Some) Highlights from GUADEC
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  There are so many exciting things happening at GUADEC this year, it would be impossible to highlight everything I’m looking forward to. What really excited me about the schedule this year is how diverse the topics are. I really do think this year’s GUADEC has something for everyone, from people just getting to know free … <a href="https://blogs.gnome.org/engagement/2020/07/13/some-highlights-from-guadec/">Continue reading<span> "(Some) Highlights from GUADEC"</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>mdeblanc</b></span>
+  on <time datetime="2020-07-13 14:01:46+00:00" class="dt-published"></time>
+  Mon 13 Jul 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.qt.io/blog/cmake-based-qt-creator-snapshots" rel="bookmark" class="u-url"
+       title="CMake-Based Qt Creator Snapshots" target="_blank">
+      <time class="m-date" datetime="2020-07-13 13:28:32+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      CMake-Based Qt Creator Snapshots
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>About a year ago <a href="https://codereview.qt-project.org/c/qt-creator/qt-creator/+/261437">we started porting</a> the build system that we use for building Qt Creator itself from qmake to CMake. Nowadays we are in the state that many Qt Creator developers use CMake for building Qt Creator for their daily work, but the official packages are still based on the qmake build.</p>  
+<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fcmake-based-qt-creator-snapshots&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Qt Dev Loop</b></span>
+  on <time datetime="2020-07-13 13:28:32+00:00" class="dt-published"></time>
   Mon 13 Jul 2020
   in Planet KDE.
 </footer>
@@ -215,9 +496,9 @@ Preset Editor
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/thoughts/2020/07/hn-feeds/" rel="bookmark" class="u-url"
-       title="Hacker News feed" target="_blank">
-      <time class="m-date" datetime="2020-07-13 08:47:08+02:00">
+    <a href="https://xkcd.com/2332/" rel="bookmark" class="u-url"
+       title="Cursed Chair" target="_blank">
+      <time class="m-date" datetime="2020-07-13 00:00:00+00:00">
         Jul
         <span class="m-date-day">
           13
@@ -225,63 +506,22 @@ Preset Editor
         2020
       </time>
       <div class="p-name">
-      Hacker News feed
+      Cursed Chair
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I use <a href="https://edavis.github.io/hnrss/">hnrss.org</a> to follow <a href="https://news.ycombinator.com/">Hacker News</a> and stay up-to-date with the tech and developer community. I followed the <code>/frontpage</code> feed, so that my feed reader would collect all submissions that reach the front page of HN. However that&rsquo;s a lot of stuff and it got too much for me. I then noticed that one is able to filter the feed to just include submissions with more than 50 points (<code>https://hnrss.org/frontpage?points=50</code>). That removed a lot of stuff and left me with only the top voted submissions.</p>
-<p>I am still unsure whether I should remove Hacker News from my feed reader completely. I find myself spending way too much time reading comments. And most of the submissions don&rsquo;t interest me at all.</p>
+  <img alt="The Wirecutter staff called the Herman Miller Siege Perilous &quot;the most cursed product we've ever had to fight&quot; and &quot;nearly as immortal as it boasts.&quot;" src="https://imgs.xkcd.com/comics/cursed_chair.png" title="The Wirecutter staff called the Herman Miller Siege Perilous &quot;the most cursed product we've ever had to fight&quot; and &quot;nearly as immortal as it boasts.&quot;">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-13 08:47:08+02:00" class="dt-published"></time>
+  on <time datetime="2020-07-13 00:00:00+00:00" class="dt-published"></time>
   Mon 13 Jul 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.figuiere.net/hub/blog/?2020/07/11/882-introducing-minuit" rel="bookmark" class="u-url"
-       title="Introducing Minuit" target="_blank">
-      <time class="m-date" datetime="2020-07-11 22:13:33+00:00">
-        Jul
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Introducing Minuit
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  It all started with a sketch on paper (beware of my poor penmanship).
-
-
-
-
-
-I was thinking how I can build a musical instrument in software. Nothing new here actually, there are even applications like VMPK that fit the bill. But this is also about learning as I have started to be interested in...
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>hub</b></span>
-  on <time datetime="2020-07-11 22:13:33+00:00" class="dt-published"></time>
-  Sat 11 Jul 2020
-  in Planet GNOME.
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -357,113 +597,6 @@ enter scanimage!
   on <time datetime="2020-07-11 09:05:55+00:00" class="dt-published"></time>
   Sat 11 Jul 2020
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/623266540454903808/alien-eggs-a-virus-nope-theyre-hydrogel-beads" rel="bookmark" class="u-url"
-       title="Alien eggs? A virus? Nope, they’re hydrogel beads! 
-(Image..." target="_blank">
-      <time class="m-date" datetime="2020-07-10 10:01:31-05:00">
-        Jul
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Alien eggs? A virus? Nope, they’re hydrogel beads! 
-(Image...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://66.media.tumblr.com/4f801e24446e9ad2f18ffc137049c2f5/d9f71f2f80d650bf-91/s500x750/a21aec3d81c2f8cbed178a62ac98fa0e1dcb1d20.gifv"> <img src="https://66.media.tumblr.com/2f34a9595c79d70f9e0b50a24f2c964a/d9f71f2f80d650bf-09/s500x750/1367411e68a49e58a08beedf34471cfbf5d9e4a5.gifv"> <img src="https://66.media.tumblr.com/4d1abb9c693ebf3ec6796e20ed0923c8/d9f71f2f80d650bf-1a/s500x750/e50d9925ae6163e2c61f5131dcb154c68be88ea5.gifv"> <p><a href="https://fyfluiddynamics.com/2020/07/alien-eggs-a-virus/">Alien eggs? A virus? Nope, they’re hydrogel beads! </a>
-(Image and video credit: Chemical bouillon)
-
-</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-10 10:01:31-05:00" class="dt-published"></time>
-  Fri 10 Jul 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/07/alien-eggs-a-virus/" rel="bookmark" class="u-url"
-       title="Alien Eggs? A Virus?" target="_blank">
-      <time class="m-date" datetime="2020-07-10 15:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Alien Eggs? A Virus?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Nope, they&#8217;re hydrogel beads! The team at Chemical Bouillon seem to have once again coated them in something like paint before placing them in water. As the gel beads absorb <a href="https://fyfluiddynamics.com/2020/07/alien-eggs-a-virus/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-07-10 15:00:00+00:00" class="dt-published"></time>
-  Fri 10 Jul 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2331/" rel="bookmark" class="u-url"
-       title="Hamster Ball 2" target="_blank">
-      <time class="m-date" datetime="2020-07-10 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Hamster Ball 2
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="The worst is being teased by responsible, mask-wearing teens. They even spritz the hamster ball with disinfectant before rolling it, carefully avoiding the filter vents." src="https://imgs.xkcd.com/comics/hamster_ball_2.png" title="The worst is being teased by responsible, mask-wearing teens. They even spritz the hamster ball with disinfectant before rolling it, carefully avoiding the filter vents.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-10 00:00:00+00:00" class="dt-published"></time>
-  Fri 10 Jul 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -678,59 +811,6 @@ there exist protocols and the so-called <em>dunder methods</em>, methods …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pythoninsider.blogspot.com/2020/07/python-390b4-is-now-ready-for-testing.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
-       title="Python 3.9.0b4 is now ready for testing" target="_blank">
-      <time class="m-date" datetime="2020-07-03 19:42:56.518000-04:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python 3.9.0b4 is now ready for testing
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  On behalf of the entire Python development community, and the currently 
-serving Python release team in particular, I’m pleased to announce the 
-release of Python 3.9.0b4. Get it here:
-
-<a href="https://www.python.org/downloads/release/python-390b4/">https://www.python.org/downloads/release/python-390b4/</a> 
-
-
-This is a beta preview of Python 3.9
-Python 3.9 is still in development.  This release, 3.9.0b4, is the fourth of five planned beta release previews.
-
-
-Beta release previews are intended to give the wider community the 
-opportunity to test new features and bug fixes and to prepare their 
-projects to support the new feature release.
-
-
-
-Call to action
-We <b>strongly encourage</b> maintainers of third-party Python projects to <b>test with 3.9</b> during the beta phase and report issues found to <a href="https://bugs.python.org/">the Python bug tracker</a>
- as soon as possible.  While the release is planned to be feature …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
-  on <time datetime="2020-07-03 19:42:56.518000-04:00" class="dt-published"></time>
-  Fri 03 Jul 2020
-  in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://changelog.com/podcast/401" rel="bookmark" class="u-url"
        title="The Changelog episode 401" target="_blank">
       <time class="m-date" datetime="2020-07-03 00:00:00+00:00">
@@ -759,47 +839,6 @@ We <b>strongly encourage</b> maintainers of third-party Python projects to <b>te
   on <time datetime="2020-07-03 00:00:00+00:00" class="dt-published"></time>
   Fri 03 Jul 2020
   in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://pyfound.blogspot.com/2020/07/announcing-psf-project-funding-working.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="Announcing the PSF Project Funding Working Group" target="_blank">
-      <time class="m-date" datetime="2020-07-01 18:21:05.310000-04:00">
-        Jul
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Announcing the PSF Project Funding Working Group
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>
-<span><span></span></span></div>
-<div>
-<span></span>
-<div>
-<span><span>For the past 3 years, the PSF </span><a href="https://pyfound.blogspot.com/search/label/pypi"><span>has been working on</span></a><span> grant funded projects to improve our internal systems and platforms. This work has been done with the Packaging Working Group, and focused on our packaging ecosystem of PyPI and pip. We have been able to show that applying directed funding to open source projects has the ability to dramatically increase the speed of development, and move our community forward in a much more sustained way than relying solely on volunteer effort.</span></span></div>
-<span><div>
-<span>Along with the external grant funding of PSF projects, we have also committed PSF funds in the past to improve developments of community projects. This shows that the experience of directed funding is applicable to our community projects, as well as our own. An example here is the BeeWare project that was given funding via our Education Grants …</span></div></span></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Eric Holscher (noreply@blogger.com)</b></span>
-  on <time datetime="2020-07-01 18:21:05.310000-04:00" class="dt-published"></time>
-  Wed 01 Jul 2020
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1047,49 +1086,6 @@ See the corresponding community poll and discussion on <a href="https://fortran-
   on <time datetime="2020-06-29 19:38:00+02:00" class="dt-published"></time>
   Mon 29 Jun 2020
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202006/2500.html" rel="bookmark" class="u-url"
-       title="2500" target="_blank">
-      <time class="m-date" datetime="2020-06-28 07:10:00-04:00">
-        Jun
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      2500
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This is the 2500th post on this blog. That&#8217;s a lot of writing. I estimate
-this site has about 480,000 words in total, enough for five books.</p><p>I&#8217;ve been writing here for more than 18 years.  The pace is different than
-when I started: last year I wrote <a href="//nedbatchelder.com/blog/archive/year2019.html">33
-posts</a>.  Compare that to 2003, when I wrote more than ten times as many:
-<a href="//nedbatchelder.com/blog/archive/year2003.html">441 posts</a>!
-<a href="https://twitter.com/nedbat">Twitter</a> has siphoned off some of the
-short-post energy, but also interests shift over time.</p><p>Writing is a good way to understand things, and to learn things.  People
-mostly think of writing as a way to teach and explain, and I am glad when my
-posts can do that. But I also really value the feedback loop of learning as I
-explain, and the deeper understanding I find when I teach.</p><p>Here …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-06-28 07:10:00-04:00" class="dt-published"></time>
-  Sun 28 Jun 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
