@@ -42,7 +42,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pelican-themes -i pelican-bluedrop/bluedrop
 
     - name: Lint content
       run: |
