@@ -142,6 +142,94 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://valdyas.org/fading/hacking/krita-hacking/krita-opengl-and-qt/" rel="bookmark" class="u-url"
+       title="Krita, OpenGL and Qt" target="_blank">
+      <time class="m-date" datetime="2020-07-17 08:15:42+00:00">
+        Jul
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Krita, OpenGL and Qt
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The Beginning
+<p>Adrian Page first <a href="https://invent.kde.org/graphics/krita/-/commit/4571e3f4722b2b3aa87f2915a35ee36e5bfe008a">coded an OpenGL-based canvas implementation</a> for Krita in <a href="https://valdyas.org/fading/hacking/wow-2/">2005</a>. That was back in the Qt3 days. OpenGL was fairly simple back then, but we had to duplicate all our canvas handling code, once implemented in OpenGL, once implemented with QPainter.</p>
+<p>Krita’s canvas code executes in three phases. There’s the image projection, that is, the result of combining all the layers, which is drawn first. Then we draw the canvas decorations: that’s the selection outline, the guides, the assistants, the reference images and so on. Then we draw the tool decorations: that’s the outline cursor, the line for the straight line or ruler tool and so on.</p>
+<p>Obviously, implementing all of that twice, once in  OpenGL, once with QPainter isn’t ideal.</p>
+The Good Days
+<p>So we were elated when Qt4 appeared …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Boudewijn Rempt (boud)</b></span>
+  on <time datetime="2020-07-17 08:15:42+00:00" class="dt-published"></time>
+  Fri 17 Jul 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/resume-download-curl-wget/" rel="bookmark" class="u-url"
+       title="Resume download with cURL or Wget" target="_blank">
+      <time class="m-date" datetime="2020-07-17 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Resume download with cURL or Wget
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>cURL and Wget are popular web interface command line utilities that among their many features can resume interrupted or canceled downloads.</p>
+cURL
+<p><a href="https://twitter.com/bagder">Daniel Stenberg&rsquo;s</a>
+cURL has a permissive license that has perhaps led it to become very widespread, installed &ldquo;from the factory&rdquo; in operating systems from Windows, MacOS, Linux to automobiles and many other embedded systems.
+cURL&rsquo;s
+<a href="https://curl.haxx.se/docs/manpage.html">man page</a>
+is perhaps best used by text search.</p>
+<div><pre><code>curl -O -C - https://mysite.example
+</code></pre></div>Wget
+<p>cURL is a library with a command-line frontend, while Wget is a command line tool.
+Wget&rsquo;s primary
+<a href="https://curl.haxx.se/docs/comparison-table.html">advantage</a>
+over cURL is that Wget can do
+<a href="https://www.scivision.dev/wget-recursive-download">recursive downloads</a>.</p>
+<div><pre><code>wget -C htttps://mysite.example
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-17 00:00:00+00:00" class="dt-published"></time>
+  Fri 17 Jul 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jlelse.blog/links/2020/07/robot-hair-cut/" rel="bookmark" class="u-url"
        title=""I made a robot to cut my hair with scissors"" target="_blank">
       <time class="m-date" datetime="2020-07-16 21:58:18+02:00">
@@ -339,59 +427,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-07-16 00:00:00+00:00" class="dt-published"></time>
   Thu 16 Jul 2020
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tcanabrava.github.io/2020/07/16/konsole-in-2020/" rel="bookmark" class="u-url"
-       title="Konsole in 2020" target="_blank">
-      <time class="m-date" datetime="2020-07-16 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Konsole in 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Konsole is having a resurge in the moment, it’s the terminal emulator of choice
-for the power user that wants to break the 4th wall in *nix systems. Right now
-it can do almost all the things I want it to do, and a few more.</p>
-
-<p>Since last year you can use splits in Konsole, with full drag &amp; drop support
-between tabs and windows.</p>
-
-
-
-
-<p>You can also use Konsole to quickly check for thumbnails of anything that dolphin
-can show you, just by hovering with the mouse (and depending of your configuration)
-pressing shift/control/alt. To my knowledge Konsole is the only terminal emulator
-that supports this.</p>
-
-
-
-
-<p>Probably you already used <code>ls</code> to list a file that you need to get the full url,
-to open in an unrelated program that does not accept the common way to …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Tomaz Canabrava (tomaz)</b></span>
-  on <time datetime="2020-07-16 00:00:00+00:00" class="dt-published"></time>
-  Thu 16 Jul 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -764,54 +799,6 @@ about all changes made in version 3.8.4 specifically can be found in <a href="ht
   on <time datetime="2020-07-13 17:06:52.200000-04:00" class="dt-published"></time>
   Mon 13 Jul 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/hdfview-create-hdf5-softlink/" rel="bookmark" class="u-url"
-       title="Create HDF5 soft links with HDFView" target="_blank">
-      <time class="m-date" datetime="2020-07-09 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Create HDF5 soft links with HDFView
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>HDF5 soft (symbolic) links work like in filesystems&ndash;convenient as HDF5 UI is like a filesystem in a file.
-An unlimited number of soft links can point to the same resource.
-Soft links can dangle (point to an missing location) if needed.</p>
-HDFView
-<p>The HDFView GUI can create softlinks as well.
-This is handy when the program code changes variable name and one wants to keep HDF5 files compatible with old and new code (old name and new name).
-To create an HDF5 soft link in HDFView:</p>
-<ol>
-<li>right click target variable name</li>
-<li>select New → Link → Soft Link</li>
-<li>when done, use the &ldquo;close&rdquo; button to save these changes</li>
-</ol>
-<p>Note: if HDFView User Options are set to &ldquo;Read Only&rdquo; the &ldquo;New&rdquo; right-click option will be grayed out.</p>
-<p>The soft link appears as any other variable in the HDFView GUI.</p>
-Other HDF5 link …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-09 00:00:00+00:00" class="dt-published"></time>
-  Thu 09 Jul 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
