@@ -142,9 +142,55 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://skrooge.org/node/242" rel="bookmark" class="u-url"
-       title="Skrooge 2.23.0 released" target="_blank">
-      <time class="m-date" datetime="2020-07-19 10:27:04+00:00">
+    <a href="https://www.scivision.dev/git-update-email-address/" rel="bookmark" class="u-url"
+       title="Git rewrite commit email addresses" target="_blank">
+      <time class="m-date" datetime="2020-07-20 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Git rewrite commit email addresses
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://github.com/newren/git-filter-repo">git-filter-repo</a>
+is a Python program that is generally recommended over Git filter-branch and BFG Repo Cleaner.
+Other users of your repo will get an &ldquo;unrelated history&rdquo; error so they will have to reset or reclone the repo.</p>
+Example
+<p>Suppose an incorrect email address was used to make previous Git commits.
+To update Git commit email address history from the Git repo directory:</p>
+<div><pre><code>git filter-repo --mailmap mailmap --force
+</code></pre></div><p>where file &ldquo;mailmap&rdquo; has
+<a href="https://git-scm.com/docs/git-shortlog#_mapping_authors">mailmap file format</a>
+email addresses to change like:</p>
+<div><pre><code><span>Jane Doe &lt;jane@new.com&gt; &lt;jane@old.com&gt;</span>
+<span>John Smith &lt;john@new.com&gt; &lt;john@old.com&gt;</span>
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-20 00:00:00+00:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://cocoonfly.wordpress.com/2020/07/20/the-second-milestone/" rel="bookmark" class="u-url"
+       title="The Second Milestone" target="_blank">
+      <time class="m-date" datetime="2020-07-19 20:34:20+00:00">
         Jul
         <span class="m-date-day">
           19
@@ -152,36 +198,124 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Skrooge 2.23.0 released
+      The Second Milestone
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><div><div>
-<p>The <a href="http://skrooge.org">Skrooge</a> Team announces the release 2.23.0 version of its popular Personal Finances Manager based on <a href="http://kde.org">KDE Frameworks</a>. </p>
-Changelog<code></code>
-
-<ul>
-<li>Correction bug 420557: Broken transaction group after CSV import</li>
-<li>Correction bug 412262: documentation references obsolete "Merge operations" menu item</li>
-<li>Correction bug 422154: Jumpy tab order in Accounts entry form</li>
-<li>Correction bug 422155: Skrooge doesn't use per-locale bank icons</li>
-<li>Correction bug 422311: Tooltip in Operations view is misleading, it only works in Status column</li>
-<li>Correction bug 423311: Skrooge doesn't show key error message, only summary error</li>
-<li>Correction: Drag and drop file works only for operations. Not for all other objects.</li>
-<li>Correction: cryptocompare fails if too many values are requested (&gt;2000)</li>
-<li>Correction: Change icon for trackers by a "crosshairs"</li>
-<li>Correction: Source ratesapi doesn't work in appimage </li>
-<li>Correction: Add "Settings" description in documentation </li>
-<li>Correction: Units list doesn't save font size (see <a href="https://forum.kde.org/viewtopic.php?f=210&amp;t=166692">https …</a></li></ul></div></div></div>
+  Hacking on Nautilus - The Saga Continues
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Stéphane MANKOWSKI (smankowski)</b></span>
-  on <time datetime="2020-07-19 10:27:04+00:00" class="dt-published"></time>
+  <span class="p-author"><b>apoosmaximus</b></span>
+  on <time datetime="2020-07-19 20:34:20+00:00" class="dt-published"></time>
+  Sun 19 Jul 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com//blog/202007/dark_mode_continued.html" rel="bookmark" class="u-url"
+       title="Dark mode, continued" target="_blank">
+      <time class="m-date" datetime="2020-07-19 16:25:32-04:00">
+        Jul
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Dark mode, continued
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I&#8217;ve continued to work on the dark mode for this site.  After playing around
+with different approaches, and learning more about Sass, I have something I
+like.</p><p>I wanted the site to respect the user&#8217;s OS settings, but I also wanted a
+control that would switch to the other mode.  A common CSS technique is to put a
+class on the &lt;html&gt; tag, and then have the CSS use that class to choose
+styling. Media queries would get me the user&#8217;s preference, and an
+&#8220;html.othermode&#8221; class would be used to override the media query.</p><p>The Sass I came up with looks like this:</p><blockquote><code><span>@mixin</span><span>&#xa0;lightmode</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>@content</span><span>;</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>@</span><span>media</span>&#xa0;<span>(</span><span>prefers-color-scheme</span><span>:</span>&#xa0;<span>dark</span><span>)</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>html</span><span>.othermode</span>&#xa0;<span>&amp;</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>@content</span><span>;</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>}</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>}</span>
+<span>}</span>
+
+<span>@mixin</span><span>&#xa0;darkmode</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>@media</span>&#xa0;<span>(</span><span>prefers-color-scheme</span><span>:</span>&#xa0;<span>dark</span><span>)</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>@content</span><span>;</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>}</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>@media</span>&#xa0;<span>(</span><span>prefers-color-scheme</span><span>:</span>&#xa0;<span>light</span><span>)</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>html</span><span>.othermode</span>&#xa0;<span>&amp;</span>&#xa0;<span>{</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>@content</span><span>;</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>}</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>}</span>
+<span>}</span>
+</code></blockquote><p>These mixins let me declare the light- or dark-mode properties just once …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-07-19 16:25:32-04:00" class="dt-published"></time>
+  Sun 19 Jul 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://knro.blogspot.com/2020/07/kstars-v343-is-released.html" rel="bookmark" class="u-url"
+       title="KStars v3.4.3 is Released" target="_blank">
+      <time class="m-date" datetime="2020-07-19 15:27:20+00:00">
+        Jul
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      KStars v3.4.3 is Released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>After 3 months of development, we're glad to announce the availability of <a href="https://edu.kde.org/kstars">KStars 3.4.3 for Windows, MacOS and Linux</a>.<div></div>
+<div>Let's check out the highlight of this release!<div>
+New Bahtinov Mask Focus Assistant
+<b>Patrick Molenaar</b> added a long requested feature: The <a href="https://en.wikipedia.org/wiki/Bahtinov_mask">Bahtinov Mask</a> focus assistant tool. Users can activate the new algorithm in the Focus module.</div>
+<div></div>
+<div>
+<img src="//indilib.org/media/kunena/attachments/2609/ScreenShot2020-05-05at8.41.43PM.png">
+Focus Bahtinov Assistant Tool
+</div>
+<div>
+It is useful for users who do not have a motorized focuser and prefer to focus manually with the aid of the mask. After capturing an image in the focus module with the Bahtinov mask algorithm selected, Ekos would analyze the images and stars within it.  if Ekos recognizes the Bahtinov star pattern, it will draw lines over the star pattern en circles on the center and on an offset to indicate the focus.Autofocus on Temperature Change
+<b>Florian …</b></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jasem Mutlaq (KNRO)</b></span>
+  on <time datetime="2020-07-19 15:27:20+00:00" class="dt-published"></time>
   Sun 19 Jul 2020
   in Planet KDE.
 </footer>
@@ -208,7 +342,7 @@ Changelog<code></code>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I wonder how many people realize that Python is has a lot of <a href="https://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a>? I'm not claiming it's like a Lisp-based language where the syntax is as bare bones as possible (although the <a href="https://norvig.com/python-lisp.html">Lisp comparison is not entirely unfounded</a>), but much of Python's syntax isn't technically needed as under</p>
+  <p>I wonder how many people realize that Python has a lot of <a href="https://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a>? I'm not claiming it's like a Lisp-based language where the syntax is as bare bones as possible (although the <a href="https://norvig.com/python-lisp.html">Lisp comparison is not entirely unfounded</a>), but much of Python's syntax isn't technically needed as under the</p>
   </p>
   </div>
 </header>
@@ -363,55 +497,6 @@ Changelog<code></code>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/resume-download-curl-wget/" rel="bookmark" class="u-url"
-       title="Resume download with cURL or Wget" target="_blank">
-      <time class="m-date" datetime="2020-07-17 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Resume download with cURL or Wget
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>cURL and Wget are popular web interface command line utilities that among their many features can resume interrupted or canceled downloads.</p>
-cURL
-<p><a href="https://twitter.com/bagder">Daniel Stenberg&rsquo;s</a>
-cURL has a permissive license that has perhaps led it to become very widespread, installed &ldquo;from the factory&rdquo; in operating systems from Windows, MacOS, Linux to automobiles and many other embedded systems.
-cURL&rsquo;s
-<a href="https://curl.haxx.se/docs/manpage.html">man page</a>
-is perhaps best used by text search.</p>
-<div><pre><code>curl -O -C - https://mysite.example
-</code></pre></div>Wget
-<p>cURL is a library with a command-line frontend, while Wget is a command line tool.
-Wget&rsquo;s primary
-<a href="https://curl.haxx.se/docs/comparison-table.html">advantage</a>
-over cURL is that Wget can do
-<a href="https://www.scivision.dev/wget-recursive-download">recursive downloads</a>.</p>
-<div><pre><code>wget -C htttps://mysite.example
-</code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-17 00:00:00+00:00" class="dt-published"></time>
-  Fri 17 Jul 2020
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://jlelse.blog/links/2020/07/robot-hair-cut/" rel="bookmark" class="u-url"
        title=""I made a robot to cut my hair with scissors"" target="_blank">
       <time class="m-date" datetime="2020-07-16 21:58:18+02:00">
@@ -438,40 +523,6 @@ over cURL is that Wget can do
   on <time datetime="2020-07-16 21:58:18+02:00" class="dt-published"></time>
   Thu 16 Jul 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/engagement/2020/07/16/social-events-at-guadec-2020/" rel="bookmark" class="u-url"
-       title="Social Events at GUADEC 2020" target="_blank">
-      <time class="m-date" datetime="2020-07-16 15:22:51+00:00">
-        Jul
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Social Events at GUADEC 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Part of the magic of GUADEC is going out to amazing dinners with your new and old friends; exploring the beautiful parts of somewhere new; and maybe even staying up to watch the sun rise. This year is a little bit different â€“ but there are still lots of ways to get to know each … <a href="https://blogs.gnome.org/engagement/2020/07/16/social-events-at-guadec-2020/">Continue reading<span> "Social Events at GUADEC 2020"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>mdeblanc</b></span>
-  on <time datetime="2020-07-16 15:22:51+00:00" class="dt-published"></time>
-  Thu 16 Jul 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -666,49 +717,6 @@ someone had suggested it to me earlier. So let&rsquo;s talk about it!</p>
   on <time datetime="2020-07-14 14:33:42+00:00" class="dt-published"></time>
   Tue 14 Jul 2020
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202007/dark_mode.html" rel="bookmark" class="u-url"
-       title="Dark mode" target="_blank">
-      <time class="m-date" datetime="2020-07-13 19:41:08-04:00">
-        Jul
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Dark mode
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Recently I released <a href="https://pypi.org/project/coverage/5.2/">Coverage.py 5.2</a>,
-which included a dark-mode for the HTML report, contributed by
-<a href="https://twitter.com/vincesalvino">Vince Salvino</a>.  I hadn&#8217;t seen a
-dark-mode implementation for HTML before, so it piqued my interest.</p><p>Now I&#8217;ve implemented a dark mode for this site. There is no manual control
-for it, it uses the &#8220;prefers-color-scheme&#8221; CSS media query to follow the current
-operating system setting.  If you use a Mac in dark mode, Chrome or Safari
-should show you this site in dark mode.</p><p>Implementing it was fun, as fiddling with this site always is. It&#8217;s a good
-chance to learn new things.  In this case, CSS variables were new to me.</p><p>The article &#8220;<a href="https://web.dev/prefers-color-scheme/">prefers-color-scheme: Hello
-darkness, my old friend</a>&#8221; by Thomas Steiner was very helpful. Luckily, for
-this simple site I could skip over many parts of Thomas …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-07-13 19:41:08-04:00" class="dt-published"></time>
-  Mon 13 Jul 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
