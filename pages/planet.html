@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://cantorgsoc2020.blogspot.com/2020/07/cantor-file-browser-panel.html" rel="bookmark" class="u-url"
-       title="Cantor - File Browser Panel" target="_blank">
-      <time class="m-date" datetime="2020-07-20 09:28:27+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-07-20_Does_a_Gemini_certificate_need_a_Common_Name_matching_the_domain%3F" rel="bookmark" class="u-url"
+       title="Does a Gemini certificate need a Common Name matching the domain?" target="_blank">
+      <time class="m-date" datetime="2020-07-20 21:07:34+00:00">
         Jul
         <span class="m-date-day">
           20
@@ -152,22 +152,278 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Cantor - File Browser Panel
+      Does a Gemini certificate need a Common Name matching the domain?
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>Hello everyone, this is the fourth post about the progress in my GSoC project and I want to present some user experience improvements related to the handling of panels in Cantor and to present a new panel "File Browser" that I implemented recently.The status of Cantor's panels was not saved when the user closed the application. Potential rearangements and size changes done on panels were gone and the user had to do the changes again upon the next start. Very bad UX, of course. Now, the state is saved and even more, the state is saved for every backend in Cantor. So, if you have a Python session in Cantor, open some panels and arrange them at your will, close and reopen Cantor with a Python session again - the previous state of the panels appears on start.The second …</div>
+  <div><p>It’s a rhetoric question. I think it does not because the Gemini world uses “trust on first use” (TOFU). That is, a Gemini client visits a Gemini server for the first time, and if it doesn’t know the certificate, it silently stores a fingerprint of said certificate. The next time the Gemini client visits the same Gemini server, the client verifies that the fingerprint still matches. If it does, then nobody has been meddling with the encryption. If it has changed, a warning is usually shown to the user. </p><ul><li><a href="">Trust on first use</a></li></ul><p>The benefit is that we can use self-signed certificates. No promises are made, and you might run into a trap on your first use, but once you begin to trust a site, you can be sure that nobody is meddling with your encryption as long …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Cantor GSoC 2020</b></span>
-  on <time datetime="2020-07-20 09:28:27+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-20 21:07:34+00:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/thoughts/2020/07/no-email-selfhosting/" rel="bookmark" class="u-url"
+       title="Why I no longer host my emails myself ✉️" target="_blank">
+      <time class="m-date" datetime="2020-07-20 22:19:25+02:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Why I no longer host my emails myself ✉️
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Recently, there has been a lot of talk in my blog bubble about email self-hosting again (here is <a href="https://www.paritybit.ca/blog/a-month-and-a-half-of-self-hosted-email">one example</a>, here is a <a href="https://www.garron.blog/posts/host-your-email-server.html">second one</a>). I myself <a href="https://jlelse.blog/thoughts/2019/mail-server/">switched to a self-hosted mail server</a> over a year ago, only to <a href="https://jlelse.blog/micro/2020/02/migrated-mailcow/">switch back to a hosted version</a> a few months later.</p>
+<p>For me there were no technical problems running <a href="https://mailcow.email/">Mailcow</a>, I was even quite happy with my setup. Nevertheless I switched because I realized that email is a topic where it&rsquo;s not really worth hosting it myself. Neither is it much cheaper, nor does it bring me many other advantages. Both <a href="https://www.fastmail.com/">Fastmail</a> in the past and the <a href="https://www.servercow.de/mailcow">Hosted Mailcow</a>, where I have my emails now, are completely sufficient for my needs.</p>
+<p>I don&rsquo;t have to take care of anything myself and just have to make sure that the monthly automatic …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-20 22:19:25+02:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://aniketkumarblogpost.wordpress.com/2020/07/20/media-player-integration-into-kde-connect-sms-app-gsoc-2020/" rel="bookmark" class="u-url"
+       title="Media Player Integration into KDE connect SMS App, GSoC 2020" target="_blank">
+      <time class="m-date" datetime="2020-07-20 17:31:01+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Media Player Integration into KDE connect SMS App, GSoC 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello everyone,</p>
+
+
+
+<p>It’s been over two weeks since I posted last time. This is the fourth report for my GSoC project. Previous two to three weeks period, I spent working on integrating media player and image viewer into KDE Connect SMS app as well as changed and improved some of my previous implementations as pointed by my mentors. The project has reached the stage where the SMS app is able to receive and display thumbnails in the chat as well as user can request to view any original attachment file just by clicking on that particular attachment thumbnail and it will get opened inside the SMS app as well as user can open it in another multimedia application present on the desktop. Here’s a demonstration video of it’s working.</p>
+
+
+
+<div>
+
+</div>
+
+
+
+<p>Now my next step is to enable SMS …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Aniket Kumar</b></span>
+  on <time datetime="2020-07-20 17:31:01+00:00" class="dt-published"></time>
   Mon 20 Jul 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/jsparber/2020/07/20/i-finished-my-masters-degree/" rel="bookmark" class="u-url"
+       title="I finished my master’s degree \o/" target="_blank">
+      <time class="m-date" datetime="2020-07-20 16:13:27+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      I finished my master’s degree \o/
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In the last couple of months, I was busy writing my thesis to conclude my master’s degree in computer science at the University of Bologna, therefore, I wasn’t much active in the GNOME community I hope that now I have much more time to dedicate to writing software ;). The title of the thesis is … <a href="https://blogs.gnome.org/jsparber/2020/07/20/i-finished-my-masters-degree/">Continue reading <span>I finished my master’s degree \o/</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>jsparber</b></span>
+  on <time datetime="2020-07-20 16:13:27+00:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.kitware.com/new-in-paraview-5-9-volume-rendering-with-a-separate-opacity-array/" rel="bookmark" class="u-url"
+       title="New in ParaView 5.9: Volume rendering with a separate opacity array" target="_blank">
+      <time class="m-date" datetime="2020-07-20 15:55:13+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      New in ParaView 5.9: Volume rendering with a separate opacity array
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Previous versions of ParaView supported volume rendering with independent mapping of colors and opacities to different components of a single input data array. However, it ... <a href="https://blog.kitware.com/new-in-paraview-5-9-volume-rendering-with-a-separate-opacity-array/">Read More</a></p>
+<p>The post <a href="https://blog.kitware.com/new-in-paraview-5-9-volume-rendering-with-a-separate-opacity-array/">New in ParaView 5.9: Volume rendering with a separate opacity array</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Quammen</b></span>
+  on <time datetime="2020-07-20 15:55:13+00:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/624172636567666688/how-n95-masks-work" rel="bookmark" class="u-url"
+       title="How N95 Masks Work" target="_blank">
+      <time class="m-date" datetime="2020-07-20 10:03:32-05:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How N95 Masks Work
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://64.media.tumblr.com/f797c66298f5b2e0c0fc55eee9f67d53/a73a6108361ccfda-cb/s540x810/f5c4c4a35fa74987d64e242f8a7239a7b50c0afd.gif"><img src="https://64.media.tumblr.com/affd22e7048aeaa9062d75600d6a63c0/a73a6108361ccfda-6a/s540x810/429311a9afdc9da378546b8ee853ef8662bc62f6.gif"><img src="https://64.media.tumblr.com/9b698901d8b5db650f88b4f8a977c470/a73a6108361ccfda-dd/s540x810/d3bf09ecbe86ad8ebb8818d431b1e437ac9d8616.gif"><a href="https://fyfluiddynamics.com/2020/07/how-n95-masks-work/">You might imagine N95 masks as essentially a strainer intended to catch small particles, but as Minute Physics shows in their video, what these masks do is actually much more clever.</a> (Video and image credit: Minute Physics)
+<a href="https://fyfluiddynamics.com/2020/07/how-n95-masks-work/">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-20 10:03:32-05:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/07/how-n95-masks-work/" rel="bookmark" class="u-url"
+       title="How N95 Masks Work" target="_blank">
+      <time class="m-date" datetime="2020-07-20 15:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How N95 Masks Work
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  You might imagine N95 masks as essentially a strainer intended to catch small particles, but as Minute Physics shows in this video, what these masks do is actually much more <a href="https://fyfluiddynamics.com/2020/07/how-n95-masks-work/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-07-20 15:00:00+00:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2335/" rel="bookmark" class="u-url"
+       title="Photo Deposit" target="_blank">
+      <time class="m-date" datetime="2020-07-20 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Photo Deposit
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="It's okay, they scan the serial numbers and make sure you can't deposit the same bill more than once." src="https://imgs.xkcd.com/comics/photo_deposit.png" title="It's okay, they scan the serial numbers and make sure you can't deposit the same bill more than once.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-20 00:00:00+00:00" class="dt-published"></time>
+  Mon 20 Jul 2020
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -256,40 +512,6 @@ email addresses to change like:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://cocoonfly.wordpress.com/2020/07/20/the-second-milestone/" rel="bookmark" class="u-url"
-       title="The Second Milestone" target="_blank">
-      <time class="m-date" datetime="2020-07-19 20:34:20+00:00">
-        Jul
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Second Milestone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Hacking on Nautilus - The Saga Continues
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>apoosmaximus</b></span>
-  on <time datetime="2020-07-19 20:34:20+00:00" class="dt-published"></time>
-  Sun 19 Jul 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://nedbatchelder.com//blog/202007/dark_mode_continued.html" rel="bookmark" class="u-url"
        title="Dark mode, continued" target="_blank">
       <time class="m-date" datetime="2020-07-19 16:25:32-04:00">
@@ -349,40 +571,6 @@ styling. Media queries would get me the user&#8217;s preference, and an
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-07-18_The_meaning_of_life" rel="bookmark" class="u-url"
-       title="The meaning of life" target="_blank">
-      <time class="m-date" datetime="2020-07-19 12:14:05+00:00">
-        Jul
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The meaning of life
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>There has been an interesting discussion about the meaning of life in Geminispace. It all started with acdw’s post, two days ago: “I’m having a hard time finding meaning in my life of late. I want to make money but I really don’t want to do a job all day. Like, any job.” Yesterday, maleza wrote a reply and said, “Today I can only find meaning into feeding kefir, baking sour dough bread, taking care of crops, hugging my family…” </p><ul><li><a href="">acdw’s “having a hard time finding meaning”</a> </li><li><a href="">maleza’s reply</a> </li><li><a href="">starbreaker's reply</a></li></ul><p>I talked it over with my wife over breakfast on our balcony, with some self-made bread, the sun shining, a cool breeze, bees and bumblebees visiting the flowers in our pots, drinking some white tea. Such a beautiful day.</p><p>An important of this is …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-19 12:14:05+00:00" class="dt-published"></time>
-  Sun 19 Jul 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://snarky.ca/unravelling-attribute-access-in-python/" rel="bookmark" class="u-url"
        title="Unravelling attribute access in Python" target="_blank">
       <time class="m-date" datetime="2020-07-19 04:07:01+00:00">
@@ -417,109 +605,6 @@ styling. Media queries would get me the user&#8217;s preference, and an
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/623900682700947456/oooh-my-delicious-coffee" rel="bookmark" class="u-url"
-       title=""Oooh !! My Delicious Coffee"" target="_blank">
-      <time class="m-date" datetime="2020-07-17 10:00:56-05:00">
-        Jul
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      "Oooh !! My Delicious Coffee"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/07f79983eb9049b0038829d8ebe60e88/48368fff0f88bd94-55/s540x810/badf9b797f621b3ff086f83e82a337f653f97b84.gif"><img src="https://64.media.tumblr.com/203d35bdf90c25864a8ae4ad0969c6b9/48368fff0f88bd94-07/s540x810/43fe2000ff9d204cd8786342fe02d14b00a15c58.gif"><img src="https://64.media.tumblr.com/ae853e743f8769cdec806df3ca8b953a/48368fff0f88bd94-2c/s540x810/83c65b0cfb7b5895bc94af30e1b3d3e98d8a7ce2.gif"><a href="https://fyfluiddynamics.com/2020/07/oooh-my-delicious-coffee/">I&rsquo;m not a coffee person, but Thomas Blanchard&rsquo;s &ldquo;Oooh !! My Delicious Coffee&rdquo; manages to capture my favorite part of the beverage - watching cream and coffee mix.</a> (Image and video credit: <a href="http://www.thomas-blanchard.com/">T. Blanchard</a>)
-<a href="https://fyfluiddynamics.com/2020/07/oooh-my-delicious-coffee/">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-17 10:00:56-05:00" class="dt-published"></time>
-  Fri 17 Jul 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/07/oooh-my-delicious-coffee/" rel="bookmark" class="u-url"
-       title="“Oooh !! My Delicious Coffee”" target="_blank">
-      <time class="m-date" datetime="2020-07-17 15:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      “Oooh !! My Delicious Coffee”
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I&#8217;m not a coffee person, but Thomas Blanchard&#8217;s &#8220;Oooh !! My Delicious Coffee&#8221; manages to capture my favorite part of the beverage &#8211; watching cream and coffee mix. From feathery <a href="https://fyfluiddynamics.com/2020/07/oooh-my-delicious-coffee/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-07-17 15:00:00+00:00" class="dt-published"></time>
-  Fri 17 Jul 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2334/" rel="bookmark" class="u-url"
-       title="Slide Trombone" target="_blank">
-      <time class="m-date" datetime="2020-07-17 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Slide Trombone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Remember the CPS 2000, the super soaker that was discontinued because it was too powerful? Relatedly, can I borrow your tuba?" src="https://imgs.xkcd.com/comics/slide_trombone.png" title="Remember the CPS 2000, the super soaker that was discontinued because it was too powerful? Relatedly, can I borrow your tuba?">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-17 00:00:00+00:00" class="dt-published"></time>
-  Fri 17 Jul 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="http://www.scicombinator.com/articles/5808643" rel="bookmark" class="u-url"
        title="Absence of Apparent Transmission of SARS-CoV-2 from Two Stylists After Exposure at a Hair Salon with a Universal Face Covering Policy - Springfield, Missouri, May 2020" target="_blank">
       <time class="m-date" datetime="2020-07-17 00:00:00+00:00">
@@ -546,40 +631,6 @@ styling. Media queries would get me the user&#8217;s preference, and an
   on <time datetime="2020-07-17 00:00:00+00:00" class="dt-published"></time>
   Fri 17 Jul 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/links/2020/07/robot-hair-cut/" rel="bookmark" class="u-url"
-       title=""I made a robot to cut my hair with scissors"" target="_blank">
-      <time class="m-date" datetime="2020-07-16 21:58:18+02:00">
-        Jul
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      "I made a robot to cut my hair with scissors"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://www.youtube.com/watch?v=7zBrbdU_y0s">Shane Wighton from the YouTube channel “Stuff Made Here” built a robot that cuts his hair</a>. It worked <em>OK</em> for part of his hair, but see yourself&hellip; I wonder how one could even come up with such an idea to have one&rsquo;s hair cut by a robot with scissors? Crazy!</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-16 21:58:18+02:00" class="dt-published"></time>
-  Thu 16 Jul 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1101,116 +1152,6 @@ See the corresponding community poll and discussion on <a href="https://fortran-
   on <time datetime="2020-06-30 19:08:48+00:00" class="dt-published"></time>
   Tue 30 Jun 2020
   in Doctor Fortran.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/pbrj1/" rel="bookmark" class="u-url"
-       title="PBR Journey Part 1: High Dynamic Range Image Based Lighting with VTK" target="_blank">
-      <time class="m-date" datetime="2020-06-30 12:13:10+00:00">
-        Jun
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PBR Journey Part 1: High Dynamic Range Image Based Lighting with VTK
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Introduction Last year we introduced the beginning of Physically Based Rendering in VTK. Now the journey to modern rendering in VTK continues with new features ... <a href="https://blog.kitware.com/pbrj1/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/pbrj1/">PBR Journey Part 1: High Dynamic Range Image Based Lighting with VTK</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Paul Lafoix</b></span>
-  on <time datetime="2020-06-30 12:13:10+00:00" class="dt-published"></time>
-  Tue 30 Jun 2020
-  in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/06/30/how-to-copy-text-to-clipboard-in-neovim.html" rel="bookmark" class="u-url"
-       title="How to copy text to the clipboard in Neovim" target="_blank">
-      <time class="m-date" datetime="2020-06-30 00:00:00+02:00">
-        Jun
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How to copy text to the clipboard in Neovim
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>If you want to copy text to the clipboard in Neovim you can do so with xclip. The command is a bit complicated so I highly recommend you binding it to a shortcut.</p>
-
-<p>This is what I have in my Neovim configuration to let me copy marked text using <code>Ctrl+C</code>:</p>
-
-<div><div><pre><code>vmap &lt;C-c&gt; y:call system("xclip -i -selection clipboard", getreg("\""))&lt;CR&gt;:call system("xclip -i", getreg("\""))&lt;CR&gt; 
-</code></pre></div></div>
-
-<p>Just make sure to install the tool <code>xclip</code> if you don’t already have it.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-06-30 00:00:00+02:00" class="dt-published"></time>
-  Tue 30 Jun 2020
-  in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://sylvaindeville.net/2020/06/29/de-lart-de-chercher-les-moyens-de-travailler/" rel="bookmark" class="u-url"
-       title="De l’art de chercher … les moyens de travailler" target="_blank">
-      <time class="m-date" datetime="2020-06-29 21:00:43+00:00">
-        Jun
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      De l’art de chercher … les moyens de travailler
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Ces dernières années, j’ai développé une nouvelle approche expérimentale pour étudier la congélation, réorientant mes recherches de la science des matériaux (synthèse et mise en forme) à la physique, la matière molle et la biophysique. Nous avons mis quelques années &#8230; <a href="https://sylvaindeville.net/2020/06/29/de-lart-de-chercher-les-moyens-de-travailler/">Continue reading <span>&#8594;</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Sylvain Deville</b></span>
-  on <time datetime="2020-06-29 21:00:43+00:00" class="dt-published"></time>
-  Mon 29 Jun 2020
-  in Sylvain Deville.
 </footer>
 <div class="m-clearfix-l"></div>
 
