@@ -142,6 +142,160 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/python-tempfile-permission-error-windows/" rel="bookmark" class="u-url"
+       title="Fix Python tempfile PermissionError on Windows" target="_blank">
+      <time class="m-date" datetime="2020-07-24 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fix Python tempfile PermissionError on Windows
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Python
+<a href="https://docs.python.org/3/library/tempfile.html">tempfile</a>
+is normally robust but has some corner cases on Windows.
+A common issue is that on exiting a tempfile context manager, <code>PermissionError</code> is thrown on Windows.
+This can happen when non-writable files are placed into a tempfile.TemporaryDirectory such as cloning a Git directory into the TemporaryDirectory.</p>
+Workaround
+<p>A common workaround is to simply not use the tempfile context manager, instead manually deleting the temporary directory when done:</p>
+<div><pre><code><span>from</span> pathlib <span>import</span> Path
+<span>import</span> tempfile
+temp_dir <span>=</span> tempfile<span>.</span>TemporaryDirectory()
+temp_path <span>=</span> Path(temp_dir<span>.</span>name)
+<span># do stuff in temporary directory</span>
+<span># when done with temporary directory</span>
+<span>try</span>:
+temp_dir<span>.</span>cleanup()
+<span>except</span> PermissionError:
+<span>pass</span>
+</code></pre></div><p>If there is a PermissionError, the temporary directory remains until the operating system cleans up the temporary directory.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-24 00:00:00+00:00" class="dt-published"></time>
+  Fri 24 Jul 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/hughsie/2020/07/23/using-red-hat-satellite-with-the-lvfs/" rel="bookmark" class="u-url"
+       title="Using Red Hat Satellite with the LVFS" target="_blank">
+      <time class="m-date" datetime="2020-07-23 15:10:48+00:00">
+        Jul
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Using Red Hat Satellite with the LVFS
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  A months weeks ago I alluded that you could run the LVFS in an offline mode, where updates could be synced to a remote location and installed on desktops and servers in a corporate setting without internet access. A few big companies asked for more details, and so we created some official documentation which should … <a href="https://blogs.gnome.org/hughsie/2020/07/23/using-red-hat-satellite-with-the-lvfs/">Continue reading <span>Using Red Hat Satellite with the LVFS</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>hughsie</b></span>
+  on <time datetime="2020-07-23 15:10:48+00:00" class="dt-published"></time>
+  Thu 23 Jul 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/624444343687708672/shedding-light-on-martian-dust-storms" rel="bookmark" class="u-url"
+       title="Shedding Light on Martian Dust Storms" target="_blank">
+      <time class="m-date" datetime="2020-07-23 10:02:11-05:00">
+        Jul
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Shedding Light on Martian Dust Storms
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Shedding Light on Martian Dust Storms" src="https://64.media.tumblr.com/ae471e3b2f60292eaad159c44e006215/2db2b634449ca93e-5b/s540x810/1caab946057a019db545722c62948ac5d571d0b3.jpg"><a href="https://fyfluiddynamics.com/2020/07/shedding-light-on-martian-dust-storms/">In 2018, Mars was enveloped by a global dust storm that lasted for months. As researchers comb through data from the storm, they&rsquo;re gaining new insights into the mechanisms that drive these extreme events.</a> (Image credits: NASA, <a href="https://eos.org/editors-vox/lifting-the-veil-on-martian-dust-storms">T. Bertrand/A. Kling/NASA Ames</a>; research credit: <a href="https://doi.org/10.1029/2019JE006122">T. Bertrand et al.</a>; see also <a href="https://agupubs.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)2169-9100.DUSTSTRM18">JGR Planets</a> and <a href="https://agupubs.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)2169-9100.DUSTSTRM18">AGU</a>; submitted by <a href="https://agupubs.onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)2169-9100.DUSTSTRM18">Kam-Yung Soh</a>)
+<a href="https://fyfluiddynamics.com/?p=13252">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-23 10:02:11-05:00" class="dt-published"></time>
+  Thu 23 Jul 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/07/shedding-light-on-martian-dust-storms/" rel="bookmark" class="u-url"
+       title="Shedding Light on Martian Dust Storms" target="_blank">
+      <time class="m-date" datetime="2020-07-23 15:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Shedding Light on Martian Dust Storms
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In 2018, Mars was enveloped by a global dust storm that lasted for months. Although such storms had been seen before, the 2018 storm offered an unprecedented opportunity for observation <a href="https://fyfluiddynamics.com/2020/07/shedding-light-on-martian-dust-storms/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-07-23 15:00:00+00:00" class="dt-published"></time>
+  Thu 23 Jul 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-07-23_Eight_Colours" rel="bookmark" class="u-url"
        title="Eight Colours" target="_blank">
       <time class="m-date" datetime="2020-07-23 12:24:45+00:00">
@@ -253,102 +407,36 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/624354028556533760/10-years-of-fyfd" rel="bookmark" class="u-url"
-       title="10 Years of FYFD" target="_blank">
-      <time class="m-date" datetime="2020-07-22 10:06:36-05:00">
+    <a href="https://hunden.linuxkompis.se/2020/07/23/why-i-follow-few-users-and-why-it's-not-personal.html" rel="bookmark" class="u-url"
+       title="Why I follow few users and why it’s not personal" target="_blank">
+      <time class="m-date" datetime="2020-07-23 00:00:00+02:00">
         Jul
         <span class="m-date-day">
-          22
+          23
         </span>
         2020
       </time>
       <div class="p-name">
-      10 Years of FYFD
+      Why I follow few users and why it’s not personal
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="10 Years of FYFD" src="https://64.media.tumblr.com/db16b2580903e673bddd8f13cf94b299/c44eb86339b7a982-40/s540x810/26fb6544a4d9cee0e570c3190ac7933f99faabb1.png">10 years. 2,590 posts. 21 original videos. 378,000+ followers. Countless hours spent blogging and more than 1,000 journal articles read. When I started FYFD ten years ago as a PhD student, I never imagined the impact the blog would have. (Image credit: N. Sharp)<a href="https://fyfluiddynamics.com/?p=13428">Read the full article</a>
+  <p>For some reason I ended up with a lot of followers on Mastodon and I don’t know why to be honest. Every time someone follows me and I don’t follow them back I honestly feel bad about it. It’s not that I find most people boring or anything, it’s just that.. well. life. I guess.</p>
+
+<p>Something unexpected happened to me recently, I was away from my computer for almost three weeks straight. Well. It’s perhaps not <em>that</em> unexpected—it’s not the first time I’ve been away from my computer (or even my phone) for longer periods of times—most of the times it’s only for a few days to a week or so though.</p>
+
+<p>In periods I can sometime spend quite a lot of time on my computer. I really enjoy tinkering …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-22 10:06:36-05:00" class="dt-published"></time>
-  Wed 22 Jul 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/07/10-years-of-fyfd/" rel="bookmark" class="u-url"
-       title="10 Years of FYFD" target="_blank">
-      <time class="m-date" datetime="2020-07-22 15:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      10 Years of FYFD
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  10 years. 2,590 posts. 21 original videos. 378,000+ followers. Countless hours spent blogging and more than 1,000 journal articles read. When I started FYFD ten years ago as a PhD <a href="https://fyfluiddynamics.com/2020/07/10-years-of-fyfd/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-07-22 15:00:00+00:00" class="dt-published"></time>
-  Wed 22 Jul 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://aledomu.github.io/gnome/fractal-july-update-progress/" rel="bookmark" class="u-url"
-       title="Fractal: Update progress" target="_blank">
-      <time class="m-date" datetime="2020-07-22 07:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Fractal: Update progress
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>It’s being a busy month, but productive nonetheless!</p>
-
-<p>Since the last update about how things were going most of the error handling stuff has been reworked, as announced. There are a few bits remaining but they are in very specific places that require prior work in other areas. The approach chosen was to have a common trait that handled the error and each backend function now has a (mostly) specific error type that implements that said trait. Managing errors for new requests is as easy as creating a new type for the error that indicates all possible cases, composing over foreign error types if required, and implementing the trait <code>HandleError</code> to manage how the error should be shown in the GUI and/or logged, or just marking the trait if the default implementation is good enough. The MR requests …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Alejandro Domínguez</b></span>
-  on <time datetime="2020-07-22 07:00:00+00:00" class="dt-published"></time>
-  Wed 22 Jul 2020
-  in Planet GNOME.
+  on <time datetime="2020-07-23 00:00:00+02:00" class="dt-published"></time>
+  Thu 23 Jul 2020
+  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -383,54 +471,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-07-22 00:00:00+00:00" class="dt-published"></time>
   Wed 22 Jul 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/matlab-obscure-code-share/" rel="bookmark" class="u-url"
-       title="Obscuring Matlab code for sharing" target="_blank">
-      <time class="m-date" datetime="2020-07-22 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Obscuring Matlab code for sharing
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://en.wikipedia.org/wiki/Security_through_obscurity">Security through obscurity</a>
-is a technique that used alone does not actually confer security.
-Obscuring code simply increases effort for someone who wishes to use code for unauthorized purposes.
-For Matlab &ldquo;.m&rdquo; code, two
-<a href="https://www.mathworks.com/help/matlab/matlab_prog/protect-your-source-code.html">methods</a>
-to partially obscure the underlying &ldquo;.m&rdquo; code for sharing Matlab-based algorithms are:</p>
-<ul>
-<li>compile Matlab code to <a href="https://www.scivision.dev/matlab-share-compiled-m-code">executable</a> (OS-specific and Matlab version-specific)</li>
-<li>convert Matlab code to <a href="https://www.mathworks.com/help/matlab/ref/pcode.html">pcode</a> (OS-agnostic and Matlab version-agnostic)</li>
-</ul>
-<p>In general, when critical IP needs to be made available for user data while keeping IP non-public, this is done by providing web services.
-For example, the IP of Google, Bing, Office 365 is usable via web services, but generally the core code remains non-public.</p>
-Matlab pcode
-<p>Matlab <code>pcode()</code> can obscure directories or lists of files to &ldquo;.p&rdquo; code that runs on Matlab ≥ R2007b on any supported OS.
-Based on webpages (some of which have …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-22 00:00:00+00:00" class="dt-published"></time>
-  Wed 22 Jul 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1043,42 +1083,6 @@ there exist protocols and the so-called <em>dunder methods</em>, methods …</p>
   on <time datetime="2020-07-04 22:00:00+00:00" class="dt-published"></time>
   Sat 04 Jul 2020
   in Velibor Zeli.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://changelog.com/podcast/401" rel="bookmark" class="u-url"
-       title="The Changelog episode 401" target="_blank">
-      <time class="m-date" datetime="2020-07-03 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Changelog episode 401
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The intersection of coding and fonts: coding fonts! Talking with The Changelog about Fira Code.
-
-
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2020-07-03 00:00:00+00:00" class="dt-published"></time>
-  Fri 03 Jul 2020
-  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
