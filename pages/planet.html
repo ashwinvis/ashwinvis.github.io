@@ -142,6 +142,99 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.qt.io/blog/qt-creator-4.13-beta2-released" rel="bookmark" class="u-url"
+       title="Qt Creator 4.13 Beta2 released" target="_blank">
+      <time class="m-date" datetime="2020-07-27 10:18:59+00:00">
+        Jul
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Qt Creator 4.13 Beta2 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div> 
+ <a href="https://www.qt.io/blog/qt-creator-4.13-beta2-released" title=""> <img alt="Qt Creator 4.13 Beta2 released" src="//www.qt.io/hubfs/Qt%20Creator%20413%20beta2.png"> </a> 
+</div>    
+<p><span>We are happy to announce the release of Qt Creator 4.13 Beta2 !</span></p>    
+<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.13-beta2-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Qt Dev Loop</b></span>
+  on <time datetime="2020-07-27 10:18:59+00:00" class="dt-published"></time>
+  Mon 27 Jul 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/python-zipfile-recursive-write/" rel="bookmark" class="u-url"
+       title="Python zipfile recursive write" target="_blank">
+      <time class="m-date" datetime="2020-07-27 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python zipfile recursive write
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This function recursively zips files in directories, storing only the relative path due to the use of the &ldquo;arcname&rdquo; parameter.
+Otherwise, you get the path relative to the root of your filesystem, which is rarely useful.</p>
+<div><pre><code><span>import</span> zipfile
+<span>from</span> pathlib <span>import</span> Path
+<span>def</span> <span>zip_dirs</span>(path: Path, pattern: str) <span>-&gt;</span> T<span>.</span>List[Path]:
+<span>"""
+</span><span> recursively .zip a directory
+</span><span> """</span>
+path <span>=</span> Path(path)<span>.</span>expanduser()<span>.</span>resolve()
+dlist <span>=</span> [d <span>for</span> d <span>in</span> path<span>.</span>glob(pattern) <span>if</span> d<span>.</span>is_dir()]
+<span>if</span> len(dlist) <span>==</span> <span>0</span>:
+<span>raise</span> FileNotFoundError(f<span>"no directories to zip under {path} with {pattern}"</span>)
+<span>for</span> d <span>in</span> dlist:
+zip_name <span>=</span> d<span>.</span>with_suffix(<span>".zip"</span>)
+<span>with</span> zipfile<span>.</span>ZipFile(zip_name, mode<span>=</span><span>"w"</span>, compression<span>=</span>zipfile<span>.</span>ZIP_LZMA) <span>as</span> z:
+<span>for</span> root, _, files <span>in</span> os<span>.</span>walk(d):
+<span>for</span> file <span>in</span> files:
+fn <span>=</span> Path(root, file)
+afn <span>=</span> fn<span>.</span>relative_to(path)
+z<span>.</span>write(fn, arcname<span>=</span>afn)
+<span>print</span>(<span>"write"</span>, zip_name)
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-27 00:00:00+00:00" class="dt-published"></time>
+  Mon 27 Jul 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://blogs.gnome.org/oleaamot/2020/07/26/gnome-internet-radio-locator-3-0-2-for-fedora-core-32/" rel="bookmark" class="u-url"
        title="GNOME Internet Radio Locator 3.0.2 for Fedora Core 32" target="_blank">
       <time class="m-date" datetime="2020-07-26 12:00:54+00:00">
@@ -168,51 +261,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-07-26 12:00:54+00:00" class="dt-published"></time>
   Sun 26 Jul 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://dilsonguim.github.io/kde/gsoc/2020/07/26/post7.html" rel="bookmark" class="u-url"
-       title="Google Summer of Code 2020 - Post 7" target="_blank">
-      <time class="m-date" datetime="2020-07-26 01:50:00+00:00">
-        Jul
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Google Summer of Code 2020 - Post 7
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I finally tested the <a href="https://kde.org/applications/education/org.kde.rocs">Rocs</a> radial layout algorithm implementation.
-This includes some functional tests to check if the implementation works as expected in some cases and a non-functional
-test to evaluate the performance of the algorithm with respect to some aesthetic criteria.</p>
-
-<p>The implementation passed all functional tests. Initially, the non-functional tests reported that edge crosses occurred.
-Since, in theory, no edge crosses can occur in layouts generated by the radial layout algorithm, I though the implementation had bugs.
-After checking the code a couple of times without finding any bugs, I decided to take a look at the graphs in which the algorithm was failing.
-I managed to get one example with just 8 vertices and applied the radial layout algorithm to it, getting the following result.</p>
-
-<p><img alt="Bug." src="//dilsonguim.github.io/website/assets/images/2020-07-25-bug.png"></p>
-
-<p>Wait! There are no crosses between edges in this layout. It turns …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Dilson Guimarães (dilsonguim)</b></span>
-  on <time datetime="2020-07-26 01:50:00+00:00" class="dt-published"></time>
-  Sun 26 Jul 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -263,50 +311,6 @@ think once you learn those facts it gets a lot easier.</p>
   on <time datetime="2020-07-25 10:09:05+00:00" class="dt-published"></time>
   Sat 25 Jul 2020
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/matlab-system-stdin-pipe/" rel="bookmark" class="u-url"
-       title="Matlab system stdin pipe" target="_blank">
-      <time class="m-date" datetime="2020-07-25 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Matlab system stdin pipe
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Matlab does not have a native means to pass Matlab data via a stdin pipe to programs called with
-<a href="https://www.mathworks.com/help/matlab/ref/system.html">system</a>.
-This is not an issue with
-<a href="https://docs.python.org/3/library/subprocess.html">Python subprocess</a>
-that is quite robust and featureful.
-&ldquo;stdout&rdquo; and &ldquo;stderr&rdquo; are joined by Matlab, available at program completion like:</p>
-<div><pre><code>[ret, msg] = system(<span>...);</span>
-</code></pre></div><p>where &ldquo;msg&rdquo; is the data from stdout and stderr joined together.</p>
-<p>The benefits of this method is that is can be faster than using temporary files, and helps avoid filesystem clashes when running many external processes in parallel or asynchronously.
-This method avoids the need to write additional code directly interfacing memory between Fortran or C and Matlab by using file-based or pipe-based API for data streaming.
-The penalty for this simplicity is execution speed, but that can be resolved later if I/O speed is a genuine bottleneck by using …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-25 00:00:00+00:00" class="dt-published"></time>
-  Sat 25 Jul 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
