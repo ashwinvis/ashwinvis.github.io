@@ -452,6 +452,54 @@ The above members have contributed to the Python ecosystem by teaching Python, m
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-07-24_Writing_Markdown,_generating_PDF" rel="bookmark" class="u-url"
+       title="Writing Markdown, generating PDF" target="_blank">
+      <time class="m-date" datetime="2020-07-24 12:59:05+00:00">
+        Jul
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Writing Markdown, generating PDF
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I find that I like this process more and more because I get to leverage skills that I use on a regular basis: writing Markdown files and fiddling with simple CSS files.</p><p>This is how it works: I use a Makefile. Makefiles are good for command line stuff integration because otherwise I’d forget how to do things.</p><p>Example:</p><pre>all: a-thousand-dungeons.pdf
+
+%.pdf: %.html %.css map1.svg map2.svg map3.svg
+    weasyprint $&lt; $@
+
+%.html: %.md prefix suffix
+    python3 -m markdown \
+        --extension=markdown.extensions.tables \
+        --extension markdown.extensions.smarty \
+        --file=x$@ $&lt;
+    cat prefix x$@ suffix &gt; $@
+    rm x$@
+
+clean:
+    rm -f *.html *.pdf</pre><p>Let’s look at it. The stuff that isn’t preceded by a TAB character is a rule. The file before the colon is the target. The files after the colon are the prerequisites. The percent character is used for …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-24 12:59:05+00:00" class="dt-published"></time>
+  Fri 24 Jul 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://xkcd.com/2337/" rel="bookmark" class="u-url"
        title="Asterisk Corrections" target="_blank">
       <time class="m-date" datetime="2020-07-24 00:00:00+00:00">
