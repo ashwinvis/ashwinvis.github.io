@@ -142,6 +142,169 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nevilleantony98.gitlab.io//2020/07/31/week-7/" rel="bookmark" class="u-url"
+       title="Implementing Recently Played Collection in GNOME Games" target="_blank">
+      <time class="m-date" datetime="2020-07-31 11:13:28+00:00">
+        Jul
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Implementing Recently Played Collection in GNOME Games
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In my previous blog <a href="https://nevilleantony98.gitlab.io/2020/07/03/week-4/">post</a>, I talked about how I added a <em>Favorites Collection</em> to Games. <em>Favorites Collection</em> lists all the games that’s marked as favorite. In this post I’ll talk about what went into adding a <em>Recently Played Collection</em>, which helps you get to recently played games more quickly.</p>
+
+<p>Since most of the ground work for supporting non-user collections are already done as part of introducing Favorites Collection, it required much less work to add another non-user collection. For <em>Recently Played</em> collection, the main differences from <em>Favorites Collection</em> in terms of implementation are:</p>
+
+<ul>
+  <li>An option to add the game into <em>Recently Played</em> is not required, since the app knows which games were played at what time</li>
+  <li>Games in <em>Recently Played</em> collection should be sorted by the last played date-time, instead of name</li>
+</ul>
+
+Implementing Recently Played Collection
+
+<p>Getting …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-31 11:13:28+00:00" class="dt-published"></time>
+  Fri 31 Jul 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2020/07/mailygo-emanuel-pina/" rel="bookmark" class="u-url"
+       title="Handle HTML forms through email with MailyGo" target="_blank">
+      <time class="m-date" datetime="2020-07-31 08:49:58+02:00">
+        Jul
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Handle HTML forms through email with MailyGo
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>It&rsquo;s nice to see when people fork, modify and actually use your open source projects. <a href="https://emanuelpina.pt/handle-html-forms-through-email-with-mailygo/">Like Emanuel Pina does</a>. He has forked my project <a href="https://git.jlel.se/jlelse/MailyGo">MailyGo</a>, which enables receiving form submissions on static sites and sends them via e-mail. He added some nice features (which I will definitely take inspiration from and add some back to the upstream project!).</p>
+<p>By looking at his code I also found out that Scaleway has <a href="https://www.scaleway.com/en/container-registry/">a managed container registry service</a>, which might be a viable alternative to Quay.io or DockerHub.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-31 08:49:58+02:00" class="dt-published"></time>
+  Fri 31 Jul 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2340/" rel="bookmark" class="u-url"
+       title="Cosmologist Genres" target="_blank">
+      <time class="m-date" datetime="2020-07-31 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Cosmologist Genres
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Inflationary cosmologists call all music from after the first 10^-30 seconds &quot;post-&quot;" src="https://imgs.xkcd.com/comics/cosmologist_genres.png" title="Inflationary cosmologists call all music from after the first 10^-30 seconds &quot;post-&quot;">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-31 00:00:00+00:00" class="dt-published"></time>
+  Fri 31 Jul 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/latex-bbl-fix-bibtex-error/" rel="bookmark" class="u-url"
+       title="Fix BibTeX error with .bbl file" target="_blank">
+      <time class="m-date" datetime="2020-07-31 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fix BibTeX error with .bbl file
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Sometimes cryptic errors occur if there was a syntax error in a .bib BibTeX bibliography file that doesn&rsquo;t disappear even when the .bib syntax is corrected.
+The fix for this is often to delete the auto-generated files:</p>
+<ul>
+<li><a href="https://www.overleaf.com/learn/latex/Questions/The_journal_says_%22don%27t_use_BibTeX;_paste_the_contents_of_the_.bbl_file_into_the_.tex_file%22._How_do_I_do_this_on_Overleaf%3F">.bbl file</a>.</li>
+<li>.aux file</li>
+</ul>
+Example
+<p>Suppose the top-level LaTeX file is &ldquo;main.tex&rdquo;.
+Then the compilation generates main.bbl and main.aux among several others.
+If you keep getting errors when you know the syntax is correct then try:</p>
+<div><pre><code>rm main.aux main.bbl
+pdflatex main
+bibtex main
+pdflatex main
+pdflatex main
+</code></pre></div><p>and see if that clears the error.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-07-31 00:00:00+00:00" class="dt-published"></time>
+  Fri 31 Jul 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pythoninsider.blogspot.com/2020/07/upgrade-pip-20-2-changes-20-3.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
        title="Upgrade to pip 20.2, plus, changes coming in 20.3" target="_blank">
       <time class="m-date" datetime="2020-07-30 12:53:50.895000-04:00">
@@ -327,40 +490,6 @@ The new dependency resolver is <i>off by default</i> because it is in beta and <
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/oleaamot/2020/07/29/gnome-gingerblue/" rel="bookmark" class="u-url"
-       title="Record Live Audio as Ogg Vorbis in GNOME Gingerblue 0.2.0" target="_blank">
-      <time class="m-date" datetime="2020-07-29 18:00:19+00:00">
-        Jul
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Record Live Audio as Ogg Vorbis in GNOME Gingerblue 0.2.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today I released GNOME Gingerblue version 0.2.0 with the basic new features: Record Live Vorbis Audio stream in &lt;Name&gt; - &lt;Song&gt; - &lt;ISO 8601 timestamp&gt;.ogg Timestamp ISO 8601 Audio File in G_USER_DIRECTORY_MUSIC ($HOME/Music/) Store ISO 8601 Timestamp Song Files in G_USER_DIRECTORY_MUSIC ($HOME/Music/) Meta Info Setup Wizard XML Parsing I began work on GNOME Gingerblue on … <a href="https://blogs.gnome.org/oleaamot/2020/07/29/gnome-gingerblue/">Continue reading <span>Record Live Audio as Ogg Vorbis in GNOME Gingerblue 0.2.0</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>oleaamot</b></span>
-  on <time datetime="2020-07-29 18:00:19+00:00" class="dt-published"></time>
-  Wed 29 Jul 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://confifu.wordpress.com/2020/07/29/week-8-gsoc-project-report/" rel="bookmark" class="u-url"
        title="Week 8: GSoC Project Report" target="_blank">
       <time class="m-date" datetime="2020-07-29 16:58:52+00:00">
@@ -399,40 +528,6 @@ The new dependency resolver is <i>off by default</i> because it is in beta and <
   on <time datetime="2020-07-29 16:58:52+00:00" class="dt-published"></time>
   Wed 29 Jul 2020
   in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/07/rsvp-hwc-london-2/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-07-29 18:02:27+02:00">
-        Jul
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today I will participate again at the HWC Europe/London (remotely, but this time with a webcam). I am looking forward to some nice discussions. Until then I&rsquo;m going to program a little bit on <a href="https://jlelse.blog/thoughts/2020/07/own-cms/">my own CMS</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-29 18:02:27+02:00" class="dt-published"></time>
-  Wed 29 Jul 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -502,40 +597,6 @@ The above members have contributed to the Python ecosystem by teaching Python, m
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2339/" rel="bookmark" class="u-url"
-       title="Pods vs Bubbles" target="_blank">
-      <time class="m-date" datetime="2020-07-29 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Pods vs Bubbles
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Canada's travel restrictions on the US are 99% about keeping out COVID and 1% about keeping out people who say 'pod.'" src="https://imgs.xkcd.com/comics/pods_vs_bubbles.png" title="Canada's travel restrictions on the US are 99% about keeping out COVID and 1% about keeping out people who say 'pod.'">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-29 00:00:00+00:00" class="dt-published"></time>
-  Wed 29 Jul 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="http://www.scicombinator.com/articles/5837684" rel="bookmark" class="u-url"
        title="The molecular basis of thioalcohol production in human body odour" target="_blank">
       <time class="m-date" datetime="2020-07-29 00:00:00+00:00">
@@ -562,60 +623,6 @@ The above members have contributed to the Python ecosystem by teaching Python, m
   on <time datetime="2020-07-29 00:00:00+00:00" class="dt-published"></time>
   Wed 29 Jul 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/github-delete-release-tag/" rel="bookmark" class="u-url"
-       title="Delete Git tag / release version" target="_blank">
-      <time class="m-date" datetime="2020-07-29 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Delete Git tag / release version
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Deleting or updating a GitHub or GitLab release leaves the Git tag, which must also be deleted to reissue a corrected release.</p>
-<ol>
-<li>
-<p>delete the Git tag locally. Here we assume the release tag was <code>v1.2.3</code></p>
-<div><pre><code>git tag -d v1.2.3
-</code></pre></div></li>
-<li>
-<p>delete the Git tag on remote site</p>
-<div><pre><code>git push -d origin v1.2.3
-</code></pre></div><p>This puts the release notes from v1.2.3 into &ldquo;draft&rdquo; mode&ndash;hidden from the public.</p>
-</li>
-<li>
-<p>Make the necessary changes, then do the release again, reusing the draft release notes.</p>
-</li>
-</ol>
-Notes
-<ul>
-<li><a href="https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository">GitHub releases</a></li>
-<li><a href="https://docs.gitlab.com/ee/user/project/releases/">GitLab releases</a></li>
-<li><a href="https://support.atlassian.com/bitbucket-cloud/docs/repository-tags/">Bitbucket tags</a></li>
-</ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-29 00:00:00+00:00" class="dt-published"></time>
-  Wed 29 Jul 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
