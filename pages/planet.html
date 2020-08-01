@@ -142,47 +142,126 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.thelins.se/johan/blog/2020/07/adventures-in-dyndns/" rel="bookmark" class="u-url"
-       title="Adventures in (Dyn)DNS" target="_blank">
-      <time class="m-date" datetime="2020-07-31 20:20:18+00:00">
-        Jul
+    <a href="https://alexschroeder.ch/wiki/2020-08-01_The_problem_of_social_media" rel="bookmark" class="u-url"
+       title="The problem of social media" target="_blank">
+      <time class="m-date" datetime="2020-08-01 09:57:38+00:00">
+        Aug
         <span class="m-date-day">
-          31
+          01
         </span>
         2020
       </time>
       <div class="p-name">
-      Adventures in (Dyn)DNS
+      The problem of social media
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>So, I made the silly move to rely on my hardware supplier to provide me with a dynamic DNS service. Naturally, this offer expired, and I could no longer reach my home server. Because of Murphy, this naturally took place when I was away from home with no access to anything.</p>
-
-
-
-<p>So – how does one find the way back home?</p>
-
-
-
-<p>Luckily, I have a VPS that I log in to now and then. After a quick duck-ing (<a href="https://duckduckgo.com/">duckduckgo</a> is my friend), I found the <code><a href="https://linux.die.net/man/1/last">last</a></code> command which was the first piece of the puzzle. Now I had a list of potential IPs.</p>
-
-
-
-<p>Did I mention that I travel a lot?</p>
-
-
-
-<p>There were quite a few IPs there. Pre-COVID-19, it would have been worse. Still, I found a few likely candidates based on frequency of use. Then I found this handy …</p>
+  <div><p>Sometimes I wonder about the construction of social media: built to comment on anything, thus revealing all our shit opinions to each other, leading to estrangement and abandonment. I don’t trust anyone anymore. There are so many ways to be wrong: on taxes, on public health, on politeness, on what’s the best text editor – and any single opinion spouting event turns into an uncomfortable reveal.</p><p>Maybe that’s why deliberate platforms, where it is harder to post, either because the software is bad, or there are costs associated with it, like long form blogging, make for a better reading experience: where you don’t end up disillusioned in your fellow humans. Or is this simply my filter bubble and social media simply reveals the limits of my own tolerance, the closeness of my horizon? 🤔</p><p>Why can’t we …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Johan Thelin</b></span>
-  on <time datetime="2020-07-31 20:20:18+00:00" class="dt-published"></time>
-  Fri 31 Jul 2020
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-01 09:57:38+00:00" class="dt-published"></time>
+  Sat 01 Aug 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/08/recursive-cte/" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-08-01 11:47:40+02:00">
+        Aug
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This day is successful: I created a recursive <a href="https://en.wikipedia.org/wiki/Hierarchical_and_recursive_queries_in_SQL#Common_table_expression">SQL CTE</a> in SQLite even before noon. 🤓</p>
+<pre><code>with recursive f (i, fp, tp) as (select 1, fromPath, toPath
+from redirects
+where fromPath = ?
+union all
+select f.i + 1, r.fromPath, r.toPath
+from redirects as r
+join f on f.tp = r.fromPath)
+select tp
+from f
+order by i desc
+limit 1
+</code></pre>
+<p>This is for <a href="https://jlel.se/goblog">my new CMS project</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-01 11:47:40+02:00" class="dt-published"></time>
+  Sat 01 Aug 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.volkerkrause.eu/2020/08/01/kde-itinerary-june-july-2020.html" rel="bookmark" class="u-url"
+       title="June/July in KDE Itinerary" target="_blank">
+      <time class="m-date" datetime="2020-08-01 07:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      June/July in KDE Itinerary
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The <a href="/2020/05/30/kde-itinerary-april-may-2020.html">last bi-monthly report</a> about the development of
+<a href="https://kde.org/applications/office/org.kde.itinerary">KDE Itinerary</a> ended with a teaser for
+<a href="/2020/06/13/kde-itinerary-osm-indoor-maps.html">indoor map support</a>
+for train stations
+and airports. This also dominated the work in the past weeks, and has made considerable progress so that the first
+features based on that have been integrated.</p>
+
+New Features
+
+<p>For every train station or airport in the itinerary timeline, it’s now possible to open the integrated indoor map view.
+While that already brings quite some value for locations with decent data quality (which seem to be mostly larger train stations
+at this point), things get a lot more interesting when looking at deeper integration and leveraging <a href="https://openstreetmap.org">OSM</a>
+data beyond just showing a map. In a few places one can already get a glimpse of what might be possible.</p>
+
+<p>For finding a gate or platform, we currently only have …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-08-01 07:00:00+00:00" class="dt-published"></time>
+  Sat 01 Aug 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -298,41 +377,6 @@ Implementing Recently Played Collection
   on <time datetime="2020-07-31 15:00:00+00:00" class="dt-published"></time>
   Fri 31 Jul 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/links/2020/07/mailygo-emanuel-pina/" rel="bookmark" class="u-url"
-       title="Handle HTML forms through email with MailyGo" target="_blank">
-      <time class="m-date" datetime="2020-07-31 08:49:58+02:00">
-        Jul
-        <span class="m-date-day">
-          31
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Handle HTML forms through email with MailyGo
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>It&rsquo;s nice to see when people fork, modify and actually use your open source projects. <a href="https://emanuelpina.pt/handle-html-forms-through-email-with-mailygo/">Like Emanuel Pina does</a>. He has forked my project <a href="https://git.jlel.se/jlelse/MailyGo">MailyGo</a>, which enables receiving form submissions on static sites and sends them via e-mail. He added some nice features (which I will definitely take inspiration from and add some back to the upstream project!).</p>
-<p>By looking at his code I also found out that Scaleway has <a href="https://www.scaleway.com/en/container-registry/">a managed container registry service</a>, which might be a viable alternative to Quay.io or DockerHub.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-31 08:49:58+02:00" class="dt-published"></time>
-  Fri 31 Jul 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -494,40 +538,6 @@ The new dependency resolver is <i>off by default</i> because it is in beta and <
   on <time datetime="2020-07-30 12:53:50.895000-04:00" class="dt-published"></time>
   Thu 30 Jul 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-07-30_Starship_Geomorphs_2.0" rel="bookmark" class="u-url"
-       title="Starship Geomorphs 2.0" target="_blank">
-      <time class="m-date" datetime="2020-07-30 13:57:26+00:00">
-        Jul
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Starship Geomorphs 2.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>“The Starship Geomorphs book has been revised and expanded and is now available for free download.” </p><ul><li><a href="https://travellerrpgblog.blogspot.com/2020/07/starship-geomorphs-20.html">Starhip Geomorphs 2.0</a></li></ul><p>I you don’t remember, this was already the best Traveller thing in PDF back in 2018. It makes me want to run Traveller. </p><ul><li><a href="2018-11-04_Traveller_Starship_Geopmorphs">2018-11-04 Traveller Starship Geopmorphs</a></li></ul><p>Tags: <a href="https://alexschroeder.ch/wiki?action=tag;id=Maps" title="Tag">Maps</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Traveller" title="Tag">Traveller</a></p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-30 13:57:26+00:00" class="dt-published"></time>
-  Thu 30 Jul 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
