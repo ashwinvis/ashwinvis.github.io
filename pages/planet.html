@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-01_The_problem_of_social_media" rel="bookmark" class="u-url"
-       title="The problem of social media" target="_blank">
-      <time class="m-date" datetime="2020-08-01 09:57:38+00:00">
+    <a href="https://diegoe.be/2020/08/01/a-minimal-jhbuild-gnome-session-in-debian/" rel="bookmark" class="u-url"
+       title="A minimal jhbuild GNOME session in Debian" target="_blank">
+      <time class="m-date" datetime="2020-08-01 22:33:00+00:00">
         Aug
         <span class="m-date-day">
           01
@@ -152,22 +152,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      The problem of social media
+      A minimal jhbuild GNOME session in Debian
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Sometimes I wonder about the construction of social media: built to comment on anything, thus revealing all our shit opinions to each other, leading to estrangement and abandonment. I don’t trust anyone anymore. There are so many ways to be wrong: on taxes, on public health, on politeness, on what’s the best text editor – and any single opinion spouting event turns into an uncomfortable reveal.</p><p>Maybe that’s why deliberate platforms, where it is harder to post, either because the software is bad, or there are costs associated with it, like long form blogging, make for a better reading experience: where you don’t end up disillusioned in your fellow humans. Or is this simply my filter bubble and social media simply reveals the limits of my own tolerance, the closeness of my horizon? 🤔</p><p>Why can’t we …</p></div>
+  Get a jhbuild GNOME session running on top of Debian, directly from the GDM login screen
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-01 09:57:38+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Diego Escalante Urrelo</b></span>
+  on <time datetime="2020-08-01 22:33:00+00:00" class="dt-published"></time>
   Sat 01 Aug 2020
-  in Alex Schroeder: Diary.
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -176,9 +176,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2020/08/recursive-cte/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-08-01 11:47:40+02:00">
+    <a href="https://blog.baloneygeek.com/2020/08/01/one-weird-trick-to-make-your-ac-better.html" rel="bookmark" class="u-url"
+       title="One Weird Trick to Make Your Air-Conditioner Better" target="_blank">
+      <time class="m-date" datetime="2020-08-01 19:45:00+00:00">
         Aug
         <span class="m-date-day">
           01
@@ -186,81 +186,20 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      💬
+      One Weird Trick to Make Your Air-Conditioner Better
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This day is successful: I created a recursive <a href="https://en.wikipedia.org/wiki/Hierarchical_and_recursive_queries_in_SQL#Common_table_expression">SQL CTE</a> in SQLite even before noon. 🤓</p>
-<pre><code>with recursive f (i, fp, tp) as (select 1, fromPath, toPath
-from redirects
-where fromPath = ?
-union all
-select f.i + 1, r.fromPath, r.toPath
-from redirects as r
-join f on f.tp = r.fromPath)
-select tp
-from f
-order by i desc
-limit 1
-</code></pre>
-<p>This is for <a href="https://jlel.se/goblog">my new CMS project</a>.</p>
+  <p>Those of you who read my last post know that I find summers a bit… hot. Ever since my first summer in Germany I’ve considered my trusty air cooler essential for my survival. Well, this week, with temperatures soaring to 35 degrees celsius, I had to get an upgrade.</p><p>Except that I didn’t buy the Commando 8 with 12.000 BTUs of raw cooling power, but the <a href="https://www.mediamarkt.de/de/product/_comfee-mpph-07crn7-2487052.html">Comfee MPPH-07CRN7</a>, a portable air conditioner with only 7.000 BTUs (roughly 0,5 Refrigeration Tons) of raw cooling power, for the princely sum of 199 EUR from Media Markt. It was a decent deal, exept that I thought I could carry home myself, before I saw the size and weight of that thing and had to pay more for a taxi to come and pick me up and drive the …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-01 11:47:40+02:00" class="dt-published"></time>
-  Sat 01 Aug 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2020/08/01/kde-itinerary-june-july-2020.html" rel="bookmark" class="u-url"
-       title="June/July in KDE Itinerary" target="_blank">
-      <time class="m-date" datetime="2020-08-01 07:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      June/July in KDE Itinerary
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The <a href="/2020/05/30/kde-itinerary-april-may-2020.html">last bi-monthly report</a> about the development of
-<a href="https://kde.org/applications/office/org.kde.itinerary">KDE Itinerary</a> ended with a teaser for
-<a href="/2020/06/13/kde-itinerary-osm-indoor-maps.html">indoor map support</a>
-for train stations
-and airports. This also dominated the work in the past weeks, and has made considerable progress so that the first
-features based on that have been integrated.</p>
-
-New Features
-
-<p>For every train station or airport in the itinerary timeline, it’s now possible to open the integrated indoor map view.
-While that already brings quite some value for locations with decent data quality (which seem to be mostly larger train stations
-at this point), things get a lot more interesting when looking at deeper integration and leveraging <a href="https://openstreetmap.org">OSM</a>
-data beyond just showing a map. In a few places one can already get a glimpse of what might be possible.</p>
-
-<p>For finding a gate or platform, we currently only have …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2020-08-01 07:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Boudhayan Gupta (BaloneyGeek)</b></span>
+  on <time datetime="2020-08-01 19:45:00+00:00" class="dt-published"></time>
   Sat 01 Aug 2020
   in Planet KDE.
 </footer>
@@ -271,43 +210,149 @@ data beyond just showing a map. In a few places one can already get a glimpse of
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nevilleantony98.gitlab.io//2020/07/31/week-7/" rel="bookmark" class="u-url"
-       title="Implementing Recently Played Collection in GNOME Games" target="_blank">
-      <time class="m-date" datetime="2020-07-31 16:55:54+00:00">
-        Jul
+    <a href="https://jlelse.blog/posts/july-2020/" rel="bookmark" class="u-url"
+       title="My July '20 in Review" target="_blank">
+      <time class="m-date" datetime="2020-08-01 21:05:00+02:00">
+        Aug
         <span class="m-date-day">
-          31
+          01
         </span>
         2020
       </time>
       <div class="p-name">
-      Implementing Recently Played Collection in GNOME Games
+      My July '20 in Review
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>In my previous blog <a href="https://nevilleantony98.gitlab.io/2020/07/03/week-4/">post</a>, I talked about how I added a <em>Favorites Collection</em> to Games. <em>Favorites Collection</em> lists all the games that’s marked as favorite. In this post I’ll talk about what went into adding a <em>Recently Played Collection</em>, which helps you get to recently played games more quickly.</p>
-
-<p>Since most of the ground work for supporting non-user collections are already done as part of introducing Favorites Collection, it required much less work to add another non-user collection. For <em>Recently Played</em> collection, the main differences from <em>Favorites Collection</em> in terms of implementation are:</p>
-
-<ul>
-  <li>An option to add the game into <em>Recently Played</em> is not required, since the app knows which games were played at what time</li>
-  <li>Games in <em>Recently Played</em> collection should be sorted by the last played date-time, instead of name</li>
-</ul>
-
-Implementing Recently Played Collection
-
-<p>Getting …</p>
+  <p>Meanwhile the seventh month of this year is over and so here is my monthly review of July 2020.</p>
+<p>July was actually quite unspectacular. I had one week of vacation, which I spent mainly to complete my move from one room to another (which is now almost completed). Apart from that I worked in the home office during the day and often did programming in the afternoon. But I also blogged a lot, not long articles, but lots of thoughts, notes and links.</p>
+<p>For example, I have <a href="https://jlelse.blog/dev/miniflux-blogroll/">automated my blogroll</a>. Every time my site is generated, the list of blogs I follow is automatically updated. The current list is automatically exported from the feed reader Miniflux. So whenever I follow another blog (or remove a subscription 😅) it will be visible in the <a href="https://jlelse.blog/blogroll/">blogroll</a> a short time later. Since I am …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-31 16:55:54+00:00" class="dt-published"></time>
-  Fri 31 Jul 2020
-  in Planet GNOME.
+  on <time datetime="2020-08-01 21:05:00+02:00" class="dt-published"></time>
+  Sat 01 Aug 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2020/08/01/pkg-go-dev-sucks.html" rel="bookmark" class="u-url"
+       title="pkg.go.dev is more concerned with Google's interests than good engineering" target="_blank">
+      <time class="m-date" datetime="2020-08-01 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      pkg.go.dev is more concerned with Google's interests than good engineering
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>pkg.go.dev sucks. It’s certainly <em>prettier</em> than godoc.org, but under the
+covers, it’s a failure of engineering characteristic of the Google approach.</p>
+
+<p>Go is a <em>pretty good</em> programming language. I have long held that this is not
+attributable to Google’s stewardship, but rather to a small number of language
+designers and a clear line of influences which is drawn entirely from outside of
+Google — mostly from Bell Labs. pkg.go.dev provides renewed support for my
+argument: it has all the hallmarks of Google crapware and none of the
+deliberate, good engineering work that went into Go’s design.</p>
+
+<p>It was apparent from the start that this is what it would be. pkg.go.dev was
+launched as a closed-source product,
+<a href="https://blog.golang.org/pkg.go.dev-2020">justified</a> by pointing out that
+godoc.org is too complex to run on an …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-01 00:00:00+00:00" class="dt-published"></time>
+  Sat 01 Aug 2020
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fortran-lang.org/newsletter/2020/08/01/Fortran-Newsletter-August-2020/" rel="bookmark" class="u-url"
+       title="Fortran newsletter: August 2020" target="_blank">
+      <time class="m-date" datetime="2020-08-01 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          01
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fortran newsletter: August 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Welcome to the August 2020 edition of the monthly Fortran newsletter.
+The newsletter comes out on the first calendar day of every month
+and details Fortran news from the previous month.</p>
+
+<ul></ul>
+
+fortran-lang.org
+
+<p>We continued the work on the Fortran-lang website, including:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/fortran-lang/fortran-lang.org/pull/116">#116</a>: updates to the Quickstart tutorial on loop control and syntax</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/fortran-lang/fortran-lang.org/pull/120">#120</a>: updated the
+<a href="https://fortran-lang.org/learn/">Book section</a> with a comprehensive list of
+books about Fortran</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/fortran-lang/fortran-lang.org/pull/121">#121</a>, <a href="https://github.com/fortran-lang/fortran-lang.org/pull/122">#122</a>, <a href="https://github.com/fortran-lang/fortran-lang.org/pull/127">#127</a>, <a href="https://github.com/fortran-lang/fortran-lang.org/pull/128">#128</a>: additional packages added to the Fortran-lang.org <a href="https://fortran-lang.org/packages">packages</a> page</p>
+  </li>
+</ul>
+
+<p>Ongoing work:</p>
+
+<ul>
+  <li><a href="https://github.com/fortran-lang/fortran-lang.org/issues/117">#117</a>: Adding a
+Benchmarks section, a new dedicated repository was created at
+https://github.com/fortran-lang/benchmarks and many details have been
+discussed in <a href="https://github.com/fortran-lang/benchmarks/issues">issues</a> there</li>
+</ul>
+
+<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us know</a> if you have any suggestions for the website and its content.
+We welcome any new contributors to the website and the tutorials page in particular - see the <a href="https://github.com/fortran-lang/fortran-lang.org/blob/master/CONTRIBUTING.md">contributor guide</a> for …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-01 00:00:00+00:00" class="dt-published"></time>
+  Sat 01 Aug 2020
+  in Fortran Newsletter.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -710,55 +755,6 @@ The fingerprints above can also be found on the AUR home page when not logged in
   on <time datetime="2020-07-28 00:00:00+00:00" class="dt-published"></time>
   Tue 28 Jul 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2020/07/27/Anti-AGPL-propaganda.html" rel="bookmark" class="u-url"
-       title="The falsehoods of anti-AGPL propaganda" target="_blank">
-      <time class="m-date" datetime="2020-07-27 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The falsehoods of anti-AGPL propaganda
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Google is well-known for <a href="https://opensource.google/docs/using/agpl-policy/">forbidding the use of</a> software
-using the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public License</a>, commonly known as “AGPL”.
-Google is also well-known for being the subject of cargo-culting by fad
-startups. Unfortunately, this means that they are susceptible to what is
-ultimately anti-AGPL propaganda from Google, with little to no basis in fact.</p>
-
-<p><em>Obligatory: I’m not a lawyer; this is for informational purposes only.</em></p>
-
-<p>In truth, the terms of the AGPL are pretty easy to comply with. The basic
-obligations of the AGPL which set it apart from other licenses are as follows:</p>
-
-<ul>
-  <li>Any derivative works of AGPL-licensed software must also use the AGPL.</li>
-  <li>Any users of such software are entitled to the source code under the terms of
-the AGPL, including users accessing it over the network such as with their web
-browser or via an …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-27 00:00:00+00:00" class="dt-published"></time>
-  Mon 27 Jul 2020
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
