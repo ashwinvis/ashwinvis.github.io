@@ -142,31 +142,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-02_A_word-of-mouth_network" rel="bookmark" class="u-url"
-       title="A word-of-mouth network" target="_blank">
-      <time class="m-date" datetime="2020-08-02 19:22:22+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-08-03_Images_and_the_command_line" rel="bookmark" class="u-url"
+       title="Images and the command line" target="_blank">
+      <time class="m-date" datetime="2020-08-03 10:52:24+00:00">
         Aug
         <span class="m-date-day">
-          02
+          03
         </span>
         2020
       </time>
       <div class="p-name">
-      A word-of-mouth network
+      Images and the command line
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>I’ve been reading posts by Solderpunk: </p><ul><li><a href="">2020-08-02 - The standard salvaged computing platform</a> </li><li><a href="">2020-08-01 - Gemini aggregation, curation, etc.</a></li></ul><p>The first post talks about the kind of computing future in store for us when the collapse comes. It’s not great. This is a continuation of Solderpunk’s earlier essay, “Discussions toward radically sustainable computing”.</p><p>The second post talks about aggregation and curation of content, and it mentions an idea I’ve heard in a different context regarding the spreading of text. Solderpunk puts it like this:</p><blockquote><p>… relying on the idea that if somebody outside that circle writes something really good on a subject I care about, somebody else in my circle will hear about it through <em>their</em> circle and spread the word.</p></blockquote><p> I think this is very similar to how Secure Scuttlebutt (SSB) describes it self: “messages are passed directly …</p></div>
+  <div><p>I’ve been doing some image manipulation on the command line these days. Here’s some stuff I want to remember for next time.</p><p>Concatenate two images so that they’re side by side, without reducing them to tiny icons:</p><pre>convert -background black A.jpg B.jpeg +append C.jpg</pre><p>Extract an image from a PDF:</p><pre>pdfimages A.pdf B
+convert B-000.ppm B.jpg</pre><p>Rotate a JPG file, losslessly:</p><pre>jpegtran -rotate 270 B.jpg &gt; C.jpg</pre><p><a href="https://alexschroeder.ch/wiki?action=tag;id=Pictures" title="Tag">#Pictures</a></p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-02 19:22:22+00:00" class="dt-published"></time>
-  Sun 02 Aug 2020
+  on <time datetime="2020-08-03 10:52:24+00:00" class="dt-published"></time>
+  Mon 03 Aug 2020
   in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -176,41 +177,36 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html" rel="bookmark" class="u-url"
-       title="Latte Dock v0.10~ | July Update" target="_blank">
-      <time class="m-date" datetime="2020-08-02 13:39:18+00:00">
+    <a href="https://ashwindhakaita.blogspot.com/2020/08/mypaint-brush-engine-final-phase.html" rel="bookmark" class="u-url"
+       title="MyPaint Brush Engine [Final Phase]" target="_blank">
+      <time class="m-date" datetime="2020-08-03 09:45:30+00:00">
         Aug
         <span class="m-date-day">
-          02
+          03
         </span>
         2020
       </time>
       <div class="p-name">
-      Latte Dock v0.10~ | July Update
+      MyPaint Brush Engine [Final Phase]
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><div></div></div><div><div><a href="https://github.com/psifidotos/Latte-Dock/"><img src="//camo.githubusercontent.com/48c6397fd11941c944a77813bad6e9fd8f285aa2/687474703a2f2f692e696d6775722e636f6d2f4c4c6f5864674b2e706e67"></a></div></div><div></div>Hello everyone,<div>in the following you can read July development news from Latte Dock v0.10~ git version. [~, stands for rapid development, in your distro package repos is mentioned as git version]
-</div> <div></div> <a></a>Contents;<ul>
-<li><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#new_auto_hide_sidebar"><b>1. New Auto Hide Sidebar visibility mode</b></a></li>
-<li><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#background_all_corners"><b>2. Background with All Corners</b></a></li>
-<li><b><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#memory_consumption">3. Memory Consumption</a></b></li>
-<li><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#layout_details_window"><b>4. Layout Details Window</b></a></li>
-<li><b><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#layout_background_badges">5. Layout Background Badges</a></b></li>
-<li><b><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#noteworthy_fixes">6. Noteworthy Fixes</a></b></li>
-<li><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#estimated_time_of_arrival"><b>7. Estimated Time of Arrival</b></a></li>
-<li><b><a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-july-update.html#donations">8. Donations</a></b></li>
-</ul><a href="goog_925907907"></a><div><a href=""><span><b>1. New Auto Hide Sidebar visibility mode</b></span></a></div><div>Thanks to <a href="https://invent.kde.org/aeropto">Martijn Vogelaar</a> a new visibility mode for sidebars is supported. The new mode triggers Latte panel showing/hiding through the <a href="https://store.kde.org/p/1365044/">Latte Sidebar Button</a> applet and global shortcuts but at the same time if the panel does not contain mouse for a period of time (can be set from Show timer) then it auto hides itself.</div><div></div><div>Visibility modes in general have updated their organization in order …</div>
+  <div>We are in the final phase of GSoC. I don't even remember how quickly the last two months flew by. <div>Coming to my project, it is almost complete apart from some finalisation related stuff that still is remaining. Perhaps, some review changes that my mentors shall give me once my current patch has been reviewed are also remaining.</div>
+<div></div>
+<div>This month, (20 days remaining before the final submissions start actually) I need to complete two items:</div>
+<div></div>
+<div><ol>
+<li>Refactorizing the plugin for master branch: There were a lot of changes in master due to the complete resource-rewrite. Because of this, I need to change my way of handling mypaint brush files (.myb files) in master. This requires a bit of refactorization. I am afraid its been a while since I have seen the master and don't what changes I need to do to …</li></ol></div></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Michail Vourlakos</b></span>
-  on <time datetime="2020-08-02 13:39:18+00:00" class="dt-published"></time>
-  Sun 02 Aug 2020
+  <span class="p-author"><b>Ashwin Dhakaita</b></span>
+  on <time datetime="2020-08-03 09:45:30+00:00" class="dt-published"></time>
+  Mon 03 Aug 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
