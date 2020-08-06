@@ -142,6 +142,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://feborg.es/identifying-oses-in-boxes/" rel="bookmark" class="u-url"
+       title="Identifying Operating Systems in GNOME Boxes" target="_blank">
+      <time class="m-date" datetime="2020-08-06 08:50:12+00:00">
+        Aug
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Identifying Operating Systems in GNOME Boxes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  One secret sauce of GNOME Boxes is libosinfo. It basically is an umbrella for three components: libosinfo, osinfo-db-tools, and osinfo-db. libosinfo offers programmatic means to query for information about OSes. osinfo-db-tools is a set of tools that help manipulate and extract information from OS images (such as ISO files). osinfo-db is a database of operating … <p><a href="https://feborg.es/identifying-oses-in-boxes/">Continue reading<span> "Identifying Operating Systems in GNOME Boxes"</span></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Felipe Borges</b></span>
+  on <time datetime="2020-08-06 08:50:12+00:00" class="dt-published"></time>
+  Thu 06 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://www.scivision.dev/fortran-logical-byte-size/" rel="bookmark" class="u-url"
        title="Fortran logical boolean byte size" target="_blank">
       <time class="m-date" datetime="2020-08-06 00:00:00+00:00">
@@ -189,6 +223,64 @@ Fortran and C examples.</p>
   on <time datetime="2020-08-06 00:00:00+00:00" class="dt-published"></time>
   Thu 06 Aug 2020
   in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://hunden.linuxkompis.se/2020/08/06/how-to-edit-your-music-data-tags-using-the-shell.html" rel="bookmark" class="u-url"
+       title="How to edit your music data tags using the command-line" target="_blank">
+      <time class="m-date" datetime="2020-08-06 00:00:00+02:00">
+        Aug
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to edit your music data tags using the command-line
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The command-line tool <a href="https://github.com/Daenyth/audiotag">Audiotag</a> is an easy to use Perl-script for editing the data tags in your music files. It supports the formats MP3, OGG Vorbis, MP4, M4A and FLAC.</p>
+
+Example usage
+
+<p>To print information about a track you use the flag <code>-l, --list-info</code>:</p>
+
+<div><div><pre><code>$ audiotag -l 01_Claustrophobic_Amnesia.ogg
+
+*** `01_Claustrophobic_Amnesia.ogg'
+=== ALBUM: TENONDERGANG
+=== ALBUMARTIST: Ter Ziele
+=== ARTIST: Ter Ziele
+=== COMMENT: Visit http://terziele.bandcamp.com
+=== DATE: 2018
+=== TITLE: Claustrophobic Amnesia
+=== TRACKNUM: 1
+=== TRACKNUMBER: 1
+</code></pre></div></div>
+
+<p>I noticed that the track is missing a genre, let’s set the genre for all the tracks of that album:</p>
+
+<div><div><pre><code>$ audiotag -g "Depressive suicidal black metal" *.ogg
+</code></pre></div></div>
+
+<p>It’s simple as that. To list all available features just use the flag <code>-h, --help</code>. I also highly recommend using the flag <code>-p, --pretend</code> to dry run the command if you’re not 100% sure about what you …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-06 00:00:00+02:00" class="dt-published"></time>
+  Thu 06 Aug 2020
+  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -343,40 +435,6 @@ Fortran and C examples.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/dcbw/2020/08/05/kubernetes-watches-will-ghost-you-without-warning/" rel="bookmark" class="u-url"
-       title="Kubernetes Watches will ghost you without warning" target="_blank">
-      <time class="m-date" datetime="2020-08-05 14:25:00+00:00">
-        Aug
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Kubernetes Watches will ghost you without warning
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Alternate title: if you’re ahead of Clayton you’re doing well, at least for a few hours. Consider the following code in the Kubernetes e2e test framework: ctx, cancel := context.WithTimeout(context.Background(), csiPodRunningTimeout) defer cancel() pvcWatch, err := f.ClientSet.CoreV1().PersistentVolumeClaims(f.Namespace.Name).Watch(ctx, metav1.ListOptions{}) framework.ExpectNoError(err, "create PVC watch") defer pvcWatch.Stop() ... for { select { case event := &lt;-pvcWatch.ResultChan(): framework.Logf("PVC event … <a href="https://blogs.gnome.org/dcbw/2020/08/05/kubernetes-watches-will-ghost-you-without-warning/">Continue reading <span>Kubernetes Watches will ghost you without warning</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>dcbw</b></span>
-  on <time datetime="2020-08-05 14:25:00+00:00" class="dt-published"></time>
-  Wed 05 Aug 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-08-05_Abusing_Soweli_Lukin" rel="bookmark" class="u-url"
        title="Abusing Soweli Lukin" target="_blank">
       <time class="m-date" datetime="2020-08-05 10:25:29+00:00">
@@ -438,56 +496,6 @@ Fortran and C examples.</p>
   on <time datetime="2020-08-05 00:00:00+00:00" class="dt-published"></time>
   Wed 05 Aug 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/08/04/my-text-based-media-center.html" rel="bookmark" class="u-url"
-       title="My text-based media center" target="_blank">
-      <time class="m-date" datetime="2020-08-04 00:00:00+02:00">
-        Aug
-        <span class="m-date-day">
-          04
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      My text-based media center
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>It’s been more than 4 years since I wrote about my text-based media center over at my <a href="https://hund.linuxkompis.se/2016/02/14/mitt-textbaserade-mediacenter-2016.html">Swedish weblog</a>. I was thinking it’s time to make a post about it here in English and perhaps make some sort of follow up on it.</p>
-
-<p>Like most other people I have my TV connected to a computer so I can play my local media on the TV. I used to have a dedicated computer for it with the ever so popular software <a href="https://en.wikipedia.org/wiki/Kodi_(software)">Kodi</a> and the ridiculously tiny wireless keyboard <a href="https://duckduckgo.com/?q=logitech+dinovo+mini&amp;t=hk&amp;iax=images&amp;ia=images">Logitech DiNovo Mini</a>. It was a solution that worked fine for about a decade or so before I decided it was time for a change.</p>
-
-<div>
-    <div>
-        <a href="https://hunden.linuxkompis.se/img/kodi_17.jpg">
-            <img alt="" src="https://hunden.linuxkompis.se/img/t/kodi_17.jpg">
-        </a>
-            Kodi, version 17. Source: <a href="https://kodi.tv/article/kodi-v17-krypton-alpha-2">Kodi.tv</a>
-    </div>
-</div>
-
-
-My issues with Kodi
-
-<p>While the setup was good enough, I had two issues with it. One was the Bluetooth …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-04 00:00:00+02:00" class="dt-published"></time>
-  Tue 04 Aug 2020
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
