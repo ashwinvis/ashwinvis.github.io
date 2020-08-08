@@ -142,6 +142,66 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://patrickelectric.work/blog/2020/how-to-rock-first-tips/" rel="bookmark" class="u-url"
+       title="How to rock: First tips" target="_blank">
+      <time class="m-date" datetime="2020-08-08 08:28:00+00:00">
+        Aug
+        <span class="m-date-day">
+          08
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to rock: First tips
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices. The following post will try to itemize some important tips that can be used for software collaboration and personal projects.</p>
+<span></span>Code practices
+<ul>
+<li>
+<p><strong>Encapsulate magic variables</strong>:</p>
+<pre><span>...</span><span>// First version
+</span><span>  </span><span>start_communication</span><span>(</span><span>0</span><span>, </span><span>1</span><span>, </span><span>232</span><span>);
+</span><span>  </span><span>// Reviewer: What is the meaning of 0 ? What is 1 ? Why 232 ?
+
+</span><span>...</span><span>// Second version
+</span><span>  </span><span>enum class </span><span>Messages &#123;
+</span><span>      ...
+</span><span>      RequestStatus = </span><span>232</span><span>,
+</span><span>  }
+</span><span>  ...
+</span><span>  </span><span>const </span><span>uint8_t vid = </span><span>0</span><span>;
+</span><span>  </span><span>const </span><span>uint8_t cid = </span><span>1</span><span>;
+</span><span>  </span><span>start_communication</span><span>(vid, cid, Messages::RequestStatus);
+</span><span>  </span><span>// Reviewer: What is vid ? What is cid ?
+
+</span><span>...</span><span>//Final version
+</span><span>  ...
+</span><span>  </span><span>const </span><span>uint8_t vehicle_id = </span><span>0</span><span>;
+</span><span>  </span><span>const </span><span>uint8_t component_id = </span><span>1</span><span>;
+</span><span>  </span><span>start_communication</span><span>(vehicle_id, component_id, Messages::RequestStatus);
+</span></pre>
+<p>As you can see, the final version makes everything more readable, we know that we are starting the communication with a vehicle that has an id of 0 …</p></li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Patrick Pereira (patrickelectric)</b></span>
+  on <time datetime="2020-08-08 08:28:00+00:00" class="dt-published"></time>
+  Sat 08 Aug 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-08-07_Plan_9" rel="bookmark" class="u-url"
        title="Plan 9" target="_blank">
       <time class="m-date" datetime="2020-08-07 20:27:48+00:00">
@@ -480,48 +540,6 @@ Example usage
   on <time datetime="2020-08-06 00:00:00+02:00" class="dt-published"></time>
   Thu 06 Aug 2020
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://dot.kde.org/2020/08/05/linux-app-summit-goes-online-november" rel="bookmark" class="u-url"
-       title="Linux App Summit Goes Online in November" target="_blank">
-      <time class="m-date" datetime="2020-08-05 16:36:24+00:00">
-        Aug
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Linux App Summit Goes Online in November
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><div><div>
-<p>
-        <img alt="Banner" src="//dot.kde.org/sites/dot.kde.org/files/2020LAS-Social-3.png">
-</p>
-<p>Once again, KDE and GNOME are teaming up to bring you THE conference for people interested in establishing Linux as a great end-user platform. At the Linux App Summit we work on making app creation for users easy and worthwhile.</p>
-<p>Since travel is complicated nowadays, we decided to make LAS 2020 a virtual conference. The event will open Thursday, 12th November and we'll wrap up on Saturday, 14th November. Our goal is to engage people in multiple time zones and make the content available online after the conclusion.</p>
-<p>The Call for Talks is now open! Please take a look at the <a href="https://linuxappsummit.org/cfp/">suggested topics</a> and send in your ideas. We encourage new speakers, so don’t hesitate to submit a proposal!</p>
-<p>Save the date on your calendar and we look forward to seeing you at LAS 2020!</p>
-<p><a href="https://linuxappsummit.org">Learn more about LAS …</a></p></div></div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDE Dot News</b></span>
-  on <time datetime="2020-08-05 16:36:24+00:00" class="dt-published"></time>
-  Wed 05 Aug 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
