@@ -142,6 +142,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nibblestew.blogspot.com/2020/08/the-second-edition-of-meson-manual-is.html" rel="bookmark" class="u-url"
+       title="The second edition of the Meson manual is out" target="_blank">
+      <time class="m-date" datetime="2020-08-08 16:38:00+00:00">
+        Aug
+        <span class="m-date-day">
+          08
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The second edition of the Meson manual is out
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I have just uploaded the second edition of the Meson manual <a href="https://meson-manual.com/">to the web store for your purchasing pleasure</a>. New content includes things like:<ul><li>Reference documentation updated to match 0.55</li><li>A new chapter describing "random tidbits" for practical usage</li><li>Cross compilation chapter update with new content</li><li>Bug fixes and minor updates</li></ul>Everyone who has bought the book can download this version (and in fact all future updates) for free.Sales stats up to this point<div>The total number of sales is roughly 130 copies corresponding to 3500â‚¬ in total sales. Expenses thus far are a fair bit more than that.</div><div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2020-08-08 16:38:00+00:00" class="dt-published"></time>
+  Sat 08 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://patrickelectric.work/blog/2020/how-to-rock-first-tips/" rel="bookmark" class="u-url"
        title="How to rock: First tips" target="_blank">
       <time class="m-date" datetime="2020-08-08 08:28:00+00:00">
@@ -158,7 +192,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p>After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices. The following post will try to itemize some important tips that can be used for software collaboration and personal projects.</p>
+  <p>After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices.</p>
+<p>This post will try to itemize some important tips that can be used for software collaboration and personal projects, hopefully it'll help you to have a solid ground of good practices and advices for your contributions in a project. It contains information abut good code practices, a simple guide of helpful API design, code organization, comments, naming variables, development flow and self-criticism. Please enjoy, and any feedback (including critics) is much appreciated!</p>
 <span></span>Code practices
 <ul>
 <li>
@@ -175,16 +210,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 </span><span>  ...
 </span><span>  </span><span>const </span><span>uint8_t vid = </span><span>0</span><span>;
 </span><span>  </span><span>const </span><span>uint8_t cid = </span><span>1</span><span>;
-</span><span>  </span><span>start_communication</span><span>(vid, cid, Messages::RequestStatus);
-</span><span>  </span><span>// Reviewer: What is vid ? What is cid ?
-
-</span><span>...</span><span>//Final version
-</span><span>  ...
-</span><span>  </span><span>const </span><span>uint8_t vehicle_id = </span><span>0</span><span>;
-</span><span>  </span><span>const </span><span>uint8_t component_id = </span><span>1</span><span>;
-</span><span>  </span><span>start_communication</span><span>(vehicle_id, component_id, Messages::RequestStatus);
-</span></pre>
-<p>As you can see, the final version makes everything more readable, we know that we are starting the communication with a vehicle that has an id of 0 …</p></li></ul>
+</span><span>  </span><span>start_communication</span><span>(vid, cid …</span></pre></li></ul>
   </p>
   </div>
 </header>
@@ -202,32 +228,80 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-07_Plan_9" rel="bookmark" class="u-url"
-       title="Plan 9" target="_blank">
-      <time class="m-date" datetime="2020-08-07 20:27:48+00:00">
+    <a href="https://jvns.ca/blog/2020/08/08/handwritten-font/" rel="bookmark" class="u-url"
+       title="An attempt to make a font look more handwritten" target="_blank">
+      <time class="m-date" datetime="2020-08-08 08:15:15+00:00">
         Aug
         <span class="m-date-day">
-          07
+          08
         </span>
         2020
       </time>
       <div class="p-name">
-      Plan 9
+      An attempt to make a font look more handwritten
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>There is quite some love for Plan 9 to find online. And I find it fascinating. My main problem is that I love Emacs and they make fun of Emacs. Instead, we get acme. In any case… I went to the <a href="http://fqa.9front.org/">9front</a> website…</p><p>I downloaded the amd64 torrent from the <a href="http://9front.org/iso/">ISO</a> section…</p><p>I wrote the iso to my USB stick…</p><pre>sudo dd bs=4M if=9front-7781.38dcaeaa222c.amd64.iso of=/dev/sdb conv=fdatasync</pre><p>I rebooted my computer and hit the right key as it was booting so that I could choose to boot from the USB stick…</p><p>I saw lots of output about IRQ 11 issues and listings of my disk partitions…</p><p>I was asked for the bootargs… </p><ul><li><a href="http://fqa.9front.org/fqa4.html#4.2.2.3">Section 4.2.2.3 - Bootargs</a></li></ul><p>Uh, what?</p><p>I escaped to a shell and looked at <em>shr but didn’t find …</em></p></div>
+  <p>I&rsquo;m actually not super happy with the results of this experiment, but I wanted
+to share it anyway because it was very easy and fun to play with fonts. And
+somebody asked me how to do it and I told her I&rsquo;d write a blog post about it :)</p>
+
+background: the original handwritten font
+
+<p>Some background: I have a font of my handwriting that I&rsquo;ve been use in my zines
+for a couple of years. I made it using a delightful app called
+<a href="https://2ttf.com/">iFontMaker</a>. They pitch
+themselves on their website as &ldquo;You can create your handmade typeface in less
+than 5 minutes just with your fingers&rdquo;. In my experience the &lsquo;5 minutes&rdquo; part
+is pretty accurate &ndash; I might have spent more like 15 minutes.  I&rsquo;m skeptical
+of the &ldquo;just your fingers&rdquo; claim &ndash; I used an Apple Pencil …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-07 20:27:48+00:00" class="dt-published"></time>
-  Fri 07 Aug 2020
-  in Alex Schroeder: Diary.
+  on <time datetime="2020-08-08 08:15:15+00:00" class="dt-published"></time>
+  Sat 08 Aug 2020
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://shibumi.dev/posts/google-summer-of-code-2020/" rel="bookmark" class="u-url"
+       title="Google Summer of Code 2020" target="_blank">
+      <time class="m-date" datetime="2020-08-08 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          08
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Google Summer of Code 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  tl;dr Just give me the link to the PR: https://github.com/in-toto/in-toto-golang/pull/56
+Intro This blog post tracks my accomplishments during my Google Summer of Code 2020 Stipend at CNCF. I have spend around three months on working on https://in-toto.io.
+For tracking I am using the goal-setting framework OKR (objectives and key results). My main objective has been to implement in-toto-run functionality in the in-toto Go implementation. However, I have also fixed a few other issues on this journey and wrote a blog post about in-toto.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-08 00:00:00+00:00" class="dt-published"></time>
+  Sat 08 Aug 2020
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -409,40 +483,6 @@ Although as AESA they …</p>
   on <time datetime="2020-08-07 00:00:00+00:00" class="dt-published"></time>
   Fri 07 Aug 2020
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://yetisgnomeadventure.home.blog/2020/08/06/epiphany-history-selection-mode/" rel="bookmark" class="u-url"
-       title="Epiphany History Selection Mode" target="_blank">
-      <time class="m-date" datetime="2020-08-06 17:29:13+00:00">
-        Aug
-        <span class="m-date-day">
-          06
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Epiphany History Selection Mode
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Since my last blog post I have been working on implementing a selection mode for Epiphany’s History Dialog. The selection mode is a pretty common pattern seen throughout GNOME applications. It’s used to easily manipulate a set of selected items from a list or grid. I’ve used the selection mode from GNOME Boxes as a … <a href="https://yetisgnomeadventure.home.blog/2020/08/06/epiphany-history-selection-mode/">Continue reading <span>Epiphany History Selection Mode</span> <span>→</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>yetizone3185</b></span>
-  on <time datetime="2020-08-06 17:29:13+00:00" class="dt-published"></time>
-  Thu 06 Aug 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -863,95 +903,6 @@ The above members have contributed to the Python ecosystem by teaching Python, m
   on <time datetime="2020-07-29 10:01:56.975000-04:00" class="dt-published"></time>
   Wed 29 Jul 2020
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.archlinux.org/news/aur-migration-new-ssh-hostkeys/" rel="bookmark" class="u-url"
-       title="AUR Migration: New SSH HostKeys" target="_blank">
-      <time class="m-date" datetime="2020-07-28 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      AUR Migration: New SSH HostKeys
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Due to the fact that the AUR has been migrated to a new server, the SSH HostKeys used to connect to the host have changed. These are the new keys fingerprints:
-<code>Ed25519: SHA256:RFzBCUItH9LZS0cKB5UE6ceAYhBD5C8GeOBip8Z11+4
-ECDSA: SHA256:uTa/0PndEgPZTf76e1DFqXKJEXKsn7m9ivhLQtzGOCI
-RSA: SHA256:5s5cIyReIfNNVGRFdDbe3hdYiI5OelHGpw2rOUud3Q8
-</code>
-The fingerprints above can also be found on the AUR home page when not logged in.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-28 00:00:00+00:00" class="dt-published"></time>
-  Tue 28 Jul 2020
-  in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2020/07/25/some-comics-about-css/" rel="bookmark" class="u-url"
-       title="Some CSS comics" target="_blank">
-      <time class="m-date" datetime="2020-07-25 10:09:05+00:00">
-        Jul
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Some CSS comics
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! I&rsquo;ve been writing some comics about CSS this past week, and I thought as
-an experiment I&rsquo;d post them to my blog instead of only putting them on Twitter.</p>
-
-<p>I&rsquo;m going to ramble about CSS at the beginning a bit but you can skip to the
-end if you just want to read the comics :)</p>
-
-why write about CSS?
-
-<p>I&rsquo;ve been writing a tiny bit more CSS recently, and I&rsquo;ve decided to <a href="https://jvns.ca/blog/debugging-attitude-matters/">actually
-take some time to learn CSS</a>
-instead of just flailing around and deciding &ldquo;oh no, this is impossible&rdquo;.</p>
-
-<p>CSS feels a little like systems programming / Linux to me &ndash; there are a lot of
-counterintuitive facts that you need to learn to be effective with it, but I
-think once you learn those facts it gets a lot easier.</p>
-
-<p>So I&rsquo;m …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-07-25 10:09:05+00:00" class="dt-published"></time>
-  Sat 25 Jul 2020
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
