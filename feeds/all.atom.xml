@@ -463,7 +463,7 @@ yourself and please share this post in your network if you want. You can also
 everyone in my team for a great experience. I loved working with you and being
 part of this team.&lt;/p&gt;
 &lt;/section&gt;
-</content><category term="Tech Talk"></category><category term="software"></category><category term="open-source"></category><category term="covid-19"></category></entry><entry><title>Tesing Indieweb Stack</title><link href="https://ashwinvis.github.io/tesing-indieweb-stack.html" rel="alternate"></link><published>2020-03-31T22:54:39+02:00</published><updated>2020-03-01T13:24:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-03-31:/tesing-indieweb-stack.html</id><summary type="html">&lt;p&gt;A simple test page to see what parts of Indieweb actually works&lt;/p&gt;</summary><content type="html">&lt;p&gt;Indieweb consists of the following building blocks:&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="software"></category><category term="open-source"></category><category term="covid-19"></category></entry><entry><title>Testing Indieweb Stack</title><link href="https://ashwinvis.github.io/tesing-indieweb-stack.html" rel="alternate"></link><published>2020-03-31T22:54:39+02:00</published><updated>2020-03-01T13:24:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-03-31:/tesing-indieweb-stack.html</id><summary type="html">&lt;p&gt;A simple test page to see what parts of Indieweb actually works&lt;/p&gt;</summary><content type="html">&lt;p&gt;Indieweb consists of the following building blocks:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Microformats 2&lt;/li&gt;
 &lt;li&gt;Webmentions&lt;/li&gt;
