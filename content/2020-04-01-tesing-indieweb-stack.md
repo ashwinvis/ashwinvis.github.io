@@ -1,5 +1,5 @@
 ---
-Title: Tesing Indieweb Stack
+Title: Testing Indieweb Stack
 Author: Ashwin Vishnu Mohanan
 Date: 2020-03-31T22:54:39.019340
 Modified: 2020-03-01T13:24:00
