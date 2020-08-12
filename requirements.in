@@ -1,5 +1,5 @@
 # pelican~=5.0
--e git+https://github.com/getpelican/pelican.git#egg=pelican
+-e git+https://github.com/getpelican/pelican.git@d2bbfd9#egg=pelican
 -e .
 -e ./m.css/
 -e ./src/pelican-planet

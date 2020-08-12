@@ -7,7 +7,7 @@
 -e ./m.css  # via -r requirements.in
 -e .  # via -r requirements.in
 -e ./src/pelican-planet  # via -r requirements.in
--e git+https://github.com/getpelican/pelican.git#egg=pelican  # via -r requirements.in, m.css, pelican-ashwinvis, pelican-jupyter, pelican-planet
+-e git+https://github.com/getpelican/pelican.git@d2bbfd9#egg=pelican  # via -r requirements.in, m.css, pelican-ashwinvis, pelican-jupyter, pelican-planet
 aiohttp==3.6.2            # via -r requirements.in
 arrow==0.15.7             # via jinja2-time
 async-generator==1.10     # via nbclient
