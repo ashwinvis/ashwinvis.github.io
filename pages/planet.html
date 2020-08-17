@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://123vivekr.github.io/123vivekr.github.io/2020/08/16/pitivi-object_track_editing.html" rel="bookmark" class="u-url"
-       title="Pitivi: Edit Object Tracking" target="_blank">
-      <time class="m-date" datetime="2020-08-16 07:57:21+00:00">
+    <a href="https://snarky.ca/unravelling-binary-arithmetic-operations-in-python/" rel="bookmark" class="u-url"
+       title="Unravelling binary arithmetic operations in Python" target="_blank">
+      <time class="m-date" datetime="2020-08-16 23:30:08+00:00">
         Aug
         <span class="m-date-day">
           16
@@ -152,29 +152,68 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Pitivi: Edit Object Tracking
+      Unravelling binary arithmetic operations in Python
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>My last post was about adding a feature to track objects.
-But sometimes the algorithm doesn’t track the object 100% correct, so in this post, I present to you a new update which lets the user edit the tracked data easily in the Pitivi Tracker Perspective itself.</p>
-
-Demo
-<p>See the feature in action. <a href="https://youtu.be/T09VJ1ntwI4">YouTube</a></p>
-
-<p>In the video, the user selects a clip and goes to the Tracker Perspective, by clicking on the “Track Object” button. Now, the user selects the object to track and chooses the algorithm before tracking. Pitivi tracks the object for the rest of the clip.</p>
-
-<p>But wait, the user has accidentally chosen only a portion of the object. They can correct this by seeking to a point in the tracking and selecting the object again, this time, they get it right :)
-After the tracking is …</p>
+  <p>The reaction to my blog post on <a href="https://snarky.ca/unravelling-attribute-access-in-python/">unravelling attribute access</a> was positive enough that I'm inspired to do another post on how much of Python's syntax is actually just syntactic sugar. In this post I want to tackle binary arithmetic operations.</p><p>Specifically, I want to unravel how subtraction works: <code>a</code></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-16 07:57:21+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2020-08-16 23:30:08+00:00" class="dt-published"></time>
+  Sun 16 Aug 2020
+  in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://cocoonfly.wordpress.com/2020/08/17/the-final-piece/" rel="bookmark" class="u-url"
+       title="The Final Piece" target="_blank">
+      <time class="m-date" datetime="2020-08-16 20:56:57+00:00">
+        Aug
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The Final Piece
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>The final piece in the puzzle still remains. The Open-With page, of the properties dialogue. Open-with page is a rather un-noticed but a very significant part of the properties-dialogue, It allows us to set, change the application which would launch for a particular file based on it’s MIME type.</p>
+</div>
+
+
+
+<ul><li><img alt="" src="https://cocoonfly.files.wordpress.com/2020/08/open-with-1.png?w=508"></li></ul>Properties Dialogue : Open-With page
+
+
+
+<div>Current Implementation:
+<p>The open with page is constructed by using a custom type <code>_NautilusMimeApplicationChooser</code> which was defined in <code>nautilus-mime-application-chooser.c</code>. This custom class subclasses a GtkBox and achieves its use case by adding "<em>Reset</em>", "<em>Add</em>", "<em>Set as default</em>" button along side the <code>GtkAppChooser</code> widget, offered natively by GTK.
+With the new implementation of nautilus-properties-dialogue in place, this approach of constructing open-with page has a couple(<em>literally</em>) of disadvantages :-</p>
+<ol>
+<li>Difficult UI modifications</li>
+<li>Only usage of <code>NautilusMimeApplicationChooser</code> is in properties dialogue, which makes the custom class implementation redundant …</li></ol></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>apoosmaximus</b></span>
+  on <time datetime="2020-08-16 20:56:57+00:00" class="dt-published"></time>
   Sun 16 Aug 2020
   in Planet GNOME.
 </footer>
@@ -185,49 +224,72 @@ After the tracking is …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://dot.kde.org/2020/08/15/gina-h%C3%A4u%C3%9Fge-and-octoprint" rel="bookmark" class="u-url"
-       title="Gina Häußge and OctoPrint" target="_blank">
-      <time class="m-date" datetime="2020-08-15 05:39:02+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-08-16_Mastodon_kills_Gemini_Wiki" rel="bookmark" class="u-url"
+       title="Mastodon kills Gemini Wiki" target="_blank">
+      <time class="m-date" datetime="2020-08-16 18:34:56+00:00">
         Aug
         <span class="m-date-day">
-          15
+          16
         </span>
         2020
       </time>
       <div class="p-name">
-      Gina Häußge and OctoPrint
+      Mastodon kills Gemini Wiki
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-    <div>
-          <div>How to make a living off of your pet passion projects - An Interview</div>
-      </div>
-</div>
-<div><div><div>
-<p>
-    <a href="https://dot.kde.org/sites/dot.kde.org/files/gina_printer_1000_0.jpg">
-        <img src="//dot.kde.org/sites/dot.kde.org/files/gina_printer_1000_0.jpg">
-    </a>
-   Gina Häußge and printer.
- </p>
-<p><i>Gina Häußge's biggest claim to fame may be <a href="https://octoprint.org/">OctoPrint</a>, the most popular software for managing 3D printers from small, single board computers -- like the Raspberry Pi, Odroid, etc..</i></p>
-<p><i>OctoPrint is currently Gina's main occupation, but it wasn't always like that. In this Interview she talks about how a tech-loving child nearly got eaten up by the software industry, but thankfully managed to escape and transform her FLOSS passion project into her day job (plus a whole bunch of other nerdy stuff).</i></p>
-<p><i>Enjoy.</i></p>
-<p><span>Gina Häußge:</span> Hello there!</p>
-<p><span>Paul Brown:</span> Hello Gina! You are early!</p>
-<p><span>Gina:</span> Well, this gives me a nicer start to the day than having to field endless support requests along the lines of "it's broken, pls fix kthxbai".</p>
-<p><span>Paul:</span> A good …</p></div></div></div>
+  <div><p>Yeah, same old story. I keep forgetting that linking to my sites that aren’t behind the Apache filter that blocks all the Fediverse user agents is basically a distributed denial of service attack because my server is so small and I’m not serving static pages – and I hate the fact that I have to be thinking about blocking, caching and hundreds of connections all at the same time only to defend against Mastodon.</p><p>These are services for the Smolnet, not for all the people that keep thinking about scaling all the time.</p><p>Here’s what Monit tells me a few minutes after I linked to The Transjovian Council:</p><pre>[CEST Aug 16 19:25:21] error    : 'gemini-wiki' total mem amount of 185.8 MB matches resource limit [total mem amount&gt;100 MB]
+[CEST Aug 16 19:30:26] error …</pre></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>KDE Dot News</b></span>
-  on <time datetime="2020-08-15 05:39:02+00:00" class="dt-published"></time>
-  Sat 15 Aug 2020
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-16 18:34:56+00:00" class="dt-published"></time>
+  Sun 16 Aug 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kate-editor.org/post/2020/2020-08-16-please-contribute-your-syntax-highlightings-upstream-to-ksyntaxhighlighting/" rel="bookmark" class="u-url"
+       title="Please contribute your syntax highlightings upstream to KSyntaxHighlighting" target="_blank">
+      <time class="m-date" datetime="2020-08-16 14:36:00+00:00">
+        Aug
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Please contribute your syntax highlightings upstream to KSyntaxHighlighting
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Looking around the internet a bit for Kate related stuff, I stumbled over the current incarnation of the Haskell re-implementation of KSyntaxHighlighting: <a href="https://github.com/jgm/skylighting">skylighting</a>.
+They reuse the highlighting definitions we provide and convert them to some Haskell data structures to do the highlighting.
+<a href="https://pandoc.org/">pandoc</a> uses this to provide <a href="https://pandoc.org/MANUAL.html#syntax-highlighting">highlighting</a> for included code snippets.</p>
+<p>Out of curiosity I wanted to know how up-to-date they are in respect to the files we keep in our repository, but interesting enough <a href="https://github.com/jgm/skylighting/tree/master/skylighting-core/xml">their repository</a> actually contained some files we didn’t have at all.</p>
+<p>This was now rectified by importing the missing files to the official <a href="https://invent.kde.org/frameworks/syntax-highlighting">KSyntaxHighlighting repository</a>.
+During that process, some minor faults detected by our compile time static checker for syntax files were fixed, too.</p>
+<p>I contacted the skylighting maintainer and we will make it more obvious for the future that people should contribute …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kate News</b></span>
+  on <time datetime="2020-08-16 14:36:00+00:00" class="dt-published"></time>
+  Sun 16 Aug 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -237,32 +299,78 @@ After the tracking is …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-14_How_to_comment_using_Elpher" rel="bookmark" class="u-url"
-       title="How to comment using Elpher" target="_blank">
-      <time class="m-date" datetime="2020-08-14 21:11:16+00:00">
+    <a href="https://drewdevault.com/2020/08/16/Status-update.html" rel="bookmark" class="u-url"
+       title="Status update, August 2020" target="_blank">
+      <time class="m-date" datetime="2020-08-16 00:00:00+00:00">
         Aug
         <span class="m-date-day">
-          14
+          16
         </span>
         2020
       </time>
       <div class="p-name">
-      How to comment using Elpher
+      Status update, August 2020
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>If you visit this site using Elpher, you can leave a comment using Gemini. The comment can’t be too long. I think the total URL should be limited to about a thousand bytes, some of that is the URL without the query, and the query itself is going to be encoded… Who knows. Perhaps this server doesn’t actually check URL size? I have no idea and I have never tried. Ooops!</p><p>Here’s a video demonstrating it:</p><video src="https://alexschroeder.ch/videos/gemini_comment_demo.mp4"></video><p>(Emacs using the Brutalist Dark theme…)</p><p>The video was recorded using <a href="https://github.com/phw/peek">Peek</a>. It was edited and the audio was added using <a href="http://www.pitivi.org/">Pitivi</a>. The audio was made on a tiny toy, the <a href="https://teenage.engineering/products/po/metal#po-35">PO-35 speak</a>. Basic recording was done using <a href="https://www.audacityteam.org/">Audacity</a>.</p><p><a href="https://alexschroeder.ch/wiki?action=tag;id=Elpher" title="Tag">#Elpher</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Emacs" title="Tag">#Emacs</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Wiki" title="Tag">#Wiki</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Gemini" title="Tag">#Gemini</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Video" title="Tag">#Video</a></p></div>
+  <p>Greetings! Today is another rainy day here in Philadelphia, which rather sours
+my plans of walking over to the nearby cafe to order some breakfast to-go. But I
+am tired, and if I’m going to make it to the end of this blog post in one piece,
+I’m gonna need a coffee. brb.</p>
+
+<p>Hey, that was actually pretty refreshing. It’s just drizzling, and the rain is
+nice and cool. Alright, here goes! What’s new? I’ll leave the Wayland news for
+<a href="https://emersion.fr/blog">Simon Ser’s blog</a> this month - he’s been working on
+some exciting stuff. The <a href="https://baremessages.org/">BARE encoding</a> announced
+last month has received some great feedback and refinements, and there are now
+six projects providing BARE support for their author’s favorite programming
+language<a href="#fn:1">1</a>. There have also been some improvements to the Go implementation
+which …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-14 21:11:16+00:00" class="dt-published"></time>
-  Fri 14 Aug 2020
-  in Alex Schroeder: Diary.
+  on <time datetime="2020-08-16 00:00:00+00:00" class="dt-published"></time>
+  Sun 16 Aug 2020
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/5884477" rel="bookmark" class="u-url"
+       title="Influence of acetaminophen on renal function: a longitudinal descriptive study using a real-world database" target="_blank">
+      <time class="m-date" datetime="2020-08-15 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Influence of acetaminophen on renal function: a longitudinal descriptive study using a real-world database
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Long-term acetaminophen (APAP) use has poorly defined effects on renal function. We investigated these effects using a real-world database.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>H Tokumasu</b></span>
+  on <time datetime="2020-08-15 00:00:00+00:00" class="dt-published"></time>
+  Sat 15 Aug 2020
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -460,54 +568,6 @@ After the tracking is …</p>
   on <time datetime="2020-08-13 11:13:46+02:00" class="dt-published"></time>
   Thu 13 Aug 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2020/08/13/Web-browsers-need-to-stop.html" rel="bookmark" class="u-url"
-       title="Web browsers need to stop" target="_blank">
-      <time class="m-date" datetime="2020-08-13 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Web browsers need to stop
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Enough is enough.</p>
-
-<p>The web and web browsers have become Lovecraftian horrors of an unprecedented
-scale. They’ve long since left “scope creep” territory and entered “oh my god
-please just stop” territory, and are trucking on through to hitherto unexplored
-degrees of <em>obscene</em> scope. And we <em>don’t want</em> what they’re selling. Google
-pitches garbage like AMP<a href="#fn:1">1</a> and pushing dubious half-assed specs like Web
-Components. Mozilla just fired everyone relevant<a href="#fn:2">2</a> to focus on crap no one
-asked for like Pocket, and fad nonsense like a paid VPN service and virtual
-reality tech.<a href="#fn:3">3</a> <em>[2020-08-14: It has been pointed out that the VR team was
-also fired.]</em></p>
-
-<p>Microsoft gave up entirely. Mozilla just hammered the last few nails into their
-casket.<a href="#fn:4">4</a> Safari is a joke<a href="#fn:6">5</a>. Google is all that’s left, and they’re
-<em>not …</em></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-13 00:00:00+00:00" class="dt-published"></time>
-  Thu 13 Aug 2020
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -724,40 +784,6 @@ to make.  Coverage …</li></ul>
   on <time datetime="2020-08-11 08:17:00-04:00" class="dt-published"></time>
   Tue 11 Aug 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5872988" rel="bookmark" class="u-url"
-       title="An overview of interventions for constipation in adults" target="_blank">
-      <time class="m-date" datetime="2020-08-11 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      An overview of interventions for constipation in adults
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The increasing global prevalence of the symptoms of constipation adversely affects the quality of life (QOL) of symptomatic patients. An acceptable universal definition of constipation does not exist and a detailed history taking form each patient with various complaints including stool consistency, sensing of incomplete evacuation or a manual need to assist evacuation is required. Complexity of obtaining etiologic diagnosis and the wide range of therapeutic options can mislead physicians in choosing correct treatment.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>M Abdollahi</b></span>
-  on <time datetime="2020-08-11 00:00:00+00:00" class="dt-published"></time>
-  Tue 11 Aug 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
