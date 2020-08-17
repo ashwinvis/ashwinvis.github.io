@@ -142,6 +142,129 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://kdenlive.org/en/2020/08/kdenlive-20-08-is-out/" rel="bookmark" class="u-url"
+       title="Kdenlive 20.08 is out" target="_blank">
+      <time class="m-date" datetime="2020-08-17 05:00:03+00:00">
+        Aug
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Kdenlive 20.08 is out
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p></p><div>
+
+
+
+
+                    <div>
+                <div>
+
+
+                <div>
+
+
+                <div>
+<p>Kdenlive 20.08 is out with nifty features like Interface Layouts, Multiple Audio Stream support, Cached data management and Zoombars in the Clip Monitor and Effects Panel but one may argue that the highlights of this release are stability and interface improvements. This version received a total of 284 commits with some major contributions from new developers. (Thanks Simon and Julius)</p>
+<p> </p>
+Under the hood
+<p>A major refactoring of the project file fixes a long standing issue with the <a href="https://invent.kde.org/multimedia/kdenlive/-/issues/78">decimal separator</a> (comma/point) conflict causing many crashes.</p>
+<p><em><strong>Projects created with 20.08 forward are not backwards compatible, that is, you won’t be able to open your .kdenlive project files with older versions.</strong></em></p>
+<p>This version also brings a performance boost to audio thumbnail generation as well as JPG image sequence playback.</p>
+</div>
+            </div> 
+            </div> 
+
+
+            </div> 
+
+
+            </div> <div>
+
+
+
+
+                    <div>
+                <div>
+
+
+                <div>
+
+
+                <div>New interface layouts</div>
+            </div> <div>
+                <div>
+<div>
+                <div>
+                    <a href="https://kdenlive.org/wp-content/uploads/2020/08/logging.jpg" title="logging">
+                    <img src="//kdenlive.org/wp-content/uploads/2020/08/logging.jpg">
+                    <span></span>
+                </a>
+                </div>
+</div>
+<div>
+                <div>
+                    <a href="https://kdenlive.org/wp-content/uploads/2020/08/editing.jpg" title="editing">
+                    <img src="//kdenlive.org/wp-content/uploads/2020/08/editing.jpg">
+                    <span></span>
+                </a>
+                </div>
+</div>
+<div>
+                <div>
+                    <a href="https://kdenlive.org/wp-content/uploads/2020/08/audio.jpg" title="audio">
+                    <img src="//kdenlive.org/wp-content/uploads/2020/08/audio.jpg">
+                    <span></span>
+                </a>
+                </div>
+</div>
+<div>
+                <div>
+                    <a href="https://kdenlive.org/wp-content/uploads/2020/08/effects.jpg" title="effects">
+                    <img src="//kdenlive.org/wp-content/uploads/2020/08/effects.jpg">
+                    <span></span>
+                </a>
+                </div>
+</div>
+<div>
+                <div>
+                    <a href="https://kdenlive.org/wp-content/uploads/2020/08/color.jpg" title="color">
+                    <img src="//kdenlive.org/wp-content/uploads/2020/08/color.jpg">
+                    <span></span>
+                </a>
+                </div>
+</div>
+</div>
+
+</div>
+<div>
+
+
+                <div>
+<p><span>These workspaces aim to improve the layout …</span></p></div></div></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2020-08-17 05:00:03+00:00" class="dt-published"></time>
+  Mon 17 Aug 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://snarky.ca/unravelling-binary-arithmetic-operations-in-python/" rel="bookmark" class="u-url"
        title="Unravelling binary arithmetic operations in Python" target="_blank">
       <time class="m-date" datetime="2020-08-16 23:30:08+00:00">
@@ -192,7 +315,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>The final piece in the puzzle still remains. The Open-With page, of the properties dialogue. Open-with page is a rather un-noticed but a very significant part of the properties-dialogue, It allows us to set, change the application which would launch for a particular file based on it’s MIME type.</p>
+  <div><p>Porting Nautilus properties dialogue to use GtkBuilder has been going quiet well, this blog post is another progress update about the same.</p>
+<p>The final piece in the puzzle still remains. The Open-With page, of the properties dialogue. Open-with page is a rather un-noticed but a very significant part of the properties-dialogue, It allows us to set, change the application which would launch for a particular file based on its MIME type.</p>
 </div>
 
 
@@ -201,12 +325,13 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 
 
 
+<span></span>
+
+
+
 <div>Current Implementation:
 <p>The open with page is constructed by using a custom type <code>_NautilusMimeApplicationChooser</code> which was defined in <code>nautilus-mime-application-chooser.c</code>. This custom class subclasses a GtkBox and achieves its use case by adding "<em>Reset</em>", "<em>Add</em>", "<em>Set as default</em>" button along side the <code>GtkAppChooser</code> widget, offered natively by GTK.
-With the new implementation of nautilus-properties-dialogue in place, this approach of constructing open-with page has a couple(<em>literally</em>) of disadvantages :-</p>
-<ol>
-<li>Difficult UI modifications</li>
-<li>Only usage of <code>NautilusMimeApplicationChooser</code> is in properties dialogue, which makes the custom class implementation redundant …</li></ol></div>
+With the new implementation of nautilus-properties-dialogue in place, this approach of constructing open-with page has a couple …</p></div>
   </p>
   </div>
 </header>
@@ -224,9 +349,9 @@ With the new implementation of nautilus-properties-dialogue in place, this appro
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://kate-editor.org/post/2020/2020-08-16-please-contribute-your-syntax-highlightings-upstream-to-ksyntaxhighlighting/" rel="bookmark" class="u-url"
-       title="Please contribute your syntax highlightings upstream to KSyntaxHighlighting" target="_blank">
-      <time class="m-date" datetime="2020-08-16 14:36:00+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-08-16_Mastodon_kills_Gemini_Wiki" rel="bookmark" class="u-url"
+       title="Mastodon kills Gemini Wiki" target="_blank">
+      <time class="m-date" datetime="2020-08-16 18:34:56+00:00">
         Aug
         <span class="m-date-day">
           16
@@ -234,28 +359,23 @@ With the new implementation of nautilus-properties-dialogue in place, this appro
         2020
       </time>
       <div class="p-name">
-      Please contribute your syntax highlightings upstream to KSyntaxHighlighting
+      Mastodon kills Gemini Wiki
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Looking around the internet a bit for Kate related stuff, I stumbled over the current incarnation of the Haskell re-implementation of KSyntaxHighlighting: <a href="https://github.com/jgm/skylighting">skylighting</a>.
-They reuse the highlighting definitions we provide and convert them to some Haskell data structures to do the highlighting.
-<a href="https://pandoc.org/">pandoc</a> uses this to provide <a href="https://pandoc.org/MANUAL.html#syntax-highlighting">highlighting</a> for included code snippets.</p>
-<p>Out of curiosity I wanted to know how up-to-date they are in respect to the files we keep in our repository, but interesting enough <a href="https://github.com/jgm/skylighting/tree/master/skylighting-core/xml">their repository</a> actually contained some files we didn’t have at all.</p>
-<p>This was now rectified by importing the missing files to the official <a href="https://invent.kde.org/frameworks/syntax-highlighting">KSyntaxHighlighting repository</a>.
-During that process, some minor faults detected by our compile time static checker for syntax files were fixed, too.</p>
-<p>I contacted the skylighting maintainer and we will make it more obvious for the future that people should contribute …</p>
+  <div><p>Yeah, same old story. I keep forgetting that linking to my sites that aren’t behind the Apache filter that blocks all the Fediverse user agents is basically a distributed denial of service attack because my server is so small and I’m not serving static pages – and I hate the fact that I have to be thinking about blocking, caching and hundreds of connections all at the same time only to defend against Mastodon.</p><p>These are services for the Smolnet, not for all the people that keep thinking about scaling all the time.</p><p>Here’s what Monit tells me a few minutes after I linked to The Transjovian Council:</p><pre>[CEST Aug 16 19:25:21] error    : 'gemini-wiki' total mem amount of 185.8 MB matches resource limit [total mem amount&gt;100 MB]
+[CEST Aug 16 19:30:26] error …</pre></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Kate News</b></span>
-  on <time datetime="2020-08-16 14:36:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-16 18:34:56+00:00" class="dt-published"></time>
   Sun 16 Aug 2020
-  in Planet KDE.
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -302,6 +422,51 @@ which …</p>
   on <time datetime="2020-08-16 00:00:00+00:00" class="dt-published"></time>
   Sun 16 Aug 2020
   in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/matlab-package-import/" rel="bookmark" class="u-url"
+       title="Matlab package import like Python" target="_blank">
+      <time class="m-date" datetime="2020-08-16 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          16
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Matlab package import like Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Matlab users can package code projects as toolboxes and/or packages.
+The packages format works for ancient versions of Matlab, before even R2006a as well as GNU Octave.
+The toolbox format works for Matlab ≥ R2016a and not GNU Octave.
+The packages format brings benefits to toolboxes as well.</p>
+Matlab namespaces
+<p>A key issue with Matlab vs. Python arise from that Matlab users often add many paths for their project.
+If any function names clash, there can be unexpected behavior as it&rsquo;s not immediately clear which function is being used without further investigation of path ordering.
+As in Python and other languages, there is considerable benefit for using a package format where the function names are specified in their namespace.</p>
+addpath example
+<p>To enable Matlab package format, we explain by example. Suppose a project directory structure is like:</p>
+<pre><code>myproj
+utils …</code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-16 00:00:00+00:00" class="dt-published"></time>
+  Sun 16 Aug 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -749,53 +914,6 @@ to make.  Coverage …</li></ul>
   on <time datetime="2020-08-11 08:17:00-04:00" class="dt-published"></time>
   Tue 11 Aug 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/windows-ssh-server/" rel="bookmark" class="u-url"
-       title="Windows SSH server" target="_blank">
-      <time class="m-date" datetime="2020-08-11 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Windows SSH server
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Since Windows 10 1809, OpenSSH client and server are built into Windows.
-The setup procedure is easier than using Cygwin.
-RDP (Remote Desktop) over SSH can be significantly more secure than RDP alone, assuming SSH is well configured.</p>
-<ol>
-<li>
-<p><a href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration#authorizedkeysfile">Enable OpenSSH Server</a>: Go to Windows Settings → Apps → Apps &amp; features → Optional features → Add a feature → OpenSSH Server. This also sets Windows Firewall to allow inbound SSH TCP connections.
-2 . Edit c:/ProgramData/ssh/sshd_config on the OpenSSH server PC. At least set <code>PasswordAuthentication no</code> to require SSH public key for better security.</p>
-</li>
-<li>
-<p>A minimal SSH keypair can be created for the <strong>SSH client</strong> by:</p>
-<div><pre><code>ssh-keygen -t ed25519 -f ~/.ssh/my_server
-</code></pre></div></li>
-<li>
-<p>Copy the contents of client laptop file ~/.ssh/my_server.pub to the Windows SSH server computer, creating or adding a line to file ~/.ssh/authorized_keys. The location of this file is defined …</p></li></ol>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-11 00:00:00+00:00" class="dt-published"></time>
-  Tue 11 Aug 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
