@@ -33,6 +33,12 @@ approve of.
 
 ## Things that I have not followed through
 - [Daily Schedule from Khan Academy](https://keeplearning.khanacademy.org/daily-schedule#Pre-K-1-2)
+- [Varsity Tutors](https://www.varsitytutors.com) - Both paid and free lessons
+    on a wide variety of topics themed as [Virtual School
+    Days](https://www.varsitytutors.com/virtual-school-day) and [Virtual Field
+    Trips](https://www.varsitytutors.com/classes/featured-collections/virtual-field-trips?f_class_size=large-group0).
+    I have signed up to see how it is like. The only trouble is to sign in to
+    get access to the content.
 
 [^1]: Sweden specific
 [^2]: YouTube channel
