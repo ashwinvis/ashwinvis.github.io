@@ -142,6 +142,231 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://pointieststick.com/2020/08/19/interview-with-bigdaddylinux/" rel="bookmark" class="u-url"
+       title="Interview with BigDaddyLinux" target="_blank">
+      <time class="m-date" datetime="2020-08-19 23:16:54+00:00">
+        Aug
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Interview with BigDaddyLinux
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I was recently interviewed by Rocco, the host of the <a href="https://bigdaddylinux.com/">BigDaddyLinux podcast</a>! You can see it here if you’re interested:</p>
+
+
+
+<div>
+
+</div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nate Graham</b></span>
+  on <time datetime="2020-08-19 23:16:54+00:00" class="dt-published"></time>
+  Wed 19 Aug 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com//blog/202008/do_a_pile_of_work.html" rel="bookmark" class="u-url"
+       title="Do a pile of work" target="_blank">
+      <time class="m-date" datetime="2020-08-19 17:03:59-04:00">
+        Aug
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Do a pile of work
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I had a large pile of data to feed through an expensive function.
+The <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a>
+module in the Python standard library has always worked well for me as a simple
+way to farm out work across threads or processes.</p><p>For example, if my work function is &#8220;workfn&#8221;, and it takes tuples of
+arguments as produced by &#8220;argsfn()&#8221;, this is how you could run them all:</p><blockquote><code><span>for</span>&#xa0;<span>args</span>&#xa0;<span>in</span>&#xa0;<span>argsfn</span><span>():</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>workfn</span><span>(</span><span>*</span><span>args</span><span>)</span>
+</code></blockquote><p>This is how you would run them on a number of threads:</p><blockquote><code><span>import</span>&#xa0;<span>concurrent.futures</span>&#xa0;<span>as</span>&#xa0;<span>cf</span>
+
+<span>with</span>&#xa0;<span>cf</span><span>.</span><span>ThreadPoolExecutor</span><span>(</span><span>max_workers</span><span>=</span><span>nthreads</span><span>)</span>&#xa0;<span>as</span>&#xa0;<span>executor</span><span>:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>for</span>&#xa0;<span>args</span>&#xa0;<span>in</span>&#xa0;<span>argsfn</span><span>():</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>executor</span><span>.</span><span>submit</span><span>(</span><span>workfn</span><span>,</span>&#xa0;<span>*</span><span>args</span><span>)</span>
+</code></blockquote><p>But this will generate all of the arguments up-front.  If I have millions of
+work invocations, this could be a problem.  I wanted a way to feed the tasks in
+as they are processed, to keep …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-08-19 17:03:59-04:00" class="dt-published"></time>
+  Wed 19 Aug 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/626890578918031361/sediment-and-coral" rel="bookmark" class="u-url"
+       title="Sediment and Coral" target="_blank">
+      <time class="m-date" datetime="2020-08-19 10:04:03-05:00">
+        Aug
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Sediment and Coral
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Sediment and Coral" src="https://64.media.tumblr.com/99f16836da56eb5dfd59910bf9ce1975/9f3cf6c4b5ca6b0b-e0/s540x810/f92731af1c4b2e07fb1856e85175f58f9f707b88.jpg"><a href="https://fyfluiddynamics.com/2020/08/sediment-and-coral/">As rivers wash sediment toward the sea, they carve elaborate deltas like that of the Rio Cauto in Cuba. Over time these sediments build up marshes, swamps, lagoons, and other wetlands that provide critical habitat and flood control.</a> (Image credit: L. Dauphin/USGS; via <a href="https://earthobservatory.nasa.gov/images/146884/cubas-gulf-of-guacanayabo">NASA Earth Observatory</a>)
+<a href="https://fyfluiddynamics.com/?p=13325">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-19 10:04:03-05:00" class="dt-published"></time>
+  Wed 19 Aug 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/08/sediment-and-coral/" rel="bookmark" class="u-url"
+       title="Sediment and Coral" target="_blank">
+      <time class="m-date" datetime="2020-08-19 15:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Sediment and Coral
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  As rivers wash sediment toward the sea, they carve elaborate deltas like that of the Rio Cauto in Cuba. Over time these sediments build up marshes, swamps, lagoons, and other <a href="https://fyfluiddynamics.com/2020/08/sediment-and-coral/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-08-19 15:00:00+00:00" class="dt-published"></time>
+  Wed 19 Aug 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2348/" rel="bookmark" class="u-url"
+       title="Boat Puzzle" target="_blank">
+      <time class="m-date" datetime="2020-08-19 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Boat Puzzle
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="'No, my cabbage moths have already started laying eggs in them! Send the trolley into the river!' 'No, the sailing wolf will steal the boat to rescue them!'" src="https://imgs.xkcd.com/comics/boat_puzzle.png" title="'No, my cabbage moths have already started laying eggs in them! Send the trolley into the river!' 'No, the sailing wolf will steal the boat to rescue them!'">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-19 00:00:00+00:00" class="dt-published"></time>
+  Wed 19 Aug 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://shibumi.dev/posts/how-i-install-arch-linux/" rel="bookmark" class="u-url"
+       title="How I install Arch Linux" target="_blank">
+      <time class="m-date" datetime="2020-08-19 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How I install Arch Linux
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Recently I have installed Arch Linux on a shiny new Lenovo Thinkpad T14 AMD. This blog article shall mainly be a reminder for me for the future, but feel free to use anything useful in it.
+I did not install Arch Linux for a long time (nearly over 8 years, lol). Therefore I never saw a need to automate an Arch Linux installation. I am aware, that there are solutions for automated Arch Linux installation.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-19 00:00:00+00:00" class="dt-published"></time>
+  Wed 19 Aug 2020
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://medium.com/@ujjwalkumar0501/working-with-gtkbuildable-interface-f27e80639ac3?source=rss-e9516d1602f5------2" rel="bookmark" class="u-url"
        title="Working with GtkBuildable Interface" target="_blank">
       <time class="m-date" datetime="2020-08-18 16:07:50+00:00">
@@ -168,141 +393,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-08-18 16:07:50+00:00" class="dt-published"></time>
   Tue 18 Aug 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/626800089499844608/molten-thermite" rel="bookmark" class="u-url"
-       title="Molten Thermite" target="_blank">
-      <time class="m-date" datetime="2020-08-18 10:05:44-05:00">
-        Aug
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Molten Thermite
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/517e80efa19a4df9f2d15a3a4ae6afdd/a08b568421119e10-68/s540x810/ef2ad056f0ee2b78239abf9690761c11a12cb24d.gif"><img src="https://64.media.tumblr.com/aac782b90e2148af5f54b7f09f34b3ff/a08b568421119e10-86/s540x810/462878dd331ff2d0713e36d12f51c818157dd963.gif"><img src="https://64.media.tumblr.com/72351f7d7f7198d09b1e95feeb6a5001/a08b568421119e10-b9/s540x810/fa6ba53a6b081ccd106be5a207ab111a47a5ea21.gif"><a href="https://fyfluiddynamics.com/2020/08/molten-thermite/">This glowing, molten liquid captured by the Slow Mo Guys is thermite. The chemical reaction behind thermite is highly exothermic, hence its intense glow. There&rsquo;s some great fluid dynamics hiding in this video.</a> (Video and image credit: The Slow Mo Guys)
-<a href="https://fyfluiddynamics.com/?p=13413">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-18 10:05:44-05:00" class="dt-published"></time>
-  Tue 18 Aug 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/08/molten-thermite/" rel="bookmark" class="u-url"
-       title="Molten Thermite" target="_blank">
-      <time class="m-date" datetime="2020-08-18 15:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Molten Thermite
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This glowing, molten liquid captured by the Slow Mo Guys is thermite. The chemical reaction behind thermite is highly exothermic, hence its intense glow. There&#8217;s some great fluid dynamics hiding <a href="https://fyfluiddynamics.com/2020/08/molten-thermite/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-08-18 15:00:00+00:00" class="dt-published"></time>
-  Tue 18 Aug 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jyeno.home.blog/2020/08/18/google-summer-of-code-2020-week-9-10-and-11/" rel="bookmark" class="u-url"
-       title="Google Summer of Code 2020 – week 9, 10 and 11" target="_blank">
-      <time class="m-date" datetime="2020-08-18 14:17:55+00:00">
-        Aug
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Google Summer of Code 2020 – week 9, 10 and 11
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello!</p>
-
-
-
-<p>In these three weeks, I focused on general bug fixes (majority caused by me btw) and also on improving the logic behind text annotation:</p>
-
-
-
-<ul><li><a href="https://invent.kde.org/jyeno/mark/-/commit/3773088e0fbbd32ca75a04612f44528dda20d1ff">Show current directory in listLabel containing</a></li></ul>
-
-
-
-<p>A minor fix, now marK shows the initial working directory, the one where it was open at, in the listLabel (that is above the list of items).</p>
-
-
-
-<ul><li><a href="https://invent.kde.org/jyeno/mark/-/commit/2a0bd6d97fb7569a515fd4ac4f64b621b78c18c8">Reset containerWidget properly when changing directory</a></li></ul>
-
-
-
-<p>When changing the working directory and the current painter was the textPainter, the TextEdit instance would not be closed properly, thus not behaving as it should, as the imagePainter is the default in the containerWidget (widget where data annotation is made) when there is no item opened.</p>
-
-
-
-<ul><li><a href="https://invent.kde.org/jyeno/mark/-/commit/2d2b3571177e8a102b3e72858662deb27009b359">Draw properly a rectangle in mouse move event</a></li></ul>
-
-
-
-<img alt="" src="//jyenohome.files.wordpress.com/2020/08/markgif.gif?w=720">Example of how the polygon and the rectangle mode are behaving now with the mouse click and move event.
-
-
-
-<p>Like I …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jean Lima Andrade</b></span>
-  on <time datetime="2020-08-18 14:17:55+00:00" class="dt-published"></time>
-  Tue 18 Aug 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -443,40 +533,6 @@ creativity to solving problems. Are these not themselves problems to …</p>
   on <time datetime="2020-08-17 00:00:00+00:00" class="dt-published"></time>
   Mon 17 Aug 2020
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2347/" rel="bookmark" class="u-url"
-       title="Dependency" target="_blank">
-      <time class="m-date" datetime="2020-08-17 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Dependency
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Someday ImageMagick will finally break for good and we'll have a long period of scrambling as we try to reassemble civilization from the rubble." src="https://imgs.xkcd.com/comics/dependency.png" title="Someday ImageMagick will finally break for good and we'll have a long period of scrambling as we try to reassemble civilization from the rubble.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-17 00:00:00+00:00" class="dt-published"></time>
-  Mon 17 Aug 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -841,86 +897,6 @@ freedoms and guardrails that come along with …</p>
   on <time datetime="2020-08-11 14:42:02+00:00" class="dt-published"></time>
   Tue 11 Aug 2020
   in Doctor Fortran.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202008/you_should_include_your_tests_in_coverage.html" rel="bookmark" class="u-url"
-       title="You should include your tests in coverage" target="_blank">
-      <time class="m-date" datetime="2020-08-11 08:17:00-04:00">
-        Aug
-        <span class="m-date-day">
-          11
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      You should include your tests in coverage
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This seems to be a recurring debate: should you measure the coverage of your
-tests? In my opinion, definitely yes.</p><p>Just to clarify: I&#8217;m not talking about using coverage measurement with your
-test suite to see what parts of your product are covered. I&#8217;ll assume we&#8217;re all
-doing that.  The question here is, do you measure how much of your tests
-themselves are executed?  You should.</p><p>The reasons all boil down to one idea: tests are real code.  Coverage
-measurement can tell you useful things about that code:</p><ul>
-
-<li>You might have tests you aren&#8217;t running.  It&#8217;s easy to copy and paste a test
-to create a new test, but forget to change the name.  Since test names are
-arbitrary and never used except in the definition, this is a very easy mistake
-to make.  Coverage …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-08-11 08:17:00-04:00" class="dt-published"></time>
-  Tue 11 Aug 2020
-  in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://shibumi.dev/posts/google-summer-of-code-2020/" rel="bookmark" class="u-url"
-       title="Google Summer of Code 2020" target="_blank">
-      <time class="m-date" datetime="2020-08-08 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          08
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Google Summer of Code 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  tl;dr Just give me the link to the PR: https://github.com/in-toto/in-toto-golang/pull/56
-Intro This blog post tracks my accomplishments during my Google Summer of Code 2020 Stipend at CNCF. I have spend around three months on working on https://in-toto.io.
-For tracking I am using the goal-setting framework OKR (objectives and key results). My main objective has been to implement in-toto-run functionality in the in-toto Go implementation. However, I have also fixed a few other issues on this journey and wrote a blog post about in-toto.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-08 00:00:00+00:00" class="dt-published"></time>
-  Sat 08 Aug 2020
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
