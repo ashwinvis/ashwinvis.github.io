@@ -2,23 +2,21 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="UTF-8" />
-  <title>Fixing 434 links in 111 files for pyenv | Ashwin Vishnu&#39;s Website</title>
+  <title>Tech Talk | Ashwin Vishnu&#39;s Website</title>
   <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-light.compiled.css" />
   <link rel="stylesheet" href="https://ashwinvis.github.io/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwinvis.github.io/images/logo_ashwin.png" type="image/png" />
-  <link rel="canonical" href="https://ashwinvis.github.io/drafts/fixing-links-for-pyenv.html" />
+  <link rel="prev" href="https://ashwinvis.github.io/category/tech-talk.html" />
   <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
   <link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
-  <meta property="og:title" content="Fixing 434 links in 111 files for pyenv" />
-  <meta name="twitter:title" content="Fixing 434 links in 111 files for pyenv" />
-  <meta property="og:url" content="https://ashwinvis.github.io/drafts/fixing-links-for-pyenv.html" />
-  <meta property="og:description" content="A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it." />
-  <meta name="twitter:description" content="A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it." />
+  <meta property="og:title" content="Tech Talk" />
+  <meta name="twitter:title" content="Tech Talk" />
+  <meta property="og:url" content="https://ashwinvis.github.io/category/tech-talk.html" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <!-- Mastodon Link verification -->
   <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
 
@@ -124,180 +122,96 @@
 <main>
 <div class="m-container">
   <div class="m-row">
-    <article class="h-entry m-col-m-10 m-nopadb m-col-l-8">
-      <header>
-        <h1><a href="https://ashwinvis.github.io/drafts/fixing-links-for-pyenv.html" rel="bookmark" class="u-url" title="Permalink to Fixing 434 links in 111 files for pyenv">
-          <time class="m-date" datetime="2020-08-20T16:50:51.695032+02:00">
-            Aug <span class="m-date-day">20</span> 2020
-          </time>
-          <div class="p-name">
-            Fixing 434 links in 111 files for pyenv
-          </div>
-          <span class="m-label m-dim">draft</span>
-        </a></h1>
-        <div class="p-summary">
-        <p>A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.</p>
-        </div>
-      </header>
-      <div class="m-clearfix-l"></div>
-<!-- content -->
-<div class="e-content">
-<p>The project pyenv have several small bash scripts, one for each version, both
-binary and source builds. This totalled to a staggering 111 files with several
-lines of code containing the base URL <a href="https://bitbucket.org/pypy/pypy/downloads">https://bitbucket.org/pypy/pypy/downloads</a>
-(which no longer works). On one hand, it makes it easier to understand, to
-contributed and to maintain pyenv. But at rare events, like this when the entire
-repository gets moved to <a href="https://downloads.python.org/pypy">https://downloads.python.org/pypy</a>, it becomes
-unnecessarily painful to fix the code, because the same “value” gets repeated
-all over the code base. Here is <code>pypy3.5-6.0.0-src</code> for example:</p>
-<pre>#require_gcc
-prefer_openssl11
-install_package &quot;openssl-1.1.0j&quot; &quot;https://www.openssl.org/source/old/1.1.0/openssl-1.1.0j.tar.gz#31bec6c203ce1a8e93d5994f4ed304c63ccf07676118b6634edded12ad1b3246&quot; mac_openssl --if has_broken_mac_openssl
-install_package &quot;pypy3-v6.0.0-src&quot; &quot;https://bitbucket.org/pypy/pypy/downloads/pypy3-v6.0.0-src.tar.bz2#ed8005202b46d6fc6831df1d13a4613bc40084bfa42f275068edadf8954034a3&quot; &quot;pypy_builder&quot; verify_py35 ensurepip</pre>
-<p>One way to fix this would be to write a Python code parsing all the text. But
-for some reason, it felt natural to apply shell scripting to this problem,
-functionally.</p>
-<section id="awk-curl-to-parse-and-check-links">
-<h2>AWK + cURL: To parse and check links</h2>
-<pre class="m-code"><span class="c1">#!/bin/awk -f</span>
-
-<span class="sr">/install_.*bitbucket.org.pypy/</span><span class="p">{</span>
-  <span class="nx">new</span><span class="o">=$</span><span class="mi">3</span>
-  <span class="kr">gsub</span><span class="p">(</span><span class="sr">/bitbucket.org\/pypy\/pypy\/downloads/</span><span class="p">,</span> <span class="s2">&quot;downloads.python.org/pypy&quot;</span><span class="p">,</span> <span class="nx">new</span><span class="p">);</span>
-
-  <span class="nx">cmd</span> <span class="o">=</span> <span class="s2">&quot;curl -s -o /dev/null -i -w &#39;%{http_code}&#39; &quot;</span><span class="nx">new</span>
-  <span class="nx">cmd</span> <span class="o">|</span> <span class="kr">getline</span> <span class="nx">result</span>
-  <span class="kr">close</span><span class="p">(</span><span class="nx">cmd</span><span class="p">)</span>
-
-  <span class="k">if</span> <span class="p">(</span><span class="nx">result</span> <span class="o">==</span> <span class="s2">&quot;200&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1"># print &quot;Working&quot;</span>
-    <span class="o">$</span><span class="mi">3</span><span class="o">=</span><span class="nx">new</span>
-    <span class="kr">printf</span> <span class="s2">&quot;  &quot;</span><span class="p">;</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1"># print &quot;Not Working&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="p">{</span><span class="kr">print</span><span class="p">}</span></pre>
-<p>AWK makes it effortless to match patterns and split fields based on arbitary
-whitespace. Once the URL is detected, the AWK built-in <code>gsub</code> is used, similar
-to sed, to replace the link into a variable. The link is pinged using cURL and
-only the header is retrieved, printing out 200 if the link works. The link is
-then replaced with the new alternative if the link works. The last AWK block
-<code>{print}</code> spits out every line, modified or not.</p>
-<p>A downside of using AWK is it strip out any white space, which is a problem as
-indentation gets broken. As a stop gap, I hard code an indentation of 2 spaces
-which seemed to be the most common occurrence.</p>
-<p>The AWK script (<code>links.awk</code>) can be applied on a single file without any
-edits as follows:</p>
-<pre>❯ awk -f links.awk pypy3.3-5.5-alpha</pre>
-</section>
-<section id="bash-gnu-parallel-to-parallelize-and-map-the-script-over-all-files">
-<h2>Bash + GNU Parallel: To parallelize and map the script over all files</h2>
-<pre class="m-code"><span class="ch">#!/bin/bash</span>
-<span class="nb">set</span> -e
-awk -f links.awk <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> &gt; <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.new&quot;</span>
-mv -f <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.new&quot;</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span></pre>
-<p>This nifty bash script takes one argument <code>$1</code> which is a file we need to
-change and outputs to a temporary file. If no error is encountered the original
-file is replaced.</p>
-<p>The bash script (<code>links.sh</code>) is parallelized on all files. An arbitrary
-threshold of 4 processes are set in order to not spam the server:</p>
-<pre>ls pypy* -1 | parallel -j4 &quot;./links.sh {}&quot;</pre>
-</section>
-<section id="vim-auto-formatting-bash-code">
-<h2>Vim: Auto-formatting bash code</h2>
-<p>I needed to format the bash code to counter the indentations stripped out by
-the AWK code. However, I did not want to touch all lines, because the files in
-pyenv uses a strange code-style, where case blocks are not indented as it
-should be:</p>
-<pre>case &quot;$(pypy_architecture 2&gt;/dev/null || true)&quot; in
-&quot;linux&quot; )
-  install_package &quot;pypy-1.6&quot; &quot;https://downloads.python.org/pypy/pypy-1.6-linux.tar.bz2#1266c8b5918d84432b8649535fb5c84f6b977331c242bf45c5944033562ce0b2&quot; &quot;pypy&quot; verify_py27 ensurepip
-  ;;
-...</pre>
-<p>To my delight, Vim can <a href="https://vim.fandom.com/wiki/Format_a_code_block">format</a> any code intelligently, for an entire buffer, or
-a block or a line (which is what I needed). A simple normal-mode mapping
-<code>==</code> works like a charm. I came up with this Vim script to search
-for a pattern in a file and indent them.</p>
-<pre class="m-code"><span class="k">function</span><span class="p">!</span> <span class="k">g</span>:FixIndents<span class="p">()</span>
-  <span class="k">set</span> <span class="nb">ft</span><span class="p">=</span>bash <span class="nb">smartindent</span>
-
-<span class="c">  &quot; start at the top</span>
-  normal gg
-
-<span class="c">  &quot; search for a particular string till end of the file, do not wrap</span>
-  <span class="k">while</span> search<span class="p">(</span><span class="s2">&quot;^\\s*install_&quot;</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">)</span>
-<span class="c">    &quot; auto indent</span>
-    normal <span class="p">==</span>
-  <span class="k">endwhile</span>
-
-<span class="c">  &quot; save and quit</span>
-  <span class="nb">write</span>
-  quit
-<span class="k">endfunction</span></pre>
-<p>One way to execute this would be to open all files as buffers in Vim and use
-the <code>:source</code> (to source the above Vim script) and <code>:bufdo call
-FixIndents()</code> command (to apply the function on all buffers). However this
-proved to be too slow. Thus, once again the Vim script (<code>fix_indents.vim</code>) is
-sourced and the function <code>FixIndents()</code> is called on the all files as
-follows:</p>
-<pre>ls -1 pypy* | parallel &quot;vim --not-a-term -S fix_indents.vim +'call FixIndents()' {}&quot;</pre>
-</section>
-<section id="epilogue">
-<h2>Epilogue</h2>
-<p>It was a pleasing and learning experience to discover new bells and whistles of
-tools that I often use. And all thanks to UNIX philosophy, disparate tools can
-work together in harmony.</p>
-</section>
-</div>
-<!-- /content -->
-      <footer>
-        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-08-20T16:50:51.695032+02:00" class="dt-published">Thu 20 August 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-dim">draft</span> Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>.<time class="dt-read-mins">
-            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            3
-        minutes
-              read
-          </time></p>
-        <div class="webmentions">
-          <details><summary>Interactions</summary>
-            <p>Below you can find the interactions that this page has had using <a
-                href="http://indieweb.org/webmention">WebMention</a>.
-            </p>
-            <div class="manual-webmention">
-              <p>Have you written a <a
-                  href="https://indieweb.org/responses">response</a> to this post? Let
-                  me know the URL:
-                <form id="manual-webmention"
-                      action="https://webmention.io/ashwinvis.github.io/webmention"
-                  method="post"><input type="url" name="source">
-
-                  <input type="hidden" name="target" value="https://ashwinvis.github.io/drafts/fixing-links-for-pyenv.html">
-                  <input type="submit" name="submit" value="Send Webmention">
-                </form>
-              </p>
-              <p>Do you not have a website set up with WebMention capabilities? You
-                can:
-              <form method="get" action="https://quill.p3k.io/" target="_blank">
-                <input type="hidden" name="dontask" value="1">
-                <input type="hidden" name="me" value="https://commentpara.de/">
-                <input type="hidden" name="reply" value="https://ashwinvis.github.io/drafts/fixing-links-for-pyenv.html">
-                <input type="submit" value="Comment anonymously (via Comment Parade)">
-              </form>
-              </p>
+    <div class="m-col-m-10 m-col-l-8">
+      <div class="m-info m-note">
+        Showing only posts in <em>Tech Talk</em>. <a href="https://ashwinvis.github.io/">Show all posts.</a>
+      </div>
+      <article class="m-article-list">
+        <header>
+          <h1><a href="https://ashwinvis.github.io/licensing-software.html" rel="bookmark" class="u-url" title="Permalink to Licensing software to be permissive">
+            <time class="m-date" datetime="2019-12-21T00:00:00+01:00">
+              Dec <span class="m-date-day">21</span> 2019
+            </time>
+            <div class="p-name">
+              Licensing software to be permissive
             </div>
-            <div id="webmentions">
-              <noscript>Due to laziness, this site uses client-side JavaScript to render the webmentions, rather than them being rendered server-side. If you do not wish to enable JavaScript, that's fair enough, but you won't be able to automagically see what Webmentions I've received - sorry!
-              </noscript>
+          </a></h1>
+          <div class="p-summary">
+          <p>Considerations while selecting a permissive license for your open-source project.</p>
           </div>
-          </details>
-        </div>
-</footer>
-    </article>
+        </header>
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-12-21T00:00:00+01:00" class="dt-published">Sat 21 December 2019</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/licensing.html">licensing</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>.<time class="dt-read-mins">
+              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              2
+          minutes
+                read
+            </time></p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article class="m-article-list">
+        <header>
+          <h1><a href="https://ashwinvis.github.io/pyconse2019.html" rel="bookmark" class="u-url" title="Permalink to At PyCon Sweden 2019">
+            <time class="m-date" datetime="2019-10-31T00:00:00+01:00">
+              Oct <span class="m-date-day">31</span> 2019
+            </time>
+            <div class="p-name">
+              At PyCon Sweden 2019
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Representing Transonic</p>
+          </div>
+        </header>
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-10-31T00:00:00+01:00" class="dt-published">Thu 31 October 2019</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2019-12-01T00:00:00+01:00" class="dt-updated">Sun 01 December 2019</time></span> Tags: <a href="https://ashwinvis.github.io/tag/python.html">python</a>, <a href="https://ashwinvis.github.io/tag/fluiddyn.html">fluiddyn</a>, <a href="https://ashwinvis.github.io/tag/transonic.html">transonic</a>, <a href="https://ashwinvis.github.io/tag/pyconse.html">pyconse</a>.<time class="dt-read-mins">
+              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              3
+          minutes
+                read
+            </time></p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <article class="m-article-list">
+        <header>
+          <h1><a href="https://ashwinvis.github.io/repl-for-your-data.html" rel="bookmark" class="u-url" title="Permalink to REPL for your data">
+            <time class="m-date" datetime="2019-07-28T00:00:00+02:00">
+              Jul <span class="m-date-day">28</span> 2019
+            </time>
+            <div class="p-name">
+              REPL for your data
+            </div>
+          </a></h1>
+          <div class="p-summary">
+          <p>Use ethical solutions. Archive your data. REPL.</p>
+          </div>
+        </header>
+        <footer>
+          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-07-28T00:00:00+02:00" class="dt-published">Sun 28 July 2019</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/social-media.html">social media</a>, <a href="https://ashwinvis.github.io/tag/privacy.html">privacy</a>, <a href="https://ashwinvis.github.io/tag/fediverse.html">fediverse</a>.<time class="dt-read-mins">
+              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              4
+          minutes
+                read
+            </time></p>
+        </footer>
+        <div class="m-clearfix-l"></div>
+      </article>
+      <div class="m-article-pagination"><a href="https://ashwinvis.github.io/category/tech-talk.html">&laquo; newer articles</a> | page 2</div>
+    </div>
     <nav class="m-navpanel m-col-m-2 m-push-l-2">
       <h3>Categories</h3>
       <ol class="m-block-bar-m">

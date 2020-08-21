@@ -1,5 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2020-06-24T09:30:09+02:00</updated><entry><title>Power to the user (CSS)</title><link href="https://ashwinvis.github.io/power-to-the-usercss.html" rel="alternate"></link><published>2020-06-24T09:30:09+02:00</published><updated>2020-06-24T09:30:09+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-06-24:/power-to-the-usercss.html</id><summary type="html">&lt;p&gt;Tweaking the world wide web, one CSS stylesheet at a time&lt;/p&gt;</summary><content type="html">&lt;p&gt;You probably know that you can tweak appearance of websites with add-ons like
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2020-08-20T16:50:51+02:00</updated><entry><title>Fixing 434 links in 111 files for pyenv</title><link href="https://ashwinvis.github.io/fixing-links-for-pyenv.html" rel="alternate"></link><published>2020-08-20T16:50:51+02:00</published><updated>2020-08-20T16:50:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-08-20:/fixing-links-for-pyenv.html</id><summary type="html">&lt;p&gt;A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;The project pyenv has several small bash scripts, one for each version, both
+binary and source builds. This totalled to a staggering 111 files with 434
+lines of code containing the base URL &lt;a href="https://bitbucket.org/pypy/pypy/downloads"&gt;https://bitbucket.org/pypy/pypy/downloads&lt;/a&gt;
+(which no longer works). On one hand, it makes it easier to understand, to
+contribute to and to maintain pyenv. But at rare events such as this, when the
+entire PyPy repository gets moved to &lt;a href="https://downloads.python.org/pypy"&gt;https://downloads.python.org/pypy&lt;/a&gt;, it
+becomes unnecessarily painful to fix the code, because the same “value” gets
+repeated all over the code base. Here is &lt;code&gt;pypy3.5-6.0.0-src&lt;/code&gt; for example:&lt;/p&gt;
+&lt;pre&gt;#require_gcc
+prefer_openssl11
+install_package &amp;quot;openssl-1.1.0j&amp;quot; &amp;quot;https://www.openssl.org/source/old/1.1.0/openssl-1.1.0j.tar.gz#31bec6c203ce1a8e93d5994f4ed304c63ccf07676118b6634edded12ad1b3246&amp;quot; mac_openssl --if has_broken_mac_openssl
+install_package &amp;quot;pypy3-v6.0.0-src&amp;quot; &amp;quot;https://bitbucket.org/pypy/pypy/downloads/pypy3-v6.0.0-src.tar.bz2#ed8005202b46d6fc6831df1d13a4613bc40084bfa42f275068edadf8954034a3&amp;quot; &amp;quot;pypy_builder&amp;quot; verify_py35 ensurepip&lt;/pre&gt;
+&lt;p&gt;One way to fix this would be to write a Python code parsing all the text. But
+for some reason, it felt natural to apply shell scripting to this problem,
+functionally.&lt;/p&gt;
+&lt;section id="awk-curl-to-parse-and-check-links"&gt;
+&lt;h2&gt;AWK + cURL: To parse and check links&lt;/h2&gt;
+&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;#!/bin/awk -f&lt;/span&gt;
+
+&lt;span class="sr"&gt;/install_.*bitbucket.org.pypy/&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;new&lt;/span&gt;&lt;span class="o"&gt;=$&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+  &lt;span class="kr"&gt;gsub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/bitbucket.org\/pypy\/pypy\/downloads/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;downloads.python.org/pypy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;new&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+  &lt;span class="nx"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;curl -s -o /dev/null -i -w &amp;#39;%{http_code}&amp;#39; &amp;quot;&lt;/span&gt;&lt;span class="nx"&gt;new&lt;/span&gt;
+  &lt;span class="nx"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kr"&gt;getline&lt;/span&gt; &lt;span class="nx"&gt;result&lt;/span&gt;
+  &lt;span class="kr"&gt;close&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;result&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;200&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;# print &amp;quot;Working&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;new&lt;/span&gt;
+    &lt;span class="kr"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;  &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;# print &amp;quot;Not Working&amp;quot;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kr"&gt;print&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;AWK makes it effortless to match patterns and split fields based on arbitary
+whitespace. Once the URL is detected, the AWK built-in &lt;code&gt;gsub&lt;/code&gt; is used, similar
+to sed, to replace the link into a variable. The link is pinged using cURL and
+only the header is retrieved, printing out 200 if the link works. The link is
+then replaced with the new alternative if the link works. The last AWK block
+&lt;code&gt;{print}&lt;/code&gt; spits out every line, modified or not.&lt;/p&gt;
+&lt;p&gt;A downside of using AWK is it strips out any white space, which is a problem as
+indentation gets broken. As a stop gap measure, I hard code an indentation of 2
+spaces which seemed to be the most common occurrence.&lt;/p&gt;
+&lt;p&gt;The AWK script (&lt;code&gt;links.awk&lt;/code&gt;) can be applied on a single file without any
+edits as follows:&lt;/p&gt;
+&lt;pre&gt;❯ awk -f links.awk pypy3.3-5.5-alpha&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="bash-gnu-parallel-to-parallelize-and-map-the-script-over-all-files"&gt;
+&lt;h2&gt;Bash + GNU Parallel: To parallelize and map the script over all files&lt;/h2&gt;
+&lt;pre class="m-code"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt; -e
+awk -f links.awk &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.new&amp;quot;&lt;/span&gt;
+mv -f &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.new&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;This nifty bash script takes one argument &lt;code&gt;$1&lt;/code&gt; which is a file we need to
+change and outputs to a temporary file. If no error is encountered the original
+file is replaced.&lt;/p&gt;
+&lt;p&gt;The bash script (&lt;code&gt;links.sh&lt;/code&gt;) is parallelized on all files. An arbitrary
+threshold of 4 processes are set in order to not spam the server:&lt;/p&gt;
+&lt;pre&gt;ls pypy* -1 | parallel -j4 &amp;quot;./links.sh {}&amp;quot;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="vim-auto-formatting-bash-code"&gt;
+&lt;h2&gt;Vim: Auto-formatting bash code&lt;/h2&gt;
+&lt;p&gt;I needed to format the bash code to counter the indentations stripped out by
+the AWK code. However, I did not want to touch all lines, because the files in
+pyenv uses a strange code-style, where case blocks are not indented as it
+should be:&lt;/p&gt;
+&lt;pre&gt;case &amp;quot;$(pypy_architecture 2&amp;gt;/dev/null || true)&amp;quot; in
+&amp;quot;linux&amp;quot; )
+  install_package &amp;quot;pypy-1.6&amp;quot; &amp;quot;https://downloads.python.org/pypy/pypy-1.6-linux.tar.bz2#1266c8b5918d84432b8649535fb5c84f6b977331c242bf45c5944033562ce0b2&amp;quot; &amp;quot;pypy&amp;quot; verify_py27 ensurepip
+  ;;
+...&lt;/pre&gt;
+&lt;p&gt;To my delight, Vim can &lt;a href="https://vim.fandom.com/wiki/Format_a_code_block"&gt;format&lt;/a&gt; any code intelligently, for an entire buffer, or
+a block or a line (which is what I needed). A simple normal-mode mapping
+&lt;code&gt;==&lt;/code&gt; works like a charm. I came up with this Vim script to search
+for a pattern in a file and indent them.&lt;/p&gt;
+&lt;pre class="m-code"&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:FixIndents&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;ft&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;bash &lt;span class="nb"&gt;smartindent&lt;/span&gt;
+
+&lt;span class="c"&gt;  &amp;quot; start at the top&lt;/span&gt;
+  normal gg
+
+&lt;span class="c"&gt;  &amp;quot; search for a particular string till end of the file, do not wrap&lt;/span&gt;
+  &lt;span class="k"&gt;while&lt;/span&gt; search&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;^\\s*install_&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;W&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;    &amp;quot; auto indent&lt;/span&gt;
+    normal &lt;span class="p"&gt;==&lt;/span&gt;
+  &lt;span class="k"&gt;endwhile&lt;/span&gt;
+
+&lt;span class="c"&gt;  &amp;quot; save and quit&lt;/span&gt;
+  &lt;span class="nb"&gt;write&lt;/span&gt;
+  quit
+&lt;span class="k"&gt;endfunction&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;One way to execute this would be to open all files as buffers in Vim and use
+the &lt;code&gt;:source&lt;/code&gt; (to source the above Vim script) and &lt;code&gt;:bufdo call
+FixIndents()&lt;/code&gt; command (to apply the function on all buffers). However this
+proved to be too slow. Thus, once again the Vim script (&lt;code&gt;fix_indents.vim&lt;/code&gt;) is
+sourced and the function &lt;code&gt;FixIndents()&lt;/code&gt; is called on the all files as
+follows:&lt;/p&gt;
+&lt;pre&gt;ls -1 pypy* | parallel &amp;quot;vim --not-a-term -S fix_indents.vim +'call FixIndents()' {}&amp;quot;&lt;/pre&gt;
+&lt;/section&gt;
+&lt;section id="epilogue"&gt;
+&lt;h2&gt;Epilogue&lt;/h2&gt;
+&lt;p&gt;It was a pleasing and learning experience to discover new bells and whistles of
+tools that I often use. And all thanks to UNIX philosophy, disparate tools can
+work together in harmony. The &lt;a href="https://github.com/pyenv/pyenv/pull/1682"&gt;end-result&lt;/a&gt; was merged into pyenv today.&lt;/p&gt;
+&lt;/section&gt;
+</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Power to the user (CSS)</title><link href="https://ashwinvis.github.io/power-to-the-usercss.html" rel="alternate"></link><published>2020-06-24T09:30:09+02:00</published><updated>2020-06-24T09:30:09+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-06-24:/power-to-the-usercss.html</id><summary type="html">&lt;p&gt;Tweaking the world wide web, one CSS stylesheet at a time&lt;/p&gt;</summary><content type="html">&lt;p&gt;You probably know that you can tweak appearance of websites with add-ons like
 Stylus.  Ever since I figured out &lt;a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector"&gt;how to use
 Inspector&lt;/a&gt; and
 &lt;a href="https://github.com/openstyles/stylus/wiki/Writing-styles"&gt;how to write&lt;/a&gt;
