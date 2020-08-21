@@ -4,20 +4,20 @@ Fixing 434 links in 111 files for pyenv
 :author: Ashwin Vishnu Mohanan
 :date: 2020-08-20T16:50:51.695032
 :slug: fixing-links-for-pyenv
-:status: draft
-:summary: A.K.A. shell scripting is awesome, and why don't-repeat-yourself (DRY) matters Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.
+:status: published
+:summary: A.K.A. shell scripting is awesome, and why don't-repeat-yourself (DRY) matters. Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.
 :category: Tech Talk
 :tags: software
 
 
-The project pyenv have several small bash scripts, one for each version, both
-binary and source builds. This totalled to a staggering 111 files with several
+The project pyenv has several small bash scripts, one for each version, both
+binary and source builds. This totalled to a staggering 111 files with 434
 lines of code containing the base URL https://bitbucket.org/pypy/pypy/downloads
 (which no longer works). On one hand, it makes it easier to understand, to
-contributed and to maintain pyenv. But at rare events, like this when the entire
-repository gets moved to https://downloads.python.org/pypy, it becomes
-unnecessarily painful to fix the code, because the same "value" gets repeated
-all over the code base. Here is ``pypy3.5-6.0.0-src`` for example::
+contribute to and to maintain pyenv. But at rare events such as this, when the
+entire PyPy repository gets moved to https://downloads.python.org/pypy, it
+becomes unnecessarily painful to fix the code, because the same "value" gets
+repeated all over the code base. Here is ``pypy3.5-6.0.0-src`` for example::
 
   #require_gcc
   prefer_openssl11
@@ -61,9 +61,9 @@ only the header is retrieved, printing out 200 if the link works. The link is
 then replaced with the new alternative if the link works. The last AWK block
 ``{print}`` spits out every line, modified or not.
 
-A downside of using AWK is it strip out any white space, which is a problem as
-indentation gets broken. As a stop gap, I hard code an indentation of 2 spaces
-which seemed to be the most common occurrence.
+A downside of using AWK is it strips out any white space, which is a problem as
+indentation gets broken. As a stop gap measure, I hard code an indentation of 2
+spaces which seemed to be the most common occurrence.
 
 The AWK script (``links.awk``) can be applied on a single file without any
 edits as follows::
@@ -146,4 +146,6 @@ Epilogue
 
 It was a pleasing and learning experience to discover new bells and whistles of
 tools that I often use. And all thanks to UNIX philosophy, disparate tools can
-work together in harmony.
+work together in harmony. The end-result_ was merged into pyenv today.
+
+.. _end-result: https://github.com/pyenv/pyenv/pull/1682
