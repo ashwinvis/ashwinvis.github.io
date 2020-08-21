@@ -15,8 +15,8 @@
   <meta property="og:title" content="Fixing 434 links in 111 files for pyenv" />
   <meta name="twitter:title" content="Fixing 434 links in 111 files for pyenv" />
   <meta property="og:url" content="https://ashwinvis.github.io/fixing-links-for-pyenv.html" />
-  <meta property="og:description" content="A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it." />
-  <meta name="twitter:description" content="A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it." />
+  <meta property="og:description" content="A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it." />
+  <meta name="twitter:description" content="A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it." />
   <meta name="twitter:card" content="summary" />
   <meta property="og:type" content="article" />
   <!-- Mastodon Link verification -->
@@ -135,7 +135,7 @@
           </div>
         </a></h1>
         <div class="p-summary">
-        <p>A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.</p>
+        <p>A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.</p>
         </div>
       </header>
       <div class="m-clearfix-l"></div>
@@ -148,8 +148,8 @@ lines of code containing the base URL <a href="https://bitbucket.org/pypy/pypy/d
 (which no longer works). On one hand, it makes it easier to understand, to
 contribute to and to maintain pyenv. But at rare events such as this, when the
 entire PyPy repository gets moved to <a href="https://downloads.python.org/pypy">https://downloads.python.org/pypy</a>, it
-becomes unnecessarily painful to fix the code, because the same “value” gets
-repeated all over the code base. Here is <code>pypy3.5-6.0.0-src</code> for example:</p>
+becomes unnecessarily painful to fix the code, because the <strong>same “value” gets
+repeated</strong> all over the code base. Here is <code>pypy3.5-6.0.0-src</code> for example:</p>
 <pre>#require_gcc
 prefer_openssl11
 install_package &quot;openssl-1.1.0j&quot; &quot;https://www.openssl.org/source/old/1.1.0/openssl-1.1.0j.tar.gz#31bec6c203ce1a8e93d5994f4ed304c63ccf07676118b6634edded12ad1b3246&quot; mac_openssl --if has_broken_mac_openssl
@@ -258,7 +258,7 @@ work together in harmony. The <a href="https://github.com/pyenv/pyenv/pull/1682"
         <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
       </div>
       <footer>
-        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-08-20T16:50:51.695032+02:00" class="dt-published">Thu 20 August 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>.<time class="dt-read-mins">
+        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-08-20T16:50:51.695032+02:00" class="dt-published">Thu 20 August 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/python.html">python</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>.<time class="dt-read-mins">
             <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
               <circle cx="12" cy="12" r="10"></circle>
