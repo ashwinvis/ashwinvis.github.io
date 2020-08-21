@@ -105,7 +105,7 @@ should be::
     ;;
   ...
 
-To my delight, Vim can format any code intelligently, for an entire buffer, or
+To my delight, Vim can format_ any code intelligently, for an entire buffer, or
 a block or a line (which is what I needed). A simple normal-mode mapping
 ``==`` works like a charm. I came up with this Vim script to search
 for a pattern in a file and indent them.
@@ -130,12 +130,16 @@ for a pattern in a file and indent them.
   endfunction
 
 
-Once again the Vim script (``fix_indents.vim``) is sourced and the function
-``FixIndents()`` is called on the file as follows::
+One way to execute this would be to open all files as buffers in Vim and use
+the ``:source`` (to source the above Vim script) and ``:bufdo call
+FixIndents()`` command (to apply the function on all buffers). However this
+proved to be too slow. Thus, once again the Vim script (``fix_indents.vim``) is
+sourced and the function ``FixIndents()`` is called on the all files as
+follows::
 
   ls -1 pypy* | parallel "vim --not-a-term -S fix_indents.vim +'call FixIndents()' {}"
 
-.. format:: https://vim.fandom.com/wiki/Format_a_code_block
+.. _format: https://vim.fandom.com/wiki/Format_a_code_block
 
 Epilogue
 --------
