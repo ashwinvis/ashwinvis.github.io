@@ -5,9 +5,9 @@ Fixing 434 links in 111 files for pyenv
 :date: 2020-08-20T16:50:51.695032
 :slug: fixing-links-for-pyenv
 :status: published
-:summary: A.K.A. shell scripting is awesome, and why don't-repeat-yourself (DRY) matters. Context: PyPy moved its repositories from Heptapod (unrelated, but it is an awesome project) and PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.
+:summary: A.K.A. shell scripting is awesome, and why don't-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.
 :category: Tech Talk
-:tags: software
+:tags: software, python, open-source
 
 
 The project pyenv has several small bash scripts, one for each version, both
@@ -16,8 +16,8 @@ lines of code containing the base URL https://bitbucket.org/pypy/pypy/downloads
 (which no longer works). On one hand, it makes it easier to understand, to
 contribute to and to maintain pyenv. But at rare events such as this, when the
 entire PyPy repository gets moved to https://downloads.python.org/pypy, it
-becomes unnecessarily painful to fix the code, because the same "value" gets
-repeated all over the code base. Here is ``pypy3.5-6.0.0-src`` for example::
+becomes unnecessarily painful to fix the code, because the **same "value" gets
+repeated** all over the code base. Here is ``pypy3.5-6.0.0-src`` for example::
 
   #require_gcc
   prefer_openssl11
