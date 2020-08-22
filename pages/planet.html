@@ -142,9 +142,163 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tsdgeos.blogspot.com/2020/08/flathub-stats-for-kde-applications-that.html" rel="bookmark" class="u-url"
-       title="Flathub stats for KDE applications [that are part of the release service]" target="_blank">
-      <time class="m-date" datetime="2020-08-21 23:12:13+00:00">
+    <a href="https://nedbatchelder.com//blog/202008/do_a_pile_of_work_better.html" rel="bookmark" class="u-url"
+       title="Do a pile of work better" target="_blank">
+      <time class="m-date" datetime="2020-08-22 06:55:00-04:00">
+        Aug
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Do a pile of work better
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A few days ago I wrote about
+<a href="//nedbatchelder.com/blog/202008/do_a_pile_of_work.html">doing a pile of work</a> with
+concurrent.futures.  Since then, I discovered a problem with the code:
+exceptions raised by the work function were silently ignored.</p><p>Here&#8217;s the improved code that logs exceptions:</p><blockquote><code><span>def</span>&#xa0;<span>wait_first</span><span>(</span><span>futures</span><span>):</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>&quot;&quot;&quot;</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;Wait&#xa0;for&#xa0;the&#xa0;first&#xa0;future&#xa0;to&#xa0;complete.</span>
+
+<span>&#xa0;&#xa0;&#xa0;&#xa0;Returns:</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;(done,&#xa0;not_done):&#xa0;two&#xa0;sets&#xa0;of&#xa0;futures.</span>
+
+<span>&#xa0;&#xa0;&#xa0;&#xa0;&quot;&quot;&quot;</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>return</span>&#xa0;<span>cf</span><span>.</span><span>wait</span><span>(</span><span>futures</span><span>,</span>&#xa0;<span>return_when</span><span>=</span><span>cf</span><span>.</span><span>FIRST_COMPLETED</span><span>)</span>
+
+<span>def</span>&#xa0;<span>do_work</span><span>(</span><span>threads</span><span>,</span>&#xa0;<span>argsfn</span><span>,</span>&#xa0;<span>workfn</span><span>):</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>&quot;&quot;&quot;</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;Do&#xa0;a&#xa0;pile&#xa0;of&#xa0;work,&#xa0;maybe&#xa0;in&#xa0;threads,&#xa0;with&#xa0;a&#xa0;progress&#xa0;bar.</span>
+
+<span>&#xa0;&#xa0;&#xa0;&#xa0;Two&#xa0;callables&#xa0;are&#xa0;provided:&#xa0;`workfn`&#xa0;is&#xa0;the&#xa0;unit&#xa0;of&#xa0;work&#xa0;to&#xa0;be&#xa0;done,</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;many&#xa0;times.&#xa0;&#xa0;Its&#xa0;arguments&#xa0;are&#xa0;provided&#xa0;by&#xa0;calling&#xa0;`argsfn`,&#xa0;which</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;must&#xa0;produce&#xa0;a&#xa0;sequence&#xa0;of&#xa0;tuples.&#xa0;&#xa0;`argsfn`&#xa0;will&#xa0;be&#xa0;called&#xa0;a&#xa0;few</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;times,&#xa0;and&#xa0;must&#xa0;produce&#xa0;the&#xa0;same&#xa0;sequence&#xa0;each&#xa0;time.</span>
+
+<span>&#xa0;&#xa0;&#xa0;&#xa0;Args:</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;threads:&#xa0;the&#xa0;number&#xa0;of&#xa0;threads&#xa0;to&#xa0;use.</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;argsfn:&#xa0;a&#xa0;callable&#xa0;that&#xa0;produces&#xa0;tuples …</span></code></blockquote>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-08-22 06:55:00-04:00" class="dt-published"></time>
+  Sat 22 Aug 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.volkerkrause.eu/2020/08/22/virtual-conferences.html" rel="bookmark" class="u-url"
+       title="Virtual Conferences" target="_blank">
+      <time class="m-date" datetime="2020-08-22 09:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Virtual Conferences
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>With physical meetings being impossible since March in many parts of the world, events such as conferences,
+meetups or sprints have been virtualized. While this initially was done rather ad-hoc with just a bunch of people
+crammed into a poorly working video call, things have improved considerably by now. Here’s some
+thoughts after having attended quite a few virtual events in the past months.</p>
+
+Technical Aspects
+
+<p>Probably the most obvious part of the evolution of virtual events is the clearly visible (and audible) quality
+improvements. A very welcome change especially for the larger events where you
+spent all day listening to people, and that can be quite exhausting if we don’t properly understand what’s being said
+and have to manually adjust audio levels for each speaker.</p>
+
+<p>The increased quality requirements also impacted my own setup, moving from …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-08-22 09:00:00+00:00" class="dt-published"></time>
+  Sat 22 Aug 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://cocoonfly.wordpress.com/2020/08/22/my-first-guadec/" rel="bookmark" class="u-url"
+       title="My First GUADEC" target="_blank">
+      <time class="m-date" datetime="2020-08-22 08:26:07+00:00">
+        Aug
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      My First GUADEC
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Finally, here it is! My <em>"My First GUADEC"</em> post. It’s been three months since I have been working on my GSoC project, and as the project itself and GSoC approach their final days, I would like to talk about my GUADEC experience.
+Ever since the GSoC results were announced, I had been aware of the fact that GSoC students, not only get to attend but also get an opportunity to present their work at the annual GNOME Conference called GUADEC, which brings together users and enthusiasts from all over the world. Words are not enough to express the kind of excitement I’ve had for attending this.</p>
+</div>
+
+
+
+<div><div><div><div><img alt="" src="https://cocoonfly.files.wordpress.com/2020/08/guadec.png"></div></div></div></div>
+
+
+
+<span></span>
+
+
+
+<div>Past, Present, and Future
+<p>When GSoC started and my involvement in the GNOME community
+increased, I spent a lot of time understanding and discovering how the community and it’s Software had …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>apoosmaximus</b></span>
+  on <time datetime="2020-08-22 08:26:07+00:00" class="dt-published"></time>
+  Sat 22 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pythoninsider.blogspot.com/2020/08/python-3510rc1-is-now-available.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
+       title="Python 3.5.10rc1 is now available" target="_blank">
+      <time class="m-date" datetime="2020-08-21 23:25:40.715000-04:00">
         Aug
         <span class="m-date-day">
           21
@@ -152,22 +306,24 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Flathub stats for KDE applications [that are part of the release service]
+      Python 3.5.10rc1 is now available
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I just discovered https://gitlab.gnome.org/Jehan/gimp-flathub-stats that tells you the download (including updates) stats for a given flathub application.</p><p></p><p>Ran it over the KDE applicatitions that are part of the release service that we have in flathub.</p><p></p><p>The results are somewhat surprising:</p><p></p><p>org.kde.kdenliveTotal:   22649 downloads in 8 daysorg.kde.kalziumTotal:   16571 downloads in 9 daysorg.kde.kgeographyTotal:   16343 downloads in 9 daysorg.kde.kbruchTotal:   15744 downloads in 9 daysorg.kde.kapmanTotal:   15473 downloads in 9 daysorg.kde.kblocksTotal:   15426 downloads in 9 daysorg.kde.katomicTotal:   15385 downloads in 9 daysorg.kde.khangmanTotal:   15370 downloads in 9 daysorg.kde.kbounceTotal:   15280 downloads in 9 daysorg.kde.kdiamondTotal:   15242 downloads in 9 daysorg.kde.kwordquizTotal:   15173 …</p>
+  <p>Python 3.5.10rc1 is now available.</p><p><a href="https://www.python.org/downloads/release/python-3510rc1/">You can download it here.</a></p><div>
+<a href="http://feeds.feedburner.com/~ff/PythonInsider?a=W5AUa26PlDY:rzaNn8iBhY4:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/PythonInsider?d=yIl2AUoC8zA"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=W5AUa26PlDY:rzaNn8iBhY4:-BTjWOF_DHI"><img src="http://feeds.feedburner.com/~ff/PythonInsider?i=W5AUa26PlDY:rzaNn8iBhY4:-BTjWOF_DHI"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=W5AUa26PlDY:rzaNn8iBhY4:F7zBnMyn0Lo"><img src="http://feeds.feedburner.com/~ff/PythonInsider?i=W5AUa26PlDY:rzaNn8iBhY4:F7zBnMyn0Lo"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=W5AUa26PlDY:rzaNn8iBhY4:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/PythonInsider?i=W5AUa26PlDY:rzaNn8iBhY4:V_sGLiPBpWU"></a> <a href="http://feeds.feedburner.com/~ff/PythonInsider?a=W5AUa26PlDY:rzaNn8iBhY4:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/PythonInsider?d=qj6IDK7rITs"></a>
+</div><img alt="" src="http://feeds.feedburner.com/~r/PythonInsider/~4/W5AUa26PlDY">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Albert Astals Cid</b></span>
-  on <time datetime="2020-08-21 23:12:13+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Larry Hastings (noreply@blogger.com)</b></span>
+  on <time datetime="2020-08-21 23:25:40.715000-04:00" class="dt-published"></time>
   Fri 21 Aug 2020
-  in Planet KDE.
+  in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -237,52 +393,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-08-21 15:00:00+00:00" class="dt-published"></time>
   Fri 21 Aug 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://people.gnome.org/~michael/blog/2020-08-21.html" rel="bookmark" class="u-url"
-       title="2020-08-21 Friday" target="_blank">
-      <time class="m-date" datetime="2020-08-21 11:46:15+00:00">
-        Aug
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      2020-08-21 Friday
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <ul> 
-    <li>
-        Sync calls with Dennis, Eloy, Andras &amp; Cor.
-    </li>
-    <li>
-        Pleased to have joined the excellent <a href="https://osb-alliance.de/news/make-open-source-rock">Open
-    Source Business Alliance</a>.
-    </li>
-    <li>
-        Great to see our <a href="https://www.collaboraoffice.com/success-story/implementing-vulkan-capable-libreoffice-user-interface-using-the-skia-library/">LibreOffice port to Skia</a>
-    write-up published too.
-    </li>
-</ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-21 11:46:15+00:00" class="dt-published"></time>
-  Fri 21 Aug 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -472,53 +582,6 @@ My adventures with Ranger
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nedbatchelder.com//blog/202008/do_a_pile_of_work.html" rel="bookmark" class="u-url"
-       title="Do a pile of work" target="_blank">
-      <time class="m-date" datetime="2020-08-19 17:03:59-04:00">
-        Aug
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Do a pile of work
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I had a large pile of data to feed through an expensive function.
-The <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a>
-module in the Python standard library has always worked well for me as a simple
-way to farm out work across threads or processes.</p><p>For example, if my work function is &#8220;workfn&#8221;, and it takes tuples of
-arguments as produced by &#8220;argsfn()&#8221;, this is how you could run them all:</p><blockquote><code><span>for</span>&#xa0;<span>args</span>&#xa0;<span>in</span>&#xa0;<span>argsfn</span><span>():</span>
-&#xa0;&#xa0;&#xa0;&#xa0;<span>workfn</span><span>(</span><span>*</span><span>args</span><span>)</span>
-</code></blockquote><p>This is how you would run them on a number of threads:</p><blockquote><code><span>import</span>&#xa0;<span>concurrent.futures</span>&#xa0;<span>as</span>&#xa0;<span>cf</span>
-
-<span>with</span>&#xa0;<span>cf</span><span>.</span><span>ThreadPoolExecutor</span><span>(</span><span>max_workers</span><span>=</span><span>nthreads</span><span>)</span>&#xa0;<span>as</span>&#xa0;<span>executor</span><span>:</span>
-&#xa0;&#xa0;&#xa0;&#xa0;<span>for</span>&#xa0;<span>args</span>&#xa0;<span>in</span>&#xa0;<span>argsfn</span><span>():</span>
-&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>executor</span><span>.</span><span>submit</span><span>(</span><span>workfn</span><span>,</span>&#xa0;<span>*</span><span>args</span><span>)</span>
-</code></blockquote><p>But this will generate all of the arguments up-front.  If I have millions of
-work invocations, this could be a problem.  I wanted a way to feed the tasks in
-as they are processed, to keep …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-08-19 17:03:59-04:00" class="dt-published"></time>
-  Wed 19 Aug 2020
-  in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://shibumi.dev/posts/how-i-install-arch-linux/" rel="bookmark" class="u-url"
        title="How I install Arch Linux" target="_blank">
       <time class="m-date" datetime="2020-08-19 00:00:00+00:00">
@@ -592,50 +655,6 @@ liked their &ldquo;focus and reply&rdquo; feature. Here&rsquo;s a …</p>
   on <time datetime="2020-08-18 09:42:20+00:00" class="dt-published"></time>
   Tue 18 Aug 2020
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pythoninsider.blogspot.com/2020/08/python-379-and-3612-security-updates.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
-       title="Python 3.7.9 and 3.6.12 security updates now available" target="_blank">
-      <time class="m-date" datetime="2020-08-17 19:38:01.040000-04:00">
-        Aug
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python 3.7.9 and 3.6.12 security updates now available
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Python&nbsp;<a href="https://www.python.org/downloads/release/python-379/">3.7.9</a>&nbsp;and <a href="https://www.python.org/downloads/release/python-3612/">3.6.12</a>,&nbsp;&nbsp;the lastest security fix rollups for&nbsp;<b>Python 3.7</b>&nbsp;and&nbsp;<b>Python 3.6</b>,<b>&nbsp;</b>are now available. You can find the release files including updated binary installers for 3.7.9, links to the changelogs, and more information here:
-<div>
-&nbsp; &nbsp;&nbsp;<a href="https://www.python.org/downloads/release/python-379/">https://www.python.org/downloads/release/python-379/</a>
-&nbsp; &nbsp;&nbsp;<a href="https://www.python.org/downloads/release/python-3612/">https://www.python.org/downloads/release/python-3612/</a>
-<div>
-&nbsp;&nbsp;</div>
-<div>
-<div>
-Note that&nbsp;<b>Python 3.8</b>&nbsp;is now the latest feature release series of Python 3. You should consider upgrading to 3.8 as soon as practical. Get the latest release of 3.8.x&nbsp;<a href="https://www.python.org/downloads/">here</a>.
-
-Binary installers are normally not provided for <b>security fix</b> releases. However, since 3.7.8 was&nbsp;the last 3.7.x&nbsp;<b>bugfix</b>&nbsp;release and there are security fixes published in 3.7.9 that apply to users of some of the binary installers provided with …</div></div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Unknown (noreply@blogger.com)</b></span>
-  on <time datetime="2020-08-17 19:38:01.040000-04:00" class="dt-published"></time>
-  Mon 17 Aug 2020
-  in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
 
