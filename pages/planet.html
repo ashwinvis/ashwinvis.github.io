@@ -142,6 +142,130 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-08-22_Experimenting_with_Sonic_Pi" rel="bookmark" class="u-url"
+       title="Experimenting with Sonic Pi" target="_blank">
+      <time class="m-date" datetime="2020-08-22 22:00:41+00:00">
+        Aug
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Experimenting with Sonic Pi
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>OK! Real talk about generating music. Here’s some Sonic Pi code:</p><pre>steps = (range -2, 2, inclusive: true)
+steps = steps.push(false)
+
+define :keys do |n|
+  last = rand_i 4
+  i = 0
+  result = []
+  result[i] = last
+  while i &lt; n
+    i += 1
+    step = steps.choose
+    if step then
+      last = last + step
+      result[i] = last
+    else
+      result[i] = false
+    end
+  end
+  print result
+  return result
+end
+
+define :melody do |key|
+  n = (scale key, :minor_pentatonic, num_octaves: 2)
+  k = keys 8
+  return k.map{ |i|
+    if i == nil then :r
+    else n[i]
+    end
+  }.ring
+end
+
+live_loop :piano do
+  use_synth :piano
+  m = melody(:c4).ring
+  print m
+  32.times do
+    play m.tick, amp: 0.8, hard: 0.4
+    sleep 0.25
+  end
+end
+
+tablas = [:tabla_tas1, :tabla_tas3,
+          :tabla_tas2, :tabla_tas3,
+          false, false, false,
+          false, false, false]
+
+define :tabla_pattern do
+  return 8.times.map{ tablas.choose }.ring …</pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-22 22:00:41+00:00" class="dt-published"></time>
+  Sat 22 Aug 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.verbum.org/2020/08/22/immutable-%E2%86%92-reprovisionable-anti-hysteresis/" rel="bookmark" class="u-url"
+       title="“Immutable” → reprovisionable, anti-hysteresis" target="_blank">
+      <time class="m-date" datetime="2020-08-22 19:27:49+00:00">
+        Aug
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      “Immutable” → reprovisionable, anti-hysteresis
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>This is going to be a longer blog entry, but here’s a TL;DR:</p>
+<p>I propose that instead of "immutable" or "read-only" when talking about operating systems (such as <a href="https://getfedora.org/en/coreos/">Fedora CoreOS</a>, <a href="https://cloud.google.com/container-optimized-os/docs">Google COOS</a>, <a href="https://www.flatcar-linux.org/">Flatcar</a> etc.), we use these terms:</p>
+<ul>
+<li>"fully managed": The system does not have "unmanaged state" – e.g. an admin interactively doing <code>ssh</code> and making changes not recorded declaratively somewhere else</li>
+<li>"image based": Traditional package managers end up with a lot of "hidden state" (related to above); image based updates avoid that</li>
+<li>"reprovisionable" and not a "pet": I don’t like the industry "pets vs cattle" term, and I think "reprovisionable" is both nicer and more descriptive</li>
+<li>"Has anti-hysteresis properties": (Yes I know this is an awkward term) See <a href="https://en.wikipedia.org/wiki/Hysteresis">https://en.wikipedia.org/wiki/Hysteresis</a> – I’ll talk more about this later</li>
+</ul>
+<p>(Terminology note: In this article …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Colin Walters</b></span>
+  on <time datetime="2020-08-22 19:27:49+00:00" class="dt-published"></time>
+  Sat 22 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://nedbatchelder.com//blog/202008/do_a_pile_of_work_better.html" rel="bookmark" class="u-url"
        title="Do a pile of work better" target="_blank">
       <time class="m-date" datetime="2020-08-22 06:55:00-04:00">
@@ -246,56 +370,6 @@ and have to manually adjust audio levels for each speaker.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://cocoonfly.wordpress.com/2020/08/22/my-first-guadec/" rel="bookmark" class="u-url"
-       title="My First GUADEC" target="_blank">
-      <time class="m-date" datetime="2020-08-22 08:26:07+00:00">
-        Aug
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      My First GUADEC
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Finally, here it is! My <em>"My First GUADEC"</em> post. It’s been three months since I have been working on my GSoC project, and as the project itself and GSoC approach their final days, I would like to talk about my GUADEC experience.
-Ever since the GSoC results were announced, I had been aware of the fact that GSoC students, not only get to attend but also get an opportunity to present their work at the annual GNOME Conference called GUADEC, which brings together users and enthusiasts from all over the world. Words are not enough to express the kind of excitement I’ve had for attending this.</p>
-</div>
-
-
-
-<div><div><div><div><img alt="" src="https://cocoonfly.files.wordpress.com/2020/08/guadec.png"></div></div></div></div>
-
-
-
-<span></span>
-
-
-
-<div>Past, Present, and Future
-<p>When GSoC started and my involvement in the GNOME community
-increased, I spent a lot of time understanding and discovering how the community and it’s Software had …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>apoosmaximus</b></span>
-  on <time datetime="2020-08-22 08:26:07+00:00" class="dt-published"></time>
-  Sat 22 Aug 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pythoninsider.blogspot.com/2020/08/python-3510rc1-is-now-available.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
        title="Python 3.5.10rc1 is now available" target="_blank">
       <time class="m-date" datetime="2020-08-21 23:25:40.715000-04:00">
@@ -324,6 +398,52 @@ increased, I spent a lot of time understanding and discovering how the community
   on <time datetime="2020-08-21 23:25:40.715000-04:00" class="dt-published"></time>
   Fri 21 Aug 2020
   in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2020/08/22/print-run-manager-zine/" rel="bookmark" class="u-url"
+       title="Wizard Zines' first print run: Help! I have a Manager!" target="_blank">
+      <time class="m-date" datetime="2020-08-22 03:22:07+00:00">
+        Aug
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Wizard Zines' first print run: Help! I have a Manager!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! For the first time, Wizard Zines is doing a ★★print shipment★★!</p>
+
+<p>I printed out 400 copies of <a href="https://wizardzines.com/zines/manager/">Help! I have a manager!</a> at the
+best print shop I could find in Montreal and they&rsquo;re ready to ship to you. Free
+shipping to anywhere in the world (as long as Canada Post will let me ship
+there) is included. The deadline to order a zine is <strong>September 6</strong>.</p>
+
+<p>I&rsquo;ve wanted to get into printing and shipping my zines for a long time, so I&rsquo;m
+very excited to try this out. So far the only option has been for people to
+print them on their home printers or at their local print shop.</p>
+
+<p>I&rsquo;m doing all the packaging and shipping myself from my house, so I&rsquo;m going to
+ship them all out in a big batch …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-22 03:22:07+00:00" class="dt-published"></time>
+  Sat 22 Aug 2020
+  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -427,40 +547,6 @@ increased, I spent a lot of time understanding and discovering how the community
   on <time datetime="2020-08-21 00:00:00+00:00" class="dt-published"></time>
   Fri 21 Aug 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-20_Generated_Music" rel="bookmark" class="u-url"
-       title="Generated Music" target="_blank">
-      <time class="m-date" datetime="2020-08-20 20:21:10+00:00">
-        Aug
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Generated Music
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>I’ve just bought the “album” Eōn by Jean-Michel Jarre. I listend to a lot of Oxygene when I was a teenager. The idea that fascinates me is that you’re buying an app: you’re buying the generator instead of the generated music. Sure, I also hate it being a binary tied to the Apple store and the devices I currently own that I need to keep buying. But I do like the idea of buying a generator. </p><ul><li><a href="https://jeanmicheljarre.com/eon">Eōn on Jean-Michel Jarre’s page</a></li></ul><p>I guess this is still something that I want to do eventually: to write a system that generates random music with a simple controller where I can drag a “plot point” towards the various “poles” appropriate for a role-playing game: fights, exploration, haunted, jovial, urban, underground, forest, grasslands… Something like that. It would influence the …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-20 20:21:10+00:00" class="dt-published"></time>
-  Thu 20 Aug 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -617,52 +703,6 @@ I did not install Arch Linux for a long time (nearly over 8 years, lol). Therefo
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jvns.ca/blog/2020/08/18/implementing--focus-and-reply--for-fastmail/" rel="bookmark" class="u-url"
-       title="Implementing 'focus and reply' for Fastmail with JMAP" target="_blank">
-      <time class="m-date" datetime="2020-08-18 09:42:20+00:00">
-        Aug
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Implementing 'focus and reply' for Fastmail with JMAP
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Last month I switched my email to Fastmail. One fun thing about Fastmail is
-that they built a new protocol called <a href="https://jmap.io/">JMAP</a> which is much
-easier to use than IMAP. So over the last couple of days I built a fun tiny
-email feature for myself to use with JMAP.</p>
-
-<p>The point of this post is mostly to give a simple end-to-end example of how to
-use the JMAP API becuase I couldn&rsquo;t find a lot of  examples when I was figuring
-it out. <a href="https://github.com/jvns/focus-reply-fastmail">Here&rsquo;s the github repo</a> and a <a href="https://gist.github.com/jvns/738eda48bff8c4dd2a5e349b8df7c7a8">gist which shows how to authenticate &amp; make your first request</a>.</p>
-
-cool feature from Hey: focus &amp; reply
-
-<p>I tried the <a href="https://hey.com">https://hey.com</a> email service for a little bit when it came out. It wasn&rsquo;t for me, but I
-liked their &ldquo;focus and reply&rdquo; feature. Here&rsquo;s a …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-18 09:42:20+00:00" class="dt-published"></time>
-  Tue 18 Aug 2020
-  in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://drewdevault.com/2020/08/17/Engineers-solve-problems.html" rel="bookmark" class="u-url"
        title="Software engineers solve problems" target="_blank">
       <time class="m-date" datetime="2020-08-17 00:00:00+00:00">
@@ -727,7 +767,7 @@ creativity to solving problems. Are these not themselves problems to …</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p>[2020-08-19: Fixed the rules for when <code>__rsub__()</code> is called before <code>__sub__()</code>]</p><p>The reaction to my blog post on <a href="https://snarky.ca/unravelling-attribute-access-in-python/">unravelling attribute access</a> was positive enough that I'm inspired to do another post on how much of Python's syntax is actually just syntactic sugar. In this post I want to tackle binary</p>
+  <p>[This post has been updated multiple times since it's initial posting; see the Corrections section at the end for what was changed.]</p><p>The reaction to my blog post on <a href="https://snarky.ca/unravelling-attribute-access-in-python/">unravelling attribute access</a> was positive enough that I'm inspired to do another post on how much of Python's syntax is actually</p>
   </p>
   </div>
 </header>
