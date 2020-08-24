@@ -1644,7 +1644,7 @@ numpy working. Although &lt;a href="http://packages.pypy.org/"&gt;PyPy claims
 otherwise&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Some eyecandy…&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;It is also interesting how the prompt looks :)&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;!&lt;/span&gt;python&lt;/pre&gt;
+&lt;pre class="m-code"&gt;!python&lt;/pre&gt;
 &lt;pre&gt;Python 3.7.4 (default, Jul 16 2019, 07:12:58)
 [GCC 9.1.0] on linux
 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
@@ -1653,7 +1653,7 @@ Traceback (most recent call last):
   File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt;
 KeyboardInterrupt
 &amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;!&lt;/span&gt;pypy3&lt;/pre&gt;
+&lt;pre class="m-code"&gt;!pypy3&lt;/pre&gt;
 &lt;pre&gt;Python 3.6.1 (784b254d669919c872a505b807db8462b6140973, May 09 2019, 13:17:30)
 [PyPy 7.1.1-beta0 with GCC 8.3.0] on linux
 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
@@ -1664,10 +1664,10 @@ effort''
 &amp;gt;&amp;gt;&amp;gt;&amp;gt;
 KeyboardInterrupt
 &amp;gt;&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;!&lt;/span&gt;rustpython&lt;/pre&gt;
+&lt;pre class="m-code"&gt;!rustpython&lt;/pre&gt;
 &lt;pre&gt;Welcome to the magnificent Rust Python 0.1.0 interpreter 😱 🖖
 &amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;!&lt;/span&gt;graalpython&lt;/pre&gt;
+&lt;pre class="m-code"&gt;!graalpython&lt;/pre&gt;
 &lt;pre&gt;Python 3.7.3 (Sat Jul 13 09:46:34 UTC 2019)
 [GraalVM CE, Java 1.8.0_222] on linux
 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
@@ -1904,47 +1904,47 @@ Hopf bifurcation. I wanted to check out myself.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Reference:
 &lt;a href="https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/"&gt;https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;pre class="m-code"&gt;from sympy import *
 
-&lt;span class="c1"&gt;## I would love to do it like this. Unfortunately I cannot find a nice way to make a recursive&lt;/span&gt;
-&lt;span class="c1"&gt;## sequence in sympy. So I went for the pythonic approach. If someone has a better idea let me&lt;/span&gt;
-&lt;span class="c1"&gt;## know!&lt;/span&gt;
+## I would love to do it like this. Unfortunately I cannot find a nice way to make a recursive
+## sequence in sympy. So I went for the pythonic approach. If someone has a better idea let me
+## know!
 
-&lt;span class="c1"&gt;# a, x = symbols(&amp;#39;a x&amp;#39;, real=True)&lt;/span&gt;
-&lt;span class="c1"&gt;# i = symbols(&amp;#39;i&amp;#39;, integer=True)&lt;/span&gt;
-&lt;span class="c1"&gt;# f, g = symbols(&amp;#39;f g&amp;#39;, cls=Function)&lt;/span&gt;
-&lt;span class="n"&gt;init_printing&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;lru_cache&lt;/span&gt;
+# a, x = symbols(&amp;#39;a x&amp;#39;, real=True)
+# i = symbols(&amp;#39;i&amp;#39;, integer=True)
+# f, g = symbols(&amp;#39;f g&amp;#39;, cls=Function)
+init_printing()&lt;/pre&gt;
+&lt;pre class="m-code"&gt;from functools import lru_cache
 
-&lt;span class="nd"&gt;@lru_cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;maxsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;
-    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+@lru_cache(maxsize=8)
+def f(i, a, x0):
+    if i == 0:
+        return x0
+    else:
+        return a * f(i-1, a, x0) * (1 - f(i-1, a, x0))
 
 
-&lt;span class="c1"&gt;# sequence(f, (x, 0, 10))&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
-&lt;span class="n"&gt;series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+# sequence(f, (x, 0, 10))&lt;/pre&gt;
+&lt;pre class="m-code"&gt;def series(n, a, x0=1/3): return [f(i, a, x0) for i in range(n)]
+series(30, 3.2)&lt;/pre&gt;
 &lt;div class="formula"&gt;
 &lt;span class="displaystyle"&gt;&lt;span class="symbol"&gt;[&lt;/span&gt;&lt;/span&gt;0.3333333333333333,  0.7111111111111111,  0.6573827160493827,  0.720738178204542,  0.6440789013854076,  0.7335720645618368,  0.6254210901002277,  0.7496625605058258,  0.6005395388213597,  0.7676537636274826,  0.5707566810113398,  0.7839791746952305,  0.5419386506861306,  0.7943716786516055,  0.5227050073850749,  0.7983503444468598,  0.5151586302990083,  0.7992646909678656,  0.5134100631677054,  0.7994245446586822,  0.5131038145790108,  0.7994505281391325,  0.5130540198310227,  0.799454696212004,  0.5130460317330444,  0.7994553633792654,  0.5130447530988549,  0.7994554701330878,  0.5130445485035884,  0.79945548721388&lt;span class="symbol"&gt;]&lt;/span&gt;
 &lt;/div&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;statistics&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;mean&lt;/span&gt;
+&lt;pre class="m-code"&gt;from statistics import mean
 
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;series_mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:])&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
-&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;axes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sharex&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sharey&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.5&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="n"&gt;axes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ravel&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;smean&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;series_mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$a = &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hlines&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;smean&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;linestyles&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dashed&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+def series_mean(n, a, x0=1/3):
+    s = series(n, a, x0)
+    return s, mean(s[n//3:])&lt;/pre&gt;
+&lt;pre class="m-code"&gt;N = 50
+fig, axes = plt.subplots(2, 2, sharex=True, sharey=True)
+for a, ax in zip(
+    (2, 3.2, 3.4, 3.5),
+    axes.ravel()
+):
+    s, smean = series_mean(N, a)
+    ax.plot(s)
+    ax.set_title(f&amp;#39;$a = {a}$&amp;#39;)
+    ax.hlines(smean, N//3, N, linestyles=&amp;#39;dashed&amp;#39;)&lt;/pre&gt;
 &lt;img src="images/feigenbaum_constant_6_0.png" style="width: 547px; height: 434px" /&gt;
 &lt;p&gt;In the last subplot we begin to see period doublings.&lt;/p&gt;
 &lt;section id="bifurcation-diagram"&gt;
@@ -1959,46 +1959,46 @@ transients and upto 300 values are calculated vfor each value of
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;.01&lt;/span&gt;&lt;span class="p"&gt;}],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Frame&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;FrameLabel&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;}]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;/pre&gt;
 &lt;p&gt;Before we do that, let us see if it makes any difference if we vary the
 initial condition.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
-&lt;span class="n"&gt;a_values&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;x0_values&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="m-code"&gt;import numpy as np
+N = 300
+a_values =  np.linspace(0, 4, 100)
+x0_values = np.linspace(0.1, 5, 100)
 
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;x0_values&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;smeans&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;series_mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x0&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;a_values&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a_values&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;smeans&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;series average&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+plt.figure()
+for x0 in x0_values:
+    smeans = [series_mean(N, a, x0)[1] for a in a_values]
+    plt.scatter(a_values, smeans, s=1, c=&amp;quot;r&amp;quot;)
+    plt.xlabel(&amp;quot;a&amp;quot;)
+    plt.ylabel(&amp;quot;series average&amp;quot;)&lt;/pre&gt;
 &lt;pre&gt;/usr/lib/python3.7/site-packages/ipykernel_launcher.py:8: RuntimeWarning: overflow encountered in double_scalars&lt;/pre&gt;
 &lt;img src="images/feigenbaum_constant_11_1.png" style="width: 567px; height: 432px" /&gt;
 &lt;p&gt;The average value where the series oscillates around does not seem to
 depend on the value of &lt;span class="formula"&gt;&lt;i&gt;x&lt;/i&gt;&lt;sub&gt;0&lt;/sub&gt;&lt;/span&gt;. So now instead of plotting the mean,
 we can plot the full distribution where of values where the series
 oscillates around.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
-&lt;span class="n"&gt;a_values&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="m-code"&gt;import numpy as np
+N = 300
+a_values =  np.linspace(0, 4, 100)
 
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;a_values&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;scatter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones_like&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;series distribution&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+plt.figure()
+for a in a_values:
+    s = series(N, a)[50:]
+    plt.scatter(a * np.ones_like(s), s, s=1, c=&amp;quot;r&amp;quot;)
+    plt.xlabel(&amp;quot;a&amp;quot;)
+    plt.ylabel(&amp;quot;series distribution&amp;quot;)&lt;/pre&gt;
 &lt;img src="images/feigenbaum_constant_13_0.png" style="width: 567px; height: 432px" /&gt;
 &lt;p&gt;There is our multiple Hopf bifurcation :) Let us see what happens for
 &lt;span class="formula"&gt;&lt;i&gt;a&lt;/i&gt; &amp;gt; 3.5&lt;/span&gt;.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
-&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;axes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sharex&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sharey&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3.6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.9&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-    &lt;span class="n"&gt;axes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ravel&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;smean&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;series_mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$a = &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hlines&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;smean&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;linestyles&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dashed&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;N = 300
+fig, axes = plt.subplots(2, 2, sharex=True, sharey=True, figsize=(15, 5))
+for a, ax in zip(
+    (3.6, 3.7, 3.8, 3.9),
+    axes.ravel()
+):
+    s, smean = series_mean(N, a)
+    ax.plot(s)
+    ax.set_title(f&amp;#39;$a = {a}$&amp;#39;)
+    ax.hlines(smean, N//3, N, linestyles=&amp;#39;dashed&amp;#39;)&lt;/pre&gt;
 &lt;img src="images/feigenbaum_constant_15_0.png" style="width: 1214px; height: 450px" /&gt;
 &lt;p&gt;Nice! Maybe I will do a follow up to compute the Lyapunov constant.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;You
@@ -2053,12 +2053,12 @@ small, shocks will prevail if the Reynolds number is sufficiently large.&lt;/p&g
 </content><category term="Blog"></category><category term="fluid-mechanics"></category><category term="open-source"></category><category term="open-access"></category><category term="research"></category><category term="academia"></category></entry><entry><title>A dictionary of horrors</title><link href="https://ashwinvis.github.io/a-dictionary-of-horrors.html" rel="alternate"></link><published>2019-01-31T00:00:00+01:00</published><updated>2019-06-29T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2019-01-31:/a-dictionary-of-horrors.html</id><summary type="html"></summary><content type="html">&lt;p&gt;This post demonstrates a strange behaviour encountered while
 initializing a dictionary using the &lt;code&gt;dict.fromkeys&lt;/code&gt; method. TLDR: be
 careful while passing mutable arguments such as lists.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;planets&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Mercury&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Venus&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Earth&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Mars&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="m-code"&gt;planets = (&amp;quot;Mercury&amp;quot;, &amp;quot;Venus&amp;quot;, &amp;quot;Earth&amp;quot;, &amp;quot;Mars&amp;quot;)
 
-&lt;span class="n"&gt;sattelites&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fromkeys&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;planets&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[])&lt;/span&gt;
-&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;/pre&gt;
+sattelites = dict.fromkeys(planets, value=[])
+sattelites&lt;/pre&gt;
 &lt;pre&gt;{'Mercury': [], 'Venus': [], 'Earth': [], 'Mars': []}&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Earth&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Moon&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;sattelites[&amp;quot;Earth&amp;quot;].append(&amp;quot;Moon&amp;quot;)&lt;/pre&gt;
 &lt;section id="what-you-expect"&gt;
 &lt;h2&gt;What you expect&lt;/h2&gt;
 &lt;pre class="m-code"&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sattelites&lt;/span&gt;
@@ -2066,31 +2066,31 @@ careful while passing mutable arguments such as lists.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="what-you-actually-get"&gt;
 &lt;h2&gt;What you actually get&lt;/h2&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;sattelites&lt;/pre&gt;
 &lt;pre&gt;{'Mercury': ['Moon'], 'Venus': ['Moon'], 'Earth': ['Moon'], 'Mars': ['Moon']}&lt;/pre&gt;
 &lt;section id="why"&gt;
 &lt;h3&gt;Why?&lt;/h3&gt;
 &lt;p&gt;Surely string as keys are valid and hashable, no doubt about that, but
 this behaviour is weird.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Earth&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Mars&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;id(sattelites[&amp;quot;Earth&amp;quot;]), id(sattelites[&amp;quot;Mars&amp;quot;])&lt;/pre&gt;
 &lt;pre&gt;(139764445576200, 139764445576200)&lt;/pre&gt;
 &lt;p&gt;Apparently the same &lt;code&gt;list&lt;/code&gt; instance is assigned to all the dictionary
 items which gets mutated. This is also the case if you initialize as
 follows.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fromkeys&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;planets&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Earth&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Mars&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;sattelites = dict.fromkeys(planets, list())
+id(sattelites[&amp;quot;Earth&amp;quot;]), id(sattelites[&amp;quot;Mars&amp;quot;])&lt;/pre&gt;
 &lt;pre&gt;(139764445511368, 139764445511368)&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;id&lt;/code&gt; is still the same across dictionaries!&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="the-solution-use-dictionary-comprehensions"&gt;
 &lt;h3&gt;The solution: Use dictionary comprehensions&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;planet&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;planet&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;planets&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;sattelites = {planet: [] for planet in planets}
+sattelites&lt;/pre&gt;
 &lt;pre&gt;{'Mercury': [], 'Venus': [], 'Earth': [], 'Mars': []}&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Earth&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Moon&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;sattelites[&amp;quot;Earth&amp;quot;].append(&amp;quot;Moon&amp;quot;)
+sattelites&lt;/pre&gt;
 &lt;pre&gt;{'Mercury': [], 'Venus': [], 'Earth': ['Moon'], 'Mars': []}&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Earth&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sattelites&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Mars&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;id(sattelites[&amp;quot;Earth&amp;quot;]), id(sattelites[&amp;quot;Mars&amp;quot;])&lt;/pre&gt;
 &lt;pre&gt;(139764445567048, 139764351351752)&lt;/pre&gt;
 &lt;p&gt;Finally the &lt;code&gt;id&lt;/code&gt;s are different :)&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;You
@@ -2287,70 +2287,70 @@ TDMA specially designed for problems with periodic BC.&lt;/blockquote&gt;
 &lt;h2&gt;Demo&lt;/h2&gt;
 &lt;p&gt;We will be reusing the following &lt;code&gt;Base&lt;/code&gt; class to store the input
 parameters for OUCS3&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.sparse&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;diags&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.sparse.linalg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;inv&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
+&lt;pre class="m-code"&gt;%matplotlib inline
+import numpy as np
+from scipy.sparse import diags
+from scipy.sparse.linalg import inv
+import seaborn as sns
 
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Gather input parameters for OUCS3&lt;/span&gt;
+class Base:
+    def __init__(self, L, N, alpha=0.0):
+        &amp;quot;&amp;quot;&amp;quot;Gather input parameters for OUCS3
 
-&lt;span class="sd"&gt;        Parameters&lt;/span&gt;
-&lt;span class="sd"&gt;        ----------&lt;/span&gt;
-&lt;span class="sd"&gt;        L: float&lt;/span&gt;
-&lt;span class="sd"&gt;            length of the domain&lt;/span&gt;
-&lt;span class="sd"&gt;        N: int&lt;/span&gt;
-&lt;span class="sd"&gt;            number of points&lt;/span&gt;
-&lt;span class="sd"&gt;        alpha: float&lt;/span&gt;
-&lt;span class="sd"&gt;            upwind factor, adds numerical dissipation&lt;/span&gt;
+        Parameters
+        ----------
+        L: float
+            length of the domain
+        N: int
+            number of points
+        alpha: float
+            upwind factor, adds numerical dissipation
 
-&lt;span class="sd"&gt;        &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-        &lt;span class="c1"&gt;# Scalar parameters&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;L&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;
+        &amp;quot;&amp;quot;&amp;quot;
+        # Scalar parameters
+        self.L = L
+        self.N = N
 
-        &lt;span class="n"&gt;delta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;L&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        delta = L / (N - 1)
 
-        &lt;span class="n"&gt;a0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;150&lt;/span&gt;
-        &lt;span class="n"&gt;a1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.57557379&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;30.0&lt;/span&gt;
-        &lt;span class="n"&gt;a2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.183205192&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;4.0&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;300.0&lt;/span&gt;
+        a0 = -11 * alpha / 150
+        a1 = 1.57557379 / 2.0 + alpha / 30.0
+        a2 = 0.183205192 / 4.0 + alpha / 300.0
 
-        &lt;span class="n"&gt;b0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;
-        &lt;span class="n"&gt;b1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.3793894912&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;60.0&lt;/span&gt;
+        b0 = 1.0
+        b1 = 0.3793894912 + alpha / 60.0
 
-        &lt;span class="c1"&gt;# Create pentadiagonal matrix, A&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;diags&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;delta&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,],&lt;/span&gt;
-            &lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-            &lt;span class="nb"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;csc&amp;quot;&lt;/span&gt;
-        &lt;span class="p"&gt;)&lt;/span&gt;
+        # Create pentadiagonal matrix, A
+        self.A = diags(
+            np.array([-a2, -a1, a0, a1, a2]) / delta,
+            [-2, -1, 0, 1, 2,],
+            shape=(N, N),
+            format=&amp;quot;csc&amp;quot;
+        )
 
-        &lt;span class="c1"&gt;# Create tridiagonal matrix, B&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;diags&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;b1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-            &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-            &lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-            &lt;span class="nb"&gt;format&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;csc&amp;quot;&lt;/span&gt;
-        &lt;span class="p"&gt;)&lt;/span&gt;
+        # Create tridiagonal matrix, B
+        self.B = diags(
+            [b1, b0, b1],
+            [-1, 0, 1],
+            shape=(N, N),
+            format=&amp;quot;csc&amp;quot;
+        )
 
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;Au&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;
-        &lt;span class="c1"&gt;# inefficient alternative&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;inv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt; &lt;span class="n"&gt;Au&lt;/span&gt;
+    def diff(self, u):
+        Au = self.A @ u
+        # inefficient alternative
+        return inv(self.B) @ Au
 
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)})&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lineplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;label&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;field&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+    def plot(self, **fields):
+        fields.update({&amp;quot;x&amp;quot;: np.linspace(0, self.L, self.N)})
+        for field in fields:
+            if field != &amp;quot;x&amp;quot;:
+                sns.lineplot(&amp;quot;x&amp;quot;, field, data=fields, label=field)&lt;/pre&gt;
 &lt;p&gt;Have a look at how the arrays look like&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;A = &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;B = &lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;o = Base(4 * np.pi, 6)
+print(&amp;quot;\nA = \n&amp;quot;, o.A.toarray())
+print(&amp;quot;\nB = \n&amp;quot;, o.B.toarray())&lt;/pre&gt;
 &lt;pre&gt;A =
  [[ 0.          0.31345045  0.01822376  0.          0.          0.        ]
  [-0.31345045  0.          0.31345045  0.01822376  0.          0.        ]
@@ -2369,35 +2369,35 @@ B =
 &lt;p&gt;We can inherit the class to use an efficient algorithm to solve such
 arrays, such as &lt;code&gt;scipy.linalg.solve_toeplitz&lt;/code&gt; which does not accept
 sparse arrays as inputs.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.linalg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;solve_toeplitz&lt;/span&gt;
+&lt;pre class="m-code"&gt;from scipy.linalg import solve_toeplitz
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OUCS3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;A class to perform OUCS3 compact scheme finite differentiation.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;Au&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;
-        &lt;span class="n"&gt;B_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="n"&gt;B_row&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;solve_toeplitz&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;B_column&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;B_row&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;Au&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+class OUCS3(Base):
+    &amp;quot;&amp;quot;&amp;quot;A class to perform OUCS3 compact scheme finite differentiation.&amp;quot;&amp;quot;&amp;quot;
+    def diff(self, u):
+        Au = self.A @ u
+        B_column = self.B[:,0].toarray()
+        B_row = self.B[0,:].toarray()
+        return solve_toeplitz((B_column, B_row), Au)&lt;/pre&gt;
 &lt;section id="test-that-everything-works"&gt;
 &lt;h3&gt;Test that everything works&lt;/h3&gt;
 &lt;p&gt;Let’s compare derivatives of a gaussian pulse computed using OUCS3 and
 explicit finite difference schemes.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.signal&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;gausspulse&lt;/span&gt;
+&lt;pre class="m-code"&gt;from scipy.signal import gausspulse
 
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;init_params_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Initialize parameters and generate a gaussian pulse.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="n"&gt;L&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;
-    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+def init_params_fields(N):
+    &amp;quot;&amp;quot;&amp;quot;Initialize parameters and generate a gaussian pulse.&amp;quot;&amp;quot;&amp;quot;
+    L = 2 * np.pi
+    x = np.linspace(0, L, N)
 
-    &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gausspulse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;fc&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;
+    u = gausspulse(abs(x - L/2), fc=2)
+    return L, N, x, u
 
-&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init_params_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+L, N, x, u = init_params_fields(100)
 
-&lt;span class="n"&gt;oper&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUCS3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;ux&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;oper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+oper = OUCS3(L, N)
+ux = oper.diff(u)
 
-&lt;span class="n"&gt;oper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ux_OUCS3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ux&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ux_explicit&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gradient&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;/pre&gt;
+oper.plot(u=u, ux_OUCS3=ux, ux_explicit=np.gradient(u, x))&lt;/pre&gt;
 &lt;img src="images/lightweight_classes_8_0.png" /&gt;
 &lt;/section&gt;
 &lt;section id="cost-of-instantiation-and-computing-derivatives"&gt;
@@ -2411,14 +2411,14 @@ will use&lt;/p&gt;
 simulations (&lt;span class="formula"&gt;&lt;i&gt;N&lt;/i&gt; = 1003&lt;/span&gt; to &lt;span class="formula"&gt;&lt;i&gt;N&lt;/i&gt; = 10003&lt;/span&gt;). We shall use the
 package &lt;code&gt;line_profiler&lt;/code&gt; to time the time elapsed in each line. The
 system has been tuned using &lt;code&gt;perf&lt;/code&gt; package to reduce jitter.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; line_profiler
+&lt;pre class="m-code"&gt;%load_ext line_profiler
 
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;profile_OUCS3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init_params_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;oper&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUCS3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# instantiate&lt;/span&gt;
-    &lt;span class="n"&gt;ux&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;oper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# compute derivative&lt;/span&gt;
+def profile_OUCS3(N):
+    L, N, x, u = init_params_fields(N)
+    oper = OUCS3(L, N)  # instantiate
+    ux = oper.diff(u)   # compute derivative
 
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f profile_OUCS3 -f OUCS3.diff profile_OUCS3(1_000)&lt;/pre&gt;
+%lprun -f profile_OUCS3 -f OUCS3.diff profile_OUCS3(1_000)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.01216 s
@@ -2454,37 +2454,37 @@ this scale, we see it can be benificial to store &lt;code&gt;B_column&lt;/code&g
 &lt;h2&gt;HOWTO: create a lightweight class with cached attributes&lt;/h2&gt;
 &lt;p&gt;Let us begin by inheriting the &lt;code&gt;Base&lt;/code&gt; class wherein the &lt;code&gt;diff&lt;/code&gt;
 method uses stored values for &lt;code&gt;B_column&lt;/code&gt; and &lt;code&gt;B_row&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scipy.linalg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;solve_toeplitz&lt;/span&gt;
+&lt;pre class="m-code"&gt;from scipy.linalg import solve_toeplitz
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BaseCached&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;Au&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;
-        &lt;span class="n"&gt;B_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_B_column&lt;/span&gt;
-        &lt;span class="n"&gt;B_row&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_B_row&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;solve_toeplitz&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;B_column&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;B_row&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;Au&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+class BaseCached(Base):
+    def diff(self, u):
+        Au = self.A @ u
+        B_column = self._B_column
+        B_row = self._B_row
+        return solve_toeplitz((B_column, B_row), Au)&lt;/pre&gt;
 &lt;section id="first-run"&gt;
 &lt;h3&gt;First run&lt;/h3&gt;
 &lt;p&gt;If we are not going to rely on a third-party packages, we can do the
 following now (with Python 3) with &lt;code&gt;functools.lru_cache&lt;/code&gt;
 (&lt;a href="https://docs.python.org/3/library/functools.html?highlight=lru_cache#functools.lru_cache"&gt;docs&lt;/a&gt;).&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;functools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;lru_cache&lt;/span&gt;
+&lt;pre class="m-code"&gt;from functools import lru_cache
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OUCS3Native&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseCached&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;A native implementation of a ``cached_property``.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="nd"&gt;@property&lt;/span&gt;
-    &lt;span class="nd"&gt;@lru_cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;maxsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_B_column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+class OUCS3Native(BaseCached):
+    &amp;quot;&amp;quot;&amp;quot;A native implementation of a ``cached_property``.&amp;quot;&amp;quot;&amp;quot;
+    @property
+    @lru_cache(maxsize=2)
+    def _B_column(self):
+        return self.B[:,0].toarray()
 
-    &lt;span class="nd"&gt;@property&lt;/span&gt;
-    &lt;span class="nd"&gt;@lru_cache&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;maxsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_B_row&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    @property
+    @lru_cache(maxsize=2)
+    def _B_row(self):
+        return self.B[0,:].toarray()
 
-&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init_params_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1_000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;oper_native&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUCS3Native&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+L, N, x, u = init_params_fields(1_000)
+oper_native = OUCS3Native(L, N)
 
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f OUCS3Native.diff oper_native.diff(u)&lt;/pre&gt;
+%lprun -f OUCS3Native.diff oper_native.diff(u)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.011203 s
@@ -2501,7 +2501,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 &lt;/section&gt;
 &lt;section id="second-run"&gt;
 &lt;h3&gt;Second run&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f OUCS3Native.diff oper_native.diff(u)&lt;/pre&gt;
+&lt;pre class="m-code"&gt;%lprun -f OUCS3Native.diff oper_native.diff(u)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.006538 s
@@ -2526,7 +2526,7 @@ the return value, and returns the cache for future calls if the function
 parameters were “unchanged”.&lt;/p&gt;
 &lt;p&gt;Such an implementation would be protected from simple initialization
 attempts such as:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;oper_native&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_B_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;oper_native._B_column = 0&lt;/pre&gt;
 &lt;pre&gt;---------------------------------------------------------------------------
 
 AttributeError                            Traceback (most recent call last)
@@ -2542,15 +2542,15 @@ behaviours:&lt;/p&gt;
 &lt;li&gt;Overwriting the original array after first run does not modify the
 result:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;oper_native&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zeros&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;pre class="m-code"&gt;oper_native.B = np.zeros((N,N))
 
-&lt;span class="n"&gt;ux&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;oper_native&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;oper_native&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ux&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ux&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+ux = oper_native.diff(u)
+oper_native.plot(ux=ux)&lt;/pre&gt;
 &lt;img src="images/lightweight_classes_23_0.png" /&gt;
 &lt;ul&gt;
 &lt;li&gt;No error is raised when modifying the array in place&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;oper_native&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_B_column&lt;/span&gt;&lt;span class="p"&gt;[:]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;oper_native._B_column[:] = 0&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;If &lt;code&gt;lru_cache(maxsize=None)&lt;/code&gt; is used it would lead to a potential
 memory leak.&lt;/li&gt;
@@ -2571,27 +2571,27 @@ random location in a memory.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="werkzeug"&gt;
 &lt;h3&gt;Werkzeug&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;werkzeug.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cached_property&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;wcached_property&lt;/span&gt;
+&lt;pre class="m-code"&gt;from werkzeug.utils import cached_property as wcached_property
 
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OUCS3Werkzeug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseCached&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Werkzeug implementation of a ``cached_property``.&lt;/span&gt;
+class OUCS3Werkzeug(BaseCached):
+    &amp;quot;&amp;quot;&amp;quot;Werkzeug implementation of a ``cached_property``.
 
-&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="nd"&gt;@wcached_property&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_B_column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &amp;quot;&amp;quot;&amp;quot;
+    @wcached_property
+    def _B_column(self):
+        return self.B[:,0].toarray()
 
-    &lt;span class="nd"&gt;@wcached_property&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_B_row&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/pre&gt;
+    @wcached_property
+    def _B_row(self):
+        return self.B[0,:].toarray()&lt;/pre&gt;
 &lt;/section&gt;
 &lt;section id="id1"&gt;
 &lt;h3&gt;First run&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init_params_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1_000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;oper_wz&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUCS3Werkzeug&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="m-code"&gt;L, N, x, u = init_params_fields(1_000)
+oper_wz = OUCS3Werkzeug(L, N)
 
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f OUCS3Werkzeug.diff oper_wz.diff(u)&lt;/pre&gt;
+%lprun -f OUCS3Werkzeug.diff oper_wz.diff(u)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.009176 s
@@ -2608,7 +2608,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 &lt;/section&gt;
 &lt;section id="id2"&gt;
 &lt;h3&gt;Second run&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f OUCS3Werkzeug.diff oper_wz.diff(u)&lt;/pre&gt;
+&lt;pre class="m-code"&gt;%lprun -f OUCS3Werkzeug.diff oper_wz.diff(u)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.010082 s
@@ -2625,27 +2625,27 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 &lt;/section&gt;
 &lt;section id="cached-property"&gt;
 &lt;h3&gt;cached_property&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;cached_property&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cached_property&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ccached_property&lt;/span&gt;
+&lt;pre class="m-code"&gt;from cached_property import cached_property as ccached_property
 
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OUCS3CachedProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BaseCached&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Werkzeug implementation of a ``cached_property``.&lt;/span&gt;
+class OUCS3CachedProperty(BaseCached):
+    &amp;quot;&amp;quot;&amp;quot;Werkzeug implementation of a ``cached_property``.
 
-&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="nd"&gt;@ccached_property&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_B_column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &amp;quot;&amp;quot;&amp;quot;
+    @ccached_property
+    def _B_column(self):
+        return self.B[:,0].toarray()
 
-    &lt;span class="nd"&gt;@ccached_property&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_B_row&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toarray&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/pre&gt;
+    @ccached_property
+    def _B_row(self):
+        return self.B[0,:].toarray()&lt;/pre&gt;
 &lt;/section&gt;
 &lt;section id="id3"&gt;
 &lt;h3&gt;First run&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;init_params_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1_000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;oper_cp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OUCS3CachedProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="m-code"&gt;L, N, x, u = init_params_fields(1_000)
+oper_cp = OUCS3CachedProperty(L, N)
 
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f OUCS3CachedProperty.diff oper_cp.diff(u)&lt;/pre&gt;
+%lprun -f OUCS3CachedProperty.diff oper_cp.diff(u)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.010591 s
@@ -2662,7 +2662,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 &lt;/section&gt;
 &lt;section id="id4"&gt;
 &lt;h3&gt;Second run&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;lprun&lt;/span&gt; -f OUCS3CachedProperty.diff oper_cp.diff(u)&lt;/pre&gt;
+&lt;pre class="m-code"&gt;%lprun -f OUCS3CachedProperty.diff oper_cp.diff(u)&lt;/pre&gt;
 &lt;pre&gt;Timer unit: 1e-06 s
 
 Total time: 0.006916 s
@@ -2680,8 +2680,8 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 &lt;section id="differences-from-the-native-implementation"&gt;
 &lt;h3&gt;Differences from the native implementation&lt;/h3&gt;
 &lt;p&gt;Overwriting cached property is OK as follows&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;oper_wz&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_B_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="n"&gt;oper_cp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_B_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;oper_wz._B_column = 0
+oper_cp._B_column = 0&lt;/pre&gt;
 &lt;p&gt;An advantage of such implementation is there is no need to add a
 &lt;code&gt;maxsize&lt;/code&gt; parameter, and thus no risk of having a memory leak.&lt;/p&gt;
 &lt;p&gt;The rest of the “caveats” mentioned before still persist in the
@@ -2722,39 +2722,39 @@ Here, we
 use&lt;/em&gt;&lt;a href="https://fluidfft.readthedocs.io"&gt;fluidfft&lt;/a&gt;&lt;em&gt;instead.&lt;/em&gt;&lt;/p&gt;
 &lt;section id="setup"&gt;
 &lt;h2&gt;Setup&lt;/h2&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;fluidfft&lt;/span&gt;     &lt;span class="c1"&gt;# fft, ifft and other operators&lt;/span&gt;
+&lt;pre class="m-code"&gt;import fluidfft     # fft, ifft and other operators
 
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;  &lt;span class="c1"&gt;# numpy arrays!&lt;/span&gt;
+import numpy as np  # numpy arrays!
 
-&lt;span class="c1"&gt;# for displaying images&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;PIL&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;io&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;# We go one step further and directly load from the internet&lt;/span&gt;
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+# for displaying images
+from PIL import Image
+import urllib
+import io
+import matplotlib.pyplot as plt&lt;/pre&gt;
+&lt;pre class="m-code"&gt;# We go one step further and directly load from the internet
+%matplotlib inline
 
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;load_image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;fd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;image_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;BytesIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-    &lt;span class="n"&gt;im&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;image_file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;im&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;im&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;float64&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Convert the PIL.PngImagePlugin.PngImageFile object to a numpy array&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;im&lt;/span&gt;
+def load_image(url):
+    fd = urllib.request.urlopen(url)
+    image_file = io.BytesIO(fd.read())
+    im = Image.open(image_file)
+    im = np.array(im, dtype=np.float64)  # Convert the PIL.PngImagePlugin.PngImageFile object to a numpy array
+    return im
 
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;im&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;im&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;gist_gray&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;off&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+def display(im):
+    plt.imshow(im, cmap=&amp;quot;gist_gray&amp;quot;)
+    plt.axis(&amp;#39;off&amp;#39;)&lt;/pre&gt;
 &lt;/section&gt;
 &lt;section id="intense-cat"&gt;
 &lt;h2&gt;Intense cat&lt;/h2&gt;
 &lt;p&gt;Let’s perform some Fourier space operations on &lt;a href="https://commons.wikimedia.org/wiki/File:Intensity_image_with_gradient_images.png"&gt;this public domain,
 intense
 kitty&lt;/a&gt;:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;image&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;load_image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;https://upload.wikimedia.org/wikipedia/commons/6/67/Intensity_image_with_gradient_images.png&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;image = load_image(&amp;quot;https://upload.wikimedia.org/wikipedia/commons/6/67/Intensity_image_with_gradient_images.png&amp;quot;)
+display(image)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_7_0.png" /&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;image&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;205&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Crop to the first frame and trim the frame edges&lt;/span&gt;
-&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;image = image[5:-5, 5:205]  # Crop to the first frame and trim the frame edges
+display(image)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_8_0.png" /&gt;
 &lt;/section&gt;
 &lt;section id="edge-detection-on-intensity-image"&gt;
@@ -2767,16 +2767,16 @@ the kitty is already black and white, but in fact it’s still encoded
 in three RGB channels in the PNG file. Combining these, in general,
 could be done as follows …&lt;/blockquote&gt;
 &lt;p&gt;we skip it, since PIL was kind enough to do it for us:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;image.shape&lt;/pre&gt;
 &lt;pre&gt;(200, 200)&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;image_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;image&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;image_bw = image&lt;/pre&gt;
 &lt;p&gt;Next, we transform to Fourier space using &lt;code&gt;fluidfft&lt;/code&gt;’s real FFT
 transform. We have to rely on the &lt;code&gt;fft2d.with_pyfftw&lt;/code&gt; backend since
 the other Cythonized &lt;code&gt;fft2d.with_fftw2d&lt;/code&gt; implementation assumes a
 periodic boundary.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;# Prepare our FFT object&lt;/span&gt;
-&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fluidfft&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_fft_object&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fft2d.with_pyfftw&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# A more powerful option is to use an &amp;quot;Operator&amp;quot; class, demonstrated below&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;image_fs_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;image_bw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;# Prepare our FFT object
+o = fluidfft.create_fft_object(&amp;quot;fft2d.with_pyfftw&amp;quot;, *image.shape)  # A more powerful option is to use an &amp;quot;Operator&amp;quot; class, demonstrated below&lt;/pre&gt;
+&lt;pre class="m-code"&gt;image_fs_bw = o.fft(image_bw)&lt;/pre&gt;
 &lt;p&gt;The simplest way to do some edge detection is by calculating the
 derivative of the intensity image. The derivative (the rate of change)
 is high where a sharp transition from low to high intensity occurs
@@ -2791,28 +2791,28 @@ the gradient, which is a good multi-directional proxy for both kinds of
 edges (intensity transitions form low to high and from high to low).&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fluidfft&lt;/code&gt;’s operator classes also supplies these wavenumbers
 &lt;span class="formula"&gt;&lt;b&gt;k&lt;/b&gt;&lt;/span&gt;, so you do not need to build them :).&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fluidfft.fft2d.operators&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;OperatorsPseudoSpectral2D&lt;/span&gt;
+&lt;pre class="m-code"&gt;from fluidfft.fft2d.operators import OperatorsPseudoSpectral2D
 
-&lt;span class="n"&gt;op&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;OperatorsPseudoSpectral2D&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ly&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fft&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fft2d.with_pyfftw&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# The lengths are arbitary&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;kx&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;KX&lt;/span&gt;
-&lt;span class="n"&gt;ky&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;KY&lt;/span&gt; &lt;span class="c1"&gt;# N.B.: we use broadcasting to multiply in the right direction&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;# do both derivatives separately&lt;/span&gt;
-&lt;span class="n"&gt;d_image_dx_fs_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;kx&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;image_fs_bw&lt;/span&gt;
-&lt;span class="n"&gt;d_image_dy_fs_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;ky&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;image_fs_bw&lt;/span&gt;&lt;/pre&gt;
+op = OperatorsPseudoSpectral2D(*image.shape, lx=np.pi, ly=np.pi, fft=&amp;quot;fft2d.with_pyfftw&amp;quot;)  # The lengths are arbitary&lt;/pre&gt;
+&lt;pre class="m-code"&gt;kx = op.KX
+ky = op.KY # N.B.: we use broadcasting to multiply in the right direction&lt;/pre&gt;
+&lt;pre class="m-code"&gt;# do both derivatives separately
+d_image_dx_fs_bw = 1j * kx * image_fs_bw
+d_image_dy_fs_bw = 1j * ky * image_fs_bw&lt;/pre&gt;
 &lt;p&gt;An &lt;strong&gt;effortless and efficent&lt;/strong&gt; way to do the gradient calculation was to
 use the Pythranized function.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;d_image_dx_fs_bw&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d_image_dy_fs_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gradfft_from_fft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;image_fs_bw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;# transform back to normal space&lt;/span&gt;
-&lt;span class="n"&gt;d_image_dx_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ifft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dx_fs_bw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;d_image_dy_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;op&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ifft&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dy_fs_bw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;# and square-sum them in real space to get the gradient magnitude&lt;/span&gt;
-&lt;span class="n"&gt;d_image_grad_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dx_bw&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;d_image_dy_bw&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_grad_bw&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;d_image_dx_fs_bw, d_image_dy_fs_bw = op.gradfft_from_fft(image_fs_bw)&lt;/pre&gt;
+&lt;pre class="m-code"&gt;# transform back to normal space
+d_image_dx_bw = op.ifft(d_image_dx_fs_bw)
+d_image_dy_bw = op.ifft(d_image_dy_fs_bw)&lt;/pre&gt;
+&lt;pre class="m-code"&gt;# and square-sum them in real space to get the gradient magnitude
+d_image_grad_bw = np.sqrt(d_image_dx_bw ** 2 + d_image_dy_bw ** 2)&lt;/pre&gt;
+&lt;pre class="m-code"&gt;display(d_image_grad_bw)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_24_0.png" /&gt;
 &lt;p&gt;To get maximum contrast, rescale so that the maximum is 255 (the maximum
 brightness value, i.e. bright white):&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;amax_d_image_grad_bw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;d_image_grad_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_grad_bw&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;amax_d_image_grad_bw&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;amax_d_image_grad_bw = d_image_grad_bw.max()&lt;/pre&gt;
+&lt;pre class="m-code"&gt;display(d_image_grad_bw / amax_d_image_grad_bw * 255)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_27_0.png" /&gt;
 &lt;/section&gt;
 &lt;section id="rescaling"&gt;
@@ -2824,21 +2824,21 @@ values to zero and then divide by (max-min) and multiply by 255 to set
 the maximum to 255 (and scale all intermediate values accordingly).&lt;/p&gt;
 &lt;p&gt;We can then also sum the both components to get a slightly different
 perspective on the above “absolute” multi-directional edge detector.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;d_image_dx_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dx_bw&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;d_image_dx_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dx_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;d_image_dx_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-&lt;span class="n"&gt;d_image_dy_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dy_bw&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;d_image_dy_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dy_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;d_image_dy_bw&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;pre class="m-code"&gt;d_image_dx_bw_rescale = 255 * (d_image_dx_bw - d_image_dx_bw.min()) / (d_image_dx_bw.max() - d_image_dx_bw.min())
+d_image_dy_bw_rescale = 255 * (d_image_dy_bw - d_image_dy_bw.min()) / (d_image_dy_bw.max() - d_image_dy_bw.min())
 
-&lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dx_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;d_image_dx_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;d_image_dy_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;d_image_dy_bw_rescale&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;-=&lt;/span&gt; &lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;/=&lt;/span&gt; &lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;/pre&gt;
+d_image_grad_bw_rescale = np.sqrt(d_image_dx_bw_rescale * d_image_dx_bw_rescale + d_image_dy_bw_rescale * d_image_dy_bw_rescale);
+d_image_grad_bw_rescale -= d_image_grad_bw_rescale.min()
+d_image_grad_bw_rescale /= d_image_grad_bw_rescale.max()
+d_image_grad_bw_rescale *= 255&lt;/pre&gt;
 &lt;section id="horizontal"&gt;
 &lt;h3&gt;Horizontal&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dx_bw_rescale&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;display(d_image_dx_bw_rescale)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_31_0.png" /&gt;
 &lt;/section&gt;
 &lt;section id="vertical"&gt;
 &lt;h3&gt;Vertical&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_dy_bw_rescale&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;display(d_image_dy_bw_rescale)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_33_0.png" /&gt;
 &lt;p&gt;The result differs slightly from that in &lt;a href="https://commons.wikimedia.org/wiki/File:Intensity_image_with_gradient_images.png"&gt;the original Wikipedia
 image&lt;/a&gt;,
@@ -2848,7 +2848,7 @@ less sharp edges, but also less sensitivity to noise in the image.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="combined"&gt;
 &lt;h3&gt;Combined&lt;/h3&gt;
-&lt;pre class="m-code"&gt;&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_image_grad_bw_rescale&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;display(d_image_grad_bw_rescale)&lt;/pre&gt;
 &lt;img src="images/intensely_edgy_cat_36_0.png" /&gt;
 &lt;p&gt;This modified post was written entirely in the Jupyter notebook. You can
 &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/intensely_edgy_cat.ipynb"&gt;download&lt;/a&gt;
