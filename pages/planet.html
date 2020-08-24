@@ -142,6 +142,88 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nevilleantony98.gitlab.io//2020/08/23/week-12/" rel="bookmark" class="u-url"
+       title="GSoC: Final Report of My Work on GNOME Games" target="_blank">
+      <time class="m-date" datetime="2020-08-23 18:53:46+00:00">
+        Aug
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GSoC: Final Report of My Work on GNOME Games
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>GSoC is finally coming to end, and what an exciting experience it has been! In this post I’ll be showing off the fruits of my labor.</p>
+
+<p>User collections were added to <em>Games</em> last week, and that marks the last major milestone of my GSoC project of <em>“Implementing game collections in GNOME Games”</em>. I’m very glad that I was able to finish all the major milestones in time. Below I’ll give a quick summary of my journey.</p>
+
+About the Project
+<p>Before getting straight into it, I’d like to give a quick introduction for the uninitiated (You can also read my previous posts <a href="https://nevilleantony98.gitlab.io/archive/">here</a>). My project this summer is to introduce collections to <em>Games</em>. <em>Games</em> is a game launcher and an emulator for several platforms, and it lists all of your games in one place with help from …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-23 18:53:46+00:00" class="dt-published"></time>
+  Sun 23 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kate-editor.org/post/2020/2020-08-23-ksyntaxhighlighting-example-files-wanted/" rel="bookmark" class="u-url"
+       title="KSyntaxHighlighting - Example Files Wanted" target="_blank">
+      <time class="m-date" datetime="2020-08-23 15:09:00+00:00">
+        Aug
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      KSyntaxHighlighting - Example Files Wanted
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In the <a href="https://invent.kde.org/frameworks/syntax-highlighting">KSyntaxHighlighting framework</a> we use small example files for the individual languages as regression tests.
+See the current collection <a href="https://invent.kde.org/frameworks/syntax-highlighting/-/tree/master/autotests/input">here</a>.</p>
+<p>We will create HTML output and two internal formats to check highlighting attributes &amp; folding regions.
+These results are then diffed with version controlled reference files.</p>
+<p>At the moment we only check the default light theme for the HTML output, but I intend to extend this to check the dark theme, too.
+This will e.g. make it easier to spot problematic hard coded colors that are not readable in one of both variants.</p>
+<p>I updated our tooling to link the test output HTML files we actually have already on our <a href="https://kate-editor.org/syntax/">syntax overview page</a>.</p>
+<p>As you can see there, still a lot of languages we support are lacking example files.
+Just scan the page for the “submissions welcome” lines ;)
+These …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kate News</b></span>
+  on <time datetime="2020-08-23 15:09:00+00:00" class="dt-published"></time>
+  Sun 23 Aug 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jlelse.blog/links/2020/08/2020-08-23-ijhcg/" rel="bookmark" class="u-url"
        title="Clean start for the web" target="_blank">
       <time class="m-date" datetime="2020-08-23 08:24:41+02:00">
@@ -262,48 +344,6 @@ define :tabla_pattern do
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.verbum.org/2020/08/22/immutable-%E2%86%92-reprovisionable-anti-hysteresis/" rel="bookmark" class="u-url"
-       title="“Immutable” → reprovisionable, anti-hysteresis" target="_blank">
-      <time class="m-date" datetime="2020-08-22 19:27:49+00:00">
-        Aug
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      “Immutable” → reprovisionable, anti-hysteresis
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>This is going to be a longer blog entry, but here’s a TL;DR:</p>
-<p>I propose that instead of "immutable" or "read-only" when talking about operating systems (such as <a href="https://getfedora.org/en/coreos/">Fedora CoreOS</a>, <a href="https://cloud.google.com/container-optimized-os/docs">Google COOS</a>, <a href="https://www.flatcar-linux.org/">Flatcar</a> etc.), we use these terms:</p>
-<ul>
-<li>"fully managed": The system does not have "unmanaged state" – e.g. an admin interactively doing <code>ssh</code> and making changes not recorded declaratively somewhere else</li>
-<li>"image based": Traditional package managers end up with a lot of "hidden state" (related to above); image based updates avoid that</li>
-<li>"reprovisionable" and not a "pet": I don’t like the industry "pets vs cattle" term, and I think "reprovisionable" is both nicer and more descriptive</li>
-<li>"Has anti-hysteresis properties": (Yes I know this is an awkward term) See <a href="https://en.wikipedia.org/wiki/Hysteresis">https://en.wikipedia.org/wiki/Hysteresis</a> – I’ll talk more about this later</li>
-</ul>
-<p>(Terminology note: In this article …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Colin Walters</b></span>
-  on <time datetime="2020-08-22 19:27:49+00:00" class="dt-published"></time>
-  Sat 22 Aug 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://nedbatchelder.com//blog/202008/do_a_pile_of_work_better.html" rel="bookmark" class="u-url"
        title="Do a pile of work better" target="_blank">
       <time class="m-date" datetime="2020-08-22 06:55:00-04:00">
@@ -354,52 +394,6 @@ exceptions raised by the work function were silently ignored.</p><p>Here&#8217;s
   on <time datetime="2020-08-22 06:55:00-04:00" class="dt-published"></time>
   Sat 22 Aug 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2020/08/22/virtual-conferences.html" rel="bookmark" class="u-url"
-       title="Virtual Conferences" target="_blank">
-      <time class="m-date" datetime="2020-08-22 09:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          22
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Virtual Conferences
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>With physical meetings being impossible since March in many parts of the world, events such as conferences,
-meetups or sprints have been virtualized. While this initially was done rather ad-hoc with just a bunch of people
-crammed into a poorly working video call, things have improved considerably by now. Here’s some
-thoughts after having attended quite a few virtual events in the past months.</p>
-
-Technical Aspects
-
-<p>Probably the most obvious part of the evolution of virtual events is the clearly visible (and audible) quality
-improvements. A very welcome change especially for the larger events where you
-spent all day listening to people, and that can be quite exhausting if we don’t properly understand what’s being said
-and have to manually adjust audio levels for each speaker.</p>
-
-<p>The increased quality requirements also impacted my own setup, moving from …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2020-08-22 09:00:00+00:00" class="dt-published"></time>
-  Sat 22 Aug 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
