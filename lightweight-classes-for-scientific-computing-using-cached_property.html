@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lightweight classes for scientific computing using “cached_property” | Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-light.compiled.css" />
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/custom.compiled.css" />
+  <link rel="icon" href="https://ashwinvis.github.io/images/logo_ashwin.png" type="image/png" />
+  <link rel="canonical" href="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html" />
+  <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="Lightweight classes for scientific computing using “cached_property”" />
+  <meta name="twitter:title" content="Lightweight classes for scientific computing using “cached_property”" />
+  <meta property="og:url" content="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="article" />
+  <!-- Mastodon Link verification -->
+  <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
+
+  <!-- indieauth.com -->
+  <link rel="me" href="https://github.com/ashwinvis">
+  <link rel="pgpkey" href="/static/ashwin.asc">
+
+  <!-- Micropub with indiekit:
+    source code: https://github.com/paulrobertlloyd/indiekit
+    docs: https://paulrobertlloyd.github.io/indiekit
+    fork and deploy as: https://www.heroku.com/deploy?template=https://github.com/ashwinvis/indiekit
+  -->
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+  <link rel="micropub" href="https://ashwin-micropub.herokuapp.com/micropub">
+
+  <!-- Webmentions with webmentions.io -->
+  <link rel="webmention" href="https://webmention.io/ashwinvis.github.io/webmention" />
+  <link rel="pingback" href="https://webmention.io/ashwinvis.github.io/xmlrpc" />
+
+  <!-- Security -->
+  <!-- Stricter version:
+   default-src 'none'; font-src https://fontlibrary.org; img-src 'self'; script-src 'self''; style-src 'self'
+  -->
+  <!-- Milder CSP to permit mathjax, bibbase scripts
+  TODO: Find alternate CDN for mathjax
+  https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
+  https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        upgrade-insecure-requests;
+        default-src https:;
+        style-src https://bibbase.org 'unsafe-inline' 'self';
+        script-src
+          http://ashwinvis.github.io
+          http://cdnjs.cloudflare.com
+          https://bibbase.org
+          http://ajax.googleapis.com
+          'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+         img-src 'unsafe-inline' 'self' https: data:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://peertube.social;
+         worker-src 'self';
+        "
+  >
+
+
+  <!-- Progressive web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ashwin.info™">
+  <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/app.js" defer></script>
+  <script src="/webmention.min.js" async defer></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwinvis.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwinvis.github.io/images/logo_ashwin.png" />@ashwinvis</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li>
+              <a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
+                <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
+              </ol>
+            </li>
+            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<div class="m-container">
+  <div class="m-row">
+    <article class="h-entry m-col-m-10 m-nopadb m-col-l-8">
+      <header>
+        <h1><a href="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html" rel="bookmark" class="u-url" title="Permalink to Lightweight classes for scientific computing using “cached_property”">
+          <time class="m-date" datetime="2018-12-25T00:00:00+01:00">
+            Dec <span class="m-date-day">25</span> 2018
+          </time>
+          <div class="p-name">
+            Lightweight classes for scientific computing using “cached_property”
+          </div>
+        </a></h1>
+      </header>
+      <div class="m-clearfix-l"></div>
+<a href="https://brid.gy/publish/mastodon"></a>
+<!-- content -->
+<div class="e-content">
+<p>In the quest for optimization and fast computation, while using
+object-oriented programming, it is a typical technique to initialize the
+linear algebra array operators as class attributes. Especially in
+<code>fluidfft</code> we encounter pseudospectral operator classes that look
+like:</p>
+<pre class="m-code"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">fluiddyn.util</span> <span class="kn">import</span> <span class="n">mpi</span>
+
+<span class="k">class</span> <span class="nc">Operator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">KY</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">KX</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ky_loc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kx_loc</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KX2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">KX</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">KY2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">KY</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">KX2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">KY2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K4</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">K2</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K8</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">K4</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">K2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">K_not0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">K</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K2_not0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">K2</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">K4_not0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">K4</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">mpi</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_sequential</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">K_not0</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0e-10</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">K2_not0</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0e-10</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">K4_not0</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0e-10</span>
+        <span class="o">...</span></pre>
+<p>As you can see, for the purpose of fast computation, we store modified
+versions of the wavenumber arrays that are used repeatedly later on,
+during simulation. These arrays may not be required while instantiating
+the same class for post-processing, and could result in unnecessary
+delays while loading large simulations.</p>
+<p>For demonstrating using a simple example, we can create a class which
+automatically stores the operator arrays to compute the <strong>derivatives
+using finite difference schemes</strong>. Specifically we consider a <em>compact
+finite difference scheme</em>, named OUCS3 (Sengupta, T.K., Sircar, S.K. &amp;
+Dipankar, A., <a href="https://doi.org/10.1007/s10915-005-4928-3">J Sci Comput (2006) 26:
+151</a>).</p>
+<section id="short-primer-on-explicit-and-compact-finite-difference-schemes">
+<h2>Short primer on explicit and compact finite difference schemes</h2>
+<p>Differentiation using explicit finite difference scheme can be
+represented as:</p>
+<div class="formula">
+{<i>u</i>’} = <b>A</b>{<i>u</i>}
+</div>
+<p>Where <span class="formula"><i>u</i></span> is a known 1-D vector and <span class="formula"><i>u</i>’</span> is the desired
+first derivative of <span class="formula"><i>u</i></span>. For <em>second-order central difference</em>
+(<span class="formula"><i>CD</i><sub>2</sub></span>), the “matrix” <span class="formula"><b>A</b></span> takes the form of a
+tri-diagonal matrix with repeating elements like:</p>
+<div class="formula">
+<b>A</b> = <span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+1 ⁄ Δ
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+0
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1 ⁄ Δ
+</span>
+<span class="arraycell align-c">
+⋱
+</span>
+<span class="arraycell align-c">
+⋱
+</span>
+<span class="arraycell align-c">
+0
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+⋱
+</span>
+<span class="arraycell align-c">
+⋱
+</span>
+<span class="arraycell align-c">
+1 ⁄ Δ
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+ − 1 ⁄ Δ
+</span>
+<span class="arraycell align-c">
+0
+</span>
+
+</span>
+</span>
+</div>
+<p>Such schemes do not require an array representation and can be
+substituted with for-loops is compiled languages such as C, Fortran etc.
+To implement this particular case in Python, they have to be either:</p>
+<ol>
+<li>represented using sparse matrices to allow for fast dot product,
+matrix multiplications etc.</li>
+<li>implemented using compiled functions (Pythran, Cython, Numba etc.) to
+allow for fast looping over arrays</li>
+</ol>
+<p>However irrespective of the programming languages, when we begin to use
+higher order schemes such as compact finite difference schemes:</p>
+<p>we end up initializing arrays. Here <span class="formula"><b>A</b></span> and
+<span class="formula"><b>B</b></span> can be sparse matrices, typically pentadiagonal and
+tridiagonal respectively. The resultant operator,
+<span class="formula"><b>C</b> = <b>B</b> − 1<b> A</b></span> is quite dense, and thus
+in practice it is easier to compute the derivative in two steps:</p>
+<ol>
+<li>Matrix multiplication <span class="formula"><b>A</b>{<i>u</i>} → {<i>d</i>}</span></li>
+<li>Solve <span class="formula"><b>B</b>{<i>u</i>’} = {<i>d</i>}</span> iteratively, using TDMA</li>
+</ol>
+<blockquote>
+<strong>Note</strong>: Boundary conditions (BC) would mean the matrices would be
+slightly different, but we avoid this consideration in this post,
+since <code>scipy</code> does not seem to have special solvers for such
+matrices. Ideally one would use a Thomas Diagonal Matrix Algorithm /
+TDMA specially designed for problems with periodic BC.</blockquote>
+</section>
+<section id="demo">
+<h2>Demo</h2>
+<p>We will be reusing the following <code>Base</code> class to store the input
+parameters for OUCS3</p>
+<pre class="m-code"><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">diags</span>
+<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+
+<span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Gather input parameters for OUCS3</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        L: float</span>
+<span class="sd">            length of the domain</span>
+<span class="sd">        N: int</span>
+<span class="sd">            number of points</span>
+<span class="sd">        alpha: float</span>
+<span class="sd">            upwind factor, adds numerical dissipation</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Scalar parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="n">L</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">=</span> <span class="n">N</span>
+
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">L</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">a0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">11</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">150</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="mf">1.57557379</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mf">30.0</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="mf">0.183205192</span> <span class="o">/</span> <span class="mf">4.0</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mf">300.0</span>
+
+        <span class="n">b0</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="n">b1</span> <span class="o">=</span> <span class="mf">0.3793894912</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mf">60.0</span>
+
+        <span class="c1"># Create pentadiagonal matrix, A</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">diags</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="n">a2</span><span class="p">,</span> <span class="o">-</span><span class="n">a1</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">])</span> <span class="o">/</span> <span class="n">delta</span><span class="p">,</span>
+            <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,],</span>
+            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span>
+            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;csc&quot;</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Create tridiagonal matrix, B</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">diags</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">b1</span><span class="p">,</span> <span class="n">b0</span><span class="p">,</span> <span class="n">b1</span><span class="p">],</span>
+            <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span>
+            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;csc&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+        <span class="n">Au</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">@</span> <span class="n">u</span>
+        <span class="c1"># inefficient alternative</span>
+        <span class="k">return</span> <span class="n">inv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">)</span> <span class="o">@</span> <span class="n">Au</span>
+
+    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">fields</span><span class="p">):</span>
+        <span class="n">fields</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="p">)})</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="o">!=</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+                <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">fields</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">field</span><span class="p">)</span></pre>
+<p>Have a look at how the arrays look like</p>
+<pre class="m-code"><span class="n">o</span> <span class="o">=</span> <span class="n">Base</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">B = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span></pre>
+<pre>A =
+ [[ 0.          0.31345045  0.01822376  0.          0.          0.        ]
+ [-0.31345045  0.          0.31345045  0.01822376  0.          0.        ]
+ [-0.01822376 -0.31345045  0.          0.31345045  0.01822376  0.        ]
+ [ 0.         -0.01822376 -0.31345045  0.          0.31345045  0.01822376]
+ [ 0.          0.         -0.01822376 -0.31345045  0.          0.31345045]
+ [ 0.          0.          0.         -0.01822376 -0.31345045  0.        ]]
+
+B =
+ [[1.         0.37938949 0.         0.         0.         0.        ]
+ [0.37938949 1.         0.37938949 0.         0.         0.        ]
+ [0.         0.37938949 1.         0.37938949 0.         0.        ]
+ [0.         0.         0.37938949 1.         0.37938949 0.        ]
+ [0.         0.         0.         0.37938949 1.         0.37938949]
+ [0.         0.         0.         0.         0.37938949 1.        ]]</pre>
+<p>We can inherit the class to use an efficient algorithm to solve such
+arrays, such as <code>scipy.linalg.solve_toeplitz</code> which does not accept
+sparse arrays as inputs.</p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">solve_toeplitz</span>
+
+<span class="k">class</span> <span class="nc">OUCS3</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A class to perform OUCS3 compact scheme finite differentiation.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+        <span class="n">Au</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">@</span> <span class="n">u</span>
+        <span class="n">B_column</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+        <span class="n">B_row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">solve_toeplitz</span><span class="p">((</span><span class="n">B_column</span><span class="p">,</span> <span class="n">B_row</span><span class="p">),</span> <span class="n">Au</span><span class="p">)</span></pre>
+<section id="test-that-everything-works">
+<h3>Test that everything works</h3>
+<p>Let’s compare derivatives of a gaussian pulse computed using OUCS3 and
+explicit finite difference schemes.</p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">gausspulse</span>
+
+<span class="k">def</span> <span class="nf">init_params_fields</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Initialize parameters and generate a gaussian pulse.&quot;&quot;&quot;</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+    <span class="n">u</span> <span class="o">=</span> <span class="n">gausspulse</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">L</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">fc</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span>
+
+<span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">oper</span> <span class="o">=</span> <span class="n">OUCS3</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">ux</span> <span class="o">=</span> <span class="n">oper</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+
+<span class="n">oper</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">,</span> <span class="n">ux_OUCS3</span><span class="o">=</span><span class="n">ux</span><span class="p">,</span> <span class="n">ux_explicit</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span></pre>
+<img src="images/lightweight_classes_8_0.png" />
+</section>
+<section id="cost-of-instantiation-and-computing-derivatives">
+<h3>Cost of instantiation and computing derivatives</h3>
+<p>Let us have a look at the time consumed in instantiating the class. We
+will use</p>
+<ul>
+<li><span class="formula"><i>N</i> = 1000</span> (typical array size for a well resolved 1D simulation)</li>
+</ul>
+<p>We might extend what we observe here to 2D (<span class="formula"><i>N</i> = 10002</span>) and 3D
+simulations (<span class="formula"><i>N</i> = 1003</span> to <span class="formula"><i>N</i> = 10003</span>). We shall use the
+package <code>line_profiler</code> to time the time elapsed in each line. The
+system has been tuned using <code>perf</code> package to reduce jitter.</p>
+<pre class="m-code"><span class="o">%</span><span class="k">load_ext</span> line_profiler
+
+<span class="k">def</span> <span class="nf">profile_OUCS3</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">oper</span> <span class="o">=</span> <span class="n">OUCS3</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>  <span class="c1"># instantiate</span>
+    <span class="n">ux</span> <span class="o">=</span> <span class="n">oper</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>   <span class="c1"># compute derivative</span>
+
+<span class="o">%</span><span class="k">lprun</span> -f profile_OUCS3 -f OUCS3.diff profile_OUCS3(1_000)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.01216 s
+File: &lt;ipython-input-3-12c24f274ae1&gt;
+Function: diff at line 5
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     5                                               def diff(self, u):
+     6         1         87.0     87.0      0.7          Au = self.A &#64; u
+     7         1       1579.0   1579.0     13.0          B_column = self.B[:,0].toarray()
+     8         1       1648.0   1648.0     13.6          B_row = self.B[0,:].toarray()
+     9         1       8846.0   8846.0     72.7          return solve_toeplitz((B_column, B_row), Au)
+
+Total time: 0.015373 s
+File: &lt;ipython-input-5-3ad1c1c5fdb7&gt;
+Function: profile_OUCS3 at line 3
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     3                                           def profile_OUCS3(N):
+     4         1        342.0    342.0      2.2      L, N, x, u = init_params_fields(N)
+     5         1       2846.0   2846.0     18.5      oper = OUCS3(L, N)  # instantiate
+     6         1      12185.0  12185.0     79.3      ux = oper.diff(u)   # compute derivative</pre>
+<p>The instantiation just takes over a millisecond and secondary arrays
+<code>B_column</code> and <code>B_row</code> takes around a millisecond each, taking a
+combined time of around <span class="formula">20%</span> of the method <code>diff</code>. Even at
+this scale, we see it can be benificial to store <code>B_column</code> and
+<code>B_array</code> as attributes.</p>
+</section>
+</section>
+<section id="howto-create-a-lightweight-class-with-cached-attributes">
+<h2>HOWTO: create a lightweight class with cached attributes</h2>
+<p>Let us begin by inheriting the <code>Base</code> class wherein the <code>diff</code>
+method uses stored values for <code>B_column</code> and <code>B_row</code>.</p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">solve_toeplitz</span>
+
+<span class="k">class</span> <span class="nc">BaseCached</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
+        <span class="n">Au</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">@</span> <span class="n">u</span>
+        <span class="n">B_column</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_B_column</span>
+        <span class="n">B_row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_B_row</span>
+        <span class="k">return</span> <span class="n">solve_toeplitz</span><span class="p">((</span><span class="n">B_column</span><span class="p">,</span> <span class="n">B_row</span><span class="p">),</span> <span class="n">Au</span><span class="p">)</span></pre>
+<section id="first-run">
+<h3>First run</h3>
+<p>If we are not going to rely on a third-party packages, we can do the
+following now (with Python 3) with <code>functools.lru_cache</code>
+(<a href="https://docs.python.org/3/library/functools.html?highlight=lru_cache#functools.lru_cache">docs</a>).</p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+<span class="k">class</span> <span class="nc">OUCS3Native</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A native implementation of a ``cached_property``.&quot;&quot;&quot;</span>
+    <span class="nd">@property</span>
+    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+<span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
+<span class="n">oper_native</span> <span class="o">=</span> <span class="n">OUCS3Native</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">lprun</span> -f OUCS3Native.diff oper_native.diff(u)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.011203 s
+File: &lt;ipython-input-6-b2308b39973e&gt;
+Function: diff at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                               def diff(self, u):
+     5         1        155.0    155.0      1.4          Au = self.A &#64; u
+     6         1       1783.0   1783.0     15.9          B_column = self._B_column
+     7         1       1649.0   1649.0     14.7          B_row = self._B_row
+     8         1       7616.0   7616.0     68.0          return solve_toeplitz((B_column, B_row), Au)</pre>
+</section>
+<section id="second-run">
+<h3>Second run</h3>
+<pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3Native.diff oper_native.diff(u)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.006538 s
+File: &lt;ipython-input-6-b2308b39973e&gt;
+Function: diff at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                               def diff(self, u):
+     5         1        139.0    139.0      2.1          Au = self.A &#64; u
+     6         1          3.0      3.0      0.0          B_column = self._B_column
+     7         1          1.0      1.0      0.0          B_row = self._B_row
+     8         1       6395.0   6395.0     97.8          return solve_toeplitz((B_column, B_row), Au)</pre>
+<p>It is super quick to access <code>_B_column</code> and <code>_B_row</code> in the second
+run and takes simply microseconds!</p>
+</section>
+</section>
+<section id="how-does-it-work">
+<h2>How does it work</h2>
+<p>The least recently used cache (LRU) optimizes the function call, caches
+the return value, and returns the cache for future calls if the function
+parameters were “unchanged”.</p>
+<p>Such an implementation would be protected from simple initialization
+attempts such as:</p>
+<pre class="m-code"><span class="n">oper_native</span><span class="o">.</span><span class="n">_B_column</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-11-6219892dab4c&gt; in &lt;module&gt;
+----&gt; 1 oper_native._B_column = 0
+
+
+AttributeError: can't set attribute</pre>
+<p>However it is unsafe and can lead to the following unpredictable
+behaviours:</p>
+<ul>
+<li>Overwriting the original array after first run does not modify the
+result:</li>
+</ul>
+<pre class="m-code"><span class="n">oper_native</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span><span class="n">N</span><span class="p">))</span>
+
+<span class="n">ux</span> <span class="o">=</span> <span class="n">oper_native</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="n">oper_native</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ux</span><span class="o">=</span><span class="n">ux</span><span class="p">)</span></pre>
+<img src="images/lightweight_classes_23_0.png" />
+<ul>
+<li>No error is raised when modifying the array in place</li>
+</ul>
+<pre class="m-code"><span class="n">oper_native</span><span class="o">.</span><span class="n">_B_column</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<ul>
+<li>If <code>lru_cache(maxsize=None)</code> is used it would lead to a potential
+memory leak.</li>
+</ul>
+</section>
+<section id="do-it-better">
+<h2>Do it better</h2>
+<section id="other-third-party-implementations">
+<h3>Other third-party implementations</h3>
+<ol>
+<li><code>werkzeug.utils.cached_property</code>
+(<a href="http://werkzeug.pocoo.org/docs/0.14/utils/">docs</a>)</li>
+<li><code>cached_property.cached_property</code>
+(<a href="https://github.com/pydanny/cached-property">docs</a>)</li>
+</ol>
+<p>These would cache the “property” inside <code>__dict__</code> and not in some
+random location in a memory.</p>
+</section>
+<section id="werkzeug">
+<h3>Werkzeug</h3>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">werkzeug.utils</span> <span class="kn">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">wcached_property</span>
+
+
+<span class="k">class</span> <span class="nc">OUCS3Werkzeug</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Werkzeug implementation of a ``cached_property``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@wcached_property</span>
+    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+    <span class="nd">@wcached_property</span>
+    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
+</section>
+<section id="id1">
+<h3>First run</h3>
+<pre class="m-code"><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
+<span class="n">oper_wz</span> <span class="o">=</span> <span class="n">OUCS3Werkzeug</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">lprun</span> -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.009176 s
+File: &lt;ipython-input-6-b2308b39973e&gt;
+Function: diff at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                               def diff(self, u):
+     5         1        124.0    124.0      1.4          Au = self.A &#64; u
+     6         1        914.0    914.0     10.0          B_column = self._B_column
+     7         1        887.0    887.0      9.7          B_row = self._B_row
+     8         1       7251.0   7251.0     79.0          return solve_toeplitz((B_column, B_row), Au)</pre>
+</section>
+<section id="id2">
+<h3>Second run</h3>
+<pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.010082 s
+File: &lt;ipython-input-6-b2308b39973e&gt;
+Function: diff at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                               def diff(self, u):
+     5         1        508.0    508.0      5.0          Au = self.A &#64; u
+     6         1         11.0     11.0      0.1          B_column = self._B_column
+     7         1          4.0      4.0      0.0          B_row = self._B_row
+     8         1       9559.0   9559.0     94.8          return solve_toeplitz((B_column, B_row), Au)</pre>
+</section>
+<section id="cached-property">
+<h3>cached_property</h3>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">cached_property</span> <span class="kn">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">ccached_property</span>
+
+
+<span class="k">class</span> <span class="nc">OUCS3CachedProperty</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Werkzeug implementation of a ``cached_property``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@ccached_property</span>
+    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+    <span class="nd">@ccached_property</span>
+    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
+</section>
+<section id="id3">
+<h3>First run</h3>
+<pre class="m-code"><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
+<span class="n">oper_cp</span> <span class="o">=</span> <span class="n">OUCS3CachedProperty</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="o">%</span><span class="k">lprun</span> -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.010591 s
+File: &lt;ipython-input-6-b2308b39973e&gt;
+Function: diff at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                               def diff(self, u):
+     5         1        149.0    149.0      1.4          Au = self.A &#64; u
+     6         1       1105.0   1105.0     10.4          B_column = self._B_column
+     7         1       1935.0   1935.0     18.3          B_row = self._B_row
+     8         1       7402.0   7402.0     69.9          return solve_toeplitz((B_column, B_row), Au)</pre>
+</section>
+<section id="id4">
+<h3>Second run</h3>
+<pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
+<pre>Timer unit: 1e-06 s
+
+Total time: 0.006916 s
+File: &lt;ipython-input-6-b2308b39973e&gt;
+Function: diff at line 4
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     4                                               def diff(self, u):
+     5         1        141.0    141.0      2.0          Au = self.A &#64; u
+     6         1          3.0      3.0      0.0          B_column = self._B_column
+     7         1          1.0      1.0      0.0          B_row = self._B_row
+     8         1       6771.0   6771.0     97.9          return solve_toeplitz((B_column, B_row), Au)</pre>
+</section>
+<section id="differences-from-the-native-implementation">
+<h3>Differences from the native implementation</h3>
+<p>Overwriting cached property is OK as follows</p>
+<pre class="m-code"><span class="n">oper_wz</span><span class="o">.</span><span class="n">_B_column</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">oper_cp</span><span class="o">.</span><span class="n">_B_column</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<p>An advantage of such implementation is there is no need to add a
+<code>maxsize</code> parameter, and thus no risk of having a memory leak.</p>
+<p>The rest of the “caveats” mentioned before still persist in the
+third-party implementation. I am not sure if it would be possible to
+raise an <code>AttributeError</code> when attempts are made to alter cached
+property. But this depends on the application, so the caveat can be a
+feature.</p>
+<p>When Python 3.8 becomes available we would have access to a <a href="https://docs.python.org/3.8/library/functools.html?highlight=cached_property#functools.cached_property">native
+implementation</a>
+and we would be able to do:</p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">cached_property</span>
+
+<span class="k">class</span> <span class="nc">OUCS3</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A class to perform OUCS3 compact scheme finite differentiation.</span>
+<span class="sd">    A Python 3.8 implementation of a ``cached_property``.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+
+    <span class="nd">@cached_property</span>
+    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
+<p>Exciting times ahead.</p>
+<p><em>This post was written entirely in the Jupyter notebook. You
+can</em> <a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/lightweight_classes.ipynb">download</a> <em>this
+notebook, or see a static view</em> <a href="https://nbviewer.jupyter.org/github/ashwinvis/ashwinvis.github.io/blob/develop/content/lightweight_classes.ipynb">on
+nbviewer</a>.</p>
+<p><strong>UPDATE:</strong> We have begun to use <code>cached_property</code> in
+<a href="https://fluidsht.readthedocs.io/en/latest/_modules/fluidsht/sht2d/operators.html#OperatorsSphereHarmo2D">FluidSHT</a>.</p>
+</section>
+</section>
+</div>
+<!-- /content -->
+      <div class="m-block m-success m-badge">
+        <img src="https://ashwinvis.github.io/images/dp_ashwin_2016.jpg" alt="Ashwin Vishnu Mohanan" />
+        <h3>About the author</h3>
+        <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
+      </div>
+      <footer>
+        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2018-12-25T00:00:00+01:00" class="dt-published">Tue 25 December 2018</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2018-12-26T00:00:00+01:00" class="dt-updated">Wed 26 December 2018</time></span> Tags: <a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a>, <a href="https://ashwinvis.github.io/tag/fluidsim.html">fluidsim</a>, <a href="https://ashwinvis.github.io/tag/optimization.html">optimization</a>.<time class="dt-read-mins">
+            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            8
+        minutes
+              read
+          </time></p>
+        <div class="webmentions">
+          <details><summary>Interactions</summary>
+            <p>Below you can find the interactions that this page has had using <a
+                href="http://indieweb.org/webmention">WebMention</a>.
+            </p>
+            <div class="manual-webmention">
+              <p>Have you written a <a
+                  href="https://indieweb.org/responses">response</a> to this post? Let
+                  me know the URL:
+                <form id="manual-webmention"
+                      action="https://webmention.io/ashwinvis.github.io/webmention"
+                  method="post"><input type="url" name="source">
+
+                  <input type="hidden" name="target" value="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html">
+                  <input type="submit" name="submit" value="Send Webmention">
+                </form>
+              </p>
+              <p>Do you not have a website set up with WebMention capabilities? You
+                can:
+              <form method="get" action="https://quill.p3k.io/" target="_blank">
+                <input type="hidden" name="dontask" value="1">
+                <input type="hidden" name="me" value="https://commentpara.de/">
+                <input type="hidden" name="reply" value="https://ashwinvis.github.io/lightweight-classes-for-scientific-computing-using-cached_property.html">
+                <input type="submit" value="Comment anonymously (via Comment Parade)">
+              </form>
+              </p>
+            </div>
+            <div id="webmentions">
+              <noscript>Due to laziness, this site uses client-side JavaScript to render the webmentions, rather than them being rendered server-side. If you do not wish to enable JavaScript, that's fair enough, but you won't be able to automagically see what Webmentions I've received - sorry!
+              </noscript>
+          </div>
+          </details>
+        </div>
+</footer>
+    </article>
+    <nav class="m-navpanel m-col-m-2 m-push-l-2">
+      <h3>Categories</h3>
+      <ol class="m-block-bar-m">
+        <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+        <li><a href="https://ashwinvis.github.io/category/blogger-archive.html">Blogger archive</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tumblr-archive.html">Tumblr archive</a></li>
+      </ol>
+      <h3>Tag cloud</h3>
+      <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/academia.html">academia</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/archlinux.html">archlinux</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/automation.html">automation</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ci.html">ci</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/conference.html">conference</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/congress.html">congress</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/covid-19.html">covid-19</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/css.html">css</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/devops.html">devops</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/economy.html">economy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fediverse.html">fediverse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluiddyn.html">fluiddyn</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidsim.html">fluidsim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/friends.html">friends</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/game-of-thrones.html">game of thrones</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/hpc.html">hpc</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/india.html">India</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/indian-politics.html">indian politics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/internet.html">Internet</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/introduction.html">introduction</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/java.html">java</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/kindness.html">kindness</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/licensing.html">licensing</a></li>
+        <li class="m-tag-5"><a href="https://ashwinvis.github.io/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ligatures.html">ligatures</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/linux.html">linux</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/list.html">list</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/markdown.html">markdown</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/mood.html">mood</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/motto.html">motto</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/music.html">music</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/optimization.html">optimization</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/phone.html">phone</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/poetry.html">poetry</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/postdoc.html">postdoc</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/privacy.html">privacy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/programming.html">programming</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/psychology.html">psychology</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pyconse.html">pyconse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pypy.html">pypy</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/python.html">python</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rant.html">rant</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/recession.html">recession</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/research.html">research</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/resolution.html">resolution</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rst.html">rst</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
+        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/teenage.html">teenage</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/thin-line.html">thin line</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/til.html">til</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/tips.html">tips</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/today-i-learned.html">today i learned</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/transonic.html">transonic</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/travel.html">travel</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/typography.html">typography</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ubuntu.html">ubuntu</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/vim.html">vim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/wordporm.html">wordporm</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/writing.html">writing</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div id="m-links-footer" class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://foss.heptapod.net/avmo">Heptapod</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Research</h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Posts</a></h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/category/blogger-archive.html">Blogger archive</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tumblr-archive.html">Tumblr archive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>
+        <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
+        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
+        <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
+        </p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

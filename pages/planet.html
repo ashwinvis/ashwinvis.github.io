@@ -262,6 +262,67 @@ These …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/matlab-datetime-range-vector/" rel="bookmark" class="u-url"
+       title="Generate vectors of datetime in Matlab / Octave" target="_blank">
+      <time class="m-date" datetime="2020-08-23 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          23
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Generate vectors of datetime in Matlab / Octave
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Generating a range of datetime data is a common data analysis and simulation task.
+Here we show examples of generating datetime vectors for:</p>
+<ul>
+<li><a href="https://www.mathworks.com/help/matlab/ref/datetime.html">datetime</a></li>
+<li><a href="https://www.mathworks.com/help/matlab/ref/datenum.html">datenum</a></li>
+</ul>
+datetime
+<p>Matlab &ldquo;datetime&rdquo; is strongly encouraged over legacy datenum().
+datetime has a native ability to generate
+<a href="https://www.mathworks.com/help/matlab/matlab_prog/generate-sequence-of-dates-and-time.html">range</a>
+of datetime like:</p>
+<div><pre><code><span>function</span> times = <span>datetime_range</span>(tstart, tend, ts)
+validateattributes(tstart, {<span>'datetime'</span>}, {<span>'scalar'</span>}, <span>1</span>)
+validateattributes(tend, {<span>'datetime'</span>}, {<span>'scalar'</span>}, <span>2</span>)
+validateattributes(ts, {<span>'duration'</span>}, {<span>'scalar'</span>}, <span>3</span>)
+dt = tstart:ts:tend
+<span>end</span>
+</code></pre></div>GNU Octave datetime
+<p>GNU Octave can use many <code>datetime</code> features via the <a href="https://github.com/apjanke/octave-tablicious#installation-and-usage">Octave-Tablicious package</a>.</p>
+<p>then load by:</p>
+<div><pre><code>pkg load tablicious<span>
+</span></code></pre></div>datenum
+<p>Generate a range of datenum times like:</p>
+<div><pre><code><span>function</span> times = <span>datetime_range</span>(tstart, tend, ts)
+<span>% ts: seconds</span>
+times = tstart:ts<span>/</span><span>86400</span>:tend;
+<span>end</span>
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-23 00:00:00+00:00" class="dt-published"></time>
+  Sun 23 Aug 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-08-22_Experimenting_with_Sonic_Pi" rel="bookmark" class="u-url"
        title="Experimenting with Sonic Pi" target="_blank">
       <time class="m-date" datetime="2020-08-22 22:00:41+00:00">
@@ -845,51 +906,6 @@ Baseline images cause the repo size to grow rather quickly.
   on <time datetime="2020-08-16 09:47:51+05:30" class="dt-published"></time>
   Sun 16 Aug 2020
   in Matplotblog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/matlab-package-import/" rel="bookmark" class="u-url"
-       title="Matlab package import like Python" target="_blank">
-      <time class="m-date" datetime="2020-08-16 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Matlab package import like Python
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Matlab users can package code projects as toolboxes and/or packages.
-The packages format works for ancient versions of Matlab, before even R2006a as well as GNU Octave.
-The toolbox format works for Matlab ≥ R2016a and not GNU Octave.
-The packages format brings benefits to toolboxes as well.</p>
-Matlab namespaces
-<p>A key issue with Matlab vs. Python arise from that Matlab users often add many paths for their project.
-If any function names clash, there can be unexpected behavior as it&rsquo;s not immediately clear which function is being used without further investigation of path ordering.
-As in Python and other languages, there is considerable benefit for using a package format where the function names are specified in their namespace.</p>
-addpath example
-<p>To enable Matlab package format, we explain by example. Suppose a project directory structure is like:</p>
-<pre><code>myproj
-utils …</code></pre>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-16 00:00:00+00:00" class="dt-published"></time>
-  Sun 16 Aug 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 

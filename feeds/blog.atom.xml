@@ -109,7 +109,51 @@ efficient and accurate code for an LES of diurnal cycle of the ABL. To
 coordinate this inter-disciplinary project a collaboration between KTH, SU, LiU
 and SMHI is set afoot. For the LES we will use the Nek5000 (KTH and SU) and
 ESSENSE (LiU and SMHI) codes.&lt;/p&gt;
-&lt;p&gt;&lt;a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"&gt;&lt;img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blog"></category><category term="postdoc"></category><category term="research"></category><category term="fluid-mechanics"></category></entry><entry><title>Why Open-Source?</title><link href="https://ashwinvis.github.io/why-open-source.html" rel="alternate"></link><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2018-01-06:/why-open-source.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Most of us who are engaged in development or use of open-source software have
+&lt;p&gt;&lt;a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"&gt;&lt;img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blog"></category><category term="postdoc"></category><category term="research"></category><category term="fluid-mechanics"></category></entry><entry><title>New article: Shallow water wave turbulence</title><link href="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" rel="alternate"></link><published>2019-07-17T00:00:00+02:00</published><updated>2019-07-17T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2019-07-17:/new-article-shallow-water-wave-turbulence.html</id><summary type="html">&lt;p&gt;Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Just today another &lt;a href="https://doi.org/10.1017/jfm.2019.375"&gt;open access
+paper&lt;/a&gt; got published. This
+paper talks about some how turbulence in shallow water equations evolves
+and gives rise to shock waves. There are also some novel statistical
+results which might find use in other fields like acoustics.&lt;/p&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;p&gt;Figure: Shocks becoming stronger and weaker with variations in
+Reynolds number and Froude numbers.&lt;/p&gt;
+&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Find more about it in &lt;a href="https://doi.org/10.1017/jfm.2019.375"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;section id="abstract"&gt;
+&lt;h2&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;The dynamics of irrotational shallow water wave turbulence forced in
+large scales and dissipated at small scales is investigated. First, we
+derive the shallow water analogue of the `four-fifths law’ of
+Kolmogorov turbulence for a third order structure function involving
+velocity and displacement increments. Using this relation and assuming
+that the flow is dominated by shocks we develop a simple model
+predicting that the shock amplitude scales as
+&lt;span class="formula"&gt;(&lt;i&gt;ϵ&lt;/i&gt;&lt;i&gt;d&lt;/i&gt;)&lt;sup&gt;1 ⁄ 3&lt;/sup&gt;&lt;/span&gt;, where &lt;span class="formula"&gt;&lt;i&gt;ϵ&lt;/i&gt;&lt;/span&gt; is the mean
+dissipation rate and &lt;span class="formula"&gt;&lt;i&gt;d&lt;/i&gt;&lt;/span&gt; the mean distance between the shocks, and
+that the &lt;span class="formula"&gt;&lt;i&gt;p&lt;/i&gt;&lt;/span&gt;:th order displacement and velocity structure
+functions scale as &lt;span class="formula"&gt;(&lt;i&gt;ϵ&lt;/i&gt;&lt;i&gt;d&lt;/i&gt;)&lt;sup&gt;&lt;i&gt;p&lt;/i&gt; ⁄ 3&lt;/sup&gt;&lt;i&gt;r&lt;/i&gt; ⁄ &lt;i&gt;d&lt;/i&gt;&lt;/span&gt;, where &lt;span class="formula"&gt;&lt;i&gt;r&lt;/i&gt;&lt;/span&gt; is
+the separation. Then we carry out a series of forced simulations with
+resolutions up to &lt;span class="formula"&gt;7680&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;, varying the Froude number,
+&lt;span class="formula"&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt; = &lt;i&gt;ϵ&lt;/i&gt;&lt;sup&gt;1 ⁄ 3&lt;/sup&gt; ⁄ &lt;i&gt;ck&lt;/i&gt;&lt;span class="scripts"&gt;&lt;sup class="script"&gt;1 ⁄ 3&lt;/sup&gt;&lt;sub class="script"&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;&lt;/span&gt;, where &lt;span class="formula"&gt;&lt;i&gt;k&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt; is the
+forcing wave number and &lt;span class="formula"&gt;&lt;i&gt;c&lt;/i&gt;&lt;/span&gt; is the wave speed. In all simulations
+a stationary state is reached in which there is a constant spectral
+energy flux and equipartition between kinetic and potential energy in
+the constant flux range. The third order structure function relation is
+satisfied with a high degree of accuracy. Mean energy is found to scale
+as &lt;span class="formula"&gt;&lt;i&gt;E&lt;/i&gt; ~ &lt;span class="sqrt"&gt;&lt;span class="radical"&gt;√&lt;/span&gt;&lt;span class="ignored"&gt;(&lt;/span&gt;&lt;span class="root"&gt;&lt;i&gt;ϵ&lt;/i&gt;&lt;i&gt;c&lt;/i&gt; ⁄ &lt;i&gt;k&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;&lt;span class="ignored"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, and is also dependent on
+resolution, indicating that shallow water wave turbulence does not fit
+into the paradigm of a Richardson-Kolmogorov cascade. In all simulations
+shocks develop, displayed as long thin bands of negative divergence in
+flow visualisations. The mean distance between the shocks is found to
+scale as &lt;span class="formula"&gt;&lt;i&gt;d&lt;/i&gt; ~ &lt;i&gt;F&lt;/i&gt;&lt;span class="scripts"&gt;&lt;sup class="script"&gt;1 ⁄ 2&lt;/sup&gt;&lt;sub class="script"&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt; ⁄ &lt;i&gt;k&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;. Structure functions of second and
+higher order are found to scale in good agreement with the model. We
+conclude that in the weak limit, &lt;span class="formula"&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt; → 0&lt;/span&gt;, shocks will
+become denser and weaker and finally disappear for a finite Reynolds
+number. On the other hand, for a given &lt;span class="formula"&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;, no matter how
+small, shocks will prevail if the Reynolds number is sufficiently large.&lt;/p&gt;
+&lt;/section&gt;
+</content><category term="Blog"></category><category term="fluid-mechanics"></category><category term="open-source"></category><category term="open-access"></category><category term="research"></category><category term="academia"></category></entry><entry><title>Why Open-Source?</title><link href="https://ashwinvis.github.io/why-open-source.html" rel="alternate"></link><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2018-01-06:/why-open-source.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Most of us who are engaged in development or use of open-source software have
 one reason or another to do it. The question of “Why open-source?” is something
 we should all reflect upon once, since we should be well prepared to answer the
 same question confidently in the future.&lt;/p&gt;

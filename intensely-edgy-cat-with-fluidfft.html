@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intensely edgy cat with FluidFFT | Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-light.compiled.css" />
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/custom.compiled.css" />
+  <link rel="icon" href="https://ashwinvis.github.io/images/logo_ashwin.png" type="image/png" />
+  <link rel="canonical" href="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html" />
+  <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="Intensely edgy cat with FluidFFT" />
+  <meta name="twitter:title" content="Intensely edgy cat with FluidFFT" />
+  <meta property="og:url" content="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="article" />
+  <!-- Mastodon Link verification -->
+  <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
+
+  <!-- indieauth.com -->
+  <link rel="me" href="https://github.com/ashwinvis">
+  <link rel="pgpkey" href="/static/ashwin.asc">
+
+  <!-- Micropub with indiekit:
+    source code: https://github.com/paulrobertlloyd/indiekit
+    docs: https://paulrobertlloyd.github.io/indiekit
+    fork and deploy as: https://www.heroku.com/deploy?template=https://github.com/ashwinvis/indiekit
+  -->
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+  <link rel="micropub" href="https://ashwin-micropub.herokuapp.com/micropub">
+
+  <!-- Webmentions with webmentions.io -->
+  <link rel="webmention" href="https://webmention.io/ashwinvis.github.io/webmention" />
+  <link rel="pingback" href="https://webmention.io/ashwinvis.github.io/xmlrpc" />
+
+  <!-- Security -->
+  <!-- Stricter version:
+   default-src 'none'; font-src https://fontlibrary.org; img-src 'self'; script-src 'self''; style-src 'self'
+  -->
+  <!-- Milder CSP to permit mathjax, bibbase scripts
+  TODO: Find alternate CDN for mathjax
+  https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
+  https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        upgrade-insecure-requests;
+        default-src https:;
+        style-src https://bibbase.org 'unsafe-inline' 'self';
+        script-src
+          http://ashwinvis.github.io
+          http://cdnjs.cloudflare.com
+          https://bibbase.org
+          http://ajax.googleapis.com
+          'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+         img-src 'unsafe-inline' 'self' https: data:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://peertube.social;
+         worker-src 'self';
+        "
+  >
+
+
+  <!-- Progressive web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ashwin.info™">
+  <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/app.js" defer></script>
+  <script src="/webmention.min.js" async defer></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwinvis.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwinvis.github.io/images/logo_ashwin.png" />@ashwinvis</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li>
+              <a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
+                <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
+              </ol>
+            </li>
+            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<div class="m-container">
+  <div class="m-row">
+    <article class="h-entry m-col-m-10 m-nopadb m-col-l-8">
+      <header>
+        <h1><a href="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html" rel="bookmark" class="u-url" title="Permalink to Intensely edgy cat with FluidFFT">
+          <time class="m-date" datetime="2018-08-16T00:00:00+02:00">
+            Aug <span class="m-date-day">16</span> 2018
+          </time>
+          <div class="p-name">
+            Intensely edgy cat with FluidFFT
+          </div>
+        </a></h1>
+      </header>
+      <div class="m-clearfix-l"></div>
+<a href="https://brid.gy/publish/mastodon"></a>
+<!-- content -->
+<div class="e-content">
+<p><em>This is a reimplementaion of</em><a href="https://github.com/egpbos/xtensor-fftw/blob/master/notebooks/intensely_edgy_cat.ipynb">Patrick Bos’s
+notebook</a><em>which
+showcases</em><a href="https://github.com/egpbos/xtensor-fftw/">xtensor-fftw</a><em>.
+Here, we
+use</em><a href="https://fluidfft.readthedocs.io">fluidfft</a><em>instead.</em></p>
+<section id="setup">
+<h2>Setup</h2>
+<pre class="m-code"><span class="kn">import</span> <span class="nn">fluidfft</span>     <span class="c1"># fft, ifft and other operators</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># numpy arrays!</span>
+
+<span class="c1"># for displaying images</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span></pre>
+<pre class="m-code"><span class="c1"># We go one step further and directly load from the internet</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="k">def</span> <span class="nf">load_image</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">fd</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">image_file</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">fd</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_file</span><span class="p">)</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>  <span class="c1"># Convert the PIL.PngImagePlugin.PngImageFile object to a numpy array</span>
+    <span class="k">return</span> <span class="n">im</span>
+
+<span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">im</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gist_gray&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span></pre>
+</section>
+<section id="intense-cat">
+<h2>Intense cat</h2>
+<p>Let’s perform some Fourier space operations on <a href="https://commons.wikimedia.org/wiki/File:Intensity_image_with_gradient_images.png">this public domain,
+intense
+kitty</a>:</p>
+<pre class="m-code"><span class="n">image</span> <span class="o">=</span> <span class="n">load_image</span><span class="p">(</span><span class="s2">&quot;https://upload.wikimedia.org/wikipedia/commons/6/67/Intensity_image_with_gradient_images.png&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_7_0.png" />
+<pre class="m-code"><span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">205</span><span class="p">]</span>  <span class="c1"># Crop to the first frame and trim the frame edges</span>
+<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_8_0.png" />
+</section>
+<section id="edge-detection-on-intensity-image">
+<h2>Edge detection on intensity image</h2>
+<p>Unlike in the original notebook wherein,</p>
+<blockquote>
+We’re going to use FFT to do some simple edge detection. To simplify,
+we do this on the black and white “intensity” image. In this case,
+the kitty is already black and white, but in fact it’s still encoded
+in three RGB channels in the PNG file. Combining these, in general,
+could be done as follows …</blockquote>
+<p>we skip it, since PIL was kind enough to do it for us:</p>
+<pre class="m-code"><span class="n">image</span><span class="o">.</span><span class="n">shape</span></pre>
+<pre>(200, 200)</pre>
+<pre class="m-code"><span class="n">image_bw</span> <span class="o">=</span> <span class="n">image</span></pre>
+<p>Next, we transform to Fourier space using <code>fluidfft</code>’s real FFT
+transform. We have to rely on the <code>fft2d.with_pyfftw</code> backend since
+the other Cythonized <code>fft2d.with_fftw2d</code> implementation assumes a
+periodic boundary.</p>
+<pre class="m-code"><span class="c1"># Prepare our FFT object</span>
+<span class="n">o</span> <span class="o">=</span> <span class="n">fluidfft</span><span class="o">.</span><span class="n">create_fft_object</span><span class="p">(</span><span class="s2">&quot;fft2d.with_pyfftw&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># A more powerful option is to use an &quot;Operator&quot; class, demonstrated below</span></pre>
+<pre class="m-code"><span class="n">image_fs_bw</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">image_bw</span><span class="p">)</span></pre>
+<p>The simplest way to do some edge detection is by calculating the
+derivative of the intensity image. The derivative (the rate of change)
+is high where a sharp transition from low to high intensity occurs
+between two pixels, close to zero when there is little change and highly
+negative for high to low transition.</p>
+<p>The derivative of an image can be calculated by multiplying the Fourier
+transform of the image by
+<span class="formula"><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"> − 1</span><span class="ignored">)</span></span><b> k</b> = <i>i</i><b>k</b></span> and then
+transforming the result back to real space. This must be done in each
+direction and then the results can be combined to get the magnitude of
+the gradient, which is a good multi-directional proxy for both kinds of
+edges (intensity transitions form low to high and from high to low).</p>
+<p><code>fluidfft</code>’s operator classes also supplies these wavenumbers
+<span class="formula"><b>k</b></span>, so you do not need to build them :).</p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">fluidfft.fft2d.operators</span> <span class="kn">import</span> <span class="n">OperatorsPseudoSpectral2D</span>
+
+<span class="n">op</span> <span class="o">=</span> <span class="n">OperatorsPseudoSpectral2D</span><span class="p">(</span><span class="o">*</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">lx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">ly</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">fft</span><span class="o">=</span><span class="s2">&quot;fft2d.with_pyfftw&quot;</span><span class="p">)</span>  <span class="c1"># The lengths are arbitary</span></pre>
+<pre class="m-code"><span class="n">kx</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">KX</span>
+<span class="n">ky</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">KY</span> <span class="c1"># N.B.: we use broadcasting to multiply in the right direction</span></pre>
+<pre class="m-code"><span class="c1"># do both derivatives separately</span>
+<span class="n">d_image_dx_fs_bw</span> <span class="o">=</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">kx</span> <span class="o">*</span> <span class="n">image_fs_bw</span>
+<span class="n">d_image_dy_fs_bw</span> <span class="o">=</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">ky</span> <span class="o">*</span> <span class="n">image_fs_bw</span></pre>
+<p>An <strong>effortless and efficent</strong> way to do the gradient calculation was to
+use the Pythranized function.</p>
+<pre class="m-code"><span class="n">d_image_dx_fs_bw</span><span class="p">,</span> <span class="n">d_image_dy_fs_bw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">gradfft_from_fft</span><span class="p">(</span><span class="n">image_fs_bw</span><span class="p">)</span></pre>
+<pre class="m-code"><span class="c1"># transform back to normal space</span>
+<span class="n">d_image_dx_bw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">d_image_dx_fs_bw</span><span class="p">)</span>
+<span class="n">d_image_dy_bw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">d_image_dy_fs_bw</span><span class="p">)</span></pre>
+<pre class="m-code"><span class="c1"># and square-sum them in real space to get the gradient magnitude</span>
+<span class="n">d_image_grad_bw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_image_dx_bw</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">d_image_dy_bw</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_grad_bw</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_24_0.png" />
+<p>To get maximum contrast, rescale so that the maximum is 255 (the maximum
+brightness value, i.e. bright white):</p>
+<pre class="m-code"><span class="n">amax_d_image_grad_bw</span> <span class="o">=</span> <span class="n">d_image_grad_bw</span><span class="o">.</span><span class="n">max</span><span class="p">()</span></pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_grad_bw</span> <span class="o">/</span> <span class="n">amax_d_image_grad_bw</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_27_0.png" />
+</section>
+<section id="rescaling">
+<h2>Rescaling</h2>
+<p>To inspect the separate horizontal and vertical components, we need to
+rescale the range of derivative values so that they all fit into the
+[0,255] range of the RGB space. We subtract the minimum to set negative
+values to zero and then divide by (max-min) and multiply by 255 to set
+the maximum to 255 (and scale all intermediate values accordingly).</p>
+<p>We can then also sum the both components to get a slightly different
+perspective on the above “absolute” multi-directional edge detector.</p>
+<pre class="m-code"><span class="n">d_image_dx_bw_rescale</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">*</span> <span class="p">(</span><span class="n">d_image_dx_bw</span> <span class="o">-</span> <span class="n">d_image_dx_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">d_image_dx_bw</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">d_image_dx_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">d_image_dy_bw_rescale</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">*</span> <span class="p">(</span><span class="n">d_image_dy_bw</span> <span class="o">-</span> <span class="n">d_image_dy_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">d_image_dy_bw</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">d_image_dy_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_image_dx_bw_rescale</span> <span class="o">*</span> <span class="n">d_image_dx_bw_rescale</span> <span class="o">+</span> <span class="n">d_image_dy_bw_rescale</span> <span class="o">*</span> <span class="n">d_image_dy_bw_rescale</span><span class="p">);</span>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">-=</span> <span class="n">d_image_grad_bw_rescale</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">/=</span> <span class="n">d_image_grad_bw_rescale</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">*=</span> <span class="mi">255</span></pre>
+<section id="horizontal">
+<h3>Horizontal</h3>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_dx_bw_rescale</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_31_0.png" />
+</section>
+<section id="vertical">
+<h3>Vertical</h3>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_dy_bw_rescale</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_33_0.png" />
+<p>The result differs slightly from that in <a href="https://commons.wikimedia.org/wiki/File:Intensity_image_with_gradient_images.png">the original Wikipedia
+image</a>,
+which is because their gradient function is a bit different. Their
+matrix gradient method smoothes the image a bit, leading to slightly
+less sharp edges, but also less sensitivity to noise in the image.</p>
+</section>
+<section id="combined">
+<h3>Combined</h3>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_grad_bw_rescale</span><span class="p">)</span></pre>
+<img src="images/intensely_edgy_cat_36_0.png" />
+<p>This modified post was written entirely in the Jupyter notebook. You can
+<a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/intensely_edgy_cat.ipynb">download</a>
+this notebook, or see a static view <a href="https://nbviewer.jupyter.org/github/ashwinvis/ashwinvis.github.io/blob/develop/content/intensely_edgy_cat.ipynb">on
+nbviewer</a>.</p>
+</section>
+</section>
+</div>
+<!-- /content -->
+      <div class="m-block m-success m-badge">
+        <img src="https://ashwinvis.github.io/images/dp_ashwin_2016.jpg" alt="Ashwin Vishnu Mohanan" />
+        <h3>About the author</h3>
+        <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
+      </div>
+      <footer>
+        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2018-08-16T00:00:00+02:00" class="dt-published">Thu 16 August 2018</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a>.<time class="dt-read-mins">
+            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            3
+        minutes
+              read
+          </time></p>
+        <div class="webmentions">
+          <details><summary>Interactions</summary>
+            <p>Below you can find the interactions that this page has had using <a
+                href="http://indieweb.org/webmention">WebMention</a>.
+            </p>
+            <div class="manual-webmention">
+              <p>Have you written a <a
+                  href="https://indieweb.org/responses">response</a> to this post? Let
+                  me know the URL:
+                <form id="manual-webmention"
+                      action="https://webmention.io/ashwinvis.github.io/webmention"
+                  method="post"><input type="url" name="source">
+
+                  <input type="hidden" name="target" value="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html">
+                  <input type="submit" name="submit" value="Send Webmention">
+                </form>
+              </p>
+              <p>Do you not have a website set up with WebMention capabilities? You
+                can:
+              <form method="get" action="https://quill.p3k.io/" target="_blank">
+                <input type="hidden" name="dontask" value="1">
+                <input type="hidden" name="me" value="https://commentpara.de/">
+                <input type="hidden" name="reply" value="https://ashwinvis.github.io/intensely-edgy-cat-with-fluidfft.html">
+                <input type="submit" value="Comment anonymously (via Comment Parade)">
+              </form>
+              </p>
+            </div>
+            <div id="webmentions">
+              <noscript>Due to laziness, this site uses client-side JavaScript to render the webmentions, rather than them being rendered server-side. If you do not wish to enable JavaScript, that's fair enough, but you won't be able to automagically see what Webmentions I've received - sorry!
+              </noscript>
+          </div>
+          </details>
+        </div>
+</footer>
+    </article>
+    <nav class="m-navpanel m-col-m-2 m-push-l-2">
+      <h3>Categories</h3>
+      <ol class="m-block-bar-m">
+        <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+        <li><a href="https://ashwinvis.github.io/category/blogger-archive.html">Blogger archive</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tumblr-archive.html">Tumblr archive</a></li>
+      </ol>
+      <h3>Tag cloud</h3>
+      <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/academia.html">academia</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/archlinux.html">archlinux</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/automation.html">automation</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ci.html">ci</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/conference.html">conference</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/congress.html">congress</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/covid-19.html">covid-19</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/css.html">css</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/devops.html">devops</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/economy.html">economy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fediverse.html">fediverse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluiddyn.html">fluiddyn</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidsim.html">fluidsim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/friends.html">friends</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/game-of-thrones.html">game of thrones</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/hpc.html">hpc</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/india.html">India</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/indian-politics.html">indian politics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/internet.html">Internet</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/introduction.html">introduction</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/java.html">java</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/kindness.html">kindness</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/licensing.html">licensing</a></li>
+        <li class="m-tag-5"><a href="https://ashwinvis.github.io/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ligatures.html">ligatures</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/linux.html">linux</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/list.html">list</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/markdown.html">markdown</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/mood.html">mood</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/motto.html">motto</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/music.html">music</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/optimization.html">optimization</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/phone.html">phone</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/poetry.html">poetry</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/postdoc.html">postdoc</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/privacy.html">privacy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/programming.html">programming</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/psychology.html">psychology</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pyconse.html">pyconse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pypy.html">pypy</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/python.html">python</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rant.html">rant</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/recession.html">recession</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/research.html">research</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/resolution.html">resolution</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rst.html">rst</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
+        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/teenage.html">teenage</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/thin-line.html">thin line</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/til.html">til</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/tips.html">tips</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/today-i-learned.html">today i learned</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/transonic.html">transonic</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/travel.html">travel</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/typography.html">typography</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ubuntu.html">ubuntu</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/vim.html">vim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/wordporm.html">wordporm</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/writing.html">writing</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div id="m-links-footer" class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://foss.heptapod.net/avmo">Heptapod</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Research</h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Posts</a></h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/category/blogger-archive.html">Blogger archive</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tumblr-archive.html">Tumblr archive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>
+        <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
+        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
+        <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
+        </p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

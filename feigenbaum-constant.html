@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feigenbaum constant | Ashwin Vishnu&#39;s Website</title>
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/m-light.compiled.css" />
+  <link rel="stylesheet" href="https://ashwinvis.github.io/static/custom.compiled.css" />
+  <link rel="icon" href="https://ashwinvis.github.io/images/logo_ashwin.png" type="image/png" />
+  <link rel="canonical" href="https://ashwinvis.github.io/feigenbaum-constant.html" />
+  <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+  <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
+  <meta property="og:title" content="Feigenbaum constant" />
+  <meta name="twitter:title" content="Feigenbaum constant" />
+  <meta property="og:url" content="https://ashwinvis.github.io/feigenbaum-constant.html" />
+  <meta property="og:description" content="Computing Feigenbaum constant" />
+  <meta name="twitter:description" content="Computing Feigenbaum constant" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:type" content="article" />
+  <!-- Mastodon Link verification -->
+  <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
+
+  <!-- indieauth.com -->
+  <link rel="me" href="https://github.com/ashwinvis">
+  <link rel="pgpkey" href="/static/ashwin.asc">
+
+  <!-- Micropub with indiekit:
+    source code: https://github.com/paulrobertlloyd/indiekit
+    docs: https://paulrobertlloyd.github.io/indiekit
+    fork and deploy as: https://www.heroku.com/deploy?template=https://github.com/ashwinvis/indiekit
+  -->
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+  <link rel="micropub" href="https://ashwin-micropub.herokuapp.com/micropub">
+
+  <!-- Webmentions with webmentions.io -->
+  <link rel="webmention" href="https://webmention.io/ashwinvis.github.io/webmention" />
+  <link rel="pingback" href="https://webmention.io/ashwinvis.github.io/xmlrpc" />
+
+  <!-- Security -->
+  <!-- Stricter version:
+   default-src 'none'; font-src https://fontlibrary.org; img-src 'self'; script-src 'self''; style-src 'self'
+  -->
+  <!-- Milder CSP to permit mathjax, bibbase scripts
+  TODO: Find alternate CDN for mathjax
+  https://github.com/mathjax/MathJax/issues/256#issuecomment-38032431
+  https://docs.mathjax.org/en/v2.7-latest/start.html#using-a-content-delivery-network-cdn
+  -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+        upgrade-insecure-requests;
+        default-src https:;
+        style-src https://bibbase.org 'unsafe-inline' 'self';
+        script-src
+          http://ashwinvis.github.io
+          http://cdnjs.cloudflare.com
+          https://bibbase.org
+          http://ajax.googleapis.com
+          'unsafe-inline' 'unsafe-eval' 'self';
+         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+         img-src 'unsafe-inline' 'self' https: data:;
+         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://peertube.social;
+         worker-src 'self';
+        "
+  >
+
+
+  <!-- Progressive web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="ashwin.info™">
+  <link rel="apple-touch-icon" href="/images/logo_ashwin.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script src="/app.js" defer></script>
+  <script src="/webmention.min.js" async defer></script>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="https://ashwinvis.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m"><img src="https://ashwinvis.github.io/images/logo_ashwin.png" />@ashwinvis</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+              </ol>
+            </li>
+            <li>
+              <a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
+              </ol>
+            </li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li>
+              <a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a>
+              <ol>
+                <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
+                <li><a href="https://ashwinvis.github.io/pages/software.html">Software</a></li>
+                <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
+              </ol>
+            </li>
+            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<div class="m-container">
+  <div class="m-row">
+    <article class="h-entry m-col-m-10 m-nopadb m-col-l-8">
+      <header>
+        <h1><a href="https://ashwinvis.github.io/feigenbaum-constant.html" rel="bookmark" class="u-url" title="Permalink to Feigenbaum constant">
+          <time class="m-date" datetime="2019-07-24T00:00:00+02:00">
+            Jul <span class="m-date-day">24</span> 2019
+          </time>
+          <div class="p-name">
+            Feigenbaum constant
+          </div>
+        </a></h1>
+        <div class="p-summary">
+        <p>Computing Feigenbaum constant</p>
+        </div>
+      </header>
+      <div class="m-clearfix-l"></div>
+<a href="https://brid.gy/publish/mastodon"></a>
+<!-- content -->
+<div class="e-content">
+<p>So I saw this on Stephen Wolfram’s blog where a simple recursive
+equation can yield chaotic behaviour and seems to have properties like
+Hopf bifurcation. I wanted to check out myself.</p>
+<div class="formula">
+<i>x</i><sub><i>i</i> + 1</sub> = <i>a</i><i>x</i><sub><i>i</i></sub>(1 − <i>x</i><sub><i>i</i></sub>)
+</div>
+<p>Reference:
+<a href="https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/">https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/</a></p>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1">## I would love to do it like this. Unfortunately I cannot find a nice way to make a recursive</span>
+<span class="c1">## sequence in sympy. So I went for the pythonic approach. If someone has a better idea let me</span>
+<span class="c1">## know!</span>
+
+<span class="c1"># a, x = symbols(&#39;a x&#39;, real=True)</span>
+<span class="c1"># i = symbols(&#39;i&#39;, integer=True)</span>
+<span class="c1"># f, g = symbols(&#39;f g&#39;, cls=Function)</span>
+<span class="n">init_printing</span><span class="p">()</span></pre>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">))</span>
+
+
+<span class="c1"># sequence(f, (x, 0, 10))</span></pre>
+<pre class="m-code"><span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span> <span class="k">return</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="n">series</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">)</span></pre>
+<div class="formula">
+<span class="displaystyle"><span class="symbol">[</span></span>0.3333333333333333,  0.7111111111111111,  0.6573827160493827,  0.720738178204542,  0.6440789013854076,  0.7335720645618368,  0.6254210901002277,  0.7496625605058258,  0.6005395388213597,  0.7676537636274826,  0.5707566810113398,  0.7839791746952305,  0.5419386506861306,  0.7943716786516055,  0.5227050073850749,  0.7983503444468598,  0.5151586302990083,  0.7992646909678656,  0.5134100631677054,  0.7994245446586822,  0.5131038145790108,  0.7994505281391325,  0.5130540198310227,  0.799454696212004,  0.5130460317330444,  0.7994553633792654,  0.5130447530988549,  0.7994554701330878,  0.5130445485035884,  0.79945548721388<span class="symbol">]</span>
+</div>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span>
+
+<span class="k">def</span> <span class="nf">series_mean</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">series</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">3</span><span class="p">:])</span></pre>
+<pre class="m-code"><span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="p">):</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">smean</span> <span class="o">=</span> <span class="n">series_mean</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;$a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">smean</span><span class="p">,</span> <span class="n">N</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span></pre>
+<img src="images/feigenbaum_constant_6_0.png" style="width: 547px; height: 434px" />
+<p>In the last subplot we begin to see period doublings.</p>
+<section id="bifurcation-diagram">
+<h2>Bifurcation diagram</h2>
+<p>In the blog the following Wolfram code is used to generate the calculate
+the bifurcation. The first 50 values of the series are ignored to avoid
+transients and upto 300 values are calculated vfor each value of
+<span class="formula"><i>a</i></span>.</p>
+<pre class="m-code"><span class="n">ListPlot</span><span class="p">[</span><span class="n">Flatten</span><span class="p">[</span><span class="w"></span>
+<span class="w">  </span><span class="n">Table</span><span class="p">[{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="nv">#</span><span class="p">}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">/@</span><span class="w"></span>
+<span class="w">    </span><span class="n">Drop</span><span class="p">[</span><span class="n">NestList</span><span class="p">[</span><span class="n">Compile</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">)],</span><span class="w"> </span><span class="n">N</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="mi">300</span><span class="p">],</span><span class="w"> </span><span class="mi">50</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mf">.01</span><span class="p">}],</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">Frame</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">FrameLabel</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">}]</span><span class="w"></span></pre>
+<p>Before we do that, let us see if it makes any difference if we vary the
+initial condition.</p>
+<pre class="m-code"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">a_values</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x0_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x0</span> <span class="ow">in</span> <span class="n">x0_values</span><span class="p">:</span>
+    <span class="n">smeans</span> <span class="o">=</span> <span class="p">[</span><span class="n">series_mean</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_values</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a_values</span><span class="p">,</span> <span class="n">smeans</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;series average&quot;</span><span class="p">)</span></pre>
+<pre>/usr/lib/python3.7/site-packages/ipykernel_launcher.py:8: RuntimeWarning: overflow encountered in double_scalars</pre>
+<img src="images/feigenbaum_constant_11_1.png" style="width: 567px; height: 432px" />
+<p>The average value where the series oscillates around does not seem to
+depend on the value of <span class="formula"><i>x</i><sub>0</sub></span>. So now instead of plotting the mean,
+we can plot the full distribution where of values where the series
+oscillates around.</p>
+<pre class="m-code"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">a_values</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_values</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">series</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">)[</span><span class="mi">50</span><span class="p">:]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;series distribution&quot;</span><span class="p">)</span></pre>
+<img src="images/feigenbaum_constant_13_0.png" style="width: 567px; height: 432px" />
+<p>There is our multiple Hopf bifurcation :) Let us see what happens for
+<span class="formula"><i>a</i> &gt; 3.5</span>.</p>
+<pre class="m-code"><span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="p">(</span><span class="mf">3.6</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">),</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="p">):</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">smean</span> <span class="o">=</span> <span class="n">series_mean</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;$a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">smean</span><span class="p">,</span> <span class="n">N</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span></pre>
+<img src="images/feigenbaum_constant_15_0.png" style="width: 1214px; height: 450px" />
+<p>Nice! Maybe I will do a follow up to compute the Lyapunov constant.</p>
+<p><em>You
+can</em><a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/src/content/feigenbaum_constant.ipynb">download</a><em>this
+notebook, or see a static view</em><a href="https://nbviewer.jupyter.org/github/ashwinvis/ashwinvis.github.io/blob/develop/src/content/feigenbaum_constant.ipynb">on
+nbviewer</a><em>.</em></p>
+</section>
+</div>
+<!-- /content -->
+      <div class="m-block m-success m-badge">
+        <img src="https://ashwinvis.github.io/images/dp_ashwin_2016.jpg" alt="Ashwin Vishnu Mohanan" />
+        <h3>About the author</h3>
+        <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
+      </div>
+      <footer>
+        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-07-24T00:00:00+02:00" class="dt-published">Wed 24 July 2019</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/python.html">python</a>, <a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a>.<time class="dt-read-mins">
+            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            2
+        minutes
+              read
+          </time></p>
+        <div class="webmentions">
+          <details><summary>Interactions</summary>
+            <p>Below you can find the interactions that this page has had using <a
+                href="http://indieweb.org/webmention">WebMention</a>.
+            </p>
+            <div class="manual-webmention">
+              <p>Have you written a <a
+                  href="https://indieweb.org/responses">response</a> to this post? Let
+                  me know the URL:
+                <form id="manual-webmention"
+                      action="https://webmention.io/ashwinvis.github.io/webmention"
+                  method="post"><input type="url" name="source">
+
+                  <input type="hidden" name="target" value="https://ashwinvis.github.io/feigenbaum-constant.html">
+                  <input type="submit" name="submit" value="Send Webmention">
+                </form>
+              </p>
+              <p>Do you not have a website set up with WebMention capabilities? You
+                can:
+              <form method="get" action="https://quill.p3k.io/" target="_blank">
+                <input type="hidden" name="dontask" value="1">
+                <input type="hidden" name="me" value="https://commentpara.de/">
+                <input type="hidden" name="reply" value="https://ashwinvis.github.io/feigenbaum-constant.html">
+                <input type="submit" value="Comment anonymously (via Comment Parade)">
+              </form>
+              </p>
+            </div>
+            <div id="webmentions">
+              <noscript>Due to laziness, this site uses client-side JavaScript to render the webmentions, rather than them being rendered server-side. If you do not wish to enable JavaScript, that's fair enough, but you won't be able to automagically see what Webmentions I've received - sorry!
+              </noscript>
+          </div>
+          </details>
+        </div>
+</footer>
+    </article>
+    <nav class="m-navpanel m-col-m-2 m-push-l-2">
+      <h3>Categories</h3>
+      <ol class="m-block-bar-m">
+        <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+        <li><a href="https://ashwinvis.github.io/category/blogger-archive.html">Blogger archive</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+        <li><a href="https://ashwinvis.github.io/category/tumblr-archive.html">Tumblr archive</a></li>
+      </ol>
+      <h3>Tag cloud</h3>
+      <ul class="m-tagcloud">
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/academia.html">academia</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/archlinux.html">archlinux</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/automation.html">automation</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/brainwaves.html">brainwaves</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ci.html">ci</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/conference.html">conference</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/congress.html">congress</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/covid-19.html">covid-19</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/csharp.html">csharp</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/css.html">css</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/devops.html">devops</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/economy.html">economy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/emotion.html">emotion</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fediverse.html">fediverse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluiddyn.html">fluiddyn</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidfft.html">fluidfft</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/fluidsim.html">fluidsim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/friends.html">friends</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/game-of-thrones.html">game of thrones</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/helloworld.html">helloworld</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/hpc.html">hpc</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/india.html">India</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/indian-politics.html">indian politics</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/internet.html">Internet</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/introduction.html">introduction</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/java.html">java</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/kindness.html">kindness</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/licensing.html">licensing</a></li>
+        <li class="m-tag-5"><a href="https://ashwinvis.github.io/tag/life.html">life</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ligatures.html">ligatures</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/linux.html">linux</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/list.html">list</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/markdown.html">markdown</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/mood.html">mood</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/motto.html">motto</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/music.html">music</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/optimization.html">optimization</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/phone.html">phone</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/poetry.html">poetry</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/postdoc.html">postdoc</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/privacy.html">privacy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/programming.html">programming</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/psychology.html">psychology</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pyconse.html">pyconse</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/pypy.html">pypy</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/python.html">python</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rant.html">rant</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/recession.html">recession</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/research.html">research</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/resolution.html">resolution</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rst.html">rst</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
+        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/teenage.html">teenage</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/thin-line.html">thin line</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/til.html">til</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/tips.html">tips</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/today-i-learned.html">today i learned</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/transonic.html">transonic</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/travel.html">travel</a></li>
+        <li class="m-tag-3"><a href="https://ashwinvis.github.io/tag/tumblr.html">tumblr</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/typography.html">typography</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/ubuntu.html">ubuntu</a></li>
+        <li class="m-tag-2"><a href="https://ashwinvis.github.io/tag/uncategorized.html">Uncategorized</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/vim.html">vim</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/wordporm.html">wordporm</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/writing.html">writing</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div id="m-links-footer" class="m-row">
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="https://github.com/ashwinvis">GitHub</a></li>
+          <li><a href="https://source.coderefinery.org/ashwinvis/">Gitlab</a></li>
+          <li><a href="https://foss.heptapod.net/avmo">Heptapod</a></li>
+          <li><a href="https://www.linkedin.com/in/ashwinvishnu/">LinkedIn</a></li>
+          <li><a href="https://mastodon.acc.sunet.se/@ashwinvis">Mastodon</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Research</h3>
+        <ul>
+          <li><a href="https://zotero.org/ashwinvis">Zotero</a></li>
+          <li><a href="https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan">ResearchGate</a></li>
+          <li><a href="https://scholar.google.se/citations?user=zv4wwKoAAAAJ">Google-Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0002-2979-6327">ORCID</a></li>
+          <li><a href="https://zenodo.org/search?page=1&amp;size=20&amp;q=Mohanan,%20Ashwin%20Vishnu">Zenodo</a></li>
+        </ul>
+      </div>
+      <div class="m-clearfix-t"></div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="m-col-s-3 m-col-t-6">
+        <h3><a href="https://ashwinvis.github.io/">Posts</a></h3>
+        <ul>
+          <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/category/blogger-archive.html">Blogger archive</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
+          <li><a href="https://ashwinvis.github.io/category/tumblr-archive.html">Tumblr archive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>
+        <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
+        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
+        <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
+        </p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
