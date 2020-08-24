@@ -12,7 +12,7 @@ import logging
 from datetime import datetime
 
 import m
-from pelican_jupyter import markup
+#  from pelican_jupyter import markup
 #  from pelican.plugins import webring
 from pelican_ashwinvis import post_stats
 from pelican_ashwinvis.util.util import read_opml
@@ -184,7 +184,7 @@ M_WEBMENTIONS = True
 PLUGINS += [
     #  webring,
     post_stats,
-    markup,
+    #  markup,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
