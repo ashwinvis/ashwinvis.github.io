@@ -142,79 +142,47 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nevilleantony98.gitlab.io//2020/08/23/week-12/" rel="bookmark" class="u-url"
-       title="GSoC: Final Report of My Work on GNOME Games" target="_blank">
-      <time class="m-date" datetime="2020-08-23 18:53:46+00:00">
+    <a href="https://psifidotos.blogspot.com/2020/08/latte-dock-v010-background-radius-and.html" rel="bookmark" class="u-url"
+       title="Latte Dock v0.10~ | Background Radius and Shadows" target="_blank">
+      <time class="m-date" datetime="2020-08-24 16:58:59+00:00">
         Aug
         <span class="m-date-day">
-          23
+          24
         </span>
         2020
       </time>
       <div class="p-name">
-      GSoC: Final Report of My Work on GNOME Games
+      Latte Dock v0.10~ | Background Radius and Shadows
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>GSoC is finally coming to end, and what an exciting experience it has been! In this post I’ll be showing off the fruits of my labor.</p>
+  <p> </p><div><div><a href="https://github.com/psifidotos/Latte-Dock/"><img src="//camo.githubusercontent.com/48c6397fd11941c944a77813bad6e9fd8f285aa2/687474703a2f2f692e696d6775722e636f6d2f4c4c6f5864674b2e706e67"></a></div></div><div></div>Hello everyone,<div>customizers will probably become too happy with this new feature of Latte Dock v0.10~ git version. [~, stands for rapid development, in your distro package repos is mentioned as git version]
+</div><div>
+ 
+</div>
 
-<p>User collections were added to <em>Games</em> last week, and that marks the last major milestone of my GSoC project of <em>“Implementing game collections in GNOME Games”</em>. I’m very glad that I was able to finish all the major milestones in time. Below I’ll give a quick summary of my journey.</p>
-
-About the Project
-<p>Before getting straight into it, I’d like to give a quick introduction for the uninitiated (You can also read my previous posts <a href="https://nevilleantony98.gitlab.io/archive/">here</a>). My project this summer is to introduce collections to <em>Games</em>. <em>Games</em> is a game launcher and an emulator for several platforms, and it lists all of your games in one place with help from …</p>
+<b><i><span>- youtube presentation -</span></i></b>
+<a></a>Contents;<ul>
+<li><b><a href="#background_radius">1. Background Radius</a></b></li>
+<li><a href="#background_shadows"><b>2. Background Shadows</b></a></li>
+<li><b><a href="#design">3. Design </a></b></li>
+<li><a href="#donations"><b>4. Donations</b></a></li>
+</ul><div><span><b><a href="#">1. Background Radius</a></b></span></div><p>Plenty of users were asking in the past to be able to adjust background roundness. This is very challenging because Latte relys on Plasma Themes that provide only svg files for their elements and at the same time panel background shadows are drawn from KWin compositor. So before this could be implemented plenty of things were needed to be supported first:</p><ul>
+<li>Client decorated shadows and background</li>
+<li>Overlay Plasma Theme Background without the user noticing any difference [<i>Outline</i> option case]
+</li>
+<li>Inform window manager about the real dock geometry [<i>GTK_FRAME_EXTENTS </i>case]</li>
+<li>Inform window …</li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-23 18:53:46+00:00" class="dt-published"></time>
-  Sun 23 Aug 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kate-editor.org/post/2020/2020-08-23-ksyntaxhighlighting-example-files-wanted/" rel="bookmark" class="u-url"
-       title="KSyntaxHighlighting - Example Files Wanted" target="_blank">
-      <time class="m-date" datetime="2020-08-23 15:09:00+00:00">
-        Aug
-        <span class="m-date-day">
-          23
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KSyntaxHighlighting - Example Files Wanted
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In the <a href="https://invent.kde.org/frameworks/syntax-highlighting">KSyntaxHighlighting framework</a> we use small example files for the individual languages as regression tests.
-See the current collection <a href="https://invent.kde.org/frameworks/syntax-highlighting/-/tree/master/autotests/input">here</a>.</p>
-<p>We will create HTML output and two internal formats to check highlighting attributes &amp; folding regions.
-These results are then diffed with version controlled reference files.</p>
-<p>At the moment we only check the default light theme for the HTML output, but I intend to extend this to check the dark theme, too.
-This will e.g. make it easier to spot problematic hard coded colors that are not readable in one of both variants.</p>
-<p>I updated our tooling to link the test output HTML files we actually have already on our <a href="https://kate-editor.org/syntax/">syntax overview page</a>.</p>
-<p>As you can see there, still a lot of languages we support are lacking example files.
-Just scan the page for the “submissions welcome” lines ;)
-These …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Kate News</b></span>
-  on <time datetime="2020-08-23 15:09:00+00:00" class="dt-published"></time>
-  Sun 23 Aug 2020
+  <span class="p-author"><b>Michail Vourlakos</b></span>
+  on <time datetime="2020-08-24 16:58:59+00:00" class="dt-published"></time>
+  Mon 24 Aug 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -224,36 +192,216 @@ These …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/08/2020-08-23-ijhcg/" rel="bookmark" class="u-url"
-       title="Clean start for the web" target="_blank">
-      <time class="m-date" datetime="2020-08-23 08:24:41+02:00">
+    <a href="https://jlelse.blog/posts/vacation-2020/" rel="bookmark" class="u-url"
+       title="Summer vacation '20" target="_blank">
+      <time class="m-date" datetime="2020-08-24 18:45:00+02:00">
         Aug
         <span class="m-date-day">
-          23
+          24
         </span>
         2020
       </time>
       <div class="p-name">
-      Clean start for the web
+      Summer vacation '20
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><a href="https://macwright.com/2020/08/22/clean-starts-for-the-web.html">Tom MacWright shares</a> some thoughts around how the web loses on performance and accessibility because web pages continue to grow in size and complexity.</p>
-<p>He makes a distinction between the document web (blogs etc.) and the application web. He suggests to create an alternative browser for the document web which supports a lightweight markup language like Markdown.</p>
-<blockquote>
-<p>The problem is that the “document web” is often plagued by application characteristics - it’s the JavaScript and animations and complexity that makes your average newspaper website an unmitigated disaster.</p>
-</blockquote>
+  <p>This year I once spent my summer vacation not with my family but with my girlfriend (going on vacation alone feels so grown up somehow&hellip; 😅). I spent two weeks with her at the bay of Lübeck. To switch off from everyday life and relax. 😌</p>
+<p>We often went swimming in the 22°C warm Baltic Sea, went for walks, rode our bikes (and got soaking wet from the rain), visited Lübeck and Ratzeburg, sand sculptures, as well as the oldest lighthouse in Germany (it stands in Travemünde and was first built in 1539), took pictures, ate a lot of ice cream and, you probably won&rsquo;t believe me, but actually read books. I read two whole books in two weeks, my personal record for years.</p>
+<p>It was a really nice time. I even survived (very well indeed) the fact that there …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-23 08:24:41+02:00" class="dt-published"></time>
-  Sun 23 Aug 2020
+  on <time datetime="2020-08-24 18:45:00+02:00" class="dt-published"></time>
+  Mon 24 Aug 2020
   in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/627343575894687744/crystalline-critters" rel="bookmark" class="u-url"
+       title="Crystalline Critters" target="_blank">
+      <time class="m-date" datetime="2020-08-24 10:04:12-05:00">
+        Aug
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Crystalline Critters
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://64.media.tumblr.com/c981d6b8dff87d214f0c485ed63a09d1/e9c2160b147276ac-f9/s540x810/538da72aeec0909ef81d8a4dfafcb0e94da6cff8.gif"><img src="https://64.media.tumblr.com/7cbfb346c5d7299c902b99617e88507b/e9c2160b147276ac-dc/s540x810/705fff0ee47b95e75e397c3988bb081279888d90.gif"><img src="https://64.media.tumblr.com/684636639a763c6b2c00968f7efaae5a/e9c2160b147276ac-22/s540x810/ac8287e4540429753efc35dface84985fd36cdee.gif"><a href="https://fyfluiddynamics.com/2020/08/crystalline-critters/">In 5th grade, I grew crystals by evaporating solutions of salt water from miniature pie tins. But it turns out I could have gotten much cooler results if I&rsquo;d evaporated my salt water a drop at a time on a hot superhydrophobic surface.</a> (Video, image, and research credit: <a href="https://doi.org/10.1103/APS.DFD.2019.GFM.V0040">S. McBride et al.</a>)
+<a href="https://fyfluiddynamics.com/?p=12033">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-24 10:04:12-05:00" class="dt-published"></time>
+  Mon 24 Aug 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/08/crystalline-critters/" rel="bookmark" class="u-url"
+       title="Crystalline Critters" target="_blank">
+      <time class="m-date" datetime="2020-08-24 15:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Crystalline Critters
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In 5th grade, I grew crystals by evaporating solutions of salt water from miniature pie tins. The results were white, boxy crystals whose size depended on how much salt I&#8217;d <a href="https://fyfluiddynamics.com/2020/08/crystalline-critters/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-08-24 15:00:00+00:00" class="dt-published"></time>
+  Mon 24 Aug 2020
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://feborg.es/guadec-2020-intern-lightning-talks-recordings/" rel="bookmark" class="u-url"
+       title="GUADEC 2020: Intern lightning talks" target="_blank">
+      <time class="m-date" datetime="2020-08-24 14:13:01+00:00">
+        Aug
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GUADEC 2020: Intern lightning talks
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  This year’s GUADEC was a blast. I miss seeing everybody in person but, at the same time, the online event enabled the participation of many that otherwise wouldn’t be able to attend the conference. I hope we can continue having an online conference alongside our in-person ones, for more people to participate. During the Intern … <p><a href="https://feborg.es/guadec-2020-intern-lightning-talks-recordings/">Continue reading<span> "GUADEC 2020: Intern lightning talks"</span></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Felipe Borges</b></span>
+  on <time datetime="2020-08-24 14:13:01+00:00" class="dt-published"></time>
+  Mon 24 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2020/08/24/Alice-in-Wonderland.html" rel="bookmark" class="u-url"
+       title="Alice in Wonderland and the theft of the public domain" target="_blank">
+      <time class="m-date" datetime="2020-08-24 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Alice in Wonderland and the theft of the public domain
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Disney&rsquo;s <em>Alice in Wonderland</em> is one of my favorite movies and an undisputed
+classic. After its release in 1951, <em>Alice</em> holds a fond place in billions of
+children&rsquo;s hearts, over almost four generations. And it has been stolen from
+those generations, as part of the theft of one of these generations&rsquo; greatest
+treasures: the public domain.</p>
+<p><img alt="" src="https://l.sr.ht/pMHw.jpg"></p>
+<p>I often use this film as an example when arguing about copyright. Almost
+everyone I speak to was born well after the film&rsquo;s release (in fact, this is
+true of almost everyone <em>alive today</em>), but they remember it fondly regardless.
+Many people I&rsquo;ve spoken to would agree that it even played a formative role in
+their childhoods; it&rsquo;s a film dear to many hearts. My mom is very fond of the
+Cheshire Cat in particular, and owns quite a …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-24 00:00:00+00:00" class="dt-published"></time>
+  Mon 24 Aug 2020
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2350/" rel="bookmark" class="u-url"
+       title="Deer Turrets" target="_blank">
+      <time class="m-date" datetime="2020-08-24 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          24
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Deer Turrets
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="When my great grandfather designed the Titanic and it hit an iceberg and sank, he didn't sit around moping. He took those lessons to his next job designing airships, and he made the Hindenburg completely iceberg-proof!" src="https://imgs.xkcd.com/comics/deer_turrets.png" title="When my great grandfather designed the Titanic and it hit an iceberg and sank, he didn't sit around moping. He took those lessons to his next job designing airships, and he made the Hindenburg completely iceberg-proof!">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-24 00:00:00+00:00" class="dt-published"></time>
+  Mon 24 Aug 2020
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -545,109 +693,6 @@ ship them all out in a big batch …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/627071646817288192/slow-mo-espresso" rel="bookmark" class="u-url"
-       title="Slow Mo Espresso" target="_blank">
-      <time class="m-date" datetime="2020-08-21 10:02:01-05:00">
-        Aug
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Slow Mo Espresso
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/08094eb9a00decde8c1fe3bfc182583d/1d45adef0df0e193-91/s540x810/a355de6e3e40f23651d51e97edcdd0eead845deb.gif"><img src="https://64.media.tumblr.com/e3e5f1888bc03877a02ba6ce387b4eec/1d45adef0df0e193-a4/s540x810/d28ab69e244cfc04cabc632d6a7198d5aba979bc.gif"><img src="https://64.media.tumblr.com/d4a30b15f2c0db850fa9eb9a2b6107b4/1d45adef0df0e193-ae/s540x810/61144dab4c8c7b2645efa366e008bc10fd50ff4d.gif"><a href="https://fyfluiddynamics.com/2020/08/slow-mo-espresso/">High-speed photography gives us an alternate glimpse of reality. Here it provides an all-new perspective on making espresso.</a>  (Video and image credit: J. Hoffmann; submitted by Jerrod H.)
-<a href="https://fyfluiddynamics.com/?p=13333">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-21 10:02:01-05:00" class="dt-published"></time>
-  Fri 21 Aug 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/08/slow-mo-espresso/" rel="bookmark" class="u-url"
-       title="Slow Mo Espresso" target="_blank">
-      <time class="m-date" datetime="2020-08-21 15:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Slow Mo Espresso
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  High-speed photography gives us an alternate glimpse of reality. Here it provides an all-new perspective on making espresso. Surface tension plays a starring role, first in pulling together the film <a href="https://fyfluiddynamics.com/2020/08/slow-mo-espresso/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-08-21 15:00:00+00:00" class="dt-published"></time>
-  Fri 21 Aug 2020
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2349/" rel="bookmark" class="u-url"
-       title="Rabbit Introduction" target="_blank">
-      <time class="m-date" datetime="2020-08-21 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Rabbit Introduction
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Washington state is seeing great success with reintroducing the Columbia River Basin subpopulation. We cannot allow them to further widen the interstate bun gap." src="https://imgs.xkcd.com/comics/rabbit_introduction.png" title="Washington state is seeing great success with reintroducing the Columbia River Basin subpopulation. We cannot allow them to further widen the interstate bun gap.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-21 00:00:00+00:00" class="dt-published"></time>
-  Fri 21 Aug 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://blogdecjunior.tumblr.com/post/626939975528759296/the-best-ever-ctf-team-in-kunnathangady" rel="bookmark" class="u-url"
        title="The Best Ever CTF Team in Kunnathangady" target="_blank">
       <time class="m-date" datetime="2020-08-20 09:39:12+05:30">
@@ -788,54 +833,6 @@ I did not install Arch Linux for a long time (nearly over 8 years, lol). Therefo
   on <time datetime="2020-08-19 00:00:00+00:00" class="dt-published"></time>
   Wed 19 Aug 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2020/08/17/Engineers-solve-problems.html" rel="bookmark" class="u-url"
-       title="Software engineers solve problems" target="_blank">
-      <time class="m-date" datetime="2020-08-17 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Software engineers solve problems
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Software engineers solve problems. A problem you may have encountered is, for
-example, &ldquo;this function has a bug&rdquo;, and you&rsquo;re probably already more or less
-comfortable solving these problems. Here are some other problems you might
-encounter on the way:</p>
-<ol>
-<li>Actually, the bug ultimately comes from a third-party program</li>
-<li>Hm, it uses a programming language I don&rsquo;t know</li>
-<li>Oh, the bug is in that programming language&rsquo;s compiler</li>
-<li>This subsystem of the compiler would have to be overhauled</li>
-<li>And the problem is overlooked by the language specification</li>
-</ol>
-<p>I&rsquo;ve met many engineers who, when standing at the base of this mountain,
-conclude that the summit is too far away and clearly not their responsibility,
-and subsequently give up. But remember: as an engineer, your job is to apply
-creativity to solving problems. Are these not themselves problems to …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-17 00:00:00+00:00" class="dt-published"></time>
-  Mon 17 Aug 2020
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
