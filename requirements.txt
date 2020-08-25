@@ -7,7 +7,6 @@
 -e ./m.css  # via -r requirements.in
 -e .  # via -r requirements.in
 -e ./src/pelican-planet  # via -r requirements.in
--e git+https://github.com/getpelican/pelican.git@d2bbfd9#egg=pelican  # via -r requirements.in, m.css, pelican-ashwinvis, pelican-planet
 aiohttp==3.6.2            # via -r requirements.in
 arrow==0.16.0             # via jinja2-time
 async-timeout==3.0.1      # via -r requirements.in, aiohttp
@@ -33,6 +32,7 @@ markdown==3.1.1           # via -r requirements.in
 markupsafe==1.1.1         # via cookiecutter, jinja2
 multidict==4.7.6          # via aiohttp, yarl
 packaging==20.4           # via bleach
+pelican==4.5.0            # via -r requirements.in, m.css, pelican-ashwinvis, pelican-planet
 poyo==0.5.0               # via cookiecutter
 pygments==2.6.1           # via pelican
 pyparsing==3.0.0a2        # via packaging
