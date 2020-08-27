@@ -142,6 +142,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="http://www.chrislord.net/2020/08/27/offscreencanvas-jobs-life/" rel="bookmark" class="u-url"
+       title="OffscreenCanvas, jobs, life" target="_blank">
+      <time class="m-date" datetime="2020-08-27 08:56:24+00:00">
+        Aug
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      OffscreenCanvas, jobs, life
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Hoo boy, it’s been a long time since I last blogged… About 2 and a half years! So, what’s been happening in that time? This will be a long one, so if you’re only interested in a part of it (and who could blame you), I’ve titled each section. Leaving Impossible Well, unfortunately my work … <p><a href="http://www.chrislord.net/2020/08/27/offscreencanvas-jobs-life/">Continue reading<span> "OffscreenCanvas, jobs, life"</span></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Chris Lord</b></span>
+  on <time datetime="2020-08-27 08:56:24+00:00" class="dt-published"></time>
+  Thu 27 Aug 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jyeno.home.blog/2020/08/26/google-summer-of-code-2020-week-12/" rel="bookmark" class="u-url"
        title="Google Summer of Code 2020 – week 12" target="_blank">
       <time class="m-date" datetime="2020-08-26 21:57:48+00:00">
@@ -212,18 +246,17 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>On Mastodon, <a href="https://fosstodon.org/users/pet84rik">@pet84rik</a> posted a link to <a href="https://bzg.fr/en/emacs-strip-tease.html/">Emacs, naked.</a>, by <a href="https://mastodon.etalab.gouv.fr/users/bzg">@bzg</a>. I compared it to my own setup and nodded. I use many of the same things.</p><pre>;; deactivate some bling
-(dolist (mode '(blink-cursor-mode
-        tool-bar-mode
+  <div><p>On Mastodon, <a href="https://fosstodon.org/users/pet84rik">@pet84rik</a> posted a link to <a href="https://bzg.fr/en/emacs-strip-tease.html/">Emacs, naked.</a>, by <a href="https://mastodon.etalab.gouv.fr/users/bzg">@bzg</a>. I compared it to my own setup and found that I use many of the same things.</p><pre>;; deactivate some bling
+(dolist (mode '(tool-bar-mode
         blink-cursor-mode
         menu-bar-mode
         scroll-bar-mode))
   (when (fboundp mode)
-    (funcall mode -1)))</pre><p>You can find code like this and similar stuff in my Emacs config, which is lot better organized than it used to be. </p><ul><li><a href="https://alexschroeder.ch/cgit/emacs-setup/tree/config/minor-modes-conf.el">minor-modes-conf.el</a></li></ul><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-08-26_Emacs_without_the_bling"><img alt="Screenshot" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-08-26_Emacs_without_the_bling" title="Screenshot"></a></p><p>When I scrolled down, however, I noticed something else: Bastien hides the mode-line completely. I’m using <a href="https://trunk.mad-scientist.club/users/algernon">@algernon</a>’s Brutalist Dark theme, which has visible mode-lines but the inactive mode-line is not readable (foreground and background colour are the same). It’s less distracting. Still, I started wondering.</p><p>With minor tweaks, I added the following:</p><pre>(defvar-local hide-mode-line nil)
+    (funcall mode -1)))</pre><p>You can find code like this and similar stuff in my Emacs config, which is a lot better organized than it used to be. </p><ul><li><a href="https://alexschroeder.ch/cgit/emacs-setup/tree/config/minor-modes-conf.el">minor-modes-conf.el</a></li></ul><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-08-26_Emacs_without_the_bling"><img alt="Screenshot" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-08-26_Emacs_without_the_bling" title="Screenshot"></a></p><p>When I scrolled down, however, I noticed something else: Bastien hides the mode-line completely. I’m using <a href="https://trunk.mad-scientist.club/users/algernon">@algernon</a>’s Brutalist Dark theme, which has visible mode-lines but the inactive mode-line is not readable (foreground and background colour are the same). It’s less distracting. Still, I started wondering.</p><p>With minor tweaks, I added the following:</p><pre>(defvar-local hide-mode-line nil)
 
 (define-minor-mode hidden-mode-line-mode
   "Minor mode to hide the mode-line in the current buffer."
-  :init-value nil …</pre></div>
+  :init-value …</pre></div>
   </p>
   </div>
 </header>
@@ -233,40 +266,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-08-26 21:04:14+00:00" class="dt-published"></time>
   Wed 26 Aug 2020
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://yetisgnomeadventure.home.blog/2020/08/26/gsoc-2020-final-submission/" rel="bookmark" class="u-url"
-       title="GSoC 2020 Final Submission" target="_blank">
-      <time class="m-date" datetime="2020-08-26 19:32:45+00:00">
-        Aug
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      GSoC 2020 Final Submission
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This summer is slowly coming to an end and with it the final month of Google Summer of Code. This blog post will serve as the final submission for my participation. I’ll go one by one over the Merge Requests that got accepted into Epiphany and give a short description of my work. ðŸ™‚ !651 … <a href="https://yetisgnomeadventure.home.blog/2020/08/26/gsoc-2020-final-submission/">Continue reading <span>GSoC 2020 Final Submission</span> <span>→</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Yetizone</b></span>
-  on <time datetime="2020-08-26 19:32:45+00:00" class="dt-published"></time>
-  Wed 26 Aug 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -545,6 +544,40 @@ statements inside their function body. Unlike regular …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="http://www.scicombinator.com/articles/5910317" rel="bookmark" class="u-url"
+       title="Effect of Renin-Angiotensin-Aldosterone System Inhibitors in Patients with COVID-19: a Systematic Review and Meta-analysis of 28,872 Patients" target="_blank">
+      <time class="m-date" datetime="2020-08-25 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Effect of Renin-Angiotensin-Aldosterone System Inhibitors in Patients with COVID-19: a Systematic Review and Meta-analysis of 28,872 Patients
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The role of renin-angiotensin-aldosterone system (RAAS) inhibitors, notably angiotensin-converting enzyme inhibitors (ACEi) or angiotensin receptor blockers (ARBs), in the COVID-19 pandemic has not been fully evaluated. With an increasing number of COVID-19 cases worldwide, it is imperative to better understand the impact of RAAS inhibitors in hypertensive COVID patients. PubMed, Embase and the pre-print database Medrxiv were searched, and studies with data on patients on ACEi/ARB with COVID-19 were included. Random effects models were used to estimate the pooled mean difference with 95% confidence interval using Open Meta[Analyst] software.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>VS Vassiliou</b></span>
+  on <time datetime="2020-08-25 00:00:00+00:00" class="dt-published"></time>
+  Tue 25 Aug 2020
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://www.scivision.dev/matlab-is-parallel-worker/" rel="bookmark" class="u-url"
        title="Detect Matlab function run in parallel worker" target="_blank">
       <time class="m-date" datetime="2020-08-25 00:00:00+00:00">
@@ -621,40 +654,6 @@ Cheshire Cat in particular, and owns quite a …</p>
   on <time datetime="2020-08-24 00:00:00+00:00" class="dt-published"></time>
   Mon 24 Aug 2020
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/5903715" rel="bookmark" class="u-url"
-       title="Pediatric SARS-CoV-2: Clinical Presentation, Infectivity, and Immune Responses" target="_blank">
-      <time class="m-date" datetime="2020-08-23 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          23
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Pediatric SARS-CoV-2: Clinical Presentation, Infectivity, and Immune Responses
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Data sharing: The data obtained as part of this study are available from the corresponding author upon reasonable request.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>A Fasano</b></span>
-  on <time datetime="2020-08-23 00:00:00+00:00" class="dt-published"></time>
-  Sun 23 Aug 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
