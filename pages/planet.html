@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://bloggingbecauseitsneeded.wordpress.com/2020/08/26/my-struggle-with-translation/" rel="bookmark" class="u-url"
-       title="My struggle with translations" target="_blank">
-      <time class="m-date" datetime="2020-08-26 12:45:00+00:00">
+    <a href="https://jyeno.home.blog/2020/08/26/google-summer-of-code-2020-week-12/" rel="bookmark" class="u-url"
+       title="Google Summer of Code 2020 – week 12" target="_blank">
+      <time class="m-date" datetime="2020-08-26 21:57:48+00:00">
         Aug
         <span class="m-date-day">
           26
@@ -152,22 +152,190 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      My struggle with translations
+      Google Summer of Code 2020 – week 12
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  “It’s day 15 of looking at translatability of desktop files that don’t have .desktop extension, I’ve lost all hope…”-me after spending a lot of time on translations Work till now In my last post, after refactoring the code, I succeeded in making a Firmware and RetroFirmware in the overall scheme of making a Firmware object<a href="https://bloggingbecauseitsneeded.wordpress.com/2020/08/26/my-struggle-with-translation/">Continue reading <span>"My struggle with translations"</span></a>
+  <p>Hello! This is the post about my week 12 and, probably, also my final post for GSoC 2020.</p>
+
+
+
+<p>You can see my Merge Request in regards to the support of text annotation <a href="https://invent.kde.org/education/mark/-/merge_requests/4">here</a>. Today I will talk about what I have done this week and also show the progress of marK so far near the end of GSoC.</p>
+
+
+
+<p>I have implemented and fixed what I mentioned in the <a href="https://jyeno.home.blog/2020/08/18/google-summer-of-code-2020-week-9-10-and-11/">previous post</a> and there are more commits that I want to highlight:</p>
+
+
+
+<ul><li><a href="https://invent.kde.org/jyeno/mark/-/commit/f6645862aab671c5ffc29d849ac506f62b7eafd7">Do not allow edit an existing polygon if is dragging</a></li></ul>
+
+
+
+<p>A small change (only two lines) that prevents a bug that can happen when the user is annotating data with a mouse click and move and the current polygon pass over an existing polygon, now it is not allowed to do so.</p>
+
+
+
+<ul><li><a href="https://invent.kde.org/jyeno/mark/-/commit/91cc99e89af450964549eeff106400cab805c3db">Add support for mouse double click event in …</a></li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Adwait Rawat</b></span>
-  on <time datetime="2020-08-26 12:45:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Jean Lima Andrade</b></span>
+  on <time datetime="2020-08-26 21:57:48+00:00" class="dt-published"></time>
+  Wed 26 Aug 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-08-26_Emacs_without_the_bling" rel="bookmark" class="u-url"
+       title="Emacs without the bling" target="_blank">
+      <time class="m-date" datetime="2020-08-26 21:04:14+00:00">
+        Aug
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Emacs without the bling
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>On Mastodon, <a href="https://fosstodon.org/users/pet84rik">@pet84rik</a> posted a link to <a href="https://bzg.fr/en/emacs-strip-tease.html/">Emacs, naked.</a>, by <a href="https://mastodon.etalab.gouv.fr/users/bzg">@bzg</a>. I compared it to my own setup and nodded. I use many of the same things.</p><pre>;; deactivate some bling
+(dolist (mode '(blink-cursor-mode
+        tool-bar-mode
+        blink-cursor-mode
+        menu-bar-mode
+        scroll-bar-mode))
+  (when (fboundp mode)
+    (funcall mode -1)))</pre><p>You can find code like this and similar stuff in my Emacs config, which is lot better organized than it used to be. </p><ul><li><a href="https://alexschroeder.ch/cgit/emacs-setup/tree/config/minor-modes-conf.el">minor-modes-conf.el</a></li></ul><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-08-26_Emacs_without_the_bling"><img alt="Screenshot" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-08-26_Emacs_without_the_bling" title="Screenshot"></a></p><p>When I scrolled down, however, I noticed something else: Bastien hides the mode-line completely. I’m using <a href="https://trunk.mad-scientist.club/users/algernon">@algernon</a>’s Brutalist Dark theme, which has visible mode-lines but the inactive mode-line is not readable (foreground and background colour are the same). It’s less distracting. Still, I started wondering.</p><p>With minor tweaks, I added the following:</p><pre>(defvar-local hide-mode-line nil)
+
+(define-minor-mode hidden-mode-line-mode
+  "Minor mode to hide the mode-line in the current buffer."
+  :init-value nil …</pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-26 21:04:14+00:00" class="dt-published"></time>
+  Wed 26 Aug 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://yetisgnomeadventure.home.blog/2020/08/26/gsoc-2020-final-submission/" rel="bookmark" class="u-url"
+       title="GSoC 2020 Final Submission" target="_blank">
+      <time class="m-date" datetime="2020-08-26 19:32:45+00:00">
+        Aug
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GSoC 2020 Final Submission
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  This summer is slowly coming to an end and with it the final month of Google Summer of Code. This blog post will serve as the final submission for my participation. I’ll go one by one over the Merge Requests that got accepted into Epiphany and give a short description of my work. ðŸ™‚ !651 … <a href="https://yetisgnomeadventure.home.blog/2020/08/26/gsoc-2020-final-submission/">Continue reading <span>GSoC 2020 Final Submission</span> <span>→</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Yetizone</b></span>
+  on <time datetime="2020-08-26 19:32:45+00:00" class="dt-published"></time>
   Wed 26 Aug 2020
   in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/627524685479002112/branching-gels" rel="bookmark" class="u-url"
+       title="Branching Gels" target="_blank">
+      <time class="m-date" datetime="2020-08-26 10:02:52-05:00">
+        Aug
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Branching Gels
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Branching Gels" src="https://64.media.tumblr.com/09065f5fbfa2bbfc00780ebc30cf673c/ffead0de8f5402d0-04/s540x810/b510865bca79752dd9e3810fa3d2d7d40f95c8d9.png"><a href="https://fyfluiddynamics.com/2020/08/branching-gels/">If you sandwich a viscous fluid between two plates, then pull the plates apart, you&rsquo;ll often get a complex branching pattern that forms as air pushes its way into the fluid. But the exact results depend strongly on what kind of viscous fluid you used.</a> (Image, research, and submission credit: <a href="https://doi.org/10.1103/PhysRevLett.124.248006">T. Divoux et al.</a>; via <a href="https://physics.aps.org/articles/v13/s85">APS</a>)
+<a href="https://fyfluiddynamics.com/?p=13241">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-26 10:02:52-05:00" class="dt-published"></time>
+  Wed 26 Aug 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/08/branching-gels/" rel="bookmark" class="u-url"
+       title="Branching Gels" target="_blank">
+      <time class="m-date" datetime="2020-08-26 15:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Branching Gels
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  If you sandwich a viscous fluid between two plates, then pull the plates apart, you&#8217;ll often get a complex branching pattern that forms as air pushes its way into the <a href="https://fyfluiddynamics.com/2020/08/branching-gels/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-08-26 15:00:00+00:00" class="dt-published"></time>
+  Wed 26 Aug 2020
+  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -231,75 +399,6 @@ packages can be successfully built and uploaded. This is the result …</div>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.qt.io/blog/qt-creator-4.13-released" rel="bookmark" class="u-url"
-       title="Qt Creator 4.13 released" target="_blank">
-      <time class="m-date" datetime="2020-08-26 11:17:13+00:00">
-        Aug
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Qt Creator 4.13 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We are happy to announce the release of Qt Creator 4.13 !</p>  
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.13-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2020-08-26 11:17:13+00:00" class="dt-published"></time>
-  Wed 26 Aug 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-26_Dystopia" rel="bookmark" class="u-url"
-       title="Dystopia" target="_blank">
-      <time class="m-date" datetime="2020-08-26 09:59:41+00:00">
-        Aug
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Dystopia
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>On Mastodon, <a href="https://floss.social/users/alcinnz">@alcinnz</a> started posting quotes from an article, that itself contains quotes of people that are being asked: “Are We Already Living in a Tech Dystopia?” The point being: if we are, we might not even notice. For – and this is how the article opens – in a dystopian novel, the protagonists also don’t know it. To them, it’s simply life as usual. And there’s always hope.</p><p>But this is how the human mind and time and generational shifts work. We go out to the meadows here in Switzerland, and we think the grass is green and the flowers pretty, but then my father in law tells me he used to go into the wetlands along the river, where we have fields now, and he’d gather lilies for his mother. These wetlands are gone, and I …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-26 09:59:41+00:00" class="dt-published"></time>
-  Wed 26 Aug 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://jlelse.blog/links/2020/08/heyyyyyyyyyyyy/" rel="bookmark" class="u-url"
        title="" target="_blank">
       <time class="m-date" datetime="2020-08-26 08:51:36+02:00">
@@ -334,32 +433,32 @@ packages can be successfully built and uploaded. This is the result …</div>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/627449304021434368/event-machine-learning-in-mechanics" rel="bookmark" class="u-url"
-       title="Event: Machine Learning in Mechanics" target="_blank">
-      <time class="m-date" datetime="2020-08-25 14:04:36-05:00">
+    <a href="https://xkcd.com/2351/" rel="bookmark" class="u-url"
+       title="Standard Model Changes" target="_blank">
+      <time class="m-date" datetime="2020-08-26 00:00:00+00:00">
         Aug
         <span class="m-date-day">
-          25
+          26
         </span>
         2020
       </time>
       <div class="p-name">
-      Event: Machine Learning in Mechanics
+      Standard Model Changes
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="Event: Machine Learning in Mechanics" src="https://64.media.tumblr.com/cad6721565ab90d4e23e42c6dd20ab0b/7171e5ee4ed83eb3-64/s540x810/fced8b849a05149b4c2ce82d49e0b34c7fdc4517.png"><a href="https://fyfluiddynamics.com/?p=13689">This Thursday, August 27th, the U.S. National Committee on Theoretical and Applied Mechanics is holding a special free webinar series on Machine Learning in Mechanics.</a> <a href="https://fyfluiddynamics.com/?p=13689">Read the full article</a>
+  <img alt="Bugs are spin 1/2 particles, unless it's particularly windy." src="https://imgs.xkcd.com/comics/standard_model_changes.png" title="Bugs are spin 1/2 particles, unless it's particularly windy.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-25 14:04:36-05:00" class="dt-published"></time>
-  Tue 25 Aug 2020
-  in FYFD.
+  on <time datetime="2020-08-26 00:00:00+00:00" class="dt-published"></time>
+  Wed 26 Aug 2020
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -368,9 +467,9 @@ packages can be successfully built and uploaded. This is the result …</div>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2020/08/event-machine-learning-in-mechanics/" rel="bookmark" class="u-url"
-       title="Event: Machine Learning in Mechanics" target="_blank">
-      <time class="m-date" datetime="2020-08-25 19:00:00+00:00">
+    <a href="https://mylette.rs/recursive-generators/" rel="bookmark" class="u-url"
+       title="Recursive Generators" target="_blank">
+      <time class="m-date" datetime="2020-08-25 22:00:00+00:00">
         Aug
         <span class="m-date-day">
           25
@@ -378,22 +477,66 @@ packages can be successfully built and uploaded. This is the result …</div>
         2020
       </time>
       <div class="p-name">
-      Event: Machine Learning in Mechanics
+      Recursive Generators
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  This Thursday, August 27th, the U.S. National Committee on Theoretical and Applied Mechanics is holding a special free webinar series on Machine Learning in Mechanics. Details for each talk and <a href="https://fyfluiddynamics.com/2020/08/event-machine-learning-in-mechanics/">Keep reading</a>
+  <p>This article provides alternative ways to implement <code>count</code>, <code>cycle</code> and
+<code>repeat</code> generator functions that are a part of the <code>itertools</code> module in the
+Python Standard Library (PSL). The proposed solutions are based on the
+principle of <em>functional recursion</em> and are similar to design patterns used in
+functional programming. The main message of the article is, however, not to
+propose potential improvements to the PSL but to challenge programmers and open
+them to a new way of thinking about iterators. It also goes to show that in the
+context of iterators the idea of functional recursion comes naturally with the
+use of the <code>yield from</code> statement. Hence, it&#x27;s very unfortunate that Python
+doesn&#x27;t have better support for recursion.</p>Recursive Generators 101<p>Generator functions are specific functions that contain <code>yield</code> or <code>yield from</code>
+statements inside their function body. Unlike regular …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-08-25 19:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-25 22:00:00+00:00" class="dt-published"></time>
   Tue 25 Aug 2020
-  in FYFD Blog.
+  in Velibor Zeli.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.python.org/dev/peps/pep-0630/" rel="bookmark" class="u-url"
+       title="PEP 630: Isolating Extension Modules" target="_blank">
+      <time class="m-date" datetime="2020-08-25 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          25
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PEP 630: Isolating Extension Modules
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Author: Petr Viktorin
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-25 00:00:00+00:00" class="dt-published"></time>
+  Tue 25 Aug 2020
+  in Newest Python PEPs.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -478,40 +621,6 @@ Cheshire Cat in particular, and owns quite a …</p>
   on <time datetime="2020-08-24 00:00:00+00:00" class="dt-published"></time>
   Mon 24 Aug 2020
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2350/" rel="bookmark" class="u-url"
-       title="Deer Turrets" target="_blank">
-      <time class="m-date" datetime="2020-08-24 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Deer Turrets
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="When my great grandfather designed the Titanic and it hit an iceberg and sank, he didn't sit around moping. He took those lessons to his next job designing airships, and he made the Hindenburg completely iceberg-proof!" src="https://imgs.xkcd.com/comics/deer_turrets.png" title="When my great grandfather designed the Titanic and it hit an iceberg and sank, he didn't sit around moping. He took those lessons to his next job designing airships, and he made the Hindenburg completely iceberg-proof!">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-24 00:00:00+00:00" class="dt-published"></time>
-  Mon 24 Aug 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -943,41 +1052,6 @@ Summer: the death of Scribus stable and Kubuntu 19.10:
   on <time datetime="2020-08-06 18:30:00+02:00" class="dt-published"></time>
   Thu 06 Aug 2020
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/paraview-5-8-1-release-notes/" rel="bookmark" class="u-url"
-       title="ParaView 5.8.1 Release Notes" target="_blank">
-      <time class="m-date" datetime="2020-08-05 16:30:48+00:00">
-        Aug
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      ParaView 5.8.1 Release Notes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>ParaView 5.8.1 is a bug fix release that addresses 60 issues identified since the ParaView 5.8.0 release. The full list of resolved bugs with links ... <a href="https://blog.kitware.com/paraview-5-8-1-release-notes/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/paraview-5-8-1-release-notes/">ParaView 5.8.1 Release Notes</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Quammen</b></span>
-  on <time datetime="2020-08-05 16:30:48+00:00" class="dt-published"></time>
-  Wed 05 Aug 2020
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
