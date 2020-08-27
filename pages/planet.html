@@ -230,6 +230,50 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-08-26_Emacs_without_the_bling" rel="bookmark" class="u-url"
+       title="Emacs without the bling" target="_blank">
+      <time class="m-date" datetime="2020-08-26 21:04:14+00:00">
+        Aug
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Emacs without the bling
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>On Mastodon, <a href="https://fosstodon.org/users/pet84rik">@pet84rik</a> posted a link to <a href="https://bzg.fr/en/emacs-strip-tease.html/">Emacs, naked.</a>, by <a href="https://mastodon.etalab.gouv.fr/users/bzg">@bzg</a>. I compared it to my own setup and found that I use many of the same things.</p><pre>;; deactivate some bling
+(dolist (mode '(tool-bar-mode
+        blink-cursor-mode
+        menu-bar-mode
+        scroll-bar-mode))
+  (when (fboundp mode)
+    (funcall mode -1)))</pre><p>You can find code like this and similar stuff in my Emacs config, which is a lot better organized than it used to be. </p><ul><li><a href="https://alexschroeder.ch/cgit/emacs-setup/tree/config/minor-modes-conf.el">minor-modes-conf.el</a></li></ul><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-08-26_Emacs_without_the_bling"><img alt="Screenshot" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-08-26_Emacs_without_the_bling" title="Screenshot"></a></p><p>When I scrolled down, however, I noticed something else: Bastien hides the mode-line completely. I’m using <a href="https://trunk.mad-scientist.club/users/algernon">@algernon</a>’s Brutalist Dark theme, which has visible mode-lines but the inactive mode-line is not readable (foreground and background colour are the same). It’s less distracting. Still, I started wondering.</p><p>With minor tweaks, I added the following:</p><pre>(defvar-local hide-mode-line nil)
+
+(define-minor-mode hidden-mode-line-mode
+  "Minor mode to hide the mode-line in the current buffer."
+  :init-value …</pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-26 21:04:14+00:00" class="dt-published"></time>
+  Wed 26 Aug 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/627524685479002112/branching-gels" rel="bookmark" class="u-url"
        title="Branching Gels" target="_blank">
       <time class="m-date" datetime="2020-08-26 10:02:52-05:00">
