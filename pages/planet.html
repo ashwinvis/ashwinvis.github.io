@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tirania.org/blog/archive/2020/Aug-28.html" rel="bookmark" class="u-url"
-       title="28 Aug 2020" target="_blank">
-      <time class="m-date" datetime="2020-08-29 00:00:28+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-08-29_Restarting_Phoebe" rel="bookmark" class="u-url"
+       title="Restarting Phoebe" target="_blank">
+      <time class="m-date" datetime="2020-08-29 11:50:16+00:00">
         Aug
         <span class="m-date-day">
           29
@@ -152,31 +152,108 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      28 Aug 2020
+      Restarting Phoebe
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Apple versus Epic Games: Why I’m Willing to Pay a Premium for Security, Privacy, and Peace of Mind
-<p>In the legal battle over the App Store’s policies, fees, and review
-processes, Epic Games wants to see a return to the good old days –
-where software developers retained full control over their systems and
-were only limited by their imaginations. Yet those days are long gone.</p>
-<p>Granted, in the early 90s, I hailed the Internet as humanity’s purest
-innovation. After all, it had enabled a group of global developers to
-collaboratively build the Linux operating system from the ground
-up. In my X years of experience as a developer, nothing has come
-close to the good will, success, and optimistic mood of those days.</p>
-<p>Upon reflection, everything started to change the day I received my
-first spam message …</p>
+  <div><p>I have trouble restarting Phoebe and other services I run. I guess I don’t understand how these forking processes work. These processes fork for every request they get, and that works. When they get a lot of requests, however, they enter some sort of failed state. And by “a lot” I mean more than a hundred or so. I know that it’s not a lot but I want these services to work for the small net and so I don’t want to spend any effort in trying to make them handle more. I don’t want to start caching HTTP requests, for example. What irks me most of all is that this doesn’t happen because hundreds of visitors want to know about my stuff. No, I share a link on Mastodon, and my post gets federated …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Miguel de Icaza (miguel.de.icaza@gmail.com)</b></span>
-  on <time datetime="2020-08-29 00:00:28+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-29 11:50:16+00:00" class="dt-published"></time>
+  Sat 29 Aug 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://morepypy.blogspot.com/2020/08/pypy-is-on-open-collective.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
+       title="PyPy is on Open Collective" target="_blank">
+      <time class="m-date" datetime="2020-08-29 12:53:50.722000+02:00">
+        Aug
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PyPy is on Open Collective
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hi all,</p>
+
+<p>PyPy is now a <a href="https://opencollective.com/pypy">member of Open Collective</a>, a fiscal host.  We have been thinking about switching to this organization for a couple of years; we like it for various reasons, like the budget transparency and the lightweight touch.  We can now officially announce our membership!</p>
+
+<p>With this, we are now again free to use PyPy for all financial issues, like receiving funds professionally, paying parts of sprint budgets as we like, and so on.  We will shortly be reintroducing buttons that link to Open Collective from the PyPy web site.</p>
+
+<p>Although the old donation buttons were removed last year, we believe that there are still a few people that send regularly money to the SFC, the not-for-profit charity we were affiliated with.  If you do, please stop doing it now (and, if you like to do so …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Rigo (noreply@blogger.com)</b></span>
+  on <time datetime="2020-08-29 12:53:50.722000+02:00" class="dt-published"></time>
+  Sat 29 Aug 2020
+  in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://123vivekr.github.io/123vivekr.github.io/2020/08/29/pitivi-gsoc-work-product.html" rel="bookmark" class="u-url"
+       title="GSoC 2020: Pitivi: Work Product" target="_blank">
+      <time class="m-date" datetime="2020-08-29 05:06:21+00:00">
+        Aug
+        <span class="m-date-day">
+          29
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GSoC 2020: Pitivi: Work Product
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This post is a summary of the work that has been completed during the GSoC 2020 period for my project, Object Tracking. The project consisted of implementing an Object Tracking UI in Pitivi and the associated tracking functionality in GStreamer.</p>
+
+cvtracker GStreamer element
+
+<p><a href="https://gitlab.gnome.org/GNOME/pitivi/-/commit/ef2cf45b71b4474b6f2e6bace6bbf8250e2a4d15">flatpak: add opencv_contrib</a></p>
+
+<p>I began by adding the <code>opencv_contrib</code> module to the <code>opencv</code> installation for the Pitivi development environment. <code>opencv_contrib</code> contains the <a href="https://docs.opencv.org/3.4/d0/d0a/classcv_1_1Tracker.html">library</a> with the tracking algorithms.</p>
+
+<p><a href="https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad/-/merge_requests/1321">OpenCV Tracker Element for Object Tracking</a></p>
+
+<p>This merge request introduces the tracking functionality in the gst-plugins-bad package.</p>
+
+<p>Previously the <code>opencv</code> plugin was not being built due to the unavailability of the headers. This <a href="https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad/-/commit/93f7b123f74ae9c276a97b3a21726de94414e5fb?merge_request_iid=1321">patch</a> fixes the problem, ensuring that the headers are detected for the correct version of opencv and the plugin is built.</p>
+
+<p>In the next commit: <a href="https://gitlab.freedesktop.org/gstreamer/gst-plugins-bad/-/commit/d6c7f882d45d5c089565c9b0c2de5d27a17da562?merge_request_iid=1321">opencv: add cvtracker plugin</a>, I implement the <code>cvtracker</code> element as part of …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-08-29 05:06:21+00:00" class="dt-published"></time>
   Sat 29 Aug 2020
   in Planet GNOME.
 </footer>
@@ -187,49 +264,58 @@ first spam message …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nxos.org/changelog/changelog-nitrux-1-3-2/" rel="bookmark" class="u-url"
-       title="Changelog: Nitrux 1.3.2" target="_blank">
-      <time class="m-date" datetime="2020-08-28 20:30:55+00:00">
+    <a href="https://pointieststick.com/2020/08/28/this-week-in-kde-tons-and-tons-and-tons-of-plasma-5-20-features-bugfixes-and-ui-improvements/" rel="bookmark" class="u-url"
+       title="This week in KDE: Tons and tons and tons of Plasma 5.20 features, bugfixes, and UI improvements" target="_blank">
+      <time class="m-date" datetime="2020-08-29 03:50:27+00:00">
         Aug
         <span class="m-date-day">
-          28
+          29
         </span>
         2020
       </time>
       <div class="p-name">
-      Changelog: Nitrux 1.3.2
+      This week in KDE: Tons and tons and tons of Plasma 5.20 features, bugfixes, and UI improvements
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><img alt="" src="//nxos.org/wp-content/uploads/2020/06/VirtualBox_Nitrux_20_06_2020_15_59_33.png"></p>
-Today is the day! — Nitrux 1.3.2 is available to download
-<p>We are pleased to announce the launch of Nitrux 1.3.2. This new version brings together the latest software updates, bug fixes, performance improvements, and ready-to-use hardware support.</p>
-<p>Nitrux 1.3.2 is available for immediate download.</p>
+  <p>Plasma 5.20 is going to be one absolutely massive release! It already was but this week we added even more to it: more features, more fixes for longstanding bugs, more improvements to the user interface! Read on for details:</p>
 
-What’s new
-<ul>
-<li>We’ve upgraded the kernel to version 5.6.0-1021.</li>
-</ul>
-<p><img alt="" src="//nxos.org/wp-content/uploads/2020/08/VirtualBox_Nitrux-Legacy_20_08_2020_19_06_33-min.png"></p>
-<ul>
-<li>We’ve updated KDE Plasma to version 5.19.4, KDE Frameworks to version 5.74.0, KDE Applications to version 20.11.70.</li>
-<li>We’ve fixed a problem with the Calamares-qml installer, where <a href="https://github.com/Nitrux/calamares-qml/issues/3">selecting a different region than “America” would result in a crash</a>.</li>
-<li>We’ve culminated in our move to drop systemd and use <a href="https://wiki.gentoo.org/wiki/Project:OpenRC">OpenRC</a> as the default init system.</li>
-</ul>
-<ul>
-<li>
-<ul>
-<li><em>Users with existing installations will continue to receive updates. However, we want to emphasize that …</em></li></ul></li></ul>
+
+
+Other New Features
+
+
+
+<p>Plasma <a href="https://bugs.kde.org/show_bug.cgi?id=254313">now warns you when your hard disk or SSD is about to die, and lets you monitor its health in the Info Center app</a> (Harald Sitter, Plasma 5.20)</p>
+
+
+
+<p>When using the Breeze GTK theme, GTK headerbar apps <a href="https://invent.kde.org/plasma/kde-gtk-config/-/merge_requests/2">now use the same appearance for your window titlebar buttons as other apps</a> (Mikhail Zolotukhin, Plasma 5.20)</p>
+
+
+
+<div>
+
+<video><source src="//i.imgur.com/0aZPjlh.mp4?_=1" type="video/mp4"><a href="https://i.imgur.com/0aZPjlh.mp4">https://i.imgur.com/0aZPjlh.mp4</a></video>
+</div>
+
+
+
+<p>KRunner can <a href="https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/132">now be configured to be a free-floating window</a>, rather than glued to the top of the screen (Alexander Lohnau, Plasma 5.20)</p>
+
+
+
+<div><img alt="" src="//pointieststick.files.wordpress.com/2020/08/screenshot_20200824_130427.jpeg?w=1024">Technically this was already a feature, but it it had …</div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Maui Project</b></span>
-  on <time datetime="2020-08-28 20:30:55+00:00" class="dt-published"></time>
-  Fri 28 Aug 2020
+  <span class="p-author"><b>Nate Graham</b></span>
+  on <time datetime="2020-08-29 03:50:27+00:00" class="dt-published"></time>
+  Sat 29 Aug 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -541,105 +627,6 @@ All talks are expected to be recorded as it will ease the planning for the live 
   on <time datetime="2020-08-27 00:00:00+00:00" class="dt-published"></time>
   Thu 27 Aug 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-08-26_Emacs_without_the_bling" rel="bookmark" class="u-url"
-       title="Emacs without the bling" target="_blank">
-      <time class="m-date" datetime="2020-08-26 21:04:14+00:00">
-        Aug
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Emacs without the bling
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>On Mastodon, <a href="https://fosstodon.org/users/pet84rik">@pet84rik</a> posted a link to <a href="https://bzg.fr/en/emacs-strip-tease.html/">Emacs, naked.</a>, by <a href="https://mastodon.etalab.gouv.fr/users/bzg">@bzg</a>. I compared it to my own setup and found that I use many of the same things.</p><pre>;; deactivate some bling
-(dolist (mode '(tool-bar-mode
-        blink-cursor-mode
-        menu-bar-mode
-        scroll-bar-mode))
-  (when (fboundp mode)
-    (funcall mode -1)))</pre><p>You can find code like this and similar stuff in my Emacs config, which is a lot better organized than it used to be. </p><ul><li><a href="https://alexschroeder.ch/cgit/emacs-setup/tree/config/minor-modes-conf.el">minor-modes-conf.el</a></li></ul><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2020-08-26_Emacs_without_the_bling"><img alt="Screenshot" src="https://alexschroeder.ch/wiki/download/Image_2_for_2020-08-26_Emacs_without_the_bling" title="Screenshot"></a></p><p>When I scrolled down, however, I noticed something else: Bastien hides the mode-line completely. I’m using <a href="https://trunk.mad-scientist.club/users/algernon">@algernon</a>’s Brutalist Dark theme, which has visible mode-lines but the inactive mode-line is not readable (foreground and background colour are the same). It’s less distracting. Still, I started wondering.</p><p>With minor tweaks, I added the following:</p><pre>(defvar-local hide-mode-line nil)
-
-(define-minor-mode hidden-mode-line-mode
-  "Minor mode to hide the mode-line in the current buffer."
-  :init-value …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-26 21:04:14+00:00" class="dt-published"></time>
-  Wed 26 Aug 2020
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://morepypy.blogspot.com/2020/04/pypy-731-released.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
-       title="PyPy 7.3.1 released" target="_blank">
-      <time class="m-date" datetime="2020-08-26 14:28:20.745000+02:00">
-        Aug
-        <span class="m-date-day">
-          26
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      PyPy 7.3.1 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>
-The PyPy team is proud to release the version 7.3.1 of PyPy, which includes
-two different interpreters:
-
-<blockquote>
-<div>
-<ul>
-<li>PyPy2.7, which is an interpreter supporting the syntax and the features of
-Python 2.7 including the stdlib for CPython 2.7.13</li>
-<li>PyPy3.6: which is an interpreter supporting the syntax and the features of
-Python 3.6, including the stdlib for CPython 3.6.9.</li>
-</ul>
-</div>
-</blockquote>
-The interpreters are based on much the same codebase, thus the multiple
-release. This is a micro release, no APIs have changed since the 7.3.0 release
-in December, but read on to find out what is new.
-
-
-Conda Forge now <a href="https://conda-forge.org/blog//2020/03/10/pypy">supports PyPy</a> as a Python interpreter. The support right now
-is being built out. After this release, many more c-extension-based
-packages can be successfully built and uploaded. This is the result …</div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>mattip (noreply@blogger.com)</b></span>
-  on <time datetime="2020-08-26 14:28:20.745000+02:00" class="dt-published"></time>
-  Wed 26 Aug 2020
-  in PyPy Status Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
