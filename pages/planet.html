@@ -195,40 +195,6 @@ and is no longer limited to run during …</li></ul>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://who-t.blogspot.com/2020/09/no-user-specific-xkb-configuration-in-x.html" rel="bookmark" class="u-url"
-       title="No user-specific XKB configuration in X" target="_blank">
-      <time class="m-date" datetime="2020-09-04 00:39:00+00:00">
-        Sep
-        <span class="m-date-day">
-          04
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      No user-specific XKB configuration in X
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This is the continuation from these posts: <a href="https://who-t.blogspot.com/2020/02/user-specific-xkb-configuration-part-1.html">part 1</a>, <a href="https://who-t.blogspot.com/2020/07/user-specific-xkb-configuration-part-2.html">part 2</a>, <a href="https://who-t.blogspot.com/2020/08/user-specific-xkb-configuration-part-3.html">part 3</a> and <a href="https://who-t.blogspot.com/2020/09/user-specific-xkb-configuration-putting.html">part 4</a>. </p><p>In the posts linked above, I describe how it's possible to have custom keyboard layouts in $HOME or /etc/xkb that will get picked up by libxkbcommon. This only works for the Wayland stack, the X stack doesn't use libxkbcommon. In this post I'll explain <b>why</b> it's unlikely this will ever happen in X. </p><p>As described in the previous posts, users configure with rules, models, layouts, variants and options (RMLVO). What XKB uses internally though are keycodes, compat, geometry, symbols types (KcCGST) [1]. </p><p>There are, effectively, two KcCGST keymap compilers: libxkbcommon and xkbcomp. libxkbcommon can go from RMLVO to a full keymap, xkbcomp relies on other tools (e.g. setxkbmap) which in turn use a utility library called libxkbfile to can parse rules files …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Peter Hutterer (noreply@blogger.com)</b></span>
-  on <time datetime="2020-09-04 00:39:00+00:00" class="dt-published"></time>
-  Fri 04 Sep 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://jlelse.blog/links/2020/09/climate-change-court/" rel="bookmark" class="u-url"
        title=""Portuguese children sue 33 countries over climate change at European court"" target="_blank">
       <time class="m-date" datetime="2020-09-03 22:01:53+02:00">
