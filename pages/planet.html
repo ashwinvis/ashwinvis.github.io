@@ -142,40 +142,49 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://kate-editor.org/post/2020/2020-09-06-kate-color-themes/" rel="bookmark" class="u-url"
-       title="Kate - Color Themes" target="_blank">
-      <time class="m-date" datetime="2020-09-06 17:45:00+00:00">
+    <a href="http://www.thelins.se/johan/blog/2020/09/akademy-2020/" rel="bookmark" class="u-url"
+       title="Akademy 2020" target="_blank">
+      <time class="m-date" datetime="2020-09-07 08:12:34+00:00">
         Sep
         <span class="m-date-day">
-          06
+          07
         </span>
         2020
       </time>
       <div class="p-name">
-      Kate - Color Themes
+      Akademy 2020
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Color Themes aka “Schemas”
-<p>KTextEditor (and therefore Kate/KWrite/KDevelop/…) has a concept of color themes since more than one decade.</p>
-<p>In the KTextEditor UI this is called a “Schema” at the moment.
-(Don’t ask me why it wasn’t called color theme or something like this, seems I wasn’t that clever at choosing names in the past.)</p>
-<p>The user can configure the colors inside the settings and the stuff is saved in some very ancient way (nice string lists of hand-crafted text output of colors/bools/…) inside KConfig INI files.
-There is some import/export of this stuff based on KConfig INI files, too.</p>
-Frameworks starting with version 5.75
-<p>Two years ago, we migrated our syntax highlighting to <a href="https://kate-editor.org/2018/08/14/porting-ktexteditor-to-ksyntaxhighlighting-done/">KSyntaxHighlighting</a>.
-That was some work done mostly at the <a href="https://akademy.kde.org/2018">Akademy 2018</a>.</p>
-<p>What we didn’t touch during that …</p>
+  <p>I had the pleasure of speaking at Akademy 2020 this weekend. This year Akademy is virtual, but I still got the feeling of a very interactive event. Interesting questions, greenroom for the speakers, and generally a nice experience. Big thank you to the organizers!</p>
+
+
+
+<p>The video below should start roughly when I go on stage.</p>
+
+
+
+<div>
+
+</div>
+
+
+
+<p>For the interested listener, you can find the slides here: <a href="https://e8johan.se/presentations/2020-09%20akademy%20v1.1.pdf">https://e8johan.se/presentations/2020-09%20akademy%20v1.1.pdf</a>.</p>
+
+
+
+<p></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Kate News</b></span>
-  on <time datetime="2020-09-06 17:45:00+00:00" class="dt-published"></time>
-  Sun 06 Sep 2020
+  <span class="p-author"><b>Johan Thelin</b></span>
+  on <time datetime="2020-09-07 08:12:34+00:00" class="dt-published"></time>
+  Mon 07 Sep 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -212,6 +221,55 @@ That was some work done mostly at the <a href="https://akademy.kde.org/2018">Aka
   on <time datetime="2020-09-06 14:44:24+02:00" class="dt-published"></time>
   Sun 06 Sep 2020
   in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/python-distutils-deprecated/" rel="bookmark" class="u-url"
+       title="Python distutils deprecation" target="_blank">
+      <time class="m-date" datetime="2020-09-06 00:00:00+00:00">
+        Sep
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python distutils deprecation
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The deprecation of Python <code>distutils</code> has been a decade in the making, and is finally being
+<a href="https://discuss.python.org/t/pep-632-deprecate-distutils-module/5134">formalized</a>
+in
+<a href="https://www.python.org/dev/peps/pep-0632/">PEP632</a>.
+Setuptools 49.1.2 vendored distutils, but has experienced some
+<a href="https://setuptools.readthedocs.io/en/latest/history.html">friction in setuptools 50.x</a>
+since so many packages
+<a href="https://github.com/pypa/setuptools/issues/2372">monkeypatch distutils</a>
+due to the little maintained status of distutils for several years.</p>
+<p>With distutils proposed deprecation in Python 3.10,
+<a href="https://setuptools.readthedocs.io/en/latest/distutils-legacy.html">migration</a>
+to setuptools is a topic being worked on by major packages such as Numpy.
+Aside from major packages in the Scipy/Numpy stack, I don&rsquo;t recall many current packages setup.py relying on distutils. However, there is code in some packages using <code>import distutils</code> that could break.</p>
+<p>I applaud the decision to remove distutils from Python stdlib despite the fallout.
+The fallout is a symptom of the legacy baggage of Python&rsquo;s packaging.
+Non-stdlib packages like setuptools are so …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-06 00:00:00+00:00" class="dt-published"></time>
+  Sun 06 Sep 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -324,7 +382,7 @@ That was some work done mostly at the <a href="https://akademy.kde.org/2018">Aka
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/628339996961734656/painting-on-water-with-ebru" rel="bookmark" class="u-url"
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/628339996961734656" rel="bookmark" class="u-url"
        title="Painting on Water With Ebru" target="_blank">
       <time class="m-date" datetime="2020-09-04 10:01:54-05:00">
         Sep
@@ -675,49 +733,6 @@ Fortran Standard Library
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/fortran-maximum-name-length/" rel="bookmark" class="u-url"
-       title="Fortran maximum name lengths" target="_blank">
-      <time class="m-date" datetime="2020-09-01 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Fortran maximum name lengths
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Ancient Fortran code readability is impacted by the restrictions on variable length that could lead to inscrutable variable and procedure names.
-The Fortran 2003
-<a href="https://wg5-fortran.org/N1551-N1600/N1579.pdf">standard</a>
-raised many of these limits to lengths that might only be a factor for auto-generated code with internally used very long names.
-If going beyond the usual name lengths, it&rsquo;s a good idea to test across the compilers of interest (including compiler versions) to ensure that the required compiler vendors and versions can support the proposed name lengths.</p>
-CMake Fortran name length checks
-<p>CMake is a natural for this type of checking.
-We provide
-<a href="https://github.com/scivision/fortran2018-examples/tree/master/maximum">code examples</a>
-verifying that compilers can support 63 character syntax elements (names for modules, submodules, variables), which is the maximum set by Fortran 2003 standard.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-01 00:00:00+00:00" class="dt-published"></time>
-  Tue 01 Sep 2020
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://shibumi.dev/posts/google-summer-of-code-2020/" rel="bookmark" class="u-url"
        title="Google Summer of Code 2020" target="_blank">
       <time class="m-date" datetime="2020-08-31 00:00:00+00:00">
@@ -966,40 +981,6 @@ ship them all out in a big batch …</p>
   on <time datetime="2020-08-22 03:22:07+00:00" class="dt-published"></time>
   Sat 22 Aug 2020
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogdecjunior.tumblr.com/post/626939975528759296/the-best-ever-ctf-team-in-kunnathangady" rel="bookmark" class="u-url"
-       title="The Best Ever CTF Team in Kunnathangady" target="_blank">
-      <time class="m-date" datetime="2020-08-20 09:39:12+05:30">
-        Aug
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Best Ever CTF Team in Kunnathangady
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The Best Ever CTF Team in Kunnathangady,with a couple of guys,who&rsquo;s been friends since day...
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-08-20 09:39:12+05:30" class="dt-published"></time>
-  Thu 20 Aug 2020
-  in the champaka.
 </footer>
 <div class="m-clearfix-l"></div>
 
