@@ -142,6 +142,46 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://tonsky.me/consulting/" rel="bookmark" class="u-url"
+       title="New service: UX Consulting" target="_blank">
+      <time class="m-date" datetime="2020-09-14 00:00:00+00:00">
+        Sep
+        <span class="m-date-day">
+          14
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      New service: UX Consulting
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I’ve been working and writing about computer interfaces at least since 2010. In 2017 I with my friends founded Grumpy.Website, where we write about UI daily. Starting today, YOU can get access to this deep pool of knowledge and expertise. For a small sum of money, I can review your app, site or prototype and write down as many problems as I can find. I can also suggest solutions and best practices where needed.
+
+
+Read more at https://tonsky.me/consulting/ and get in touch if that sounds interesting to you!
+
+
+- Nikita.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
+  on <time datetime="2020-09-14 00:00:00+00:00" class="dt-published"></time>
+  Mon 14 Sep 2020
+  in Nikita Prokopov's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://nedbatchelder.com//blog/202009/songbasket.html" rel="bookmark" class="u-url"
        title="Song-basket" target="_blank">
       <time class="m-date" datetime="2020-09-13 17:03:20-04:00">
@@ -289,6 +329,54 @@ If you want to try current KTextEditor master branch, please ensure you have a u
   on <time datetime="2020-09-13 12:57:00+00:00" class="dt-published"></time>
   Sun 13 Sep 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/matlab-arguments-validation/" rel="bookmark" class="u-url"
+       title="Matlab arguments validation" target="_blank">
+      <time class="m-date" datetime="2020-09-13 00:00:00+00:00">
+        Sep
+        <span class="m-date-day">
+          13
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Matlab arguments validation
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Matlab
+<a href="https://www.mathworks.com/help/matlab/ref/arguments.html">arguments</a>
+validation syntax is generally recommended over the legacy
+<a href="https://www.mathworks.com/help/matlab/ref/validateattributes.html">validateattributes</a>.
+The arguments specification coerces the data to fix the class declaration given if possible, and errors otherwise.</p>
+<ul>
+<li>Default values are easily specified, which required such verbose syntax before.</li>
+<li>only a single class can be specified</li>
+<li>recall the .empty method of most Matlab classes e.g. <code>datetime.empty()</code> that allows initializing an empty array.</li>
+</ul>
+Caveats
+<p>A downside of the Matlab argument validation syntax is that they are enacted at runtime, so repeated specification <em>may</em> entail increased CPU burden.
+It seems that Matlab JIT could optimize these away.</p>
+<p>It appears that Octave 7.x might be adding the ability to ignore the <code>arguments</code> syntax until the functionality is added to Octave.
+Older versions of Octave simply error if <code>arguments</code> syntax is used.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-13 00:00:00+00:00" class="dt-published"></time>
+  Sun 13 Sep 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -647,55 +735,6 @@ Join us at #archlinux-bugs channel on irc.freenode.net during 13th of September.
   on <time datetime="2020-09-09 00:00:00+02:00" class="dt-published"></time>
   Wed 09 Sep 2020
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/python-distutils-deprecated/" rel="bookmark" class="u-url"
-       title="Python distutils deprecation" target="_blank">
-      <time class="m-date" datetime="2020-09-06 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          06
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python distutils deprecation
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The deprecation of Python <code>distutils</code> has been a decade in the making, and is finally being
-<a href="https://discuss.python.org/t/pep-632-deprecate-distutils-module/5134">formalized</a>
-in
-<a href="https://www.python.org/dev/peps/pep-0632/">PEP632</a>.
-Setuptools 49.1.2 vendored distutils, but has experienced some
-<a href="https://setuptools.readthedocs.io/en/latest/history.html">friction in setuptools 50.x</a>
-since so many packages
-<a href="https://github.com/pypa/setuptools/issues/2372">monkeypatch distutils</a>
-due to the little maintained status of distutils for several years.</p>
-<p>With distutils proposed deprecation in Python 3.10,
-<a href="https://setuptools.readthedocs.io/en/latest/distutils-legacy.html">migration</a>
-to setuptools is a topic being worked on by major packages such as Numpy.
-Aside from major packages in the Scipy/Numpy stack, I don&rsquo;t recall many current packages setup.py relying on distutils. However, there is code in some packages using <code>import distutils</code> that could break.</p>
-<p>I applaud the decision to remove distutils from Python stdlib despite the fallout.
-The fallout is a symptom of the legacy baggage of Python&rsquo;s packaging.
-Non-stdlib packages like setuptools are so …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-06 00:00:00+00:00" class="dt-published"></time>
-  Sun 06 Sep 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
