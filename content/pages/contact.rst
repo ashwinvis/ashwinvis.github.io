@@ -81,8 +81,10 @@ research_ or software_ that I maintain.
      </tbody>
      </table>
 
-
 .. block-info:: Find directions to my office
+
+    I try to be at the university once a week, despite working from home most
+    of the time. Let me know beforehand if you drop by.
 
     .. container:: m-row
 
