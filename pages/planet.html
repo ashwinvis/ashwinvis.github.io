@@ -142,6 +142,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://cordlandwehr.wordpress.com/2020/09/20/how-to-convert-a-project-to-reuse-compatible-license-statements/" rel="bookmark" class="u-url"
+       title="How to Convert a Project to REUSE Compatible License Statements?" target="_blank">
+      <time class="m-date" datetime="2020-09-20 09:02:51+00:00">
+        Sep
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to Convert a Project to REUSE Compatible License Statements?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This blog post provides a step-by-step example about how the conversion of a project to REUSE compatible license statements is done in practice. For my setup, I have a <a href="https://community.kde.org/Get_Involved/development#Set_up_kdesrc-build">readily configured kdesrc-build</a> environment.</p>
+
+
+
+<p>First, I get out the most recent source code if the project I want to convert. For this tutorial, I use <a href="https://invent.kde.org/education/kturtle">KTurtle</a>, which is a nice and small application from KDE Education with just about 200 files.</p>
+
+
+
+<p>Then I obtain the latest version of <a href="https://invent.kde.org/sdk/licensedigger">licensedigger</a> and compile it:</p>
+
+
+
+<pre><code>kdesrc-build licensedigger</code></pre>
+
+
+
+<p>First I do a dry run to get an impression about how well the licenses are detected in KTurtle. But, well, it looks really bad:</p>
+
+
+
+<pre>$ /opt/kde/build/playground/sdk/licensedigger/licensedigger --dry kturtle/
+Digging recursively all files in directory: "kturtle/"
+= LICENSE DETECTION OVERVIEW =
+"kturtle/CMakeLists.txt" --&gt; "UNKNOWN-LICENSE"
+"kturtle/doc/CMakeLists.txt" --&gt; "UNKNOWN-LICENSE"
+"kturtle/icons/CMakeLists.txt …</pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andreas Cord-Landwehr (CoLa)</b></span>
+  on <time datetime="2020-09-20 09:02:51+00:00" class="dt-published"></time>
+  Sun 20 Sep 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://snarky.ca/unravelling-unary-arithmetic-operators/" rel="bookmark" class="u-url"
        title="Unravelling unary arithmetic operators" target="_blank">
       <time class="m-date" datetime="2020-09-20 00:51:37+00:00">
@@ -192,7 +251,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>I have working code for my Gemini game! Currently the idea is this: every player “runs” an orc tribe. The game is a low-effort game where players simply indicate a “strategy” for their tribe and the game engine does the rest: it simulates the lives of orcs living in their villages and appends the results to Phoebe pages. This is where part two of the game happens. It’s a bit like Cosmic Voyage, except that the turn reports function as writing prompts. Phoebe is a wiki and so what you do as a player is you edit your village’s wiki page and turn the dry messages into something more entertaining to read.</p><p>So what’s the current status?</p><p>When a new game is created, a bunch of villages is created with their inhabitants. When a turn is processed …</p></div>
+  <div><p>I have working code for my Gemini game! Currently the idea is this: every player “runs” an orc tribe. The game is a low-effort game where players simply indicate a “strategy” for their tribe and the game engine does the rest: it simulates the lives of orcs living in their villages and appends the results to Phoebe pages. This is where part two of the game happens. It’s a bit like Cosmic Voyage, except that the turn reports function as writing prompts. Phoebe is a wiki and so what you do as a player is you edit your village’s wiki page and turn the dry messages into something more entertaining to read.</p><p>So what’s the current status?</p><p>When a new game is created, a bun no ch of villages is created with their inhabitants. When a turn …</p></div>
   </p>
   </div>
 </header>
@@ -202,72 +261,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-09-19 12:50:27+00:00" class="dt-published"></time>
   Sat 19 Sep 2020
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pointieststick.com/2020/09/18/this-week-in-kde-everything-happened/" rel="bookmark" class="u-url"
-       title="This week in KDE: everything happened" target="_blank">
-      <time class="m-date" datetime="2020-09-19 04:03:48+00:00">
-        Sep
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      This week in KDE: everything happened
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This was a pretty huge week for KDE. Apparently people had a lot of pent-up work, because right after Akademy finished last week, the floodgates started opening! Amazing stuff has been landing left and right every day this week! Some highlights are touch support in Dolphin, user-configurable per-view sort ordering in Elisa, optional Systemd startup, tons of Okular scrolling improvements, and much, much, much more.</p>
-
-
-
-<p>Oh and meet Plasma 5.20’s beautiful new wallpaper, <em><a href="https://invent.kde.org/plasma/breeze/-/merge_requests/29">Shell</a></em>:</p>
-
-
-
-<div><img alt="" src="//pointieststick.files.wordpress.com/2020/09/screenshot_20200914_124617.jpeg?w=1024"></div>
-
-
-
-<p>Big thanks to Lucas Andrade for this beautiful wallpaper!</p>
-
-
-
-New Features
-
-
-
-<p>Dolphin <a href="https://bugs.kde.org/show_bug.cgi?id=385066">now has full touch support</a>! (Steffen Hartlieb, Dolphin 20.12)</p>
-
-
-
-<p>Elisa <a href="https://bugs.kde.org/show_bug.cgi?id=406467">now lets you sort each view by whatever criteria you want, and defaults to sorting albums by year</a> (Matthieu Gallien, Elisa 20.12)</p>
-
-
-
-<div><img alt="" src="//pointieststick.files.wordpress.com/2020/09/screenshot_20200918_104320-1.jpeg?w=1024"></div>
-
-
-
-<p>Konsole <a href="https://bugs.kde.org/show_bug.cgi?id=364098">now has a “focus follows mouse” feature for its split views that you can turn on to …</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-09-19 04:03:48+00:00" class="dt-published"></time>
-  Sat 19 Sep 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
