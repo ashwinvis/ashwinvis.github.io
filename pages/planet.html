@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://zoltanp.github.io/2020/09/ktechlab-0-50-0.html" rel="bookmark" class="u-url"
-       title="Announcing KTechLab 0.50.0" target="_blank">
-      <time class="m-date" datetime="2020-09-21 00:15:00+00:00">
+    <a href="http://blog.davidedmundson.co.uk/blog/running-plasmashell-with-vulkan/" rel="bookmark" class="u-url"
+       title="Running PlasmaShell with Vulkan" target="_blank">
+      <time class="m-date" datetime="2020-09-21 08:00:48+00:00">
         Sep
         <span class="m-date-day">
           21
@@ -152,39 +152,59 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Announcing KTechLab 0.50.0
+      Running PlasmaShell with Vulkan
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I’m happy to announce KTechLab release version 0.50.0.
-KTechLab is an IDE for microcontrollers and electronics.
-In this new release every user-visible functionality is
-the same as in previous releases,
-however, the codebase of KTechLab has been updated,
-so now it is a KF5/Qt5 application
-and it does not depend anymore on KDELibs4Support libraries.</p>
-
-<p>This release should compile and run on systems where KDELibs4Support
-libraries are not available.</p>
-
-<p>In its current state KTechLab’s codebase is ready for fixes and enhancements,
-as it only depends on modern libraries like KDE Frameworks 5 (KF5) and Qt5.
-As a side note, KF6 and Qt6 have been announced,
-and the first release of Qt6 has been scheduled <a href="https://wiki.qt.io/Qt_6.0_Release">to the end of 2020</a>.</p>
-
-<p><a href="https://download.kde.org/unstable/ktechlab/ktechlab-0.50.0.tar.xz.mirrorlist">The release tarball of version 0.50.0 can be downloaded from KDE servers</a>.
-Its checksums are …</p>
+  About QtQuick and RHI
+<p>QtQuick, in one word, is <em>amazing</em>. </p>
+<p>QtQuick, in slightly more words, is a scene graph implementation. At a developer level we create abstract "Items" which might be some text or a rectangle etc or a picture. This in turn gets transformed into a tree of nodes with geometry, "materials" and transforms. In turn this gets translated into a big long stream of OpenGL instructions which we send to the graphic card.</p>
+<p>Qt6 will see this officially change to sit on top of the "Render Hardware Interface" stack, that instead of always producing OpenGL, will support Vulkan, Metal and Direct3D natively. The super clever part about it is that custom shaders (low level fast drawing) are also abstracted; meaning we will write some GLSL and generate the relevant shader for each API without having to duplicate the …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Zoltan Padrah</b></span>
-  on <time datetime="2020-09-21 00:15:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>David Edmundson</b></span>
+  on <time datetime="2020-09-21 08:00:48+00:00" class="dt-published"></time>
   Mon 21 Sep 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.gtk.org/2020/09/21/gtkcolumnview/" rel="bookmark" class="u-url"
+       title="GtkColumnView" target="_blank">
+      <time class="m-date" datetime="2020-09-21 01:14:02+00:00">
+        Sep
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GtkColumnView
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  One thing that I left unfinished in my recent series on list views and models in GTK 4 is a detailed look at GtkColumnView. This will easily be the most complicated part of the series. We are entering into the heartland of GtkTreeViewâ€”anything aiming to replace most its features will be a complicated beast. Overview … <a href="https://blog.gtk.org/2020/09/21/gtkcolumnview/">Continue reading<span> "GtkColumnView"</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>mclasen</b></span>
+  on <time datetime="2020-09-21 01:14:02+00:00" class="dt-published"></time>
+  Mon 21 Sep 2020
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -235,32 +255,40 @@ changelog workflows that could use better tooling.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://noraisin.net/diary/?p=986" rel="bookmark" class="u-url"
-       title="Oculus Rift CV1 progress" target="_blank">
-      <time class="m-date" datetime="2020-09-20 20:15:05+00:00">
+    <a href="https://hunden.linuxkompis.se/2020/09/21/im-taking-a-break-from-mastodon.html" rel="bookmark" class="u-url"
+       title="I’m taking a break from Mastodon" target="_blank">
+      <time class="m-date" datetime="2020-09-21 00:00:00+02:00">
         Sep
         <span class="m-date-day">
-          20
+          21
         </span>
         2020
       </time>
       <div class="p-name">
-      Oculus Rift CV1 progress
+      I’m taking a break from Mastodon
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  In my last post here, I gave some background on how Oculus Rift devices work, and promised to talk more about Rift S internals. I’ll do that another day – today I want to provide an update on implementing positional tracking for the Rift CV1. I was working on CV1 support quite a lot earlier … <a href="https://noraisin.net/diary/?p=986">Continue reading<span> "Oculus Rift CV1 progress"</span></a>
+  <p>For an indefinite future. *Dramatic drumroll* Well. Seriosly talking, I just feel like that I might not using it in a way that I want to be using it anymore.</p>
+
+<p>I feel like that I would like to take a break from Mastodon[1] and see what happens with my phone usage in general. I access Mastodon 95% of the time via my phone and according to my phone I have opened Tusky (my Mastodon-client) in average about 30 to 50 times per day the last month or so. One day it was 100 times! That’s just crazy.</p>
+
+<ol>
+  <li>This only applies for my main account, where I spend 99.99% of my time on Mastodon. I still use Mastodon for my project <a href="https://mastodon.linuxkompis.se/@Linuxkompis">Linuxkompis</a> and my company <a href="https://fosstodon.org/@iokeyboards">I/O Keyboards</a>.</li>
+</ol>
+
+<p>I can only imagine how much of an effect that …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>thaytan</b></span>
-  on <time datetime="2020-09-20 20:15:05+00:00" class="dt-published"></time>
-  Sun 20 Sep 2020
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-21 00:00:00+02:00" class="dt-published"></time>
+  Mon 21 Sep 2020
+  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -490,6 +518,40 @@ of both, and few of the drawbacks.</p>
   on <time datetime="2020-09-18 15:00:00+00:00" class="dt-published"></time>
   Fri 18 Sep 2020
   in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2361/" rel="bookmark" class="u-url"
+       title="Voting" target="_blank">
+      <time class="m-date" datetime="2020-09-18 00:00:00+00:00">
+        Sep
+        <span class="m-date-day">
+          18
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Voting
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="'Wait, our state has mail voting. The forms are literally on the kitchen table.' 'Not now, I'm busy researching which channels have sharks in them.'" src="https://imgs.xkcd.com/comics/voting.png" title="'Wait, our state has mail voting. The forms are literally on the kitchen table.' 'Not now, I'm busy researching which channels have sharks in them.'">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-18 00:00:00+00:00" class="dt-published"></time>
+  Fri 18 Sep 2020
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -783,48 +845,6 @@ Join us at #archlinux-bugs channel on irc.freenode.net during 13th of September.
   on <time datetime="2020-09-09 00:00:00+00:00" class="dt-published"></time>
   Wed 09 Sep 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/09/09/i-gave-my-website-a-new-look.html" rel="bookmark" class="u-url"
-       title="I gave my website a new look" target="_blank">
-      <time class="m-date" datetime="2020-09-09 00:00:00+02:00">
-        Sep
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      I gave my website a new look
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I gave my website a new look! I wasn’t happy with the code and some parts of the theme. I have also wanted to try a more ‘plain text’ look for some time now and decided to give it try. It turned out to be more challenging than I expected to design something simpler with less visual elements.</p>
-
-<p>I started fresh with a new theme from scratch. This made it easier to improve the parts of the old code that I didn’t like from my previous theme. I was able work with a lot less code which was a lot of fun. I managed to remove 16 kilobytes of code and my website[1] is now down to 220 kilobytes of code.</p>
-
-<ol>
-  <li>Pre-build and excluding images and posts.</li>
-</ol>
-
-<p>If you like my theme you can find the source …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-09 00:00:00+02:00" class="dt-published"></time>
-  Wed 09 Sep 2020
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
