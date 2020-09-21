@@ -142,9 +142,60 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://cordlandwehr.wordpress.com/2020/09/20/how-to-convert-a-project-to-reuse-compatible-license-statements/" rel="bookmark" class="u-url"
-       title="How to Convert a Project to REUSE Compatible License Statements?" target="_blank">
-      <time class="m-date" datetime="2020-09-20 09:02:51+00:00">
+    <a href="https://zoltanp.github.io/2020/09/ktechlab-0-50-0.html" rel="bookmark" class="u-url"
+       title="Announcing KTechLab 0.50.0" target="_blank">
+      <time class="m-date" datetime="2020-09-21 00:15:00+00:00">
+        Sep
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Announcing KTechLab 0.50.0
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I’m happy to announce KTechLab release version 0.50.0.
+KTechLab is an IDE for microcontrollers and electronics.
+In this new release every user-visible functionality is
+the same as in previous releases,
+however, the codebase of KTechLab has been updated,
+so now it is a KF5/Qt5 application
+and it does not depend anymore on KDELibs4Support libraries.</p>
+
+<p>This release should compile and run on systems where KDELibs4Support
+libraries are not available.</p>
+
+<p>In its current state KTechLab’s codebase is ready for fixes and enhancements,
+as it only depends on modern libraries like KDE Frameworks 5 (KF5) and Qt5.
+As a side note, KF6 and Qt6 have been announced,
+and the first release of Qt6 has been scheduled <a href="https://wiki.qt.io/Qt_6.0_Release">to the end of 2020</a>.</p>
+
+<p><a href="https://download.kde.org/unstable/ktechlab/ktechlab-0.50.0.tar.xz.mirrorlist">The release tarball of version 0.50.0 can be downloaded from KDE servers</a>.
+Its checksums are …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Zoltan Padrah</b></span>
+  on <time datetime="2020-09-21 00:15:00+00:00" class="dt-published"></time>
+  Mon 21 Sep 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com//blog/202009/scriv.html" rel="bookmark" class="u-url"
+       title="Scriv" target="_blank">
+      <time class="m-date" datetime="2020-09-20 18:43:55-04:00">
         Sep
         <span class="m-date-day">
           20
@@ -152,47 +203,109 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      How to Convert a Project to REUSE Compatible License Statements?
+      Scriv
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This blog post provides a step-by-step example about how the conversion of a project to REUSE compatible license statements is done in practice. For my setup, I have a <a href="https://community.kde.org/Get_Involved/development#Set_up_kdesrc-build">readily configured kdesrc-build</a> environment.</p>
-
-
-
-<p>First, I get out the most recent source code if the project I want to convert. For this tutorial, I use <a href="https://invent.kde.org/education/kturtle">KTurtle</a>, which is a nice and small application from KDE Education with just about 200 files.</p>
-
-
-
-<p>Then I obtain the latest version of <a href="https://invent.kde.org/sdk/licensedigger">licensedigger</a> and compile it:</p>
-
-
-
-<pre><code>kdesrc-build licensedigger</code></pre>
-
-
-
-<p>First I do a dry run to get an impression about how well the licenses are detected in KTurtle. But, well, it looks really bad:</p>
-
-
-
-<pre>$ /opt/kde/build/playground/sdk/licensedigger/licensedigger --dry kturtle/
-Digging recursively all files in directory: "kturtle/"
-= LICENSE DETECTION OVERVIEW =
-"kturtle/CMakeLists.txt" --&gt; "UNKNOWN-LICENSE"
-"kturtle/doc/CMakeLists.txt" --&gt; "UNKNOWN-LICENSE"
-"kturtle/icons/CMakeLists.txt …</pre>
+  <p>I&#8217;ve written a tool for managing changelog files, called
+<a href="https://scriv.readthedocs.io">scriv</a>.  It focuses on a simple
+workflow, but with lots of flexibility.</p><p>I&#8217;ve long felt that it&#8217;s enormously beneficial for engineers to write about
+what they do, not only so that other people can understand it, but to help the
+engineers themselves understand it.  Writing about a thing gives you another
+perspective on it, your own code included.</p><p>The philosophy behind scriv, and a quick list of other similar tools, is on the
+<a href="https://scriv.readthedocs.io/en/latest/philosophy.html">Philosophy</a>
+page in the docs.</p><p>Scriv only does a few things now, but I&#8217;m interested to hear about other
+changelog workflows that could use better tooling.</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Andreas Cord-Landwehr (CoLa)</b></span>
-  on <time datetime="2020-09-20 09:02:51+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-09-20 18:43:55-04:00" class="dt-published"></time>
   Sun 20 Sep 2020
-  in Planet KDE.
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://noraisin.net/diary/?p=986" rel="bookmark" class="u-url"
+       title="Oculus Rift CV1 progress" target="_blank">
+      <time class="m-date" datetime="2020-09-20 20:15:05+00:00">
+        Sep
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Oculus Rift CV1 progress
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In my last post here, I gave some background on how Oculus Rift devices work, and promised to talk more about Rift S internals. I’ll do that another day – today I want to provide an update on implementing positional tracking for the Rift CV1. I was working on CV1 support quite a lot earlier … <a href="https://noraisin.net/diary/?p=986">Continue reading<span> "Oculus Rift CV1 progress"</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>thaytan</b></span>
+  on <time datetime="2020-09-20 20:15:05+00:00" class="dt-published"></time>
+  Sun 20 Sep 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2020/09/web-design-carbon-impact/" rel="bookmark" class="u-url"
+       title="Web Design and Carbon Impact" target="_blank">
+      <time class="m-date" datetime="2020-09-20 15:42:18+02:00">
+        Sep
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Web Design and Carbon Impact
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://cmhb.de/web-design-and-carbon-impact">Carl MH Barenbrug writes about the carbon impact of web designs.</a> He reminds to consider that fast loading and less energy use is more important than fancy designs.</p>
+<p>He also shares some tips on how to reduce the carbon impact of websites:</p>
+<ul>
+<li>Reduce images (often images don&rsquo;t add any value for the visitor)</li>
+<li>Optimize images</li>
+<li>Reduce video (and disable autoplay!)</li>
+<li>Choose fonts wisely (system fonts are often enough &ndash; I&rsquo;m a fan of <a href="https://jlelse.blog/dev/sans-serif-only/">just using “sans-serif”</a>) and when you need custom fonts, use the right subset and try to make them as small as possible</li>
+<li>Write clean code</li>
+<li>Use less JavaScript (you can do a lot of things with just HTML and CSS! &ndash; and probably don&rsquo;t need all those metrics collected by your tracking tools)</li>
+<li>Caching</li>
+</ul>
+<p>While <a href="https://jlelse.blog/thoughts/2020/07/own-cms/">developing my own custom CMS</a>, I take a lot of care …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-20 15:42:18+02:00" class="dt-published"></time>
+  Sun 20 Sep 2020
+  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -227,6 +340,53 @@ Digging recursively all files in directory: "kturtle/"
   on <time datetime="2020-09-20 00:51:37+00:00" class="dt-published"></time>
   Sun 20 Sep 2020
   in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2020/09/20/The-potential-of-federation.html" rel="bookmark" class="u-url"
+       title="The unrealized potential of federation" target="_blank">
+      <time class="m-date" datetime="2020-09-20 00:00:00+00:00">
+        Sep
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The unrealized potential of federation
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>There are some major problems on the internet which may seem intractable. How do
+we prevent centralization of our communication tools under the authority of a
+few, whose motivations may not align with our interests? How do we build
+internet-scale infrastructure without a megacorp-scale budget? Can we make our
+systems reliable and fault-tolerant — in the face of technical <em>and</em>
+social problems?</p>
+<p><strong>Federation</strong> is an idea which takes a swing at all of these problems.</p>
+<p>The key trait of a software system which is <em>federated</em> is that the servers are
+controlled by independent, sovereign entities, and that they exist together
+under a common web of communication protocols and social agreements. This
+occupies a sort of middle ground between the centralized architecture and the
+peer-to-peer (or &ldquo;decentralized&rdquo;) architecture. Federation enjoys the advantages
+of both, and few of the drawbacks.</p>
+<p>In a federated …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-20 00:00:00+00:00" class="dt-published"></time>
+  Sun 20 Sep 2020
+  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -338,40 +498,6 @@ Digging recursively all files in directory: "kturtle/"
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2361/" rel="bookmark" class="u-url"
-       title="Voting" target="_blank">
-      <time class="m-date" datetime="2020-09-18 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          18
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Voting
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="'Wait, our state has mail voting. The forms are literally on the kitchen table.' 'Not now, I'm busy researching which channels have sharks in them.'" src="https://imgs.xkcd.com/comics/voting.png" title="'Wait, our state has mail voting. The forms are literally on the kitchen table.' 'Not now, I'm busy researching which channels have sharks in them.'">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-18 00:00:00+00:00" class="dt-published"></time>
-  Fri 18 Sep 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://tonsky.me/blog/sublime/" rel="bookmark" class="u-url"
        title="The most important feature of Sublime Text" target="_blank">
       <time class="m-date" datetime="2020-09-18 00:00:00+00:00">
@@ -398,74 +524,6 @@ Digging recursively all files in directory: "kturtle/"
   on <time datetime="2020-09-18 00:00:00+00:00" class="dt-published"></time>
   Fri 18 Sep 2020
   in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/09/2020-09-17-wsbzt/" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-09-17 18:06:48+02:00">
-        Sep
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I watched &ldquo;The Social Dilemma&rdquo; on Netflix today. I like the movie! A good movie with a lot of things people from within my bubble probably already know. And a lot of reasons to stay away from (classic) social media.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-17 18:06:48+02:00" class="dt-published"></time>
-  Thu 17 Sep 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/alexm/2020/09/17/games-3-38/" rel="bookmark" class="u-url"
-       title="Games 3.38" target="_blank">
-      <time class="m-date" datetime="2020-09-17 11:30:35+00:00">
-        Sep
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Games 3.38
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I wanted to start this blog post with “It’s that time of year again”, but looks like Michael beat me to it. So, let’s take a look at some of the changes in GNOME Games 3.38: retro-gtk 1.0 The library Games uses to implement Libretro frontend, retro-gtk, has been overhauled this cycle. I’ve already covered … <a href="https://blogs.gnome.org/alexm/2020/09/17/games-3-38/">Continue reading <span>Games 3.38</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Alexander Mikhaylenko</b></span>
-  on <time datetime="2020-09-17 11:30:35+00:00" class="dt-published"></time>
-  Thu 17 Sep 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -568,94 +626,6 @@ Digging recursively all files in directory: "kturtle/"
   on <time datetime="2020-09-16 12:38:51.369000-04:00" class="dt-published"></time>
   Wed 16 Sep 2020
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2020/09/15/Status-update-September-2020.html" rel="bookmark" class="u-url"
-       title="Status update, September 2020" target="_blank">
-      <time class="m-date" datetime="2020-09-15 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          15
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Status update, September 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>A mercifully cool September is upon us, and after years of searching, I finally
-was able to secure Club Mate in the US. Let&rsquo;s decant a bottle and recant the
-story of this month&rsquo;s progress in free software development.</p>
-<p>First of all, I&rsquo;ve been able to put a pin on operations work on SourceHut for
-the time being, and focus again on its software development. The GraphQL APIs
-are a major focus area here, and I&rsquo;ve made a lot of progress towards OAuth 2.0
-support and writable GraphQL APIs. Additionally, I&rsquo;ve laid out a number of
-prioritized tickets for the beta — with the &ldquo;beta&rdquo; label on todo.sr.ht
-— and have been picking items off of the list one at a time, mainly
-focusing on meta.sr.ht improvements at first. I&rsquo;ll go …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-15 00:00:00+00:00" class="dt-published"></time>
-  Tue 15 Sep 2020
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202009/songbasket.html" rel="bookmark" class="u-url"
-       title="Song-basket" target="_blank">
-      <time class="m-date" datetime="2020-09-13 17:03:20-04:00">
-        Sep
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Song-basket
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I threw together a Spotify API program called
-<a href="https://github.com/nedbat/song-basket">song-basket</a>.  I have a few
-large themed playlists (for example, Instrumental Funk).  This app is to help me
-add songs to them.  I can choose a playlist (the basket), and then as I surf
-around Spotify, it lets me add the current song to the basket with one click.
-It also shows me whether the current song is already in the basket or not, which
-they often are.  If the song is already in the basket, I don&#8217;t have to think
-about whether to add it, and I don&#8217;t have to deal with the annoying &#8220;Add
-duplicate?&#8221; question.</p><p>This started as an
-<a href="https://tekore.readthedocs.io/en/stable/examples/auth_server.html">example
-in the Tekore docs</a>, and I hacked at it until it did what I wanted.  A lot of
-it is wrong: no templating, incorrect HTML, a stateful …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-09-13 17:03:20-04:00" class="dt-published"></time>
-  Sun 13 Sep 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
