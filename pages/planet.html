@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.qt.io/blog/improved-qml-support-in-qt-for-python-6.0" rel="bookmark" class="u-url"
-       title="Improved QML Support in Qt for Python 6.0" target="_blank">
-      <time class="m-date" datetime="2020-09-22 10:53:10+00:00">
+    <a href="https://kate-editor.org/post/2020/2020-09-22-small-things-matter/" rel="bookmark" class="u-url"
+       title="KTextEditor - Small Things Matter" target="_blank">
+      <time class="m-date" datetime="2020-09-22 19:51:00+00:00">
         Sep
         <span class="m-date-day">
           22
@@ -152,26 +152,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Improved QML Support in Qt for Python 6.0
+      KTextEditor - Small Things Matter
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div> 
- <a href="https://www.qt.io/blog/improved-qml-support-in-qt-for-python-6.0" title=""> <img alt="QML Python" src="//www.qt.io/hubfs/qml_python.png"> </a> 
-</div>    
-<p>Since the initial port of <strong>PySide</strong> to <strong>Qt5</strong> (<em>a.k.a <code>PySide2</code></em>), the interaction with QML was on the list of features we wanted to fully support in our set of bindings, due to the popularity of QML.</p> 
-<p>With the first official release 5.12, we had cover many use cases for the QML and Python interaction, but also we left out a couple of use cases that were really required by our community. Now that we are developing new features and improvements for Qt6, we wanted to address most of them.</p> 
-<p>Here you can find a summary of the features that we have done so far for the planned Qt for Python 6.0 release.</p>    
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fimproved-qml-support-in-qt-for-python-6.0&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
+  <p>Thanks to the feedback &amp; patches provided by others, I found a bit more motivation to take a look at the small things that seems to be odd in KTextEditor.</p>
+<p>Interesting enough, if you once notice a small detail (like a dead pixel on your display you suddenly find after years of use), it really sticks out like a sore thumb…</p>
+<p>Here two small things that caught my interest this week.</p>
+KTextEditor border widget painting
+<p>If you have some theme like “Vim Dark” with border background color equal to the text background color, strange stuff happens.</p>
+<p>See the following screenshot:</p>
+<p>
+<a href="https://kate-editor.org/post/2020/2020-09-22-small-things-matter/images/ktexteditor-old-border.png"><img src="//kate-editor.org/post/2020/2020-09-22-small-things-matter/images/ktexteditor-old-border.png"></a>
+</p>
+<p>You can’t actually tell: Is this the folding marker column or is all my text indented by one or two spaces?
+There is no visual hint for this.</p>
+<p>Funny enough, there is some visual hint to show that on the …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2020-09-22 10:53:10+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Kate News</b></span>
+  on <time datetime="2020-09-22 19:51:00+00:00" class="dt-published"></time>
   Tue 22 Sep 2020
   in Planet KDE.
 </footer>
@@ -182,50 +187,66 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://people.gnome.org/~michael/blog/2020-09-21.html" rel="bookmark" class="u-url"
-       title="2020-09-21 Monday" target="_blank">
-      <time class="m-date" datetime="2020-09-21 21:00:00+00:00">
+    <a href="https://jlelse.blog/links/2020/09/instagrabber/" rel="bookmark" class="u-url"
+       title="InstaGrabber" target="_blank">
+      <time class="m-date" datetime="2020-09-22 21:04:56+02:00">
         Sep
         <span class="m-date-day">
-          21
+          22
         </span>
         2020
       </time>
       <div class="p-name">
-      2020-09-21 Monday
+      InstaGrabber
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <ul> 
-    <li>
-        Mail chew; planning call; admin, marketing call.
-    </li>
-    <li>
-        Interested by Bjoern's latest blog on the <a href="https://skyfromme.wordpress.com/2020/09/20/the-great-filter-of-open-source-projects/">filter
-    of OSS projects</a>. Lots of good content.
-    <ul>
-        <li>Not entirely sure I'm convinced. It is unclear to me what a
-        complement looks like for a pure-play FOSS company with no proprietary
-        software, tangible hardware, or on-line infrastructure to complement.</li>
-        <li>The traditional answer is support and services, and to drive those
-        you need a strong brand; like RedHat.</li>
-        <li>I'm certainly very aware of the pressure to get the price of a
-        putative "LibreOffice Online" complement down to zero.</li>
-        <li>According to Bjoern &amp; <a href="https://www.joelonsoftware.com/2002/06/12/strategy-letter-v/">Joel</a>
-        getting that near zero is in the direct financial interest of lots of
-        "Mom &amp; Pop local FLOSS install/support companies" - so they can
-        charge more for their services, and presumably in the interest of
-        hosters, as well as those that bundle it as a component …</li></ul></li></ul>
+  <p>Although I no longer use Instagram, I still have an account there, and from time to time I like to see what people I know post there. To do that I always used the website in the browser. However, their website is not fast and has some bugs. Recently, I came across the alternative Instagram client “<a href="https://instagrabber.austinhuang.me/">InstaGrabber</a>”. While it sounds like a simple Instagram image downloader, it has a lot more functionality. It allows viewing your feed and stories of people you follow. To enable this, you can also login.</p>
+<p>It is completely free software available on <a href="https://github.com/austinhuang0131/barinsta">GitHub</a> and installable via <a href="https://f-droid.org/en/packages/me.austinhuang.instagrabber/">F-Droid</a>.</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-21 21:00:00+00:00" class="dt-published"></time>
-  Mon 21 Sep 2020
+  on <time datetime="2020-09-22 21:04:56+02:00" class="dt-published"></time>
+  Tue 22 Sep 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/chergert/2020/09/22/gtksourceview-next/" rel="bookmark" class="u-url"
+       title="GtkSourceView Next" target="_blank">
+      <time class="m-date" datetime="2020-09-22 18:57:35+00:00">
+        Sep
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GtkSourceView Next
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Earlier this year I started a branch to track GTK 4 development which is targeted for release by end-of-year. I just merged it which means that our recently released gtksourceview-4-8 branch is going to be our LTS for GTK 3. As you might remember from the previous maintainer, GtkSourceView 4.x is the continuation of the … <a href="https://blogs.gnome.org/chergert/2020/09/22/gtksourceview-next/">Continue reading <span>GtkSourceView Next</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>chergert</b></span>
+  on <time datetime="2020-09-22 18:57:35+00:00" class="dt-published"></time>
+  Tue 22 Sep 2020
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -235,32 +256,66 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/629880536329076736/testing-granular-gas-theory" rel="bookmark" class="u-url"
-       title="Testing Granular Gas Theory" target="_blank">
-      <time class="m-date" datetime="2020-09-21 10:08:09-05:00">
+    <a href="http://pyfound.blogspot.com/2020/09/the-python-software-foundation-re-opens.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="The Python Software Foundation re-opens its Grants Program!" target="_blank">
+      <time class="m-date" datetime="2020-09-22 12:33:45.183000-04:00">
         Sep
         <span class="m-date-day">
-          21
+          22
         </span>
         2020
       </time>
       <div class="p-name">
-      Testing Granular Gas Theory
+      The Python Software Foundation re-opens its Grants Program!
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <a href="https://fyfluiddynamics.com/2020/09/testing-granular-gas-theory/"><img src="https://64.media.tumblr.com/e7af8a068077be0bc0bce8dabec47f0d/3084911af4bed5f1-02/s540x810/5e2b3fecd3921e335b3a918c4b06b569df627322.gif">When excited, a group of particles can behave much like a gas. These granular gases exhibit many similarities to molecular gases but contain one vital difference: without a constant input of energy, granular gases lose kinetic energy to collisions.</a> (Image and research credit: <a href="https://doi.org/10.1103/PhysRevLett.124.208007">P. Yu et al.</a>; via <a href="https://physics.aps.org/articles/v13/84?utm_campaign=weekly&amp;utm_medium=email&amp;utm_source=emailalert">APS Physics</a>)
-<a href="https://fyfluiddynamics.com/?p=13279">Read the full article</a>
+  <p><span>The Python Software Foundation is excited to announce the re-opening of its Grants Program!</span><span>&nbsp;</span></p><p>The pandemic negatively affected the PSF’s finances with the cancellation of PyCon 2020’s in-person conference and lower donations. Thanks to PyCon 2020 Online sponsors, donors, and our financial reserve, we are able to continue to support the Python community!<span>&nbsp;</span></p>Historical Impact<p>The PSF’s Grants Program has supported the growth of Python in many regions and fostered the training for many individuals. Between 2014 and 2019, the PSF disbursed<span>&nbsp;</span><strong>$1,637,000</strong><span>&nbsp;</span>in financial support to organizers and developers all over the world.<span>&nbsp;</span></p><p><a href="https://1.bp.blogspot.com/-vtqZFfp_e_Y/X2og8AWfQoI/AAAAAAAAODs/LTYsKlxwdDs4PXuTcWLdFBcGCEvOjkJzQCLcBGAsYHQ/s1598/pie-chart.jpg"><img src="https://1.bp.blogspot.com/-vtqZFfp_e_Y/X2og8AWfQoI/AAAAAAAAODs/LTYsKlxwdDs4PXuTcWLdFBcGCEvOjkJzQCLcBGAsYHQ/w455-h280/pie-chart.jpg"></a>Grant disbursements from 2014 through 2019 by grant type<a href="https://docs.google.com/spreadsheets/d/1ESum2veqGgMSK-nJZgi5nzfljzbgSFmhKn2WmhNltpQ/edit#gid=0">To see a high resolution version, click here!</a><span></span></p>Updated criteria &amp; requirements<p>For the immediate future, the PSF’s Grants Program will focus on virtual sprints, virtual events, and Python core development support …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ewa Jodlowska (noreply@blogger.com)</b></span>
+  on <time datetime="2020-09-22 12:33:45.183000-04:00" class="dt-published"></time>
+  Tue 22 Sep 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/629970880671465472/hot-ice-buoyancy-tricks-and-more-diy-fun" rel="bookmark" class="u-url"
+       title="Hot Ice, Buoyancy Tricks, and More DIY Fun" target="_blank">
+      <time class="m-date" datetime="2020-09-22 10:04:07-05:00">
+        Sep
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Hot Ice, Buoyancy Tricks, and More DIY Fun
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://64.media.tumblr.com/9f3a780836341b73fda7d61f93403617/cd87e87741d22b4d-e9/s540x810/050088205419a1e243df659641f78d7adca5db0f.png"><a href="https://fyfluiddynamics.com/2020/09/hot-ice-buoyancy-tricks-and-more-diy-fun/">Here&rsquo;s a smorgasbord of DIY experiments from Dianna at Physics Girl. Some are fluidsy, some aren&rsquo;t, but all of them give you a chance to stretch your science muscles at home.</a> (Video credit: Physics Girl)
+<a href="https://fyfluiddynamics.com/?p=13322">Read the full article</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-21 10:08:09-05:00" class="dt-published"></time>
-  Mon 21 Sep 2020
+  on <time datetime="2020-09-22 10:04:07-05:00" class="dt-published"></time>
+  Tue 22 Sep 2020
   in FYFD.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -270,31 +325,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2020/09/testing-granular-gas-theory/" rel="bookmark" class="u-url"
-       title="Testing Granular Gas Theory" target="_blank">
-      <time class="m-date" datetime="2020-09-21 15:00:00+00:00">
+    <a href="https://fyfluiddynamics.com/2020/09/hot-ice-buoyancy-tricks-and-more-diy-fun/" rel="bookmark" class="u-url"
+       title="Hot Ice, Buoyancy Tricks, and More DIY Fun" target="_blank">
+      <time class="m-date" datetime="2020-09-22 15:00:00+00:00">
         Sep
         <span class="m-date-day">
-          21
+          22
         </span>
         2020
       </time>
       <div class="p-name">
-      Testing Granular Gas Theory
+      Hot Ice, Buoyancy Tricks, and More DIY Fun
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  When excited, a group of particles can behave much like a gas. These granular gases exhibit many similarities to molecular gases but contain one vital difference: without a constant input <a href="https://fyfluiddynamics.com/2020/09/testing-granular-gas-theory/">Keep reading</a>
+  Here&#8217;s a smorgasbord of DIY experiments from Dianna at Physics Girl. Some are fluidsy, some aren&#8217;t, but all of them give you a chance to stretch your science muscles at <a href="https://fyfluiddynamics.com/2020/09/hot-ice-buoyancy-tricks-and-more-diy-fun/">Keep reading</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-09-21 15:00:00+00:00" class="dt-published"></time>
-  Mon 21 Sep 2020
+  on <time datetime="2020-09-22 15:00:00+00:00" class="dt-published"></time>
+  Tue 22 Sep 2020
   in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -467,51 +522,6 @@ changelog workflows that could use better tooling.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/09/web-design-carbon-impact/" rel="bookmark" class="u-url"
-       title="Web Design and Carbon Impact" target="_blank">
-      <time class="m-date" datetime="2020-09-20 15:42:18+02:00">
-        Sep
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Web Design and Carbon Impact
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://cmhb.de/web-design-and-carbon-impact">Carl MH Barenbrug writes about the carbon impact of web designs.</a> He reminds to consider that fast loading and less energy use is more important than fancy designs.</p>
-<p>He also shares some tips on how to reduce the carbon impact of websites:</p>
-<ul>
-<li>Reduce images (often images don&rsquo;t add any value for the visitor)</li>
-<li>Optimize images</li>
-<li>Reduce video (and disable autoplay!)</li>
-<li>Choose fonts wisely (system fonts are often enough &ndash; I&rsquo;m a fan of <a href="https://jlelse.blog/dev/sans-serif-only/">just using “sans-serif”</a>) and when you need custom fonts, use the right subset and try to make them as small as possible</li>
-<li>Write clean code</li>
-<li>Use less JavaScript (you can do a lot of things with just HTML and CSS! &ndash; and probably don&rsquo;t need all those metrics collected by your tracking tools)</li>
-<li>Caching</li>
-</ul>
-<p>While <a href="https://jlelse.blog/thoughts/2020/07/own-cms/">developing my own custom CMS</a>, I take a lot of care …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-20 15:42:18+02:00" class="dt-published"></time>
-  Sun 20 Sep 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://snarky.ca/unravelling-unary-arithmetic-operators/" rel="bookmark" class="u-url"
        title="Unravelling unary arithmetic operators" target="_blank">
       <time class="m-date" datetime="2020-09-20 00:51:37+00:00">
@@ -674,40 +684,6 @@ changelog workflows that could use better tooling.</p>
   on <time datetime="2020-09-17 05:56:46.728000-04:00" class="dt-published"></time>
   Thu 17 Sep 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://pyfound.blogspot.com/2020/09/python-software-foundation-end-of-year.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="Python Software Foundation End-of-the-Year Fundraiser" target="_blank">
-      <time class="m-date" datetime="2020-09-16 12:38:51.369000-04:00">
-        Sep
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python Software Foundation End-of-the-Year Fundraiser
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p></p><p>We’re excited to announce that plans are underway for our end-of-the-year 2020 fundraising campaign launching on November 23rd and ending on December 31st!</p><p></p><p>In the past, we’ve worked successfully with organizations such as <a href="https://www.python.org/psf/donations/2019-q2-drive/">JetBrains</a> who donated 100% of the profits from the sale of PyCharm to the PSF. The theme this year is geared toward education. We'll be actively supporting Python educators by collaborating with authors, trainers, and education companies that offer their services all over the world. The goal for the campaign is $30,000 and the funds raised will help benefit the PSF, our community, and those who educate Pythonistas worldwide.&nbsp;</p><p></p><p>In order to keep this fundraiser manageable for our staff, we have a limited number of slots available. For those interested in working with us, we’ve created an <a href="https://www.surveymonkey.com/r/psf_python_ed">application for participation.</a> Through the application …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Betsy Waliszewski (noreply@blogger.com)</b></span>
-  on <time datetime="2020-09-16 12:38:51.369000-04:00" class="dt-published"></time>
-  Wed 16 Sep 2020
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -899,41 +875,6 @@ Join us at #archlinux-bugs channel on irc.freenode.net during 13th of September.
   on <time datetime="2020-09-03 00:00:00+00:00" class="dt-published"></time>
   Thu 03 Sep 2020
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/itk-plus-vtk/" rel="bookmark" class="u-url"
-       title="Integrating ITK and VTK: Give Us Your Feedback!" target="_blank">
-      <time class="m-date" datetime="2020-09-01 22:42:38+00:00">
-        Sep
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Integrating ITK and VTK: Give Us Your Feedback!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Please complete our online survey! ... <a href="https://blog.kitware.com/itk-plus-vtk/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/itk-plus-vtk/">Integrating ITK and VTK: Give Us Your Feedback!</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Stephen Aylward</b></span>
-  on <time datetime="2020-09-01 22:42:38+00:00" class="dt-published"></time>
-  Tue 01 Sep 2020
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
