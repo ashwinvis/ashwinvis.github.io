@@ -142,6 +142,136 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nxos.org/changelog/changelog-nitrux-1-3-3/" rel="bookmark" class="u-url"
+       title="Changelog: Nitrux 1.3.3" target="_blank">
+      <time class="m-date" datetime="2020-09-27 06:34:59+00:00">
+        Sep
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Changelog: Nitrux 1.3.3
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><img alt="" src="//nxos.org/wp-content/uploads/2020/06/VirtualBox_Nitrux_20_06_2020_15_59_33.png"></p>
+Today is the day! — Nitrux 1.3.3 is available to download
+<p>We are pleased to announce the launch of Nitrux 1.3.3. This new version brings together the latest software updates, bug fixes, performance improvements, and ready-to-use hardware support.</p>
+<p>Nitrux 1.3.3 is available for immediate download.</p>
+
+What’s new
+<ul>
+<li>We’ve upgraded the kernel to version 5.6.0-1028.</li>
+</ul>
+<p><img alt="" src="//nxos.org/wp-content/uploads/2020/09/Screenshot_20200927_010525-min.png"></p>
+<ul>
+<li>We’ve updated KDE Plasma to version 5.19.45, KDE Frameworks to version 5.74.0, KDE Applications to version 20.08.1, and Qt 5.15.0.</li>
+<li>We’ve reduced the size of the ISO file to 2.1GB from 3.1GB, for less bandwidth usage and faster download times.</li>
+<li>We’ve removed the Nvidia proprietary driver from the ISO file due to a <a href="https://github.com/Nitrux/nitrux-bug-tracker/issues/14">bug with laptops using Optimus</a>.
+<ul>
+<li>
+<em>Users that wish to use the …</em></li></ul></li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Maui Project</b></span>
+  on <time datetime="2020-09-27 06:34:59+00:00" class="dt-published"></time>
+  Sun 27 Sep 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://matplotlib.org/matplotblog/posts/codeswitching-visualization/" rel="bookmark" class="u-url"
+       title="Visualizing Code-Switching with Step Charts" target="_blank">
+      <time class="m-date" datetime="2020-09-26 19:41:21-07:00">
+        Sep
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Visualizing Code-Switching with Step Charts
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Introduction Code-switching is the practice of alternating between two or more languages in the context of a single conversation, either consciously or unconsciously. As someone who grew up bilingual and is currently learning other languages, I find code-switching a fascinating facet of communication from not only a purely linguistic perspective, but also a social one. In particular, I've personally found that code-switching often helps build a sense of community and familiarity in a group and that the unique ways in which speakers code-switch with each other greatly contribute to shaping group dynamics.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-26 19:41:21-07:00" class="dt-published"></time>
+  Sat 26 Sep 2020
+  in Matplotblog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/python-importerror-vs-modulenotfound/" rel="bookmark" class="u-url"
+       title="Python ImportError vs. ModuleNotFoundError" target="_blank">
+      <time class="m-date" datetime="2020-09-27 00:00:00+00:00">
+        Sep
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python ImportError vs. ModuleNotFoundError
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Python raises
+<a href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError">ModuleNotFoundError</a>
+when a Python module is not able to be found.
+This exception catches a much narrow range of faults than the parent exception
+<a href="https://docs.python.org/3/library/exceptions.html#ImportError">ImportError</a>.</p>
+<p>Although we often like to make exception handling more specific, we have found as a practical matter that using ImportError in a try: except: exception handler is almost always the most appropriate choice.
+This is particularly true for modules like <code>h5py</code> that require compiled-language interfaces.
+For example, h5py relies on the HDF5 library.
+We have found a small percentage of systems with conflicting HDF5 library versions on the system path, which causes h5py to raise <code>ImportError</code>.
+In these cases, we usually wish to detect that the imported module is ready to work, not just whether it is found or not.</p>
+Example
+<p>For Python imports loading compiled-language modules, the following is generally recommended:</p>
+<div><pre><code><span>try …</span></code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-09-27 00:00:00+00:00" class="dt-published"></time>
+  Sun 27 Sep 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jlelse.blog/dev/code-using-vps/" rel="bookmark" class="u-url"
        title="My new coding workflow: VS Code + Remote-SSH extension" target="_blank">
       <time class="m-date" datetime="2020-09-26 17:48:00+02:00">
@@ -364,7 +494,7 @@ and let us know what is broken or missing. We have not implemented some …</li>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://drewdevault.com/2020/09/25/2020-09-25-A-story-of-two-libcs.html" rel="bookmark" class="u-url"
+    <a href="https://drewdevault.com/2020/09/25/A-story-of-two-libcs.html" rel="bookmark" class="u-url"
        title="A tale of two libcs" target="_blank">
       <time class="m-date" datetime="2020-09-25 00:00:00+00:00">
         Sep
@@ -472,44 +602,6 @@ musl libc and glibc. Let&rsquo;s start with the stack trace:</p>
   on <time datetime="2020-09-25 00:00:00+00:00" class="dt-published"></time>
   Fri 25 Sep 2020
   in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.qt.io/blog/creating-an-embedded-qt-quick-application-in-visual-studio-1/2" rel="bookmark" class="u-url"
-       title="Creating an Embedded Qt Quick Application in Visual Studio (1/2)" target="_blank">
-      <time class="m-date" datetime="2020-09-24 15:21:16+00:00">
-        Sep
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Creating an Embedded Qt Quick Application in Visual Studio (1/2)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div> 
- <a href="https://www.qt.io/blog/creating-an-embedded-qt-quick-application-in-visual-studio-1/2" title=""> <img alt="Creating an Embedded Qt Quick Application in Visual Studio (1/2)" src="//www.qt.io/hubfs/00_poster_3.png"> </a> 
-</div>    
-<p>Cross-compilation of Qt projects is <a href="https://www.qt.io/blog/qt-visual-studio-tools-2.6.0-released">now supported in the Qt Visual Studio Tools</a>. This is possible due to the integration of Qt/MSBuild and the <a href="https://devblogs.microsoft.com/cppblog/linux-development-with-c-in-visual-studio/">Linux development VS workload</a>. In this post we will show how to use this feature to create an embedded application with Qt Quick in Visual Studio.</p>    
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fcreating-an-embedded-qt-quick-application-in-visual-studio-1%2F2&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2020-09-24 15:21:16+00:00" class="dt-published"></time>
-  Thu 24 Sep 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -881,54 +973,6 @@ changelog workflows that could use better tooling.</p>
   on <time datetime="2020-09-20 00:51:37+00:00" class="dt-published"></time>
   Sun 20 Sep 2020
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/matlab-arguments-validation/" rel="bookmark" class="u-url"
-       title="Matlab arguments validation" target="_blank">
-      <time class="m-date" datetime="2020-09-13 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          13
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Matlab arguments validation
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Matlab
-<a href="https://www.mathworks.com/help/matlab/ref/arguments.html">arguments</a>
-validation syntax is generally recommended over the legacy
-<a href="https://www.mathworks.com/help/matlab/ref/validateattributes.html">validateattributes</a>.
-The arguments specification coerces the data to fix the class declaration given if possible, and errors otherwise.</p>
-<ul>
-<li>Default values are easily specified, which required such verbose syntax before.</li>
-<li>only a single class can be specified</li>
-<li>recall the .empty method of most Matlab classes e.g. <code>datetime.empty()</code> that allows initializing an empty array.</li>
-</ul>
-Caveats
-<p>A downside of the Matlab argument validation syntax is that they are enacted at runtime, so repeated specification <em>may</em> entail increased CPU burden.
-It seems that Matlab JIT could optimize these away.</p>
-<p>It appears that Octave 7.x might be adding the ability to ignore the <code>arguments</code> syntax until the functionality is added to Octave.
-Older versions of Octave simply error if <code>arguments</code> syntax is used.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-13 00:00:00+00:00" class="dt-published"></time>
-  Sun 13 Sep 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
