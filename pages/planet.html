@@ -177,45 +177,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://belmoussaoui.com/article/14-integrate-codespell-ci" rel="bookmark" class="u-url"
-       title="Integrating codespell into your CI" target="_blank">
-      <time class="m-date" datetime="2020-10-02 10:21:17+00:00">
-        Oct
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Integrating codespell into your CI
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>If you have never heard of <a href="https://github.com/codespell-project/codespell">codespell</a>, it's a command line utility to check for common misspellings with the possibility to add your own dictionaries. I have looked lately at integrating it as part of the CI for some of my projects. </p>Gitlab CI<p>Currently codespell doesn't provide a docker image that could be used for CI. You can create your own or use a pretty simple <a href="https://hub.docker.com/r/bilelmoussaoui/codespell">image</a> I have setup and pushed to hub.docker.com. </p><p>The docker image is a simple as </p><pre><code>FROM python:3.8
-
-RUN pip3 install codespell</code></pre><p>Once you have an image up and ready, you can add it to your .gitlab-ci.yml</p><pre><code>codespell:
-  image: "docker.io/bilelmoussaoui/codespell"
-  script:
-    - codespell -S "*.png,*.po,.git,*.jpg" -f</code></pre><p><code>-S</code> argument is a comma separated glob pattern, directories or files to ignore. The <code>-f</code> argument makes codespell …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-02 10:21:17+00:00" class="dt-published"></time>
-  Fri 02 Oct 2020
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.scivision.dev/github-actions-environment-files/" rel="bookmark" class="u-url"
        title="GitHub Actions environment files" target="_blank">
       <time class="m-date" datetime="2020-10-02 00:00:00+00:00">
