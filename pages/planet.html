@@ -142,6 +142,120 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.qt.io/blog/qt-creator-4.13.2-released" rel="bookmark" class="u-url"
+       title="Qt Creator 4.13.2 released" target="_blank">
+      <time class="m-date" datetime="2020-10-02 12:00:30+00:00">
+        Oct
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Qt Creator 4.13.2 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>We are happy to announce the release of Qt Creator 4.13.2 !</p>  
+<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.13.2-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Qt Dev Loop</b></span>
+  on <time datetime="2020-10-02 12:00:30+00:00" class="dt-published"></time>
+  Fri 02 Oct 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://belmoussaoui.com/article/14-integrate-codespell-ci" rel="bookmark" class="u-url"
+       title="Integrating codespell into your CI" target="_blank">
+      <time class="m-date" datetime="2020-10-02 10:21:17+00:00">
+        Oct
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Integrating codespell into your CI
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>If you have never heard of <a href="https://github.com/codespell-project/codespell">codespell</a>, it's a command line utility to check for common misspellings with the possibility to add your own dictionaries. I have looked lately at integrating it as part of the CI for some of my projects. </p>Gitlab CI<p>Currently codespell doesn't provide a docker image that could be used for CI. You can create your own or use a pretty simple <a href="https://hub.docker.com/r/bilelmoussaoui/codespell">image</a> I have setup and pushed to hub.docker.com. </p><p>The docker image is a simple as </p><pre><code>FROM python:3.8
+
+RUN pip3 install codespell</code></pre><p>Once you have an image up and ready, you can add it to your .gitlab-ci.yml</p><pre><code>codespell:
+  image: "docker.io/bilelmoussaoui/codespell"
+  script:
+    - codespell -S "*.png,*.po,.git,*.jpg" -f</code></pre><p><code>-S</code> argument is a comma separated glob pattern, directories or files to ignore. The <code>-f</code> argument makes codespell …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-02 10:21:17+00:00" class="dt-published"></time>
+  Fri 02 Oct 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/github-actions-environment-files/" rel="bookmark" class="u-url"
+       title="GitHub Actions environment files" target="_blank">
+      <time class="m-date" datetime="2020-10-02 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      GitHub Actions environment files
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>When desiring to set environment variables dynamically in GitHub Actions, writing to
+<a href="https://github.com/actions/toolkit/blob/main/docs/commands.md#environment-files">environment files</a>
+is the standard technique.</p>
+Prepend PATH
+<p>To add &ldquo;~/.local/bin&rdquo; to PATH, under a <code>run:</code> stanza:</p>
+<div><pre><code>echo <span>"</span><span>${</span>HOME<span>}</span><span>/.local/bin"</span> &gt;&gt; $GITHUB_PATH
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-02 00:00:00+00:00" class="dt-published"></time>
+  Fri 02 Oct 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/630786485151563777/contrails-from-4-engines" rel="bookmark" class="u-url"
        title="Contrails From 4 Engines" target="_blank">
       <time class="m-date" datetime="2020-10-01 10:07:48-05:00">
@@ -203,59 +317,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-10-01 15:00:00+00:00" class="dt-published"></time>
   Thu 01 Oct 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://people.gnome.org/~michael/blog/2020-10-01.html" rel="bookmark" class="u-url"
-       title="2020-10-01 Thursday" target="_blank">
-      <time class="m-date" datetime="2020-10-01 13:56:43+00:00">
-        Oct
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      2020-10-01 Thursday
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <ul> 
-    <li>
-        Up early, dropped kids to school; intense copy editing
-    on another video conference, and we went live, for the back-story
-    see <a href="https://www.mail-archive.com/board-discuss@documentfoundation.org/msg04727.html">the
-    move</a> E-mail, including the regrettable state of affairs, that makes this
-    the best solution cf. the <a href="https://collaboraonline.github.io/post/faq/">FAQ</a>. Perhaps checkout Lothar's <a href="https://www.mail-archive.com/board-discuss@documentfoundation.org/msg04728.html">take</a>.
-    Development <a href="https://github.com/CollaboraOnline/online">continues</a> of course.
-    </li>
-    <li>
-        In talking to a number of friends, one mentioned that the idea of 'gratis
-    everything' is an increasing problem in many FOSS projects. It's interesting,
-    many years back the fashion was to talk about Open Standards (which are of
-    course great) instead of Open Source (which is better). Noawadays that's less
-    popular and I hear people emphasising the vital Freedom from Price (or even
-    reminders to contribute) in place of Software Freedom. Possibly both of these
-    betray an emphasis on users's rights rather than the responsibility to
-    contribute.
-    </li>
-</ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-01 13:56:43+00:00" class="dt-published"></time>
-  Thu 01 Oct 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -327,47 +388,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-10-01 12:13:13+00:00" class="dt-published"></time>
   Thu 01 Oct 2020
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://blog.davidedmundson.co.uk/blog/plasma-and-the-systemd-startup/" rel="bookmark" class="u-url"
-       title="Plasma and the systemd startup" target="_blank">
-      <time class="m-date" datetime="2020-10-01 09:00:41+00:00">
-        Oct
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Plasma and the systemd startup
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  About
-<p>Landing in master, plasma has an optional new startup method to launch and manage all our KDE/Plasma services via a systemd user instance rather than the current boot scripts. This will be available in Plasma 5.21.</p>
-<p>It is currently opt-in, off by default.  I hope to make it the default where available after more testing and feedback, but it is important to stress that the current boot-up method will exist and be supported into the future. A lot of work was put into splitting and tidying so the actual amount of duplication in the end result is quite small and managable.</p>
-<p><a href="http://blog.davidedmundson.co.uk/wp-content/uploads/2020/10/bitmap.png"><img alt="Our logos are weirldy similar...conspiracy?" src="//blog.davidedmundson.co.uk/wp-content/uploads/2020/10/bitmap.png"></a></p>
-Motivation
-Overlapping requirements
-<p>We have to start a lot of things in a given order. Systemd naturally is designed for handling doing this.</p>
-<p>Whilst we already have a somewhat working system, it has issues. One classic …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David Edmundson</b></span>
-  on <time datetime="2020-10-01 09:00:41+00:00" class="dt-published"></time>
-  Thu 01 Oct 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -628,52 +648,6 @@ to perform the upgrade.
   on <time datetime="2020-09-26 19:41:21-07:00" class="dt-published"></time>
   Sat 26 Sep 2020
   in Matplotblog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/python-importerror-vs-modulenotfound/" rel="bookmark" class="u-url"
-       title="Python ImportError vs. ModuleNotFoundError" target="_blank">
-      <time class="m-date" datetime="2020-09-27 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Python ImportError vs. ModuleNotFoundError
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Python raises
-<a href="https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError">ModuleNotFoundError</a>
-when a Python module is not able to be found.
-This exception catches a much narrow range of faults than the parent exception
-<a href="https://docs.python.org/3/library/exceptions.html#ImportError">ImportError</a>.</p>
-<p>Although we often like to make exception handling more specific, we have found as a practical matter that using ImportError in a try: except: exception handler is almost always the most appropriate choice.
-This is particularly true for modules like <code>h5py</code> that require compiled-language interfaces.
-For example, h5py relies on the HDF5 library.
-We have found a small percentage of systems with conflicting HDF5 library versions on the system path, which causes h5py to raise <code>ImportError</code>.
-In these cases, we usually wish to detect that the imported module is ready to work, not just whether it is found or not.</p>
-Example
-<p>For Python imports loading compiled-language modules, the following is generally recommended:</p>
-<div><pre><code><span>try …</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-27 00:00:00+00:00" class="dt-published"></time>
-  Sun 27 Sep 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
