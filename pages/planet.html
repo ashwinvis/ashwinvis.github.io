@@ -142,6 +142,83 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://blogs.kde.org/2020/10/11/linux-desktop-shell-ipc-wayland-vs-d-bus-and-lack-agreement-when-use-them" rel="bookmark" class="u-url"
+       title="Linux desktop shell IPC: Wayland vs. D-Bus, and the lack of agreement on when to use them" target="_blank">
+      <time class="m-date" datetime="2020-10-11 21:34:53+00:00">
+        Oct
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Linux desktop shell IPC: Wayland vs. D-Bus, and the lack of agreement on when to use them
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>
+KDE Project: 
+<ul><li><a href="/kde-project/kde-general">KDE General</a></li></ul>
+</div><div><div><div>
+<p>On the Linux desktop today, we have two dominant IPC technologies in use between applications and the desktop environment: <a href="https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)">Wayland</a> and <a href="https://en.wikipedia.org/wiki/D-Bus">D-Bus</a>. While created for different reasons, both are generically extensible and can be used to exchange data, synchronize state and send requests and signals between peers. A large number of desktop use cases are implemented using either technology, and some use cases are already distributed across both of them. The status quo is mostly the result of organic growth, with individual implementation choices down to tech friction or the lack thereof.</p>
+<p>For some use cases the choice of which to use is not obvious. This is one of the factors still slowing down the standardization and hence adoption of Wayland-based sessions currently.</p>
+<p><b>The overlap</b></p>
+<p>While the semantics of Wayland and D-Bus are really pretty different …</p></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Eike Hein (Sho)</b></span>
+  on <time datetime="2020-10-11 21:34:53+00:00" class="dt-published"></time>
+  Sun 11 Oct 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fortintam.com/blog/introducing-atypica-professional-video-storytelling/" rel="bookmark" class="u-url"
+       title="Introducing Atypica, professional video storytelling" target="_blank">
+      <time class="m-date" datetime="2020-10-11 18:12:34+00:00">
+        Oct
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Introducing Atypica, professional video storytelling
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A while ago, I envisioned building a new* professional video production collective for commercial and non-commercial projects, both as a “creative outlet” for one of my long-standing passions, and as a way to build a specialized service offering that can act as a bridge between my own Montreal-based marketing agency and other collaborators or artists … </p>
+<p><a href="https://fortintam.com/blog/introducing-atypica-professional-video-storytelling/">Continue reading<span> "Introducing Atypica, professional video storytelling"</span></a></p>
+<p>The post <a href="https://fortintam.com/blog/introducing-atypica-professional-video-storytelling/">Introducing Atypica, professional video storytelling</a> appeared first on <a href="https://fortintam.com/blog">The Open Sourcerer</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jeff</b></span>
+  on <time datetime="2020-10-11 18:12:34+00:00" class="dt-published"></time>
+  Sun 11 Oct 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://nedbatchelder.com//blog/202010/deiken_deyince_ne_anlamal.html" rel="bookmark" class="u-url"
        title="Değişken Deyince Ne Anlamalı?" target="_blank">
       <time class="m-date" datetime="2020-10-10 12:12:31-04:00">
@@ -174,56 +251,6 @@ into Russian (twice!).</p><p>If you want to translate something on this site, le
   on <time datetime="2020-10-10 12:12:31-04:00" class="dt-published"></time>
   Sat 10 Oct 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pointieststick.com/2020/10/10/this-week-in-kde-plasma-5-20-is-nigh/" rel="bookmark" class="u-url"
-       title="This week in KDE: Plasma 5.20 is nigh" target="_blank">
-      <time class="m-date" datetime="2020-10-10 13:36:23+00:00">
-        Oct
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      This week in KDE: Plasma 5.20 is nigh
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We spent a ton of time this week polishing up Plasma 5.20 and fixing the last few regressions that were reported during the beta period. Hopefully this release should be much smoother and more stable than the last few have been! We’ve really been trying to up our QA game lately. And of course, we’re already looking to the next version, and new features are starting to land…</p>
-
-
-
-New Features
-
-
-
-<p>Gwenview <a href="https://invent.kde.org/graphics/gwenview/-/merge_requests/16">now has an option to not auto-play videos in browse mode</a> (Madhav Kanbur, Gwenview 20.12)</p>
-
-
-
-<p>On Wayland, KWin <a href="https://bugs.kde.org/show_bug.cgi?id=417323">now supports the  “iGPU multi-monitor” feature and therefore allows you to simultaneously drive multiple monitors from both a dedicated and internal Intel GPU</a>! (Xaver Hugl, Plasma 5.21)</p>
-
-
-
-<p>KRunner <a href="https://bugs.kde.org/show_bug.cgi?id=353026">now has an optional “keep open” feature which causes it to stay open when focus is lost</a>, just …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-10-10 13:36:23+00:00" class="dt-published"></time>
-  Sat 10 Oct 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -328,40 +355,6 @@ New Features
   on <time datetime="2020-10-09 10:36:00+02:00" class="dt-published"></time>
   Fri 09 Oct 2020
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://noraisin.net/diary/?p=998" rel="bookmark" class="u-url"
-       title="Rift CV1 – multi-threaded tracking" target="_blank">
-      <time class="m-date" datetime="2020-10-09 04:56:47+00:00">
-        Oct
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Rift CV1 – multi-threaded tracking
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This video shows the completion of work to split the tracking code into 3 threads – video capture, fast analysis and long analysis. If the projected pose of an object doesn’t line up with the LEDs where we expect it to be, the frame is sent off for more expensive analysis in another thread. That … <a href="https://noraisin.net/diary/?p=998">Continue reading<span> "Rift CV1 – multi-threaded tracking"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>thaytan</b></span>
-  on <time datetime="2020-10-09 04:56:47+00:00" class="dt-published"></time>
-  Fri 09 Oct 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
