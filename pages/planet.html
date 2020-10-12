@@ -142,39 +142,111 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.kde.org/2020/10/11/linux-desktop-shell-ipc-wayland-vs-d-bus-and-lack-agreement-when-use-them" rel="bookmark" class="u-url"
-       title="Linux desktop shell IPC: Wayland vs. D-Bus, and the lack of agreement on when to use them" target="_blank">
-      <time class="m-date" datetime="2020-10-11 21:34:53+00:00">
+    <a href="https://nedbatchelder.com//blog/202010/working_with_many_git_repos.html" rel="bookmark" class="u-url"
+       title="Working with many git repos" target="_blank">
+      <time class="m-date" datetime="2020-10-12 07:59:00-04:00">
         Oct
         <span class="m-date-day">
-          11
+          12
         </span>
         2020
       </time>
       <div class="p-name">
-      Linux desktop shell IPC: Wayland vs. D-Bus, and the lack of agreement on when to use them
+      Working with many git repos
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-KDE Project: 
-<ul><li><a href="/kde-project/kde-general">KDE General</a></li></ul>
-</div><div><div><div>
-<p>On the Linux desktop today, we have two dominant IPC technologies in use between applications and the desktop environment: <a href="https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)">Wayland</a> and <a href="https://en.wikipedia.org/wiki/D-Bus">D-Bus</a>. While created for different reasons, both are generically extensible and can be used to exchange data, synchronize state and send requests and signals between peers. A large number of desktop use cases are implemented using either technology, and some use cases are already distributed across both of them. The status quo is mostly the result of organic growth, with individual implementation choices down to tech friction or the lack thereof.</p>
-<p>For some use cases the choice of which to use is not obvious. This is one of the factors still slowing down the standardization and hence adoption of Wayland-based sessions currently.</p>
-<p><b>The overlap</b></p>
-<p>While the semantics of Wayland and D-Bus are really pretty different …</p></div></div></div>
+  <p>Some of my work on the <a href="https://openedx.org">Open edX</a> team at
+<a href="https://edx.org">edX</a> requires working with the three dozen or so
+repos that form the backbone of the Open edX software.  That often means doing
+the same thing to all of them (tagging, logs, etc).</p><p>To make it easier to work with a collection of repos, I have a shell function
+to run the same command on the git directories found under the current
+directory.  It gets a little more complicated than that: I might have 100 repos
+in the current directory, but only the ones that have certain master branches
+should be included in an operation.</p><p>My function is called &#8220;gittreeif&#8221;: it takes a branch name and a command, and
+walks the current directory tree looking for git repos that have that branch.
+For each one, it executes the command:</p><blockquote><code>$ gitttreif …</code></blockquote>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Eike Hein (Sho)</b></span>
-  on <time datetime="2020-10-11 21:34:53+00:00" class="dt-published"></time>
-  Sun 11 Oct 2020
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-10-12 07:59:00-04:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.kdab.com/there-and-back-again/" rel="bookmark" class="u-url"
+       title="There and Back Again" target="_blank">
+      <time class="m-date" datetime="2020-10-12 09:00:04+00:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      There and Back Again
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><strong>A few days ago, a customer using our <a href="https://www.kdab.com/development-resources/qt-tools/kd-soap/">KD Soap</a> library reported an interesting problem with it.</strong> The library worked perfectly to access the SOAP server, but there was some noticeable latency when doing a series of requests in short succession from the client. This latency should not have been there, as both the server and the client were in the same local network.</p>
+<p>An investigation began, regarding whether the client code or KD Soap were doing something suboptimal, like reconnecting to the server all the time, or something like that. The actual reason turned out to be something much more profound: <a href="https://bugreports.qt.io/browse/QTBUG-41907">a 6-year-old bug in QNetworkAccessManager</a> (at least, that’s when it was reported. I think the bug is at least 10 years old…)</p>
+<p>What’s QNetworkAccessManager (or QNAM, for the friends)? It’s the central class in Qt …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2020-10-12 09:00:04+00:00" class="dt-published"></time>
+  Mon 12 Oct 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://gregoryszorc.com/blog/2020/10/12/announcing-the-0.8-release-of-pyoxidizer/" rel="bookmark" class="u-url"
+       title="Announcing the 0.8 Release of PyOxidizer" target="_blank">
+      <time class="m-date" datetime="2020-10-12 00:45:00+00:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Announcing the 0.8 Release of PyOxidizer
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Announcing the 0.8 Release of PyOxidizer
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Gregory Szorc</b></span>
+  on <time datetime="2020-10-12 00:45:00+00:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in Gregory Szorc's Digital Home.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -211,46 +283,6 @@ KDE Project:
   on <time datetime="2020-10-11 18:12:34+00:00" class="dt-published"></time>
   Sun 11 Oct 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202010/deiken_deyince_ne_anlamal.html" rel="bookmark" class="u-url"
-       title="Değişken Deyince Ne Anlamalı?" target="_blank">
-      <time class="m-date" datetime="2020-10-10 12:12:31-04:00">
-        Oct
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Değişken Deyince Ne Anlamalı?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Enes Başpınar has translated one of my popular pages into Turkish:
-<a href="https://baspinarenes.github.io/python/degisken-deyince-ne-anlamali/">Değişken Deyince Ne Anlamalı?</a>
-is his translation of my <a href="//nedbatchelder.com/text/names.html">Facts and myths about Python names and values</a>.
-</p><p>Google Translate tells me the Turkish title means, &#8220;What Should It Understand When You Say Variables?,&#8221;
-which I guess is better translated as, &#8220;What Do We Mean When We Say Variables?&#8221;</p><p>It&#8217;s flattering that a piece is liked enough for someone to translate it.
-The only previous page that was translated was <a href="//nedbatchelder.com/code/cog">Cog</a>,
-into Russian (twice!).</p><p>If you want to translate something on this site, let me know.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-10-10 12:12:31-04:00" class="dt-published"></time>
-  Sat 10 Oct 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
