@@ -142,9 +142,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nedbatchelder.com//blog/202010/working_with_many_git_repos.html" rel="bookmark" class="u-url"
-       title="Working with many git repos" target="_blank">
-      <time class="m-date" datetime="2020-10-12 07:59:00-04:00">
+    <a href="https://pinheiro-kde.blogspot.com/2020/10/design-done.html" rel="bookmark" class="u-url"
+       title="Design done..." target="_blank">
+      <time class="m-date" datetime="2020-10-12 21:21:00+00:00">
         Oct
         <span class="m-date-day">
           12
@@ -152,29 +152,105 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Working with many git repos
+      Design done...
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Some of my work on the <a href="https://openedx.org">Open edX</a> team at
-<a href="https://edx.org">edX</a> requires working with the three dozen or so
-repos that form the backbone of the Open edX software.  That often means doing
-the same thing to all of them (tagging, logs, etc).</p><p>To make it easier to work with a collection of repos, I have a shell function
-to run the same command on the git directories found under the current
-directory.  It gets a little more complicated than that: I might have 100 repos
-in the current directory, but only the ones that have certain master branches
-should be included in an operation.</p><p>My function is called &#8220;gittreeif&#8221;: it takes a branch name and a command, and
-walks the current directory tree looking for git repos that have that branch.
-For each one, it executes the command:</p><blockquote><code>$ gitttreif …</code></blockquote>
+  <p>Hello again, so I believe I am 90% done with the base style direction and main UI components for O², and am currently struggling with my not so bright idea of dinamic QML colour pallets. </p><p>Still overall I'm happy with the general visual direction of the UI style, it's IMO clearly derivative of Oxygen but today. </p><p>Now having done 90% of the design and doing the serious work I know that the solemn work that will take far far more time is upon me and us.. </p><div><a href="https://1.bp.blogspot.com/-N6F2ASYAqcE/X4THVh_9ELI/AAAAAAAAFe4/0dC2VV85KL0IC99UkU1S6Eb1CiTOGMGsACLcBGAsYHQ/s1564/IMG_20201012_215955_449.jpg"><img src="//1.bp.blogspot.com/-N6F2ASYAqcE/X4THVh_9ELI/AAAAAAAAFe4/0dC2VV85KL0IC99UkU1S6Eb1CiTOGMGsACLcBGAsYHQ/s320/IMG_20201012_215955_449.jpg"></a></div><p></p><p>So in the next week's I will be mostly focussing on the qml implementation that as already started and implementing a kinda Oxygen-demo UI showcase.</p><p>After that I have to do something even more difficult... That is to find a a icon style that does the same that the UI style above did.. bring …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nuno Pinheiro (pinheiro)</b></span>
+  on <time datetime="2020-10-12 21:21:00+00:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2020/10/awfice/" rel="bookmark" class="u-url"
+       title="Minimal Office Suite" target="_blank">
+      <time class="m-date" datetime="2020-10-12 23:06:08+02:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Minimal Office Suite
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Thanks to <a href="https://hacdias.com/micro/2020/10/kleine-office-suite/">@hacdias</a>, I found this nice project: <a href="https://github.com/zserge/awfice">Awfice - the world smallest office suite</a>.</p>
+<blockquote>
+<ul>
+<li>a word processor, a spreadsheet, a drawing app and a presentation maker</li>
+<li>each less than 1KB of plain JavaScript</li>
+<li>each is literally just one line of code</li>
+<li>packaged as data URLs, so you can use them right away, without downloading or installing</li>
+</ul>
+</blockquote>
+<p>The tools are <em>very</em> minimal, but it&rsquo;s nice to see what&rsquo;s possible with under 1 kilobyte of code. There&rsquo;s also <a href="https://zserge.com/posts/awfice/">an article</a> with some background information.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-12 23:06:08+02:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com//blog/202010/ordered_dict_surprises.html" rel="bookmark" class="u-url"
+       title="Ordered dict surprises" target="_blank">
+      <time class="m-date" datetime="2020-10-12 14:48:43-04:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Ordered dict surprises
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Since Python 3.6, regular dictionaries retain their insertion order: when you
+iterate over a dict, you get the items in the same order they were added to the
+dict.  Before 3.6, dicts were unordered: the iteration order was seemingly
+random.</p><p>Here are two surprising things about these ordered dicts.</p>You can&#8217;t get the first item<a href="#h_you_cant_get_the_first_item"></a><p>Since the items in a dict have a specific order, it should be easy to get the
+first (or Nth) item, right?  Wrong. It&#8217;s not possible to do this directly. You
+might think that <span>d[0]</span> would be the first item, but it&#8217;s
+not, it&#8217;s the value of the key 0, which could be the last item added to the
+dict.</p><p>The only way to get the Nth item is to iterate over the dict, and wait until
+you …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-10-12 07:59:00-04:00" class="dt-published"></time>
+  on <time datetime="2020-10-12 14:48:43-04:00" class="dt-published"></time>
   Mon 12 Oct 2020
   in Ned Batchelder's blog.
 </footer>
@@ -185,9 +261,9 @@ For each one, it executes the command:</p><blockquote><code>$ gitttreif …</co
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.kdab.com/there-and-back-again/" rel="bookmark" class="u-url"
-       title="There and Back Again" target="_blank">
-      <time class="m-date" datetime="2020-10-12 09:00:04+00:00">
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/631783108000235520/lava-barriers" rel="bookmark" class="u-url"
+       title="Lava Barriers" target="_blank">
+      <time class="m-date" datetime="2020-10-12 10:08:39-05:00">
         Oct
         <span class="m-date-day">
           12
@@ -195,24 +271,57 @@ For each one, it executes the command:</p><blockquote><code>$ gitttreif …</co
         2020
       </time>
       <div class="p-name">
-      There and Back Again
+      Lava Barriers
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><strong>A few days ago, a customer using our <a href="https://www.kdab.com/development-resources/qt-tools/kd-soap/">KD Soap</a> library reported an interesting problem with it.</strong> The library worked perfectly to access the SOAP server, but there was some noticeable latency when doing a series of requests in short succession from the client. This latency should not have been there, as both the server and the client were in the same local network.</p>
-<p>An investigation began, regarding whether the client code or KD Soap were doing something suboptimal, like reconnecting to the server all the time, or something like that. The actual reason turned out to be something much more profound: <a href="https://bugreports.qt.io/browse/QTBUG-41907">a 6-year-old bug in QNetworkAccessManager</a> (at least, that’s when it was reported. I think the bug is at least 10 years old…)</p>
-<p>What’s QNetworkAccessManager (or QNAM, for the friends)? It’s the central class in Qt …</p>
+  <img alt="Lava Barriers" src="https://64.media.tumblr.com/9d501fd16a706a5c8a48f5eaef22912e/21e0e055b16750ad-e2/s540x810/5c4a6051eac35d1c3cfb01f4f3212bf5271017c5.png"><a href="http://fyfluiddynamics.com/?p=13616">Inspired by protecting people and property from lava flows, researchers investigated how viscous fluids flow downhill past large obstacles.</a> (Image and research credit: <a href="https://doi.org/10.1103/PhysRevFluids.5.084101">E. Hinton et al.</a>)
+<a href="http://fyfluiddynamics.com/?p=13616">Read the full article</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2020-10-12 09:00:04+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-12 10:08:39-05:00" class="dt-published"></time>
   Mon 12 Oct 2020
-  in Planet KDE.
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/10/lava-barriers/" rel="bookmark" class="u-url"
+       title="Lava Barriers" target="_blank">
+      <time class="m-date" datetime="2020-10-12 15:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Lava Barriers
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Inspired by protecting people and property from lava flows, researchers investigated how viscous fluids flow downhill past large obstacles. As seen above, when the obstacle is tall enough that the <a href="https://fyfluiddynamics.com/2020/10/lava-barriers/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-10-12 15:00:00+00:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -255,6 +364,92 @@ For each one, it executes the command:</p><blockquote><code>$ gitttreif …</co
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://xkcd.com/2371/" rel="bookmark" class="u-url"
+       title="Election Screen Time" target="_blank">
+      <time class="m-date" datetime="2020-10-12 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Election Screen Time
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Feels like I picked a bad year to try to start having a healthy relationship with political news." src="https://imgs.xkcd.com/comics/election_screen_time.png" title="Feels like I picked a bad year to try to start having a healthy relationship with political news.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-12 00:00:00+00:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://hunden.linuxkompis.se/2020/10/12/this-weekend-was-clothes-swapping-day-here.html" rel="bookmark" class="u-url"
+       title="This weekend was clothes swapping day here" target="_blank">
+      <time class="m-date" datetime="2020-10-12 00:00:00+02:00">
+        Oct
+        <span class="m-date-day">
+          12
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      This weekend was clothes swapping day here
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A few days ago I was at something called “klädbytardagen” here in Sweden where I live. I don’t know if there’s a generally used English name for it, but it translates to something like “clothes swapping day”.</p>
+
+<p>The concept is pretty simple, instead of buying new clothes you swap clothes with each other.</p>
+
+<p>For every piece of clothing you give away you get a ticket, the ticket can then be traded with another item there. There’s usually
+a maximum amount of items you can give away and at todays event it was 10 items each. Everything that does gets a new home goes usually to either charity or to a secondhand store.</p>
+
+<p><a href="https://hunden.linuxkompis.se/img/"><img alt="" src="https://hunden.linuxkompis.se/img/t/"></a></p>
+<div>
+    <div>
+        <a href="https://hunden.linuxkompis.se/img/clothes_swapping_day.jpg">
+            <img alt="" src="https://hunden.linuxkompis.se/img/t/clothes_swapping_day.jpg">
+            Cloth swapping day with COVID-19 safe distances.
+        </a>
+    </div>
+</div>
+
+
+<p>I had a lot of fun and I ended up with a bunch of good kids clothes which …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-12 00:00:00+02:00" class="dt-published"></time>
+  Mon 12 Oct 2020
+  in Hund[en].
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://fortintam.com/blog/introducing-atypica-professional-video-storytelling/" rel="bookmark" class="u-url"
        title="Introducing Atypica, professional video storytelling" target="_blank">
       <time class="m-date" datetime="2020-10-11 18:12:34+00:00">
@@ -283,75 +478,6 @@ For each one, it executes the command:</p><blockquote><code>$ gitttreif …</co
   on <time datetime="2020-10-11 18:12:34+00:00" class="dt-published"></time>
   Sun 11 Oct 2020
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/631511142814072832/the-great-haboob-chase" rel="bookmark" class="u-url"
-       title="The Great Haboob Chase" target="_blank">
-      <time class="m-date" datetime="2020-10-09 10:05:54-05:00">
-        Oct
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Great Haboob Chase
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/98ff343a7d4289490df7b392d8d803d2/0f73a29bada32f24-dd/s540x810/8885657f22786991d5e3c8f68cc5f01ec65cfad7.gif"><img src="https://64.media.tumblr.com/f90acaca0571308fc140e06c24b72bea/0f73a29bada32f24-40/s540x810/6b6f6d475d1ac039bb1d7b970ecaeb322df7450f.gif"><img src="https://64.media.tumblr.com/baf8008260576bb8e161b31104e4ad2d/0f73a29bada32f24-f7/s540x810/218cc4c7d32b24b63094c6d4a44ac304fca2705e.gif"><a href="https://fyfluiddynamics.com/?p=13393">Few sights look as apocalyptic as the leading edge of an incoming dust storm. Known as a haboob, these storms form when a downdraft spreads along the ground, picking up loose dust as the storm front advances.</a> (Video and image credit: <a href="https://www.mikeolbinski.com/">M. Olbinski</a>)
-<a href="http://fyfluiddynamics.com/?p=13393">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-09 10:05:54-05:00" class="dt-published"></time>
-  Fri 09 Oct 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/10/the-great-haboob-chase/" rel="bookmark" class="u-url"
-       title="The Great Haboob Chase" target="_blank">
-      <time class="m-date" datetime="2020-10-09 15:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The Great Haboob Chase
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Few sights look as apocalyptic as the leading edge of an incoming dust storm. Known as a haboob, these storms form when a downdraft spreads along the ground, picking up <a href="https://fyfluiddynamics.com/2020/10/the-great-haboob-chase/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-10-09 15:00:00+00:00" class="dt-published"></time>
-  Fri 09 Oct 2020
-  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -440,40 +566,6 @@ advance notice and should be involved in the planning stage.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2370/" rel="bookmark" class="u-url"
-       title="Prediction" target="_blank">
-      <time class="m-date" datetime="2020-10-09 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Prediction
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="You'd think it'd be easy to just bet money against these people, but you have to consider the probability of them paying up." src="https://imgs.xkcd.com/comics/prediction.png" title="You'd think it'd be easy to just bet money against these people, but you have to consider the probability of them paying up.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-09 00:00:00+00:00" class="dt-published"></time>
-  Fri 09 Oct 2020
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.scivision.dev/matlab-websave-ssl-certificate/" rel="bookmark" class="u-url"
        title="Matlab websave SSL certificates" target="_blank">
       <time class="m-date" datetime="2020-10-09 00:00:00+00:00">
@@ -514,48 +606,6 @@ cURL SSL config
   on <time datetime="2020-10-09 00:00:00+00:00" class="dt-published"></time>
   Fri 09 Oct 2020
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/thoughts/2020/10/fb-response/" rel="bookmark" class="u-url"
-       title="Facebook's response" target="_blank">
-      <time class="m-date" datetime="2020-10-08 17:06:06+02:00">
-        Oct
-        <span class="m-date-day">
-          08
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Facebook's response
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Facebook has written <a href="https://about.fb.com/wp-content/uploads/2020/10/What-The-Social-Dilemma-Gets-Wrong.pdf">a response</a> to the movie &ldquo;<a href="https://en.wikipedia.org/wiki/The_Social_Dilemma">The Social Dilemma</a>&rdquo; where they try to explain what is wrong with the movie. It is a little bit amusing to read through the document.</p>
-<p>One point is:</p>
-<blockquote>
-<p>You are not the product. Facebook is funded by advertising so that it remains free for people. Facebook is an ads-supported platform, which means that selling ads allows us to offer everyone else the ability to connect for free.</p>
-</blockquote>
-<p>Of course, you yourself are not sold by Facebook. But Facebook sells advertising. And with advertising they try to sell the attention of their users.</p>
-<p>By twisting a few words they try to present themselves as &ldquo;the good guys&rdquo;.</p>
-<blockquote>
-<p>We want people to control how they use our products, which is why we provide time management tools like an activity dashboard, a daily reminder, and …</p></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-08 17:06:06+02:00" class="dt-published"></time>
-  Thu 08 Oct 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -675,64 +725,6 @@ OK, boring! Where is Python 4?
   on <time datetime="2020-10-05 16:09:56.977000-04:00" class="dt-published"></time>
   Mon 05 Oct 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/10/05/i-would-love-to-add-comments-to-my-website-but-theres-no-good-options.html" rel="bookmark" class="u-url"
-       title="I would love to add comments to my website but there’s no good options" target="_blank">
-      <time class="m-date" datetime="2020-10-05 00:00:00+02:00">
-        Oct
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      I would love to add comments to my website but there’s no good options
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>As the title say, I would love to add comments to my website but there’s no good options out there. I have so far looked at the following alternatives:</p>
-
-<ul>
-  <li>Staticman</li>
-  <li>Stapsher</li>
-  <li>ISSO</li>
-  <li>Remarkbox</li>
-  <li>JustComments</li>
-  <li>CommentBox</li>
-  <li>Hyvor Talk</li>
-  <li>Discourse</li>
-  <li>Talkyard</li>
-  <li>Coral</li>
-  <li>Commento</li>
-  <li>Schnack</li>
-  <li>Remark42</li>
-  <li>Comntr</li>
-  <li>Glosa</li>
-  <li>Lambda</li>
-  <li>HashOver</li>
-</ul>
-
-<p>Some aren’t even open source so they’re not an option to begin with, some require a GitHub account, some are too expensive (paid hosting) and some of the self-hosted alternatives are just a pure nightmare to setup.</p>
-
-<p>If I have somehow missed some hidden gem out there, let me know via e-mail or IRC.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-05 00:00:00+02:00" class="dt-published"></time>
-  Mon 05 Oct 2020
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -944,40 +936,6 @@ to perform the upgrade.
   on <time datetime="2020-10-01 00:00:00+00:00" class="dt-published"></time>
   Thu 01 Oct 2020
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-09-29_Assange_Trial" rel="bookmark" class="u-url"
-       title="Assange Trial" target="_blank">
-      <time class="m-date" datetime="2020-09-29 06:55:33+00:00">
-        Sep
-        <span class="m-date-day">
-          29
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Assange Trial
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Reading the blog posts by <a href="https://www.craigmurray.org.uk/">Craig Murray</a> on the Julian Assange trials really does show you the naked power of the state and the torture regimes of the US and the UK at work. Just the description of some of the prison practices. Here’s how Administrative Segregation, (AdSeg or X block) where high profile and national security prisoners are held, is described:</p><blockquote><p>He testified that pre-trail detention could last many months or even years. Isolation from other prisoners is the purpose of the X block. Prisoners are in tiny cells of approximately 50 square feet, which is under 5 square metres. The bed is a shelf. On a daily basis only one to two hours are allowed outside the cell, into a small area outside at a time when nobody else is there. The second hour was generally available …</p></blockquote></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-09-29 06:55:33+00:00" class="dt-published"></time>
-  Tue 29 Sep 2020
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
