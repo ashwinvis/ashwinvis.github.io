@@ -142,6 +142,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://wingolog.org/archives/2020/10/15/on-binary-security-of-webassembly" rel="bookmark" class="u-url"
+       title="on "binary security of webassembly"" target="_blank">
+      <time class="m-date" datetime="2020-10-15 10:29:23+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      on "binary security of webassembly"
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Greets!</p><p>You may have seen an interesting paper cross your radar a couple months ago: <a href="https://www.usenix.org/conference/usenixsecurity20/presentation/lehmann">Everything Old is New Again: Binary Security of WebAssembly</a>, by Daniel Lehmann, Johannes Kinder and Michael Pradel.  The paper makes some strong claims and I would like to share some thoughts on it.</p><p><b>reader-response theory</b></p><p>For context, I have been working on web browsers for the last 8 years or so, most recently on the JavaScript and WebAssembly engine in Firefox.  My work mostly consists of implementing new features, which if you are familiar with software development translates as "writing bugs".  Almost all of those bugs are security bugs, potentially causing Firefox to go from being an agent of the user to an agent of the Mossad, or of cryptocurrency thieves, or anything else.</p><p>Mitigating browser bug flow takes a siege mentality.  Web browsers treat …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2020-10-15 10:29:23+00:00" class="dt-published"></time>
+  Thu 15 Oct 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://alexschroeder.ch/wiki/2020-10-14_Drinking_Tea" rel="bookmark" class="u-url"
        title="Drinking Tea" target="_blank">
       <time class="m-date" datetime="2020-10-14 20:06:26+00:00">
@@ -271,40 +305,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-10-14 15:00:00+00:00" class="dt-published"></time>
   Wed 14 Oct 2020
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.hadess.net/2020/10/sandboxing-inside-sandbox-no-rogue.html" rel="bookmark" class="u-url"
-       title="Sandboxing inside the sandbox: No rogue thumbnailers inside Flatpak" target="_blank">
-      <time class="m-date" datetime="2020-10-14 14:43:00+00:00">
-        Oct
-        <span class="m-date-day">
-          14
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Sandboxing inside the sandbox: No rogue thumbnailers inside Flatpak
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p> A couple of years ago, we <a href="http://www.hadess.net/2017/07/security-for-security-gods-sandboxing.html">sandboxed thumbnailers</a> using <a href="https://github.com/containers/bubblewrap">bubblewrap</a> to avoid drive-by downloads taking advantage of thumbnailers with security issues.</p><p> It's a great tool, and it's a tool that Flatpak relies upon to create its own sandboxes. But that also meant that we couldn't use it inside the Flatpak sandboxes themselves, and those aren't always as closed as they could be, to support legacy applications.</p><p> We've finally <a href="https://gitlab.gnome.org/GNOME/gnome-desktop/-/merge_requests/92">implemented support for sandboxing thumbnailers within Flatpak</a>, using the <a href="https://docs.flatpak.org/en/latest/portal-api-reference.html#gdbus-method-org-freedesktop-portal-Flatpak.Spawn">Spawn D-Bus interface</a> (indirectly).</p><p>This should all land in GNOME 40, though it should already be possible to integrate it into your Flatpaks. Make sure to use the latest gnome-desktop development version, and that the flatpak-spawn utility is new enough in the runtime you're targeting (it's been updated in the freedesktop.org runtimes <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/3653">#1</a>, <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/3654">#2</a>, <a href="https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/3655">#3</a>, but it takes time to trickle down …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Bastien Nocera (noreply@blogger.com)</b></span>
-  on <time datetime="2020-10-14 14:43:00+00:00" class="dt-published"></time>
-  Wed 14 Oct 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
