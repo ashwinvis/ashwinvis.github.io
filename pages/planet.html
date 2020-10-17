@@ -142,6 +142,57 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.volkerkrause.eu/2020/10/17/kde-cheap-power-measurement-tools.html" rel="bookmark" class="u-url"
+       title="Cheap Electric Power Measurement" target="_blank">
+      <time class="m-date" datetime="2020-10-17 08:30:00+00:00">
+        Oct
+        <span class="m-date-day">
+          17
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Cheap Electric Power Measurement
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Following the BoF on power consumption of software Cornelius chaired at
+<a href="/2020/09/15/kde-akademy-2020-recap.html">Akademy 2020</a> I did
+look a bit into tooling for that, in particular for cheap ways to measure electrical power
+consumption. Here are the results so far.</p>
+
+Why measure electrical power consumption?
+
+<p>Our existing profiling tools for improving software performance implicitly also identify parts
+that presumably increase the power consumption, and we do have specialized tools like <code>powertop</code> that
+are good at identifying specific types of power drains. But not everything is visible in there,
+e.g. CPU/GPU trade-offs, or the actual effects of power management options or display settings.</p>
+
+<p>So being able to measure the actual power consumption between the wall plug and the full device seems
+useful, to the very least to verify that assumptions we make from other profiling tools actually hold.</p>
+
+Requirements
+
+<p>Measuring electrical …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-10-17 08:30:00+00:00" class="dt-published"></time>
+  Sat 17 Oct 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://people.gnome.org/~michael/blog/2020-10-16.html" rel="bookmark" class="u-url"
        title="2020-10-16 Friday" target="_blank">
       <time class="m-date" datetime="2020-10-16 18:05:52+00:00">
@@ -251,42 +302,6 @@ Note: if you missed the launch yesterday; the books are here: <a href="https://w
   on <time datetime="2020-10-16 17:48:59+02:00" class="dt-published"></time>
   Fri 16 Oct 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kdab.com/kd-reports-1-8-2-has-been-released/" rel="bookmark" class="u-url"
-       title="KD Reports 1.8.2 has been released" target="_blank">
-      <time class="m-date" datetime="2020-10-16 15:25:53+00:00">
-        Oct
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KD Reports 1.8.2 has been released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We’ve just released version 1.8.2 of our developer tool, KD Reports. KD Reports generates printable and exportable reports from code and from XML descriptions. Reports may contain text paragraphs, tables, headlines, charts, headers and footers and more. Version 1.8.2 is planned to be the final release in the 1.8 series of KD Reports.</p>
-<p>KD Reports 1.8.2 is a minor release, with the main purpose of cleaning up any last remaining small issues for people who want to keep using Qt 4. Version 1.9 will not support Qt 4. Additionally, 1.8.2 comes with two fixes: fix compiling against a Qt namespace build and fix static linking examples and unittests in the CMake buildsystem. Finally, we made a few small improvements to the buildsystem.</p>
-<p>Find out more about KD Reports <a href="https://www.kdab.com/development-resources/qt-tools/kd-reports/">here …</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2020-10-16 15:25:53+00:00" class="dt-published"></time>
-  Fri 16 Oct 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
