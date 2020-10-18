@@ -136,6 +136,7 @@ M_LINKS_FOOTER1 = [
     ("Heptapod", "https://foss.heptapod.net/avmo"),
     ("LinkedIn", "https://www.linkedin.com/in/ashwinvishnu/"),
     ("Mastodon", "https://mastodon.acc.sunet.se/@ashwinvis"),
+    ("Matrix", "https://matrix.to/#/@ashwinvis:matrix.org"),
 ]
 M_LINKS_FOOTER2 = [
     ("Research", ""),
