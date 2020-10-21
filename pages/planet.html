@@ -142,31 +142,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tsdgeos.blogspot.com/2020/10/make-sure-kde-software-is-usable-in.html" rel="bookmark" class="u-url"
-       title="Make sure KDE software is usable in your language, join KDE translations!" target="_blank">
-      <time class="m-date" datetime="2020-10-20 17:43:24+00:00">
+    <a href="https://blog.gtk.org/2020/10/21/accessibility-in-gtk-4/" rel="bookmark" class="u-url"
+       title="Accessibility in GTK 4" target="_blank">
+      <time class="m-date" datetime="2020-10-21 11:49:47+00:00">
         Oct
         <span class="m-date-day">
-          20
+          21
         </span>
         2020
       </time>
       <div class="p-name">
-      Make sure KDE software is usable in your language, join KDE translations!
+      Accessibility in GTK 4
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Translations are a vital part of software. More technical people often overlook it because they understand English well enough to use the software untranslated, but only 15% of the World understands English, so it's clear we need good translations to make our software more useful to the rest of the world. </p><p>Translations are a place that [almost] always needs help, so I would encourage you to me (<a href="mailto:aacid@kde.org">aacid@kde.org</a>) if you are interested in helping. </p><p>Sadly, some of our teams are not very active, so you may find yourself alone, it can be a bit daunting at the beginning, but the rest of us in <a href="https://mail.kde.org/mailman/listinfo/kde-i18n-doc">kde-i18n-doc</a> will help you along the way :) </p><p>This is a list of teams sorted by how many translation commits have happened in the last year, more commits doesn't mean better, even teams with lots …</p>
+  The big news in last weeks GTK 3.99.3 release is that we have a first non-trivial backend for our new accessibility implementation. Therefore, now is a good time to take a deeper look at accessibility in GTK 4. Overview Lets start with a quick review of how accessibility works on Linux. The actors in this … <a href="https://blog.gtk.org/2020/10/21/accessibility-in-gtk-4/">Continue reading<span> "Accessibility in GTK 4"</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Albert Astals Cid</b></span>
-  on <time datetime="2020-10-20 17:43:24+00:00" class="dt-published"></time>
-  Tue 20 Oct 2020
+  <span class="p-author"><b>mclasen</b></span>
+  on <time datetime="2020-10-21 11:49:47+00:00" class="dt-published"></time>
+  Wed 21 Oct 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://quickfix.es/2020/10/the-baseline/" rel="bookmark" class="u-url"
+       title="The Baseline" target="_blank">
+      <time class="m-date" datetime="2020-10-21 10:05:30+00:00">
+        Oct
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      The Baseline
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Technical writers are not always required to write exclusively for engineers. Sometimes they also have to write for their bosses, their bosses' bosses, investors, buyers and end users. These readers may or may not come from technical background. In this article we will look at ways you can ensure your message gets across. (You can also just watch the video).
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Paul Brown</b></span>
+  on <time datetime="2020-10-21 10:05:30+00:00" class="dt-published"></time>
+  Wed 21 Oct 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -176,32 +210,69 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nibblestew.blogspot.com/2020/10/cargo-style-dependency-management-for-c.html" rel="bookmark" class="u-url"
-       title="Cargo-style dependency management for C, C++ and other languages with Meson" target="_blank">
-      <time class="m-date" datetime="2020-10-20 16:40:00+00:00">
+    <a href="https://alexschroeder.ch/wiki/2020-10-21_Saving_friends_and_family" rel="bookmark" class="u-url"
+       title="Saving friends and family" target="_blank">
+      <time class="m-date" datetime="2020-10-21 09:26:18+00:00">
         Oct
         <span class="m-date-day">
-          20
+          21
         </span>
         2020
       </time>
       <div class="p-name">
-      Cargo-style dependency management for C, C++ and other languages with Meson
+      Saving friends and family
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>My previous blog post about modern C++ got a surprising amount of feedback. Some people even reimplemented the program in other languages, including one <a href="http://jmoiron.net/blog/cpp-deserves-its-bad-reputation">in Go</a>, <a href="https://da-data.blogspot.com/2020/10/no-c-still-isnt-cutting-it.html">two</a> <a href="https://siedentop.dev/posts/rust-reputation/">different</a> ones in Rust and even <a href="https://godbolt.org/z/PanWf7">this slightly brain bending</a> C++ reimplementation as a declarative style pipeline. It also got talked about on Reddit and Hacker news. Two major comments that kept popping up were the following.</p><p></p><ol><li>There are potential bugs if the program is ever extended to support non-ASCII text</li><li>It is hard to use external dependencies in C++ (and by extension C)</li></ol>Let's solve both of these problems at the same time. There are many "lite" solutions for doing Unicode aware text processing, but we're going to use the 10 000 kilogram hammer: <a href="http://site.icu-project.org/">International Components for Unicode</a>. The actual code changes are not that big, interested parties can go look up …
+  <div><p>I was recently talking with <a href="https://toot.cat/users/dredmorbius">@dredmorbius</a> and <a href="https://idiomdrottning.org/users/Sandra">@Sandra</a> on Mastodon. It all started with the Sophistical Refutations by Aristotle. </p><ul><li><a href="https://en.wikipedia.org/wiki/Sophistical_Refutations">Sophistical Refutations (Aristotle)</a> </li><li><a href="https://en.wikipedia.org/wiki/The_Art_of_Being_Right">The Art of Being Right (Schopenhauer)</a></li></ul><p>With the pandemic I’ve seen elements of COVID-idiocy in society. Sadly, I’ve also seen elements of it amongst friends and family online. I’m not on Facebook anymore, but my wife is, and sometimes she shows me stuff people are posting, and I’m despairing.</p><p>It’s the the typical mix:</p><ul><li>COVID-19 is just a flu</li><li>staying at home means giving up your civil rights</li><li>wearing masks makes you sub-human, a slave</li></ul><p>But what’s next? The state is trying to enslave us? The WHO is trying to enslave us? Bill Gates is trying to implant us with a chip? Who is trying to control us: rich people? Bankers? Jews …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2020-10-20 16:40:00+00:00" class="dt-published"></time>
-  Tue 20 Oct 2020
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-21 09:26:18+00:00" class="dt-published"></time>
+  Wed 21 Oct 2020
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.archlinux.org/news/nvidia-45528-is-incompatible-with-linux-59/" rel="bookmark" class="u-url"
+       title="nvidia 455.28 is incompatible with linux >= 5.9" target="_blank">
+      <time class="m-date" datetime="2020-10-21 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      nvidia 455.28 is incompatible with linux >= 5.9
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  nvidia is currently partially incompatible with linux &gt;= 5.9 <a href="https://forums.developer.nvidia.com/t/nvidia-driver-not-yet-supported-for-linux-kernel-5-9/157263">[1]</a> <a href="https://bugs.archlinux.org/task/68312">[2]</a>.
+While graphics should work fine, CUDA, OpenCL, and likely other features are broken. Users
+who've already upgraded and need those features are advised to switch to
+the linux-lts kernel for the time being until a fix for nvidia is available.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-10-21 00:00:00+00:00" class="dt-published"></time>
+  Wed 21 Oct 2020
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -611,40 +682,6 @@ you …</p>
   on <time datetime="2020-10-12 14:48:43-04:00" class="dt-published"></time>
   Mon 12 Oct 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://allanmcrae.com/2020/10/distri-comparing-apples-and-oranges/" rel="bookmark" class="u-url"
-       title="Distri – Comparing Apples and Oranges?" target="_blank">
-      <time class="m-date" datetime="2020-10-12 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Distri – Comparing Apples and Oranges?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Last weekend we had what I consider to be the very successful Arch Conf 2020. This included a talk by Michael Stapelberg about distri, his Linux distribution to research fast package management. Michael showed an example of installing QEMU in <a href="http://allanmcrae.com/2020/10/distri-comparing-apples-and-oranges/">Continue reading &#8594;</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-10-12 00:00:00+00:00" class="dt-published"></time>
-  Mon 12 Oct 2020
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
