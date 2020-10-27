@@ -12,6 +12,7 @@ import logging
 from datetime import datetime
 
 import m
+
 #  from pelican_jupyter import markup
 #  from pelican.plugins import webring
 from pelican_ashwinvis import post_stats
@@ -40,9 +41,9 @@ RELATIVE_URLS = True
 
 # Metadata
 DEFAULT_METADATA = {
-    'author': AUTHOR,
-    'category': "Blog",
-    'summary': "",  # Disable auto-generated summary
+    "author": AUTHOR,
+    "category": "Blog",
+    "summary": "",  # Disable auto-generated summary
     # TODO:
     # 'status': 'draft',  # Avoid accidently publishing articles
 }
@@ -51,9 +52,14 @@ THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
 STATIC_PATHS = ["images", "pdf", "static"]
 EXTRA_PATH_METADATA = {
-    f'extra/{resource}': {'path': resource}
-    for resource in ("robots.txt", "manifest.webmanifest", "sw.js", "app.js",
-                     "webmention.min.js")
+    f"extra/{resource}": {"path": resource}
+    for resource in (
+        "robots.txt",
+        "manifest.webmanifest",
+        "sw.js",
+        "app.js",
+        "webmention.min.js",
+    )
 }
 STATIC_PATHS.extend(EXTRA_PATH_METADATA)
 
@@ -85,7 +91,7 @@ M_BLOG_FAVICON = M_FAVICON
 
 
 # m.metadata
-FORMATTED_FIELDS = ['description', 'badge']
+FORMATTED_FIELDS = ["description", "badge"]
 
 # Navbar
 M_LINKS_NAVBAR1 = [
@@ -119,7 +125,11 @@ M_LINKS_NAVBAR2 = [
             ("CV", "pages/cv.html", ""),
             ("Research", "pages/research.html", ""),
             ("Software", "pages/software.html", ""),
-            ("Talks", "talks", "[talks]",)
+            (
+                "Talks",
+                "talks",
+                "[talks]",
+            ),
         ],
     ),
     ("Sponsors", "pages/sponsors.html", "[sponsors]", []),
@@ -128,31 +138,34 @@ M_LINKS_NAVBAR2 = [
 ]
 M_LINKS_FOOTER1 = [
     ("Social", ""),
-    # To be uncommented when font-awesome implements fa-gnupg
-    #  ('GnuPG',
-    #   'https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2BF1534545A73FAD'),
-    ("GitHub", "https://github.com/ashwinvis"),
-    ("Gitlab", "https://source.coderefinery.org/ashwinvis/"),
-    ("Heptapod", "https://foss.heptapod.net/avmo"),
     ("LinkedIn", "https://www.linkedin.com/in/ashwinvishnu/"),
-    ("Mastodon", "https://mastodon.acc.sunet.se/@ashwinvis"),
+    ("Mastodon [personal]", "https://mastodon.acc.sunet.se/@ashwinvis"),
+    ("Mastodon [science]", "https://fediscience.org/@ashwinvis"),
     ("Matrix", "https://matrix.to/#/@ashwinvis:matrix.org"),
+    ("Pixelfed", "https://pixelfed.social/ashwinvis"),
 ]
 M_LINKS_FOOTER2 = [
     ("Research", ""),
-    ("Zotero", "https://zotero.org/ashwinvis"),
-    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"),
     ("Google-Scholar", "https://scholar.google.se/citations?user=zv4wwKoAAAAJ"),
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
+    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
+    ("Zotero", "https://zotero.org/ashwinvis"),
 ]
-M_LINKS_FOOTER3 = (
+M_LINKS_FOOTER3 = [
+    ("Code", ""),
+    ("Codeberg", "https://codeberg.org/ashwinvis"),
+    ("GitHub", "https://github.com/ashwinvis"),
+    ("Gitlab", "https://source.coderefinery.org/ashwinvis/"),
+    ("Heptapod", "https://foss.heptapod.net/avmo"),
+]
+M_LINKS_FOOTER4 = (
     [
         ("Sitemap", ""),
         M_LINKS_NAVBAR1[1][:2],
-    ] +
-    [(title, url) for title, url, _ in M_LINKS_NAVBAR1[1][3]] +
-    [(title, url) for title, url, _, _ in M_LINKS_NAVBAR2]
+    ]
+    + [(title, url) for title, url, _ in M_LINKS_NAVBAR1[1][3]]
+    + [(title, url) for title, url, _, _ in M_LINKS_NAVBAR2]
 )
 
 with open("footer.rst") as footer:
@@ -162,15 +175,14 @@ with open("archived_badge.rst") as badge:
     M_ARCHIVED_ARTICLE_BADGE = badge.read()
 
 # For landing page
-FORMATTED_FIELDS = ['summary', 'landing',
-                    'header', 'footer', 'description', 'badge']
+FORMATTED_FIELDS = ["summary", "landing", "header", "footer", "description", "badge"]
 M_NEWS_ON_INDEX = ("Latest posts", 5)
 
 # TODO:
 M_HTMLSANITY_SMART_QUOTES = True
 M_HTMLSANITY_HYPHENATION = True
 
-if not shutil.which('latex'):
+if not shutil.which("latex"):
     logging.warning("LaTeX not found, fallback to rendering math as code")
     M_MATH_RENDER_AS_CODE = True
 
@@ -200,8 +212,8 @@ IPYNB_SKIP_CSS = False
 
 # pelican_planet / webring
 PLANET_FEEDS = read_opml("planet.opml", ["Planets"])
-PLANET_TEMPLATE = 'templates/planet.md.j2'
-PLANET_PAGE = 'content/pages/planet.md'
+PLANET_TEMPLATE = "templates/planet.md.j2"
+PLANET_PAGE = "content/pages/planet.md"
 PLANET_MAX_ARTICLES_PER_FEED = 1
 PLANET_MAX_ARTICLES = max(42, PLANET_MAX_ARTICLES_PER_FEED * len(PLANET_FEEDS))
 PLANET_MAX_SUMMARY_LENGTH = 140
@@ -219,7 +231,7 @@ DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 2
 
 # Publications with pybtex
-PUBLICATIONS_SRC = 'content/static/CV.bib'
+PUBLICATIONS_SRC = "content/static/CV.bib"
 
 # HTML Template
 #  PAGINATED_TEMPLATES = ("category", "archives", "index", "pages")
