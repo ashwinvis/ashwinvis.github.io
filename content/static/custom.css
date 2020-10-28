@@ -2,10 +2,6 @@
 	width: 100% !important;
 }
 
-body > header > nav.m-navbar-landing {
-	font-size: 0.8rem;
-}
-
 /* Fix accessibility issues */
 a {
   text-decoration: none;

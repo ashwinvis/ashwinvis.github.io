@@ -227,9 +227,6 @@
 .mastodon-embed {
 	width: 100% !important;
 }
-body > header > nav.m-navbar-landing {
-	font-size: 0.8rem;
-}
 a {
   text-decoration: none;
 }
