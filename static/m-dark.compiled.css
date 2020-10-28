@@ -339,7 +339,7 @@ body { margin: 0; }
 }
 
 html {
-  font-size: 1.25rem;
+  font-size: 1rem;
   background-color: #2f363f;
 }
 body {
@@ -615,7 +615,7 @@ dl.m-footnote dd span.m-footnote a {
   float: left;
 }
 div.m-button {
-  font-family: var(--button-font);
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 div.m-button a {
@@ -1175,7 +1175,7 @@ div.m-button.m-flat a:hover svg.m-math, div.m-button.m-default a:focus svg.m-mat
 div.m-button.m-default a:active svg.m-math {
   fill: #a5c9ea;
 }
-.m-graph { font-size: 1.25rem; }
+.m-graph { font-size: 1rem; }
 div.m-plot svg, div.m-graph svg {
   max-width: 100%;
   margin-left: auto;
@@ -1823,7 +1823,8 @@ body > header > nav a {
   vertical-align: middle;
   line-height: 2.75rem;
   color: #ffffff;
-  font-family: var(--button-font);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.875rem;
 }
 body > header > nav #m-navbar-brand, body > header > nav a#m-navbar-show, body > header > nav a#m-navbar-hide {
   font-weight: normal;

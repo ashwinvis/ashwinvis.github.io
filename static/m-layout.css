@@ -69,6 +69,7 @@ body > header > nav a {
   line-height: 2.75rem;
   color: var(--header-link-color);
   font-family: var(--button-font);
+  font-size: var(--header-font-size);
 }
 body > header > nav #m-navbar-brand, body > header > nav a#m-navbar-show, body > header > nav a#m-navbar-hide {
   font-weight: var(--heading-font-weight);
