@@ -141,21 +141,22 @@
 <aside class="contents" id="contents">
 <h3>Contents</h3>
 <ul>
-<li><a href="#research-software" id="id2">Research Software</a><ul>
-<li><a href="#snek5000" id="id3">snek5000</a></li>
-<li><a href="#fluiddyn-project" id="id4">FluidDyn project</a></li>
-<li><a href="#caeroc" id="id5">Caeroc</a></li>
+<li><a href="#research-software" id="id3">Research Software</a><ul>
+<li><a href="#snek5000" id="id4">snek5000</a></li>
+<li><a href="#pymech" id="id5">pymech</a></li>
+<li><a href="#fluiddyn-project" id="id6">FluidDyn project</a></li>
+<li><a href="#caeroc" id="id7">Caeroc</a></li>
 </ul>
 </li>
-<li><a href="#open-source-contributions" id="id6">Open-Source contributions</a></li>
-<li><a href="#humble-projects" id="id7">Humble projects</a></li>
+<li><a href="#open-source-contributions" id="id8">Open-Source contributions</a></li>
+<li><a href="#humble-projects" id="id9">Humble projects</a></li>
 </ul>
 </aside>
 <hr />
 <section id="research-software">
-<h2><a href="#id2">Research Software</a></h2>
+<h2><a href="#id3">Research Software</a></h2>
 <section id="snek5000">
-<h3><a href="https://github.com/exabl/snek5000">snek5000</a></h3>
+<h3><a href="https://snek5000.readthedocs.io">snek5000</a></h3>
 <p>On my postdoc role, I started using <a href="https://github.com/Nek5000/Nek5000">Nek5000</a>, is a really popular Fortran 77 HPC
 code. Using it is bittersweet experience:</p>
 <ul>
@@ -166,11 +167,16 @@ code. Using it is bittersweet experience:</p>
 </ul>
 <p>On the bright side, as a user there is a separation of the user code and
 parameters from the <a href="https://github.com/Nek5000/Nek5000">Nek5000</a> core. This fact was exploited to create
-<a href="https://github.com/exabl/snek5000">snek5000</a> to create a pythonic API to effortlessly launch simulations with
+<a href="https://snek5000.readthedocs.io">snek5000</a> to create a pythonic API to effortlessly launch simulations with
 varying parameters.</p>
 </section>
+<section id="pymech">
+<h3><a href="https://pymech.readthedocs.io">pymech</a></h3>
+<p>A collection of I/O utilities to operate on files produced by <a href="https://github.com/Nek5000/Nek5000">Nek5000</a>. Along
+with other friends, I maintain and improve the package.</p>
+</section>
 <section id="fluiddyn-project">
-<h3><a href="https://fluiddyn.bitbucket.io">FluidDyn project</a></h3>
+<h3><a href="https://foss.heptapod.net/fluiddyn">FluidDyn project</a></h3>
 <p>An ecosystem of packages for research and teaching in fluid dynamics.</p>
 <p>Some key features include:</p>
 <ul>
@@ -210,7 +216,7 @@ frameborder="0" allowfullscreen> </iframe></section>
 </section>
 <hr />
 <section id="open-source-contributions">
-<h2><a href="#id6">Open-Source contributions</a></h2>
+<h2><a href="#id8">Open-Source contributions</a></h2>
 <p>I have also contributed some serious projects such as:</p>
 <ul>
 <li><a href="https://github.com/python/cpython">CPython</a>: the reference Python
@@ -224,12 +230,26 @@ fzf. I added:<ul>
 <li>Biblatex support. (<a href="https://github.com/msprev/fzf-bibtex/pull/14">link</a>)</li>
 </ul>
 </li>
+<li><a href="https://github.com/ipython/ipython">IPython</a>: IPython provides a rich
+toolkit to help you make the most of using Python interactively. I
+contributed to:<ul>
+<li>warnings while executing <code>!pip</code> or <code>!conda</code> (<a href="https://github.com/ipython/ipython/pull/12622">link</a>).</li>
+<li>replacing <code>os.path</code> with <code>pathlib</code> in the module responsible for the
+edit magic (<a href="https://github.com/ipython/ipython/pull/12544">link</a>) and
+the interactive shell (<a href="https://github.com/ipython/ipython/pull/12577">link</a>)</li>
+</ul>
+</li>
 <li><a href="https://jupyterlab.readthedocs.io">JupyterLab</a>: Next generation
 UI for Jupyter notebooks. I have:<ul>
 <li>added access to solarized theme for the text editor
 (<a href="https://github.com/jupyterlab/jupyterlab/pull/4445">link</a>)</li>
 <li>fixed font rendering in the terminal
 (<a href="https://github.com/jupyterlab/jupyterlab/pull/5732">link</a>)</li>
+</ul>
+</li>
+<li><a href="https://github.com/pyenv/pyenv">pyenv</a>: Python installer for POSIX
+operating systems. I have:<ul>
+<li>fixed links to download PyPy from (<a href="/fixing-links-for-pyenv.html">blog post</a>)</li>
 </ul>
 </li>
 <li><a href="https://github.com/ashwinvis/pymc3">PyMC3</a>: Probabilistic
@@ -256,20 +276,25 @@ currently the main maintainer.</li>
 (<a href="https://github.com/We-Care-sweden/analysis-scripts/pulls?q=is%3Apr+author%3Aashwinvis+is%3Aclosed">pull-requests</a>)</li>
 </ul>
 </li>
+<li><a href="https://xarray.pydata.org">xarray</a>: Python package that makes working
+with labelled multi-dimensional arrays simple, efficient, and fun. I have:<ul>
+<li>specified optional runtime dependencies required to run xarray (<a href="https://github.com/pydata/xarray/pull/4480">link</a>)</li>
+</ul>
+</li>
 </ul>
 </section>
 <hr />
 <section id="humble-projects">
-<h2><a href="#id7">Humble projects</a></h2>
+<h2><a href="#id9">Humble projects</a></h2>
 <p>Some repositories that I maintain for my personal use and possible
 reuse.</p>
 <ul>
-<li><a href="https://github.com/ashwinvis/awkupy">awkupy</a>: AWK meets Python: API, CLI
-and IPython / Jupyter magics for data wrangling with awk.</li>
 <li><a href="https://github.com/writing-resources/awesome-scientific-writing">Awesome scientific
 writing</a>:
 A curated list of resources for writing scientific documents with
 markup languages.</li>
+<li><a href="https://codeberg.org/ashwinvis/awkupy">awkupy</a>: AWK meets Python: API, CLI
+and IPython / Jupyter magics for data wrangling with awk.</li>
 <li><a href="https://github.com/ashwinvis/backdrop-theme">Backdrop theme</a>: A
 responsive pelican theme compiled node, grunt, sass technologies.</li>
 <li><a href="https://source.coderefinery.org/ashwinvis/dotfiles">dotfiles</a>: My Linux
