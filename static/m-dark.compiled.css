@@ -339,12 +339,12 @@ body { margin: 0; }
 }
 
 html {
-  font-size: 1rem;
+  font-size: 1.1rem;
   background-color: #2f363f;
 }
 body {
   font-family: 'et-book', serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   color: #dcdcdc;
 }
@@ -368,8 +368,8 @@ ul ol, ul ul, ol ol, ol ul {
   margin-bottom: 0;
 }
 main p {
-  text-indent: 1.5rem;
-  text-align: justify;
+  text-indent: unset;
+  text-align: left;
 }
 main p.m-noindent, li > p, dd > p, table.m-table td > p {
   text-indent: 0;
@@ -523,7 +523,7 @@ ul[class*='m-block-dot-'] li:not(:last-child)::after, ol[class*='m-block-dot-'] 
 p.m-poem {
   text-indent: 0;
   text-align: left;
-  margin-left: 1.5rem;
+  margin-left: unset;
 }
 p.m-transition {
   color: #405363;
@@ -1175,7 +1175,7 @@ div.m-button.m-flat a:hover svg.m-math, div.m-button.m-default a:focus svg.m-mat
 div.m-button.m-default a:active svg.m-math {
   fill: #a5c9ea;
 }
-.m-graph { font-size: 1rem; }
+.m-graph { font-size: 1.1rem; }
 div.m-plot svg, div.m-graph svg {
   max-width: 100%;
   margin-left: auto;
@@ -1908,6 +1908,27 @@ body > header > nav.m-navbar-landing #m-navbar-collapse li a:active,
 body > header > nav.m-navbar-cover #m-navbar-collapse li a:active {
   background-color: rgba(41, 47, 55, 0.5);
 }
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+.m-theme-icon{
+  display: none;
+  width: 2.5em;
+  height: auto;
+}
+#sun { fill: black; }
+#moon{ fill: white; }
+#dark-light-switch{
+  background: none;
+  border: none;
+  vertical-align: -1.25rem;
+}
+#dark-light-switch[color="light"] > #sun{display:inline-block;}
+#dark-light-switch[color="dark"]  > #moon{display:inline-block;}
 body > header > nav #m-navbar-hide {
   display: none;
 }
@@ -2106,7 +2127,7 @@ article section > h4 a, article section > h5 a, article section > h6 a {
 #m-landing-cover h1 {
   font-size: 2.8rem;
   margin-top: -0.5rem;
-  padding-left: 1.5rem;
+  padding-left: unset;
   padding-bottom: 1rem;
   text-transform: none;
 }
