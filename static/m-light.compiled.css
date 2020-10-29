@@ -1908,6 +1908,27 @@ body > header > nav.m-navbar-landing #m-navbar-collapse li a:active,
 body > header > nav.m-navbar-cover #m-navbar-collapse li a:active {
   background-color: var(--header-link-active-background-color-semi);
 }
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+.m-theme-icon{
+  display: none;
+  width: 2.5em;
+  height: auto;
+}
+#sun { fill: black; }
+#moon{ fill: white; }
+#dark-light-switch{
+  background: none;
+  border: none;
+  vertical-align: -1.25rem;
+}
+#dark-light-switch[color="light"] > #sun{display:inline-block;}
+#dark-light-switch[color="dark"]  > #moon{display:inline-block;}
 body > header > nav #m-navbar-hide {
   display: none;
 }
