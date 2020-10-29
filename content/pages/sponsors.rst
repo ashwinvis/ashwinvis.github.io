@@ -66,6 +66,7 @@ underfunded. Consider supporting your favourite individual / organization.
 I am currently supporting:
 
 - `Numfocus <https://numfocus.salsalabs.org/donate>`_
+- `Cython <https://cython.org/#donate>`_
 
 I have donated in the past to:
 
