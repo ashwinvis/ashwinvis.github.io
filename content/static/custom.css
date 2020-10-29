@@ -22,12 +22,12 @@ main p {
 	text-indent: unset;
 }
 
-html[data-theme='dark'] article section > h2, article section > h2 a, article section > h3, article section > h3 a, article section > h4, article section > h4 a, article section > h5, article section > h5 a, article section > h6, article section > h6 a {
+html[data-theme='dark'] article section > :is(h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a) {
       font-style: italic !important;
       color: white !important;
 }
 
-html[data-theme='light'] article section > h2, article section > h2 a, article section > h3, article section > h3 a, article section > h4, article section > h4 a, article section > h5, article section > h5 a, article section > h6, article section > h6 a {
+html[data-theme='light'] article section > :is(h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a) {
       font-style: italic !important;
       color: black !important;
 }
