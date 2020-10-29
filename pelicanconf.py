@@ -58,7 +58,6 @@ EXTRA_PATH_METADATA = {
         "manifest.webmanifest",
         "sw.js",
         "app.js",
-        "webmention.min.js",
     )
 }
 STATIC_PATHS.extend(EXTRA_PATH_METADATA)
