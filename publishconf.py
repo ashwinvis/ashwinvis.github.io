@@ -25,7 +25,7 @@ try:
     idx_css = M_CSS_FILES.index(f"/static/m-{AV_THEME}.css")
     path_css = M_CSS_FILES.pop(idx_css)
     M_CSS_FILES.insert(idx_css, path_css[:-3] + "compiled.css")
-except NameError:
+except (ValueError, NameError):
     pass
 
 PLUGINS += [pelican_planet]

@@ -245,7 +245,7 @@ DIRECT_TEMPLATES = (
     #  "publications",
 )
 
-AV_THEME = "light"
+AV_THEME = ""
 
 if AV_THEME == "light":
     M_CSS_FILES.insert(0, "/static/m-light.css")
@@ -255,3 +255,5 @@ elif AV_THEME == "dark":
     M_CSS_FILES.append("/static/bibbase-m-dark.css")
     IPYNB_EXPORT_TEMPLATE = "nbconvert.tpl"
     IPYNB_COLORSCHEME = "monokai"
+else:
+    M_CSS_FILES.insert(0, "/static/m-unified.css")

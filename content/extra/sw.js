@@ -4,7 +4,7 @@ https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Servic
 https://serviceworke.rs/strategy-network-or-cache_service-worker_doc.html
 https://github.com/mozilla/serviceworker-cookbook
  */
-var CACHE = 'ashwinvis.github.io-v20.10.28'
+var CACHE = 'ashwinvis.github.io-v20.10.30'
 var contentToCache = [
   '/',
   '/app.js',
@@ -17,8 +17,7 @@ var contentToCache = [
   '/pages/cv.html',
   '/pages/contact.html',
   '/static/custom.compiled.css',
-  '/static/m-light.compiled.css',
-  '/static/m-dark.compiled.css',
+  '/static/m-unified.css',
   '/images/logo_ashwin.png',
   '/images/dp_ashwin_2016.jpg'
 ]
