@@ -18,6 +18,8 @@ var contentToCache = [
   '/pages/contact.html',
   '/static/custom.compiled.css',
   '/static/m-unified.css',
+  '/static/theme.js',
+  '/static/webmention.min.js',
   '/images/logo_ashwin.png',
   '/images/dp_ashwin_2016.jpg'
 ]
