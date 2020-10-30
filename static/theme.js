@@ -27,11 +27,6 @@ function change (oldColor, newColor, nowait) {
 
   console.log(`Changing theme from ${oldColor} to ${newColor}`)
 
-  var link = document.getElementById('m-css')
-  if (link !== null) {
-    link.href = link.href.replace(oldColor, newColor)
-  }
-
   var im = document.getElementById('m-landing-image')
   if (im !== null) {
     im.style.backgroundImage = im.style.backgroundImage.replace(

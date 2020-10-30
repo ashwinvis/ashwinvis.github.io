@@ -22,7 +22,7 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-:root {
+html[data-theme='light'] {
   /* Text properties */
   --font: 'et-book', serif;
   --button-font: 'Source Sans Pro', sans-serif;
