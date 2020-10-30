@@ -7,12 +7,14 @@
 'use strict'
 
 var themeSwitch = document.getElementById('dark-light-switch')
-var body = document.getElementsByTagName('BODY')[0]
 
 function init (color) {
-  change('light', color, true)
+  change(color, true)
 }
-function change (oldColor, newColor, nowait) {
+function invert (color) {
+  return (color === 'light') ? 'dark' : 'light'
+}
+function change (color, nowait) {
   // Discard transition is nowait is set
   if (nowait !== true) {
     window.setTimeout(function () {
@@ -21,38 +23,38 @@ function change (oldColor, newColor, nowait) {
     document.documentElement.classList.add('color-theme-in-transition')
   }
 
-  document.documentElement.setAttribute('data-theme', newColor)
-  themeSwitch.setAttribute('color', newColor)
-  localStorage.setItem('color', newColor)
-
-  console.log(`Changing theme from ${oldColor} to ${newColor}`)
+  // Set attribute to <html> tag
+  document.documentElement.setAttribute('data-theme', color)
+  themeSwitch.setAttribute('color', color)
 
   var im = document.getElementById('m-landing-image')
   if (im !== null) {
-    im.style.backgroundImage = im.style.backgroundImage.replace(
-      oldColor, newColor
-    )
+    im.style.backgroundImage = im.style.backgroundImage.replace(invert(color), color)
   }
+  console.log('Setting theme =>', color)
 }
 function themeChangeRequested () {
-  var color = themeSwitch.getAttribute('color')
-  if (color === 'light') { change(color, 'dark') } else { change(color, 'light') }
+  var currentColor = themeSwitch.getAttribute('color')
+  var newColor = invert(currentColor)
+  change(newColor)
+
+  // Preference is stored in localStorage only when explicitly requested
+  console.log('Storing color preference ->', newColor)
+  localStorage.setItem('color', newColor)
 }
 function getCurrentColor () {
   // Color was set before in localStorage
   var storageColor = localStorage.getItem('color')
   if (storageColor !== null) {
+    console.log('Retreiving stored color preference <-', storageColor)
     return storageColor
-  }
-
-  // If local storage is not set check the background of the page
-  // This is dependant of the CSS, be careful
-  var background = getComputedStyle(body).getPropertyValue('background-color')
-  if (background === 'rgb(255, 255, 255)') {
-    return 'light'
   } else {
-    return 'dark'
+    // If local storage is empty, make CSS media query prefers-color-scheme
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    console.log('Honouring prefers-color-scheme')
+    return (prefersDark ? 'dark' : 'light')
   }
 }
+// Execute
 init(getCurrentColor())
 themeSwitch.addEventListener('click', themeChangeRequested)
