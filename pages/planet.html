@@ -153,6 +153,53 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/matlab-vs-python-command-line/" rel="bookmark" class="u-url"
+       title="Advantages of Python vs. Matlab for command line" target="_blank">
+      <time class="m-date" datetime="2020-11-06 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Advantages of Python vs. Matlab for command line
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The Matlab
+<a href="https://www.mathworks.com/help/matlab/ref/matlabwindows.html"><code>-batch</code> command line option</a>
+makes running Matlab code from the command line more reliable.
+However, Matlab is not really designed to be used extensively by end users this way.
+Matlab does not have a command-line parser like many other languages (scripted and compiled) do.</p>
+<p>Python has the
+<a href="https://docs.python.org/3/library/argparse.html">argparse</a>
+module that we generally find sufficient.
+In Fortran, using the <code>get_command_argument()</code> with <code>select case</code> can make a straightforward command line parser without resorting to external packages.</p>
+<p>Perhaps a reason for Matlab not having these features is the startup time of Matlab.
+While Python can complete a small program in 100 ms from the shell, Matlab takes 10-30 seconds or so depending on the number of toolboxes and the speed of the computer.
+GNU Octave starts up nearly as quickly as Python when
+<a href="https://www.scivision.dev/stop-octave-autoload-packages">Octave toolboxes are not auto-loaded</a>.
+It would be …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-06 00:00:00+00:00" class="dt-published"></time>
+  Fri 06 Nov 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://eang.it/user-feedback-dolphin-announce/" rel="bookmark" class="u-url"
        title="Introducing User Feedback in Dolphin" target="_blank">
       <time class="m-date" datetime="2020-11-05 17:00:00+00:00">
@@ -590,49 +637,6 @@ second poll to try to get data outside of my bubble:</p><blockquote><div><p>Than
   on <time datetime="2020-11-02 19:56:27+00:00" class="dt-published"></time>
   Mon 02 Nov 2020
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/macos-homebrew-non-sudo/" rel="bookmark" class="u-url"
-       title="MacOS Homebrew without sudo" target="_blank">
-      <time class="m-date" datetime="2020-11-02 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      MacOS Homebrew without sudo
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://brew.sh">Homebrew</a>
-is a popular framework for quickly installing development tools on MacOS, including Gfortran.
-MacOS cloud services such as MacInCloud may say they provide Homebrew, but you may not be able to install packages without a sudo/admin account.
-To install Homebrew without sudo/admin in the user home directory for cloud or physical Mac hardware, follow these steps:</p>
-<div><pre><code>mkdir homebrew <span>&amp;&amp;</span> curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip <span>1</span> -C homebrew
-</code></pre></div><p>Edit ~/.profile to include</p>
-<div><pre><code>export PATH<span>=</span>$HOME/homebrew/bin:$PATH
-</code></pre></div><p>Open a new Terminal to use Homebrew.</p>
-May need to compile GCC
-<p>If one truly doesn&rsquo;t have sudo/admin access as typical with a managed (less-expensive) cloud MacOS plan, and if XCode is not the appropriate version, GCC may compile from source, which can take about an hour on a modern quad-core Mac …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-02 00:00:00+00:00" class="dt-published"></time>
-  Mon 02 Nov 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
