@@ -200,9 +200,9 @@ It would be …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://eang.it/user-feedback-dolphin-announce/" rel="bookmark" class="u-url"
-       title="Introducing User Feedback in Dolphin" target="_blank">
-      <time class="m-date" datetime="2020-11-05 17:00:00+00:00">
+    <a href="https://euroquis.nl//freebsd/2020/11/06/virtualbox.html" rel="bookmark" class="u-url"
+       title="VirtualBox disk I/O on FreeBSD" target="_blank">
+      <time class="m-date" datetime="2020-11-05 23:00:00+00:00">
         Nov
         <span class="m-date-day">
           05
@@ -210,34 +210,40 @@ It would be …</p>
         2020
       </time>
       <div class="p-name">
-      Introducing User Feedback in Dolphin
+      VirtualBox disk I/O on FreeBSD
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I’m happy to announce that the next version of Dolphin will introduce support for reporting of some telemetry data to the KDE servers.
-It’s important to stress the the data will be submitted <em>only</em> if the user actively enables the feature from the Dolphin settings.</p>
+  <p>In the best example of “have your tried turning if off and on again” I’ve had
+in a long time, related to the <a href="/freebsd/2020/10/26/fuse.html">ext4 VirtualBox woes</a>
+I wrote about recently, I was informed of the existence of a checkbox
+called <em>Use Host I/O Cache</em>; toggling the value of that checkbox solved
+all my problems.</p>
 
-<p>Telemetry data can be very helpful to developers, but it may seem uninteresting to an end user.
-My personal opinion is that enabling telemetry is actually one of the easieast ways to contribute to KDE, if not the easieast.
-You just need to enable the reporting and you go on with your usual workflow.</p>
 
-<p>Dolphin relies on the <a href="https://api.kde.org/frameworks/kuserfeedback/html/index.html">KUserFeedback</a> framework to submit the data, which is already used by other projects such as Plasma or Kate.</p>
 
-What kind of data will be collected?
+  <img alt="VirtualBox settings" src="//euroquis.nl/img/2020/11/vbox-io-cache.png">
 
-<p>For now only the following data will be collected:</p>
+  VirtualBox settings
 
-<ul>
-  <li>Dolphin …</li></ul>
+
+<p>There is is: under the general <em>Storage</em> tab for my VM. On IRC Gleb Popov
+informed me that the checkbox ought to be off; it was, so on an off-chance
+I switched it on. Your mileage may vary. It got me working VMs again.</p>
+
+<blockquote>
+  <p>This particular image is one of my test-VMs for Calamares. I called
+it Kamarada because at the time I wanted to test <a href="https://kamarada.github.io/en/">Kamarada Linux</a>
+which is an openSUSE derivative. You can see the ISO in the drive is …</p></blockquote>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Elvis Angelaccio (elvisangelaccio)</b></span>
-  on <time datetime="2020-11-05 17:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Adriaan de Groot ([ade])</b></span>
+  on <time datetime="2020-11-05 23:00:00+00:00" class="dt-published"></time>
   Thu 05 Nov 2020
   in Planet KDE.
 </footer>
