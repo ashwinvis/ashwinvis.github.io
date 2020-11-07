@@ -153,31 +153,97 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2020-11-06_Minimal_Programming" rel="bookmark" class="u-url"
-       title="Minimal Programming" target="_blank">
-      <time class="m-date" datetime="2020-11-06 19:54:01+00:00">
+    <a href="https://www.volkerkrause.eu/2020/11/07/kde-android-news-nov-2020.html" rel="bookmark" class="u-url"
+       title="KDE Android News (November 2020)" target="_blank">
+      <time class="m-date" datetime="2020-11-07 09:30:00+00:00">
         Nov
         <span class="m-date-day">
-          06
+          07
         </span>
         2020
       </time>
       <div class="p-name">
-      Minimal Programming
+      KDE Android News (November 2020)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Oh wow, this is beautiful!</p><ul><li><a href="https://tixy.land">Tixy Land</a></li></ul><p>A web application that animates a function that you provide. Also click on the dots to cycle through some examples.</p><p>Some examples by liam <a href="https://merveilles.town/users/slisne">@slisne</a>:</p><ul><li><a href="https://tixy.land/?code=%28x%5Ey%29%2F16%2BMath.cos%28t%29">(x^y)/16+Math.cos(t)</a> </li><li><a href="https://tixy.land/?code=t%25%28x%7Cy%29*2-1">t%(x|y)*2-1</a> </li><li><a href="https://tixy.land/?code=Math.sign%28Math.sin%28y*t%29%29">Math.sign(Math.sin(y*t))</a></li></ul><p><a href="https://alexschroeder.ch/wiki?action=tag;id=Programming" title="Tag">#Programming</a></p></div>
+  <p>Since <a href="/2020/09/15/kde-akademy-2020-recap.html">Akademy</a>
+a few things have happened regarding bringing our applications to Android.
+Here are some of the highlights I’m aware of.</p>
+
+Build System
+
+<ul>
+  <li>
+    <p><a href="https://invent.kde.org/frameworks/extra-cmake-modules/-/merge_requests/26">FindGradle</a> has been added to
+<a href="https://commits.kde.org/extra-cmake-modules">ECM</a>.
+This provides the infrastructure for building AAR libraries alongside native libraries, as
+<a href="/2019/01/12/kf5-android-notification-backend.html">described previously</a>
+in the context of Android support for KNotification. This is now easily available for all
+ECM-based frameworks and applications.</p>
+  </li>
+  <li>
+    <p>ECM also received <a href="https://invent.kde.org/frameworks/extra-cmake-modules/-/merge_requests/40">support for application-local AAR libraries and QML plugins</a>.
+This means that having such components inside your application repository now results in them
+properly bundled in the APK.</p>
+  </li>
+  <li>
+    <p>Gabriel <a href="https://invent.kde.org/frameworks/extra-cmake-modules/-/merge_requests/31">fixed build issues on 32bit ARM related to thread usage</a>
+we saw in multiple of our external dependencies.</p>
+  </li>
+</ul>
+
+Deployment Infrastructure
+
+<ul>
+  <li>
+    <p>The <a href="https://community.kde.org/Android/Environment_via_Container">Docker image</a>
+used on our CI and CD systems as well as used by many people for local development has
+been updated to Qt …</p></li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-11-07 09:30:00+00:00" class="dt-published"></time>
+  Sat 07 Nov 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2020-11-07_Moku_Pona_incompatible_changes" rel="bookmark" class="u-url"
+       title="Moku Pona incompatible changes" target="_blank">
+      <time class="m-date" datetime="2020-11-07 08:45:57+00:00">
+        Nov
+        <span class="m-date-day">
+          07
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Moku Pona incompatible changes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I’m taking Moku Pona into the Gemini future. If you’re sticking with Gopher, stay on version 1.1 of Moku Pona. Gopher isn’t going to change, so why should you need to upgrade Moku Pona? It hadn’t changed in 21 months.</p><p>I’ve made incompatible changes to Moku Pona, moving it from Gopher to Gemini. I can’t promise that the transition will be painless. There are no instructions for making the move. But if you do… You can subscribe to both Gopher and Gemini sites, and to feeds (if they are served via Gopher or Gemini).</p><p>That’s the main benefit: you can follow both Gopher and Gemini sites. And since Gemini allows you to follow a Gopher link, and since many Gemini clients also support Gopher, and since I myself prefer Gemini over Gopher …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-06 19:54:01+00:00" class="dt-published"></time>
-  Fri 06 Nov 2020
+  on <time datetime="2020-11-07 08:45:57+00:00" class="dt-published"></time>
+  Sat 07 Nov 2020
   in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -350,6 +416,40 @@ uncommon, but I&rsquo;m sure you can think of a few examples from your own …</
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://xkcd.com/2382/" rel="bookmark" class="u-url"
+       title="Ballot Tracker Tracker" target="_blank">
+      <time class="m-date" datetime="2020-11-06 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Ballot Tracker Tracker
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Good luck to Democrats in the upcoming Georgia runoff elections, and to the Google Sheets SREs in the current run-on elections." src="https://imgs.xkcd.com/comics/ballot_tracker_tracker.png" title="Good luck to Democrats in the upcoming Georgia runoff elections, and to the Google Sheets SREs in the current run-on elections.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-06 00:00:00+00:00" class="dt-published"></time>
+  Fri 06 Nov 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://www.scivision.dev/matlab-vs-python-command-line/" rel="bookmark" class="u-url"
        title="Advantages of Python vs. Matlab for command line" target="_blank">
       <time class="m-date" datetime="2020-11-06 00:00:00+00:00">
@@ -389,60 +489,6 @@ It would be …</p>
   on <time datetime="2020-11-06 00:00:00+00:00" class="dt-published"></time>
   Fri 06 Nov 2020
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://euroquis.nl//freebsd/2020/11/06/virtualbox.html" rel="bookmark" class="u-url"
-       title="VirtualBox disk I/O on FreeBSD" target="_blank">
-      <time class="m-date" datetime="2020-11-05 23:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      VirtualBox disk I/O on FreeBSD
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In the best example of “have your tried turning if off and on again” I’ve had
-in a long time, related to the <a href="/freebsd/2020/10/26/fuse.html">ext4 VirtualBox woes</a>
-I wrote about recently, I was informed of the existence of a checkbox
-called <em>Use Host I/O Cache</em>; toggling the value of that checkbox solved
-all my problems.</p>
-
-
-
-  <img alt="VirtualBox settings" src="//euroquis.nl/img/2020/11/vbox-io-cache.png">
-
-  VirtualBox settings
-
-
-<p>There is is: under the general <em>Storage</em> tab for my VM. On IRC Gleb Popov
-informed me that the checkbox ought to be off; it was, so on an off-chance
-I switched it on. Your mileage may vary. It got me working VMs again.</p>
-
-<blockquote>
-  <p>This particular image is one of my test-VMs for Calamares. I called
-it Kamarada because at the time I wanted to test <a href="https://kamarada.github.io/en/">Kamarada Linux</a>
-which is an openSUSE derivative. You can see the ISO in the drive is …</p></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Adriaan de Groot ([ade])</b></span>
-  on <time datetime="2020-11-05 23:00:00+00:00" class="dt-published"></time>
-  Thu 05 Nov 2020
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -632,40 +678,6 @@ On our archive you can find a copy of all the edited talks, the submitted questi
   on <time datetime="2020-11-04 09:59:54.301000-05:00" class="dt-published"></time>
   Wed 04 Nov 2020
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2381/" rel="bookmark" class="u-url"
-       title="The True Name of the Bear" target="_blank">
-      <time class="m-date" datetime="2020-11-04 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          04
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      The True Name of the Bear
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Thank you to Gretchen McCulloch for fielding this question, and sorry that as a result the world's foremost internet linguist has been devoured by the brown one. She will be missed." src="https://imgs.xkcd.com/comics/the_true_name_of_the_bear.png" title="Thank you to Gretchen McCulloch for fielding this question, and sorry that as a result the world's foremost internet linguist has been devoured by the brown one. She will be missed.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-04 00:00:00+00:00" class="dt-published"></time>
-  Wed 04 Nov 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
