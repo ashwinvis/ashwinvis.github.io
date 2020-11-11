@@ -153,31 +153,123 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://ml4711.blogspot.com/2020/11/excursions-seven-bridges-of-konigsberg.html" rel="bookmark" class="u-url"
-       title="Excursions: The Seven Bridges of Königsberg" target="_blank">
-      <time class="m-date" datetime="2020-11-10 21:38:00+00:00">
+    <a href="https://rajeeshknambiar.wordpress.com/2020/11/11/new-packages-in-fedora-epel-screenkey-python-secure_cookie/" rel="bookmark" class="u-url"
+       title="New packages in Fedora/EPEL: screenkey & python-secure_cookie" target="_blank">
+      <time class="m-date" datetime="2020-11-11 10:50:58+00:00">
         Nov
         <span class="m-date-day">
-          10
+          11
         </span>
         2020
       </time>
       <div class="p-name">
-      Excursions: The Seven Bridges of Königsberg
+      New packages in Fedora/EPEL: screenkey & python-secure_cookie
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Making a little test with a new kind of blog post format where I explore some interesting fact related to geography and some history and fact around it.</p><p>For this first one I was going to take a look at the mathematical problem involving the bridges of Königsberg (present day Kaliningrad).</p><p>I have an old mathematical chart that I got from my father:</p><p></p><p></p><div><a href="https://1.bp.blogspot.com/-n4enSYGxcns/X6hz0c3BlNI/AAAAAAAAEtA/255_EMxxEKEVs_GU0WfldiwMz26alp6PACLcBGAsYHQ/s2048/matematikkarta.jpg"><img src="https://1.bp.blogspot.com/-n4enSYGxcns/X6hz0c3BlNI/AAAAAAAAEtA/255_EMxxEKEVs_GU0WfldiwMz26alp6PACLcBGAsYHQ/w456-h640/matematikkarta.jpg"> </a></div><div> </div><div>I used to study this a lot growing up and I recently was a bit curious as to when it was actually issued. The chart was issued by a company called Original-Odhner (<a href="https://sv.wikipedia.org/wiki/Original-Odhner">https://sv.wikipedia.org/wiki/Original-Odhner</a>, there is no English article in Wikipedia for it…) and doing some more research I found a mention of this chart in an old issue of a technical magazine called “Teknisk Tidskrift” from 1959 (<a href="http://runeberg.org/tektid/1959/0026.html">http://runeberg.org/tektid/1959 …</a></div>
+  <p>TLDR: Two software packages — <a href="https://www.thregr.org/~wavexx/software/screenkey/">screenkey</a> and <a href="https://pypi.org/project/secure-cookie/">python-secure_cookie</a> are available in Fedora and EPEL repositories.</p>
+
+
+
+Screenkey
+
+
+
+<p><a href="https://www.thregr.org/~wavexx/software/screenkey/screenkey.gif">Screenkey</a> is a tool that displays the keys one type, on the screen. It is quite useful for screen recording/casting for video tutorials and such. I use it particularly to record tutorial sessions on <a href="https://www.vim.org/">Vim</a> where keystrokes are important.</p>
+
+
+
+<img alt="" src="//www.thregr.org/~wavexx/software/screenkey/screenkey.gif">Fig. 1: Screenkey in action. <em>Source: screenkey</em>.
+
+
+
+Secure-cookie
+
+
+
+<p>The Python module <a href="https://pypi.org/project/secure-cookie/">secure-cookie</a> — which provides secure session and cookie management — is split from <a href="https://pypi.org/project/Werkzeug/">Werkzeug</a> WGSI module as of version 1.0. Odoo depends on <code>python-werkzeug</code> and currently keeps a vendor copy of the functionality in <a href="https://github.com/odoo/odoo/blob/14.0/odoo/tools/_vendor/sessions.py">14.0</a>; they haven’t migrated to use <code>secure-cookie</code> mostly because many distros including Arch and Fedora — who have a reputation to ship latest software — haven’t packaged <code>secure-cookie</code> yet.</p>
+
+
+
+<p>I have packaged both software for Fedora &amp; EPEL and will be …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Marcus Lundblad (noreply@blogger.com)</b></span>
-  on <time datetime="2020-11-10 21:38:00+00:00" class="dt-published"></time>
-  Tue 10 Nov 2020
+  <span class="p-author"><b>Rajeesh K Nambiar (rajeesh)</b></span>
+  on <time datetime="2020-11-11 10:50:58+00:00" class="dt-published"></time>
+  Wed 11 Nov 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://pyfound.blogspot.com/2020/11/rami-chowdhury-awarded-psf-community.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="Rami Chowdhury Awarded the PSF Community Service Award for Q3 2020" target="_blank">
+      <time class="m-date" datetime="2020-11-11 04:53:31.647000-05:00">
+        Nov
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Rami Chowdhury Awarded the PSF Community Service Award for Q3 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://necaris.net/about/">Rami Chowdhury</a> Entrepreneur, Software Engineer, DC Python User group co-organizer, and volunteer coordinator of PyCon US, has been awarded the Python Software Foundation 2020 Q3 Community Service Award.</p><p></p><blockquote>RESOLVED, that the Python Software Foundation award the 2020 Q3 Community Service Award to Rami Chowdhury for his community work. Rami helps organize and contribute to the DC Python user group. For many years Rami has been a volunteer coordinator and incident responder at PyCon US. Most recently Rami has been a helpful member of the PSF Code of Conduct WG.</blockquote><p>We interviewed Rami to shed more light on his work in the Python community. We also asked several of Rami's close associates - including Ewa Jodlowska, Jackie Augustine, Kenneth Durril, and Alex Clark - who have had the opportunity of working with Rami during DC Python and PyCon US.&nbsp;</p>Rami Chowdhury's Origin Story …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Charles Freeborn (noreply@blogger.com)</b></span>
+  on <time datetime="2020-11-11 04:53:31.647000-05:00" class="dt-published"></time>
+  Wed 11 Nov 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/aklapper/2020/11/11/gnome-gitlab/" rel="bookmark" class="u-url"
+       title="Strike" target="_blank">
+      <time class="m-date" datetime="2020-11-11 08:03:36+00:00">
+        Nov
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Strike
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  ✔ GNOME Gitlab achievement unlocked âœ˜ Write something about ‘life-work balance’ here
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>aklapper</b></span>
+  on <time datetime="2020-11-11 08:03:36+00:00" class="dt-published"></time>
+  Wed 11 Nov 2020
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -187,9 +279,43 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/dev/updated-miniflux-script" rel="bookmark" class="u-url"
-       title="Updated Miniflux blogroll generation script" target="_blank">
-      <time class="m-date" datetime="2020-11-10 19:58:58+01:00">
+    <a href="https://jlelse.blog/micro/2020/11/2020-11-11-qszdq" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-11-11 08:38:36+01:00">
+        Nov
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I was wondering why my posts didn’t arrive at Mastodon, but it seems my ActivityPub implementation was broken. Now it should be fixed. For all ActivityPub followers who missed it, I now use my own CMS for this blog.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-11 08:38:36+01:00" class="dt-published"></time>
+  Wed 11 Nov 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2020/11/10/day-2--rails-associations---dragging-divs-around/" rel="bookmark" class="u-url"
+       title="Day 2: Rails associations & dragging divs around" target="_blank">
+      <time class="m-date" datetime="2020-11-10 19:30:15+00:00">
         Nov
         <span class="m-date-day">
           10
@@ -197,22 +323,37 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Updated Miniflux blogroll generation script
+      Day 2: Rails associations & dragging divs around
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Regarding the Go-based script I shared in a previous post:
+  <p>Hello! Today was day 2 of building my toy project. Here are a few more notes on things that have been fun about Rails!</p>
+
+the goal: make a refrigerator poetry forum
+
+<p>I wanted to make kind of a boring standard website to learn Rails, and that
+other people could interact with. Like a forum! But of course if people can
+actually type on a website that creates all kinds of problems (what if they&rsquo;re
+spammers? or just mean?).</p>
+
+<p>The first idea I came up with that would let people interact with the website
+but not actually be able to type things into it was a refrigerator poetry
+forum where you can write poems given only a fixed set of words.</p>
+
+<p>So, that&rsquo;s the plan!</p>
+
+<p>My goal with this project is to find out if I want to use …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-10 19:58:58+01:00" class="dt-published"></time>
+  on <time datetime="2020-11-10 19:30:15+00:00" class="dt-published"></time>
   Tue 10 Nov 2020
-  in jlelse's Blog.
+  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -290,43 +431,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.kdab.com/kd-reports-1-9-0-released/" rel="bookmark" class="u-url"
-       title="KD Reports 1.9.0 Released" target="_blank">
-      <time class="m-date" datetime="2020-11-10 14:00:46+00:00">
-        Nov
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KD Reports 1.9.0 Released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><img alt="" src="//www.kdab.com/wp-content/uploads/stories/kdreports-300x86.jpg"></p>
-<p>KDAB has released KD Reports 1.9.0! KD Reports is a developer tool that generates printable and exportable reports from code and from XML descriptions. Reports may contain text paragraphs, tables, headlines, charts, headers and footers and more.</p>
-<p>Starting with this release, 1.9.0, KD Reports no longer supports Qt 4. However, KD Reports 1.8.2 and lower are still available with support for Qt 4. Our future efforts with KD Reports will go towards supporting Qt 6, which is due to come out soon.</p>
-<p>Additionally, for KD Reports 1.9.0, we’ve added AbstractTableElement::setColumnConstraints, which allows you to control the widths of columns in tables. In the more recent versions of Qt, if you let Qt decide on the width of the columns for you, it might give you an odd column width, such …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2020-11-10 14:00:46+00:00" class="dt-published"></time>
-  Tue 10 Nov 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.scivision.dev/windows-mpi-msys2/" rel="bookmark" class="u-url"
        title="Fortran MPI on Windows" target="_blank">
       <time class="m-date" datetime="2020-11-10 00:00:00+00:00">
@@ -390,59 +494,6 @@ We will put the resulting artifacts under c:/lib/mpi</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jvns.ca/blog/2020/11/09/day-1--a-little-rails-/" rel="bookmark" class="u-url"
-       title="Day 1: a confusing Rails error message" target="_blank">
-      <time class="m-date" datetime="2020-11-09 17:33:35+00:00">
-        Nov
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Day 1: a confusing Rails error message
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today I started an Recurse Center batch! I got to meet a few people, and started on a tiny
-fun Rails project. I think I won&rsquo;t talk too much about what the project actually is
-today, but here are some quick notes on a day with Rails:</p>
-
-some notes on getting started
-
-<p>The main thing I learned about setting up a Rails project is that</p>
-
-<ol>
-<li>it uses sqlite by default, you have to tell it to use Postgres</li>
-<li>there are a ton of things that Rails includes by default that you can disable.</li>
-</ol>
-
-<p>I installed and <code>rm -rf</code>&rsquo;d Rails maybe 7 times before I was satisfied with it and ended up with this incantation:</p>
-
-<pre><code>rails new . -d postgresql --skip-sprockets --skip-javascript`
-</code></pre>
-
-<p>Basically because I definitely wanted to use Postgres and not sqlite, and
-skipping sprockets and javascript seemed to …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-09 17:33:35+00:00" class="dt-published"></time>
-  Mon 09 Nov 2020
-  in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://xkcd.com/2383/" rel="bookmark" class="u-url"
        title="Electoral Precedent 2020" target="_blank">
       <time class="m-date" datetime="2020-11-09 00:00:00+00:00">
@@ -469,40 +520,6 @@ skipping sprockets and javascript seemed to …</p>
   on <time datetime="2020-11-09 00:00:00+00:00" class="dt-published"></time>
   Mon 09 Nov 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6118776" rel="bookmark" class="u-url"
-       title="Health-related quality of life in the randomized phase 3 study of ramucirumab plus docetaxel versus placebo plus docetaxel in platinum-refractory advanced urothelial carcinoma (RANGE)" target="_blank">
-      <time class="m-date" datetime="2020-11-09 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Health-related quality of life in the randomized phase 3 study of ramucirumab plus docetaxel versus placebo plus docetaxel in platinum-refractory advanced urothelial carcinoma (RANGE)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  To evaluate patient-reported outcomes with ramucirumab plus docetaxel, a regimen which improved progression-free survival in platinum-refractory advanced urothelial carcinoma (aUC).
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>T Powles</b></span>
-  on <time datetime="2020-11-09 00:00:00+00:00" class="dt-published"></time>
-  Mon 09 Nov 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -548,6 +565,40 @@ Specifications:
   on <time datetime="2020-11-07 20:45:00+01:00" class="dt-published"></time>
   Sat 07 Nov 2020
   in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6123656" rel="bookmark" class="u-url"
+       title="Free flap transfers for head and neck and skull base reconstruction in children and adolescents - Early and late outcomes" target="_blank">
+      <time class="m-date" datetime="2020-11-07 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          07
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Free flap transfers for head and neck and skull base reconstruction in children and adolescents - Early and late outcomes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Reconstruction of surgical defects by free tissue transfer following resection of head and neck tumors in children are sparse. This study aims to assess the feasibility and safety of free flap reconstruction following surgical ablation of head and neck and skull base tumors in children based on our experience and the recent literature.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>DM Fliss</b></span>
+  on <time datetime="2020-11-07 00:00:00+00:00" class="dt-published"></time>
+  Sat 07 Nov 2020
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -880,40 +931,6 @@ as always, this is part of a zine about bash I'm writing.
   on <time datetime="2020-10-29 00:00:00+00:00" class="dt-published"></time>
   Thu 29 Oct 2020
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://pyfound.blogspot.com/2020/10/key-generation-and-signing-ceremony-for.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="Key generation and signing ceremony for PyPI" target="_blank">
-      <time class="m-date" datetime="2020-10-28 16:38:50.905000-04:00">
-        Oct
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Key generation and signing ceremony for PyPI
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><span>On Friday October 30th at 11:15 AM EDT the Python Software Foundation will be live streaming a remote key generation and signing ceremony to bootstrap&nbsp;<a href="https://theupdateframework.io/">The Update Framework</a>&nbsp;for&nbsp;<a href="https://pypi.org/">The Python Package Index</a>. You can click&nbsp;<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=PSF+TUF+key+generation+and+signing+ceremony&amp;iso=20201030T1115&amp;p1=179">here</a>&nbsp;to see what time this is in your local timezone.</span></p><p><span>This ceremony is one of the first practical steps in deploying&nbsp;<a href="https://theupdateframework.io/">The Update Framework</a>&nbsp;to&nbsp;<a href="https://pypi.org/">PyPI</a>&nbsp;per&nbsp;<a href="https://www.python.org/dev/peps/pep-0458/">PEP 458</a>.</span></p><p><span>The Python Software Foundation Director of Infrastructure, Ernest W. Durbin III, and Trail of Bits Senior Security Engineer, William Woodruff, will be executing the runbook developed at https://github.com/psf/psf-tuf-runbook.</span></p><p><span>For transparency purposes a live stream will be hosted from the&nbsp;<a href="https://www.youtube.com/channel/UCUAVDPguRzqHySnZw64CcOg">Python Software Foundation's YouTube channel</a>. Please subscribe to the channel to be notified when the stream is live if you'd like to follow along.</span></p><p><span>Additionally the recording will be archived …</span></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ernest W. Durbin III (noreply@blogger.com)</b></span>
-  on <time datetime="2020-10-28 16:38:50.905000-04:00" class="dt-published"></time>
-  Wed 28 Oct 2020
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
