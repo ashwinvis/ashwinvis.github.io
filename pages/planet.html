@@ -374,6 +374,80 @@ here&rsquo;s the infinite fridge
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://xkcd.com/2384/" rel="bookmark" class="u-url"
+       title="Set in the Present" target="_blank">
+      <time class="m-date" datetime="2020-11-11 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Set in the Present
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="She referenced Billie Eilish, so this must be getting pretty close to the pandemic. But we've seen the last two years in-universe, so if it's set in the future, they must be in at least 2023 by now. [*adds thumbtacks and string to wall*]" src="https://imgs.xkcd.com/comics/set_in_the_present.png" title="She referenced Billie Eilish, so this must be getting pretty close to the pandemic. But we've seen the last two years in-universe, so if it's set in the future, they must be in at least 2023 by now. [*adds thumbtacks and string to wall*]">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-11 00:00:00+00:00" class="dt-published"></time>
+  Wed 11 Nov 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/ipython-no-confirm-exit/" rel="bookmark" class="u-url"
+       title="IPython no confirm on exit" target="_blank">
+      <time class="m-date" datetime="2020-11-11 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      IPython no confirm on exit
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>IPython &ldquo;confirm on exit&rdquo; is not always desired.
+To disable confirm on exit, from Terminal (not in Python) type:</p>
+<div><pre><code>ipython profile create
+</code></pre></div><p>This will print out the locate of the IPython config file, which is like &ldquo;~/.ipython/profile_default/ipython_config.py&rdquo;.
+Open this file in a text editor, and uncomment the line:</p>
+<div><pre><code>c<span>.</span>TerminalInteractiveShell<span>.</span>confirm_exit <span>=</span> False
+</code></pre></div><p>Upon restarting IPython, you&rsquo;ll find that the usual Ctrl D immediately exits without confirmation.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-11 00:00:00+00:00" class="dt-published"></time>
+  Wed 11 Nov 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://www.kdab.com/kd-reports-1-9-0-released/" rel="bookmark" class="u-url"
        title="KD Reports 1.9.0 Released" target="_blank">
       <time class="m-date" datetime="2020-11-10 14:00:46+00:00">
@@ -437,103 +511,6 @@ here&rsquo;s the infinite fridge
   on <time datetime="2020-11-10 00:00:00+00:00" class="dt-published"></time>
   Tue 10 Nov 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/windows-mpi-msys2/" rel="bookmark" class="u-url"
-       title="Fortran MPI on Windows" target="_blank">
-      <time class="m-date" datetime="2020-11-10 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Fortran MPI on Windows
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>There are several methods available to get MPI on Windows, including:</p>
-<ul>
-<li>Microsoft MPI (MS-MPI) with MSYS2 or MinGW: <a href="https://github.com/microsoft/Microsoft-MPI">open-source</a>, discussed below</li>
-<li><a href="https://www.scivision.dev/intel-oneapi-fortran-install">Intel oneAPI MPI</a></li>
-<li>Cygwin <code>libopenmpi-devel</code></li>
-<li>Windows Subsystem for Linux <code>libopenmpi-dev</code></li>
-</ul>
-MPI + MSYS2
-<p>This procedure gives MPI via MSYS2 GCC / Gfortran compilers on Windows.</p>
-<ol>
-<li>
-<p>Download and install <a href="https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi">Microsoft MS-MPI</a></p>
-</li>
-<li>
-<p>To make <code>mpiexec.exe</code> available, add to user PATH: <code>C:\Program Files\Microsoft MPI\Bin</code> &ndash; this is needed even when using MSYS2.</p>
-</li>
-<li>
-<p>Install MSYS2 MS-MPI library, from the MSYS2 Terminal</p>
-<div><pre><code>pacman -S mingw-w64-x86_64-msmpi
-</code></pre></div></li>
-<li>
-<p>compile, creating &ldquo;mpi.mod&rdquo; for Fortran use. Do NOT link with <code>ar</code> or MPI may only run with a single image.</p>
-<div><pre><code>cd C:/msys64/mingw64/
-gfortran include/mpi.f90 -c -fno-range-check -fallow-invalid-boz
-</code></pre></div></li>
-</ol>
-MPI + MinGW
-<p>While we recommennd MSYS2, it&rsquo;s also possible to use MS-MPI with <a href="https://www.scivision.dev/windows-gcc-gfortran-cmake-make-install">MinGW</a>.
-We will put the resulting artifacts under c:/lib/mpi</p>
-<div><pre><code>mkdir …</code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-10 00:00:00+00:00" class="dt-published"></time>
-  Tue 10 Nov 2020
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2383/" rel="bookmark" class="u-url"
-       title="Electoral Precedent 2020" target="_blank">
-      <time class="m-date" datetime="2020-11-09 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Electoral Precedent 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="He also broke the streak that incumbents with websites are unbeatable and Delawareans can't win, creating a new precedent: Only someone from Delaware can defeat an incumbent with a website." src="https://imgs.xkcd.com/comics/electoral_precedent_2020.png" title="He also broke the streak that incumbents with websites are unbeatable and Delawareans can't win, creating a new precedent: Only someone from Delaware can defeat an incumbent with a website.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-09 00:00:00+00:00" class="dt-published"></time>
-  Mon 09 Nov 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -729,41 +706,6 @@ second poll to try to get data outside of my bubble:</p><blockquote><div><p>Than
   on <time datetime="2020-11-03 08:35:00-05:00" class="dt-published"></time>
   Tue 03 Nov 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/sc20/" rel="bookmark" class="u-url"
-       title="Kitware at SC20: Workshops, Presentations, and Software Releases" target="_blank">
-      <time class="m-date" datetime="2020-11-02 19:56:27+00:00">
-        Nov
-        <span class="m-date-day">
-          02
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Kitware at SC20: Workshops, Presentations, and Software Releases
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The International Conference for High Performance Computing Networking, Storage, and Analysis (SC20) brings together the international high performance computing (HPC) community.&#160; As scientists, engineers, researchers, ... <a href="https://blog.kitware.com/sc20/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/sc20/">Kitware at SC20: Workshops, Presentations, and Software Releases</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Samantha Schmitt</b></span>
-  on <time datetime="2020-11-02 19:56:27+00:00" class="dt-published"></time>
-  Mon 02 Nov 2020
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
