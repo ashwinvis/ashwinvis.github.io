@@ -153,31 +153,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/alatiera/2020/11/17/try-gtk-4-now/" rel="bookmark" class="u-url"
-       title="Try GTK 4 Demos Now!" target="_blank">
-      <time class="m-date" datetime="2020-11-17 23:48:49+00:00">
+    <a href="https://hansdegoede.livejournal.com/23851.html" rel="bookmark" class="u-url"
+       title="How to fix Linux EFI secure-boot shim bootloop issue" target="_blank">
+      <time class="m-date" datetime="2020-11-18 09:05:03+00:00">
         Nov
         <span class="m-date-day">
-          17
+          18
         </span>
         2020
       </time>
       <div class="p-name">
-      Try GTK 4 Demos Now!
+      How to fix Linux EFI secure-boot shim bootloop issue
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  You watched Matthia’s talk at Linux App Summit last week and you wish you could try the demos yourself? Excellent! During the Q&amp;A section, Cassidy James asked if there was any Flatpak available, an hour after that we published a Nightly version of GTK4 Demo along with the Widget factory and the Icon Browser in … <a href="https://blogs.gnome.org/alatiera/2020/11/17/try-gtk-4-now/">Continue reading <span>Try GTK 4 Demos Now!</span></a>
+  How to fix the Linux EFI secure-boot shim bootloop issue seen on some systems.Quite a few Bay- and Cherry-Trail based systems have bad firmware which completely ignores any efibootmgr set boot options. They basically completely reset the boot order doing some sort of auto-detection at boot. Some of these even will given an error about their eMMC not being bootable unless the ESP has a EFI/Microsoft/Boot/bootmgfw.efi file!Many of these end up booting EFI/Boot/bootx64.efi unconditionally every boot. This will cause a boot loop since when Linux is installed EFI/Boot/bootx64.efi is now shim. When shim is started with a path of EFI/Boot/bootx64.efi, shim will add a new efibootmgr entry pointing to EFI/fedora/shimx64.efi and then reset. The goal of this is so that the firmware's …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jordan Petridis</b></span>
-  on <time datetime="2020-11-17 23:48:49+00:00" class="dt-published"></time>
-  Tue 17 Nov 2020
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-18 09:05:03+00:00" class="dt-published"></time>
+  Wed 18 Nov 2020
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
