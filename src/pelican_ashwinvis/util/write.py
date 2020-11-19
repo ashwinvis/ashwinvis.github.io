@@ -10,9 +10,13 @@ from pathlib import Path
 import click
 from cookiecutter import generate, prompt
 from jinja2 import Environment, FileSystemLoader
-from webmentiontools.send import WebmentionSend
+try:
+    from webmentiontools.send import WebmentionSend
+except ImportError:
+    print("WARNING: webmentiontools was not installed")
 
-from .. import SITEURL
+from pelican_ashwinvis import SITEURL
+
 
 def edit(filename):
     editor = shutil.which(os.getenv("EDITOR", "vim"))
