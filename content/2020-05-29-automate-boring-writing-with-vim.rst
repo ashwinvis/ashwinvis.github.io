@@ -34,13 +34,22 @@ inoremap, vnoremap``.
 Markdown
 =========
 
-The following maps ``Shift+Enter`` in the normal mode:
+The following maps ~~``Shift+Enter``~~ ``\a`` in the normal mode:
+
+.. block-default:: Warning
+
+    Due to a quirk in terminals, it would be difficult to map ``Shift+Enter`` /
+    ``<S-CR>`` and ``Ctrl+Enter`` / ``<C-CR>``.  Mapping ``Shift-Enter`` might
+    be possible with some `extra configuration
+    <https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter>`__
+    in your terminal. See also this stackoverflow `answer
+    <https://stackoverflow.com/a/598404>`__.
 
 .. code:: vim
 
     ""Markdown: inline-link maker
     "surround with [], find ], append ()
-    au FileType markdown,pandoc nmap <S-CR> ysiW]f]a()<ESC>i
+    au FileType markdown,pandoc nmap <leader>a ysiW]f]a()<ESC>i
 
 to add an inline link:
 
@@ -73,16 +82,37 @@ to add a link with a handle:
     a lot of text.
     [link]:
 
+
+The following maps ``h1``, ``h2``, ``h3``, ``h4`` to create headings in the
+normal mode:
+
+.. code:: vim
+
+    ""Markdown: heading maker
+    "mark h, go to beginning of the line, add #/##/###/### , go back to mark h
+    au FileType markdown,markdown.pandoc nmap h1 mh^i#<SPACE><ESC>`h
+    au FileType markdown,markdown.pandoc nmap h2 mh^i##<SPACE><ESC>`h
+    au FileType markdown,markdown.pandoc nmap h3 mh^i###<SPACE><ESC>`h
+    au FileType markdown,markdown.pandoc nmap h4 mh^i####<SPACE><ESC>`h
+
+.. code:: md
+
+    > before
+    A Heading
+
+    > after
+    # A Heading
+
 reStructuredText
 ================
 
-The following maps ``Shift+Enter`` in the normal mode:
+The following maps ~~``Shift+Enter``~~ ``\a`` in the normal mode:
 
 .. code:: vim
 
     ""rST: inline-link maker
     "surround with ``, find `, append __, move left by 2 characters, insert <>
-    au FileType rst nmap <S-CR> ysiW`f`a__<ESC>2hi<SPACE><lt>><ESC>i
+    au FileType rst nmap <leader>a ysiW`f`a__<ESC>2hi<SPACE><lt>><ESC>i
 
 to add an inline link:
 
@@ -116,11 +146,8 @@ to add a link with a handle:
     a lot of text.
     .. _link:
 
-You can also return back to the text by visiting the mark with ```l``.
+You can also return back to the text by visiting the mark with ``l``.
 
-.. block-default:: Warning
-
-    Mapping ``Shift-Enter`` might require some `extra configuration <https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter>`__ in your terminal.
 
 Search and replace
 ==================
