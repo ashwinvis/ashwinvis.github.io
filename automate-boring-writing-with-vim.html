@@ -171,10 +171,17 @@ scenarios either of these commands <code>map, nmap, imap, vmap, noremap, nnorema
 inoremap, vnoremap</code>.</p>
 <section id="markdown">
 <h3>Markdown</h3>
-<p>The following maps <code>Shift+Enter</code> in the normal mode:</p>
+<p>The following maps ~~“Shift+Enter“~~ <code>\a</code> in the normal mode:</p>
+<aside class="m-block m-default">
+<h3>Warning</h3>
+<p>Due to a quirk in terminals, it would be difficult to map <code>Shift+Enter</code> /
+<code>&lt;S-CR&gt;</code> and <code>Ctrl+Enter</code> / <code>&lt;C-CR&gt;</code>.  Mapping <code>Shift-Enter</code> might
+be possible with some <a href="https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter">extra configuration</a>
+in your terminal. See also this stackoverflow <a href="https://stackoverflow.com/a/598404">answer</a>.</p>
+</aside>
 <pre class="m-code"><span class="c">&quot;&quot;Markdown: inline-link maker</span>
 <span class="c">&quot;surround with [], find ], append ()</span>
-<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>pandoc nmap <span class="p">&lt;</span>S<span class="p">-</span>CR<span class="p">&gt;</span> ysiW]<span class="k">f</span>]<span class="k">a</span><span class="p">()&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span></pre>
+<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>pandoc nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">a</span> ysiW]<span class="k">f</span>]<span class="k">a</span><span class="p">()&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span></pre>
 <p>to add an inline link:</p>
 <pre class="m-code"><span class="k">&gt; </span><span class="ge">before</span>
 A sample sentence with a link
@@ -183,8 +190,9 @@ A sample sentence with a link
 A sample sentence with a [link]()</pre>
 <p>The following maps <code>Enter</code> in the normal mode:</p>
 <pre class="m-code"><span class="c">&quot;&quot;Markdown: link maker</span>
-<span class="c">&quot;yank inner word, surround with [], find ], append [, paste, append ],</span>
-<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>pandoc nmap <span class="p">&lt;</span>CR<span class="p">&gt;</span> yiWysiW]<span class="k">f</span>]<span class="k">a</span>[<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="nb">pa</span>]<span class="p">&lt;</span>ESC<span class="p">&gt;</span>Go<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span>[<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">p</span><span class="p">&lt;</span>ESC<span class="p">&gt;</span>$<span class="k">a</span>:<span class="p">&lt;</span>SPACE<span class="p">&gt;</span></pre>
+<span class="c">&quot;yank inner word, surround with [], find ], append [], paste word, move right</span>
+<span class="c">&quot;mark l, go to end of file, add a line, append [], paste, move right, append:</span>
+<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>pandoc nmap <span class="p">&lt;</span>CR<span class="p">&gt;</span> yiWysiW]<span class="k">f</span>]<span class="k">a</span>[]<span class="p">&lt;</span>ESC<span class="p">&gt;</span>PlmlGo<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="k">a</span>[]<span class="p">&lt;</span>ESC<span class="p">&gt;</span>Pla:<span class="p">&lt;</span>SPACE<span class="p">&gt;</span></pre>
 <p>to add a link with a handle:</p>
 <pre class="m-code"><span class="k">&gt; </span><span class="ge">before</span>
 A sample passage with a link and containing
@@ -194,13 +202,27 @@ a lot of text.
 A sample passage with a [<span class="nt">link</span>][<span class="nl">link</span>] and containing
 a lot of text.
 [link]:</pre>
+<p>You can return back to the text by visiting the mark with <code>l</code>.</p>
+<p>The following maps <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code> to create headings in the
+normal mode:</p>
+<pre class="m-code"><span class="c">&quot;&quot;Markdown: heading maker</span>
+<span class="c">&quot;mark h, go to beginning of the line, add #/##/###/### , go back to mark h</span>
+<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>markdown.pandoc nmap h1 <span class="nb">mh</span>^<span class="k">i</span>#<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span>ESC<span class="p">&gt;</span>`<span class="k">h</span>
+<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>markdown.pandoc nmap h2 <span class="nb">mh</span>^<span class="k">i</span>##<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span>ESC<span class="p">&gt;</span>`<span class="k">h</span>
+<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>markdown.pandoc nmap h3 <span class="nb">mh</span>^<span class="k">i</span>###<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span>ESC<span class="p">&gt;</span>`<span class="k">h</span>
+<span class="k">au</span> <span class="nb">FileType</span> markdown<span class="p">,</span>markdown.pandoc nmap h4 <span class="nb">mh</span>^<span class="k">i</span>####<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span>ESC<span class="p">&gt;</span>`<span class="k">h</span></pre>
+<pre class="m-code"><span class="k">&gt; </span><span class="ge">before</span>
+A Heading
+
+<span class="k">&gt; </span><span class="ge">after</span>
+<span class="gh">#</span> A Heading</pre>
 </section>
 <section id="restructuredtext">
 <h3>reStructuredText</h3>
-<p>The following maps <code>Shift+Enter</code> in the normal mode:</p>
+<p>The following maps ~~“Shift+Enter“~~ <code>\a</code> in the normal mode:</p>
 <pre class="m-code"><span class="c">&quot;&quot;rST: inline-link maker</span>
 <span class="c">&quot;surround with ``, find `, append __, move left by 2 characters, insert &lt;&gt;</span>
-<span class="k">au</span> <span class="nb">FileType</span> rst nmap <span class="p">&lt;</span>S<span class="p">-</span>CR<span class="p">&gt;</span> ysiW`<span class="k">f</span>`a__<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="m">2</span>hi<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span><span class="k">lt</span><span class="p">&gt;&gt;&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span></pre>
+<span class="k">au</span> <span class="nb">FileType</span> rst nmap <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">a</span> ysiW`<span class="k">f</span>`a__<span class="p">&lt;</span>ESC<span class="p">&gt;</span><span class="m">2</span>hi<span class="p">&lt;</span>SPACE<span class="p">&gt;&lt;</span><span class="k">lt</span><span class="p">&gt;&gt;&lt;</span>ESC<span class="p">&gt;</span><span class="k">i</span></pre>
 <p>to add an inline link:</p>
 <pre class="m-code"><span class="cp">.. before</span>
 A sample sentence with a link
@@ -221,11 +243,20 @@ a lot of text.
 A sample passage with a link_ and containing
 a lot of text.
 <span class="p">..</span> <span class="nt">_link:</span></pre>
-<p>You can also return back to the text by visiting the mark with <code>`l</code>.</p>
-<aside class="m-block m-default">
-<h3>Warning</h3>
-<p>Mapping <code>Shift-Enter</code> might require some <a href="https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter">extra configuration</a> in your terminal.</p>
-</aside>
+<p>You can return back to the text by visiting the mark with <code>l</code>.</p>
+<p>The following maps <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code> to create headings in the
+normal mode:</p>
+<pre class="m-code"><span class="c">&quot;&quot;rST: heading maker</span>
+<span class="k">au</span> <span class="nb">FileType</span> rst nmap h1 yypVr#
+<span class="k">au</span> <span class="nb">FileType</span> rst nmap h2 yypVr<span class="p">=</span>
+<span class="k">au</span> <span class="nb">FileType</span> rst nmap h3 yypVr<span class="p">-</span>
+<span class="k">au</span> <span class="nb">FileType</span> rst nmap h4 yypVr<span class="p">~</span></pre>
+<pre class="m-code"><span class="cp">.. before</span>
+A Heading
+
+<span class="cp">.. after</span>
+<span class="gh">A Heading</span>
+<span class="gh">#########</span></pre>
 </section>
 <section id="search-and-replace">
 <h3>Search and replace</h3>
@@ -284,7 +315,7 @@ you can improve it.</p>
         <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
       </div>
       <footer>
-        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-05-29T18:23:23.230821+02:00" class="dt-published">Fri 29 May 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/markdown.html">markdown</a>, <a href="https://ashwinvis.github.io/tag/rst.html">rst</a>, <a href="https://ashwinvis.github.io/tag/vim.html">vim</a>, <a href="https://ashwinvis.github.io/tag/writing.html">writing</a>.<time class="dt-read-mins">
+        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-05-29T18:23:23.230821+02:00" class="dt-published">Fri 29 May 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-11-20T00:00:00+01:00" class="dt-updated">Fri 20 November 2020</time></span> Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/markdown.html">markdown</a>, <a href="https://ashwinvis.github.io/tag/rst.html">rst</a>, <a href="https://ashwinvis.github.io/tag/vim.html">vim</a>, <a href="https://ashwinvis.github.io/tag/writing.html">writing</a>.<time class="dt-read-mins">
             <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
               <circle cx="12" cy="12" r="10"></circle>

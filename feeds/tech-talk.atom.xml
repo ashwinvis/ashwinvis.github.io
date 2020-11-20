@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2020-08-20T16:50:51+02:00</updated><entry><title>Fixing 434 links in 111 files for pyenv</title><link href="https://ashwinvis.github.io/fixing-links-for-pyenv.html" rel="alternate"></link><published>2020-08-20T16:50:51+02:00</published><updated>2020-08-20T16:50:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-08-20:/fixing-links-for-pyenv.html</id><summary type="html">&lt;p&gt;A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2020-11-20T00:00:00+01:00</updated><entry><title>Fixing 434 links in 111 files for pyenv</title><link href="https://ashwinvis.github.io/fixing-links-for-pyenv.html" rel="alternate"></link><published>2020-08-20T16:50:51+02:00</published><updated>2020-08-20T16:50:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-08-20:/fixing-links-for-pyenv.html</id><summary type="html">&lt;p&gt;A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The project pyenv has several small bash scripts, one for each version, both
 binary and source builds. This totalled to a staggering 111 files with 434
 lines of code containing the base URL &lt;a href="https://bitbucket.org/pypy/pypy/downloads"&gt;https://bitbucket.org/pypy/pypy/downloads&lt;/a&gt;
@@ -236,7 +236,7 @@ Fira Code font:&lt;/p&gt;
 &lt;aside class="m-note m-primary"&gt;
 Feel free to copy the &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst"&gt;raw-text&lt;/a&gt; and try it out on &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt;.&lt;/aside&gt;
 &lt;/section&gt;
-</content><category term="Tech Talk"></category><category term="software"></category><category term="typography"></category><category term="ligatures"></category><category term="programming"></category></entry><entry><title>Automate boring writing with Vim</title><link href="https://ashwinvis.github.io/automate-boring-writing-with-vim.html" rel="alternate"></link><published>2020-05-29T18:23:23+02:00</published><updated>2020-05-29T18:23:23+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-05-29:/automate-boring-writing-with-vim.html</id><summary type="html">&lt;p&gt;Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier&lt;/p&gt;
+</content><category term="Tech Talk"></category><category term="software"></category><category term="typography"></category><category term="ligatures"></category><category term="programming"></category></entry><entry><title>Automate boring writing with Vim</title><link href="https://ashwinvis.github.io/automate-boring-writing-with-vim.html" rel="alternate"></link><published>2020-05-29T18:23:23+02:00</published><updated>2020-11-20T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-05-29:/automate-boring-writing-with-vim.html</id><summary type="html">&lt;p&gt;Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;Two of my most used markup languages these days are Markdown and
 reStructuredText. For instance, a common operation is two add hyperlinks while
 blogging.  Both languages provide concise syntaxes to make links, but they tend
@@ -255,10 +255,17 @@ scenarios either of these commands &lt;code&gt;map, nmap, imap, vmap, noremap, n
 inoremap, vnoremap&lt;/code&gt;.&lt;/p&gt;
 &lt;section id="markdown"&gt;
 &lt;h3&gt;Markdown&lt;/h3&gt;
-&lt;p&gt;The following maps &lt;code&gt;Shift+Enter&lt;/code&gt; in the normal mode:&lt;/p&gt;
+&lt;p&gt;The following maps ~~“Shift+Enter“~~ &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
+&lt;aside class="m-block m-default"&gt;
+&lt;h3&gt;Warning&lt;/h3&gt;
+&lt;p&gt;Due to a quirk in terminals, it would be difficult to map &lt;code&gt;Shift+Enter&lt;/code&gt; /
+&lt;code&gt;&amp;lt;S-CR&amp;gt;&lt;/code&gt; and &lt;code&gt;Ctrl+Enter&lt;/code&gt; / &lt;code&gt;&amp;lt;C-CR&amp;gt;&lt;/code&gt;.  Mapping &lt;code&gt;Shift-Enter&lt;/code&gt; might
+be possible with some &lt;a href="https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter"&gt;extra configuration&lt;/a&gt;
+in your terminal. See also this stackoverflow &lt;a href="https://stackoverflow.com/a/598404"&gt;answer&lt;/a&gt;.&lt;/p&gt;
+&lt;/aside&gt;
 &lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: inline-link maker&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot;surround with [], find ], append ()&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;S&lt;span class="p"&gt;-&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; ysiW]&lt;span class="k"&gt;f&lt;/span&gt;]&lt;span class="k"&gt;a&lt;/span&gt;&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt; ysiW]&lt;span class="k"&gt;f&lt;/span&gt;]&lt;span class="k"&gt;a&lt;/span&gt;&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;
 &lt;p&gt;to add an inline link:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
 A sample sentence with a link
@@ -267,8 +274,9 @@ A sample sentence with a link
 A sample sentence with a [link]()&lt;/pre&gt;
 &lt;p&gt;The following maps &lt;code&gt;Enter&lt;/code&gt; in the normal mode:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: link maker&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;yank inner word, surround with [], find ], append [, paste, append ],&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; yiWysiW]&lt;span class="k"&gt;f&lt;/span&gt;]&lt;span class="k"&gt;a&lt;/span&gt;[&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;pa&lt;/span&gt;]&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Go&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;[&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;$&lt;span class="k"&gt;a&lt;/span&gt;:&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;span class="c"&gt;&amp;quot;yank inner word, surround with [], find ], append [], paste word, move right&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;mark l, go to end of file, add a line, append [], paste, move right, append:&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; yiWysiW]&lt;span class="k"&gt;f&lt;/span&gt;]&lt;span class="k"&gt;a&lt;/span&gt;[]&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;PlmlGo&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt;[]&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Pla:&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
 &lt;p&gt;to add a link with a handle:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
 A sample passage with a link and containing
@@ -278,13 +286,27 @@ a lot of text.
 A sample passage with a [&lt;span class="nt"&gt;link&lt;/span&gt;][&lt;span class="nl"&gt;link&lt;/span&gt;] and containing
 a lot of text.
 [link]:&lt;/pre&gt;
+&lt;p&gt;You can return back to the text by visiting the mark with &lt;code&gt;l&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The following maps &lt;code&gt;h1&lt;/code&gt;, &lt;code&gt;h2&lt;/code&gt;, &lt;code&gt;h3&lt;/code&gt;, &lt;code&gt;h4&lt;/code&gt; to create headings in the
+normal mode:&lt;/p&gt;
+&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: heading maker&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot;mark h, go to beginning of the line, add #/##/###/### , go back to mark h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h1 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;#&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h2 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;##&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h3 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;###&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h4 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;####&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
+A Heading
+
+&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;after&lt;/span&gt;
+&lt;span class="gh"&gt;#&lt;/span&gt; A Heading&lt;/pre&gt;
 &lt;/section&gt;
 &lt;section id="restructuredtext"&gt;
 &lt;h3&gt;reStructuredText&lt;/h3&gt;
-&lt;p&gt;The following maps &lt;code&gt;Shift+Enter&lt;/code&gt; in the normal mode:&lt;/p&gt;
+&lt;p&gt;The following maps ~~“Shift+Enter“~~ &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;rST: inline-link maker&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot;surround with ``, find `, append __, move left by 2 characters, insert &amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;S&lt;span class="p"&gt;-&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; ysiW`&lt;span class="k"&gt;f&lt;/span&gt;`a__&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;hi&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;lt&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt; ysiW`&lt;span class="k"&gt;f&lt;/span&gt;`a__&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;hi&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;lt&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;
 &lt;p&gt;to add an inline link:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="cp"&gt;.. before&lt;/span&gt;
 A sample sentence with a link
@@ -305,11 +327,20 @@ a lot of text.
 A sample passage with a link_ and containing
 a lot of text.
 &lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;_link:&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;You can also return back to the text by visiting the mark with &lt;code&gt;`l&lt;/code&gt;.&lt;/p&gt;
-&lt;aside class="m-block m-default"&gt;
-&lt;h3&gt;Warning&lt;/h3&gt;
-&lt;p&gt;Mapping &lt;code&gt;Shift-Enter&lt;/code&gt; might require some &lt;a href="https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter"&gt;extra configuration&lt;/a&gt; in your terminal.&lt;/p&gt;
-&lt;/aside&gt;
+&lt;p&gt;You can return back to the text by visiting the mark with &lt;code&gt;l&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The following maps &lt;code&gt;h1&lt;/code&gt;, &lt;code&gt;h2&lt;/code&gt;, &lt;code&gt;h3&lt;/code&gt;, &lt;code&gt;h4&lt;/code&gt; to create headings in the
+normal mode:&lt;/p&gt;
+&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;rST: heading maker&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h1 yypVr#
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h2 yypVr&lt;span class="p"&gt;=&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h3 yypVr&lt;span class="p"&gt;-&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h4 yypVr&lt;span class="p"&gt;~&lt;/span&gt;&lt;/pre&gt;
+&lt;pre class="m-code"&gt;&lt;span class="cp"&gt;.. before&lt;/span&gt;
+A Heading
+
+&lt;span class="cp"&gt;.. after&lt;/span&gt;
+&lt;span class="gh"&gt;A Heading&lt;/span&gt;
+&lt;span class="gh"&gt;#########&lt;/span&gt;&lt;/pre&gt;
 &lt;/section&gt;
 &lt;section id="search-and-replace"&gt;
 &lt;h3&gt;Search and replace&lt;/h3&gt;
