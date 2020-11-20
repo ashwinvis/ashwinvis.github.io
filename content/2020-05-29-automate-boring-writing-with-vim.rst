@@ -3,6 +3,7 @@ Automate boring writing with Vim
 
 :author: Ashwin Vishnu Mohanan
 :date: 2020-05-29T18:23:23.230821
+:modified: 2020-11-20
 :slug: automate-boring-writing-with-vim
 :status: published
 :summary: Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier
@@ -66,8 +67,9 @@ The following maps ``Enter`` in the normal mode:
 .. code:: vim
 
     ""Markdown: link maker
-    "yank inner word, surround with [], find ], append [, paste, append ],
-    au FileType markdown,pandoc nmap <CR> yiWysiW]f]a[<ESC>pa]<ESC>Go<ESC>i[<ESC>p<ESC>$a:<SPACE>
+    "yank inner word, surround with [], find ], append [], paste word, move right
+    "mark l, go to end of file, add a line, append [], paste, move right, append:
+    au FileType markdown,pandoc nmap <CR> yiWysiW]f]a[]<ESC>PlmlGo<ESC>a[]<ESC>Pla:<SPACE>
 
 to add a link with a handle:
 
@@ -82,6 +84,7 @@ to add a link with a handle:
     a lot of text.
     [link]:
 
+You can return back to the text by visiting the mark with ``l``.
 
 The following maps ``h1``, ``h2``, ``h3``, ``h4`` to create headings in the
 normal mode:
@@ -146,8 +149,27 @@ to add a link with a handle:
     a lot of text.
     .. _link:
 
-You can also return back to the text by visiting the mark with ``l``.
+You can return back to the text by visiting the mark with ``l``.
 
+The following maps ``h1``, ``h2``, ``h3``, ``h4`` to create headings in the
+normal mode:
+
+.. code:: vim
+
+    ""rST: heading maker
+    au FileType rst nmap h1 yypVr#
+    au FileType rst nmap h2 yypVr=
+    au FileType rst nmap h3 yypVr-
+    au FileType rst nmap h4 yypVr~
+
+.. code:: rst
+
+    .. before
+    A Heading
+
+    .. after
+    A Heading
+    #########
 
 Search and replace
 ==================
