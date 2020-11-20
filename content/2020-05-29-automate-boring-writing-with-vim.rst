@@ -10,7 +10,6 @@ Automate boring writing with Vim
 :category: Tech Talk
 :tags: software, markdown, rst, vim, writing
 
-
 Two of my most used markup languages these days are Markdown and
 reStructuredText. For instance, a common operation is two add hyperlinks while
 blogging.  Both languages provide concise syntaxes to make links, but they tend
@@ -35,9 +34,11 @@ inoremap, vnoremap``.
 Markdown
 =========
 
-The following maps ~~``Shift+Enter``~~ ``\a`` in the normal mode:
+.. role:: strike
 
-.. block-default:: Warning
+The following maps :strike:`Shift+Enter` ``\a`` in the normal mode:
+
+.. block-warning:: Warning
 
     Due to a quirk in terminals, it would be difficult to map ``Shift+Enter`` /
     ``<S-CR>`` and ``Ctrl+Enter`` / ``<C-CR>``.  Mapping ``Shift-Enter`` might
@@ -93,10 +94,10 @@ normal mode:
 
     ""Markdown: heading maker
     "mark h, go to beginning of the line, add #/##/###/### , go back to mark h
-    au FileType markdown,markdown.pandoc nmap h1 mh^i#<SPACE><ESC>`h
-    au FileType markdown,markdown.pandoc nmap h2 mh^i##<SPACE><ESC>`h
-    au FileType markdown,markdown.pandoc nmap h3 mh^i###<SPACE><ESC>`h
-    au FileType markdown,markdown.pandoc nmap h4 mh^i####<SPACE><ESC>`h
+    au FileType markdown,pandoc nmap h1 mh^i#<SPACE><ESC>`h
+    au FileType markdown,pandoc nmap h2 mh^i##<SPACE><ESC>`h
+    au FileType markdown,pandoc nmap h3 mh^i###<SPACE><ESC>`h
+    au FileType markdown,pandoc nmap h4 mh^i####<SPACE><ESC>`h
 
 .. code:: md
 
@@ -109,7 +110,7 @@ normal mode:
 reStructuredText
 ================
 
-The following maps ~~``Shift+Enter``~~ ``\a`` in the normal mode:
+The following maps :strike:`Shift+Enter` ``\a`` in the normal mode:
 
 .. code:: vim
 
