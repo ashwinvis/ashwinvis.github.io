@@ -255,8 +255,8 @@ scenarios either of these commands &lt;code&gt;map, nmap, imap, vmap, noremap, n
 inoremap, vnoremap&lt;/code&gt;.&lt;/p&gt;
 &lt;section id="markdown"&gt;
 &lt;h3&gt;Markdown&lt;/h3&gt;
-&lt;p&gt;The following maps ~~“Shift+Enter“~~ &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
-&lt;aside class="m-block m-default"&gt;
+&lt;p&gt;The following maps &lt;span class="strike"&gt;Shift+Enter&lt;/span&gt; &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
+&lt;aside class="m-block m-warning"&gt;
 &lt;h3&gt;Warning&lt;/h3&gt;
 &lt;p&gt;Due to a quirk in terminals, it would be difficult to map &lt;code&gt;Shift+Enter&lt;/code&gt; /
 &lt;code&gt;&amp;lt;S-CR&amp;gt;&lt;/code&gt; and &lt;code&gt;Ctrl+Enter&lt;/code&gt; / &lt;code&gt;&amp;lt;C-CR&amp;gt;&lt;/code&gt;.  Mapping &lt;code&gt;Shift-Enter&lt;/code&gt; might
@@ -291,10 +291,10 @@ a lot of text.
 normal mode:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: heading maker&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot;mark h, go to beginning of the line, add #/##/###/### , go back to mark h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h1 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;#&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h2 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;##&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h3 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;###&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;markdown.pandoc nmap h4 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;####&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;&lt;/pre&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h1 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;#&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h2 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;##&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h3 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;###&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h4 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;####&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;&lt;/pre&gt;
 &lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
 A Heading
 
@@ -303,7 +303,7 @@ A Heading
 &lt;/section&gt;
 &lt;section id="restructuredtext"&gt;
 &lt;h3&gt;reStructuredText&lt;/h3&gt;
-&lt;p&gt;The following maps ~~“Shift+Enter“~~ &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
+&lt;p&gt;The following maps &lt;span class="strike"&gt;Shift+Enter&lt;/span&gt; &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
 &lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;rST: inline-link maker&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot;surround with ``, find `, append __, move left by 2 characters, insert &amp;lt;&amp;gt;&lt;/span&gt;
 &lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt; ysiW`&lt;span class="k"&gt;f&lt;/span&gt;`a__&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;hi&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;lt&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;

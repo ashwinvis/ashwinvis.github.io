@@ -55,3 +55,8 @@ article > .e-content > p:first-child::first-letter {
 	padding-top: 0.5rem;
 	padding-right: 0.5rem;
 }
+
+.strike {
+  text-decoration: line-through;
+}
+
