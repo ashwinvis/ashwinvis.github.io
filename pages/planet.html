@@ -153,6 +153,142 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.volkerkrause.eu/2020/11/21/kde-introducing-kopeninghours.html" rel="bookmark" class="u-url"
+       title="Introducing KOpeningHours" target="_blank">
+      <time class="m-date" datetime="2020-11-21 10:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Introducing KOpeningHours
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Or: how what was supposed to be just a simple string parsing task escalated into computing planetary movements.</p>
+
+Opening Hours
+
+<p>While working on the <a href="/2020/06/13/kde-itinerary-osm-indoor-maps.html">train station maps</a>
+for <a href="https://apps.kde.org/en/itinerary">KDE Itinerary</a>
+I came across OSM’s <code>opening_hours</code> tags on restaurants/shops/amenities/etc. Those contain a description for which
+time intervals a given thing is available/open, in a machine-readable format.
+Being able to evaluate this would be nice, as KDE Itinerary knows the time you are
+going to be at a train station, so we can make the map more useful by focusing on elements that are actually
+available while you are there.</p>
+
+<p>OSM’s format is <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">extensively documented</a>,
+and also used by other systems that we use already (such as <a href="https://www.opentripplanner.org/">OpenTripPlanner</a>)
+or that might become relevant for us in the future (such as <a href="https://github.com/offenesdresden/ParkAPI">ParkAPI</a>).
+Another place where we encounter …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2020-11-21 10:00:00+00:00" class="dt-published"></time>
+  Sat 21 Nov 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2020/11/cross-the-country" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2020-11-21 07:11:24+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  On my way to cross the country… (with mask and distance of course! 😷)
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-21 07:11:24+00:00" class="dt-published"></time>
+  Sat 21 Nov 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2020/11/20/day-10--training-an-rnn-to-count-to-three/" rel="bookmark" class="u-url"
+       title="Day 10: Training an RNN to count to three" target="_blank">
+      <time class="m-date" datetime="2020-11-20 23:05:27+00:00">
+        Nov
+        <span class="m-date-day">
+          20
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Day 10: Training an RNN to count to three
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Yesterday I was trying to train an RNN to generate English that sounds kind of
+like Shakespeare. That was not working, so today I instead tried to do
+something MUCH simpler: train an RNN to generate sequences like</p>
+
+<pre><code>0 1 2 0 1 2 0 1 2 0 1 2
+</code></pre>
+
+<p>and slightly more complicated sequences like</p>
+
+<pre><code>0 1 2 1 0 1 2 1 0 1 2 1 0 1 2 1 0
+</code></pre>
+
+<p>I used (I think) the exact same RNN that I couldn&rsquo;t get to work yesterday to
+generate English by training it on Shakespeare, so it was cool to see that I could at least use it for
+this much simpler task (memorize short sequences of numbers).</p>
+
+the jupyter notebook
+
+<p>It&rsquo;s late so I won&rsquo;t explain all the code in this blog
+post, but here …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-20 23:05:27+00:00" class="dt-published"></time>
+  Fri 20 Nov 2020
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="http://pyfound.blogspot.com/2020/11/pypi-receives-aws-credits-for-open.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="PyPI receives AWS credits for open source projects" target="_blank">
       <time class="m-date" datetime="2020-11-20 15:48:29.686000-05:00">
@@ -203,7 +339,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  Catching up The last couple months have been hectic: more Sugar applications with Flatpak, quality of life improvements to Flatseal, tinkered with the idea of a Flathub-based OS for phones, showed case the tools to create modern native applications with JavaScript, shared my views on how Flatpak is reshaping the desktop’s future, teased the GNOME … <a href="https://blogs.gnome.org/tchx84/2020/11/20/sugar-learning-tools-part-iii/">Continue reading<span> "Sugar Learning Tools – Part III"</span></a>
+  Catching up The last couple of months have been hectic: more Sugar applications with Flatpak, quality of life improvements to Flatseal, tinkered with the idea of a Flathub-based OS for phones, showed case the tools to create modern native applications with JavaScript, shared my views on how Flatpak is reshaping the desktop’s future, teased the … <a href="https://blogs.gnome.org/tchx84/2020/11/20/sugar-learning-tools-part-iii/">Continue reading<span> "Sugar Learning Tools – Part III"</span></a>
   </p>
   </div>
 </header>
@@ -290,75 +426,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/11/beirut-port-explosion" rel="bookmark" class="u-url"
-       title="Reconstruction of the Beirut Port Explosion" target="_blank">
-      <time class="m-date" datetime="2020-11-20 15:40:12+00:00">
-        Nov
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Reconstruction of the Beirut Port Explosion
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In August there was a big explosion in the port of Beirut, which caused a lot of damage, unfortunately many people died. Forensic Architecture, a research group from London, has now reconstructed the course of events using publicly available information such as videos and photos. Especially the video on the website about the reconstruction is very interesting.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-20 15:40:12+00:00" class="dt-published"></time>
-  Fri 20 Nov 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.qt.io/blog/qt-creator-4.14-beta2-released" rel="bookmark" class="u-url"
-       title="Qt Creator 4.14 Beta2 released" target="_blank">
-      <time class="m-date" datetime="2020-11-20 12:02:33+00:00">
-        Nov
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Qt Creator 4.14 Beta2 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We are happy to announce the release of Qt Creator 4.14 Beta2 !</p>  
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-4.14-beta2-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2020-11-20 12:02:33+00:00" class="dt-published"></time>
-  Fri 20 Nov 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://drewdevault.com/2020/11/20/A-few-ways-to-make-money-in-FOSS.html" rel="bookmark" class="u-url"
        title="A few ways to make money in FOSS" target="_blank">
       <time class="m-date" datetime="2020-11-20 00:00:00+00:00">
@@ -431,60 +498,6 @@ vary quite a bit depending on the nature of your project.</p>
   on <time datetime="2020-11-20 00:00:00+00:00" class="dt-published"></time>
   Fri 20 Nov 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2020/11/19/day-9--generating-a-lot-of-nonsense-with-an-rnn/" rel="bookmark" class="u-url"
-       title="Day 9: Generating a lot of nonsense with an RNN" target="_blank">
-      <time class="m-date" datetime="2020-11-19 21:03:58+00:00">
-        Nov
-        <span class="m-date-day">
-          19
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Day 9: Generating a lot of nonsense with an RNN
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! On Monday I posted about <a href="https://lots-of-sketchrnn-faces.netlify.app/">generating faces with
-sketch-rnn</a>, which I did using a
-pre-trained RNN model.</p>
-
-<p>I want to train that model to genreate more complicated faces (which may or may
-not work!), but I decided that since I knew literally nothing about neural
-networks it would be good to start with
-something simpler: <a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">this char-rnn model from Karpathy that generates text that
-sounds vaguely
-Shakespearean</a>.</p>
-
-<p>After spending some time playing with Tensorflow, I decided to use
-PyTorch with the <a href="https://www.fast.ai/">fast.ai</a> helper libraries because it&rsquo;s
-what my friend Ray was using for his project.</p>
-
-<p>Here are some initial things I&rsquo;ve learned about training neural networks. All
-of this is pretty disjointed and I still have no idea what I&rsquo;m doing.</p>
-
-there are a lot of tensors
-
-<p>All the data seems to be tensors! A …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-19 21:03:58+00:00" class="dt-published"></time>
-  Thu 19 Nov 2020
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
