@@ -153,9 +153,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.volkerkrause.eu/2020/11/21/kde-introducing-kopeninghours.html" rel="bookmark" class="u-url"
-       title="Introducing KOpeningHours" target="_blank">
-      <time class="m-date" datetime="2020-11-21 10:00:00+00:00">
+    <a href="https://nibblestew.blogspot.com/2020/11/adding-very-preliminary-support-for-c.html" rel="bookmark" class="u-url"
+       title="Adding (very) preliminary support for C++ modules in Meson" target="_blank">
+      <time class="m-date" datetime="2020-11-21 21:44:00+00:00">
         Nov
         <span class="m-date-day">
           21
@@ -163,35 +163,100 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Introducing KOpeningHours
+      Adding (very) preliminary support for C++ modules in Meson
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Or: how what was supposed to be just a simple string parsing task escalated into computing planetary movements.</p>
-
-Opening Hours
-
-<p>While working on the <a href="/2020/06/13/kde-itinerary-osm-indoor-maps.html">train station maps</a>
-for <a href="https://apps.kde.org/en/itinerary">KDE Itinerary</a>
-I came across OSM’s <code>opening_hours</code> tags on restaurants/shops/amenities/etc. Those contain a description for which
-time intervals a given thing is available/open, in a machine-readable format.
-Being able to evaluate this would be nice, as KDE Itinerary knows the time you are
-going to be at a train station, so we can make the map more useful by focusing on elements that are actually
-available while you are there.</p>
-
-<p>OSM’s format is <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">extensively documented</a>,
-and also used by other systems that we use already (such as <a href="https://www.opentripplanner.org/">OpenTripPlanner</a>)
-or that might become relevant for us in the future (such as <a href="https://github.com/offenesdresden/ParkAPI">ParkAPI</a>).
-Another place where we encounter …</p>
+  <p>One of the most common questions people ask about Meson is why does it not yet have support for building C++ modules. Up until now the answer has been simple: no compiler really supports it yet. However Visual Studio has added sufficient functionality in their latest 2019 developer preview that an implementation in Meson has become feasible. The actual code can be found <a href="https://github.com/mesonbuild/meson/pull/8013">in this merge request</a> for those brave enough to try it out.</p><p>The basic problem with C++ modules is the same as with Fortran modules: you can no longer build source files in an arbitrary order. Instead you have to scan the contents of files, see what modules each source file generates and consumes and orchestrate the build so that all source files that produce modules are built before any source files that consume them. This requires …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2020-11-21 10:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2020-11-21 21:44:00+00:00" class="dt-published"></time>
+  Sat 21 Nov 2020
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://morepypy.blogspot.com/2020/11/pypy-733-triple-release-python-37-36.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
+       title="PyPy 7.3.3 triple release: python 3.7, 3.6, and 2.7" target="_blank">
+      <time class="m-date" datetime="2020-11-21 20:32:57.067000+01:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      PyPy 7.3.3 triple release: python 3.7, 3.6, and 2.7
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>&nbsp;The PyPy team is proud to release the version 7.3.3 of PyPy, which includes
+three different interpreters:
+</p><blockquote>
+<div><ul><li>PyPy2.7, which is an interpreter supporting the syntax and the features of
+Python 2.7 including the stdlib for CPython 2.7.18 (updated from the
+previous version)</li><li>PyPy3.6: which is an interpreter supporting the syntax and the features of
+Python 3.6, including the stdlib for CPython 3.6.12 (updated from the
+previous version).</li><li>PyPy3.7 beta: which is our second release of an interpreter supporting the
+syntax and the features of Python 3.7, including the stdlib for CPython
+3.7.9. We call this beta quality software, there may be issues about
+compatibility with new and changed features in CPython 3.7.
+Please let us know what is broken or missing. We have not implemented …</li></ul></div></blockquote>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>mattip (noreply@blogger.com)</b></span>
+  on <time datetime="2020-11-21 20:32:57.067000+01:00" class="dt-published"></time>
+  Sat 21 Nov 2020
+  in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://knro.blogspot.com/2020/11/kstars-v350-is-released.html" rel="bookmark" class="u-url"
+       title="KStars v3.5.0 is Released" target="_blank">
+      <time class="m-date" datetime="2020-11-21 15:03:22+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      KStars v3.5.0 is Released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Glad to announce the release of KStars v3.5.0 for <a href="https://edu.kde.org/kstars">Windows, MacOS, and Linux</a>. This release marks a significant milestone for KStars with the integration of <a href="https://github.com/rlancaste/stellarsolver">StellarSolver</a>, the Cross Platform Sextractor and Astrometry.net-Based Internal Astrometric Solver.</p><p>Check out the <a href="https://github.com/KDE/kstars/blob/master/ChangeLog">Change log</a> for more details.</p>StellarSolver<b>Robert Lancaster</b> spent a significant portion of 2020 developing and refining this amazing library. Here is an excerpt from StellarSolver Github on the motivations behnd its development:<div></div><div>
+<blockquote>Astrometry.net is a fantastic astrometric plate solver, but it is command line only and has many dependencies such as python, netpbm, libjpeg, cfitsio, and many other things. It is fairly easy to install on Linux and works incredibly well in that environment. With the correct recipes in homebrew, craft, macports, or other package managers, it can be installed and run from the command line on …</blockquote></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jasem Mutlaq (KNRO)</b></span>
+  on <time datetime="2020-11-21 15:03:22+00:00" class="dt-published"></time>
   Sat 21 Nov 2020
   in Planet KDE.
 </footer>
@@ -252,7 +317,7 @@ Another place where we encounter …</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p>There are many wordy articles on configuring your web server’s <a href="https://thoughtstreams.io/glyph/there-is-no-ssl/">TLS</a> ciphers. This is not one of them. Instead I will share a configuration that scores a straight “<a href="http://www.youtube.com/watch?v=WVzp4MJRKHc">A</a>” on <a href="https://www.ssllabs.com/ssltest/"><em>Qualys</em>’s SSL Server Test</a> in 2020.</p>
+  <p>There are many wordy articles on configuring your web server’s <a href="https://thoughtstreams.io/glyph/there-is-no-ssl/">TLS</a> ciphers. This is not one of them. Instead, I will share a configuration that scores a straight “<a href="http://www.youtube.com/watch?v=WVzp4MJRKHc">A</a>” on <a href="https://www.ssllabs.com/ssltest/"><em>Qualys</em>’s SSL Server Test</a> in 2020.</p>
   </p>
   </div>
 </header>
@@ -262,6 +327,40 @@ Another place where we encounter …</p>
   on <time datetime="2020-11-21 00:00:00+00:00" class="dt-published"></time>
   Sat 21 Nov 2020
   in Hynek Schlawak.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6156626" rel="bookmark" class="u-url"
+       title="Head-Mounted Display-Based Application for Cognitive Training" target="_blank">
+      <time class="m-date" datetime="2020-11-21 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Head-Mounted Display-Based Application for Cognitive Training
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Virtual Reality (VR) has had significant advances in rehabilitation, due to the gamification of cognitive activities that facilitate treatment. On the other hand, Immersive Virtual Reality (IVR) produces outstanding results due to the interactive features with the user. This work introduces a VR application for memory rehabilitation by walking through a maze and using the Oculus Go head-mounted display (HMD) technology. The mechanics of the game require memorizing geometric shapes while the player progresses in two modes, autonomous or manual, with two levels of difficulty depending on the number of elements to remember. The application is developed in the Unity 3D video game engine considering the optimization of computational resources to improve the performance in the processing and maintaining adequate benefits for the user, while the generated data is stored and sent to a remote server. The maze task was …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>I García-Magariño</b></span>
+  on <time datetime="2020-11-21 00:00:00+00:00" class="dt-published"></time>
+  Sat 21 Nov 2020
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -349,40 +448,6 @@ post, but here …</p>
   on <time datetime="2020-11-20 15:48:29.686000-05:00" class="dt-published"></time>
   Fri 20 Nov 2020
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/tchx84/2020/11/20/sugar-learning-tools-part-iii/" rel="bookmark" class="u-url"
-       title="Sugar Learning Tools – Part III" target="_blank">
-      <time class="m-date" datetime="2020-11-20 16:08:49+00:00">
-        Nov
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Sugar Learning Tools – Part III
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Catching up The last couple of months have been hectic: more Sugar applications with Flatpak, quality of life improvements to Flatseal, tinkered with the idea of a Flathub-based OS for phones, showed case the tools to create modern native applications with JavaScript, shared my views on how Flatpak is reshaping the desktop’s future, teased the … <a href="https://blogs.gnome.org/tchx84/2020/11/20/sugar-learning-tools-part-iii/">Continue reading<span> "Sugar Learning Tools – Part III"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Martín Abente Lahaye</b></span>
-  on <time datetime="2020-11-20 16:08:49+00:00" class="dt-published"></time>
-  Fri 20 Nov 2020
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -567,40 +632,6 @@ vary quite a bit depending on the nature of your project.</p>
   on <time datetime="2020-11-18 16:55:02+00:00" class="dt-published"></time>
   Wed 18 Nov 2020
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6153577" rel="bookmark" class="u-url"
-       title="Pyruvate Kinase M2 Coordinates Metabolism Switch between Glycolysis and Glutaminolysis in Cancer Cells" target="_blank">
-      <time class="m-date" datetime="2020-11-17 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          17
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Pyruvate Kinase M2 Coordinates Metabolism Switch between Glycolysis and Glutaminolysis in Cancer Cells
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Cancer cells alter their nutrition metabolism to cope the stressful environment. One important metabolism adjustment is that cancer cells activate glutaminolysis in response to the reduced carbon from glucose entering into the TCA cycle due to inactivation of several enzymes in glycolysis. An important question is how the cancer cells coordinate the changes of glycolysis and glutaminolysis. In this report, we demonstrate that the pyruvate kinase inactive dimer PKM2 facilitates activation of glutaminolysis. Our experiments show that growth stimulations promote PKM2 dimer. The dimer PKM2 plays a role in regulation of glutaminolysis by upregulation of mitochondrial glutaminase I (GLS-1). PKM2 dimer regulates the GLS-1 expression by controlling internal ribosome entry site (IRES)-dependent c-myc translation. Growth stimulations promote PKM2 interacting with c-myc IRES-RNA, thus facilitating c-myc IRES-dependent translation. Our study reveals an important linker that coordinates the metabolism adjustment in …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>ZR Liu</b></span>
-  on <time datetime="2020-11-17 00:00:00+00:00" class="dt-published"></time>
-  Tue 17 Nov 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -920,79 +951,6 @@ second poll to try to get data outside of my bubble:</p><blockquote><div><p>Than
   on <time datetime="2020-11-03 08:35:00-05:00" class="dt-published"></time>
   Tue 03 Nov 2020
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fortran-lang.org/newsletter/2020/11/01/Fortran-Newsletter-November-2020/" rel="bookmark" class="u-url"
-       title="Fortran newsletter: November 2020" target="_blank">
-      <time class="m-date" datetime="2020-11-01 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Fortran newsletter: November 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Welcome to the November 2020 edition of the monthly Fortran newsletter.
-The newsletter comes out on the first calendar day of every month and details
-Fortran news from the previous month.</p>
-
-<ul></ul>
-
-fortran-lang.org
-
-<p>This month we’ve had a few additions and improvements to the website:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/152">#152</a>:
-New mini-book on setting up the Fortran development environment.
-You can read it <a href="https://fortran-lang.org/learn/os_setup">here</a>.</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/147">#147</a>:
-Automated posting to @fortranlang Twitter using twitter-together.</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/155">#155</a>:
-Fix for a security vulnerability reported by the GitHub Security Team.</li>
-  <li>The following packages were added to the
-<a href="https://fortran-lang.org/packages">Package Index</a>:
-atomsk, ddPCM, DFTB+, DFT-D4, ELPA, ELSI, FortJSON, fypp, HANDE, libmbd, libnegf,
-mpifx, NTPoly, NWChem, OpenMolcas, PoisFFT, QMD-PROGRESS, scalapackfx,
-tapenade, wannier90, and xtb.</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/145">#145</a>,
-<a href="https://github.com/fortran-lang/fortran-lang.org/pull/146">#146</a>,
-<a href="https://github.com/fortran-lang/fortran-lang.org/pull/154">#154</a>,
-<a href="https://github.com/fortran-lang/fortran-lang.org/pull/158">#158</a>:
-Minor fixes and improvements.</li>
-</ul>
-
-<p>Ongoing work:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/160">#160</a> (WIP):
-In-depth introduction for Fortran with Make.</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/156">#156</a> (WIP):
-Updating the mini-book on building programs.</li>
-</ul>
-
-<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us …</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-01 00:00:00+00:00" class="dt-published"></time>
-  Sun 01 Nov 2020
-  in Fortran Newsletter.
 </footer>
 <div class="m-clearfix-l"></div>
 
