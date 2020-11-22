@@ -153,6 +153,50 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/hdf5-cmake-build/" rel="bookmark" class="u-url"
+       title="HDF5 CMake build" target="_blank">
+      <time class="m-date" datetime="2020-11-22 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      HDF5 CMake build
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>We strongly recommend using CMake to build HDF5 rather than autotools.
+For those building HDF5 on Windows, CMake is required.
+There is a slight quirk with current (HDF5 1.10.7, 1.12.0) HDF5 CMake scripts in that the &ldquo;new&rdquo; <code>cmake -B build</code> flags don&rsquo;t work properly&ndash;the CMake build will fail partway through with weird platform-dependent errors.
+HDF Group is working to improve CMake and has merged pull requests from us with CMake improvements for HDF5.</p>
+<p>These CMake options build HDF5 for Fortran as fast as possible by omitting optional items.
+If these seems too complicated, try our one-step
+<a href="https://github.com/geospace-code/h5fortran/blob/master/scripts/build_hdf5.py">Python build HDF5</a>
+script.</p>
+<div><pre><code>mkdir build
+cd build
+cmake -S /path/to/hdf5_source -DCMAKE_INSTALL_PREFIX<span>=</span>~/.local/hdf5 -DHDF5_GENERATE_HEADERS:BOOL<span>=</span>false -DHDF5_DISABLE_COMPILER_WARNINGS:BOOL<span>=</span>true -DBUILD_SHARED_LIBS:BOOL<span>=</span>false -DCMAKE_BUILD_TYPE<span>=</span>Release -DHDF5_BUILD_FORTRAN:BOOL<span>=</span>true -DHDF5_BUILD_CPP_LIB:BOOL<span>=</span>false -DHDF5_BUILD_TOOLS:BOOL<span>=</span>false -DBUILD_TESTING:BOOL …</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-22 00:00:00+00:00" class="dt-published"></time>
+  Sun 22 Nov 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://nibblestew.blogspot.com/2020/11/adding-very-preliminary-support-for-c.html" rel="bookmark" class="u-url"
        title="Adding (very) preliminary support for C++ modules in Meson" target="_blank">
       <time class="m-date" datetime="2020-11-21 21:44:00+00:00">
@@ -632,45 +676,6 @@ vary quite a bit depending on the nature of your project.</p>
   on <time datetime="2020-11-18 16:55:02+00:00" class="dt-published"></time>
   Wed 18 Nov 2020
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/hdradio-interference-license-free-fm/" rel="bookmark" class="u-url"
-       title="HD Radio interference to license-free FM" target="_blank">
-      <time class="m-date" datetime="2020-11-16 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          16
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      HD Radio interference to license-free FM
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In urban and extended suburban areas typical of southern California and the northeast United States, it can be difficult to find a clear broadcast FM (87.9-107.9 MHz) channel to use for license-free transmissions.
-As 2020 drove many communities to outdoor activities, many organizations used license-free FM transmitters to share music, lectures and entertainment a large audience locally in their automobiles.
-An issue we&rsquo;ve observed is poor audio quality and erratic coverage of the license-free FM system due to sideband spillover of adjacent HD Radio broadcasts.
-With HD Radio, the first adjacent channel spillover power is hundreds to thousands of times higher on average than with an analog FM signal alone.
-The usual sound of HD Radio interference is simply a hissing noise that is difficult to distinguish from ordinary noise when a station isn&rsquo;t present.</p>
-Detecting …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-16 00:00:00+00:00" class="dt-published"></time>
-  Mon 16 Nov 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
