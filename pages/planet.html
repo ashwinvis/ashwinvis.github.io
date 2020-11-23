@@ -153,32 +153,48 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6157513" rel="bookmark" class="u-url"
-       title="An Examination of the Performance of the interRAI Risk of Harm to Others Clinical Assessment Protocol (RHO CAP) in Inpatient Mental Health Settings" target="_blank">
-      <time class="m-date" datetime="2020-11-22 00:00:00+00:00">
+    <a href="https://www.scivision.dev/numpy-cumtrapz-matlab/" rel="bookmark" class="u-url"
+       title="Python cumtrapz vs. Matlab" target="_blank">
+      <time class="m-date" datetime="2020-11-23 00:00:00+00:00">
         Nov
         <span class="m-date-day">
-          22
+          23
         </span>
         2020
       </time>
       <div class="p-name">
-      An Examination of the Performance of the interRAI Risk of Harm to Others Clinical Assessment Protocol (RHO CAP) in Inpatient Mental Health Settings
+      Python cumtrapz vs. Matlab
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  We study violence risk prediction at St. Joseph's Healthcare Hamilton. Data from January 2016 to December 2017 have been anonymized and collected, for a total of 870 episodes of inpatient aggressions perpetrated by 337 patients. We examine the predictive performance of a clinical indicator embedded in a mandatory assessment tool for psychiatric facilities in Ontario, the Resident Assessment Instrument for Mental Health (RAI-MH): the Risk of Harm to Others Clinical Assessment Protocol (RHO CAP). The RHO CAP's performance is studied among two groups of patients. Moreover, an analysis of the most important risk factors associated with harmful incidents is presented. The RHO CAP has demonstrated a better performance in discriminating which patients were more at risk to commit some type of aggression than at identifying the risk of harm among those who will commit aggression.
+  <p>The 0-based indexing of Python and Numpy versus the 1-based indexing of Matlab is perhaps the most obvious difference when working between the languages.
+Other, more subtle defaults come into play and may not be immediately caught within functions except by manual checks.</p>
+<p>In atmospheric science among other fields, cumulative integration implemented as cumulative trapezoidal numerical integration is a common function named &ldquo;cumtrapz&rdquo;.
+Distinctive behavior between Matlab
+<a href="https://www.mathworks.com/help/matlab/ref/cumtrapz.html">cumtrapz</a>
+and SciPy
+<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.cumtrapz.html">cumtrapz</a>
+might not be immediately caught inside a function, although it&rsquo;s obvious when manually checking.
+Specifically, SciPy cumtrapz needs the <code>initial=0</code> argument to match Matlab.
+Let&rsquo;s show this by example:</p>
+Example
+<p>In both languages, suppose</p>
+<div><pre><code>x <span>=</span> [<span>-</span><span>2.5</span>, <span>5</span>, <span>10</span>]
+</code></pre></div><p>Matlab (or GNU Octave) outputs:</p>
+<div><pre><code>y = cumtrapz(x)
+[<span>0</span>, <span>1.25</span>, <span>8.75</span>]
+</code></pre></div><p>Here comes the wrinkle&ndash;SciPy cumtrapz output one element less than the input by …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>E Hassini</b></span>
-  on <time datetime="2020-11-22 00:00:00+00:00" class="dt-published"></time>
-  Sun 22 Nov 2020
-  in SciCombinator - Last 10 Days.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-23 00:00:00+00:00" class="dt-published"></time>
+  Mon 23 Nov 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -187,8 +203,147 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/hdf5-cmake-build/" rel="bookmark" class="u-url"
-       title="HDF5 CMake build" target="_blank">
+    <a href="https://jlelse.blog/thoughts/2020/11/no-analytics" rel="bookmark" class="u-url"
+       title="No analytics" target="_blank">
+      <time class="m-date" datetime="2020-11-22 21:02:01+00:00">
+        Nov
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      No analytics
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Since moving my blog to my new CMS, I don’t count visits to this website anymore. Previously I used my own view counter named KISSS or kis3. It served me quite well. But to be honest, I don’t even miss the numbers, now that I can’t see them anymore.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-22 21:02:01+00:00" class="dt-published"></time>
+  Sun 22 Nov 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kubuntu.org/news/kubuntu-is-not-free-it-is-free/" rel="bookmark" class="u-url"
+       title="Kubuntu is not Free, it is Free" target="_blank">
+      <time class="m-date" datetime="2020-11-22 16:32:11+00:00">
+        Nov
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Kubuntu is not Free, it is Free
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Human perception has never ceased to amaze me, and in the context of this article, it is the perception of value, and the value of contribution that I want us to think about.</p>
+
+
+
+<img alt="" src="//kubuntu.org/wp-content/uploads/2020/11/ac99/pexels-andrea-piacquadio-712413-1024x683.jpg">
+
+
+
+<p>Photo by <strong><a href="https://www.pexels.com/@olly?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Andrea Piacquadio</a></strong> from <strong><a href="https://www.pexels.com/photo/woman-open-arms-while-closed-eyes-smiling-photo-712413/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></p>
+
+
+
+It is yours in title, deed and asset
+
+
+
+<p>A common miss perception with Open Source software is the notion of free.  Many people associate free in its simplest form, that of no monetary cost, and unfortunately this ultimately leads to the second conclusion of ‘cheap’ and low quality. Proprietary commercial vendors, and their corporate marketing departments know this and use that knowledge to focus their audience on ‘perceived value’. In some ways free of cost in the open source software world is a significant disadvantage, because it means there are no funds available to pay for a marketing machine to generate …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kubuntu News</b></span>
+  on <time datetime="2020-11-22 16:32:11+00:00" class="dt-published"></time>
+  Sun 22 Nov 2020
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2020/11/22/new-zine--hell-yes--css-/" rel="bookmark" class="u-url"
+       title="New zine: Hell Yes! CSS!" target="_blank">
+      <time class="m-date" datetime="2020-11-22 11:27:36+00:00">
+        Nov
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      New zine: Hell Yes! CSS!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! Last Friday I released a new zine called Hell Yes! CSS!</p>
+
+<p>You can get it for $12 here:
+<a href="https://wizardzines.com/zines/css">https://wizardzines.com/zines/css</a>, or get
+a <a href="https://wizardzines.com/zines/all-the-zines/">9-pack of all my zines here</a>
+for $88.</p>
+
+<p>Here&rsquo;s the cover and table of contents:</p>
+
+<div>
+<a href="https://wizardzines.com/zines/css"><img src="https://jvns.ca/images/css-cover.png"></a>
+<a href="https://jvns.ca/images/css-toc.png"><img src="https://jvns.ca/images/css-toc.png"></a>
+</div>
+
+why CSS?
+
+<p>I’ve been writing CSS on and off (mostly off) for about 15 years. For almost all of that time, CSS
+really felt impossible to me &ndash; every time I did a seemingly simple task (like
+the classic “center a div”), I had to Google how to do it, then it wouldn’t
+work the way I expected, than I’d change random things, and eventually the
+thing would kind of sort of work. Then I’d never really internalize what I’d
+learned and I’d start again from scratch the next time. I didn …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-11-22 11:27:36+00:00" class="dt-published"></time>
+  Sun 22 Nov 2020
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6158549" rel="bookmark" class="u-url"
+       title="A prospective observational cohort study to evaluate patients' experience during sequential cataract surgery under monitored anesthesia care and topical anesthesia" target="_blank">
       <time class="m-date" datetime="2020-11-22 00:00:00+00:00">
         Nov
         <span class="m-date-day">
@@ -197,32 +352,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      HDF5 CMake build
+      A prospective observational cohort study to evaluate patients' experience during sequential cataract surgery under monitored anesthesia care and topical anesthesia
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>We strongly recommend using CMake to build HDF5 rather than autotools.
-For those building HDF5 on Windows, CMake is required.
-There is a slight quirk with current (HDF5 1.10.7, 1.12.0) HDF5 CMake scripts in that the &ldquo;new&rdquo; <code>cmake -B build</code> flags don&rsquo;t work properly&ndash;the CMake build will fail partway through with weird platform-dependent errors.
-HDF Group is working to improve CMake and has merged pull requests from us with CMake improvements for HDF5.</p>
-<p>These CMake options build HDF5 for Fortran as fast as possible by omitting optional items.
-If these seems too complicated, try our one-step
-<a href="https://github.com/geospace-code/h5fortran/blob/master/scripts/build_hdf5.py">Python build HDF5</a>
-script.</p>
-<div><pre><code>mkdir build
-cd build
-cmake -S /path/to/hdf5_source -DCMAKE_INSTALL_PREFIX<span>=</span>~/.local/hdf5 -DHDF5_GENERATE_HEADERS:BOOL<span>=</span>false -DHDF5_DISABLE_COMPILER_WARNINGS:BOOL<span>=</span>true -DBUILD_SHARED_LIBS:BOOL<span>=</span>false -DCMAKE_BUILD_TYPE<span>=</span>Release -DHDF5_BUILD_FORTRAN:BOOL<span>=</span>true -DHDF5_BUILD_CPP_LIB:BOOL<span>=</span>false -DHDF5_BUILD_TOOLS:BOOL<span>=</span>false -DBUILD_TESTING:BOOL …</code></pre></div>
+  Cataract surgery is the most common ambulatory surgery at our outpatient surgery center. Several studies have shown that patients with bilateral cataracts may experience different levels of anxiety, pain, and awareness during the first and second cataract extraction.A prospective observational cohort study was conducted at The Ohio State University Wexner Medical Center Eye and Ear Institute in order to compare anxiety, general comfort, awareness, and pain levels in patients undergoing sequential cataract surgeries. Likert and numerical rating scale were used to assess the outcomes. Patients receiving monitored anesthesia care and topical anesthesia were included.A total of 198 patients were enrolled in this study, 116 patients (59%) were female and 157 patients (78%) were Caucasians with a median age of 67 years among participants. Patients with rating "no anxiety" or feeling "somewhat anxious" were significantly higher during surgery 2 …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
+  <span class="p-author"><b>DS Lowery</b></span>
   on <time datetime="2020-11-22 00:00:00+00:00" class="dt-published"></time>
   Sun 22 Nov 2020
-  in Michael Hirsch, Ph.D..
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -310,75 +455,6 @@ Please let us know what is broken or missing. We have not implemented …</li></
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://knro.blogspot.com/2020/11/kstars-v350-is-released.html" rel="bookmark" class="u-url"
-       title="KStars v3.5.0 is Released" target="_blank">
-      <time class="m-date" datetime="2020-11-21 15:03:22+00:00">
-        Nov
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      KStars v3.5.0 is Released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Glad to announce the release of KStars v3.5.0 for <a href="https://edu.kde.org/kstars">Windows, MacOS, and Linux</a>. This release marks a significant milestone for KStars with the integration of <a href="https://github.com/rlancaste/stellarsolver">StellarSolver</a>, the Cross Platform Sextractor and Astrometry.net-Based Internal Astrometric Solver.</p><p>Check out the <a href="https://github.com/KDE/kstars/blob/master/ChangeLog">Change log</a> for more details.</p>StellarSolver<b>Robert Lancaster</b> spent a significant portion of 2020 developing and refining this amazing library. Here is an excerpt from StellarSolver Github on the motivations behnd its development:<div></div><div>
-<blockquote>Astrometry.net is a fantastic astrometric plate solver, but it is command line only and has many dependencies such as python, netpbm, libjpeg, cfitsio, and many other things. It is fairly easy to install on Linux and works incredibly well in that environment. With the correct recipes in homebrew, craft, macports, or other package managers, it can be installed and run from the command line on …</blockquote></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jasem Mutlaq (KNRO)</b></span>
-  on <time datetime="2020-11-21 15:03:22+00:00" class="dt-published"></time>
-  Sat 21 Nov 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2020/11/cross-the-country" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-11-21 07:11:24+00:00">
-        Nov
-        <span class="m-date-day">
-          21
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  On my way to cross the country… (with mask and distance of course! 😷)
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-21 07:11:24+00:00" class="dt-published"></time>
-  Sat 21 Nov 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/" rel="bookmark" class="u-url"
        title="Hardening Your Web Server’s SSL Ciphers" target="_blank">
       <time class="m-date" datetime="2020-11-21 00:00:00+00:00">
@@ -405,59 +481,6 @@ Please let us know what is broken or missing. We have not implemented …</li></
   on <time datetime="2020-11-21 00:00:00+00:00" class="dt-published"></time>
   Sat 21 Nov 2020
   in Hynek Schlawak.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2020/11/20/day-10--training-an-rnn-to-count-to-three/" rel="bookmark" class="u-url"
-       title="Day 10: Training an RNN to count to three" target="_blank">
-      <time class="m-date" datetime="2020-11-20 23:05:27+00:00">
-        Nov
-        <span class="m-date-day">
-          20
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Day 10: Training an RNN to count to three
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Yesterday I was trying to train an RNN to generate English that sounds kind of
-like Shakespeare. That was not working, so today I instead tried to do
-something MUCH simpler: train an RNN to generate sequences like</p>
-
-<pre><code>0 1 2 0 1 2 0 1 2 0 1 2
-</code></pre>
-
-<p>and slightly more complicated sequences like</p>
-
-<pre><code>0 1 2 1 0 1 2 1 0 1 2 1 0 1 2 1 0
-</code></pre>
-
-<p>I used (I think) the exact same RNN that I couldn&rsquo;t get to work yesterday to
-generate English by training it on Shakespeare, so it was cool to see that I could at least use it for
-this much simpler task (memorize short sequences of numbers).</p>
-
-the jupyter notebook
-
-<p>It&rsquo;s late so I won&rsquo;t explain all the code in this blog
-post, but here …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-20 23:05:27+00:00" class="dt-published"></time>
-  Fri 20 Nov 2020
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
