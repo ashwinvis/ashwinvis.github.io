@@ -153,73 +153,37 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/links/2020/12/advent-of-code" rel="bookmark" class="u-url"
-       title="Advent of Code" target="_blank">
-      <time class="m-date" datetime="2020-12-01 22:14:20+00:00">
+    <a href="https://tsdgeos.blogspot.com/2020/12/cmake-use-new-style-imported-targets-to.html" rel="bookmark" class="u-url"
+       title="CMake: Use new style imported targets to link libraries" target="_blank">
+      <time class="m-date" datetime="2020-12-02 22:41:40+00:00">
         Dec
         <span class="m-date-day">
-          01
+          02
         </span>
         2020
       </time>
       <div class="p-name">
-      Advent of Code
+      CMake: Use new style imported targets to link libraries
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  This project has been around for a couple of years, but this time I’m taking part in the Advent of Code for the first time. Every day there is a small programming puzzle (with two parts). I found today’s task pretty easy to implement, let’s see how it will be the next days.
+  <p> What does that mean?</p><p></p><p>It means this <a href="https://invent.kde.org/graphics/okular/-/commit/3129b642f996589f1c7fcee513741e1993924241">https://invent.kde.org/graphics/okular/-/commit/3129b642f996589f1c7fcee513741e1993924241</a></p><p></p><p>That is, you add <code>JPEG::JPEG</code> to <code>target_link_libraries</code>, and that's it, no need to add the includes, the compile_definitions and whatnot.</p><p> </p><p>This has multiple advantages to the old mode:</p><ul>
+<li>You can't misspell it, since these are actual things cmake knows about not strings so if you write something like <code>JPEG::JPG</code> it will fail at cmake stage
+</li>
+<li>You won't forget to add the include (most of us did at some point) because you don't need to :)</li>
+<li>The include path is just for that particular target (the old method added it to "everyone")</li>
+<li>It's basically less lines so it's harder to do wrong</li>
+</ul><p> </p><p>To know if you can use that you'll need to use the cmake help, for example the imported target is described at <a href="https://cmake.org/cmake/help/latest/module/FindJPEG.html">https …</a></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-01 22:14:20+00:00" class="dt-published"></time>
-  Tue 01 Dec 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pointieststick.com/2020/12/01/lenovo-thinkpad-x1-yoga-6-month-impressions/" rel="bookmark" class="u-url"
-       title="Lenovo ThinkPad X1 Yoga: 6 month impressions" target="_blank">
-      <time class="m-date" datetime="2020-12-01 17:11:27+00:00">
-        Dec
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Lenovo ThinkPad X1 Yoga: 6 month impressions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I’ve now had my <a href="https://pointieststick.com/2020/06/08/lenovo-thinkpad-x1-yoga-impressions-bugs-workarounds-and-thoughts-about-the-future/">Lenovo ThinkPad X1 Yoga</a> laptop for about 6 months, so I thought I’d provide a quick update about how it’s going to use this laptop every day with openSUSE Tumbleweed running KDE Plasma. Let’s explore what’s changed since then:</p>
-
-
-
-Keyboard
-
-
-
-<p>Initially, I complained about some aspects of the keyboard layout, but I’ve gotten used to the Home/End/PageUp/PageDown positioning, and the swapped position of the Fn and Ctrl keys. These are fine now. Lack of media keys is okay too since I’ve used the Shortcuts KCM to set my own. However I just can’t get used to the PrintScreen key being between the right Alt and Ctrl keys. I probably press it by accident 10 times a day and bring up Spectacle when I don’t …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-12-01 17:11:27+00:00" class="dt-published"></time>
-  Tue 01 Dec 2020
+  <span class="p-author"><b>Albert Astals Cid</b></span>
+  on <time datetime="2020-12-02 22:41:40+00:00" class="dt-published"></time>
+  Wed 02 Dec 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -229,33 +193,32 @@ Keyboard
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/636316751879077888/sensing-obstacles-through-flow" rel="bookmark" class="u-url"
-       title="Sensing Obstacles Through Flow" target="_blank">
-      <time class="m-date" datetime="2020-12-01 10:07:02-06:00">
+    <a href="https://ptomato.wordpress.com/2020/12/02/advent-of-rust/" rel="bookmark" class="u-url"
+       title="Advent of Rust" target="_blank">
+      <time class="m-date" datetime="2020-12-02 21:19:40+00:00">
         Dec
         <span class="m-date-day">
-          01
+          02
         </span>
         2020
       </time>
       <div class="p-name">
-      Sensing Obstacles Through Flow
+      Advent of Rust
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img src="https://64.media.tumblr.com/147044b09c00b5169121cb298b99d4d3/f6b7a7e4ae9d2a3f-b9/s540x810/9fe3c66f4ca510ec69a70c73712635390239da3c.gif"><img src="http://fyfluiddynamics.com/wp-content/uploads/2020/11/mos2_small.gif"><img src="http://fyfluiddynamics.com/wp-content/uploads/2020/11/mos3_small.gif"><a href="http://fyfluiddynamics.com/?p=13823">Researchers are using the obstacle sensing ability of mosquitoes as inspiration for better drones.</a> (Image and research credit: <a href="https://doi.org/10.1126/science.aaz9634">T. Nakata et al.</a>; via <a href="https://www.sciencemag.org/news/2020/05/watch-mosquito-inspired-drone-light-and-avoid-crash?utm_source=general_public&amp;utm_medium=youtube&amp;utm_campaign=mosquito-24598">Science</a>)
-<a href="http://fyfluiddynamics.com/?p=13823">Read the full article</a>
+  I decided to learn to program in Rust by participating in Advent of Code 2020. <a href="https://ptomato.wordpress.com/2020/12/02/advent-of-rust/">Continue reading <span>→</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-01 10:07:02-06:00" class="dt-published"></time>
-  Tue 01 Dec 2020
-  in FYFD.
+  <span class="p-author"><b>Philip Chimento</b></span>
+  on <time datetime="2020-12-02 21:19:40+00:00" class="dt-published"></time>
+  Wed 02 Dec 2020
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -264,32 +227,32 @@ Keyboard
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2020/12/sensing-obstacles-through-flow/" rel="bookmark" class="u-url"
-       title="Sensing Obstacles Through Flow" target="_blank">
-      <time class="m-date" datetime="2020-12-01 16:00:00+00:00">
+    <a href="https://jlelse.blog/links/2020/12/spotify-2020" rel="bookmark" class="u-url"
+       title="Spotify review of 2020" target="_blank">
+      <time class="m-date" datetime="2020-12-02 17:21:51+00:00">
         Dec
         <span class="m-date-day">
-          01
+          02
         </span>
         2020
       </time>
       <div class="p-name">
-      Sensing Obstacles Through Flow
+      Spotify review of 2020
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Mosquitoes, bats, and even eels use non-visual means to sense their environments. For mosquitoes, part of their obstacle avoidance comes from the exquisite sensitivity of their antennae, which are able <a href="https://fyfluiddynamics.com/2020/12/sensing-obstacles-through-flow/">Keep reading</a>
+  It’s time for Spotify Wrapped (I think it’s not called Wrapped anymore) again. Let’s see to what music I listened in 2020.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-12-01 16:00:00+00:00" class="dt-published"></time>
-  Tue 01 Dec 2020
-  in FYFD Blog.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-02 17:21:51+00:00" class="dt-published"></time>
+  Wed 02 Dec 2020
+  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -300,10 +263,10 @@ Keyboard
   <h1>
     <a href="http://pyfound.blogspot.com/2020/12/help-psf-raise-60000-usd-by-december.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="Help the PSF raise $60,000 USD by December 31st!" target="_blank">
-      <time class="m-date" datetime="2020-12-01 10:46:19.225000-05:00">
+      <time class="m-date" datetime="2020-12-02 12:09:34.424000-05:00">
         Dec
         <span class="m-date-day">
-          01
+          02
         </span>
         2020
       </time>
@@ -321,8 +284,8 @@ Keyboard
 <footer>
   <p>Posted by
   <span class="p-author"><b>Betsy Waliszewski (noreply@blogger.com)</b></span>
-  on <time datetime="2020-12-01 10:46:19.225000-05:00" class="dt-published"></time>
-  Tue 01 Dec 2020
+  on <time datetime="2020-12-02 12:09:34.424000-05:00" class="dt-published"></time>
+  Wed 02 Dec 2020
   in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -332,32 +295,67 @@ Keyboard
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://christian.kellner.me/2020/12/01/bolt-0-9-1-with-fixes-for-integrated-thunderbolt-controller/" rel="bookmark" class="u-url"
-       title="bolt 0.9.1 with fixes for integrated thunderbolt controller" target="_blank">
-      <time class="m-date" datetime="2020-12-01 15:30:57+00:00">
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/636407182248853504/an-intro-to-liquid-crystals" rel="bookmark" class="u-url"
+       title="An Intro to Liquid Crystals" target="_blank">
+      <time class="m-date" datetime="2020-12-02 10:06:20-06:00">
         Dec
         <span class="m-date-day">
-          01
+          02
         </span>
         2020
       </time>
       <div class="p-name">
-      bolt 0.9.1 with fixes for integrated thunderbolt controller
+      An Intro to Liquid Crystals
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  A new release of bolt is out: 0.9.1 - Unstable icy waters. This is a bug-fix release that addresses some issue on integrated Thunderbolt controller. Intel's Ice Lake is the first architecture where the Thunderbolt controller is part of the CPU die. This is quite a big difference. There is a good article on wikichip […]
+  <img src="https://64.media.tumblr.com/6b49af5cdd3eb16d9f3c42a03efd17ad/51603880487fd3a5-e3/s540x810/e8898d112a6e58e83b280c46233a14624e31a15e.png"><img src="https://64.media.tumblr.com/d45b63c4f3e0f8ab3d89d56d6f27a80d/51603880487fd3a5-22/s540x810/52d34555ced6c12ca89a1b70a35ff4c8fced5635.gif"><img src="https://64.media.tumblr.com/0c47f1504718320778e611bf822e07b3/51603880487fd3a5-ea/s540x810/a7195ee4a81cba0604676081f00193239af7eb04.gif"><a href="http://fyfluiddynamics.com/?p=13888">There&rsquo;s a good chance that the screen you&rsquo;re using to read this uses liquid crystals, but how much do you know about this ubiquitous technology?</a> (Image and video credit: The Lutetium Project)
+<a href="http://fyfluiddynamics.com/?p=13888">Read the full article</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>gicmo</b></span>
-  on <time datetime="2020-12-01 15:30:57+00:00" class="dt-published"></time>
-  Tue 01 Dec 2020
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-02 10:06:20-06:00" class="dt-published"></time>
+  Wed 02 Dec 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/12/an-intro-to-liquid-crystals/" rel="bookmark" class="u-url"
+       title="An Intro to Liquid Crystals" target="_blank">
+      <time class="m-date" datetime="2020-12-02 16:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          02
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      An Intro to Liquid Crystals
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  There&#8217;s a good chance that the screen you&#8217;re using to read this uses liquid crystals, but how much do you know about this ubiquitous technology? Liquid crystals are fluids made <a href="https://fyfluiddynamics.com/2020/12/an-intro-to-liquid-crystals/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-12-02 16:00:00+00:00" class="dt-published"></time>
+  Wed 02 Dec 2020
+  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
