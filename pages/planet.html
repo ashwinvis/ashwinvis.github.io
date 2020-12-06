@@ -187,6 +187,58 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://hunden.linuxkompis.se/2020/12/06/how-to-control-mpv-via-the-shell-using-playerctl-and-mpv-mpris.html" rel="bookmark" class="u-url"
+       title="How to control mpv via the shell using Playerctl and mpv-pris" target="_blank">
+      <time class="m-date" datetime="2020-12-06 00:00:00+01:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to control mpv via the shell using Playerctl and mpv-pris
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>With the help of <a href="https://github.com/altdesktop/playerctl">Playerctl</a> it’s possible to control various media players like mpv, VLC, cmus, mpd, Spotify and even web browsers using the shell. Because I’m only using mpv myself, that’s what I’m going to talk about here.</p>
+
+<p>For this to work you need a plugin called <a href="https://github.com/hoyon/mpv-mpris">mpv-mpris</a>. It adds support for controlling mpv using the standard media keys by implementing support for the <a href="https://specifications.freedesktop.org/mpris-spec/latest/">MPRIS D-Bus Interface Specification</a>.</p>
+
+Installation of mpv-mpris
+
+<p>You can either download <a href="https://github.com/hoyon/mpv-mpris/releases/">the latest stable release</a> or clone the latest code using git:</p>
+
+<div><div><pre><code>$ git clone https://github.com/hoyon/mpv-mpris         
+</code></pre></div></div>
+
+<p>You can then compile the code:</p>
+
+<div><div><pre><code>$ make  
+</code></pre></div></div>
+<div><div><pre><code>$ make install 
+</code></pre></div></div>
+
+<p>It’s important to <strong>not</strong> use root with <code>make install</code>, if you do that, it will then copy the plugin to the wrong folder <code>/root/.config/mpv/scritps/</code> and not to your own …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-06 00:00:00+01:00" class="dt-published"></time>
+  Sun 06 Dec 2020
+  in Hund[en].
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://nedbatchelder.com//blog/202012/favicons_with_imagemagick.html" rel="bookmark" class="u-url"
        title="Favicons with ImageMagick" target="_blank">
       <time class="m-date" datetime="2020-12-05 13:46:11-05:00">
@@ -365,6 +417,46 @@ drawing isn&rsquo;t the hard part
   on <time datetime="2020-12-05 00:00:00+00:00" class="dt-published"></time>
   Sat 05 Dec 2020
   in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/python-no-typing-pip/" rel="bookmark" class="u-url"
+       title="Python PyPi typing not recommended" target="_blank">
+      <time class="m-date" datetime="2020-12-05 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          05
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Python PyPi typing not recommended
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Some older Python projects may have
+<a href="https://pypi.org/project/typing/">typing</a>
+in setup.py &ldquo;install_requires&rdquo; or file &ldquo;requirements.txt&rdquo;.
+This is in my opinion incompatible with current Python versions and can break Python itself from running.
+The &ldquo;typing&rdquo; PyPi module is not needed as all currently maintained Python versions have &ldquo;typing&rdquo; built in.
+<a href="https://github.com/scivision/PyLivestream/issues/65">Errors can result</a>
+from having PyPi &ldquo;typing&rdquo; installed over factory Python &ldquo;typing&rdquo;.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-05 00:00:00+00:00" class="dt-published"></time>
+  Sat 05 Dec 2020
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -697,44 +789,6 @@ website? Can we not meet this …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/vscode-fortran/" rel="bookmark" class="u-url"
-       title="Fortran development in Visual Studio Code" target="_blank">
-      <time class="m-date" datetime="2020-12-01 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          01
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Fortran development in Visual Studio Code
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Visual Studio Code is a free open source code editor with numerous extensions supporting most code languages, including for proprietary languages like
-<a href="https://www.scivision.dev/matlab-alternative-ide">Matlab</a>.
-Fortran is well-supported by Visual Studio Code using the
-<a href="https://marketplace.visualstudio.com/items?itemName=krvajalm.linter-gfortran">Modern Fortran extension</a>,
-wrapping Gfortran as a linting tool.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-01 00:00:00+00:00" class="dt-published"></time>
-  Tue 01 Dec 2020
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pythoninsider.blogspot.com/2020/11/pip-20-3-release-new-resolver.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
        title="Releasing pip 20.3, featuring new dependency resolver" target="_blank">
       <time class="m-date" datetime="2020-11-30 12:55:13.847000-05:00">
@@ -906,47 +960,6 @@ There&rsquo;s 28 courses currently and …</p>
   on <time datetime="2020-11-27 03:41:55+00:00" class="dt-published"></time>
   Fri 27 Nov 2020
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/11/24/how-to-convert-webp-images-to-jpg-and-png-using-ffmpeg.html" rel="bookmark" class="u-url"
-       title="How to convert WebP-images to JPG and PNG using ffmpeg" target="_blank">
-      <time class="m-date" datetime="2020-11-24 00:00:00+01:00">
-        Nov
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How to convert WebP-images to JPG and PNG using ffmpeg
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I came across some WebP-image the other day and wanted to convert it to a regular JPG. It turns out that’s rather easy with a Linux based operating system, all that you need is ffmpeg.</p>
-
-<p>Here’s an example:</p>
-
-<div><div><pre><code>$ ffmpeg -i input_file.webp output_file.jpg
-</code></pre></div></div>
-
-<p>It’s also possible to convert it to a PNG as well.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-24 00:00:00+01:00" class="dt-published"></time>
-  Tue 24 Nov 2020
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
