@@ -187,9 +187,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2020/12/04/this-week-in-kde-big-new-accented-alternative-character-input-feature/" rel="bookmark" class="u-url"
-       title="This week in KDE: Big new accented/alternative character input feature" target="_blank">
-      <time class="m-date" datetime="2020-12-05 04:55:55+00:00">
+    <a href="https://nedbatchelder.com//blog/202012/favicons_with_imagemagick.html" rel="bookmark" class="u-url"
+       title="Favicons with ImageMagick" target="_blank">
+      <time class="m-date" datetime="2020-12-05 13:46:11-05:00">
         Dec
         <span class="m-date-day">
           05
@@ -197,45 +197,174 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      This week in KDE: Big new accented/alternative character input feature
+      Favicons with ImageMagick
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>A big new Plasma feature was merged this week that I’m very excited to present!</p>
-
-
-
-<p>Now, when you press-and-hold a key, <a href="https://invent.kde.org/plasma/plasma-integration/-/merge_requests/2">a small palette will appear offering alternative characters similar to the one you’re holding down</a>. This makes it enormously easier to type accented characters from other languages or symbols uncommon in your language without having to change your keyboard layout or memorize compose key sequences. It is super intuitive and awesome to use:</p>
-
-
-
-<div>
-
-<video><source src="//i.imgur.com/7Lw2geR.mp4?_=1" type="video/mp4"><a href="https://i.imgur.com/7Lw2geR.mp4">https://i.imgur.com/7Lw2geR.mp4</a></video>
-</div>
-
-
-
-<p>You can also use it to type alternative symbols, such as currency symbols uncommon in your locale. This is useful if, for example, you live in the USA but deal with monetary sums denominated in Euros a lot, or the reverse:</p>
-
-
-
-<div><video><source src="//i.imgur.com/NF4WgDc.mp4?_=2" type="video/mp4"><a href="https://i.imgur.com/NF4WgDc.mp4">https://i.imgur.com/NF4WgDc.mp4</a></video></div>
-
-
-
-<p>Naturally, the feature can be disabled (on the System Settings keyboard …</p>
+  <p>I needed to revisit how favicons work today.  First I wanted to do an
+empirical experiment to see what size and format would get used by browsers.
+This has always been a confusing landscape. Some pages offer dozens of different
+files to use as the icon.  I wasn&#8217;t going to go crazy with all of that, so I
+just wanted to see what would do a simple job.</p><p>To run my experiment, I used ImageMagick to create a test favicon.ico, and
+also some different-sized png files.  So I would know what I was looking at,
+each size is actually a different visual image: the 32-pixel icon shows &#8220;32&#8221;,
+and so on.</p><p>This is how I made them:</p><blockquote><code><span>for</span>&#xa0;size&#xa0;in&#xa0;<span>16</span>&#xa0;<span>32</span>&#xa0;<span>48</span>&#xa0;<span>;</span>&#xa0;<span>do</span>
+&#xa0;&#xa0;&#xa0;&#xa0;magick&#xa0;convert&#xa0;<span>\</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-background&#xa0;lightgray&#xa0;<span>\</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-fill&#xa0;black&#xa0;<span>\</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-size&#xa0;<span>${</span><span>size</span><span>}</span>x<span>${</span><span>size</span><span>}</span>&#xa0;<span>\</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-gravity&#xa0;center&#xa0;<span>\</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-bordercolor&#xa0;black …</code></blockquote>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2020-12-05 04:55:55+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-12-05 13:46:11-05:00" class="dt-published"></time>
+  Sat 05 Dec 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wolthera.info/2020/12/xmpp-client-in-godot/" rel="bookmark" class="u-url"
+       title="XMPP Client in Godot" target="_blank">
+      <time class="m-date" datetime="2020-12-05 17:18:10+00:00">
+        Dec
+        <span class="m-date-day">
+          05
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      XMPP Client in Godot
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I took the month of November off, which had been very necessary, as I hadn’t had a proper vacation in a year. In this month, I slowly started being able to draw again, and I did a lot of drawing. I also had a conundrum: I wanted to learn a bit more about Godot Engine, but I also wanted to learn a bit more about internet technologies. Solution: <a href="https://invent.kde.org/woltherav/godot-xmpp-client">Write an XMPP client in Godot</a>.</p>
+
+
+
+<span></span>
+
+
+
+Connection and sending data:
+
+
+
+<p>I started on last Thursday, with setting up the TCP connection. I first set up <a href="https://prosody.im/">prosody</a> on my computer, with it only accepting traffic from the localhost so I had something to test again. I also installed Gajim and Kaidan so I had an idea of what proper xmpp clients look like (and so I could chat with myself). Unfortunately, because …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Wolthera van Hövell tot Westerflier (Wolthera)</b></span>
+  on <time datetime="2020-12-05 17:18:10+00:00" class="dt-published"></time>
   Sat 05 Dec 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2020/12/05/how-i-write-useful-programming-comics/" rel="bookmark" class="u-url"
+       title="How I write useful programming comics" target="_blank">
+      <time class="m-date" datetime="2020-12-05 09:54:37+00:00">
+        Dec
+        <span class="m-date-day">
+          05
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How I write useful programming comics
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  How I write useful programming comics
+
+<p>The other day a friend was asking me how I write <a href="https://wizardzines.com">programming comics</a>. I&rsquo;ve tried
+to write about this at least 6 times
+(<a href="https://jvns.ca/blog/2019/09/01/ways-to-write-zines-without-fancy-tools/">1</a>,
+<a href="https://jvns.ca/blog/2018/12/09/how-do-you-document-a-tech-project-with-comics/">2</a>,
+<a href="https://jvns.ca/blog/2018/10/28/when-does-teaching-with-comics-work-well/">3</a>,
+<a href="https://jvns.ca/teach-tech-with-cartoons/">4</a>,
+<a href="https://jvns.ca/blog/2016/11/14/why-cute-drawings/">5</a>,
+<a href="https://jvns.ca/blog/2016/08/29/how-i-made-a-zine/">6</a>), but I felt like
+there&rsquo;s still something missing so here&rsquo;s another attempt.</p>
+
+drawing isn&rsquo;t the hard part
+
+<p>The 2 common questions/comments I get about my comics are:</p>
+
+<ol>
+<li>&ldquo;what tools do you use?&rdquo; (an ipad + apple pencil + a drawing app).</li>
+<li>I wish I were good at drawing so that I could do that</li>
+</ol>
+
+<p>But neither of these is what I actually find hard about comics: I&rsquo;m actually <a href="https://jvns.ca/teach-tech-with-cartoons/">very bad at drawing</a>, and I&rsquo;ve made comics that people love with very simple tools, like taking a <a href="https://twitter.com/b0rk/status/638365065926811648">low-quality picture of a notebook with my phone</a>.</p>
+
+<p>So what&rsquo;s the secret?</p>
+
+3 …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-05 09:54:37+00:00" class="dt-published"></time>
+  Sat 05 Dec 2020
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6201059" rel="bookmark" class="u-url"
+       title="Mental health literacy of Indonesian health practitioners and implications for mental health system development" target="_blank">
+      <time class="m-date" datetime="2020-12-05 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          05
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Mental health literacy of Indonesian health practitioners and implications for mental health system development
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Compared to other countries in the South-East Asian region, Indonesia's mental health system remains underdeveloped from significant treatment gaps, which subsequently contribute to human rights violations of mental health patients who do not receive adequate medical care. In line with the introduction of universal health coverage in 2014, the Indonesian government plans to redress this by delegating detection and early intervention of mental health services to health practitioners without specialist training in mental health, however, there is limited evidence that they can perform this role effectively. This study aims to evaluate current workforce capacity by assessing differences in mental health literacy between Indonesian mental health and non-mental health practitioners. Compared to non-mental health practitioners, mental health practitioners are significantly less likely to hold stigmatising views towards individuals with mental illness. They are also significantly more likely to correctly recognise symptoms …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>N Tiliopoulos</b></span>
+  on <time datetime="2020-12-05 00:00:00+00:00" class="dt-published"></time>
+  Sat 05 Dec 2020
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -656,57 +785,6 @@ future version. To keep the previous behavior, users should use the new
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jvns.ca/blog/2020/11/30/implement-char-rnn-in-pytorch/" rel="bookmark" class="u-url"
-       title="An attempt at implementing char-rnn with PyTorch" target="_blank">
-      <time class="m-date" datetime="2020-11-30 10:50:55+00:00">
-        Nov
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      An attempt at implementing char-rnn with PyTorch
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! I spent a bunch of time in the last couple of weeks implementing a
-version of <a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">char-rnn</a>
-with PyTorch. I&rsquo;d never trained a neural network before so this seemed like a
-fun way to start.</p>
-
-<p>The idea here (from <a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural
-Networks</a>) is that
-you can train a character-based recurrent neural network on some text and get
-surprisingly good results.</p>
-
-<p>I didn&rsquo;t quite get the results I was hoping for, but I wanted to share some
-example code &amp; results in case it&rsquo;s useful to anyone else getting started with PyTorch
-and RNNs.</p>
-
-<p>Here&rsquo;s the Jupyter notebook with the code: <a href="https://gist.github.com/jvns/b6dda36b2fdcc02b833ed5b0c7a09112">char-rnn in
-PyTorch.ipynb</a>.
-If you click &ldquo;Open in Colab&rdquo; at the top, you can open it in Google&rsquo;s Colab
-service where at least right now you can get a free …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-11-30 10:50:55+00:00" class="dt-published"></time>
-  Mon 30 Nov 2020
-  in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://lucumr.pocoo.org/2020/11/30/how-to-wasm-dwarf/" rel="bookmark" class="u-url"
        title="How to WASM DWARF" target="_blank">
       <time class="m-date" datetime="2020-11-30 00:00:00+00:00">
@@ -745,40 +823,6 @@ perfect tool for custom plugin systems in cross platform applications.</p>
   on <time datetime="2020-11-30 00:00:00+00:00" class="dt-published"></time>
   Mon 30 Nov 2020
   in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6175214" rel="bookmark" class="u-url"
-       title="Advanced airway management in out-of-hospital cardiac arrest - to intubate or not to intubate: a narrative review of the existing literature" target="_blank">
-      <time class="m-date" datetime="2020-11-28 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Advanced airway management in out-of-hospital cardiac arrest - to intubate or not to intubate: a narrative review of the existing literature
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Restoring partial flow of oxygenated blood is a fundamental goal of cardiopulmonary resuscitation. The ideal devices used for this purpose should have features such as low incidence of complications, high survival rate, rapid control of the airway, and adequate ventilation. Besides limiting the frequency and duration of interruptions in chest compressions, they can improve the survival and clinical outcomes of return of spontaneous circulation during cardiopulmonary resuscitation. The overall rates of survival from out-of-hospital cardiac arrest have improved dramatically in recent years. However, optimal airway management during out-of-hospital cardiac arrest is a controversial issue. The proposed standard of care, i.e. endotracheal intubation, may have paradoxical adverse effects on intended outcomes by interrupting cardiopulmonary resuscitation and by reduction of coronary and cerebral perfusion pressure during resuscitation. The aim of this narrative review is to provide health care providers with an …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>K Saracoglu</b></span>
-  on <time datetime="2020-11-28 00:00:00+00:00" class="dt-published"></time>
-  Sat 28 Nov 2020
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -828,53 +872,6 @@ There&rsquo;s 28 courses currently and …</p>
   on <time datetime="2020-11-27 13:20:00-08:00" class="dt-published"></time>
   Fri 27 Nov 2020
   in Trey Hunner.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202011/mad_libs.html" rel="bookmark" class="u-url"
-       title="Mad Libs" target="_blank">
-      <time class="m-date" datetime="2020-11-27 09:44:00-05:00">
-        Nov
-        <span class="m-date-day">
-          27
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Mad Libs
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>When people ask what they should implement to practice programming, I often
-say, Mad Libs.  It&#8217;s a game, so it might appeal to youthful minds, but it&#8217;s
-purely text-based, so it won&#8217;t be overwhelming to implement. It can start
-simple, for beginners, but get complicated if you are more advanced.</p><p><a href="https://en.wikipedia.org/wiki/Mad_Libs">Mad Libs</a> is a language
-game.  One person, the reader, has a story with blanks in it.  The other
-player(s) provide words to go in the blanks, but they don&#8217;t know the story.  The
-result is usually funny.</p><p>For example, the story might be:</p><blockquote><div><p>There was a tiny
-    (adjective)    
-     (noun)     who
-was feeling very
-    (adjective)    .  After
-    (verb)    &#8217;ing, she felt
-    (adjective)    .</p></div></blockquote><p>(An actual story would be longer, usually a full paragraph.) The reader will
-ask for the words, either in order, or randomized:</p><blockquote><div><p>Give me …</p></div></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-11-27 09:44:00-05:00" class="dt-published"></time>
-  Fri 27 Nov 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
