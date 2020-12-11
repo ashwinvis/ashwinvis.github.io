@@ -187,6 +187,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="http://pyfound.blogspot.com/2020/12/elaine-wong-awarded-psf-community.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="Elaine Wong Awarded the PSF Community Service Award for Q3 2020" target="_blank">
+      <time class="m-date" datetime="2020-12-11 04:10:13.244000-05:00">
+        Dec
+        <span class="m-date-day">
+          11
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Elaine Wong Awarded the PSF Community Service Award for Q3 2020
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>&nbsp;</p><div><a href="https://1.bp.blogspot.com/-D2igD2aMhqM/X9MNxi074XI/AAAAAAAA3rs/MpjNTm6BXb0Lmq8g0FMLZkf4D5BwzRv8wCLcBGAsYHQ/s2048/2019-01-27%2B15_41_41.140.jpeg"><img src="https://1.bp.blogspot.com/-D2igD2aMhqM/X9MNxi074XI/AAAAAAAA3rs/MpjNTm6BXb0Lmq8g0FMLZkf4D5BwzRv8wCLcBGAsYHQ/w300-h400/2019-01-27%2B15_41_41.140.jpeg"></a></div><p></p><p><span>&nbsp;</span></p><div><span><span><div><span><a href="https://twitter.com/elthenerd"><span>Elaine Wong</span></a><span> organizer PyCon Canada, PyLadies Toronto and CSV Conference, </span><span>has been awarded the Python Software Foundation 2020 Q3 Community Service Award.</span><span>&nbsp;</span></span></div><div><span><blockquote><span>RESOLVED, that the Python Software Foundation award the 2020 Q3 Community Service Award to Elaine Wong for her community work. Elaine is an organizer for PyCon CA, PyLadies Toronto, and CSV Conference, a conference speaker,&nbsp; she co-hosts a monthly virtual Conference Organizer meetup, and Elaine helps with video at community events.</span></blockquote></span><span><span>We interviewed Elaine to learn more about her inspiration and work with the Python community. We also asked several of Elaine's close associates -- including </span><span>John Chodacki</span><span>, </span><span>Lorena Mesa</span><span>, and </span><span>Tom Meagher</span><span> -- who have had the opportunity of working with Elaine within CSV conference, PyLadies and PyCAR - a yearly bootcamp for journalists learning Python.</span></span></div><div><span><span></span></span></div><span><span>Elaine Wong's Origin Story</span></span><div><span><span></span></span></div></span></span><span><p><span>Can you tell us about your origin story?</span></p><p><span>My dad …</span></p></span></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Charles Freeborn (noreply@blogger.com)</b></span>
+  on <time datetime="2020-12-11 04:10:13.244000-05:00" class="dt-published"></time>
+  Fri 11 Dec 2020
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://ptomato.wordpress.com/2020/12/10/advent-of-rust-9-find-that-number-for-else/" rel="bookmark" class="u-url"
        title="Advent of Rust 9: Find That Number, (F)or Else" target="_blank">
       <time class="m-date" datetime="2020-12-10 16:30:00+00:00">
@@ -213,6 +247,64 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-12-10 16:30:00+00:00" class="dt-published"></time>
   Thu 10 Dec 2020
   in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.vladzahorodnii.com/2020/12/10/compositing-scheduling-in-kwin-past-now-and-future/" rel="bookmark" class="u-url"
+       title="Compositing Scheduling in KWin: Past, Present, and Future" target="_blank">
+      <time class="m-date" datetime="2020-12-10 16:16:14+00:00">
+        Dec
+        <span class="m-date-day">
+          10
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Compositing Scheduling in KWin: Past, Present, and Future
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>From time to time, we receive regular complaints about frame scheduling. In particular, compositing not being synchronized to vblanks, missed frames, repainting monitors with different refresh rates, etc. This blog post will (hopefully) explain why these issues are present and how we plan to fix them.</p>
+
+
+
+Past &amp; Present
+
+
+
+<p>With the current scheduling algorithm, compositing /should/ start immediately right after a vblank. A vblank is the time between the vertical front porch and the vertical back porch, or simply put, it’s the time when the display starts scanning out the contents of the next frame.</p>
+
+
+
+<img alt="" src="//vladzzag.files.wordpress.com/2020/12/compositing.png?w=1024">
+
+
+
+<p>One thing that’s worth point out is that buffers are not swapped after finishing a compositing cycle, they are swapped at the start of the next compositing cycle, in other words, at the next vblank</p>
+
+
+
+<img alt="" src="//vladzzag.files.wordpress.com/2020/12/swap.png?w=1024">
+
+
+
+<p>KWin assumes that glXSwapBuffers() and eglSwapBuffers() will always block …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Vlad Zahorodnii</b></span>
+  on <time datetime="2020-12-10 16:16:14+00:00" class="dt-published"></time>
+  Thu 10 Dec 2020
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -325,44 +417,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://valdyas.org/fading/hardware/a-new-macbook-pro-first-impressions/" rel="bookmark" class="u-url"
-       title="A new macbook pro — first impressions" target="_blank">
-      <time class="m-date" datetime="2020-12-10 10:04:07+00:00">
-        Dec
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      A new macbook pro — first impressions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Two days ago, my macbook pro M1 arrived. I mainly got this device to test Krita on and make ARM builds of Krita, but it’s also the first macbook anyone in the Krita community that allows playing with sidecar and has a touch strip.</p>
-<p><img alt="" src="//valdyas.org/fading/wp-content/uploads/2020/12/IMG_20201210_104210_sm-300x225.jpg"></p>
-<p>So, SideCar works, as expected. There is one problem, though, and that’s that the pressure curve of the Apple Pencil seems to be seriously weird, so I first thought I was painting with a sketch engine brush. But apart from that, it’s nice and smooth.</p>
-<p>KDAB has published a library to integrate support for the touchbar: <a href="https://www.kdab.com/kdmactouchbar/">kdmactouchbar</a> — so on that front we might see some support coming.</p>
-<p>Krita itself, the x86 build, runs fine: the performance is much better than on my 2015 15″ macbook pro, and rosetta seems to even translate the …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Boudewijn Rempt (boud)</b></span>
-  on <time datetime="2020-12-10 10:04:07+00:00" class="dt-published"></time>
-  Thu 10 Dec 2020
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="http://www.scicombinator.com/articles/6213876" rel="bookmark" class="u-url"
        title="Institutionalizing research capacity strengthening in LMICs: A systematic review and meta-synthesis" target="_blank">
       <time class="m-date" datetime="2020-12-10 00:00:00+00:00">
@@ -423,40 +477,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2020-12-09 19:37:13+00:00" class="dt-published"></time>
   Wed 09 Dec 2020
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://pyfound.blogspot.com/2020/12/announcing-psf-diversity-and-inclusion.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="Announcing the PSF Diversity and Inclusion Work Group" target="_blank">
-      <time class="m-date" datetime="2020-12-09 07:58:43.717000-05:00">
-        Dec
-        <span class="m-date-day">
-          09
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Announcing the PSF Diversity and Inclusion Work Group
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><span>Python has become one of the most popular programming languages in the world, meaning that along with this growth the Python community has continued to expand, in every continent around the globe. While this growth has been exciting, it has also brought new challenges and opportunities to improve our global community. In order to further the PSF’s </span><a href="https://www.python.org/psf/mission/"><span>mission</span></a><span> to ‘support and facilitate the growth of a diverse and international community of Python programmers’, the Python Software Foundation is excited to announce the launch of the</span><a href="https://wiki.python.org/psf/DiversityandInclusionWG"><span> Diversity and Inclusion Workgroup</span></a><span> (hereby referred to as the D&amp;I workgroup). The D&amp;I workgroup will help own this important work, as well as provide guidance to the PSF Board of Directors in line with this mandate.</span></p><span><p><span>Throughout 2020 the PSF and PSF Board engaged the community in a discussion about board election …</span></p></span>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Marlene_zw (noreply@blogger.com)</b></span>
-  on <time datetime="2020-12-09 07:58:43.717000-05:00" class="dt-published"></time>
-  Wed 09 Dec 2020
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
