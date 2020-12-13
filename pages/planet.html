@@ -187,9 +187,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://dot.kde.org/2020/12/13/season-kde-2021-coming" rel="bookmark" class="u-url"
-       title="Season of KDE 2021 is coming" target="_blank">
-      <time class="m-date" datetime="2020-12-13 11:09:48+00:00">
+    <a href="https://jlelse.blog/dev/aoc-2020-week1-2" rel="bookmark" class="u-url"
+       title="Advent of Code 2020 in Go: Week 1 and Week 2" target="_blank">
+      <time class="m-date" datetime="2020-12-13 13:16:34+00:00">
         Dec
         <span class="m-date-day">
           13
@@ -197,35 +197,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Season of KDE 2021 is coming
+      Advent of Code 2020 in Go: Week 1 and Week 2
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-    <div>
-          <div>Submit your ideas and help make KDE better!</div>
-      </div>
-</div>
-<div><div><div>
-<p>Since 2013, the KDE Student Programs has been running <a href="https://season.kde.org">Season of KDE</a>. Season of KDE is a program similar to, but not quite the same as, Google Summer of Code. It offers an opportunity for everyone (not just students) to participate in both coding and non-coding projects that benefit the KDE ecosystem. In the past few years, SoK participants have not only created new application features, but have also developed the KDE Continuous Integration System, statistical reports for developers, a web framework, ported KDE applications, created documentation, and contributed to KDE with lots and lots of other tasks.</p>
-<p>
-    <a href="https://dot.kde.org/sites/dot.kde.org/files/Group_Photo.jpg">
-        <img src="//dot.kde.org/sites/dot.kde.org/files/Group_Photo.jpg">
-    </a>
-   Our friendly KDE mentors will guide you and help you achieve your goals.
- </p>
-<p><a href="https://season.kde.org">The Season of KDE 2021 timeline is now online</a> and the season starts now and you have until January 4 to …</p></div></div></div>
+  Instead of making a post every other day with all the solutions, here are my approaches for the rest of week 1 and week 2 of Advent of Code 2020.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>KDE Dot News</b></span>
-  on <time datetime="2020-12-13 11:09:48+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-13 13:16:34+00:00" class="dt-published"></time>
   Sun 13 Dec 2020
-  in Planet KDE.
+  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -234,32 +221,42 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2020/12/2020-12-12-hmbco" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2020-12-12 22:51:16+00:00">
+    <a href="https://kate-editor.org/post/2020/2020-12-13-small-things-matter-continued/" rel="bookmark" class="u-url"
+       title="KTextEditor - Small Things Matter - Continued" target="_blank">
+      <time class="m-date" datetime="2020-12-13 11:45:00+00:00">
         Dec
         <span class="m-date-day">
-          12
+          13
         </span>
         2020
       </time>
       <div class="p-name">
-      💬
+      KTextEditor - Small Things Matter - Continued
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Although Micropublish is an awesome Micropub editor, I just integrated a custom really basic editor into GoBlog to create, update and delete posts. I will also add image upload soon and then I don’t depend on any external software (except a web browser) for my blogging workflow any more.
+  Noise inside the terminal?
+<p>I more or less always start my Kate session inside a terminal, to let the project plugin auto-load the right one for the current working directory.</p>
+<p>What I ignored for a long time is the noise this produces inside the terminal.</p>
+<p>If you launch Kate or KWrite, you will often get stuff like (even for release builds):</p>
+<pre>kf.sonnet.core: Unable to find any suggestion for "dummy to trigger identify"
+kf.kio.core: We got some errors while running testparm "Weak crypto is allowed\nERROR: Invalid idmap range for domain *!"
+</pre>
+<p>The first one stems from the language identification we trigger at startup to fix input lag for lazy loading of Sonnet things.</p>
+<p>The second one stems from “testparm” execution to discover Samba shares.
+If you have no Samba configured at all, this message will differ.</p>
+Is …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-12 22:51:16+00:00" class="dt-published"></time>
-  Sat 12 Dec 2020
-  in jlelse's Blog.
+  <span class="p-author"><b>Kate News</b></span>
+  on <time datetime="2020-12-13 11:45:00+00:00" class="dt-published"></time>
+  Sun 13 Dec 2020
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
