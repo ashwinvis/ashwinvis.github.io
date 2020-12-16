@@ -187,31 +187,34 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tsdgeos.blogspot.com/2020/12/avif-support-for-kimageformats-just.html" rel="bookmark" class="u-url"
-       title="AVIF support for KImageFormats just landed" target="_blank">
-      <time class="m-date" datetime="2020-12-15 22:42:59+00:00">
+    <a href="https://www.kdab.com/full-stack-tracing-part-3/" rel="bookmark" class="u-url"
+       title="Full Stack Tracing, Part 3" target="_blank">
+      <time class="m-date" datetime="2020-12-16 10:00:08+00:00">
         Dec
         <span class="m-date-day">
-          15
+          16
         </span>
         2020
       </time>
       <div class="p-name">
-      AVIF support for KImageFormats just landed
+      Full Stack Tracing, Part 3
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Thanks to Daniel Novomeský we will have support for <a href="https://en.wikipedia.org/wiki/AV1#AV1_Image_File_Format_(AVIF)">AVIF</a> images in KImageFormats starting in the next release.</p><p></p><p>We have (and by we I mean him) also added the avif code to be fuzzed under oss-fuzz so we'll be helping the upstream libavif/libaom to find potential memory issues in their code.</p><p></p><p><a href="https://invent.kde.org/frameworks/kimageformats/-/merge_requests/8">https://invent.kde.org/frameworks/kimageformats/-/merge_requests/8</a></p><p></p><p><a href="https://github.com/google/oss-fuzz/pull/4850">https://github.com/google/oss-fuzz/pull/4850</a></p>
+  <p>This is the third and last installment of our series about full stack tracing. If you haven’t read them yet, you’ll probably want to check out the <a href="https://www.kdab.com/full-stack-tracing-part-1/">introduction</a> and <a href="https://www.kdab.com/full-stack-tracing-part-2/">tool setup</a> portions first. In this blog, we’re going to focus on visualizing and interpreting full stack traces.</p>
+<p>At this point, we’re going to assume that you’ve already captured a trace file for the problem you’re examining as a <a href="https://diamon.org/ctf/">common trace format</a> (CTF) file, a structured binary file format that LTTng natively generates. What do you do with this file?</p>
+<strong>Text output</strong>
+<p>The first option is to use the <a href="https://babeltrace.org/">babeltrace</a> utility to make the CTF files human readable. Babeltrace converts between trace formats and it has a ton of options. However, the default options and implicit sinks and sources make it trivial to get a …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Albert Astals Cid</b></span>
-  on <time datetime="2020-12-15 22:42:59+00:00" class="dt-published"></time>
-  Tue 15 Dec 2020
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2020-12-16 10:00:08+00:00" class="dt-published"></time>
+  Wed 16 Dec 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -221,31 +224,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://ptomato.wordpress.com/2020/12/15/advent-of-code-14-bits-and-or-pieces/" rel="bookmark" class="u-url"
-       title="Advent of Rust 14 and 15: Bits And/Or Pieces" target="_blank">
-      <time class="m-date" datetime="2020-12-15 17:30:00+00:00">
+    <a href="https://hpjansson.org/blag/2020/12/16/on-the-graying-of-gnome/" rel="bookmark" class="u-url"
+       title="On the Graying of GNOME" target="_blank">
+      <time class="m-date" datetime="2020-12-16 05:13:10+00:00">
         Dec
         <span class="m-date-day">
-          15
+          16
         </span>
         2020
       </time>
       <div class="p-name">
-      Advent of Rust 14 and 15: Bits And/Or Pieces
+      On the Graying of GNOME
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Getting acquainted with the bitwise operators in Rust <a href="https://ptomato.wordpress.com/2020/12/15/advent-of-code-14-bits-and-or-pieces/">Continue reading <span>→</span></a>
+  The GNOME project turned 23 this year, and despite equally persistent rumors to the contrary, it's still alive and kicking. Just how alive, though?
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Philip Chimento</b></span>
-  on <time datetime="2020-12-15 17:30:00+00:00" class="dt-published"></time>
-  Tue 15 Dec 2020
+  <span class="p-author"><b>Hans Petter Jansson</b></span>
+  on <time datetime="2020-12-16 05:13:10+00:00" class="dt-published"></time>
+  Wed 16 Dec 2020
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -403,6 +406,72 @@ allow sourcehut signups over Tor without enabling abuse. The …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/honeypot-urls/" rel="bookmark" class="u-url"
+       title="Honeypot URLs to declutter 404 log" target="_blank">
+      <time class="m-date" datetime="2020-12-15 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          15
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Honeypot URLs to declutter 404 log
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Bots scan a set of URLs that can clutter the site 404 log.
+Create zero-byte files to workaround this issue by:</p>
+<ul>
+<li>PowerShell: <code>New-Item filename</code></li>
+<li>Unix: <code>touch filename</code></li>
+</ul>
+Example filenames
+<p>Here are some files we use as zero-byte files.</p>
+<pre><code>.env
+ads.txt
+apple-touch-icon-precomposed.png
+apple-touch-icon.png
+assets/img/favicon-32x32.png
+favicon.ico
+wp-login.php
+wp/wp-includes/wlwmanifest.xml
+wp1/wp-includes/wlwmanifest.xml
+wp2/wp-includes/wlwmanifest.xml
+2019/wp-includes/wlwmanifest.xml
+2020/wp-includes/wlwmanifest.xml
+cms/wp-includes/wlwmanifest.xml
+news/wp-includes/wlwmanifest.xml
+shop/wp-includes/wlwmanifest.xml
+site/wp-includes/wlwmanifest.xml
+wp-includes/wlwmanifest.xml
+website/wp-includes/wlwmanifest.xml
+comments/feed/index.html
+</code></pre>favicon.ico
+<p>We don&rsquo;t use favicon.ico because it&rsquo;s uncompressed ~ 16 kB.
+Instead we suggest creating compressed:</p>
+<pre><code>favicon-16x16.png
+favicon-32x32.png
+</code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-15 00:00:00+00:00" class="dt-published"></time>
+  Tue 15 Dec 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://xkcd.com/2398/" rel="bookmark" class="u-url"
        title="Vaccine Tracker" target="_blank">
       <time class="m-date" datetime="2020-12-14 00:00:00+00:00">
@@ -547,51 +616,6 @@ future version. To keep the previous behavior, users should use the new
   on <time datetime="2020-12-12 00:00:00+00:00" class="dt-published"></time>
   Sat 12 Dec 2020
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/open-source-criticality-score/" rel="bookmark" class="u-url"
-       title="Open Source Criticality Score" target="_blank">
-      <time class="m-date" datetime="2020-12-12 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          12
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Open Source Criticality Score
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Google via the OSSF
-<a href="https://opensource.googleblog.com/2020/12/finding-critical-open-source-projects.html">introduced</a>
-a
-<a href="https://github.com/ossf/criticality_score">Python API</a>
-to compute
-<a href="https://github.com/ossf/criticality_score/blob/main/Quantifying_criticality_algorithm.pdf">Criticality Score</a>
-of open-source projects.
-While there will continue to debate about how exactly to clip and weight parameters, being able to reduce metrics to a single number gives the community a quick first pass to judge which projects need help.
-Like
-<a href="https://en.wikipedia.org/wiki/H-index">h-index</a>
-for academic bibliographies, Criticality tells only part of the picture.
-I am curious about the score of fundamental libraries that have a large number of unhandled pull requests and infrequent updates.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-12 00:00:00+00:00" class="dt-published"></time>
-  Sat 12 Dec 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
