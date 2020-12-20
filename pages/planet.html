@@ -187,6 +187,49 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nedbatchelder.com//blog/202012/experimenting_with_git_storage.html" rel="bookmark" class="u-url"
+       title="Experimenting with git storage" target="_blank">
+      <time class="m-date" datetime="2020-12-19 09:19:08-05:00">
+        Dec
+        <span class="m-date-day">
+          19
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Experimenting with git storage
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The recent blog post <a href="https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/">Commits are snapshots, not diffs</a>
+did a good job explaining away a common git misconception, and helped me finally
+understand it.  To really wrap my head around it, I checked it empirically.</p><p>The misconception starts because git presents commits as diffs, and lets you
+manipulate them (rebase, cherry-pick, etc) as if they were diffs.  But
+internally, git commits are not diffs, they are complete copies of the file at
+each revision that changes the file.</p><p>At first glance, this seems dumb: why store the whole file over again just
+because one line changed?  The reason is speed and immutability. If git stored
+each commit as a diff against the previous version (<a href="https://www.gnu.org/software/rcs/manual/rcs.html#Fundamental-operations">as RCS did</a>),
+then getting the latest version of a file would require replaying all the diffs
+against the very first version of the file …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2020-12-19 09:19:08-05:00" class="dt-published"></time>
+  Sat 19 Dec 2020
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pointieststick.com/2020/12/18/this-week-in-kde-all-the-things/" rel="bookmark" class="u-url"
        title="This week in KDE: all the things!" target="_blank">
       <time class="m-date" datetime="2020-12-19 05:14:39+00:00">
@@ -211,7 +254,7 @@ New Features
 
 
 
-<p>Okular <a href="https://invent.kde.org/graphics/okular/-/merge_requests/296">now lets you digitally sign documents</a>! Note that this feature makes use of a digital signature, not a picture of your handwritten signature (Albert Astals Cid, Okular 21.04)</p>
+<p>Okular <a href="https://invent.kde.org/graphics/okular/-/merge_requests/296">now lets you digitally sign documents</a>! Note that this feature makes use of a digital signature, not a picture of your handwritten signature. This feature was sponsored by the Technical University of Dresden (TU Dresden) (Albert Astals Cid, Okular 21.04)</p>
 
 
 
@@ -231,7 +274,7 @@ Bugfixes &amp; Performance Improvements
 
 
 
-<p>Dolphin <a href="https://bugs.kde.org/show_bug.cgi?id=429839">no ever gets in a situation where it always tries to execute executable JavaScript files instead of opening them, when in …</a></p>
+<p>Dolphin <a href="https://bugs.kde.org/show_bug.cgi?id=429839">no ever gets in a situation where it always …</a></p>
   </p>
   </div>
 </header>
@@ -499,6 +542,40 @@ engineers …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="http://www.scicombinator.com/articles/6239746" rel="bookmark" class="u-url"
+       title="[Guidelines for bronchial asthma prevent and management(2020 edition) Asthma group of Chinese Throacic Society]" target="_blank">
+      <time class="m-date" datetime="2020-12-18 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          18
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      [Guidelines for bronchial asthma prevent and management(2020 edition) Asthma group of Chinese Throacic Society]
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Bronchial asthma is a common chronic respiratory disease. Clinical studies have shown that standardized diagnosis and treatment of asthma, especially effective management, are important for improving the asthma control and the quality of life of patients. The guideline for the prevention and treatment of bronchial asthma (2020 edition) were based on the previous guidelines for the prevention and treatment of asthma in China and combined with the results of evidence-based medicine research at China and other countries/regiongs in recent years. The guideline is intended to provide guidance documents for improving the understanding and standardized diagnosis and treatment of asthma among medical doctors in China.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-18 00:00:00+00:00" class="dt-published"></time>
+  Fri 18 Dec 2020
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://wizardzines.com/comics/background-processes/" rel="bookmark" class="u-url"
        title="background-processes" target="_blank">
       <time class="m-date" datetime="2020-12-18 00:00:00+00:00">
@@ -718,40 +795,6 @@ future version. To keep the previous behavior, users should use the new
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6229905" rel="bookmark" class="u-url"
-       title="Improving the Efficacy of EGFR Inhibitors by Topical Treatment of Cutaneous Squamous Cell Carcinoma with miR-634 Ointment" target="_blank">
-      <time class="m-date" datetime="2020-12-10 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          10
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Improving the Efficacy of EGFR Inhibitors by Topical Treatment of Cutaneous Squamous Cell Carcinoma with miR-634 Ointment
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  For cutaneous squamous cell carcinoma (cSCC), topical treatment is an essential option for patients who are not candidates for, or who refuse, surgery. Epidermal growth factor receptor (EGFR) plays a key role in the development of cSCC, but EGFR tyrosine kinase inhibitors (TKIs), such as gefitinib, have shown only partial clinical benefit in this disease. Thus, there is an unmet need to develop novel strategies for improving the efficacy of TKIs in cSCC. We previously demonstrated that the tumor-suppressive microRNA (miRNA) miR-634 functions as a negative modulator of the cytoprotective cancer cell survival processes and is a useful anticancer therapeutic agent. In the present study, we found that topical application of an ointment containing miR-634 inhibited in vivo tumor growth without toxicity in a cSCC xenograft mouse model and a 7,12-dimethylbenz[a]anthracene (DMBA)/12-O-tetradecanoylphorbol-13-acetate (TPA)-induced papilloma mouse …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>J Inazawa</b></span>
-  on <time datetime="2020-12-10 00:00:00+00:00" class="dt-published"></time>
-  Thu 10 Dec 2020
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pradyunsg.me/blog/2020/12/08/catchup/" rel="bookmark" class="u-url"
        title="Catching up" target="_blank">
       <time class="m-date" datetime="2020-12-08 00:00:00+00:00">
@@ -841,53 +884,6 @@ Installation of mpv-mpris
   on <time datetime="2020-12-06 00:00:00+01:00" class="dt-published"></time>
   Sun 06 Dec 2020
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com//blog/202012/favicons_with_imagemagick.html" rel="bookmark" class="u-url"
-       title="Favicons with ImageMagick" target="_blank">
-      <time class="m-date" datetime="2020-12-05 13:46:11-05:00">
-        Dec
-        <span class="m-date-day">
-          05
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Favicons with ImageMagick
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I needed to revisit how favicons work today.  First I wanted to do an
-empirical experiment to see what size and format would get used by browsers.
-This has always been a confusing landscape. Some pages offer dozens of different
-files to use as the icon.  I wasn&#8217;t going to go crazy with all of that, so I
-just wanted to see what would do a simple job.</p><p>To run my experiment, I used ImageMagick to create a test favicon.ico, and
-also some different-sized png files.  So I would know what I was looking at,
-each size is actually a different visual image: the 32-pixel icon shows &#8220;32&#8221;,
-and so on.</p><p>This is how I made them:</p><blockquote><code><span>for</span>&#xa0;size&#xa0;in&#xa0;<span>16</span>&#xa0;<span>32</span>&#xa0;<span>48</span>&#xa0;<span>;</span>&#xa0;<span>do</span>
-&#xa0;&#xa0;&#xa0;&#xa0;magick&#xa0;convert&#xa0;<span>\</span>
-&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-background&#xa0;lightgray&#xa0;<span>\</span>
-&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-fill&#xa0;black&#xa0;<span>\</span>
-&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-size&#xa0;<span>${</span><span>size</span><span>}</span>x<span>${</span><span>size</span><span>}</span>&#xa0;<span>\</span>
-&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-gravity&#xa0;center&#xa0;<span>\</span>
-&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;-bordercolor&#xa0;black …</code></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2020-12-05 13:46:11-05:00" class="dt-published"></time>
-  Sat 05 Dec 2020
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
