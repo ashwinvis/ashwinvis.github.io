@@ -153,9 +153,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.volkerkrause.eu/2020/12/26/kde-wrapping-up-2020.html" rel="bookmark" class="u-url"
-       title="Wrapping up 2020 and looking forward to 2021" target="_blank">
-      <time class="m-date" datetime="2020-12-26 09:45:00+00:00">
+    <a href="https://jlelse.blog/thoughts/2020/12/yearly-monthly-archives" rel="bookmark" class="u-url"
+       title="More archives on this blog" target="_blank">
+      <time class="m-date" datetime="2020-12-26 22:23:42+01:00">
         Dec
         <span class="m-date-day">
           26
@@ -163,44 +163,117 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      Wrapping up 2020 and looking forward to 2021
+      More archives on this blog
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>As 2020 comes to a close, there’s several things ongoing around <a href="https://apps.kde.org/en/itinerary">KDE Itinerary</a>
-which a year ago I would have considered out of reach, or simply didn’t have on the radar yet at all.
-The common theme in all of those is collaboration with other communities and organizations.
-And I’m looking forward to more of this in 2021!</p>
-
-OSM Osmose Validator using KOpeningHours
-
-<p>When <a href="/2020/12/12/kde-itinerary-opening-hours-integration.html">writing about KOpeningHours recently</a>,
-I mentioned it being considered for use in <a href="https://wiki.openstreetmap.org/wiki/Osmose">OSM’s Osmose validator</a> to improve
-OSM’s opening hours expression validation.</p>
-
-<p>This has been implemented meanwhile, and is being deployed. You can see the result
-<a href="https://osmose.openstreetmap.fr/en/map/?#zoom=14&amp;lat=48.85867&amp;lon=2.36566&amp;item=3250&amp;level=1%2C2%2C3">here</a> for example.</p>
-
-
-
-  <img alt="Screenshot of OSM's Osmose validator suggesting a fix to a localized opening hours expression." src="//www.volkerkrause.eu/assets/posts/73/osm-osmose-opening-hours-validation.png">
-
-  OSM's Osmose validator suggesting improvements to an opening hours expression.
-
-
-<p>We have already found and fixed a number of issues in KOpeningHours’ parser due to feedback from this.
-Another Interesting observation from …</p>
+  One advantage when developing your own CMS software is that you can add new features very easily. Although you should not push this too far that unnecessarily many features collect and afterwards the quality suffers, but some things are still good to have.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2020-12-26 09:45:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-26 22:23:42+01:00" class="dt-published"></time>
+  Sat 26 Dec 2020
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.bshah.in/2020/12/26/blog-housekeeping/" rel="bookmark" class="u-url"
+       title="Blog housekeeping and stuff" target="_blank">
+      <time class="m-date" datetime="2020-12-26 15:21:00+00:00">
+        Dec
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Blog housekeeping and stuff
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>So today I did some housekeeping on my blog,</p>
+
+<ul>
+  <li>Moving it to new server, old server was based on Ubuntu 16.04 Xenial Xerus, which is quite old now (I still get security updates, but some packages are quite out-of-date and needs quite some PPAs to manage it)</li>
+  <li>Updating it to latest minima theme and removing some of custom templates I had</li>
+  <li>Removing disqus plugin, as I realized ultimately I get less and less comments there and it can be invasive to privacy for readers of this blog</li>
+  <li>Killing the Google analytics from my blog, this is something which I had added back in 2015 without much of thinking, but in fairness I was not looking at dashboards for this site from quite while now. I will also take care to delete the data from Google Analytics Dashboard</li>
+</ul>
+
+<p>I had …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Bhushan Shah (bshah)</b></span>
+  on <time datetime="2020-12-26 15:21:00+00:00" class="dt-published"></time>
   Sat 26 Dec 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://hunden.linuxkompis.se/2020/12/26/how-to-add-automatic-dark-mode-for-your-website-using-plain-css.html" rel="bookmark" class="u-url"
+       title="How to add automatic dark mode for your website using plain CSS" target="_blank">
+      <time class="m-date" datetime="2020-12-26 00:00:00+01:00">
+        Dec
+        <span class="m-date-day">
+          26
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      How to add automatic dark mode for your website using plain CSS
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Adding an automatic dark mode for your website using plain CSS is simple. Dark mode is not something that I use myself—it’s actually worse for your eyes—but it was requested by multiple readers, so I decided to add it to my website. It’s only a few lines of CSS anyway.</p>
+
+<p>This is what you need to add to your style sheet:</p>
+
+<div><div><pre><code><span>@media</span> <span>(</span><span>prefers-color-scheme</span><span>:</span> <span>dark</span><span>)</span> <span>{</span>
+<span>}</span>
+</code></pre></div></div>
+
+<p>You then add any CSS-rule in there for the things you want to change when the dark mode is enabled. For an example, let’s say you want a black background with white ext instead of the regular white background with black text:</p>
+
+<div><div><pre><code><span>@media</span> <span>(</span><span>prefers-color-scheme</span><span>:</span> <span>dark</span><span>)</span> <span>{</span>
+    <span>html</span> <span>{</span>
+        <span>background</span><span>:</span> <span>#111</span><span>;</span>
+        <span>color</span><span>:</span> <span>#fff</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre></div></div>
+
+<p>That’s it!</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-26 00:00:00+01:00" class="dt-published"></time>
+  Sat 26 Dec 2020
+  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -440,40 +513,6 @@ This becomes important for projects with lots of CI jobs and workflows, you don&
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2020/12/merry-christmas" rel="bookmark" class="u-url"
-       title="Merry Christmas! 🎄" target="_blank">
-      <time class="m-date" datetime="2020-12-24 17:07:00+01:00">
-        Dec
-        <span class="m-date-day">
-          24
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Merry Christmas! 🎄
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I wish you a Merry Christmas and / or happy holidays! 🎅
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-24 17:07:00+01:00" class="dt-published"></time>
-  Thu 24 Dec 2020
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.youtube.com/watch?v=t1X-Oln1u24" rel="bookmark" class="u-url"
        title="SciCloj #18: Introducing Skija" target="_blank">
       <time class="m-date" datetime="2020-12-23 00:00:00+00:00">
@@ -606,6 +645,40 @@ David has reworked the kubernetes archwiki article as well. It currently doesn&r
   on <time datetime="2020-12-22 00:00:00+00:00" class="dt-published"></time>
   Tue 22 Dec 2020
   in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="www.conda-forge.org/blog/posts/2020-12-22-year-in-review/" rel="bookmark" class="u-url"
+       title="2020 in Review" target="_blank">
+      <time class="m-date" datetime="2020-12-22 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          22
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      2020 in Review
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>As 2020 winds down, the Core team thought it’d be fun to review some of the big accomplishments our community has made this year.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>conda-forge/core</b></span>
+  on <time datetime="2020-12-22 00:00:00+00:00" class="dt-published"></time>
+  Tue 22 Dec 2020
+  in conda-forge blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -870,58 +943,6 @@ I wrapped up my 3 month GSoC project, after 3 years
   on <time datetime="2020-12-08 00:00:00+00:00" class="dt-published"></time>
   Tue 08 Dec 2020
   in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2020/12/06/how-to-control-mpv-via-the-shell-using-playerctl-and-mpv-mpris.html" rel="bookmark" class="u-url"
-       title="How to control mpv via the shell using Playerctl and mpv-pris" target="_blank">
-      <time class="m-date" datetime="2020-12-06 00:00:00+01:00">
-        Dec
-        <span class="m-date-day">
-          06
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      How to control mpv via the shell using Playerctl and mpv-pris
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>With the help of <a href="https://github.com/altdesktop/playerctl">Playerctl</a> it’s possible to control various media players like mpv, VLC, cmus, mpd, Spotify and even web browsers using the shell. Because I’m only using mpv myself, that’s what I’m going to talk about here.</p>
-
-<p>For this to work you need a plugin called <a href="https://github.com/hoyon/mpv-mpris">mpv-mpris</a>. It adds support for controlling mpv using the standard media keys by implementing support for the <a href="https://specifications.freedesktop.org/mpris-spec/latest/">MPRIS D-Bus Interface Specification</a>.</p>
-
-Installation of mpv-mpris
-
-<p>You can either download <a href="https://github.com/hoyon/mpv-mpris/releases/">the latest stable release</a> or clone the latest code using git:</p>
-
-<div><div><pre><code>$ git clone https://github.com/hoyon/mpv-mpris         
-</code></pre></div></div>
-
-<p>You can then compile the code:</p>
-
-<div><div><pre><code>$ make  
-</code></pre></div></div>
-<div><div><pre><code>$ make install 
-</code></pre></div></div>
-
-<p>It’s important to <strong>not</strong> use root with <code>make install</code>, if you do that, it will then copy the plugin to the wrong folder <code>/root/.config/mpv/scritps/</code> and not to your own …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-06 00:00:00+01:00" class="dt-published"></time>
-  Sun 06 Dec 2020
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
