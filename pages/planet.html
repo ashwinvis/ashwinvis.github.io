@@ -153,6 +153,49 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/review-good-morning-midnight/" rel="bookmark" class="u-url"
+       title="Book-Good Morning, Midnight" target="_blank">
+      <time class="m-date" datetime="2020-12-27 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Book-Good Morning, Midnight
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The 2020 movie &ldquo;The Midnight Sky&rdquo; is based on the 2016 Lily Brooks-Dalton book
+<a href="http://www.lilybrooksdalton.com/good-morning-midnight.html">Good Morning, Midnight</a>.
+I customarily approach book-based films by reading the book first.
+This review is only about the book.</p>
+<p>I found the character-oriented narrative quite compelling, with multiple characters having development and reflection.
+The only slight downside to the book is as typical in most fiction (including post-apocalyptic and science fiction), the radio communications and vehicle aspects of the book could have been described more accurately by having a technical reviewer.
+I think the author tried to do a better than average approach to the radio comms, but in doing so made some simple mistakes that a quick touch up from a technical reviewer would smooth over.</p>
+<p>I compliment the author&rsquo;s approach&ndash;these slight issues below are endemic in fiction books.</p>
+Vehicles
+<p>Gasoline engine …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-27 00:00:00+00:00" class="dt-published"></time>
+  Sun 27 Dec 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jlelse.blog/thoughts/2020/12/yearly-monthly-archives" rel="bookmark" class="u-url"
        title="More archives on this blog" target="_blank">
       <time class="m-date" datetime="2020-12-26 22:23:42+01:00">
@@ -422,55 +465,6 @@ what you like and dislike about …</p>
   on <time datetime="2020-12-25 00:00:00+00:00" class="dt-published"></time>
   Fri 25 Dec 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/github-actions-timeout/" rel="bookmark" class="u-url"
-       title="GitHub Actions timeout parameter" target="_blank">
-      <time class="m-date" datetime="2020-12-25 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          25
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      GitHub Actions timeout parameter
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We often set a &ldquo;pip&rdquo; timeout of 1 or 2 minutes to ensure the CI is using wheels instead of compiling from source, which can take tens of minutes or fail.
-A job-level timeout can likewise be set.</p>
-<p>In this case, rather than setting a job-level <code>timeout-minutes: 6</code>, which would waste 6 minutes if pip tries to build from source, we know pip for this project takes much less than 1 minute, so we only have to wait one minute if pip goes awry.
-This becomes important for projects with lots of CI jobs and workflows, you don&rsquo;t want to have to manually wade through hundreds or thousands of error messages.</p>
-<div><pre><code><span>jobs</span>:
-<span>linux</span>:
-<span>runs-on</span>: <span>ubuntu-latest</span>
-<span>steps</span>:
-- <span>uses</span>: <span>actions/checkout@v2</span>
-- <span>uses</span>: <span>actions/setup-python@v2</span>
-<span>with</span>:
-<span>python-version</span>: <span>'3.x'</span>
-- <span>run</span>: <span>python -m pip install .[tests]</span>
-<span>timeout-minutes</span>: <span>1</span>
-- <span>run</span>: <span>pytest</span>
-<span>timeout-minutes …</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-25 00:00:00+00:00" class="dt-published"></time>
-  Fri 25 Dec 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
