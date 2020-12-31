@@ -298,6 +298,68 @@ again because of the calling conventions.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/windows-mpi-msys2/" rel="bookmark" class="u-url"
+       title="Fortran MPI on Windows" target="_blank">
+      <time class="m-date" datetime="2020-12-31 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Fortran MPI on Windows
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>There are several methods available to get MPI on Windows, including:</p>
+<ul>
+<li>Microsoft MPI (MS-MPI) with MSYS2 or MinGW: <a href="https://github.com/microsoft/Microsoft-MPI">open-source</a>, discussed below</li>
+<li><a href="https://www.scivision.dev/intel-oneapi-fortran-install">Intel oneAPI MPI</a></li>
+<li>Cygwin <code>libopenmpi-devel</code></li>
+<li>Windows Subsystem for Linux <code>libopenmpi-dev</code></li>
+</ul>
+MPI + MSYS2
+<p>This procedure gives MPI via MSYS2 GCC / Gfortran compilers on Windows.</p>
+<ol>
+<li>
+<p>Download and install <a href="https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi">Microsoft MS-MPI</a></p>
+</li>
+<li>
+<p>To make <code>mpiexec.exe</code> available, add to user PATH: <code>C:\Program Files\Microsoft MPI\Bin</code> &ndash; this is needed even when using MSYS2.</p>
+</li>
+<li>
+<p>Install MSYS2 MS-MPI library, from the MSYS2 Terminal</p>
+<div><pre><code>pacman -S mingw-w64-x86_64-msmpi
+</code></pre></div></li>
+</ol>
+MPI + MinGW
+<p>While we recommennd MSYS2, it&rsquo;s also possible to use MS-MPI with
+<a href="https://www.scivision.dev/windows-gcc-gfortran-cmake-make-install">MinGW</a>.
+We will put the resulting artifacts under c:/lib/mpi</p>
+<div><pre><code>mkdir c:/lib/mpi/
+Copy-Item -Path <span>"C:/Program Files (x86)/Microsoft SDKs/MPI/Include"</span> -Destination <span>"c:/lib/mpi/"</span> -Recurse
+cd c:/lib/mpi
+</code></pre></div><p>you may need to edit &ldquo;include/mpi.f90&rdquo; to have …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-31 00:00:00+00:00" class="dt-published"></time>
+  Thu 31 Dec 2020
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://fuckyeahfluiddynamics.tumblr.com/post/638945025367195648/vanishing-spirits-rice-based-whisky" rel="bookmark" class="u-url"
        title="Vanishing Spirits: Rice-Based Whisky" target="_blank">
       <time class="m-date" datetime="2020-12-30 10:24:10-06:00">
@@ -461,64 +523,6 @@ again because of the calling conventions.</p>
   on <time datetime="2020-12-30 00:00:00+00:00" class="dt-published"></time>
   Wed 30 Dec 2020
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/html-spoiler-tag/" rel="bookmark" class="u-url"
-       title="HTML5 spoiler reveal on click" target="_blank">
-      <time class="m-date" datetime="2020-12-30 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      HTML5 spoiler reveal on click
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Common web page / blog post applications where concealing text until the viewer clicks include:</p>
-<ul>
-<li>table of contents</li>
-<li>spoilers</li>
-<li>long details not all readers are interested in at that point in the article</li>
-</ul>
-<p>This is implemented via the HTML5
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">details</a>
-tag.
-While it is also possible to implement click-to-reveal text via CSS and/or JavaScript, we prefer the simplicity of a single HTML5 tag.</p>
-<div><pre><code>&lt;<span>details</span>&gt;
-&lt;<span>summary</span>&gt;click for spoilers&lt;/<span>summary</span>&gt;
-&lt;<span>ul</span>&gt;
-&lt;<span>li</span>&gt;The season finale for Season 1 showed ...&lt;/<span>li</span>&gt;
-&lt;<span>li</span>&gt;And season 2 opener revealed ...&lt;/<span>li</span>&gt;
-&lt;/<span>ul</span>&gt;
-&lt;/<span>details</span>&gt;
-</code></pre></div>Example
-
-click for spoilers
-<ul>
-<li>The season finale for Season 1 showed ...</li>
-<li>And season 2 opener revealed ...</li>
-</ul>
-
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-30 00:00:00+00:00" class="dt-published"></time>
-  Wed 30 Dec 2020
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
