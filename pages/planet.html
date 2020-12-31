@@ -153,35 +153,58 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.proli.net/2020/12/30/my-2020-with-kwin-wayland/" rel="bookmark" class="u-url"
-       title="My 2020 with KWin Wayland" target="_blank">
-      <time class="m-date" datetime="2020-12-30 17:37:20+00:00">
+    <a href="https://cordlandwehr.wordpress.com/2020/12/31/rpi4-and-yocto-updates/" rel="bookmark" class="u-url"
+       title="RPi4 and Yocto Updates" target="_blank">
+      <time class="m-date" datetime="2020-12-31 11:19:20+00:00">
         Dec
         <span class="m-date-day">
-          30
+          31
         </span>
         2020
       </time>
       <div class="p-name">
-      My 2020 with KWin Wayland
+      RPi4 and Yocto Updates
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Over the last few years and especially since the <a href="https://community.kde.org/Goals/Wayland">Wayland goal</a> vote, the Plasma team, we have been focusing on having our Plasma Wayland experience work at least as good as our traditional Plasma X11 experience does. Today I’d like to wrap up my experience on this front for 2020.</p>
-<p>Despite having been working on KDE and even Plasma projects for a long while, I’d never gotten much deep into working on KWin internally. I dipped my toes in it in 2019 when working on the key states feature (that plasmoid that says if caps lock is pressed or not, which we needed because the KDE Slimbook didn’t have an LED for the Caps Lock). Here I’ll discuss a bit how it evolved over time.</p>
-Features
-Tablet support
-<p>It’s probably been my first big feature …</p>
+  <p>I recently obtained a brand new Raspberry Pi4 device and took the free days around x-mas to play a little bit around with it. And I must say, I am very pleased with this device!</p>
+
+
+
+<a href="https://cordlandwehr.files.wordpress.com/2020/12/pi4.jpeg"><img alt="" src="//cordlandwehr.files.wordpress.com/2020/12/pi4.jpeg?w=1024"></a>Raspberry Pi 4 B
+
+
+
+<p>The important updates for me, comparing to the older Pis are:</p>
+
+
+
+<ul>
+<li>Two displays can be connected! Either two HDMI or one DSI plus one HDMI.</li>
+<li>It has a VideoCore VI GPU (very different to the IV from RPi3), which is driven by the <a href="https://www.raspberrypi.org/blog/vc4-and-v3d-opengl-drivers-for-raspberry-pi-an-update/">MESA V3D driver</a>.</li>
+</ul>
+
+
+
+<p>My goal was to get a Yocto-built multi-display <a href="https://www.plasma-mobile.org/">plasma-mobile</a> environment on the device. Except two magic lines for the /boot/config.txt configuration that enabled multi-display output for me, it nearly worked out of the box.</p>
+
+
+
+<p>RPi4 Multi-Display Setup</p>
+
+
+
+<p>The important configuration step, compared to the default configuration as provided by meta-raspberry, are the following …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Aleix Pol</b></span>
-  on <time datetime="2020-12-30 17:37:20+00:00" class="dt-published"></time>
-  Wed 30 Dec 2020
+  <span class="p-author"><b>Andreas Cord-Landwehr (CoLa)</b></span>
+  on <time datetime="2020-12-31 11:19:20+00:00" class="dt-published"></time>
+  Thu 31 Dec 2020
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -191,31 +214,81 @@ Tablet support
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/posts/december-2020" rel="bookmark" class="u-url"
-       title="My December '20 in Review" target="_blank">
-      <time class="m-date" datetime="2020-12-30 17:26:56+01:00">
+    <a href="https://morepypy.blogspot.com/2020/12/mac-meets-arm64.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
+       title="Mac meets Arm64" target="_blank">
+      <time class="m-date" datetime="2020-12-31 10:53:24.427000+01:00">
         Dec
         <span class="m-date-day">
-          30
+          31
         </span>
         2020
       </time>
       <div class="p-name">
-      My December '20 in Review
+      Mac meets Arm64
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  The month of December is now coming to an end, so it’s time to take a look back.
+  <b>Looking for sponsorship</b>
+
+<p>Apple now ships Macs which are running on an arm64 variant machine with the
+latest version of MacOS, Big Sur M1.  We are getting requests for PyPy to
+support this new architecture.  Here is our position on this topic (or at least
+mine, Armin Rigo's), and how you can help.</p>
+
+<p>Porting PyPy is harder than just re-running the compiler, because PyPy contains
+a few big architecture-dependent "details", like the JIT compiler and the
+foreign function interfaces (CFFI and ctypes).</p>
+
+<p>Fixing the JIT compiler should not be too much work: we already support arm64,
+just the Linux one.  But Apple made various details different (like the calling
+conventions).  A few other parts need to be fixed too, notably CFFI and ctypes,
+again because of the calling conventions.</p>
+
+<p>Fixing that would be a reasonable amount of work.  I would …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Rigo (noreply@blogger.com)</b></span>
+  on <time datetime="2020-12-31 10:53:24.427000+01:00" class="dt-published"></time>
+  Thu 31 Dec 2020
+  in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2020/12/wiegman-big-tech" rel="bookmark" class="u-url"
+       title=""My Adventures in Leaving Big Tech – A Status Update"" target="_blank">
+      <time class="m-date" datetime="2020-12-31 08:21:27+01:00">
+        Dec
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      "My Adventures in Leaving Big Tech – A Status Update"
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Chris Wiegman shared a status update about his journey to replace big tech with small tech.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-30 17:26:56+01:00" class="dt-published"></time>
-  Wed 30 Dec 2020
+  on <time datetime="2020-12-31 08:21:27+01:00" class="dt-published"></time>
+  Thu 31 Dec 2020
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -362,6 +435,40 @@ Tablet support
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://xkcd.com/2405/" rel="bookmark" class="u-url"
+       title="Flash Gatsby" target="_blank">
+      <time class="m-date" datetime="2020-12-30 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          30
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Flash Gatsby
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Protip: At midnight your excuse for not having read The Great Gatsby can switch from &quot;I'm worried about violating copyright&quot; to &quot;I think my copy requires Flash.&quot;" src="https://imgs.xkcd.com/comics/flash_gatsby.png" title="Protip: At midnight your excuse for not having read The Great Gatsby can switch from &quot;I'm worried about violating copyright&quot; to &quot;I think my copy requires Flash.&quot;">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-30 00:00:00+00:00" class="dt-published"></time>
+  Wed 30 Dec 2020
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://www.scivision.dev/html-spoiler-tag/" rel="bookmark" class="u-url"
        title="HTML5 spoiler reveal on click" target="_blank">
       <time class="m-date" datetime="2020-12-30 00:00:00+00:00">
@@ -500,40 +607,6 @@ The Board is discussing bylaw changes that we will introduce to the community fo
   on <time datetime="2020-12-28 11:00:07.726000-05:00" class="dt-published"></time>
   Mon 28 Dec 2020
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2404/" rel="bookmark" class="u-url"
-       title="First Thing" target="_blank">
-      <time class="m-date" datetime="2020-12-28 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          28
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      First Thing
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Then I'm going to go on a weeks-long somatic hypermutation bender, producing ever-more targeted antibodies, while I continue to remain distanced and follow guidance from public health authorities." src="https://imgs.xkcd.com/comics/first_thing.png" title="Then I'm going to go on a weeks-long somatic hypermutation bender, producing ever-more targeted antibodies, while I continue to remain distanced and follow guidance from public health authorities.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-28 00:00:00+00:00" class="dt-published"></time>
-  Mon 28 Dec 2020
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
