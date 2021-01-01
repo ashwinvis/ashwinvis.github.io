@@ -153,9 +153,43 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://cordlandwehr.wordpress.com/2020/12/31/rpi4-and-yocto-updates/" rel="bookmark" class="u-url"
-       title="RPi4 and Yocto Updates" target="_blank">
-      <time class="m-date" datetime="2020-12-31 11:19:20+00:00">
+    <a href="https://jlelse.blog/micro/2021/01/2021-01-01-vhkuy" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-01-01 00:13:00+01:00">
+        Jan
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Welcome to 2021! Happy New Year! 🎆🍀
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-01-01 00:13:00+01:00" class="dt-published"></time>
+  Fri 01 Jan 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://feverfew.home.blog/2020/12/31/kio-fuse-5-0-0-released/" rel="bookmark" class="u-url"
+       title="KIO FUSE 5.0.0 Released" target="_blank">
+      <time class="m-date" datetime="2020-12-31 19:44:27+00:00">
         Dec
         <span class="m-date-day">
           31
@@ -163,49 +197,115 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2020
       </time>
       <div class="p-name">
-      RPi4 and Yocto Updates
+      KIO FUSE 5.0.0 Released
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I recently obtained a brand new Raspberry Pi4 device and took the free days around x-mas to play a little bit around with it. And I must say, I am very pleased with this device!</p>
+  <p>It’s a pleasure to announce the first stable release of <a href="https://invent.kde.org/system/kio-fuse">KIO FUSE</a>, just in time for 2021.</p>
 
 
 
-<a href="https://cordlandwehr.files.wordpress.com/2020/12/pi4.jpeg"><img alt="" src="//cordlandwehr.files.wordpress.com/2020/12/pi4.jpeg?w=1024"></a>Raspberry Pi 4 B
-
-
-
-<p>The important updates for me, comparing to the older Pis are:</p>
+<p>Compared to the last release candidate, the following changed: </p>
 
 
 
 <ul>
-<li>Two displays can be connected! Either two HDMI or one DSI plus one HDMI.</li>
-<li>It has a VideoCore VI GPU (very different to the IV from RPi3), which is driven by the <a href="https://www.raspberrypi.org/blog/vc4-and-v3d-opengl-drivers-for-raspberry-pi-an-update/">MESA V3D driver</a>.</li>
+<li>Symlinks with an absolute target path are “rewritten” to point to the location inside the target instead of the host system </li>
+<li>Mounting a URL which includes symlinks now works.</li>
+<li>The DBus service can use systemd activation now.</li>
 </ul>
 
 
 
-<p>My goal was to get a Yocto-built multi-display <a href="https://www.plasma-mobile.org/">plasma-mobile</a> environment on the device. Except two magic lines for the /boot/config.txt configuration that enabled multi-display output for me, it nearly worked out of the box.</p>
+<p>Known issues:</p>
 
 
 
-<p>RPi4 Multi-Display Setup</p>
-
-
-
-<p>The important configuration step, compared to the default configuration as provided by meta-raspberry, are the following …</p>
+<ul>
+<li>Some applications like VLC and MPV claim support for certain protocols, which causes KIO to not use KIO FUSE in certain cases. Please mention which URL was actually passed to the application when reporting an issue.</li>
+<li>The changes to the mounting code exposed a bug in the <a href="https://">fish://</a> ioslave, which unfortunately makes it unusable from kio-fuse. A fix is pending: <a href="https://invent.kde.org/network/kio-extras/-/merge_requests/63">https://invent.kde.org/network/kio-extras/-/merge_requests/63</a>
+</li>
+<li>Poor throughput especially on high latency …</li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Andreas Cord-Landwehr (CoLa)</b></span>
-  on <time datetime="2020-12-31 11:19:20+00:00" class="dt-published"></time>
+  <span class="p-author"><b>A Saoutkin (feverfew)</b></span>
+  on <time datetime="2020-12-31 19:44:27+00:00" class="dt-published"></time>
   Thu 31 Dec 2020
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/639034195280379904/vanishing-spirits-aging" rel="bookmark" class="u-url"
+       title="Vanishing Spirits: Aging" target="_blank">
+      <time class="m-date" datetime="2020-12-31 10:01:38-06:00">
+        Dec
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Vanishing Spirits: Aging
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Vanishing Spirits: Aging" src="https://64.media.tumblr.com/90b8fb4b60dcf08916da25d0a207c35c/8d92f8cf96671ac5-07/s540x810/55551aa2e5f696bf3920165c699e491446d1f460.jpg"><a href="http://fyfluiddynamics.com/?p=14194">The necessary ingredients for scotch whisky&rsquo;s evaporation patterns are alcohol, surfactants, and polymers; some of those components are absorbed during the spirit&rsquo;s aging in oak casks.</a> (Image, research, and submission credit: <a href="http://erniebutton.com/">E. Button</a>; <a href="https://fyfluiddynamics.com/2016/05/photographer-ernie-button-discovered-that-whiskey/">see also</a>)
+<a href="http://fyfluiddynamics.com/?p=14194">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2020-12-31 10:01:38-06:00" class="dt-published"></time>
+  Thu 31 Dec 2020
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2020/12/vanishing-spirits-aging/" rel="bookmark" class="u-url"
+       title="Vanishing Spirits: Aging" target="_blank">
+      <time class="m-date" datetime="2020-12-31 16:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          31
+        </span>
+        2020
+      </time>
+      <div class="p-name">
+      Vanishing Spirits: Aging
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The necessary ingredients for scotch whisky&#8217;s evaporation patterns are alcohol, surfactants, and polymers; some of those components are absorbed during the spirit&#8217;s aging in oak casks. Photographer Ernie Button explored <a href="https://fyfluiddynamics.com/2020/12/vanishing-spirits-aging/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2020-12-31 16:00:00+00:00" class="dt-published"></time>
+  Thu 31 Dec 2020
+  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -256,40 +356,6 @@ again because of the calling conventions.</p>
   on <time datetime="2020-12-31 10:53:24.427000+01:00" class="dt-published"></time>
   Thu 31 Dec 2020
   in PyPy Status Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/links/2020/12/wiegman-big-tech" rel="bookmark" class="u-url"
-       title=""My Adventures in Leaving Big Tech – A Status Update"" target="_blank">
-      <time class="m-date" datetime="2020-12-31 08:21:27+01:00">
-        Dec
-        <span class="m-date-day">
-          31
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      "My Adventures in Leaving Big Tech – A Status Update"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Chris Wiegman shared a status update about his journey to replace big tech with small tech.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-31 08:21:27+01:00" class="dt-published"></time>
-  Thu 31 Dec 2020
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -352,75 +418,6 @@ cd c:/lib/mpi
   on <time datetime="2020-12-31 00:00:00+00:00" class="dt-published"></time>
   Thu 31 Dec 2020
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/638945025367195648/vanishing-spirits-rice-based-whisky" rel="bookmark" class="u-url"
-       title="Vanishing Spirits: Rice-Based Whisky" target="_blank">
-      <time class="m-date" datetime="2020-12-30 10:24:10-06:00">
-        Dec
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Vanishing Spirits: Rice-Based Whisky
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Vanishing Spirits: Rice-Based Whisky" src="https://64.media.tumblr.com/756bb06487e4ebe99142950a140e7706/6d0087b77085eb66-0c/s540x810/b099acb4b5c02093f6fd6bcf563db73076428714.png"><a href="http://fyfluiddynamics.com/?p=14166">In yesterday&rsquo;s post, photographer Ernie Button showed us that barrel-aged gin can leave behind an evaporation pattern remarkably similar to scotch whisky. But even among whiskys not every spirit uses the same grains.</a> (Image, research, and submission credit: <a href="http://erniebutton.com/">E. Button</a>; <a href="https://fyfluiddynamics.com/2016/05/photographer-ernie-button-discovered-that-whiskey/">see also</a>)
-<a href="http://fyfluiddynamics.com/?p=14166">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2020-12-30 10:24:10-06:00" class="dt-published"></time>
-  Wed 30 Dec 2020
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2020/12/vanishing-spirits-rice-based-whisky/" rel="bookmark" class="u-url"
-       title="Vanishing Spirits: Rice-Based Whisky" target="_blank">
-      <time class="m-date" datetime="2020-12-30 16:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          30
-        </span>
-        2020
-      </time>
-      <div class="p-name">
-      Vanishing Spirits: Rice-Based Whisky
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In yesterday&#8217;s post, photographer Ernie Button showed us that barrel-aged gin can leave behind an evaporation pattern remarkably similar to scotch whisky. But even among whiskys not every spirit uses <a href="https://fyfluiddynamics.com/2020/12/vanishing-spirits-rice-based-whisky/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2020-12-30 16:00:00+00:00" class="dt-published"></time>
-  Wed 30 Dec 2020
-  in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1112,7 +1109,7 @@ against the very first version of the file …</p>
       <div class="m-col-l-10 m-push-l-1">
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
-        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2020<br />
+        Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2021<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>
