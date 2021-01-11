@@ -11,49 +11,12 @@ head over to either of the following:
 Liberapay
 =========
 
-Many flexible ways to chip in a tip:
+Many flexible ways to chip in a tip anonymously:
 
 .. image:: https://liberapay.com/assets/widgets/donate.svg
    :target: https://liberapay.com/ashwinvis/donate
    :alt: Donate using Liberapay
    :height: 2em
-
-GitHub sponsors
-===============
-.. raw:: html
-
-   <style>
-      div.gh-sponsors-button a {
-         display: block;
-         text-decoration: none;
-         font-size: 0.9em;
-         font-family: sans-serif;
-         font-weight: bold;
-         color: #000;
-         padding: 0.2em 1em;
-     }
-     div.gh-sponsors-button {
-         display: inline-block;
-         background-color: #ddd;
-         border: none;
-         border-radius: 0.5rem;
-         text-align: center;
-     }
-   </style>
-
-Currently there are two sponsorship tiers, with which you could:
-
-- receive a special *thank you* email
-- be added to the list of *sponsors* in my blog
-
-.. container:: gh-sponsors-button m-default
-
-    `💓 Sponsor <https://github.com/sponsors/ashwinvis>`__
-
-Once things start looking up, I might open up more sponsorship tiers like one
-for:
-
-- allowing me to spare an hour per month to *talk about anything* you want via instant message / video call
 
 ----
 
@@ -73,6 +36,7 @@ I have donated in the past to:
 - `Arch Linux <https://www.archlinux.org/donate/>`__
 - `KDE e.V. <https://kde.org/community/donations/index.php>`__
 - `MSF <https://www.msf.org/>`__
+- `Radio Paradise <https://www.radioparadise.com/>`__
 - `Red Cross <https://www.rodakorset.se/>`__
 - `Wikipedia
   <https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&utm_medium=sidebar&utm_campaign=C13_en.wikipedia.org&uselang=en>`__
