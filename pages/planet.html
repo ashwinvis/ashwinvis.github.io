@@ -153,32 +153,74 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2021/01/2021-01-15-ekqyt" rel="bookmark" class="u-url"
-       title="Drafts!" target="_blank">
-      <time class="m-date" datetime="2021-01-15 22:09:59+01:00">
+    <a href="https://jlelse.blog/links/2021/01/maddy" rel="bookmark" class="u-url"
+       title="Maddy Mail Server" target="_blank">
+      <time class="m-date" datetime="2021-01-16 23:17:11+01:00">
         Jan
         <span class="m-date-day">
-          15
+          16
         </span>
         2021
       </time>
       <div class="p-name">
-      Drafts!
+      Maddy Mail Server
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  My blog software now allows me to create, edit and publish drafts. Now I don’t need to use Nextcloud Notes for posts I don’t want to publish immediately. 😀
+  It’s already been a while, but I once (successfully) ran my own mail server for some time. I did this using the open source Mailcow project, which does all the configuration work for you and wraps everything nicely in Docker containers. There are also a few posts about it here on the blog.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-01-15 22:09:59+01:00" class="dt-published"></time>
-  Fri 15 Jan 2021
+  on <time datetime="2021-01-16 23:17:11+01:00" class="dt-published"></time>
+  Sat 16 Jan 2021
   in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://michael-jansen.name/blog/20210115-plasma-systemd-applet-bugfix/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Systemd Applet Release" target="_blank">
+      <time class="m-date" datetime="2021-01-16 21:16:30+00:00">
+        Jan
+        <span class="m-date-day">
+          16
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Systemd Applet Release
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <blockquote>Systemd Applet Bugfix Release</blockquote><p>Given no one seems to be interested in working on the applet (boo) I decided to tackle
+the bug myself. Apparently the fact it worked previously was the result of happenstance.</p>
+<p>The systemd manager processes only send out signals after at least one process told them to do
+so. It seems that some process did that on my computer before but no more. From the doc:</p>
+<blockquote>
+<p>Subscribe() enables most bus signals to be sent out. Clients which are interested in signals need to call this
+function. Signals are only sent out if at least one client invoked this function. Unsubscribe() undoes the signal
+subscription that Subscribe() implements. It is not necessary to invoke Unsubscribe() as clients are tracked. Signals
+are no longer sent out as soon as all clients which previously asked for Subscribe() either closed …</p></blockquote>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Michael Jansen</b></span>
+  on <time datetime="2021-01-16 21:16:30+00:00" class="dt-published"></time>
+  Sat 16 Jan 2021
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -250,56 +292,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-01-15 16:00:00+00:00" class="dt-published"></time>
   Fri 15 Jan 2021
   in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://toscalix.com/2021/01/15/improve-your-software-product-delivery-process-performance-using-metrics-ii/" rel="bookmark" class="u-url"
-       title="Improve your software product delivery process performance using metrics (II)" target="_blank">
-      <time class="m-date" datetime="2021-01-15 00:30:00+00:00">
-        Jan
-        <span class="m-date-day">
-          15
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Improve your software product delivery process performance using metrics (II)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This is the second article of the series. Please read the <a href="https://toscalix.com/2021/01/11/improve-you-software-product-delivery-process-in-5-steps/">first post</a> before this one.</p>
-
-
-
-<p>During the previous article I explained the process to follow, using the simplest possible model to describe a software product delivery process, to measure and improve its performance, following a data driven improvement kata as a way to promote a continuous improvement culture .</p>
-
-
-
-<p>Despite providing extremely valuable information, once we have gone through the described process for a few iterations, the limitations of such a simple model will become evident. We will need to add complexity into our model, getting closer to the real software product delivery process.  </p>
-
-
-
-Add complexity to approach reality. 
-
-
-
-<p>If you have a clear map of your real delivery process, you can skip this step. If you do not, the first thing I recommend is to run a value stream …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Agustín Benito Bethencourt (toscalix)</b></span>
-  on <time datetime="2021-01-15 00:30:00+00:00" class="dt-published"></time>
-  Fri 15 Jan 2021
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -468,6 +460,42 @@ To use CMake with Intel oneAPI requires at least:</p>
   on <time datetime="2021-01-14 21:00:00+00:00" class="dt-published"></time>
   Thu 14 Jan 2021
   in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://archlinux.org/news/manual-pages-indexing-service/" rel="bookmark" class="u-url"
+       title="Manual pages indexing service" target="_blank">
+      <time class="m-date" datetime="2021-01-14 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Manual pages indexing service
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  We are happy to announce our newest public service: A manual pages indexing site at <a href="https://man.archlinux.org">man.archlinux.org</a> that publishes the man pages of all our packages and allows you to <a href="https://man.archlinux.org/search">search</a> and <a href="https://man.archlinux.org/listing">browse</a> them. Check out, for example, the <a href="https://man.archlinux.org/man/core/tar/tar.1.en">man page of tar</a>.
+You can also find this service linked to in the sidebar as well as on every package detail page. Thanks to Wiki Admin <a href="https://wiki.archlinux.org/index.php/User:Lahwaacz">lahwaacz</a> for developing <a href="https://gitlab.archlinux.org/archlinux/archmanweb">archmanweb</a> for this purpose.
+While there are other man page indexing sites out there, it is our hope that publishing man pages matching the versions of our released packages further improves Arch accessibility and documentation.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-01-14 00:00:00+00:00" class="dt-published"></time>
+  Thu 14 Jan 2021
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -850,44 +878,6 @@ i3-swallow
   on <time datetime="2021-01-04 00:00:00+00:00" class="dt-published"></time>
   Mon 04 Jan 2021
   in Hynek Schlawak.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://vdwaa.nl/arch-linux-reproducible-builds-progress-2020.html" rel="bookmark" class="u-url"
-       title="Arch Linux Reproducible Builds Progress 2020" target="_blank">
-      <time class="m-date" datetime="2021-01-04 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          04
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Arch Linux Reproducible Builds Progress 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  A lot has happened since the last reproducible builds summit in Marrakesh 2019, this blog post
-is a summary of the progress made in 2020 of everything related to getting
-reproducible builds in Arch Linux.
-archlinux-repro
-Also known as <code>repro</code> this tool allows one to rebuild a package and check …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-01-04 00:00:00+00:00" class="dt-published"></time>
-  Mon 04 Jan 2021
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
