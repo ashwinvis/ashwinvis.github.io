@@ -153,75 +153,48 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nibblestew.blogspot.com/2021/02/using-gamepad-to-control-painting.html" rel="bookmark" class="u-url"
-       title="Using a gamepad to control a painting application" target="_blank">
-      <time class="m-date" datetime="2021-01-31 23:41:00+00:00">
-        Jan
+    <a href="https://euroquis.nl//calamares/2021/02/02/cala-infrastructure.html" rel="bookmark" class="u-url"
+       title="Calamares CI Infrastructure" target="_blank">
+      <time class="m-date" datetime="2021-02-01 23:00:00+00:00">
+        Feb
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      Using a gamepad to control a painting application
+      Calamares CI Infrastructure
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>One of the hardest things in drawing and painting is controlling the individual strokes. Not only do you have to control the location but also the pressure, tilt and rotation of the pen or brush. This means mastering five or six degrees of freedom at the same time with extreme precision. Doing it well requires years of practice. Modern painting applications and tools like drawing tablets emulate this experience quite well, but the beauty of computers is that we can do even more.</p><p>As an experiment I wrote a test application that separates tilt and pressure from drawing. In this approach one hand draws the shape as before, but the other controls can be controlled with the other hand by using a regular gamepad controller. Here's what it looks like (in case your aggregator strips embedded YouTube players, <a href="https://youtu.be/DfXmA9xPkSo">here is …</a></p>
+  <p><a href="https://calamares.io/">Calamares</a> is a Linux system installer
+used by dozens of different Linux distributions; it’s an Open Source project
+and runs its processes and development entirely in the open. Like any
+good software project, Calamares has continuous builds (let’s call it
+continuous integration, CI for short anyway) running to check that
+things are OK. Let’s take a look at what powers this CI.</p>
+
+<blockquote>
+  <p>While Calamares is a project that uses a lot of KDE technologies,
+it is <strong>not</strong> a KDE project; KDE uses GitLab which is lovely,
+but not relevant to this description.</p>
+</blockquote>
+
+<p>Up until recently, Calamares used <a href="https://www.travis-ci.com/">Travis-CI</a>,
+on the “.org” plan for Open Source projects. Not that the commit-rate
+for Calamares is huge, but I think we also tried reasonably well to be
+mindful of the resources used at Travis – they support Open Source
+development, best …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2021-01-31 23:41:00+00:00" class="dt-published"></time>
-  Sun 31 Jan 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://write.as/pontaos-shenanigans/hrpc-and-why-we-moved-away-from-grpc?pk_campaign=rss-feed" rel="bookmark" class="u-url"
-       title="hRPC and why we moved away from gRPC" target="_blank">
-      <time class="m-date" datetime="2021-01-31 22:54:07+00:00">
-        Jan
-        <span class="m-date-day">
-          31
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      hRPC and why we moved away from gRPC
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>So, if you're reading this, you probably need some background information. gRPC is a popular RPC system based on HTTP2 and Protobuf. hRPC is an RPC system we at <a href="https://github.com/harmony-development">Harmony</a> are porting to from gRPC, built on HTTP1 and Protobuf as well. Harmony is a chat protocol that falls somewhere in between Matrix and Telegram functionalitywise with a ton of extra goodies (besides our in-progress E2EE draft, which is basically just a micro Matrix statewise implemented with Protobuf instead of JSON.)</p>
-
-<p>(If you're reading this on the KDE planet, there's juicy Qt stuff well after we explain what the heck all this networking stuff is, don't worry :) )</p>
-
-gRPC: The Good
-
-<p>gRPC has substantial language support, and is widely available in distros. It's also extremely optimised, using substantial custom HTTP2 behaviour for minimum network transfer.</p>
-
-gRPC: The Bad
-
-<p>gRPC has a …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Carson Black (jan Pontaoski)</b></span>
-  on <time datetime="2021-01-31 22:54:07+00:00" class="dt-published"></time>
-  Sun 31 Jan 2021
+  <span class="p-author"><b>Adriaan de Groot ([ade])</b></span>
+  on <time datetime="2021-02-01 23:00:00+00:00" class="dt-published"></time>
+  Mon 01 Feb 2021
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -231,31 +204,65 @@ gRPC: The Bad
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/thoughts/2021/01/windows-os" rel="bookmark" class="u-url"
-       title="Will Windows become Open Source?" target="_blank">
-      <time class="m-date" datetime="2021-01-31 22:08:18+01:00">
-        Jan
+    <a href="https://blogs.gnome.org/jsparber/2021/02/01/nlnet-grant-for-fractal/" rel="bookmark" class="u-url"
+       title="NlNet grant for Fractal" target="_blank">
+      <time class="m-date" datetime="2021-02-01 22:49:43+00:00">
+        Feb
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      Will Windows become Open Source?
+      NlNet grant for Fractal
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Microsoft’s open source strategy is interesting. Microsoft currently publishes 3836 repositories on GitHub. By chance I came across the following new repository: Extensible Storage Engine. It is published under the MIT License.
+  Some people already know, but now I’m officially announcing that for the next months I’ll be working full-time on Fractal thanks to a grant from NlNet. My main objective is to integrate end-to-end encryption into the GNOME Matrix client. Since user experience is crucial for getting E2EE right I’ll be working closely with Tobias Bernard … <a href="https://blogs.gnome.org/jsparber/2021/02/01/nlnet-grant-for-fractal/">Continue reading <span>NlNet grant for Fractal</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>jsparber</b></span>
+  on <time datetime="2021-02-01 22:49:43+00:00" class="dt-published"></time>
+  Mon 01 Feb 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2021/02/bye-linkedin" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-02-01 18:39:01+01:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I just closed my LinkedIn profile. It just didn’t make sense anymore to have me constantly spammed with annoying emails and messages. I have already signed a contract that will start as soon as I finish my studies. And should I be looking for a new job at some point, there are still plenty of other options besides doing it on this platform. So bye-bye, LinkedIn! 👋
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-01-31 22:08:18+01:00" class="dt-published"></time>
-  Sun 31 Jan 2021
+  on <time datetime="2021-02-01 18:39:01+01:00" class="dt-published"></time>
+  Mon 01 Feb 2021
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -265,8 +272,148 @@ gRPC: The Bad
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6355218" rel="bookmark" class="u-url"
-       title="Genes and SNPs Involved with Scrotal and Umbilical Hernia in Pigs" target="_blank">
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/641933591067197440/rocking-from-the-waves" rel="bookmark" class="u-url"
+       title="Rocking From The Waves" target="_blank">
+      <time class="m-date" datetime="2021-02-01 10:06:16-06:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Rocking From The Waves
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Rocking From The Waves" src="https://64.media.tumblr.com/3f7933dcc678e286af9a2a2a0f7d7a9e/7669900904a2fa3d-60/s540x810/22a98806a73f56c706e20fa5195de99b143a85a3.jpg"><a href="http://fyfluiddynamics.com/?p=14301">Not all seismic activity stems from earthquakes. In fact, much of Earth&rsquo;s measured seismic waves come from interactions of the ocean and atmosphere with solid ground</a>. (Image credit: <a href="https://unsplash.com/photos/o-xu7rEOX3I">I. Mingazova</a>; via <a href="https://doi.org/10.1063/PT.3.4651">Physics Today</a>)
+
+
+<a href="http://fyfluiddynamics.com/?p=14301">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-02-01 10:06:16-06:00" class="dt-published"></time>
+  Mon 01 Feb 2021
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2021/02/rocking-from-the-waves/" rel="bookmark" class="u-url"
+       title="Rocking From The Waves" target="_blank">
+      <time class="m-date" datetime="2021-02-01 16:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Rocking From The Waves
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Not all seismic activity stems from earthquakes. In fact, much of Earth&#8217;s measured seismic waves come from interactions of the ocean and atmosphere with solid ground. Some of the strongest <a href="https://fyfluiddynamics.com/2021/02/rocking-from-the-waves/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2021-02-01 16:00:00+00:00" class="dt-published"></time>
+  Mon 01 Feb 2021
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.kitware.com/pbr-journey-part-2-anisotropy-model-with-vtk/" rel="bookmark" class="u-url"
+       title="PBR Journey Part 2 : Anisotropy model with VTK" target="_blank">
+      <time class="m-date" datetime="2021-02-01 11:13:21+00:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      PBR Journey Part 2 : Anisotropy model with VTK
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Introduction In our previous post on the new features of the PBR shading in VTK 9.0, we introduced the HDR environment and how to use ... <a href="https://blog.kitware.com/pbr-journey-part-2-anisotropy-model-with-vtk/">Read More</a></p>
+<p>The post <a href="https://blog.kitware.com/pbr-journey-part-2-anisotropy-model-with-vtk/">PBR Journey Part 2 : Anisotropy model with VTK</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Paul Lafoix</b></span>
+  on <time datetime="2021-02-01 11:13:21+00:00" class="dt-published"></time>
+  Mon 01 Feb 2021
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2419/" rel="bookmark" class="u-url"
+       title="Hug Count" target="_blank">
+      <time class="m-date" datetime="2021-02-01 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Hug Count
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="I've never been that big of a hug person, but it turns out I'm not quite this small of a hug person either." src="https://imgs.xkcd.com/comics/hug_count.png" title="I've never been that big of a hug person, but it turns out I'm not quite this small of a hug person either.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-02-01 00:00:00+00:00" class="dt-published"></time>
+  Mon 01 Feb 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://linderud.dev/blog/foss-activities-in-january-2020/" rel="bookmark" class="u-url"
+       title="FOSS Activities in January 2020" target="_blank">
       <time class="m-date" datetime="2021-01-31 00:00:00+00:00">
         Jan
         <span class="m-date-day">
@@ -275,21 +422,57 @@ gRPC: The Bad
         2021
       </time>
       <div class="p-name">
-      Genes and SNPs Involved with Scrotal and Umbilical Hernia in Pigs
+      FOSS Activities in January 2020
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Hernia is one of the most common defects in pigs. The most prevalent are the scrotal (SH), inguinal (IH) and umbilical (UH) hernias. We compared the inguinal ring transcriptome of normal and SH-affected pigs with the umbilical ring transcriptome of normal and UH-affected pigs to discover genes and pathways involved with the development of both types of hernia. A total of 13,307 transcripts was expressed in the inguinal and 13,302 in the umbilical ring tissues with 94.91% of them present in both tissues. From those, 35 genes were differentially expressed in both groups, participating in 108 biological processes. A total of 67 polymorphisms was identified in the inguinal ring and 76 in the umbilical ring tissue, of which 11 and 14 were novel, respectively. A single nucleotide polymorphism (SNP) with deleterious function was identified in the integrin …
+  And January is over! Time has frankly been moving fast the past days.
+Packaging wise, things has been fine. Added tailscale and some other minor packages, but had a real purge of old packages from resigned maintainers. Also dropped ntop to the AUR which hasn&rsquo;t been actively developed for years at this point. I&rsquo;m curious when people are going to bug me about that one :)
+On the security side of things there has been quite a lot happening just the past week.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>MC Ledur</b></span>
+  <span class="p-author"><b>Anonymous</b></span>
   on <time datetime="2021-01-31 00:00:00+00:00" class="dt-published"></time>
   Sun 31 Jan 2021
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6351101" rel="bookmark" class="u-url"
+       title="Top Ten Tips Palliative Care Clinicians Should Know About Caring for Patients with Cervical Cancer" target="_blank">
+      <time class="m-date" datetime="2021-01-30 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          30
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Top Ten Tips Palliative Care Clinicians Should Know About Caring for Patients with Cervical Cancer
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Cervical cancer is the most common gynecologic cancer worldwide. Almost all are related to human papillomavirus exposure. Cervical cancer treatment is associated with significant morbidity that is likely to require support from palliative care teams. In these pearls on cervical cancer, we hope to inform providers about the common treatments and issues for cervical cancer patients. Treatment modalities include surgery for early-stage disease, radiation therapy for locally advanced disease, and pelvic exenteration, chemotherapy, or immunotherapy for recurrent disease. Cervical cancer causes pain and bleeding. Radiation can affect ovarian, urinary, and bowel function. Chemotherapy and immunotherapy are associated with fatigue and nausea. Fistulas between the vagina and bowel or bladder can occur due to cancer or to cancer treatments. Physical and emotional supportive care is important for women with cervical cancer.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>EM Hartenbach</b></span>
+  on <time datetime="2021-01-30 00:00:00+00:00" class="dt-published"></time>
+  Sat 30 Jan 2021
   in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -356,77 +539,6 @@ format-prefix-foreground = ${colors.magenta}
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/641662004769193984/catalysis" rel="bookmark" class="u-url"
-       title=""Catalysis"" target="_blank">
-      <time class="m-date" datetime="2021-01-29 10:09:30-06:00">
-        Jan
-        <span class="m-date-day">
-          29
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      "Catalysis"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/a2b3e2a65f582e27c25a924704494e4a/694368473ffc7edc-fb/s540x810/25eee98e0c1f74da8ac52bdf494f0725a7bb8e60.gif"><img src="https://64.media.tumblr.com/b3937ed1fda04f9ce273b3057bf103e3/694368473ffc7edc-22/s540x810/897686bc3a00f1469e6d85042f315619de1aceca.gif"><img src="https://64.media.tumblr.com/80af4ddf489cc4d7fe206d20b59cb61d/694368473ffc7edc-9d/s540x810/9d5cae2385c84be6a6a68cfbfafa5d1a5eb02acc.gif"><a href="http://fyfluiddynamics.com/?p=14311">Catalysts speed up chemical reactions without being consumed themselves. In &ldquo;Catalysis&rdquo; the Beauty of Science team shows 5 different examples of catalytic reactions, from acetone oxidation to yeast fermentation.</a> (Image and video credit: <a href="https://www.envisioningchemistry.com/catalysis">Beauty of Science</a>)
-
-
-<a href="http://fyfluiddynamics.com/?p=14311">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-01-29 10:09:30-06:00" class="dt-published"></time>
-  Fri 29 Jan 2021
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2021/01/catalysis/" rel="bookmark" class="u-url"
-       title="“Catalysis”" target="_blank">
-      <time class="m-date" datetime="2021-01-29 16:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          29
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      “Catalysis”
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Catalysts speed up chemical reactions without being consumed themselves. In &#8220;Catalysis&#8221; the Beauty of Science team shows 5 different examples of catalytic reactions, from acetone oxidation to yeast fermentation. The <a href="https://fyfluiddynamics.com/2021/01/catalysis/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-01-29 16:00:00+00:00" class="dt-published"></time>
-  Fri 29 Jan 2021
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.davidrevoy.com/article813/production-report-episode-34-wasabi" rel="bookmark" class="u-url"
        title="Production report episode 34: Wasabi" target="_blank">
       <time class="m-date" datetime="2021-01-29 16:12:00+01:00">
@@ -463,40 +575,6 @@ format-prefix-foreground = ${colors.magenta}
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2418/" rel="bookmark" class="u-url"
-       title="Metacarcinization" target="_blank">
-      <time class="m-date" datetime="2021-01-29 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          29
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Metacarcinization
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Scientists still don't know how marine biologists manage to so consistently bring up whalefall ecosystems, when relevant conversational openings are so few and far between." src="https://imgs.xkcd.com/comics/metacarcinization.png" title="Scientists still don't know how marine biologists manage to so consistently bring up whalefall ecosystems, when relevant conversational openings are so few and far between.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-01-29 00:00:00+00:00" class="dt-published"></time>
-  Fri 29 Jan 2021
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pyfound.blogspot.com/2020/12/psf-scientific-working-group-announces.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="PSF Scientific Working Group announces call for grant requests" target="_blank">
       <time class="m-date" datetime="2021-01-28 10:09:24.362000-05:00">
@@ -523,41 +601,6 @@ format-prefix-foreground = ${colors.magenta}
   on <time datetime="2021-01-28 10:09:24.362000-05:00" class="dt-published"></time>
   Thu 28 Jan 2021
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/paraview-5-9-0-release-notes/" rel="bookmark" class="u-url"
-       title="ParaView 5.9.0 Release Notes" target="_blank">
-      <time class="m-date" datetime="2021-01-28 14:00:28+00:00">
-        Jan
-        <span class="m-date-day">
-          28
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      ParaView 5.9.0 Release Notes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Major changes made since ParaView 5.8.0 are listed in this document. The full list of issues addressed by this release is available here. New features ... <a href="https://blog.kitware.com/paraview-5-9-0-release-notes/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/paraview-5-9-0-release-notes/">ParaView 5.9.0 Release Notes</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Quammen</b></span>
-  on <time datetime="2021-01-28 14:00:28+00:00" class="dt-published"></time>
-  Thu 28 Jan 2021
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -603,67 +646,6 @@ protocol. They have a history of cracking down …</p>
   on <time datetime="2021-01-28 00:00:00+00:00" class="dt-published"></time>
   Thu 28 Jan 2021
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://archlinux.org/news/php-80-and-php-7-legacy-packages-are-available/" rel="bookmark" class="u-url"
-       title="PHP 8.0 and PHP 7 legacy packages are available" target="_blank">
-      <time class="m-date" datetime="2021-01-28 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          28
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      PHP 8.0 and PHP 7 legacy packages are available
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The php package has been updated to <a href="https://www.php.net/releases/8.0/en.php">version 8.0</a>. Please refer to
-the upstream <a href="https://www.php.net/manual/en/migration80.php">migration guide</a>. As some applications are not
-compatible with PHP 8 yet we provide a <a href="https://archlinux.org/packages/extra/x86_64/php7/">php7</a> package which can be
-installed alongside version 8. Packages that depend on PHP reflect
-this update and will require php7 if needed. You might need to update
-your configuration accordingly. PHP 7 binaries and configuration have
-the "7" suffix:
-<ul>
-<li>/usr/bin/php -&gt; /usr/bin/php7</li>
-<li>/etc/php -&gt; /etc/php7</li>
-<li>/usr/bin/php-fpm -&gt; /usr/bin/php-fpm7</li>
-<li>/usr/lib/systemd/system/php-fpm.service -&gt; /usr/lib/systemd/system/php-fpm7.service</li>
-<li>/run/php-fpm -&gt; /run/php-fpm7</li>
-</ul>
-We also provide third party modules compiled for PHP 7:
-<ul>
-<li><a href="https://archlinux.org/packages/extra/x86_64/php7-apcu/">php7-apcu</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-geoip/">php7-geoip</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-grpc/">php7-grpc</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-igbinary/">php7-igbinary</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-imagick/">php7-imagick</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-memcache/">php7-memcache</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-memcached/">php7-memcached</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-mongodb/">php7-mongodb</a></li>
-<li><a href="https://archlinux.org/packages/community/x86_64/php7-redis/">php7-redis</a></li>
-</ul>
-Note that support for php7 will be <a href="https://www.php.net/supported-versions.php">limited</a> and likely be dropped in
-about a year depending on how …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-01-28 00:00:00+00:00" class="dt-published"></time>
-  Thu 28 Jan 2021
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
