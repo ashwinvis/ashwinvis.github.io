@@ -153,35 +153,36 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.bembel.net/2021/02/the-mysterious-change-of-a-checksum/" rel="bookmark" class="u-url"
-       title="The mysterious change of a checksum" target="_blank">
-      <time class="m-date" datetime="2021-02-13 18:20:16+00:00">
+    <a href="https://kate-editor.org/post/2021/2021-02-14-kate-valentines-day/" rel="bookmark" class="u-url"
+       title="The Kate Text Editor - Valentine's Day 2021" target="_blank">
+      <time class="m-date" datetime="2021-02-14 18:33:00+00:00">
         Feb
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      The mysterious change of a checksum
+      The Kate Text Editor - Valentine's Day 2021
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Within <a href="https://kde.org">KDE</a> we have a service called the <a href="https://binary-factory.kde.org">binary factory.</a> It’s a Jenkins driven build pipeline which we use in the <a href="https://kmymoney.org">KMyMoney</a> project to build certain binary installable versions of the project. For the generation of our <a href="https://appimage.org/">AppImage</a> version we package all dependencies into a large tar file so that we don’t have to rebuild them every day.</p>
-
-
-
-<p>Due to new versions of the online banking libraries we use, <a href="https://invent.kde.org/office/kmymoney/-/commit/c439822749e6a0d81b13d1e4c0546e2a06ef5a4a">I updated some package information</a> and let the service do its thing to create the tar file with the pre-build dependencies. This is usually a matter of a few hours. When I checked the progress after a while, I found out that the build had failed. Too bad, I thought, and took a look at the console log of the build to see what was going on. To my …</p>
+  <p>Kate, KTextEditor and Co. did get a nice stream of updates in the first two weeks of February 2021.</p>
+<p>I will just pick a few things I really liked, if you want to have a full overview, you can go through the list of <a href="https://kate-editor.org/merge-requests/">all merged patches</a>.</p>
+Even more multi-threading in search in files
+<p>After the initial parallelization of the actual search in files as described <a href="https://kate-editor.org/post/2021/2021-01-29-search-in-files-multi-threading/">here</a>, Kåre came up with the idea to parallelize the creation of the file list we use for the search, too.</p>
+<p>We worked together on this in <a href="https://invent.kde.org/utilities/kate/-/merge_requests/220">merge 220</a> and <a href="https://invent.kde.org/utilities/kate/-/merge_requests/221">merge 221</a>, the result will allow for even faster searches if no initial file list is provided already by e.g. the project plugin.</p>
+<p>I didn’t actually believe that would be worth the hassle, but Kåre provided impressive speedups in <a href="https://invent.kde.org/utilities/kate/-/merge_requests/220#note_180083">merge 220</a>, from …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Thomas Baumgart (ipwizard)</b></span>
-  on <time datetime="2021-02-13 18:20:16+00:00" class="dt-published"></time>
-  Sat 13 Feb 2021
+  <span class="p-author"><b>Kate News</b></span>
+  on <time datetime="2021-02-14 18:33:00+00:00" class="dt-published"></time>
+  Sun 14 Feb 2021
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -191,31 +192,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pranalideshmukh.wordpress.com/2021/02/13/gsod-project-report/" rel="bookmark" class="u-url"
-       title="GSoD Project Report" target="_blank">
-      <time class="m-date" datetime="2021-02-13 14:10:35+00:00">
+    <a href="https://jlelse.blog/links/2021/02/restic-012" rel="bookmark" class="u-url"
+       title="restic's prune is much faster now" target="_blank">
+      <time class="m-date" datetime="2021-02-14 16:25:13+01:00">
         Feb
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      GSoD Project Report
+      restic's prune is much faster now
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Update GNOME Applications Help Documentation (Update App help)  Technical Writer –  Pranali Deshmukh Project Mentor – Shaun McCance Important Links My Website  GitLab Profile  Link of my CV Link of my GSoD Proposal My Blog Posts about GSoD My Contributions List Project description Review and update the help documentation for a number of GNOME applications<a href="https://pranalideshmukh.wordpress.com/2021/02/13/gsod-project-report/">Continue reading <span>"GSoD Project Report"</span></a>
+  Remember how I told you about a pull request that speeds up the performance of restic’s prune command?
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>pranalideshmukh</b></span>
-  on <time datetime="2021-02-13 14:10:35+00:00" class="dt-published"></time>
-  Sat 13 Feb 2021
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-02-14 16:25:13+01:00" class="dt-published"></time>
+  Sun 14 Feb 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://zee-nix.blogspot.com/2021/02/zbus-and-implementing-async-rust-api.html" rel="bookmark" class="u-url"
+       title="zbus and Implementing Async Rust API" target="_blank">
+      <time class="m-date" datetime="2021-02-14 12:40:00+00:00">
+        Feb
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      zbus and Implementing Async Rust API
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  zbus<p>As many of the readers already know, for the past (almost) 2 years, I've been developing a Rust-crate for D-Bus, called <a href="https://gitlab.freedesktop.org/dbus/zbus">zbus</a>. With this being my first big Rust project to start from scratch done almost entirely in my spare time, the progress was rather slow for many months. My perfectionism didn't help much with the progress either but also the fact that implementing a <a href="https://serde.rs/">Serde</a><a href="https://docs.rs/zvariant/latest/zvariant/index.html">API</a> for the D-Bus format was quite challenging. Then along came my old friend and ex-colleague, Marc-André Lureau who sped up the progress 10 times and soon after we had the 1.0 release of zbus.</p><p>While my original plan (perfectionism again) was for the API to be primarily async, with the synchronous API mostly just a wrapper around it, it was Marc-Andre who ended up doing most of the work and coming …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>zeenix (noreply@blogger.com)</b></span>
+  on <time datetime="2021-02-14 12:40:00+00:00" class="dt-published"></time>
+  Sun 14 Feb 2021
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -225,32 +260,121 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6399275" rel="bookmark" class="u-url"
-       title="Pooled testing conserves SARS-CoV-2 laboratory resources and improves test turn-around time: experience on the Kenyan Coast" target="_blank">
-      <time class="m-date" datetime="2021-02-13 00:00:00+00:00">
+    <a href="https://www.davidrevoy.com/article815/derivation-boxes-by-students-of-eespscf-saint-mard" rel="bookmark" class="u-url"
+       title="Derivation: Boxes by students of EESPSCF Saint-Mard" target="_blank">
+      <time class="m-date" datetime="2021-02-14 13:29:00+01:00">
         Feb
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      Pooled testing conserves SARS-CoV-2 laboratory resources and improves test turn-around time: experience on the Kenyan Coast
+      Derivation: Boxes by students of EESPSCF Saint-Mard
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Background. International recommendations for the control of the coronavirus disease 2019 (COVID-19) pandemic emphasize the central role of laboratory testing for severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), the etiological agent, at scale. The availability of testing reagents, laboratory equipment and qualified staff are important bottlenecks to achieving this. Elsewhere, pooled testing (i.e. combining multiple samples in the same reaction) has been suggested to increase testing capacities in the pandemic period. Methods. We discuss our experience with SARS-CoV-2 pooled testing using real-time reverse transcription polymerase chain reaction (RT-PCR) on the Kenyan Coast. Results. In mid-May, 2020, our RT-PCR testing capacity for SARS-CoV-2 was improved by ~100% as a result of adoption of a six-sample pooled testing strategy. This was accompanied with a concomitant saving of ~50% of SARS-CoV-2 laboratory test kits at both the RNA extraction and RT-PCR stages …
+  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-02-14_eescf-saint-mard_boxes/2021-02-14_eescf-saint-mard_boxes_5.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-02-14_eescf-saint-mard_boxes/2021-02-14_eescf-saint-mard_boxes_5.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Hey, last month I received a notification on the Facebook page of Pepper&amp;Carrot coming from the page of the EESPSCF Saint-Mard; a specialised Belgium school. It was a post with over 40 photos of lovely DIY themed after episodes of Pepper&amp;Carrot. Here is a translation of the message sent by Norah Flammang, teacher at EESPSCF Saint-Mard: </p>
+<blockquote>
+<p>Amazed by the boxes made by the students about Pepper &amp; Carrot (a webcomic by David Revoy 🥰😍). I didn't really know what to expect, I was like 'we're testing', but they turned to be real artists 🤩. Everyone was free to represent the scene of their choice, in the frame of respecting a few guidelines (especially on the decor on the outside of the box). This work was done at home following the transition to hybrid home/school education. They took pleasure in making …</p></blockquote>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>B Tsofa</b></span>
-  on <time datetime="2021-02-13 00:00:00+00:00" class="dt-published"></time>
-  Sat 13 Feb 2021
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2021-02-14 13:29:00+01:00" class="dt-published"></time>
+  Sun 14 Feb 2021
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6400851" rel="bookmark" class="u-url"
+       title="Lack of association between BDNF rs6265 polymorphism and risk of type 2 diabetes: A protocol for meta-analysis and trial sequential analysis" target="_blank">
+      <time class="m-date" datetime="2021-02-14 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Lack of association between BDNF rs6265 polymorphism and risk of type 2 diabetes: A protocol for meta-analysis and trial sequential analysis
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Brain-derived neurotrophic factor (BDNF) rs6265 polymorphism has been previously suggested to be associated with the susceptibility of type 2 diabetes mellitus (T2DM), but results remained controversial. We aim to provide a more reliable conclusion about the association between BDNF rs6265 polymorphism and T2DM risk by using a meta-analysis.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Q Yang</b></span>
+  on <time datetime="2021-02-14 00:00:00+00:00" class="dt-published"></time>
+  Sun 14 Feb 2021
   in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-list-test-names/" rel="bookmark" class="u-url"
+       title="Get list of CMake test names" target="_blank">
+      <time class="m-date" datetime="2021-02-14 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Get list of CMake test names
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>CMake
+<a href="https://cmake.org/cmake/help/latest/command/add_test.html">add_test()</a>
+can be dynamically set by arbitrarily complex foreach(), if(), etc. logic.
+If it&rsquo;s known that a subset of test names need parameters such as longer timeouts, these can be set dynamically after the tests are declared.
+A list of tests enabled is retrieved by the
+<a href="https://cmake.org/cmake/help/latest/prop_dir/TESTS.html">TESTS</a>
+property.
+This list is useful to be queried for particular test names as in the example below.</p>
+<p>This example supposes most tests are set to a short timeout, but a couple tests &ldquo;test1&rdquo; &ldquo;test2&rdquo; need a longer timeout.
+The variable &ldquo;_test_names&rdquo; will contain all the test names previously added in the CMakeLists.txt via &ldquo;add_test()&rdquo; in a list <em>in the DIRECTORY scope</em>.</p>
+<div><pre><code>get_property(<span>_test_names</span> <span>DIRECTORY</span> <span>${</span>CMAKE_CURRENT_SOURCE_DIR<span>}</span> <span>PROPERTY</span> <span>TESTS</span>)<span>
+</span><span>
+</span><span></span>foreach(<span>l</span> <span>test1</span> <span>test2</span>)<span>
+</span><span></span> if(<span>${</span>l<span>}</span> <span>IN_LIST</span> <span>_test_names</span>)<span>
+</span><span></span> set_tests_properties(<span>${</span>l<span>}</span> <span>PROPERTIES</span> <span>TIMEOUT</span> <span>600</span>)<span>
+</span><span></span> endif()<span>
+</span><span></span>endforeach()<span>
+</span></code></pre></div><p>NOTE:</p>
+<ul>
+<li><code>get_property(_test_names GLOBAL PROPERTY TESTS)</code> will return …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-02-14 00:00:00+00:00" class="dt-published"></time>
+  Sun 14 Feb 2021
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -302,40 +426,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-02-13 00:00:00+01:00" class="dt-published"></time>
   Sat 13 Feb 2021
   in Hund[en].
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/thoughts/2021/02/more-deezer" rel="bookmark" class="u-url"
-       title="More thoughts on Deezer" target="_blank">
-      <time class="m-date" datetime="2021-02-12 20:02:05+01:00">
-        Feb
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      More thoughts on Deezer
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Carsten asked some questions in a comment regarding Deezer:
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-02-12 20:02:05+01:00" class="dt-published"></time>
-  Fri 12 Feb 2021
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -415,60 +505,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.davidrevoy.com/article814/perspective-grids-for-comics-in-krita" rel="bookmark" class="u-url"
-       title="Perspective grids for comics in Krita" target="_blank">
-      <time class="m-date" datetime="2021-02-12 13:23:00+01:00">
-        Feb
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Perspective grids for comics in Krita
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-02-11_perspective-grids_thumb.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-02-11_perspective-grids_thumb.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p></p><div></div><p></p>
-<p>I'm sharing my perspective grids (CC-0/Public Domain) and show how to use them in Krita: it's a set of PNGs I drag'n'drop over the canvas. I hope they'll be useful for you!. </p>
-<p><strong>Download the ZIP with the grids:</strong>
-<a href="https://www.peppercarrot.com/extras/resources/2021_Perspective-grids_CC0.zip">https://www.peppercarrot.com/extras/resources/2021_Perspective-grids_CC0.zip</a> (CC-0 / Public Domain)</p>
-<p>(note: subtitle available)
-<strong>Peertube:</strong> it will be soon mirrored on  <a href="https://peertube.touhoppai.moe/accounts/shichimi/videos">https://peertube.touhoppai.moe/accounts/shichimi/videos</a> thanks Touhoppai team! </p>
-<p><strong>Timecode:</strong>  </p>
-<ul>
-<li>00:00 Intro.</li>
-<li>01:33 Quick Install.</li>
-<li>02:02 How to use them.</li>
-<li>04:00 Why this method?</li>
-<li>04:42 Tip 1: Limit the grid to a panel.</li>
-<li>05.40 Tip 2: Deformed grids.</li>
-<li>06:14 Tip 3: Turning the grid to grayscale.</li>
-<li>06:37 Conclusion, special thanks and credits.</li>
-</ul>
-<p>Creative Commons Attribution 4.0 International
-Video and artworks by David Revoy
-www.davidrevoy.com
-webcomic: www.peppercarrot.com …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2021-02-12 13:23:00+01:00" class="dt-published"></time>
-  Fri 12 Feb 2021
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://xkcd.com/2424/" rel="bookmark" class="u-url"
        title="Normal Conversation" target="_blank">
       <time class="m-date" datetime="2021-02-12 00:00:00+00:00">
@@ -495,46 +531,6 @@ webcomic: www.peppercarrot.com …</p>
   on <time datetime="2021-02-12 00:00:00+00:00" class="dt-published"></time>
   Fri 12 Feb 2021
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/shell-last-error-code/" rel="bookmark" class="u-url"
-       title="Check last error code across OS" target="_blank">
-      <time class="m-date" datetime="2021-02-12 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Check last error code across OS
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In general, programs don&rsquo;t usually print to console the integer return code from the main procedure.
-The program may well print some message indicating success or failure, but maybe not.
-When calling executables from a compiled or scripted language such as Fortran, C, Python or Matlab, it&rsquo;s often vital to know the value of the integer return code as a signal that the program thought it was successful or not.
-Further, some program crashes do not emit any console text, and could make the user think the program was successful.</p>
-<p>To help eliminate doubt, I often issue a command to print the last error code to console when I&rsquo;m working with command line program.
-The method to print this integer code depends on the shell.
-From Terminal / Command Prompt, the return code from the last command is …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-02-12 00:00:00+00:00" class="dt-published"></time>
-  Fri 12 Feb 2021
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -976,40 +972,6 @@ Fortran Standard Library
   on <time datetime="2021-02-01 00:00:00+00:00" class="dt-published"></time>
   Mon 01 Feb 2021
   in Fortran Newsletter.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://snarky.ca/unravelling-for-statements/" rel="bookmark" class="u-url"
-       title="Unravelling `for` statements" target="_blank">
-      <time class="m-date" datetime="2021-01-24 21:37:17+00:00">
-        Jan
-        <span class="m-date-day">
-          24
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Unravelling `for` statements
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>As part of my <a href="https://snarky.ca/tag/syntactic-sugar/">series on Python's syntactic sugar</a>, I am going to cover the <a href="https://docs.python.org/3.8/reference/compound_stmts.html#the-for-statement"><code>for</code> statement</a>. As usual, I will be diving into CPython's C code, but understanding or even reading those parts of this post won't be required in order to understand how the unravelling works.</p>The bytecode
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Brett Cannon</b></span>
-  on <time datetime="2021-01-24 21:37:17+00:00" class="dt-published"></time>
-  Sun 24 Jan 2021
-  in Tall, Snarky Canadian.
 </footer>
 <div class="m-clearfix-l"></div>
 
