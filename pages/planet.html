@@ -153,6 +153,119 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://mjg59.dreamwidth.org/55845.html" rel="bookmark" class="u-url"
+       title="Making hibernation work under Linux Lockdown" target="_blank">
+      <time class="m-date" datetime="2021-02-21 08:37:25+00:00">
+        Feb
+        <span class="m-date-day">
+          21
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Making hibernation work under Linux Lockdown
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Linux draws a distinction between code running in kernel (kernel space) and applications running in userland (user space). This is enforced at the hardware level - in x86-speak[1], kernel space code runs in ring 0 and user space code runs in ring 3[2]. If you're running in ring 3 and you attempt to touch memory that's only accessible in ring 0, the hardware will raise a fault. No matter how privileged your ring 3 code, you don't get to touch ring 0.Kind of. In theory. Traditionally this wasn't well enforced. At the most basic level, since root can load kernel modules, you could just build a kernel module that performed any kernel modifications you wanted and then have root load it. Technically user space code wasn't modifying kernel space code, but the difference was pretty semantic rather than …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-02-21 08:37:25+00:00" class="dt-published"></time>
+  Sun 21 Feb 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/02/21/On-the-traits-of-good-replacements.html" rel="bookmark" class="u-url"
+       title="A great alternative is rarely fatter than what it aims to replace" target="_blank">
+      <time class="m-date" datetime="2021-02-21 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          21
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      A great alternative is rarely fatter than what it aims to replace
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This is not always true, but in my experience, it tends to hold up. We often
+build or evaluate tools which aim to replace something kludgy^Wvenerable.
+Common examples include shells, programming languages, system utilities, and so
+on. Rust, Zig, etc, are taking on C in this manner; so too does zsh, fish, and
+oil take on bash, which in turn takes on the Bourne shell. There are many
+examples.</p>
+<p>All of these tools are fine in their own respects, but they have all failed to
+completely supplant the software they&rsquo;re seeking to improve upon.<a href="#fn:1">1</a> What these
+projects have in common is that they <em>expand</em> on the ideas of their
+predecessors, rather than <em>refining</em> them. A truly great alternative finds the
+nugget of truth at the center of the idea, cuts out the cruft, and solves the
+same …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-02-21 00:00:00+00:00" class="dt-published"></time>
+  Sun 21 Feb 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6419535" rel="bookmark" class="u-url"
+       title="Effectiveness of acupuncture for the recovery of gastrointestinal function of patients with gastric cancer in the postoperative period: A protocol for systematic review and meta-analysis" target="_blank">
+      <time class="m-date" datetime="2021-02-21 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          21
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Effectiveness of acupuncture for the recovery of gastrointestinal function of patients with gastric cancer in the postoperative period: A protocol for systematic review and meta-analysis
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Gastric cancer (GC) is the most common malignant tumors in the world and surgical resection remains the primary treatment for it. Postoperative patients often suffer from gastrointestinal dysfunction as the most common side effects of surgery for GC patients. Acupuncture has a regulatory effect on gastrointestinal function. We conducted this study to assess the effectiveness of acupuncture on the restoration of gastrointestinal function of postoperative patients with GC.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>J Ye</b></span>
+  on <time datetime="2021-02-21 00:00:00+00:00" class="dt-published"></time>
+  Sun 21 Feb 2021
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jlelse.blog/posts/apple-sucks" rel="bookmark" class="u-url"
        title="(IMHO) Apple sucks" target="_blank">
       <time class="m-date" datetime="2021-02-20 19:01:44+01:00">
@@ -216,40 +329,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-02-20 15:17:17+00:00" class="dt-published"></time>
   Sat 20 Feb 2021
   in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.bassi.io/articles/2021/02/19/documentation-changes/" rel="bookmark" class="u-url"
-       title="Documentation changes" target="_blank">
-      <time class="m-date" datetime="2021-02-19 21:16:00+00:00">
-        Feb
-        <span class="m-date-day">
-          19
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Documentation changes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In which I talk about a new tool to generate the <span>API</span> reference for <span>GTK</span></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>ebassi</b></span>
-  on <time datetime="2021-02-19 21:16:00+00:00" class="dt-published"></time>
-  Fri 19 Feb 2021
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -471,40 +550,6 @@ Peertube: <a href="https://peertube.touhoppai.moe/accounts/shichimi/videos">http
   on <time datetime="2021-02-19 00:00:00+00:00" class="dt-published"></time>
   Fri 19 Feb 2021
   in Hynek Schlawak.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6417716" rel="bookmark" class="u-url"
-       title="Lactate: a multifunctional signaling molecule" target="_blank">
-      <time class="m-date" datetime="2021-02-19 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          19
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Lactate: a multifunctional signaling molecule
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Since its discovery in 1780, lactate has long been misunderstood as a waste by-product of anaerobic glycolysis with multiple deleterious effects. Owing to the lactate shuttle concept introduced in the early 1980s, a paradigm shift began to occur. Increasing evidence indicates that lactate is a coordinator of whole-body metabolism. Lactate is not only a readily accessible fuel that is shuttled throughout the body but also a metabolic buffer that bridges glycolysis and oxidative phosphorylation between cells and intracellular compartments. Lactate also acts as a multifunctional signaling molecule through receptors expressed in various cells and tissues, resulting in diverse biological consequences including decreased lipolysis, immune regulation, anti-inflammation, wound healing, and enhanced exercise performance in association with the gut microbiome. Furthermore, lactate contributes to epigenetic gene regulation by lactylating lysine residues of histones, accounting for its key role in immune modulation and …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>TY Lee</b></span>
-  on <time datetime="2021-02-19 00:00:00+00:00" class="dt-published"></time>
-  Fri 19 Feb 2021
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -773,55 +818,6 @@ tweak the plan by …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://drewdevault.com/2021/02/15/Status-update-February-2021.html" rel="bookmark" class="u-url"
-       title="Status update, February 2021" target="_blank">
-      <time class="m-date" datetime="2021-02-15 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          15
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Status update, February 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>
-Salutations! It's officially a year of pandemic life. I hear the vaccine
-distribution is going well, so hopefully there won't be another year of this. In
-the meanwhile, I've been working hard on free software, what with having little
-else to do. However, I'm afraid I cannot tell you about most of it!
-
-</p><p>
-I've been working on todo.sr.ht's GraphQL API, and it's going quite well. I hope
-to ship a working read-only version later this month. There have been a number
-of bug fixes and rote maintenance work on sr.ht as well, but nothing
-particularly exciting. We did upgrade everything for Alpine 3.13, which went off
-without a hitch. Anyway, I'll go over the minor details in the sr.ht "what's
-cooking" post later today.
-
-</p><p>
-The rest of the progress was made in secret. Secret! You …</p><p></p><p></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-02-15 00:00:00+00:00" class="dt-published"></time>
-  Mon 15 Feb 2021
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pyfound.blogspot.com/2021/02/welcoming-google-as-visionary-sponsor.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="Welcoming Google as a Visionary Sponsor of the PSF" target="_blank">
       <time class="m-date" datetime="2021-02-11 11:58:01.487000-05:00">
@@ -927,71 +923,6 @@ recognized even if …</p>
   on <time datetime="2021-02-05 00:00:00+00:00" class="dt-published"></time>
   Fri 05 Feb 2021
   in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fortran-lang.org/newsletter/2021/02/01/Fortran-Newsletter-February-2021/" rel="bookmark" class="u-url"
-       title="Fortran newsletter: February 2021" target="_blank">
-      <time class="m-date" datetime="2021-02-01 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Fortran newsletter: February 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Welcome to the February 2021 edition of the monthly Fortran newsletter.
-The newsletter comes out at the beginning of every month and details
-Fortran news from the previous month.</p>
-
-<ul></ul>
-
-fortran-lang.org
-
-<p>This month we’ve had a few updates to the website:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/190">#190</a>:
-Add links to fpm contributing guidelines</li>
-</ul>
-
-<p>Ongoing work:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/191">#191</a> (WIP):
-Fix author/maintainer output in fpm registry</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/187">#187</a> (WIP):
-Correct compiler page and tutorial regarding Intel oneAPI and PGI to NVIDIA</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/issues/174">#174</a> (WIP):
-We are searching for a representative Fortran code snippet for the website and are looking forward to suggestions.</li>
-</ul>
-
-<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us know</a> if you have any suggestions for the website and its content.
-We welcome any new contributors to the website and the tutorials page in particular - see the <a href="https://github.com/fortran-lang/fortran-lang.org/blob/master/CONTRIBUTING.md">contributor guide</a> for how to get started.</p>
-
-Fortran Standard Library
-
-<p>Here’s what’s new in …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-02-01 00:00:00+00:00" class="dt-published"></time>
-  Mon 01 Feb 2021
-  in Fortran Newsletter.
 </footer>
 <div class="m-clearfix-l"></div>
 
