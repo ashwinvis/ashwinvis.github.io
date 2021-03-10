@@ -153,65 +153,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2021/03/2021-03-08-ypmzm" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2021-03-08 22:30:00+01:00">
+    <a href="https://mjg59.dreamwidth.org/56106.html" rel="bookmark" class="u-url"
+       title="Unauthenticated MQTT endpoints on Linksys Velop routers enable local DoS" target="_blank">
+      <time class="m-date" datetime="2021-03-09 19:55:52+00:00">
         Mar
         <span class="m-date-day">
-          08
+          09
         </span>
         2021
       </time>
       <div class="p-name">
-      💬
+      Unauthenticated MQTT endpoints on Linksys Velop routers enable local DoS
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  This week is the final spurt for my bachelor thesis. I want to submit it on Thursday or Friday. Then there’s my presentation two or three weeks later. And when I pass that, I’m no longer a student. I’m excited, but it’s also a strange feeling after more than three and a half years of working towards this goal.
+  (Edit: this is CVE-2021-1000002)Linksys produces a series of wifi mesh routers under the <a href="https://www.linksys.com/us/velop/">Velop</a> line. These routers use <a href="https://en.wikipedia.org/wiki/MQTT">MQTT</a> to send messages to each other for coordination purposes. In the version I tested against, there was zero authentication on this - anyone on the local network is able to connect to the MQTT interface on a router and send commands. As an example:mosquitto_pub -h 192.168.1.1 -t "network/master/cmd/nodes_temporary_blacklist" -m '{"data": {"client": "f8:16:54:43:e2:0c", "duration": "3600", "action": "start"}}'will ask the router to block the client with MAC address f8:16:54:43:e2:0c from the network for an hour. Various other MQTT topics pass parameters to shell scripts without quoting them or escaping metacharacters, so more serious outcomes may be possible.The vendor has released two firmware updates since …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-08 22:30:00+01:00" class="dt-published"></time>
-  Mon 08 Mar 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/engagement/2021/03/08/office-hours-for-guadec-call-for-proposals/" rel="bookmark" class="u-url"
-       title="Office Hours for GUADEC Call for Proposals" target="_blank">
-      <time class="m-date" datetime="2021-03-08 16:26:34+00:00">
-        Mar
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Office Hours for GUADEC Call for Proposals
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  What: GUADEC CfP Office Hours When: March 11 (14:00 UTC) and March 18 (23:00 UTC) Where: GUADEC channel on Rocket.chat The GUADEC 2021 Call for Proposals is open! We’ve scheduled CfP office hours for Thursday March 11 (14:00 UTC) and Thursday March 18 (23:00 UTC). If you’re interested in presenting at GUADEC and want to … <a href="https://blogs.gnome.org/engagement/2021/03/08/office-hours-for-guadec-call-for-proposals/">Continue reading<span> "Office Hours for GUADEC Call for Proposals"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>mdeblanc</b></span>
-  on <time datetime="2021-03-08 16:26:34+00:00" class="dt-published"></time>
-  Mon 08 Mar 2021
+  on <time datetime="2021-03-09 19:55:52+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -221,24 +187,58 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/645104150259122177/the-aquatic-blackworm-forms-fluid-like-blobs" rel="bookmark" class="u-url"
-       title="The aquatic blackworm forms fluid-like blobs composed of..." target="_blank">
-      <time class="m-date" datetime="2021-03-08 10:00:59-06:00">
+    <a href="https://jlelse.blog/dev/go-structs-memory" rel="bookmark" class="u-url"
+       title="How a clever organization of Go structs can save memory" target="_blank">
+      <time class="m-date" datetime="2021-03-09 20:51:06+01:00">
         Mar
         <span class="m-date-day">
-          08
+          09
         </span>
         2021
       </time>
       <div class="p-name">
-      The aquatic blackworm forms fluid-like blobs composed of...
+      How a clever organization of Go structs can save memory
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img src="https://64.media.tumblr.com/93f7c68d6d9c38ae359167b0422ee8e1/14d5118ace93f68e-b0/s500x750/2da76d9006336160b0b963abc86ea972d8288dcb.gifv"> <img src="https://64.media.tumblr.com/fa41525e60b20c93e0bf3c1a71944342/14d5118ace93f68e-fb/s500x750/19259e3e4695d0e7f8842e7cb1c295ad03d44e3d.gifv"> <img src="https://64.media.tumblr.com/92d354d2177379df681d3dc34c5ddb76/14d5118ace93f68e-3e/s400x600/5507990f31b99ba63a49b3c96f8450118541e158.gifv"> <img src="https://64.media.tumblr.com/aa45d25189953aa6b5ca4e664bff297b/14d5118ace93f68e-05/s400x600/da3a6d1e5131575f4936c6394e64ca1ab30057fa.gifv"> <img src="https://64.media.tumblr.com/e86386e9323839cf7c808e12575c896e/14d5118ace93f68e-f0/s500x750/8d78e5f87eaf39c45755b4c123f63672623b7c50.gifv"> <p><a href="http://fyfluiddynamics.com/?p=14483">The aquatic blackworm forms fluid-like blobs composed of thousands of individual worms for protection against evaporation, light, and heat</a>. 
-(Image and research credit: <a href="https://doi.org/10.1073/pnas.2010542118">Y. Ozkan-Aydin et al.</a>; via <a href="https://twitter.com/BhamlaLab/status/1358902108347461632">S. Bhamla</a>; submitted by <a href="https://twitter.com/schichmax/status/1359165345714614286">Maximilian S.</a>)
+  Sometimes I like to take a look at the commit history of various open source projects, applications I use myself or dependencies I use in my applications. Today I was scrolling through the commit history of chi, the HTTP router I use for my blog software.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-03-09 20:51:06+01:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/645194731424497664/the-tiny-pygmy-gecko-no-longer-than-24-mm-has" rel="bookmark" class="u-url"
+       title="The tiny pygmy gecko - no longer than 24 mm - has..." target="_blank">
+      <time class="m-date" datetime="2021-03-09 10:00:44-06:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      The tiny pygmy gecko - no longer than 24 mm - has...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://64.media.tumblr.com/72eac0cd8e17eb186f6a1f5f9d7d1b84/3302596c66de7a59-05/s500x750/bd16ffcc049ff59e61c72df6e86988f77f33345d.png"> <img src="https://64.media.tumblr.com/c10331edf53ea6412a7cf00b3f271bc5/3302596c66de7a59-03/s500x750/fdac863ee23b70e02a8c0078ab2afee60714427b.gifv"> <p><a href="http://fyfluiddynamics.com/?p=14586">The tiny pygmy gecko - no longer than 24 mm - has superhydrophobic superpowers to help it survive Amazonian rainstorms</a>. 
+(Image and video credit: BBC Earth)
 
 </p>
   </p>
@@ -247,8 +247,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-08 10:00:59-06:00" class="dt-published"></time>
-  Mon 08 Mar 2021
+  on <time datetime="2021-03-09 10:00:44-06:00" class="dt-published"></time>
+  Tue 09 Mar 2021
   in FYFD.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -258,31 +258,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2021/03/the-fluidity-of-worm-blobs/" rel="bookmark" class="u-url"
-       title="The Fluidity of Worm Blobs" target="_blank">
-      <time class="m-date" datetime="2021-03-08 16:00:00+00:00">
+    <a href="https://fyfluiddynamics.com/2021/03/the-unsinkable-pygmy-gecko/" rel="bookmark" class="u-url"
+       title="The Unsinkable Pygmy Gecko" target="_blank">
+      <time class="m-date" datetime="2021-03-09 16:00:00+00:00">
         Mar
         <span class="m-date-day">
-          08
+          09
         </span>
         2021
       </time>
       <div class="p-name">
-      The Fluidity of Worm Blobs
+      The Unsinkable Pygmy Gecko
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  The aquatic blackworm forms blobs composed of thousands of individual worms for protection against evaporation, light, and heat. The worms braid themselves together (Image 1). Once a blob forms, it <a href="https://fyfluiddynamics.com/2021/03/the-fluidity-of-worm-blobs/">Keep reading</a>
+  The Brazilian pygmy gecko is a tiny inhabitant of the Amazon rainforest, growing to no longer than 24 mm. But these tiny lizards have some incredible superpowers when it comes <a href="https://fyfluiddynamics.com/2021/03/the-unsinkable-pygmy-gecko/">Keep reading</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-03-08 16:00:00+00:00" class="dt-published"></time>
-  Mon 08 Mar 2021
+  on <time datetime="2021-03-09 16:00:00+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
   in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -292,9 +292,246 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://kdenlive.org/en/2021/03/kdenlive-20-12-3-is-out/" rel="bookmark" class="u-url"
-       title="Kdenlive 20.12.3 is out" target="_blank">
-      <time class="m-date" datetime="2021-03-08 09:30:09+00:00">
+    <a href="https://www.kdab.com/qtquick-shaders/" rel="bookmark" class="u-url"
+       title="Efficient custom shapes in QtQuick : shaders" target="_blank">
+      <time class="m-date" datetime="2021-03-09 10:00:38+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Efficient custom shapes in QtQuick : shaders
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A long time ago, I wrote <a href="https://www.kdab.com/efficient-custom-shapes-in-qt-quick/">a post about creating custom shapes in Qt Quick</a>, via the scene-graph APIs. That post covered defining suitable geometry to draw a part of a circle, known also as a ‘sector’, efficiently, since such sectors occur commonly in instrument and vehicle interfaces. I started writing the second part, about implementing the material and shaders to make the complete functioning item.</p>
+<p>Then, somehow, life and customers intervened, and I forgot all about publishing the second part, and now it’s an embarrassingly long time later. Not as bad as the wait for A Dance With Dragons or Duke Nukem forever, but still, embarrassing. This is all my way of saying, here’s a post about writing shaders and QtQuick scene graph materials, which is interesting but also more than three years late, and that WordPress …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2021-03-09 10:00:38+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/03/09/github-refuses-to-help-me-unsubscribe.html" rel="bookmark" class="u-url"
+       title="GitHub refuses to help me unsubscribe from thousands of notifications" target="_blank">
+      <time class="m-date" datetime="2021-03-09 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      GitHub refuses to help me unsubscribe from thousands of notifications
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Well, here we are again, relying on the court of public opinion to fix a problem
+with some company&rsquo;s bad support. Today we look at GitHub.</p>
+<p><strong>tl;dr</strong> I am subscribed to thousands of discussions on GitHub that I no
+longer participate in, and I receive several unwanted emails per week as a
+consequence. After two weeks of frustrating negotiation with support, GitHub
+ultimately suggests that I manually unsubscribe from each of 80+ pages of
+notifications, then tells me they forwarded a request to improve the interface to
+the product team, where it may or may not be addressed, and they will not be
+getting back to me regardless.</p>
+<p><em>Disclaimer: I represent a company which competes with GitHub. However, I
+frequently contribute to hundreds of FOSS projects, many of which are hosted on
+GitHub, and as such I use …</em></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6463651" rel="bookmark" class="u-url"
+       title="Efficacy of a Combination of Conservative Therapies vs an Education Comparator on Clinical Outcomes in Thumb Base Osteoarthritis: A Randomized Clinical Trial" target="_blank">
+      <time class="m-date" datetime="2021-03-09 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Efficacy of a Combination of Conservative Therapies vs an Education Comparator on Clinical Outcomes in Thumb Base Osteoarthritis: A Randomized Clinical Trial
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  A combination of conservative treatments is commonly used in clinical practice for thumb base osteoarthritis despite limited evidence for this approach.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>DJ Hunter</b></span>
+  on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fortran-lang.org/newsletter/2021/03/09/fortran-lang-accepted-for-google-summer-of-code-2021/" rel="bookmark" class="u-url"
+       title="Fortran-lang accepted to Google Summer of Code 2021" target="_blank">
+      <time class="m-date" datetime="2021-03-09 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Fortran-lang accepted to Google Summer of Code 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>We are excited to announce that Fortran-lang has been accepted as a <a href="https://summerofcode.withgoogle.com/organizations/6633903353233408">Google Summer of Code (GSoC) 2021 mentoring organization</a>! 🎉</p>
+
+<p>You can review our project ideas
+<a href="https://github.com/fortran-lang/fortran-lang.org/wiki/GSoC-2021-Project-ideas">here</a>,
+and if you have any ideas that are not mentioned, please let us know.</p>
+
+<p>We are looking for students to get in touch with us and to apply.
+Click <a href="https://github.com/fortran-lang/fortran-lang.org/wiki/GSoC-2021-Student-instructions">here</a>
+for instructions on how to do so.</p>
+
+<p>Our main communication channel will be the <a href="https://fortran-lang.discourse.group/">Fortran Discourse</a>.
+There, we will announce a date for GSoC video calls where all prospective
+students are welcome to join to ask questions, discuss, and brainstorm ideas.</p>
+
+<p>We look forward to a productive and fun Google Summer of Code!</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in Fortran Newsletter.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-script-shebang/" rel="bookmark" class="u-url"
+       title="CMake script shebang" target="_blank">
+      <time class="m-date" datetime="2021-03-09 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      CMake script shebang
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Like with
+<a href="https://www.scivision.dev/shell-default-shebang">shell scripts</a>,
+standalone CMake
+<a href="https://cmake.org/cmake/help/latest/manual/cmake-language.7.html#scripts">scripts</a>
+can have a first-line shebang that tells the shell what program should execute the script.</p>
+<pre><code>#!/usr/bin/env -S cmake -P
+</code></pre><p>While there&rsquo;s no harm in adding this shebang to CMake scripts, I am not currently aware of a way to pass dynamic &ldquo;-Dvar=value&rdquo; to the script when using the shebang like &ldquo;./myscript.cmake&rdquo;.
+If the script is OK without such parameters, then the shebang can be useful.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://tonsky.me/blog/phil-libin/" rel="bookmark" class="u-url"
+       title="Phil Libin: Find a new way to ski" target="_blank">
+      <time class="m-date" datetime="2021-03-09 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Phil Libin: Find a new way to ski
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Brief transcript of What I Know podcast with Phil Libin on entrepreneurship
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
+  on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
+  Tue 09 Mar 2021
+  in Nikita Prokopov's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2434/" rel="bookmark" class="u-url"
+       title="Vaccine Guidance" target="_blank">
+      <time class="m-date" datetime="2021-03-08 00:00:00+00:00">
         Mar
         <span class="m-date-day">
           08
@@ -302,50 +539,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2021
       </time>
       <div class="p-name">
-      Kdenlive 20.12.3 is out
+      Vaccine Guidance
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-
-
-
-
-                    <div>
-                <div>
-
-
-                <div>
-
-
-                <div>
-<p>The last maintenance release of the 20.12 series is out with the usual batch of usability and bug fixes. The highlights include lots of polishing of the Subtitling Tool and adding a spell checking feature. The Titler also got a fair amount of usability improvements most notably fixing the invisible text cursor. Fixes were also made to the chroma key color picker and various clip selection issues. The Windows version received fixes to resetting the config file and finding downloaded title templates and lumas.</p>
-<p><strong>Full log</strong></p>
-<ul>
-<li>Remove some debug output. <a href="http://commits.kde.org/kdenlive/d948801db962bac3e751bff3a6ed2728d8b63c80">Commit.</a>
-</li>
-<li>Fix various selection issues. <a href="http://commits.kde.org/kdenlive/5297ef5953a26aaa41d43e54a6ebbbef1a7f2352">Commit.</a>
-</li>
-<li>Fix recursive search broken on cancel. <a href="http://commits.kde.org/kdenlive/c49d68af077321d097af5e67c9b240ed93292f4c">Commit.</a> Fixes bug <a href="https://bugs.kde.org/433773">#433773</a>
-</li>
-<li>Change shortcut for Loop Zone to avoid conflict with windows system. <a href="http://commits.kde.org/kdenlive/44a9f4d8842a549ce3377e179ea0e4b32184d01a">Commit.</a>
-</li>
-<li>Comment out recent lost timeline focus that made things worse. <a href="http://commits.kde.org/kdenlive/3fe09bd05f2de3573c9aa5b67d077e37db7d43d7">Commit.</a>
-</li>
-<li>Improve focus handling when switching to fullscreen monitor. <a href="http://commits.kde.org/kdenlive/728d2a4ac0386fbc2dab6a643132211c75f893d6">Commit.</a>
-</li>
-<li>Do …</li></ul></div></div></div></div></div>
+  <img alt="I can't wait until I'm fully vaccinated and can safely send chat messages in all caps again." src="https://imgs.xkcd.com/comics/vaccine_guidance.png" title="I can't wait until I'm fully vaccinated and can safely send chat messages in all caps again.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Kdenlive</b></span>
-  on <time datetime="2021-03-08 09:30:09+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-03-08 00:00:00+00:00" class="dt-published"></time>
   Mon 08 Mar 2021
-  in Planet KDE.
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -382,160 +591,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-03-07 21:01:00+01:00" class="dt-published"></time>
   Sun 07 Mar 2021
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6462348" rel="bookmark" class="u-url"
-       title="Prophylactic gonadectomy in 46 XY females; why, where and when?" target="_blank">
-      <time class="m-date" datetime="2021-03-07 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          07
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Prophylactic gonadectomy in 46 XY females; why, where and when?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  We compared cases of phenotypic female patients who presented with male karyotype and underwent prophylactic gonadectomy.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>AA Zainuddin</b></span>
-  on <time datetime="2021-03-07 00:00:00+00:00" class="dt-published"></time>
-  Sun 07 Mar 2021
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-git-submodule/" rel="bookmark" class="u-url"
-       title="CMake add Git submodule directory" target="_blank">
-      <time class="m-date" datetime="2021-03-07 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          07
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      CMake add Git submodule directory
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>CMake can retrieve and use Git submodules as a regular subdirectory.
-This is an alternative to using FetchContent when the project team decides to use Git submodules instead of FetchContent.
-Create a file <a href="https://gist.github.com/scivision/bb1d47a9529e153617414e91ff5390af">AddGitSubmodule.cmake</a>:</p>
-
-<p>Add Git submodule directories from CMakeLists.txt like:</p>
-<div><pre><code>include(<span>AddGitSubmodule.cmake</span>)<span>
-</span><span>
-</span><span></span>add_git_submodule(<span>my_submod_dir</span>)<span>
-</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-07 00:00:00+00:00" class="dt-published"></time>
-  Sun 07 Mar 2021
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/03/06/Corporate-surveillance-murder.html" rel="bookmark" class="u-url"
-       title="The corporate surveillance machine is conducting murder at scale" target="_blank">
-      <time class="m-date" datetime="2021-03-06 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          06
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      The corporate surveillance machine is conducting murder at scale
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I have never been angrier about the corporate surveillance complex, which I have
-rallied against for <em>years</em>, than I am today. Buying and selling user&rsquo;s private
-information on the open market is bad enough for the obvious reasons, but today,
-I learned that the depths of depravity this market will descend to are without
-limit. Today I am more angry and ashamed at this industry than I have ever been.
-Corporate surveillance and adtech has turned your phone into an informant
-against you and brought about the actual <strong>murder</strong> of the user.</p>
-<p><a href="https://www.vice.com/en/article/y3g97x/location-data-apps-drone-strikes-iowa-national-guard">Vice: Military Unit That Conducts Drone Strikes Bought Location Data From Ordinary Apps</a></p>
-<p>Say you&rsquo;re a Muslim. You download some apps for reading the Quran and
-participating in Muslim-oriented social networks. These ads steal whatever
-personal information it can get its hands on, through any means …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-06 00:00:00+00:00" class="dt-published"></time>
-  Sat 06 Mar 2021
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2433/" rel="bookmark" class="u-url"
-       title="Mars Rovers" target="_blank">
-      <time class="m-date" datetime="2021-03-05 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          05
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Mars Rovers
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="I just Googled 'roomba sojourner mod' and was sorely disappointed. Be the change, I guess!" src="https://imgs.xkcd.com/comics/mars_rovers.png" title="I just Googled 'roomba sojourner mod' and was sorely disappointed. Be the change, I guess!">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-05 00:00:00+00:00" class="dt-published"></time>
-  Fri 05 Mar 2021
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -697,77 +752,6 @@ we’ll cover in this post:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fortran-lang.org/newsletter/2021/03/01/Fortran-Newsletter-March-2021/" rel="bookmark" class="u-url"
-       title="Fortran newsletter: March 2021" target="_blank">
-      <time class="m-date" datetime="2021-03-01 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Fortran newsletter: March 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Welcome to the March 2021 edition of the monthly Fortran newsletter.
-The newsletter comes out at the beginning of every month and details
-Fortran news from the previous month.</p>
-
-<ul></ul>
-
-fortran-lang.org
-
-<p>This month we’ve had several updates to the website:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/191">#191</a>:
-Fix author/maintainer output in fpm registry</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/193">#193</a>:
-Rename all instances of fortran-lang.github.io to fortran-lang.org</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/196">#196</a>:
-Update package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/199">#199</a>:
-Fix broken link for LLVM flang</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/205">#205</a>:
-Add more electronic structure and atomistic simulation packages</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/206">#206</a>:
-Add books to learning section</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/208">#208</a>:
-Fix package information</li>
-</ul>
-
-<p>Ongoing work:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/201">#201</a> (WIP):
-Internationalization for fortran-lang</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/issues/207">#207</a> (WIP):
-Correct subtitle of setting up your os</li>
-</ul>
-
-<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us know</a> if you have any suggestions for the website and its content.
-We welcome any new contributors to the website and the tutorials page in particular - see the <a href="https://github.com/fortran-lang/fortran-lang.org/blob/master/CONTRIBUTING.md">contributor guide</a> for how …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-01 00:00:00+00:00" class="dt-published"></time>
-  Mon 01 Mar 2021
-  in Fortran Newsletter.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://wizardzines.com/comics/cname/" rel="bookmark" class="u-url"
        title="CNAME records" target="_blank">
       <time class="m-date" datetime="2021-03-01 00:00:00+00:00">
@@ -896,42 +880,6 @@ the bazillion reminders to make sure I do all …</li></ul>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tonsky.me/design/" rel="bookmark" class="u-url"
-       title="DuckDuckGo logo redesign" target="_blank">
-      <time class="m-date" datetime="2021-02-26 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          26
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      DuckDuckGo logo redesign
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><img src="https://tonsky.me/design/2021-02-duckduckgo.png"></p>
-
-<p>Following a trend of turning internet logos into abstract spirals, I redesigned a canonical <a href="https://duckduckgo.com/">DuckDuckGO</a> logo.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2021-02-26 00:00:00+00:00" class="dt-published"></time>
-  Fri 26 Feb 2021
-  in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.python.org/dev/peps/pep-0654/" rel="bookmark" class="u-url"
        title="PEP 654: Exception Groups and except*" target="_blank">
       <time class="m-date" datetime="2021-02-22 00:00:00+00:00">
@@ -993,67 +941,6 @@ the bazillion reminders to make sure I do all …</li></ul>
   on <time datetime="2021-02-18 12:39:07+00:00" class="dt-published"></time>
   Thu 18 Feb 2021
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hunden.linuxkompis.se/2021/02/17/coloured-manual-pages.html" rel="bookmark" class="u-url"
-       title="Coloured manual pages" target="_blank">
-      <time class="m-date" datetime="2021-02-17 00:00:00+01:00">
-        Feb
-        <span class="m-date-day">
-          17
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Coloured manual pages
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>It’s easy to take a lot of things for granted when you’ve been using them for longer than you can remember. Coloured manual pages is one of those things.</p>
-
-<p>By default, there’s no colours for the manual pages, which can make it more difficult to distinguish parts and sections of the documentation than it has to be.</p>
-
-<div>
-    <div>
-        <a href="https://hunden.linuxkompis.se/img/coloured_manpages.png">
-            <img alt="" src="https://hunden.linuxkompis.se/img/t/coloured_manpages.png">
-        </a>
-        This is what my manual pages looks like.
-    </div>
-</div>
-
-<p>If you want to put some colours on your own manual pages; simply add this to your configuration file for your shell:</p>
-
-<div><div><pre><code>man<span>()</span> <span>{</span>
-    <span>env </span><span>LESS_TERMCAP_mb</span><span>=</span><span>$'</span><span>\E</span><span>[01;31m'</span> <span>\</span>
-    <span>LESS_TERMCAP_md</span><span>=</span><span>$'</span><span>\E</span><span>[01;33;5;74m'</span> <span>\</span>
-    <span>LESS_TERMCAP_me</span><span>=</span><span>$'</span><span>\E</span><span>[0m'</span> <span>\</span>
-    <span>LESS_TERMCAP_se</span><span>=</span><span>$'</span><span>\E</span><span>[0m'</span> <span>\</span>
-    <span>LESS_TERMCAP_so</span><span>=</span><span>$'</span><span>\E</span><span>[38;5;246m'</span> <span>\</span>
-    <span>LESS_TERMCAP_ue</span><span>=</span><span>$'</span><span>\E</span><span>[0m'</span> <span>\</span>
-    <span>LESS_TERMCAP_us</span><span>=</span><span>$'</span><span>\E</span><span>[04;39;5;146m'</span> <span>\</span>
-    man <span>"</span><span>$@</span><span>"</span>
-<span>}</span>
-</code></pre></div></div>
-
-<p>If you want to change the colour of the yellow text, you have to change the value …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-02-17 00:00:00+01:00" class="dt-published"></time>
-  Wed 17 Feb 2021
-  in Hund[en].
 </footer>
 <div class="m-clearfix-l"></div>
 
