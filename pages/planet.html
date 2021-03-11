@@ -153,31 +153,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://mjg59.dreamwidth.org/56106.html" rel="bookmark" class="u-url"
-       title="Unauthenticated MQTT endpoints on Linksys Velop routers enable local DoS" target="_blank">
-      <time class="m-date" datetime="2021-03-09 19:55:52+00:00">
+    <a href="https://blogs.gnome.org/chergert/2021/03/10/gtksourceview-interactive-tooltips/" rel="bookmark" class="u-url"
+       title="GtkSourceView Interactive Tooltips" target="_blank">
+      <time class="m-date" datetime="2021-03-10 22:52:27+00:00">
         Mar
         <span class="m-date-day">
-          09
+          10
         </span>
         2021
       </time>
       <div class="p-name">
-      Unauthenticated MQTT endpoints on Linksys Velop routers enable local DoS
+      GtkSourceView Interactive Tooltips
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  (Edit: this is CVE-2021-1000002)Linksys produces a series of wifi mesh routers under the <a href="https://www.linksys.com/us/velop/">Velop</a> line. These routers use <a href="https://en.wikipedia.org/wiki/MQTT">MQTT</a> to send messages to each other for coordination purposes. In the version I tested against, there was zero authentication on this - anyone on the local network is able to connect to the MQTT interface on a router and send commands. As an example:mosquitto_pub -h 192.168.1.1 -t "network/master/cmd/nodes_temporary_blacklist" -m '{"data": {"client": "f8:16:54:43:e2:0c", "duration": "3600", "action": "start"}}'will ask the router to block the client with MAC address f8:16:54:43:e2:0c from the network for an hour. Various other MQTT topics pass parameters to shell scripts without quoting them or escaping metacharacters, so more serious outcomes may be possible.The vendor has released two firmware updates since …
+  During the past years (and especially last cycle) I’ve worked to push a number of features upstream from Builder into GtkSourceView. Not only does this improve the ecosystem for all applications, but it reduces the number of things we need to maintain downstream in Builder as we move to GTK 4. That included a new … <a href="https://blogs.gnome.org/chergert/2021/03/10/gtksourceview-interactive-tooltips/">Continue reading <span>GtkSourceView Interactive Tooltips</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-09 19:55:52+00:00" class="dt-published"></time>
-  Tue 09 Mar 2021
+  <span class="p-author"><b>chergert</b></span>
+  on <time datetime="2021-03-10 22:52:27+00:00" class="dt-published"></time>
+  Wed 10 Mar 2021
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -187,31 +187,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/dev/go-structs-memory" rel="bookmark" class="u-url"
-       title="How a clever organization of Go structs can save memory" target="_blank">
-      <time class="m-date" datetime="2021-03-09 20:51:06+01:00">
+    <a href="https://jlelse.blog/micro/2021/03/programming-brain" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-03-10 23:19:00+01:00">
         Mar
         <span class="m-date-day">
-          09
+          10
         </span>
         2021
       </time>
       <div class="p-name">
-      How a clever organization of Go structs can save memory
+      💬
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Sometimes I like to take a look at the commit history of various open source projects, applications I use myself or dependencies I use in my applications. Today I was scrolling through the commit history of chi, the HTTP router I use for my blog software.
+  Sometimes the problem with programming is that you can’t turn off your mind as easily as you can turn off your PC. Practically, you don’t program anymore. But the brain still continues to program.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-09 20:51:06+01:00" class="dt-published"></time>
-  Tue 09 Mar 2021
+  on <time datetime="2021-03-10 23:19:00+01:00" class="dt-published"></time>
+  Wed 10 Mar 2021
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -221,34 +221,69 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/645194731424497664/the-tiny-pygmy-gecko-no-longer-than-24-mm-has" rel="bookmark" class="u-url"
-       title="The tiny pygmy gecko - no longer than 24 mm - has..." target="_blank">
-      <time class="m-date" datetime="2021-03-09 10:00:44-06:00">
+    <a href="https://blog.cornelius-schumacher.de/2020/05/online-conferences.html" rel="bookmark" class="u-url"
+       title="11 takeaways from a year of online conferences" target="_blank">
+      <time class="m-date" datetime="2021-03-10 20:47:57+00:00">
         Mar
         <span class="m-date-day">
-          09
+          10
         </span>
         2021
       </time>
       <div class="p-name">
-      The tiny pygmy gecko - no longer than 24 mm - has...
+      11 takeaways from a year of online conferences
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img src="https://64.media.tumblr.com/72eac0cd8e17eb186f6a1f5f9d7d1b84/3302596c66de7a59-05/s500x750/bd16ffcc049ff59e61c72df6e86988f77f33345d.png"> <img src="https://64.media.tumblr.com/c10331edf53ea6412a7cf00b3f271bc5/3302596c66de7a59-03/s500x750/fdac863ee23b70e02a8c0078ab2afee60714427b.gifv"> <p><a href="http://fyfluiddynamics.com/?p=14586">The tiny pygmy gecko - no longer than 24 mm - has superhydrophobic superpowers to help it survive Amazonian rainstorms</a>. 
-(Image and video credit: BBC Earth)
+  <div>I love going to conferences. It's how I learn, meet people, get inspiration, share my work, and have fun. The last conference I went to physically was <a href="https://joinup.ec.europa.eu/collection/open-source-observatory-osor/event/foss-backstage-2020">FOSS Backstage in March 2020</a>. It was great. I <a href="https://www.youtube.com/watch?v=hikC6U8X_Ec&amp;list=PLmmgXF00WhvaaGRM94WvyuGbUHfwfCQ03&amp;index=1">talked about Inner Source</a>, met great people, had great discussions.</div><div></div><div>That was one year ago. Conferences got cancelled or went virtual. I have been to a lot of virtual conferences since then. It's great, attending doesn't require travel, fees went down, with a few clicks you could join any conference on the planet. Sometimes it was attending one session and realizing that it wasn't for me, sometimes it meant spending days in a different time zone.</div><div></div><div>Of course it's not the same, it's different. So what have I taken away from a year of online conferences?</div><div></div><div>
+<b>Ease of access makes a huge difference</b> - I …</div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cornelius Schumacher</b></span>
+  on <time datetime="2021-03-10 20:47:57+00:00" class="dt-published"></time>
+  Wed 10 Mar 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
 
-</p>
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/645285612180652032/spiderwebs-and-stratocumulus-clouds" rel="bookmark" class="u-url"
+       title="Spiderwebs and Stratocumulus Clouds" target="_blank">
+      <time class="m-date" datetime="2021-03-10 10:05:13-06:00">
+        Mar
+        <span class="m-date-day">
+          10
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Spiderwebs and Stratocumulus Clouds
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Spiderwebs and Stratocumulus Clouds" src="https://64.media.tumblr.com/df6085519a4700cc9069bb59bd005d8c/0d9084e634007d2a-d1/s540x810/249fc9e6854f85eda62508b904c39dff5585a822.jpg"><a href="http://fyfluiddynamics.com/?p=13832">Stratocumulus clouds cover about 20% of Earth&rsquo;s surface at any given time, and they form distinctive patterns of lumpy cells separated by thin slits. Because of their interconnectedness, researchers nicknamed these narrow regions spiderwebs</a>. (Image credits: featured image - <a href="https://earthobservatory.nasa.gov/images/92459/portholes-through-the-clouds">L. Dauphin/MODIS</a>, others - <a href="https://twitter.com/me3250/status/1301210988868440069">UConn ME 3250</a>; research credit: <a href="https://doi.org/10.3390/atmos11070730">G. Matheou et al.</a>)
+
+
+<a href="http://fyfluiddynamics.com/?p=13832">Read the full article</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-09 10:00:44-06:00" class="dt-published"></time>
-  Tue 09 Mar 2021
+  on <time datetime="2021-03-10 10:05:13-06:00" class="dt-published"></time>
+  Wed 10 Mar 2021
   in FYFD.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -258,31 +293,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2021/03/the-unsinkable-pygmy-gecko/" rel="bookmark" class="u-url"
-       title="The Unsinkable Pygmy Gecko" target="_blank">
-      <time class="m-date" datetime="2021-03-09 16:00:00+00:00">
+    <a href="https://fyfluiddynamics.com/2021/03/spiderwebs-and-stratocumulus-clouds/" rel="bookmark" class="u-url"
+       title="Spiderwebs and Stratocumulus Clouds" target="_blank">
+      <time class="m-date" datetime="2021-03-10 16:00:00+00:00">
         Mar
         <span class="m-date-day">
-          09
+          10
         </span>
         2021
       </time>
       <div class="p-name">
-      The Unsinkable Pygmy Gecko
+      Spiderwebs and Stratocumulus Clouds
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  The Brazilian pygmy gecko is a tiny inhabitant of the Amazon rainforest, growing to no longer than 24 mm. But these tiny lizards have some incredible superpowers when it comes <a href="https://fyfluiddynamics.com/2021/03/the-unsinkable-pygmy-gecko/">Keep reading</a>
+  Stratocumulus clouds cover about 20% of Earth&#8217;s surface at any given time, and they form distinctive patterns of lumpy cells separated by thin slits. Because of their interconnectedness, researchers nicknamed <a href="https://fyfluiddynamics.com/2021/03/spiderwebs-and-stratocumulus-clouds/">Keep reading</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-03-09 16:00:00+00:00" class="dt-published"></time>
-  Tue 09 Mar 2021
+  on <time datetime="2021-03-10 16:00:00+00:00" class="dt-published"></time>
+  Wed 10 Mar 2021
   in FYFD Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -292,33 +327,156 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.kdab.com/qtquick-shaders/" rel="bookmark" class="u-url"
-       title="Efficient custom shapes in QtQuick : shaders" target="_blank">
-      <time class="m-date" datetime="2021-03-09 10:00:38+00:00">
+    <a href="https://www.davidrevoy.com/article822/livrestream-for-the-matrix-foundation-today" rel="bookmark" class="u-url"
+       title="Livrestream for the Matrix Foundation (today)" target="_blank">
+      <time class="m-date" datetime="2021-03-10 15:05:00+01:00">
         Mar
         <span class="m-date-day">
-          09
+          10
         </span>
         2021
       </time>
       <div class="p-name">
-      Efficient custom shapes in QtQuick : shaders
+      Livrestream for the Matrix Foundation (today)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>A long time ago, I wrote <a href="https://www.kdab.com/efficient-custom-shapes-in-qt-quick/">a post about creating custom shapes in Qt Quick</a>, via the scene-graph APIs. That post covered defining suitable geometry to draw a part of a circle, known also as a ‘sector’, efficiently, since such sectors occur commonly in instrument and vehicle interfaces. I started writing the second part, about implementing the material and shaders to make the complete functioning item.</p>
-<p>Then, somehow, life and customers intervened, and I forgot all about publishing the second part, and now it’s an embarrassingly long time later. Not as bad as the wait for A Dance With Dragons or Duke Nukem forever, but still, embarrassing. This is all my way of saying, here’s a post about writing shaders and QtQuick scene graph materials, which is interesting but also more than three years late, and that WordPress …</p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-03-10_matrix_03_net.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-03-10_matrix_03_net.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>It's today and Carrot is ready! 😺</p>
+<p>In few hours, my demo for the Matrix Foundation will start. 
+Wednesday 2021-03-10 6pm UTC, (19h00 in Paris; 6pm London; 1pm in New York; 10am in L.A.)</p>
+<p>All info: <a href="https://matrix.org/open-tech-will-save-us/">https://matrix.org/open-tech-will-save-us/</a></p>
+<p>[update:]</p>
+<p>And the replay is available here! </p>
+<p><a href="https://youtu.be/qJSqUmMy9IY?t=3284">https://youtu.be/qJSqUmMy9IY?t=3284</a></p>
+<p>Thanks to all of you who saw the live! I had a good time.</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2021-03-09 10:00:38+00:00" class="dt-published"></time>
-  Tue 09 Mar 2021
-  in Planet KDE.
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2021-03-10 15:05:00+01:00" class="dt-published"></time>
+  Wed 10 Mar 2021
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://morepypy.blogspot.com/2021/03/pypys-blog-has-moved.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PyPyStatusBlog+(PyPy+Status+Blog)" rel="bookmark" class="u-url"
+       title="PyPy's blog has moved" target="_blank">
+      <time class="m-date" datetime="2021-03-10 07:16:30.638000+01:00">
+        Mar
+        <span class="m-date-day">
+          10
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      PyPy's blog has moved
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>For many years, PyPy has been publishing blog posts here at
+<a href="https://morepypy.blogspot.com">https://morepypy.blogspot.com</a>. From now on, the posts will be at
+<a href="https://pypy.org/blog">https://pypy.org/blog</a>. The RSS feed has moved to <a href="https://pypy.org/rss.xml">https://pypy.org/rss.xml</a>. The original
+content has been migrated to the newer site, including comments.
+
+
+</p><div><div><p>Among the motivations for the move were:</p>
+One site to rule them all
+<p>Adding the blog posts on pypy.org seems like a natural extension of the web site
+rather than outsourcing it to a third-party. Since the site is generated using
+the static site generator <a href="https://getnikola.com/">nikola</a> from the github repo
+<a href="https://github.com/pypy/pypy.org">https://github.com/pypy/pypy.org</a>, we now have good source control for the
+content.</p>
+CI previews, and github
+<p>Those of you who follow PyPy may note something new in the URL for the repo:
+until now PyPy has …</p></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>mattip (noreply@blogger.com)</b></span>
+  on <time datetime="2021-03-10 07:16:30.638000+01:00" class="dt-published"></time>
+  Wed 10 Mar 2021
+  in PyPy Status Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6467669" rel="bookmark" class="u-url"
+       title="The Adult Neck Mass: Predictors of Malignancy" target="_blank">
+      <time class="m-date" datetime="2021-03-10 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          10
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      The Adult Neck Mass: Predictors of Malignancy
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Distinguishing benign from malignant adult neck masses can be challenging because data to guide risk assessment are lacking. We examined patients with neck masses from an integrated health system to identify patient and mass factors associated with malignancy.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KH Wang</b></span>
+  on <time datetime="2021-03-10 00:00:00+00:00" class="dt-published"></time>
+  Wed 10 Mar 2021
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wizardzines.com/comics/dns-server-types/" rel="bookmark" class="u-url"
+       title="the 4 types of DNS servers" target="_blank">
+      <time class="m-date" datetime="2021-03-10 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          10
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      the 4 types of DNS servers
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://wizardzines.com/comics/dns-server-types/dns-server-types.png">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-03-10 00:00:00+00:00" class="dt-published"></time>
+  Wed 10 Mar 2021
+  in Wizard Zines.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -364,40 +522,6 @@ GitHub, and as such I use …</em></p>
   on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
   Tue 09 Mar 2021
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6463651" rel="bookmark" class="u-url"
-       title="Efficacy of a Combination of Conservative Therapies vs an Education Comparator on Clinical Outcomes in Thumb Base Osteoarthritis: A Randomized Clinical Trial" target="_blank">
-      <time class="m-date" datetime="2021-03-09 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          09
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Efficacy of a Combination of Conservative Therapies vs an Education Comparator on Clinical Outcomes in Thumb Base Osteoarthritis: A Randomized Clinical Trial
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  A combination of conservative treatments is commonly used in clinical practice for thumb base osteoarthritis despite limited evidence for this approach.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>DJ Hunter</b></span>
-  on <time datetime="2021-03-09 00:00:00+00:00" class="dt-published"></time>
-  Tue 09 Mar 2021
-  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -563,42 +687,6 @@ If the script is OK without such parameters, then the shebang can be useful.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.davidrevoy.com/article821/livrestream-for-the-matrix-foundation" rel="bookmark" class="u-url"
-       title="Livrestream for the Matrix Foundation" target="_blank">
-      <time class="m-date" datetime="2021-03-07 21:01:00+01:00">
-        Mar
-        <span class="m-date-day">
-          07
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Livrestream for the Matrix Foundation
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-03-07_matrix-livestream-conf_net.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-03-07_matrix-livestream-conf_net.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>I'll do a painting demo live for the Matrix Foundation, don't miss it! </p>
-<p>On Wednesday 2021-03-10 6pm UTC (7pm in Berlin; 6pm in the UK; 1pm in New York; 10am in California)</p>
-<p>All info: <a href="https://matrix.org/open-tech-will-save-us/">https://matrix.org/open-tech-will-save-us/</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2021-03-07 21:01:00+01:00" class="dt-published"></time>
-  Sun 07 Mar 2021
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://jvns.ca/blog/things-your-manager-might-not-know/" rel="bookmark" class="u-url"
        title="Things your manager might not know" target="_blank">
       <time class="m-date" datetime="2021-03-02 10:40:18+00:00">
@@ -744,40 +832,6 @@ we’ll cover in this post:</p>
   on <time datetime="2021-03-01 11:15:06.938000-05:00" class="dt-published"></time>
   Mon 01 Mar 2021
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://wizardzines.com/comics/cname/" rel="bookmark" class="u-url"
-       title="CNAME records" target="_blank">
-      <time class="m-date" datetime="2021-03-01 00:00:00+00:00">
-        Mar
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      CNAME records
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://wizardzines.com/comics/cname/cname.png">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-03-01 00:00:00+00:00" class="dt-published"></time>
-  Mon 01 Mar 2021
-  in Wizard Zines.
 </footer>
 <div class="m-clearfix-l"></div>
 
