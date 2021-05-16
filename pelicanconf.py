@@ -74,6 +74,15 @@ DIRECT_TEMPLATES = (
     #  "publications",
 )
 
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'm-code'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
+
 M_CSS_FILES = [
     "/static/custom.compiled.css",
 ]
