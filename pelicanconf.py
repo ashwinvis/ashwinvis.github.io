@@ -15,6 +15,7 @@ import m
 
 #  from pelican_jupyter import markup
 #  from pelican.plugins import webring
+#  from pelican.plugins import myst_reader
 from pelican_ashwinvis import post_stats
 from pelican_ashwinvis.util.util import read_opml
 
@@ -81,7 +82,7 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
+PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata] #, myst_reader]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
 M_SITE_LOGO_TEXT = "@ashwinvis"
