@@ -180,7 +180,7 @@ A good example of this is the <strong>conditional expression</strong> or <strong
 <p>If you are new to this, I highly recommend that you use this. It would
 reduce the indentation in nested if-else statements and need for intermediate
 variables in more real-life codes.</p>
-<h2>In other languages</h2>
+<h2 id="in-other-languages"><a class="toclink" href="#in-other-languages">In other languages</a></h2>
 <p>In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:</p>
 <div class="m-code"><pre><span></span><span class="kd">function</span> <span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
@@ -195,7 +195,7 @@ syntax is a bit more terse. It looks like this with ECMAScript:</p>
 <p>An advantage is that the syntax is more condensed; but as a downside, one
 needs to remember which side of the colon <code>:</code> assumes the value when the
 condition is <code>True</code> and <em>vice versa</em>.</p>
-<h2>C-style ternary operators using logical operators</h2>
+<h2 id="c-style-ternary-operators-using-logical-operators"><a class="toclink" href="#c-style-ternary-operators-using-logical-operators">C-style ternary operators using logical operators</a></h2>
 <p>I found a trick to create similar obfuscated ternary operators in Python. Here it goes:</p>
 <div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
@@ -231,10 +231,90 @@ complicated in getting the syntax right.</p>
 </pre></div>
 
 
-<h2>Further reading</h2>
+<h2 id="bonus-when-to-avoid-if-else-statements-in-python"><a class="toclink" href="#bonus-when-to-avoid-if-else-statements-in-python">Bonus: when to avoid if-else statements in Python</a></h2>
+<p>We saw a good example of when to use conditional expressions in Python. Now we
+go on a tangent to look at some features baked into Python which further allow
+the need for if-else statements.</p>
+<h3 id="dictionary-lookup"><a class="toclink" href="#dictionary-lookup">Dictionary lookup</a></h3>
+<p>Instead of:</p>
+<div class="m-code"><pre><span></span><span class="c1"># assume the variable `color_of_fruits` is a dictionary</span>
+
+<span class="k">if</span> <span class="s2">&quot;apple&quot;</span> <span class="ow">in</span> <span class="n">color_of_fruits</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">color_of_fruits</span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+</pre></div>
+
+
+<p>you could use the oneliner:</p>
+<div class="m-code"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="n">color_of_fruits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Environment variables of the system are accessed via a special dictionary-like
+object <code>os.environ</code>. However, for environment variables, there is a handy standard
+library function <code>os.getenv</code> which is useful. Instead of:</p>
+<div class="m-code"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">if</span> <span class="s2">&quot;CC&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="n">c_compiler</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CC&quot;</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">c_compiler</span> <span class="o">=</span> <span class="s2">&quot;gcc&quot;</span>
+</pre></div>
+
+
+<p>use:</p>
+<div class="m-code"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">c_compiler</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CC&quot;</span><span class="p">,</span> <span class="s2">&quot;gcc&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>For both the <a href="https://docs.python.org/3/library/stdtypes.html#dict.get"><code>dict.get</code></a> method and <a href="https://docs.python.org/3.8/library/os.html?#os.getenv"><code>os.getenv</code></a> function, if
+you leave out the default value, you get <code>None</code> and no <code>KeyError</code> would
+be raised.</p>
+<h3 id="fall-back-values"><a class="toclink" href="#fall-back-values">Fall-back values</a></h3>
+<p>Whenever you read files, download text from the internet it is not a 100%
+guarantee that the result would be what you expect. In that case you might need
+a fall-back value to work with. Take this naive case of reading and printing a
+file <code>config.cfg</code> which is empty:</p>
+<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">print_config</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.cfg&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">contents</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File is empty&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+
+
+<p>From the previous discussion, we see that we can simplify it using
+conditional expressions as:</p>
+<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">print_config_conditional</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.cfg&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File is empty&quot;</span> <span class="k">if</span> <span class="n">contents</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="n">contents</span><span class="p">)</span>
+</pre></div>
+
+
+<p>However in this case a cleaner option would be to use the short-circuiting
+property of the <code>or</code> operator to assign a fall-back value.</p>
+<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">print_config_fallback</span><span class="p">():</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.cfg&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;File is empty&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Note that in Python world, evaluating <code>False</code>, <code>""</code>, <code>0</code> or <code>None</code> as a part of
+a boolean expression would mean the same.  Also in <code>print_config_fallback</code>, the
+variable <code>contents</code> is for illustrative purposes and can be avoided.</p>
+<h2 id="further-reading"><a class="toclink" href="#further-reading">Further reading</a></h2>
 <ul>
 <li><a href="https://www.python.org/dev/peps/pep-0308/">PEP 308</a> which introduced conditional expressions to Python around
   18 years ago.</li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#dict.get"><code>dict.get</code> method</a></li>
+<li><a href="https://docs.python.org/3.8/library/os.html?#os.getenv"><code>os.getenv</code> function</a></li>
 </ul>
 </div>
 <!-- /content -->
@@ -250,7 +330,7 @@ complicated in getting the syntax right.</p>
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            2
+            3
         minutes
               read
           </time></p>

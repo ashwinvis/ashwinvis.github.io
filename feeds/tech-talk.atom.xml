@@ -26,7 +26,7 @@ A good example of this is the &lt;strong&gt;conditional expression&lt;/strong&gt
 &lt;p&gt;If you are new to this, I highly recommend that you use this. It would
 reduce the indentation in nested if-else statements and need for intermediate
 variables in more real-life codes.&lt;/p&gt;
-&lt;h2&gt;In other languages&lt;/h2&gt;
+&lt;h2 id="in-other-languages"&gt;&lt;a class="toclink" href="#in-other-languages"&gt;In other languages&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:&lt;/p&gt;
 &lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -41,7 +41,7 @@ syntax is a bit more terse. It looks like this with ECMAScript:&lt;/p&gt;
 &lt;p&gt;An advantage is that the syntax is more condensed; but as a downside, one
 needs to remember which side of the colon &lt;code&gt;:&lt;/code&gt; assumes the value when the
 condition is &lt;code&gt;True&lt;/code&gt; and &lt;em&gt;vice versa&lt;/em&gt;.&lt;/p&gt;
-&lt;h2&gt;C-style ternary operators using logical operators&lt;/h2&gt;
+&lt;h2 id="c-style-ternary-operators-using-logical-operators"&gt;&lt;a class="toclink" href="#c-style-ternary-operators-using-logical-operators"&gt;C-style ternary operators using logical operators&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I found a trick to create similar obfuscated ternary operators in Python. Here it goes:&lt;/p&gt;
 &lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd_ugly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -77,10 +77,90 @@ complicated in getting the syntax right.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2&gt;Further reading&lt;/h2&gt;
+&lt;h2 id="bonus-when-to-avoid-if-else-statements-in-python"&gt;&lt;a class="toclink" href="#bonus-when-to-avoid-if-else-statements-in-python"&gt;Bonus: when to avoid if-else statements in Python&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We saw a good example of when to use conditional expressions in Python. Now we
+go on a tangent to look at some features baked into Python which further allow
+the need for if-else statements.&lt;/p&gt;
+&lt;h3 id="dictionary-lookup"&gt;&lt;a class="toclink" href="#dictionary-lookup"&gt;Dictionary lookup&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Instead of:&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# assume the variable `color_of_fruits` is a dictionary&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;red&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;you could use the oneliner:&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Environment variables of the system are accessed via a special dictionary-like
+object &lt;code&gt;os.environ&lt;/code&gt;. However, for environment variables, there is a handy standard
+library function &lt;code&gt;os.getenv&lt;/code&gt; which is useful. Instead of:&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;CC&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;c_compiler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CC&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;c_compiler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;gcc&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;use:&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+
+&lt;span class="n"&gt;c_compiler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CC&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;gcc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For both the &lt;a href="https://docs.python.org/3/library/stdtypes.html#dict.get"&gt;&lt;code&gt;dict.get&lt;/code&gt;&lt;/a&gt; method and &lt;a href="https://docs.python.org/3.8/library/os.html?#os.getenv"&gt;&lt;code&gt;os.getenv&lt;/code&gt;&lt;/a&gt; function, if
+you leave out the default value, you get &lt;code&gt;None&lt;/code&gt; and no &lt;code&gt;KeyError&lt;/code&gt; would
+be raised.&lt;/p&gt;
+&lt;h3 id="fall-back-values"&gt;&lt;a class="toclink" href="#fall-back-values"&gt;Fall-back values&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Whenever you read files, download text from the internet it is not a 100%
+guarantee that the result would be what you expect. In that case you might need
+a fall-back value to work with. Take this naive case of reading and printing a
+file &lt;code&gt;config.cfg&lt;/code&gt; which is empty:&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;config.cfg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;File is empty&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From the previous discussion, we see that we can simplify it using
+conditional expressions as:&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config_conditional&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;config.cfg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;File is empty&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;However in this case a cleaner option would be to use the short-circuiting
+property of the &lt;code&gt;or&lt;/code&gt; operator to assign a fall-back value.&lt;/p&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config_fallback&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;config.cfg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;File is empty&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note that in Python world, evaluating &lt;code&gt;False&lt;/code&gt;, &lt;code&gt;""&lt;/code&gt;, &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;None&lt;/code&gt; as a part of
+a boolean expression would mean the same.  Also in &lt;code&gt;print_config_fallback&lt;/code&gt;, the
+variable &lt;code&gt;contents&lt;/code&gt; is for illustrative purposes and can be avoided.&lt;/p&gt;
+&lt;h2 id="further-reading"&gt;&lt;a class="toclink" href="#further-reading"&gt;Further reading&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.python.org/dev/peps/pep-0308/"&gt;PEP 308&lt;/a&gt; which introduced conditional expressions to Python around
   18 years ago.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/stdtypes.html#dict.get"&gt;&lt;code&gt;dict.get&lt;/code&gt; method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3.8/library/os.html?#os.getenv"&gt;&lt;code&gt;os.getenv&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Tech Talk"></category><category term="software"></category><category term="python"></category><category term="bash"></category><category term="c"></category><category term="cpp"></category><category term="java"></category><category term="ecmascript"></category></entry><entry><title>Fixing 434 links in 111 files for pyenv</title><link href="https://ashwinvis.github.io/fixing-links-for-pyenv.html" rel="alternate"></link><published>2020-08-20T16:50:51+02:00</published><updated>2020-08-20T16:50:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-08-20:/fixing-links-for-pyenv.html</id><summary type="html">&lt;p&gt;A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The project pyenv has several small bash scripts, one for each version, both
 binary and source builds. This totalled to a staggering 111 files with 434
@@ -197,7 +277,7 @@ Inspector&lt;/a&gt; and
 "installable" CSS stylesheets myself, I cannot resist the urge to fix websites
 with a uneasy appearance. I try to fix it with a few lines of CSS and share it
 with others.&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107"&gt;GitHub Retro&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="github-retro"&gt;&lt;a class="toclink" href="#github-retro"&gt;&lt;a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107"&gt;GitHub Retro&lt;/a&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;GitHub quickly rolled out a new wider interface, which could be done a bit better,
 IMHO.&lt;/p&gt;
 &lt;table&gt;
@@ -215,7 +295,7 @@ IMHO.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;a href="https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107"&gt;Get it here&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://github.com/ashwinvis/mastodon-relax"&gt;Mastodon Relax&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="mastodon-relax"&gt;&lt;a class="toclink" href="#mastodon-relax"&gt;&lt;a href="https://github.com/ashwinvis/mastodon-relax"&gt;Mastodon Relax&lt;/a&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;This is more advanced as it uses &lt;a href="https://github.com/FirefoxBar/xStyle/wiki/Style-format#use-advanced-options-in-styles"&gt;configurable
 parameters&lt;/a&gt;.
 The CSS rules are also less hacky, thanks to identifiable CSS classes in
@@ -500,7 +580,7 @@ comparison with the existing market these phones have have medium
 specifications. However I put the above two criteria over all shiny details
 that people tend to care more about like looks, performance and camera. I have
 a stand-alone camera and a gaming device, so why should I bother?&lt;/p&gt;
-&lt;h2&gt;Why and why not PinePhone&lt;/h2&gt;
+&lt;h2 id="why-and-why-not-pinephone"&gt;&lt;a class="toclink" href="#why-and-why-not-pinephone"&gt;Why and why not PinePhone&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The advantages of PinePhone is it already "works" with existing Linux projects
 such as:&lt;/p&gt;
 &lt;ul&gt;
@@ -512,7 +592,7 @@ ago&lt;/a&gt; and when I
 checked the availability of spare parts, the most essential one which is a
 &lt;a href="https://store.pine64.org/?product=pinephone-lithium-battery-only-ship-in-us-2"&gt;battery&lt;/a&gt;
 only ships in US and was out of stock. Also there is hardly any warranty.&lt;/p&gt;
-&lt;h2&gt;But Fairphone...?&lt;/h2&gt;
+&lt;h2 id="but-fairphone"&gt;&lt;a class="toclink" href="#but-fairphone"&gt;But Fairphone...?&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;At the cost it is selling it is as expensive as so-called "flagship" phones.
 The cost covers:&lt;/p&gt;
 &lt;ul&gt;
@@ -619,7 +699,7 @@ part of this team.&lt;/p&gt;
 &lt;p&gt;This allows one to Publish Own and Syndicate Somewhere Else (POSSE). I have
 logged in my progress in the &lt;a href="https://indieweb.org/User:Ashwin.info.tm"&gt;Indieweb
 wiki&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Update: POSSE works&lt;/h2&gt;
+&lt;h2 id="update-posse-works"&gt;&lt;a class="toclink" href="#update-posse-works"&gt;Update: POSSE works&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I managed to publish this post, semi-automatically by sending Bridgy a
 webmention as follows:&lt;/p&gt;
 &lt;ul&gt;
@@ -676,12 +756,12 @@ content-length: &lt;span class="m"&gt;3731&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;End result&lt;/h3&gt;
+&lt;h3 id="end-result"&gt;&lt;a class="toclink" href="#end-result"&gt;End result&lt;/a&gt;&lt;/h3&gt;
 &lt;iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"&gt;&lt;/iframe&gt;
 
 &lt;script src="https://mastodon.acc.sunet.se/embed.js" async="async"&gt;&lt;/script&gt;
 
-&lt;h3&gt;Next steps&lt;/h3&gt;
+&lt;h3 id="next-steps"&gt;&lt;a class="toclink" href="#next-steps"&gt;Next steps&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;To automate this process into CI?&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Cloud computing for research</title><link href="https://ashwinvis.github.io/cloud-computing.html" rel="alternate"></link><published>2020-03-20T11:29:00+01:00</published><updated>2020-03-25T22:29:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2020-03-20:/cloud-computing.html</id><summary type="html">&lt;p&gt;A journal of how I setup BOINC and &lt;a href="mailto:Folding&amp;#64;home"&gt;Folding&amp;#64;home&lt;/a&gt; on my laptop running Arch Linux.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;There is an ongoing effort in all disciplines to find solutions the Covid-19
 pandemic. Be it policy (social distancing, call for people to work from home),
@@ -1400,12 +1480,12 @@ Do check out the slides for my presentation:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cicero.xyz/v3/remark/0.14.0/github.com/ashwinvis/talks/master/pyconse2019/talk.md/#1"&gt;Make your Python code fly at transonic speeds!&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Don't miss the links to Binder demo and further reading at the final slide.&lt;/p&gt;
-&lt;h2&gt;Update&lt;/h2&gt;
+&lt;h2 id="update"&gt;&lt;a class="toclink" href="#update"&gt;Update&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The video of the talk is out! Watch it:&lt;/p&gt;
 &lt;iframe id='ivplayer' type='text/html' width='640' height='360' src='https://invidio.us/embed/donHrISOO-w' frameborder='0'&gt;&lt;/iframe&gt;
 
 &lt;p&gt;Alt: &lt;a href="https://www.youtube.com/watch?v=donHrISOO-w"&gt;Youtube link&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Rewind of my experience&lt;/h2&gt;
+&lt;h2 id="rewind-of-my-experience"&gt;&lt;a class="toclink" href="#rewind-of-my-experience"&gt;Rewind of my experience&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I got to meet a lot of great like-minded people in those two days! It is no
 easy task to list all whom I met and convey my regards. Therefore, I list the
 videos and slides which might be of interest to you as a reader:&lt;/p&gt;
@@ -1436,7 +1516,7 @@ large compared to last year. It was quite insightful to learn from the
 &lt;a href="https://www.linkedin.com/in/anna-kazakova-lindegren-154b63b/"&gt;chair&lt;/a&gt; that organizing the conference is a
 tightrope walk with a good fraction of ticket sales occurring towards the last
 week and booking the venue has numerous constraints! Hats off!&lt;/p&gt;
-&lt;h2&gt;Epilogue&lt;/h2&gt;
+&lt;h2 id="epilogue"&gt;&lt;a class="toclink" href="#epilogue"&gt;Epilogue&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;As for my talk, I believe I did my part. Judging from my interaction, it
 seemed that a lot of folks were oblivious to fact that &lt;code&gt;numpy&lt;/code&gt; is not so fast
 for CPU-bound problems. I received some interesting questions as well:&lt;/p&gt;
@@ -1475,7 +1555,7 @@ from any runtime Python dependencies (using &lt;code&gt;-e&lt;/code&gt; argument
 capsules&lt;/a&gt;
 which is compatible with
 &lt;a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.LowLevelCallable.html"&gt;&lt;code&gt;scipy.LowLevelCallable&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;The journey continues ...&lt;/h2&gt;
+&lt;h2 id="the-journey-continues"&gt;&lt;a class="toclink" href="#the-journey-continues"&gt;The journey continues ...&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;As developers of project &lt;code&gt;transonic&lt;/code&gt;, we are hoping that you would try out the
 project and adopt it in your personal scripts, notebooks and possibly in
 packages that you develop. If you found &lt;code&gt;transonic&lt;/code&gt; useful, help us, encourage
@@ -1718,7 +1798,7 @@ all this news and "shocking" revelations that we hear almost every day in the
 news, many tend to stick around and use them, including me&lt;sup id="fnref:contra"&gt;&lt;a class="footnote-ref" href="#fn:contra"&gt;2&lt;/a&gt;&lt;/sup&gt;.  There are
 solutions however. And it gets better - what I described below require almost
 zero investment (except for your attention and time, of course).&lt;/p&gt;
-&lt;h3&gt;Solutions that do not require deep technical knowledge&lt;/h3&gt;
+&lt;h3 id="solutions-that-do-not-require-deep-technical-knowledge"&gt;&lt;a class="toclink" href="#solutions-that-do-not-require-deep-technical-knowledge"&gt;Solutions that do not require deep technical knowledge&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Jump ship to the new wave of &lt;a href="https://fediverse.party"&gt;decentralized social
    networks, which are collectively called
@@ -1728,12 +1808,12 @@ zero investment (except for your attention and time, of course).&lt;/p&gt;
 &lt;li&gt;Prefer end-to-end encrypted chat applications which cannot be
    compromised&lt;sup id="fnref:chat"&gt;&lt;a class="footnote-ref" href="#fn:chat"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Solutions that need you to be a power user&lt;/h3&gt;
+&lt;h3 id="solutions-that-need-you-to-be-a-power-user"&gt;&lt;a class="toclink" href="#solutions-that-need-you-to-be-a-power-user"&gt;Solutions that need you to be a power user&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;If you are tech-savvy enough, you can start using OpenPGP with email using
 &lt;a href="https://emailselfdefense.fsf.org/en/"&gt;Enigmail&lt;/a&gt;. And for services you can
 also consider self-hosting it&lt;sup id="fnref:host"&gt;&lt;a class="footnote-ref" href="#fn:host"&gt;7&lt;/a&gt;&lt;/sup&gt; in low-power devices such as a Raspberry
 Pi. You can even get a URL to point to your server at absolutely no charge&lt;sup id="fnref:dns"&gt;&lt;a class="footnote-ref" href="#fn:dns"&gt;8&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h3&gt;REPL: Read, evaluate, print and loop&lt;/h3&gt;
+&lt;h3 id="repl-read-evaluate-print-and-loop"&gt;&lt;a class="toclink" href="#repl-read-evaluate-print-and-loop"&gt;REPL: Read, evaluate, print and loop&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"&gt;REPL&lt;/a&gt; is a
 jargon for consoles of all sorts: bash, python etc. In this case I apply this
 into our social media usage. Read what others post, evaluate your thoughts,
@@ -1758,7 +1838,7 @@ also have this idea:&lt;/p&gt;
 
 &lt;script src="https://mastodon.acc.sunet.se/embed.js" async="async"&gt;&lt;/script&gt;
 
-&lt;h4&gt;Appendix 1: Mass tweet deletion&lt;/h4&gt;
+&lt;h4 id="appendix-1-mass-tweet-deletion"&gt;&lt;a class="toclink" href="#appendix-1-mass-tweet-deletion"&gt;Appendix 1: Mass tweet deletion&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;So the commands described in the blog post&lt;sup id="fnref2:tweets"&gt;&lt;a class="footnote-ref" href="#fn:tweets"&gt;10&lt;/a&gt;&lt;/sup&gt; seem to work great. Here
 is what I did following the instructions:&lt;/p&gt;
 &lt;ol&gt;
@@ -1822,7 +1902,7 @@ tail -f dislike.log
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;Appendix 2: Unstar GitHub repositories&lt;/h4&gt;
+&lt;h4 id="appendix-2-unstar-github-repositories"&gt;&lt;a class="toclink" href="#appendix-2-unstar-github-repositories"&gt;Appendix 2: Unstar GitHub repositories&lt;/a&gt;&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;Used &lt;a href="https://kirtan403.github.io/bookmark-github-stars/"&gt;bookmark-github-stars&lt;/a&gt;
    to export all my GitHub stars as html and imported into
