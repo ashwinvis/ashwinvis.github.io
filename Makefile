@@ -106,4 +106,8 @@ develop: devserver
 	sleep 3
 	$(PY) -m webbrowser -t localhost:8000
 
+requirements.txt: requirements.in
+	pip-compile -U
+	sed -i 's|file:///home/avmo/www/ashwinvis.github.io|.|g' $@
+
 .PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload github
