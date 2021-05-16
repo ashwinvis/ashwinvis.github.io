@@ -10,8 +10,8 @@ Tags: software, python, bash, c, cpp, java, ecmascript
 ---
 
 Python has made a concious choice of promoting readability through its syntax.
-A good example of this is the ternary if-else operator in Python. What it means
-is instead of:
+A good example of this is the **conditional expression** or **ternary if-else
+"operator"** in Python. What it means is instead of:
 
 ```py
 def even_or_odd(x):
@@ -25,7 +25,7 @@ def even_or_odd(x):
     return result
 ```
 
-You can write in a condensed yet easy to decipher:
+you can write in a condensed yet easy to decipher:
 
 ```python
 def even_or_odd(x):
@@ -35,7 +35,7 @@ def even_or_odd(x):
     return "even" if x % 2 == 0 else "odd"
 ```
 
-If you are new to this, I highly recommend that you use this, since it would
+If you are new to this, I highly recommend that you use this. It would
 reduce the indentation in nested if-else statements and need for intermediate
 variables in more real-life codes.
 
@@ -53,7 +53,7 @@ function even_or_odd(x) {
 }
 ```
 
-An advantage is that the syntax is more condensed; but as the downside, one
+An advantage is that the syntax is more condensed; but as a downside, one
 needs to remember which side of the colon `:` assumes the value when the
 condition is `True` and _vice versa_.
 
@@ -100,7 +100,7 @@ mkdir -p build
 
 ## Further reading
 
-- [PEP 308][308] which introduced conditional expressions to Python more around
+- [PEP 308][308] which introduced conditional expressions to Python around
   18 years ago.
 
 [bool-py]: https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not
