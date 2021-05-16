@@ -41,7 +41,7 @@ variables in more real-life codes.
 
 ## In other languages
 
-In C, C++, Java, ECMAScript (a.k.a JavaScript) and possible more languages the
+In C/C++, Java, ECMAScript (a.k.a JavaScript) and possible more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:
 
 ```javascript
@@ -89,8 +89,9 @@ even_or_odd() {
 ```
 
 While writing shell scripts such "ternary operators" are an idiom, because Bash
-commands returns a non-zero value in case of failure. So this would be
-preferred over use of if-else constructs in Bash.
+commands returns a non-zero value in case of failure. This would be
+preferred over use of if-else constructs in Bash, which I are complicated
+in getting the syntax right.
 
 ```sh
 mkdir -p build
