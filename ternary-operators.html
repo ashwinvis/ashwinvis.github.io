@@ -158,7 +158,7 @@ A good example of this is the <strong>conditional expression</strong> or <strong
 "operator"</strong> in Python. What it means is instead of:</p>
 <div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;even&quot;</span>
     <span class="k">else</span><span class="p">:</span>
@@ -171,7 +171,7 @@ A good example of this is the <strong>conditional expression</strong> or <strong
 <p>you can write in a condensed yet easy to decipher:</p>
 <div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="s2">&quot;even&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;odd&quot;</span>
 </pre></div>
@@ -185,7 +185,7 @@ variables in more real-life codes.</p>
 syntax is a bit more terse. It looks like this with ECMAScript:</p>
 <div class="m-code"><pre><span></span><span class="kd">function</span> <span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">throw</span> <span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span>
+      <span class="k">throw</span> <span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span>
   <span class="p">}</span>
   <span class="k">return</span> <span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">===</span> <span class="mf">0</span> <span class="o">?</span> <span class="s2">&quot;even&quot;</span> <span class="o">:</span> <span class="s2">&quot;odd&quot;</span><span class="p">)</span>
 <span class="p">}</span>
@@ -199,7 +199,7 @@ condition is <code>True</code> and <em>vice versa</em>.</p>
 <p>I found a trick to create similar obfuscated ternary operators in Python. Here it goes:</p>
 <div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;even&quot;</span> <span class="ow">or</span> <span class="s2">&quot;odd&quot;</span>
 </pre></div>
@@ -213,7 +213,7 @@ short-circuits</a>.</p>
   <span class="nb">local</span> <span class="nv">x</span><span class="o">=</span><span class="nv">$1</span>
 
   <span class="k">if</span> <span class="o">[[</span> x -le <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-      <span class="nb">echo</span> <span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span>
+      <span class="nb">echo</span> <span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span>
       <span class="k">return</span> <span class="m">1</span>
   <span class="k">fi</span>
 
