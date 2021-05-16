@@ -1,4 +1,6 @@
-:title: Intensely edgy cat with FluidFFT
+Intensely edgy cat with FluidFFT
+################################
+
 :authors: Ashwin Vishnu
 :date: 2018-08-16
 :status: published

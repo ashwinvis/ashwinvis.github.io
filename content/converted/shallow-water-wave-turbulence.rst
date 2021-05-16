@@ -1,4 +1,6 @@
-:title: New article: Shallow water wave turbulence
+New article: Shallow water wave turbulence
+##########################################
+
 :authors: Ashwin Vishnu
 :date: 2019-07-17
 :status: published

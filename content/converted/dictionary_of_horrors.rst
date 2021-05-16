@@ -1,4 +1,6 @@
-:title: A dictionary of horrors
+A dictionary of horrors
+#######################
+
 :authors: Ashwin Vishnu
 :date: 2019-01-31
 :status: published
