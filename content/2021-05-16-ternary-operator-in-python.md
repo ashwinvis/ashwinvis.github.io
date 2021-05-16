@@ -41,7 +41,7 @@ variables in more real-life codes.
 
 ## In other languages
 
-In C/C++, Java, ECMAScript (a.k.a JavaScript) and possible more languages the
+In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:
 
 ```javascript
@@ -53,9 +53,9 @@ function even_or_odd(x) {
 }
 ```
 
-An advantage is the syntax is a more condensed, but on the downside, one needs
-to remember which side of the colon `:` is the value when the condition is
-`True` and _vice versa_.
+An advantage is that the syntax is more condensed; but as the downside, one
+needs to remember which side of the colon `:` assumes the value when the
+condition is `True` and _vice versa_.
 
 ## C-style ternary operators using logical operators
 
@@ -69,8 +69,8 @@ def even_or_odd_ugly(x):
     return x % 2 == 0 and "even" or "odd"
 ```
 
-It looks nearly like the C-style ternary operator, but not at all readable. It
-works because [how the logical boolean operators `and` and `or`
+It looks nearly like the C-style ternary operator, but is not at all readable.
+It works because [how the logical boolean operators `and`, `or`
 short-circuits][bool-py].
 
 In Bash-like shells such expressions can be used to achieve the same effect:
@@ -90,8 +90,8 @@ even_or_odd() {
 
 While writing shell scripts such "ternary operators" are an idiom, because Bash
 commands returns a non-zero value in case of failure. This would be
-preferred over use of if-else constructs in Bash, which I are complicated
-in getting the syntax right.
+preferred over use of if-else constructs in Bash which, I think, are
+complicated in getting the syntax right.
 
 ```sh
 mkdir -p build
