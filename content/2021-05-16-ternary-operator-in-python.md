@@ -2,8 +2,8 @@
 Title: Ternary operators
 Author: Ashwin Vishnu Mohanan
 Date: 2021-05-16T12:41:13.443530
-Slug: ternary-operator-in-python
-Status: draft
+Slug: ternary-operators
+Status: published
 Summary: Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages
 Category: Tech Talk
 Tags: software, python, bash, c, cpp, java, ecmascript
@@ -13,7 +13,7 @@ Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the ternary if-else operator in Python. What it means
 is instead of:
 
-```python
+```py
 def even_or_odd(x):
     if x <= 0:
         raise ValueError("Even or odd is defined for natural numbers only!")
