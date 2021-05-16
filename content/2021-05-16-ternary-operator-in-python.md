@@ -16,7 +16,7 @@ A good example of this is the **conditional expression** or **ternary if-else
 ```py
 def even_or_odd(x):
     if x <= 0:
-        raise ValueError("Even or odd is defined for natural numbers only!")
+        raise ValueError("Even or odd is defined for positive integers only!")
     elif x % 2 == 0:
         result = "even"
     else:
@@ -30,7 +30,7 @@ you can write in a condensed yet easy to decipher:
 ```python
 def even_or_odd(x):
     if x <= 0:
-        raise ValueError("Even or odd is defined for natural numbers only!")
+        raise ValueError("Even or odd is defined for positive integers only!")
 
     return "even" if x % 2 == 0 else "odd"
 ```
@@ -47,7 +47,7 @@ syntax is a bit more terse. It looks like this with ECMAScript:
 ```javascript
 function even_or_odd(x) {
   if (x <= 0) {
-      throw "Even or odd is defined for natural numbers only!"
+      throw "Even or odd is defined for positive integers only!"
   }
   return (x % 2 === 0 ? "even" : "odd")
 }
@@ -64,7 +64,7 @@ I found a trick to create similar obfuscated ternary operators in Python. Here i
 ```python
 def even_or_odd_ugly(x):
     if x <= 0:
-        raise ValueError("Even or odd is defined for natural numbers only!")
+        raise ValueError("Even or odd is defined for positive integers only!")
 
     return x % 2 == 0 and "even" or "odd"
 ```
@@ -80,7 +80,7 @@ even_or_odd() {
   local x=$1
 
   if [[ x -le 0 ]]; then
-      echo "Even or odd is defined for natural numbers only!"
+      echo "Even or odd is defined for positive integers only!"
       return 1
   fi
 
