@@ -156,7 +156,7 @@
 <p>Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the ternary if-else operator in Python. What it means
 is instead of:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -169,7 +169,7 @@ is instead of:</p>
 
 
 <p>You can write in a condensed yet easy to decipher:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
 
@@ -183,7 +183,7 @@ variables in more real-life codes.</p>
 <h2>In other languages</h2>
 <p>In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:</p>
-<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+<div class="m-code"><pre><span></span><span class="kd">function</span> <span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">throw</span> <span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span>
   <span class="p">}</span>
@@ -197,7 +197,7 @@ needs to remember which side of the colon <code>:</code> assumes the value when 
 condition is <code>True</code> and <em>vice versa</em>.</p>
 <h2>C-style ternary operators using logical operators</h2>
 <p>I found a trick to create similar obfuscated ternary operators in Python. Here it goes:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
 
@@ -209,7 +209,7 @@ condition is <code>True</code> and <em>vice versa</em>.</p>
 It works because <a href="https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not">how the logical boolean operators <code>and</code>, <code>or</code>
 short-circuits</a>.</p>
 <p>In Bash-like shells such expressions can be used to achieve the same effect:</p>
-<div class="highlight"><pre><span></span>even_or_odd<span class="o">()</span> <span class="o">{</span>
+<div class="m-code"><pre><span></span>even_or_odd<span class="o">()</span> <span class="o">{</span>
   <span class="nb">local</span> <span class="nv">x</span><span class="o">=</span><span class="nv">$1</span>
 
   <span class="k">if</span> <span class="o">[[</span> x -le <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
@@ -226,7 +226,7 @@ short-circuits</a>.</p>
 commands returns a non-zero value in case of failure. This would be
 preferred over use of if-else constructs in Bash which, I think, are
 complicated in getting the syntax right.</p>
-<div class="highlight"><pre><span></span>mkdir -p build
+<div class="m-code"><pre><span></span>mkdir -p build
 ./build.sh <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Build successful!&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Build failed! Cleaning up ...&quot;</span> <span class="o">&amp;&amp;</span> rm -r build
 </pre></div>
 
