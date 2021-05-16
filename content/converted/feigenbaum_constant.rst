@@ -1,4 +1,6 @@
-:title: Feigenbaum constant
+Feigenbaum constant
+###################
+
 :authors: Ashwin Vishnu
 :date: 2019-07-24
 :status: published

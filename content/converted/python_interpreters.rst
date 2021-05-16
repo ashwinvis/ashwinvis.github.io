@@ -1,4 +1,6 @@
-:title: Diversity amongst Python interpreters
+Diversity amongst Python interpreters
+#####################################
+
 :authors: Ashwin Vishnu
 :date: 2019-08-06
 :status: published

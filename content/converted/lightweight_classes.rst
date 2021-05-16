@@ -1,4 +1,6 @@
-:title: Lightweight classes for scientific computing using “cached_property”
+Lightweight classes for scientific computing using “cached_property”
+####################################################################
+
 :authors: Ashwin Vishnu
 :date: 2018-12-25
 :status: published
