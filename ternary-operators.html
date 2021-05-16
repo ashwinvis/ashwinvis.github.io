@@ -2,19 +2,23 @@
 <html lang="en" prefix="og: http://ogp.me/ns#" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <title>Posts tagged open-source | Ashwin Vishnu&#39;s Website</title>
+  <title>Ternary operators | Ashwin Vishnu&#39;s Website</title>
   <link rel="stylesheet" id="m-css" href="https://ashwinvis.github.io/static/m-unified.css" />
   <link rel="stylesheet" id="m-css" href="https://ashwinvis.github.io/static/custom.compiled.css" />
   <link rel="icon" href="https://ashwinvis.github.io/images/logo_ashwin.png" type="image/png" />
+  <link rel="canonical" href="https://ashwinvis.github.io/ternary-operators.html" />
   <link href="https://ashwinvis.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website" />
+  <link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" type="application/atom+xml" rel="alternate" title="Ashwin Vishnu&#39;s Website | Tech Talk" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
   <meta property="og:site_name" content="Ashwin Vishnu&#39;s Website" />
-  <meta property="og:title" content="open-source" />
-  <meta name="twitter:title" content="open-source" />
-  <meta property="og:url" content="https://ashwinvis.github.io/tag/open-source.html" />
+  <meta property="og:title" content="Ternary operators" />
+  <meta name="twitter:title" content="Ternary operators" />
+  <meta property="og:url" content="https://ashwinvis.github.io/ternary-operators.html" />
+  <meta property="og:description" content="Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages" />
+  <meta name="twitter:description" content="Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <!-- Mastodon Link verification -->
   <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
 
@@ -131,148 +135,160 @@
 <main>
 <div class="m-container">
   <div class="m-row">
-    <div class="m-col-m-10 m-col-l-8">
-      <div class="m-info m-note">
-        Showing only posts tagged <em>open-source</em>. <a href="https://ashwinvis.github.io/">Show all posts.</a>
+    <article class="h-entry m-col-m-10 m-nopadb m-col-l-8">
+      <header>
+        <h1><a href="https://ashwinvis.github.io/ternary-operators.html" rel="bookmark" class="u-url" title="Permalink to Ternary operators">
+          <time class="m-date" datetime="2021-05-16T12:41:13.443530+02:00">
+            May <span class="m-date-day">16</span> 2021
+          </time>
+          <div class="p-name">
+            Ternary operators
+          </div>
+        </a></h1>
+        <div class="p-summary">
+        <p>Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages</p>
+        </div>
+      </header>
+      <div class="m-clearfix-l"></div>
+<a href="https://brid.gy/publish/mastodon"></a>
+<!-- content -->
+<div class="e-content">
+<p>Python has made a concious choice of promoting readability through its syntax.
+A good example of this is the ternary if-else operator in Python. What it means
+is instead of:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;even&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;odd&quot;</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+
+<p>You can write in a condensed yet easy to decipher:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;even&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;odd&quot;</span>
+</pre></div>
+
+
+<p>If you are new to this, I highly recommend that you use this, since it would
+reduce the indentation in nested if-else statements and need for intermediate
+variables in more real-life codes.</p>
+<h2>In other languages</h2>
+<p>In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
+syntax is a bit more terse. It looks like this with ECMAScript:</p>
+<div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">===</span> <span class="mf">0</span> <span class="o">?</span> <span class="s2">&quot;even&quot;</span> <span class="o">:</span> <span class="s2">&quot;odd&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>An advantage is that the syntax is more condensed; but as the downside, one
+needs to remember which side of the colon <code>:</code> assumes the value when the
+condition is <code>True</code> and <em>vice versa</em>.</p>
+<h2>C-style ternary operators using logical operators</h2>
+<p>I found a trick to create similar obfuscated ternary operators in Python. Here it goes:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;even&quot;</span> <span class="ow">or</span> <span class="s2">&quot;odd&quot;</span>
+</pre></div>
+
+
+<p>It looks nearly like the C-style ternary operator, but is not at all readable.
+It works because <a href="https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not">how the logical boolean operators <code>and</code>, <code>or</code>
+short-circuits</a>.</p>
+<p>In Bash-like shells such expressions can be used to achieve the same effect:</p>
+<div class="highlight"><pre><span></span>even_or_odd<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local</span> <span class="nv">x</span><span class="o">=</span><span class="nv">$1</span>
+
+  <span class="k">if</span> <span class="o">[[</span> x -le <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+      <span class="nb">echo</span> <span class="s2">&quot;Even or odd is defined for natural numbers only!&quot;</span>
+      <span class="k">return</span> <span class="m">1</span>
+  <span class="k">fi</span>
+
+  <span class="o">[[</span> <span class="k">$((</span>x <span class="o">%</span> <span class="m">2</span><span class="k">))</span> <span class="o">==</span> <span class="m">0</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;even&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;odd&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>While writing shell scripts such "ternary operators" are an idiom, because Bash
+commands returns a non-zero value in case of failure. This would be
+preferred over use of if-else constructs in Bash which, I think, are
+complicated in getting the syntax right.</p>
+<div class="highlight"><pre><span></span>mkdir -p build
+./build.sh <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Build successful!&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Build failed! Cleaning up ...&quot;</span> <span class="o">&amp;&amp;</span> rm -r build
+</pre></div>
+
+
+<h2>Further reading</h2>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0308/">PEP 308</a> which introduced conditional expressions to Python more around
+  18 years ago.</li>
+</ul>
+</div>
+<!-- /content -->
+      <div class="m-block m-success m-badge">
+        <img src="https://ashwinvis.github.io/images/dp_ashwin_2016.jpg" alt="Ashwin Vishnu Mohanan" height="100" />
+        <h3>About the author</h3>
+        <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
       </div>
-      <article class="m-article-list">
-        <header>
-          <h1><a href="https://ashwinvis.github.io/fixing-links-for-pyenv.html" rel="bookmark" class="u-url" title="Permalink to Fixing 434 links in 111 files for pyenv">
-            <time class="m-date" datetime="2020-08-20T16:50:51.695032+02:00">
-              Aug <span class="m-date-day">20</span> 2020
-            </time>
-            <div class="p-name">
-              Fixing 434 links in 111 files for pyenv
+      <footer>
+        <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2021-05-16T12:41:13.443530+02:00" class="dt-published">Sun 16 May 2021</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/python.html">python</a>, <a href="https://ashwinvis.github.io/tag/bash.html">bash</a>, <a href="https://ashwinvis.github.io/tag/c.html">c</a>, <a href="https://ashwinvis.github.io/tag/cpp.html">cpp</a>, <a href="https://ashwinvis.github.io/tag/java.html">java</a>, <a href="https://ashwinvis.github.io/tag/ecmascript.html">ecmascript</a>.<time class="dt-read-mins">
+            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            2
+        minutes
+              read
+          </time></p>
+        <div class="webmentions">
+          <details><summary>Interactions</summary>
+            <p>Below you can find the interactions that this page has had using <a
+                href="http://indieweb.org/webmention">WebMention</a>.
+            </p>
+            <div class="manual-webmention">
+              <p>Have you written a <a
+                  href="https://indieweb.org/responses">response</a> to this post? Let
+                  me know the URL:
+                <form id="manual-webmention"
+                      action="https://webmention.io/ashwinvis.github.io/webmention"
+                  method="post"><input type="url" name="source">
+
+                  <input type="hidden" name="target" value="https://ashwinvis.github.io/ternary-operators.html">
+                  <input type="submit" name="submit" value="Send Webmention">
+                </form>
+              </p>
+              <p>Do you not have a website set up with WebMention capabilities? You
+                can:
+              <form method="get" action="https://quill.p3k.io/" target="_blank">
+                <input type="hidden" name="dontask" value="1">
+                <input type="hidden" name="me" value="https://commentpara.de/">
+                <input type="hidden" name="reply" value="https://ashwinvis.github.io/ternary-operators.html">
+                <input type="submit" value="Comment anonymously (via Comment Parade)">
+              </form>
+              </p>
             </div>
-          </a></h1>
-          <div class="p-summary">
-          <p>A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.</p>
+            <div id="webmentions">
+              <noscript>Due to laziness, this site uses client-side JavaScript to render the webmentions, rather than them being rendered server-side. If you do not wish to enable JavaScript, that's fair enough, but you won't be able to automagically see what Webmentions I've received - sorry!
+              </noscript>
           </div>
-        </header>
-        <footer>
-          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-08-20T16:50:51.695032+02:00" class="dt-published">Thu 20 August 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/python.html">python</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>.<time class="dt-read-mins">
-              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              3
-          minutes
-                read
-            </time></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article class="m-article-list">
-        <header>
-          <h1><a href="https://ashwinvis.github.io/hack-the-crisis.html" rel="bookmark" class="u-url" title="Permalink to Hack the Crisis: We Care!">
-            <time class="m-date" datetime="2020-04-05T20:38:02.657040+02:00">
-              Apr <span class="m-date-day">05</span> 2020
-            </time>
-            <div class="p-name">
-              Hack the Crisis: We Care!
-            </div>
-          </a></h1>
-          <div class="p-summary">
-          <p>How we created project <em>We Care!</em> in this COVID-19 themed hackathon</p>
-          </div>
-        </header>
-        <footer>
-          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu-mohanan.html">Ashwin Vishnu Mohanan</a> on <time datetime="2020-04-05T20:38:02.657040+02:00" class="dt-published">Sun 05 April 2020</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2020-04-06T08:01:00+02:00" class="dt-updated">Mon 06 April 2020</time></span> Tags: <a href="https://ashwinvis.github.io/tag/software.html">software</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>, <a href="https://ashwinvis.github.io/tag/covid-19.html">covid-19</a>.<time class="dt-read-mins">
-              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              3
-          minutes
-                read
-            </time></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article class="m-article-list">
-        <header>
-          <h1><a href="https://ashwinvis.github.io/licensing-software.html" rel="bookmark" class="u-url" title="Permalink to Licensing software to be permissive">
-            <time class="m-date" datetime="2019-12-21T00:00:00+01:00">
-              Dec <span class="m-date-day">21</span> 2019
-            </time>
-            <div class="p-name">
-              Licensing software to be permissive
-            </div>
-          </a></h1>
-          <div class="p-summary">
-          <p>Considerations while selecting a permissive license for your open-source project.</p>
-          </div>
-        </header>
-        <footer>
-          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-12-21T00:00:00+01:00" class="dt-published">Sat 21 December 2019</time> in <a class="p-category" href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a>. Tags: <a href="https://ashwinvis.github.io/tag/licensing.html">licensing</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>.<time class="dt-read-mins">
-              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              2
-          minutes
-                read
-            </time></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article class="m-article-list">
-        <header>
-          <h1><a href="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" rel="bookmark" class="u-url" title="Permalink to New article: Shallow water wave turbulence">
-            <time class="m-date" datetime="2019-07-17T00:00:00+02:00">
-              Jul <span class="m-date-day">17</span> 2019
-            </time>
-            <div class="p-name">
-              New article: Shallow water wave turbulence
-            </div>
-          </a></h1>
-          <div class="p-summary">
-          <p>Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.</p>
-          </div>
-        </header>
-        <footer>
-          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-07-17T00:00:00+02:00" class="dt-published">Wed 17 July 2019</time> in <a class="p-category" href="https://ashwinvis.github.io/category/blog.html">Blog</a>. Tags: <a href="https://ashwinvis.github.io/tag/fluid-mechanics.html">fluid-mechanics</a>, <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>, <a href="https://ashwinvis.github.io/tag/open-access.html">open-access</a>, <a href="https://ashwinvis.github.io/tag/research.html">research</a>, <a href="https://ashwinvis.github.io/tag/academia.html">academia</a>.<time class="dt-read-mins">
-              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              2
-          minutes
-                read
-            </time></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-      <article class="m-article-list">
-        <header>
-          <h1><a href="https://ashwinvis.github.io/why-open-source.html" rel="bookmark" class="u-url" title="Permalink to Why Open-Source?">
-            <time class="m-date" datetime="2018-01-06T00:00:00+01:00">
-              Jan <span class="m-date-day">06</span> 2018
-            </time>
-            <div class="p-name">
-              Why Open-Source?
-            </div>
-          </a></h1>
-        </header>
-        <footer>
-          <p>Posted by <a rel="author" href="https://ashwinvis.github.io/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2018-01-06T00:00:00+01:00" class="dt-published">Sat 06 January 2018</time> in <a class="p-category" href="https://ashwinvis.github.io/category/blog.html">Blog</a>. <span class="m-label m-success">updated <time datetime="2018-01-06T00:00:00+01:00" class="dt-updated">Sat 06 January 2018</time></span> Tags: <a href="https://ashwinvis.github.io/tag/open-source.html">open-source</a>, <a href="https://ashwinvis.github.io/tag/conference.html">conference</a>.<time class="dt-read-mins">
-              <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              3
-          minutes
-                read
-            </time></p>
-        </footer>
-        <div class="m-clearfix-l"></div>
-      </article>
-    </div>
+          </details>
+        </div>
+</footer>
+    </article>
     <nav class="m-navpanel m-col-m-2 m-push-l-2">
       <h3>Categories</h3>
       <ol class="m-block-bar-m">
