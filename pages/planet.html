@@ -153,35 +153,480 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="The 2021 Python Language Summit" target="_blank">
-      <time class="m-date" datetime="2021-05-23 19:32:22.201000-04:00">
+    <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit-cpython.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="The 2021 Python Language Summit: CPython Performance Improvements at Instagram" target="_blank">
+      <time class="m-date" datetime="2021-05-24 13:01:18.358000-04:00">
         May
         <span class="m-date-day">
-          23
+          24
         </span>
         2021
       </time>
       <div class="p-name">
-      The 2021 Python Language Summit
+      The 2021 Python Language Summit: CPython Performance Improvements at Instagram
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Every year, a small group of core developers from Python implementations such as CPython, PyPy, Jython, and more come together to share information, discuss problems, and seek consensus in order to help Python continue to flourish.</p></div><div><p>The Python Language Summit features short presentations followed by group discussions. The topics can relate to the language itself, the standard library, 
-the development process, documentation, packaging, and more! In 2021, the summit was held over two days by videoconference and was led by Mariatta Wijaya and Łukasz 
-Langa.</p></div><div><p>If you weren't able to attend the summit, then you can still stay up to date with what's happening in the world of Python by reading blog posts about all of the talks that were given. <span><span></span></span>Over the next few weeks, you'll be able to 
-dive into all of the news from the summit so …</p></div>
+  <div><p><a href="https://twitter.com/DinoViehland">Dino Viehland</a> gave a presentation at the <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit.html">2021 Python Language Summit</a> about improvements to CPython's performance at Instagram. </p><div><a href="https://1.bp.blogspot.com/-PmqU-CAYve4/YKWVoLBCxsI/AAAAAAAAAIM/VfUHJaL9kOU_Q1IV5rbDpnyqwqIOo16FACLcBGAsYHQ/s320/talk-4-author.png"><img alt="Dino Viehland" src="https://1.bp.blogspot.com/-PmqU-CAYve4/YKWVoLBCxsI/AAAAAAAAAIM/VfUHJaL9kOU_Q1IV5rbDpnyqwqIOo16FACLcBGAsYHQ/s16000/talk-4-author.png"></a></div><p><a href="https://github.com/facebookincubator/cinder">Cinder</a> is Instagram's internal performance-oriented production version of
+CPython 3.8, so all of the comparisons in this presentation dealt with Python 3.8. Cinder has a lot of performance optimizations, including
+bytecode inline caching, eager evaluation of coroutines, a method-at-a-time
+JIT, and an experimental bytecode compiler that uses type annotations to emit
+type-specialized bytecode that performs better in the JIT.</p>Successful Improvements<p>Instagram did a lot of work with asynchronous I/O. One big change was sending and receiving values without raising <span>StopIteration</span>. Raising all of those exceptions was a huge source of overhead. On simple benchmarks, this was 1.6 times faster, but it was also a 5% win in production. These changes have been upstreamed to Python 3.10 …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Joanna Jablonski (noreply@blogger.com)</b></span>
-  on <time datetime="2021-05-23 19:32:22.201000-04:00" class="dt-published"></time>
-  Sun 23 May 2021
+  on <time datetime="2021-05-24 13:01:18.358000-04:00" class="dt-published"></time>
+  Mon 24 May 2021
   in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/aday/2021/05/24/gnome-foundation-board-elections-2021/" rel="bookmark" class="u-url"
+       title="GNOME Foundation Board Elections 2021" target="_blank">
+      <time class="m-date" datetime="2021-05-24 15:45:16+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      GNOME Foundation Board Elections 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The election process for the GNOME Foundation Board of Directors is currently underway. Three positions are up for election this year, and Foundation members are able to nominate themselves until May 31st. I’ve been sitting on the board since 2015, and have been acting as chair for the past two years. In this post, I’m … <a href="https://blogs.gnome.org/aday/2021/05/24/gnome-foundation-board-elections-2021/">Continue reading <span>GNOME Foundation Board Elections 2021</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Allan</b></span>
+  on <time datetime="2021-05-24 15:45:16+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/652076334380613632/meteotsunamis-or-meteorological-tsunamis-are" rel="bookmark" class="u-url"
+       title="Meteotsunamis, 
+or meteorological tsunamis, are large waves..." target="_blank">
+      <time class="m-date" datetime="2021-05-24 10:00:52-05:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Meteotsunamis, 
+or meteorological tsunamis, are large waves...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://64.media.tumblr.com/5841a0c6669e3a0712bc817fd98ee795/8220dc49fa2274d4-3e/s500x750/70c53167f65c1d867064f6426289a13a6c4da3cb.png"> <img src="https://64.media.tumblr.com/e164c83b865ead8e6b7536e0b18a16dd/8220dc49fa2274d4-33/s500x750/aea03938c861d87743b8fdc484d57ee94803e0e9.png"> <img src="https://64.media.tumblr.com/81324624af72fb4e4da1ae1a54280838/8220dc49fa2274d4-eb/s500x750/c5fb73323b03eeb4ad9461d76898646da76c0893.jpg"> <p>
+<a href="https://fyfluiddynamics.com/?p=14908">Meteotsunamis, 
+or meteorological tsunamis, are large waves driven by weather rather 
+than seismic energy. Although they occur along shorelines throughout the
+ world, forecasters have very little infrastructure in place to predict 
+or detect them</a>.
+
+
+(Image credit: <a href="https://www.flickr.com/photos/noaa_glerl/albums/72157718520228535/with/51071660707/">D. Maglothin</a>; research credit: <a href="https://doi.org/10.1007/s11069-020-04195-2">E. Anderson and G. Mann</a>; via <a href="https://earther.gizmodo.com/new-research-exposes-weird-tsunamis-caused-by-gravity-w-1846609245">Gizmodo</a>)
+
+</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 10:00:52-05:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2021/05/predicting-meteotsunamis/" rel="bookmark" class="u-url"
+       title="Predicting Meteotsunamis" target="_blank">
+      <time class="m-date" datetime="2021-05-24 15:00:00+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Predicting Meteotsunamis
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Meteotsunamis, or meteorological tsunamis, are large waves driven by weather rather than seismic energy. Although they occur along shorelines throughout the world, forecasters have very little infrastructure in place to <a href="https://fyfluiddynamics.com/2021/05/predicting-meteotsunamis/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2021-05-24 15:00:00+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2021/05/24/blog-about-what-you-ve-struggled-with/" rel="bookmark" class="u-url"
+       title="Blog about what you've struggled with" target="_blank">
+      <time class="m-date" datetime="2021-05-24 13:59:07+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Blog about what you've struggled with
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I was talking to <a href="https://jemma.dev/">Jemma</a> recently about what stops people
+from blogging. One barrier that stood out to me was: it&rsquo;s hard to identify
+which things you know will be useful to other people!</p>
+
+<p>The process I use for a lot of my blog posts is:</p>
+
+<ol>
+<li>Struggle with something (usually computer-related)</li>
+<li>Eventually (days or months or years later), figure out how to solve some of
+the problems I had</li>
+<li>Write a blog post about what helped me</li>
+</ol>
+
+<p>I think this approach is effective because if I struggled with something,
+there&rsquo;s a pretty good chance that other people are struggling with it too, and
+what I learned is likely to be useful to at least some of them!</p>
+
+<p>Obviously this isn&rsquo;t the only approach to blogging, but it&rsquo;s my approach, so
+that&rsquo;s what I&rsquo;m going …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 13:59:07+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.kitware.com/improved-text-representation-in-paraview/" rel="bookmark" class="u-url"
+       title="Improved Text Representation in ParaView" target="_blank">
+      <time class="m-date" datetime="2021-05-24 12:30:55+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Improved Text Representation in ParaView
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>New properties for the TextSourceRepresentation have been added in ParaView enabling the customization of the background and the border of a text created, for example, ... <a href="https://blog.kitware.com/improved-text-representation-in-paraview/">Read More</a></p>
+<p>The post <a href="https://blog.kitware.com/improved-text-representation-in-paraview/">Improved Text Representation in ParaView</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Paul Lafoix</b></span>
+  on <time datetime="2021-05-24 12:30:55+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2021/05/2021-05-24-exntk" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-05-24 13:36:00+02:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Pro tip: Double check your commits for copy and paste mistakes. I learned my lessons today.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 13:36:00+02:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.kdab.com/cfp-qtdevcon/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Call for Papers – Qt Developer Conference" target="_blank">
+      <time class="m-date" datetime="2021-05-24 09:00:37+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Call for Papers – Qt Developer Conference
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>
+<p><img alt="" src="//www.kdab.com/wp-content/uploads/stories/logo-2.png">The Call for Papers for KDAB’s upcoming event, Qt DevCon, is now open. We are planning to make this our first in-person event after the shut-down. The event will take place September 28-30, featuring 1 training day and 2 days of technical talks from developers, for developers.</p>
+Call for Papers. What are we looking for?
+</div>
+<p>Qt DevCon is primarily a technical event and we want our content to be as relevant and interesting as possible to our audience. The target audience is developers building software with Qt.</p>
+Topics for Talks
+<p>Proposals related to any aspect of development with Qt are welcome, as long as they:</p>
+<ul>
+<li>bring practical knowledge for the attendees</li>
+<li>discuss the unique technical challenges of creating Qt applications</li>
+<li>are about Qt and its ecosystem</li>
+</ul>
+<p>This conference aims to help the attendees become even better Qt programmers. Talks …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2021-05-24 09:00:37+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/05/24/io_uring-finger-server.html" rel="bookmark" class="u-url"
+       title="Using io_uring to make a high-performance... finger server" target="_blank">
+      <time class="m-date" datetime="2021-05-24 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Using io_uring to make a high-performance... finger server
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I&rsquo;m working on adding a wrapper for the <a href="https://unixism.net/loti/what_is_io_uring.html">Linux io_uring interface</a> to my
+<a href="https://drewdevault.com/2021/03/19/A-new-systems-language.html">secret programming language project</a>. To help learn more about io_uring and
+to test out the interface I was designing, I needed a small project whose design
+was well-suited for the value-add of io_uring. The <a href="https://en.wikipedia.org/wiki/Finger_protocol">Finger protocol</a> is
+perfect for this! After being designed in the 70&rsquo;s and then completely forgotten
+about for 50 years, it&rsquo;s the perfect small and simple network protocol to test
+drive this new interface with.</p>
+<p>In short, finger will reach out to a remote server and ask for information about
+a user. It was used back in the day to find contact details like the user&rsquo;s
+phone number, office address, email address, sometimes their favorite piece of
+ASCII art, and, later, a summary of the things they were working …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 00:00:00+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2467/" rel="bookmark" class="u-url"
+       title="Wikipedia Caltrops" target="_blank">
+      <time class="m-date" datetime="2021-05-24 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Wikipedia Caltrops
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Oh no, they set up a roadblock which is just a sign with the entire 'Czech hedgehog' article printed on it." src="https://imgs.xkcd.com/comics/wikipedia_caltrops.png" title="Oh no, they set up a roadblock which is just a sign with the entire 'Czech hedgehog' article printed on it.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 00:00:00+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/matlab-upgrade-terminal/" rel="bookmark" class="u-url"
+       title="Upgrade Matlab from Terminal" target="_blank">
+      <time class="m-date" datetime="2021-05-24 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Upgrade Matlab from Terminal
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Upgrading the Matlab version or installing Addon Toolboxes can be initiated from the system Terminal / Command Prompt.
+Actually doing the upgrade or addon install does require a graphical connection to the computer (Remote Desktop, VNC, or similar).</p>
+<p>The little bell icon on the upper right corner of the Matlab IDE typically shows when a Matlab update is available.
+To force checking for install, even if the bell is not showing an update, under the Matlab directory look for &ldquo;update_installer&rdquo;</p>
+<ul>
+<li>Windows: bin/win64/update_installer.exe</li>
+<li>Linux: bin/glnxa64/update_installer</li>
+<li>MacOS: bin/maci64/update_installer</li>
+</ul>
+<p>If the graphical connection has a problem, an error results like:</p>
+<pre><code>terminating with uncaught exception of type (anonymous namespace)::DisplayError: No display available.
+</code></pre>
+<p>The Addon interface does need to be launched from the Matlab IDE and likewise requires a graphical connection.</p>
+
+<p>If having trouble with the graphical windows …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 00:00:00+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://archlinux.org/news/move-of-official-irc-channels-to-liberachat/" rel="bookmark" class="u-url"
+       title="Move of official IRC channels to libera.chat" target="_blank">
+      <time class="m-date" datetime="2021-05-24 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          24
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Move of official IRC channels to libera.chat
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  As some of you may have read over the past days, there has been an ownership dispute over the <a href="https://freenode.net">freenode.net</a> network. The IRC network has been used by Arch Linux and many other projects over the past decades as a platform for discussion and support.
+The dispute led to the exodus of most former freenode staff from the network and the founding of a new network: <a href="https://libera.chat">libera.chat</a>
+Starting today, Arch Linux and its sister projects <a href="https://archlinuxarm.org">Arch Linux ARM</a> and <a href="https://archlinux32.org">Arch Linux 32</a> will begin migrating the official IRC channels from freenode.net to libera.chat. Please bear with us as this can take some time to be fully settled in.
+We thank the freenode community for the many years of great service and collaboration.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-24 00:00:00+00:00" class="dt-published"></time>
+  Mon 24 May 2021
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -226,54 +671,8 @@ dive into all of the news from the summit so …</p></div>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://szopa.org.pl/kde/2021/05/23/KDE-Goals-May-2021.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Goals Update – May 2021" target="_blank">
-      <time class="m-date" datetime="2021-05-23 10:00:00+00:00">
-        May
-        <span class="m-date-day">
-          23
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      KDE Goals Update – May 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! This is the first entry in a hopefully reoccurring series of blog posts about the KDE Goals.</p>
-
-<p>The purpose of this series is to provide a frequent update about the Goals, to highlight what cool things are happening.</p>
-
-<p>Of course, our Goal Champions can still create additional content about their goals in any form they want: short blog posts, videos, in-depth articles, etc. This blog will aggregate that content and also give the champions a way to share quick updates without spending too much time blogging.</p>
-
-<p>And with that, let’s take a look at the updates!</p>
-
-Wayland
-
-<p>Plasma 5.22 is coming, and with that a lot of improvements and fixes to Wayland support. Readers of <a href="//pointieststick.com/">Nate’s blog</a> have surely seen many of those highlighted.</p>
-
-<p>Personally, I’m very excited about variable refresh rate (FreeSync) support being …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Adam Szopa</b></span>
-  on <time datetime="2021-05-23 10:00:00+00:00" class="dt-published"></time>
-  Sun 23 May 2021
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6660857" rel="bookmark" class="u-url"
-       title="scCancer: a package for automated processing of single-cell RNA-seq data in cancer" target="_blank">
+    <a href="http://www.scicombinator.com/articles/6660601" rel="bookmark" class="u-url"
+       title="Nonreplicable publications are cited more than replicable ones" target="_blank">
       <time class="m-date" datetime="2021-05-23 00:00:00+00:00">
         May
         <span class="m-date-day">
@@ -282,19 +681,19 @@ Wayland
         2021
       </time>
       <div class="p-name">
-      scCancer: a package for automated processing of single-cell RNA-seq data in cancer
+      Nonreplicable publications are cited more than replicable ones
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Molecular heterogeneities and complex microenvironments bring great challenges for cancer diagnosis and treatment. Recent advances in single-cell RNA-sequencing (scRNA-seq) technology make it possible to study cancer cell heterogeneities and microenvironments at single-cell transcriptomic level. Here, we develop an R package named scCancer, which focuses on processing and analyzing scRNA-seq data for cancer research. Except basic data processing steps, this package takes several special considerations for cancer-specific features. Firstly, the package introduced comprehensive quality control metrics. Secondly, it used a data-driven machine learning algorithm to accurately identify major cancer microenvironment cell populations. Thirdly, it estimated a malignancy score to classify malignant (cancerous) and non-malignant cells. Then, it analyzed intra-tumor heterogeneities by key cellular phenotypes (such as cell cycle and stemness), gene signatures and cell-cell interactions. Besides, it provided multi-sample data integration analysis with different batch-effect correction strategies. Finally, user-friendly graphic reports …
+  We use publicly available data to show that published papers in top psychology, economics, and general interest journals that fail to replicate are cited more than those that replicate. This difference in citation does not change after the publication of the failure to replicate. Only 12% of postreplication citations of nonreplicable findings acknowledge the replication failure. Existing evidence also shows that experts predict well which papers will be replicated. Given this prediction, why are nonreplicable papers accepted for publication in the first place? A possible answer is that the review team faces a trade-off. When the results are more "interesting," they apply lower standards regarding their reproducibility.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>J Gu</b></span>
+  <span class="p-author"><b>U Gneezy</b></span>
   on <time datetime="2021-05-23 00:00:00+00:00" class="dt-published"></time>
   Sun 23 May 2021
   in SciCombinator - Last 10 Days.
@@ -306,9 +705,9 @@ Wayland
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/thoughts/2021/05/modularize-goblog" rel="bookmark" class="u-url"
-       title="Modularizing GoBlog?" target="_blank">
-      <time class="m-date" datetime="2021-05-22 18:39:05+02:00">
+    <a href="https://alexschroeder.ch/wiki/2021-05-22_Looking_to_buy_a_synthesizer" rel="bookmark" class="u-url"
+       title="Looking to buy a synthesizer" target="_blank">
+      <time class="m-date" datetime="2021-05-22 20:57:43+00:00">
         May
         <span class="m-date-day">
           22
@@ -316,193 +715,22 @@ Wayland
         2021
       </time>
       <div class="p-name">
-      Modularizing GoBlog?
+      Looking to buy a synthesizer
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  I just separated the function I told you about the other day (the one for marking text with “==") as a Go module. This way the main code remains more organized and if I don’t need the feature any more, the module is still usable. Also for other people who might need the same functionality. I think I should modularize GoBlog even more. 🤔
+  <div><p>This is me thinking about buying something. Perhaps writing things down helps me make a decision. Feel free to comment.</p><p>Recently, I ended up wondering about the Theremin. It’s an electronic instrument from 1928 and it looks like a little bread sized blob with two antennas. The hands of the performer influence the electrical fields around the antennas, with one hand controlling the pitch and the other the amplitude or volume. The Moog Theremini just adds more electronics to that. I wondered: would I like to play such an instrument? I think I might!</p><p>Then I started wondering. I’m not much of a music maker. I dabble a bit with a micro sampler (the PO‑33 by teenage engineering), a small synthesiser (OP‑1 by teenage engineering), and some programs. The ones I like best are PixiTracker, Synth …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-22 18:39:05+02:00" class="dt-published"></time>
+  on <time datetime="2021-05-22 20:57:43+00:00" class="dt-published"></time>
   Sat 22 May 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/651804520510341120/filmmaker-thomas-blanchard-creates-a-slow-and" rel="bookmark" class="u-url"
-       title="Filmmaker Thomas Blanchard creates a slow and dreamy fluid..." target="_blank">
-      <time class="m-date" datetime="2021-05-21 10:00:30-05:00">
-        May
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Filmmaker Thomas Blanchard creates a slow and dreamy fluid...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/5ace08301fe4486dc77c52925f1deedb/faa919a160a5e125-cc/s500x750/a9fd4719a62add374f08381199c9ba9cc4acce66.gifv"> <img src="https://64.media.tumblr.com/3457627a2a3614d7d5981b43830d7a1e/faa919a160a5e125-2c/s500x750/7cfd8c9f9a8fc2c5824edd66ce50cfc8245b264d.gifv"> <img src="https://64.media.tumblr.com/45ae8b7f8f4d180697b9b4ba58019963/faa919a160a5e125-3a/s500x750/0649f0954478a4da23fb661e236c7a90b94205d4.gifv"> <p><a href="https://fyfluiddynamics.com/?p=14510">Filmmaker Thomas Blanchard creates a slow and dreamy fluid landscape in “Le Temps et l’Espace”</a>. (Image and video credit: T. Blanchard)</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-21 10:00:30-05:00" class="dt-published"></time>
-  Fri 21 May 2021
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2021/05/le-temps-et-lespace/" rel="bookmark" class="u-url"
-       title="“Le Temps et l’Espace”" target="_blank">
-      <time class="m-date" datetime="2021-05-21 15:00:00+00:00">
-        May
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      “Le Temps et l’Espace”
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Filmmaker Thomas Blanchard creates a slow and dreamy fluid landscape in &#8220;Le Temps et l’Espace&#8221;. Made with ink and paints, the visuals are beautiful and serene. For similar works, be <a href="https://fyfluiddynamics.com/2021/05/le-temps-et-lespace/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-05-21 15:00:00+00:00" class="dt-published"></time>
-  Fri 21 May 2021
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2466/" rel="bookmark" class="u-url"
-       title="In Your Classroom" target="_blank">
-      <time class="m-date" datetime="2021-05-21 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      In Your Classroom
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Ontology is way off to the left and geography is way off to the right." src="https://imgs.xkcd.com/comics/in_your_classroom.png" title="Ontology is way off to the left and geography is way off to the right.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-21 00:00:00+00:00" class="dt-published"></time>
-  Fri 21 May 2021
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://shibumi.dev/posts/zsh-and-alacritty/" rel="bookmark" class="u-url"
-       title="Boost your productivity with ZSH and Alacritty" target="_blank">
-      <time class="m-date" datetime="2021-05-21 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Boost your productivity with ZSH and Alacritty
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In today&rsquo;s article I would like to shine some light on my local terminal setup. My setup consists of ZSH and Alacritty. ZSH or the Z shell is an extended variant of the Bourne shell (bash). It comes with a few useful features and extensions. Many people use the ZSH mostly for nice shell prompts or tab completion. This article will be about more advanced features, like custom shortcuts. Alacritty is a terminal emulator written in Rust.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-21 00:00:00+00:00" class="dt-published"></time>
-  Fri 21 May 2021
-  in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://piware.de/post/2021-05-21-learning-metrics/" rel="bookmark" class="u-url"
-       title="Deploying Prometheus/Grafana, learning metrics" target="_blank">
-      <time class="m-date" datetime="2021-05-21 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Deploying Prometheus/Grafana, learning metrics
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In the Cockpit team we recently started to generate and export metrics about our CI, and collect/graph them by a Red Hat internal Prometheus and Grafana instance. But I am not happy with this yet, as it does not yet answer all the questions that we have for it. Also, it is not accessible outside of Red Hat.
-On today’s Red Hat Day of Learning I wanted to get to know how to deploy these components and learn more about the PromQL language.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-21 00:00:00+00:00" class="dt-published"></time>
-  Fri 21 May 2021
-  in Planet GNOME.
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -582,51 +810,6 @@ During my sophomore year, my interests started expanding in the domain of Machin
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://drewdevault.com/2021/05/19/How-to-write-release-notes.html" rel="bookmark" class="u-url"
-       title="How to write release notes" target="_blank">
-      <time class="m-date" datetime="2021-05-19 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          19
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How to write release notes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Release notes are a concept most of us are familiar with. When a new software
-release is prepared, the release notes tell you what changed, so you understand
-what you can expect and how to prepare for the update. They are also
-occasionally used to facilitate conversations:</p>
-<p><a href="https://xkcd.com/2010/"><img alt="" src="https://imgs.xkcd.com/comics/update_notes_2x.png"></a></p>
-<p>Many of the people tasked with writing release notes have never found themselves
-on that side of the screen before. If that describes you, I would like to offer
-some advice on how to nail it. Note that this mostly applies to free and open
-source software, which is the only kind of software which is valid.</p>
-<p>So, it&rsquo;s release day, and you&rsquo;re excited about all of the cool new features
-you&rsquo;ve added in this release. I know the feeling! Your first order of business,
-however, is to direct that …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-19 00:00:00+00:00" class="dt-published"></time>
-  Wed 19 May 2021
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://ekaitz.elenq.tech/lightening.html" rel="bookmark" class="u-url"
        title="RISC-V Adventures: Migrating Lightening" target="_blank">
       <time class="m-date" datetime="2021-05-19 00:00:00+03:00">
@@ -654,41 +837,6 @@ Guile Scheme, and other adventures on the low level world of <span>RISC</span>-V
   on <time datetime="2021-05-19 00:00:00+03:00" class="dt-published"></time>
   Wed 19 May 2021
   in Ekaitz's tech blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/paraview-5-9-1-release-notes/" rel="bookmark" class="u-url"
-       title="ParaView 5.9.1 Release Notes" target="_blank">
-      <time class="m-date" datetime="2021-05-18 12:29:00+00:00">
-        May
-        <span class="m-date-day">
-          18
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      ParaView 5.9.1 Release Notes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Bug fixes made since ParaView 5.9.0 are listed in this document. The full list of issues addressed by this release is available here. Catalyst Fixed ... <a href="https://blog.kitware.com/paraview-5-9-1-release-notes/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/paraview-5-9-1-release-notes/">ParaView 5.9.1 Release Notes</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Vicente Bolea</b></span>
-  on <time datetime="2021-05-18 12:29:00+00:00" class="dt-published"></time>
-  Tue 18 May 2021
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -844,100 +992,6 @@ compiler. Thirumalai’s mentor will be
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jvns.ca/blog/2021/05/17/how-to-look-at-the-stack-in-gdb/" rel="bookmark" class="u-url"
-       title="How to look at the stack with gdb" target="_blank">
-      <time class="m-date" datetime="2021-05-17 09:14:37+00:00">
-        May
-        <span class="m-date-day">
-          17
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How to look at the stack with gdb
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I was chatting with someone yesterday and they mentioned that they don&rsquo;t really
-understand exactly how the stack works or how to look at it.</p>
-
-<p>So here&rsquo;s a quick walkthrough of how you can use gdb to look at the stack of a C
-program. I think this would be similar for a Rust program, but I&rsquo;m going to use
-C because I find it a little simpler for a toy example and also you can do Terrible
-Things in C more easily.</p>
-
-our test program
-
-<p>Here&rsquo;s a simple C program that declares a few variables and reads two strings
-from standard input. One of the strings is on the heap, and one is on the
-stack.</p>
-
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-int main() {
-    char stack_string[10] = &quot;stack&quot;;
-    int x = 10;
-    char *heap_string;
-
-    heap_string = malloc …</code></pre>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-17 09:14:37+00:00" class="dt-published"></time>
-  Mon 17 May 2021
-  in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-check-tls/" rel="bookmark" class="u-url"
-       title="Check CMake TLS functioning" target="_blank">
-      <time class="m-date" datetime="2021-05-14 00:00:00+00:00">
-        May
-        <span class="m-date-day">
-          14
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Check CMake TLS functioning
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>CMake itself is built with SSL by default.
-Sometimes a user may mistakenly build CMake itself without SSL support.
-This is generally not workable as the vast majority of Internet sites require SSL / TLS to function.
-Confusing errors result for CMake network operations like <code>file(DOWNLOAD)</code> in this case.</p>
-<p>In our projects using CMake, we use this simple <a href="https://gist.github.com/scivision/704fd0c7600266317748e473f7e47062">check_tls</a>:</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-14 00:00:00+00:00" class="dt-published"></time>
-  Fri 14 May 2021
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://gregoryszorc.com/blog/2021/05/12/why-you-shouldn't-use-git-lfs/" rel="bookmark" class="u-url"
        title="Why You Shouldn't Use Git LFS" target="_blank">
       <time class="m-date" datetime="2021-05-12 10:30:00+00:00">
@@ -998,51 +1052,6 @@ Confusing errors result for CMake network operations like <code>file(DOWNLOAD)</
   on <time datetime="2021-05-10 00:00:00+00:00" class="dt-published"></time>
   Mon 10 May 2021
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pythoninsider.blogspot.com/2021/05/python-3810-395-and-3100b1-are-now.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
-       title="Python 3.8.10, 3.9.5, and 3.10.0b1 are now available" target="_blank">
-      <time class="m-date" datetime="2021-05-03 19:31:04.803000-04:00">
-        May
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Python 3.8.10, 3.9.5, and 3.10.0b1 are now available
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This has been a very busy day for releases and on
- behalf of the Python development community we’re happy to announce the 
-availability of three new Python releases.</p><div>
-
-<a href="https://discuss.python.org/t/python-3-8-10-3-9-5-and-3-10-0b1-are-now-available/8533#python-310-is-now-in-beta-1"></a>Python 3.10 is now in Beta
-<p>Get it here: <a href="https://www.python.org/downloads/release/python-3100b1/">https://www.python.org/downloads/release/python-3100b1/</a> </p><p>Python 3.10 is still in development. 3.10.0b1 is the first of four 
-planned beta release previews. Beta release previews are intended to 
-give the wider community the opportunity to test new features and bug 
-fixes and to prepare their projects to support the new feature release.</p>
-<p>We <b>strongly encourage</b> maintainers of third-party Python projects to <b>test with 3.10</b> during the beta phase and report issues found to <a href="https://bugs.python.org">the Python bug tracker</a>
- as soon as possible.  While the release is planned to be feature 
-complete entering the beta phase, it is …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
-  on <time datetime="2021-05-03 19:31:04.803000-04:00" class="dt-published"></time>
-  Mon 03 May 2021
-  in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
 
