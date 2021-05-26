@@ -153,35 +153,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit-cpython.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="The 2021 Python Language Summit: CPython Performance Improvements at Instagram" target="_blank">
-      <time class="m-date" datetime="2021-05-24 13:01:18.358000-04:00">
+    <a href="https://jlelse.blog/micro/2021/05/post-locations" rel="bookmark" class="u-url"
+       title="📍 Post locations" target="_blank">
+      <time class="m-date" datetime="2021-05-25 22:30:00+02:00">
         May
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      The 2021 Python Language Summit: CPython Performance Improvements at Instagram
+      📍 Post locations
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p><a href="https://twitter.com/DinoViehland">Dino Viehland</a> gave a presentation at the <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit.html">2021 Python Language Summit</a> about improvements to CPython's performance at Instagram. </p><div><a href="https://1.bp.blogspot.com/-PmqU-CAYve4/YKWVoLBCxsI/AAAAAAAAAIM/VfUHJaL9kOU_Q1IV5rbDpnyqwqIOo16FACLcBGAsYHQ/s320/talk-4-author.png"><img alt="Dino Viehland" src="https://1.bp.blogspot.com/-PmqU-CAYve4/YKWVoLBCxsI/AAAAAAAAAIM/VfUHJaL9kOU_Q1IV5rbDpnyqwqIOo16FACLcBGAsYHQ/s16000/talk-4-author.png"></a></div><p><a href="https://github.com/facebookincubator/cinder">Cinder</a> is Instagram's internal performance-oriented production version of
-CPython 3.8, so all of the comparisons in this presentation dealt with Python 3.8. Cinder has a lot of performance optimizations, including
-bytecode inline caching, eager evaluation of coroutines, a method-at-a-time
-JIT, and an experimental bytecode compiler that uses type annotations to emit
-type-specialized bytecode that performs better in the JIT.</p>Successful Improvements<p>Instagram did a lot of work with asynchronous I/O. One big change was sending and receiving values without raising <span>StopIteration</span>. Raising all of those exceptions was a huge source of overhead. On simple benchmarks, this was 1.6 times faster, but it was also a 5% win in production. These changes have been upstreamed to Python 3.10 …</p></div>
+  My evening project today was to develop a feature to display post locations in GoBlog, for which I created a custom Go module (100% test coverage!) that roughly parses geo-URIs according to RFC 5870. Nice feature for when the location should be relevant for the post context or I want to save where I shared a photo. An example in this post. 😉
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-05-25 22:30:00+02:00" class="dt-published"></time>
+  Tue 25 May 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit-pep-654.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
+       title="The 2021 Python Language Summit: PEP 654 — Exception Groups and except*" target="_blank">
+      <time class="m-date" datetime="2021-05-25 11:06:28.290000-04:00">
+        May
+        <span class="m-date-day">
+          25
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      The 2021 Python Language Summit: PEP 654 — Exception Groups and except*
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p><span><span><span><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654</a> was authored by Irit Katriel, Yury Selivanov, and </span></span></span><span><span><span><span><span><span>Guido van Rossum. This PEP is currently at the draft stage. At the <a href="https://pyfound.blogspot.com/2021/05/the-2021-python-language-summit.html">2021 Python Language Summit</a>, the authors shared what it is, why we need it, and which ideas they rejected.</span></span></span></span></span></span></p><p></p><div><a href="https://1.bp.blogspot.com/-mynCR_-LfTw/YKAIf81YqTI/AAAAAAAAAFI/UfnwOMWRLkQR9gOgvcLy6_aOabGWFS2QwCLcBGAsYHQ/s1390/talk-2-authors.png"><img alt="Irit Katriel, Yury Selivanov, and Guido van Rossum" src="https://1.bp.blogspot.com/-mynCR_-LfTw/YKAIf81YqTI/AAAAAAAAAFI/UfnwOMWRLkQR9gOgvcLy6_aOabGWFS2QwCLcBGAsYHQ/w443-h146/talk-2-authors.png"></a></div><p><span><span><span><span><span><span>&nbsp;</span></span></span></span></span></span><span><span><span><span><span><span>What Is PEP 654?</span></span></span></span></span></span><span><span><span><span><span><span></span></span></span></span></span></span></p></div><div><p><span><span><span><span><span><span>The purpose of this PEP is to help Python users handle unrelated exceptions. Right now, if you're dealing with several unrelated exceptions, you can:</span></span></span></span></span></span></p><p></p><ul><li><span><span><span><span><span><span><b>Raise one exception</b> and throw away the others, in which case you're losing exceptions</span></span></span></span></span></span></li><li><span><span><span><span><span><span><b>Return a list of exceptions</b> instead of raising them, in which case they become error codes rather than exceptions, so you can't handle them with exception-handling mechanisms</span></span></span></span></span></span></li><li><span><span><span><span><span><span><b>Wrap the list of exceptions in a wrapper exception </b>and use it as a list of error codes, which still </span></span></span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span>can't be handled with exception-handling mechanisms</span></span></span></span></span></span></span></span></span></span></span></span></li></ul><p><span><span><span><span><span><span>PEP 654 proposes …</span></span></span></span></span></span></p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Joanna Jablonski (noreply@blogger.com)</b></span>
-  on <time datetime="2021-05-24 13:01:18.358000-04:00" class="dt-published"></time>
-  Mon 24 May 2021
+  on <time datetime="2021-05-25 11:06:28.290000-04:00" class="dt-published"></time>
+  Tue 25 May 2021
   in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -191,67 +221,24 @@ type-specialized bytecode that performs better in the JIT.</p>Successful Improve
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/aday/2021/05/24/gnome-foundation-board-elections-2021/" rel="bookmark" class="u-url"
-       title="GNOME Foundation Board Elections 2021" target="_blank">
-      <time class="m-date" datetime="2021-05-24 15:45:16+00:00">
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/652166924230344704/our-global-ocean-currents-move-enough-water-to" rel="bookmark" class="u-url"
+       title="Our global ocean currents move enough water to dwarf the flow of..." target="_blank">
+      <time class="m-date" datetime="2021-05-25 10:00:45-05:00">
         May
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      GNOME Foundation Board Elections 2021
+      Our global ocean currents move enough water to dwarf the flow of...
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  The election process for the GNOME Foundation Board of Directors is currently underway. Three positions are up for election this year, and Foundation members are able to nominate themselves until May 31st. I’ve been sitting on the board since 2015, and have been acting as chair for the past two years. In this post, I’m … <a href="https://blogs.gnome.org/aday/2021/05/24/gnome-foundation-board-elections-2021/">Continue reading <span>GNOME Foundation Board Elections 2021</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Allan</b></span>
-  on <time datetime="2021-05-24 15:45:16+00:00" class="dt-published"></time>
-  Mon 24 May 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/652076334380613632/meteotsunamis-or-meteorological-tsunamis-are" rel="bookmark" class="u-url"
-       title="Meteotsunamis, 
-or meteorological tsunamis, are large waves..." target="_blank">
-      <time class="m-date" datetime="2021-05-24 10:00:52-05:00">
-        May
-        <span class="m-date-day">
-          24
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Meteotsunamis, 
-or meteorological tsunamis, are large waves...
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img src="https://64.media.tumblr.com/5841a0c6669e3a0712bc817fd98ee795/8220dc49fa2274d4-3e/s500x750/70c53167f65c1d867064f6426289a13a6c4da3cb.png"> <img src="https://64.media.tumblr.com/e164c83b865ead8e6b7536e0b18a16dd/8220dc49fa2274d4-33/s500x750/aea03938c861d87743b8fdc484d57ee94803e0e9.png"> <img src="https://64.media.tumblr.com/81324624af72fb4e4da1ae1a54280838/8220dc49fa2274d4-eb/s500x750/c5fb73323b03eeb4ad9461d76898646da76c0893.jpg"> <p>
-<a href="https://fyfluiddynamics.com/?p=14908">Meteotsunamis, 
-or meteorological tsunamis, are large waves driven by weather rather 
-than seismic energy. Although they occur along shorelines throughout the
- world, forecasters have very little infrastructure in place to predict 
-or detect them</a>.
-
-
-(Image credit: <a href="https://www.flickr.com/photos/noaa_glerl/albums/72157718520228535/with/51071660707/">D. Maglothin</a>; research credit: <a href="https://doi.org/10.1007/s11069-020-04195-2">E. Anderson and G. Mann</a>; via <a href="https://earther.gizmodo.com/new-research-exposes-weird-tsunamis-caused-by-gravity-w-1846609245">Gizmodo</a>)
+  <img src="https://64.media.tumblr.com/a09450a5708637c38a766469f62fadb5/e60c6c6643934f86-3b/s500x750/418f7f8c169c4e44e2d4d0c5fa14b7086f8c48ae.png"> <img src="https://64.media.tumblr.com/baf830f76185de3170147f87ce0c838e/e60c6c6643934f86-0a/s500x750/86ab893f1945bdeafe7de84e7bd534b6a21a7f91.gifv"> <img src="https://64.media.tumblr.com/aea1162afa9a7585c10f5ddbc65713a1/e60c6c6643934f86-69/s500x750/a7dcb1ef3f455b8e7865812fd047b558b34bdb7b.png"> <p><a href="https://fyfluiddynamics.com/?p=15025">Our global ocean currents move enough water to dwarf the flow of all Earth’s rivers. But climate change is breaking the pump that drives this circulation</a>. 
+(Video and image credit: It’s Okay To Be Smart)
 
 </p>
   </p>
@@ -260,8 +247,8 @@ or detect them</a>.
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-24 10:00:52-05:00" class="dt-published"></time>
-  Mon 24 May 2021
+  on <time datetime="2021-05-25 10:00:45-05:00" class="dt-published"></time>
+  Tue 25 May 2021
   in FYFD.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -271,32 +258,136 @@ or detect them</a>.
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://fyfluiddynamics.com/2021/05/predicting-meteotsunamis/" rel="bookmark" class="u-url"
-       title="Predicting Meteotsunamis" target="_blank">
-      <time class="m-date" datetime="2021-05-24 15:00:00+00:00">
+    <a href="https://fyfluiddynamics.com/2021/05/breaking-ocean-currents/" rel="bookmark" class="u-url"
+       title="Breaking Ocean Currents" target="_blank">
+      <time class="m-date" datetime="2021-05-25 15:00:00+00:00">
         May
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      Predicting Meteotsunamis
+      Breaking Ocean Currents
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Meteotsunamis, or meteorological tsunamis, are large waves driven by weather rather than seismic energy. Although they occur along shorelines throughout the world, forecasters have very little infrastructure in place to <a href="https://fyfluiddynamics.com/2021/05/predicting-meteotsunamis/">Keep reading</a>
+  Our global ocean currents move enough water to dwarf the flow of all Earth&#8217;s rivers. This worldwide circulation is driven largely by density and the movements of cold, salty water <a href="https://fyfluiddynamics.com/2021/05/breaking-ocean-currents/">Keep reading</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-05-24 15:00:00+00:00" class="dt-published"></time>
-  Mon 24 May 2021
+  on <time datetime="2021-05-25 15:00:00+00:00" class="dt-published"></time>
+  Tue 25 May 2021
   in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/mcatanzaro/2021/05/25/reminder-soupsessionsync-and-soupsessionasync-default-to-no-tls-certificate-verification/" rel="bookmark" class="u-url"
+       title="Reminder: SoupSessionSync and SoupSessionAsync default to no TLS certificate verification" target="_blank">
+      <time class="m-date" datetime="2021-05-25 14:12:55+00:00">
+        May
+        <span class="m-date-day">
+          25
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Reminder: SoupSessionSync and SoupSessionAsync default to no TLS certificate verification
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  This is a public service announcement! The modern SoupSession class is secure by default, but the older, deprecated SoupSessionSync and SoupSessionAsync subclasses of SoupSession are not. If your code uses SoupSessionSync or SoupSessionAsync and does not set SoupSession:tls-database, SoupSession:ssl-use-system-ca-file, or SoupSession:ssl-ca-file, then you get no TLS certificate verification. This is almost always worth requesting a CVE. … <p><a href="https://blogs.gnome.org/mcatanzaro/2021/05/25/reminder-soupsessionsync-and-soupsessionasync-default-to-no-tls-certificate-verification/">Continue reading<span> "Reminder: SoupSessionSync and SoupSessionAsync default to no TLS certificate verification"</span></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Michael Catanzaro</b></span>
+  on <time datetime="2021-05-25 14:12:55+00:00" class="dt-published"></time>
+  Tue 25 May 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://write.as/niccolove/kde-devlog-4-finishing-up-the-active-applet-indicator?pk_campaign=rss-feed?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE DEVLOG 4: Finishing Up the Active Applet Indicator!" target="_blank">
+      <time class="m-date" datetime="2021-05-25 12:14:51+00:00">
+        May
+        <span class="m-date-day">
+          25
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      KDE DEVLOG 4: Finishing Up the Active Applet Indicator!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>KDE DEVLOG 4: Finishing Up the Active Applet Indicator!</p>
+
+<p><a href="//www.youtube.com/watch?v=ZFHgL_vUaRE"><img src="//img.youtube.com/vi/ZFHgL_vUaRE/0.jpg"></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Niccolove</b></span>
+  on <time datetime="2021-05-25 12:14:51+00:00" class="dt-published"></time>
+  Tue 25 May 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://snarky.ca/unravelling-async-and-await/" rel="bookmark" class="u-url"
+       title="Unravelling `async` and `await`" target="_blank">
+      <time class="m-date" datetime="2021-05-25 00:22:31+00:00">
+        May
+        <span class="m-date-day">
+          25
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Unravelling `async` and `await`
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>For this post in my Python <a href="https://snarky.ca/tag/syntactic-sugar/">syntactic sugar</a> series, I am going to cover <code>async</code> and <code>await</code>.</p><p>Now when I started to think about this post I was worried it was going to be rather long and arduous to research (although I believe <code>class</code> is going to ultimately win that</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2021-05-25 00:22:31+00:00" class="dt-published"></time>
+  Tue 25 May 2021
+  in Tall, Snarky Canadian.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -384,86 +475,6 @@ that&rsquo;s what I&rsquo;m going …</p>
   on <time datetime="2021-05-24 12:30:55+00:00" class="dt-published"></time>
   Mon 24 May 2021
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2021/05/2021-05-24-exntk" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2021-05-24 13:36:00+02:00">
-        May
-        <span class="m-date-day">
-          24
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Pro tip: Double check your commits for copy and paste mistakes. I learned my lessons today.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-05-24 13:36:00+02:00" class="dt-published"></time>
-  Mon 24 May 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kdab.com/cfp-qtdevcon/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Call for Papers – Qt Developer Conference" target="_blank">
-      <time class="m-date" datetime="2021-05-24 09:00:37+00:00">
-        May
-        <span class="m-date-day">
-          24
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Call for Papers – Qt Developer Conference
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>
-<p><img alt="" src="//www.kdab.com/wp-content/uploads/stories/logo-2.png">The Call for Papers for KDAB’s upcoming event, Qt DevCon, is now open. We are planning to make this our first in-person event after the shut-down. The event will take place September 28-30, featuring 1 training day and 2 days of technical talks from developers, for developers.</p>
-Call for Papers. What are we looking for?
-</div>
-<p>Qt DevCon is primarily a technical event and we want our content to be as relevant and interesting as possible to our audience. The target audience is developers building software with Qt.</p>
-Topics for Talks
-<p>Proposals related to any aspect of development with Qt are welcome, as long as they:</p>
-<ul>
-<li>bring practical knowledge for the attendees</li>
-<li>discuss the unique technical challenges of creating Qt applications</li>
-<li>are about Qt and its ecosystem</li>
-</ul>
-<p>This conference aims to help the attendees become even better Qt programmers. Talks …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2021-05-24 09:00:37+00:00" class="dt-published"></time>
-  Mon 24 May 2021
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -731,40 +742,6 @@ We thank the freenode community for the many years of great service and collabor
   on <time datetime="2021-05-22 20:57:43+00:00" class="dt-published"></time>
   Sat 22 May 2021
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://snarky.ca/unravelling-the-with-statement/" rel="bookmark" class="u-url"
-       title="Unravelling the `with` statement" target="_blank">
-      <time class="m-date" datetime="2021-05-20 03:31:46+00:00">
-        May
-        <span class="m-date-day">
-          20
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Unravelling the `with` statement
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>As part of my <a href="https://snarky.ca/tag/syntactic-sugar/">series on Python&apos;s syntactic sugar</a>, I want to tackle unravelling <a href="https://docs.python.org/3.8/reference/compound_stmts.html#the-with-statement">the <code>with</code> statement</a>.</p><p>Looking at the bytecode for a simple <code>with</code> statement, you will notice there are a lot of opcodes being used. Most of it is managing the execution stack for the interpreter</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Brett Cannon</b></span>
-  on <time datetime="2021-05-20 03:31:46+00:00" class="dt-published"></time>
-  Thu 20 May 2021
-  in Tall, Snarky Canadian.
 </footer>
 <div class="m-clearfix-l"></div>
 
