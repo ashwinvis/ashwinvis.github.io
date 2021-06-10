@@ -14,6 +14,7 @@ Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the **conditional expression** or **ternary if-else
 "operator"** in Python. What it means is instead of:
 
+
 ```py
 def even_or_odd(x):
     if x <= 0:

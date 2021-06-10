@@ -5,7 +5,7 @@ Date: 2019-12-12
 Status: published
 Category: Blog
 Tags: postdoc, research, fluid-mechanics
-Summary: eTurb: Efficient simulations of turbulence in atmospheric boundary layers
+Summary: eTurb - Efficient simulations of turbulence in atmospheric boundary layers
 Slug: project-eturb
 ---
 

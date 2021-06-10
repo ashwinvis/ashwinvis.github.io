@@ -51,7 +51,7 @@ DEFAULT_METADATA = {
 
 THEME = "m.css/pelican-theme"
 THEME_STATIC_DIR = "static"
-STATIC_PATHS = ["images", "pdf", "static"]
+STATIC_PATHS = ["images", "pdf", "static", "media"]
 EXTRA_PATH_METADATA = {
     f"extra/{resource}": {"path": resource}
     for resource in (
