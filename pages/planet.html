@@ -153,31 +153,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2021/06/2021-06-13-xejwu" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2021-06-13 21:07:00+02:00">
+    <a href="https://jlelse.blog/thoughts/2021/06/goblog-tests" rel="bookmark" class="u-url"
+       title="Tests for GoBlog" target="_blank">
+      <time class="m-date" datetime="2021-06-14 21:47:46+02:00">
         Jun
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      💬
+      Tests for GoBlog
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  I enjoyed a nice weekend with my girlfriend in Kassel. ❤️
+  Recently I’ve been investing more time in refactoring and creating unit and integration tests for GoBlog. After all, I don’t want to just make sure my blog is working properly through trial and error, I want to be able to prove that with automated tests.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-06-13 21:07:00+02:00" class="dt-published"></time>
-  Sun 13 Jun 2021
+  on <time datetime="2021-06-14 21:47:46+02:00" class="dt-published"></time>
+  Mon 14 Jun 2021
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -187,40 +187,300 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://kate-editor.org/post/2021/2021-06-13-kde-frameworks-5.84-expandable-tooltips/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Framework 5.84 - Expandable Tooltips" target="_blank">
-      <time class="m-date" datetime="2021-06-13 17:26:00+00:00">
+    <a href="https://kdenlive.org/en/2021/06/kdenlive-21-04-2-released/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Kdenlive 21.04.2 released" target="_blank">
+      <time class="m-date" datetime="2021-06-14 16:18:55+00:00">
         Jun
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      KDE Framework 5.84 - Expandable Tooltips
+      Kdenlive 21.04.2 released
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Starting with the KDE Frameworks 5.84 release, <a href="//invent.kde.org/frameworks/kxmlgui">KXMLGUI</a> based applications will feature expandable tooltips per default.</p>
-<p>The matching <a href="//invent.kde.org/frameworks/kxmlgui/-/merge_requests/45">merge request by Felix Ernst</a> got merged today after 3 months ;=)</p>
-What are expandable tooltips at all?
-<p>Good question ;=)</p>
-<p>In short: for stuff like menu &amp; toolbar actions, it provides an easy way to access the “What’s This?” help.</p>
-<p>Unlike before, where you need to manually trigger that via the “Shift-F1” shortcut and click around to try out which GUI elements provide at all this additional help, you will now first get a small tooltip with the normal tooltip content (if any) and a hint that with “Shift” you are able to get more help displayed.</p>
-<p>For more details read the <a href="//invent.kde.org/frameworks/kxmlgui/-/merge_requests/45">merge request</a>.</p>
-A video is better than words ;=)
-<p>Felix provided a short video in the merge request to demonstrate the …</p>
+  <div>
+
+
+
+
+                    <div>
+                <div>
+
+
+                <div>
+
+
+                <div>
+<p>The second maintenance release of the 21.04 series is out bringing missing keyframing support to effects (like glitch0r. scratchlines and charcoal) as well as the usual batch of bug fixes and usability improvements.</p>
+<p><strong>Full log</strong></p>
+<ul>
+<li>Remove duplicate line from last cherry-pick. <a href="//commits.kde.org/kdenlive/e2da06720b9116199e6ef26ea006592f9b8734ac">Commit.</a>
+</li>
+<li>Hopefully proper patch to solve “white” rendering issues. <a href="//commits.kde.org/kdenlive/fcd82a3fdeddae478280ee098555449c8ecf46fa">Commit.</a>
+</li>
+<li>Fix resize clip end does not allow touching next clip. <a href="//commits.kde.org/kdenlive/e4c9bebe80056b0e633e175af40d2d54bb798f0a">Commit.</a>
+</li>
+<li>Fix clip thumbs disappearing on timeline resize. <a href="//commits.kde.org/kdenlive/f4a0821916263d41909aac83a680adb77e1d4dd0">Commit.</a>
+</li>
+<li>Fix timeline thumbnails not saved with project. <a href="//commits.kde.org/kdenlive/2144251aec50f46700e84a006105f962783bae89">Commit.</a>
+</li>
+<li>Don’t discard subtitle files on project fps change. <a href="//commits.kde.org/kdenlive/e0e7d0ba71b98af286e14cfc75754541e5f4c338">Commit.</a>
+</li>
+<li>Update guides position on project’s fps change. <a href="//commits.kde.org/kdenlive/42fdaec38aa3149ed8542849c3c3813d676ce5c0">Commit.</a>
+</li>
+<li>Fix delete selected clips not working on project opening. <a href="//commits.kde.org/kdenlive/e5ed85c026a3172d29a7a4dc28cd9e4ac952e167">Commit.</a>
+</li>
+<li>Fix Chroma Key: Advanced edge mode normal was reset to hard. <a href="//commits.kde.org/kdenlive/22c506e5c6545b850a1df3cc5eac75723d279e53">Commit.</a>
+</li>
+<li>Fix various frei0r effects losing parameter settings:. <a href="//commits.kde.org/kdenlive/082258a9580486056f54111481cd5f4d700e9a0d">Commit.</a>
+</li>
+<li>Next try to fix keyframe view positon for mixes. <a href="//commits.kde.org/kdenlive/b043a164dd4bce812dd6ae7dcd382cc276270941">Commit.</a>
+</li>
+<li>Revert “Fix …</li></ul></div></div></div></div></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Kate</b></span>
-  on <time datetime="2021-06-13 17:26:00+00:00" class="dt-published"></time>
-  Sun 13 Jun 2021
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2021-06-14 16:18:55+00:00" class="dt-published"></time>
+  Mon 14 Jun 2021
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.gnome.org/~michael/blog/2021-06-14.html" rel="bookmark" class="u-url"
+       title="2021-06-14 Monday" target="_blank">
+      <time class="m-date" datetime="2021-06-14 15:20:08+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      2021-06-14 Monday
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <ul> 
+    <li>
+        E's birthday - remote silent-monks happy-birthday
+    action, presents at breakfast, dropped them into school.
+    </li>
+    <li>
+        Planning call; mail, lunch, performance team call;
+    re-discovered Android-Studio's love of consuming all memory
+    and burning us deeply into swap.
+    </li>
+</ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-06-14 15:20:08+00:00" class="dt-published"></time>
+  Mon 14 Jun 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/653978928963354624/space-hurricanes" rel="bookmark" class="u-url"
+       title="Space Hurricanes" target="_blank">
+      <time class="m-date" datetime="2021-06-14 10:01:47-05:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Space Hurricanes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Space Hurricanes" src="https://64.media.tumblr.com/32908ee0c618b700b545c03b434a1232/3895893b2236c062-e5/s540x810/07194c4cc1e0e81b9658c273592541d243ad6515.jpg"><a href="https://fyfluiddynamics.com/?p=14854">Researchers have observed their first &ldquo;space hurricane&rdquo; - a 1,000-km-wide vortex of plasma - in Earth&rsquo;s upper atmosphere. Like conventional hurricanes, this storm featured precipitation (of electrons rather than rain), a calm eye at its center, and several spiral arms</a>.  (Image credit: Q. Zhang; research credit: <a href="https://doi.org/10.1038/s41467-021-21459-y">Q. Zhang et al.</a>; via <a href="https://physicsworld.com/a/space-hurricane-observed-in-the-earths-upper-atmosphere/">Physics World</a>)
+
+
+<a href="https://fyfluiddynamics.com/?p=14854">Read the full article</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-06-14 10:01:47-05:00" class="dt-published"></time>
+  Mon 14 Jun 2021
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2021/06/space-hurricanes/" rel="bookmark" class="u-url"
+       title="Space Hurricanes" target="_blank">
+      <time class="m-date" datetime="2021-06-14 15:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Space Hurricanes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Researchers have observed their first &#8220;space hurricane&#8221; &#8211; a 1,000-km-wide vortex of plasma &#8211; in Earth&#8217;s upper atmosphere. Like conventional hurricanes, this storm featured precipitation (of electrons rather than rain), <a href="https://fyfluiddynamics.com/2021/06/space-hurricanes/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2021-06-14 15:00:00+00:00" class="dt-published"></time>
+  Mon 14 Jun 2021
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2021-06-14_Jirait_is_a_Gemini-based_MUSH" rel="bookmark" class="u-url"
+       title="Jirait is a Gemini-based MUSH" target="_blank">
+      <time class="m-date" datetime="2021-06-14 08:54:28+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Jirait is a Gemini-based MUSH
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Did you play in a MUD or MUSH, when you were younger? I did! I did spend some time in the Lochness MUD and on the Elendor MUSH. These were multi-user environments that felt a bit like a text adventure: you typed things like “look” and “north” to look around and move about; on a MUD you’d also fight monsters, on a MUSH it was all about the roleplaying. I loved it. </p><ul><li><a href="http://www.lochness.org/">Lochness MUD</a> </li><li><a href="http://www.elendor.net/">Elendor MUSH</a></li></ul><p>Well, I thinking: shouldn’t it be possible to reproduce this kind of environment using Gemini, the network protocol somewhere between Gopher and HTTP, and text format somewhere between plain text and Markdown? I’ve been working on a little extension to Phoebe to allow me to do that. Phoebe itself is a Gemini-based wiki and I don’t actually use any wiki …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-06-14 08:54:28+00:00" class="dt-published"></time>
+  Mon 14 Jun 2021
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/06/14/Provided-as-is-without-warranty.html" rel="bookmark" class="u-url"
+       title="Provided "as is", without warranty of any kind" target="_blank">
+      <time class="m-date" datetime="2021-06-14 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Provided "as is", without warranty of any kind
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The MIT license contains the following text, in all uppercase no less:</p>
+<blockquote>
+<p>THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</p>
+</blockquote>
+<p>The BSD licenses, GPL family of licenses, Apache 2.0, Mozilla Public License,
+and likely any other license you&rsquo;d care to name, have similar clauses of their
+own. It&rsquo;s worth taking a moment to consider the implications of this statement
+and what it says about the social aspects of free and open source software.</p>
+<p>Many people who rely on free and open source software feel entitled to some
+degree of workitude or support from the developers, or think that the developers
+have a responsibility to provide good maintenance, or any maintenance at all,
+for their work …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-06-14 00:00:00+00:00" class="dt-published"></time>
+  Mon 14 Jun 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2476/" rel="bookmark" class="u-url"
+       title="Base Rate" target="_blank">
+      <time class="m-date" datetime="2021-06-14 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Base Rate
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Sure, you can talk about per-capita adjustment, but if you want to solve the problem, it's obvious that this is the group you need to focus on." src="https://imgs.xkcd.com/comics/base_rate.png" title="Sure, you can talk about per-capita adjustment, but if you want to solve the problem, it's obvious that this is the group you need to focus on.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-06-14 00:00:00+00:00" class="dt-published"></time>
+  Mon 14 Jun 2021
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -272,171 +532,32 @@ wasn&#8217;t malice, it was a mistake!&#8221;   Then it would happen again.</p><
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6724644" rel="bookmark" class="u-url"
-       title="Child and family health nurses' roles in the care of infants and children: A scoping review" target="_blank">
-      <time class="m-date" datetime="2021-06-13 00:00:00+00:00">
+    <a href="http://www.scicombinator.com/articles/6724690" rel="bookmark" class="u-url"
+       title="Potential of AKT2 expression as a predictor of lymph-node metastasis in invasive breast carcinoma of no special type" target="_blank">
+      <time class="m-date" datetime="2021-06-12 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          13
+          12
         </span>
         2021
       </time>
       <div class="p-name">
-      Child and family health nurses' roles in the care of infants and children: A scoping review
+      Potential of AKT2 expression as a predictor of lymph-node metastasis in invasive breast carcinoma of no special type
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Child and family health nurses (CFHNs) work in a variety of settings with families to promote optimal growth and development in infants and children from birth to 5 years. Literature is available about models of care that CFHNs use in their work, but there is limited information about how CFHNs enact care specifically for infants and children. The aim of this scoping review was to identify and contextualize existing knowledge of how CFHNs, both in Australia and internationally, care for infants and children. Arksey and O'Malley's (2005) framework was used to review 27 studies from Australia, Sweden, Finland, United Kingdom (UK), United States of America (USA), Ireland, Netherlands, Denmark and Canada. It was identified that CFHNs, equipped with a range of assessment tools for early intervention and health promotion, use a partnership approach when working with parents to promote the …
+  Invasive breast carcinoma of no special type (IBC-NST) is the most common type of breast cancer and mainly causes regional lymph-node metastasis (LNM). We investigated the potential for AKT2 expression as a predictive biomarker for LNM in IBC-NST.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>J Grant</b></span>
-  on <time datetime="2021-06-13 00:00:00+00:00" class="dt-published"></time>
-  Sun 13 Jun 2021
+  <span class="p-author"><b>K Kusmardi</b></span>
+  on <time datetime="2021-06-12 00:00:00+00:00" class="dt-published"></time>
+  Sat 12 Jun 2021
   in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/tbernard/2021/06/11/community-power-1/" rel="bookmark" class="u-url"
-       title="Community Power Part 1: Misconceptions" target="_blank">
-      <time class="m-date" datetime="2021-06-11 15:46:11+00:00">
-        Jun
-        <span class="m-date-day">
-          11
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Community Power Part 1: Misconceptions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  People new to the GNOME community often have a hard time understanding how we set goals, make decisions, assume responsibility, prioritize tasks, and so on. In short: They wonder where the power is. When you don’t know how something works it’s natural to come up with a plausible story based on the available information. For … <a href="https://blogs.gnome.org/tbernard/2021/06/11/community-power-1/">Continue reading <span>Community Power Part 1: Misconceptions</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Tobias Bernard</b></span>
-  on <time datetime="2021-06-11 15:46:11+00:00" class="dt-published"></time>
-  Fri 11 Jun 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/653707194562412544/light-painting" rel="bookmark" class="u-url"
-       title="Light Painting" target="_blank">
-      <time class="m-date" datetime="2021-06-11 10:02:41-05:00">
-        Jun
-        <span class="m-date-day">
-          11
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Light Painting
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Light Painting" src="https://64.media.tumblr.com/bb9c868120603bee652c8047c7d9c548/ac60d25201cbf5af-cd/s540x810/62e7855bad68dd9ad02bed651cbada1349396415.jpg"><a href="https://fyfluiddynamics.com/?p=15130">Light streams from the branches of trees in this series from photographer Vitor Schietti. The effect is created with a combination of fireworks, long-exposure photography, and compositing. I love how the falling sparks create streaklines just like so many flow visualization diagnostics do</a>! (Image credit: <a href="https://schiettifotografia.com/">V. Schietti</a>; via <a href="https://www.thisiscolossal.com/2021/03/vitor-schietti-impermanent-sculptures/">Colossal</a>)
-
-
-<a href="https://fyfluiddynamics.com/?p=15130">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-06-11 10:02:41-05:00" class="dt-published"></time>
-  Fri 11 Jun 2021
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2021/06/light-painting/" rel="bookmark" class="u-url"
-       title="Light Painting" target="_blank">
-      <time class="m-date" datetime="2021-06-11 15:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          11
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Light Painting
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Light streams from the branches of trees in this series from photographer Vitor Schietti. The effect is created with a combination of fireworks, long-exposure photography, and compositing. I love how <a href="https://fyfluiddynamics.com/2021/06/light-painting/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-06-11 15:00:00+00:00" class="dt-published"></time>
-  Fri 11 Jun 2021
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2475/" rel="bookmark" class="u-url"
-       title="Health Drink" target="_blank">
-      <time class="m-date" datetime="2021-06-11 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          11
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Health Drink
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me." src="https://imgs.xkcd.com/comics/health_drink.png" title="You'd need to keep track of so many people! Would you use, like, Excel or something? Far too fancy for a simple country nanoenzyme developer like me.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-06-11 00:00:00+00:00" class="dt-published"></time>
-  Fri 11 Jun 2021
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -723,50 +844,6 @@ instruction formats, with an epic unexpected solution coming back from the&nbsp;
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://drewdevault.com/2021/06/07/The-Netherlands.html" rel="bookmark" class="u-url"
-       title="I will be moving to the Netherlands" target="_blank">
-      <time class="m-date" datetime="2021-06-07 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          07
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      I will be moving to the Netherlands
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I had been planning a move to the Netherlands for a while, at least until a
-large COVID-shaped wrench was thrown into the gears. However, I was fully
-vaccinated by early April, and there are signs of the border opening up now, so
-my plans have been slowly getting back on track. I sent off my visa application
-today, and assuming I can navigate the pandemic-modified procedures, I should be
-able to make my move fairly soon. It&rsquo;s a little bit intimidating, but I am
-looking forward to it!</p>
-<p><em>Quick note: I am looking for temporary housing in NL; somewhere I can stay for
-6-12 months with a permanent mailing address for receiving immigration-related
-documents. I would prefer to rent out a room than to use some kind of commercial
-accommodation, to be certain that I can receive mail …</em></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-06-07 00:00:00+00:00" class="dt-published"></time>
-  Mon 07 Jun 2021
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.python.org/dev/peps/pep-0661/" rel="bookmark" class="u-url"
        title="PEP 661: Sentinel Values" target="_blank">
       <time class="m-date" datetime="2021-06-06 00:00:00+00:00">
@@ -827,40 +904,6 @@ accommodation, to be certain that I can receive mail …</em></p>
   on <time datetime="2021-06-04 09:55:00+00:00" class="dt-published"></time>
   Fri 04 Jun 2021
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-06-01_The_Office" rel="bookmark" class="u-url"
-       title="The Office" target="_blank">
-      <time class="m-date" datetime="2021-06-01 13:41:19+00:00">
-        Jun
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      The Office
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Summer break is here. Four months of not doing much. Certainly nothing “productive” or “efficient”. It’s all going to be chill, it’s going to be done leisurely, and there won’t be any “point” to it. I bought myself a musical instrument and I want to get better at music stuff.</p><p>And then… who knows. Is the pandemic over in September? I just read <a href="https://www.bloomberg.com/news/articles/2021-06-01/return-to-office-employees-are-quitting-instead-of-giving-up-work-from-home">Employees Are Quitting Instead of Giving Up Working From Home</a>, by Anders Melin and Misyrlena Egkolfopoulou, for Bloomberg Wealth.</p><blockquote><p>The recruiter that approached her … asked what it would take to get her on board. She replied that she would prefer something 100% remote. “They said, ‘we can do that for you immediately.’”</p></blockquote><p> Right on.</p><p>I get so much more done at home. No babbling, no phone calls by other people, no discussions at the …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-06-01 13:41:19+00:00" class="dt-published"></time>
-  Tue 01 Jun 2021
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
