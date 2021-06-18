@@ -169,7 +169,7 @@ webmention as follows:</p>
   <a href="https://brid.gy/about#webmentions">mentioned here</a></li>
 <li>Send a request <a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL">using cURL</a></li>
 </ul>
-<div class="highlight"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwinvis.github.io/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+<div class="m-code"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwinvis.github.io/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 <span class="m">201</span> 
 content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
 cache-control: no-cache
@@ -195,7 +195,7 @@ content-length: <span class="m">3401</span>
 <ul>
 <li>Ensure that accidental duplicate posts are avoided.</li>
 </ul>
-<div class="highlight"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwinvis.github.io/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+<div class="m-code"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://ashwinvis.github.io/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 <span class="m">400</span> 
 content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
 cache-control: no-cache

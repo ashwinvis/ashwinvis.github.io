@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2021-05-16T12:41:13+02:00</updated><entry><title>Ternary operators</title><link href="https://ashwinvis.github.io/ternary-operators.html" rel="alternate"></link><published>2021-05-16T12:41:13+02:00</published><updated>2021-05-16T12:41:13+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-05-16:/ternary-operators.html</id><summary type="html">&lt;p&gt;Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the &lt;strong&gt;conditional expression&lt;/strong&gt; or &lt;strong&gt;ternary if-else
 "operator"&lt;/strong&gt; in Python. What it means is instead of:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Even or odd is defined for positive integers only!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -15,7 +15,7 @@ A good example of this is the &lt;strong&gt;conditional expression&lt;/strong&gt
 
 
 &lt;p&gt;you can write in a condensed yet easy to decipher:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Even or odd is defined for positive integers only!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -29,7 +29,7 @@ variables in more real-life codes.&lt;/p&gt;
 &lt;h2 id="in-other-languages"&gt;&lt;a class="toclink" href="#in-other-languages"&gt;In other languages&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
       &lt;span class="k"&gt;throw&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Even or odd is defined for positive integers only!&amp;quot;&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
@@ -43,7 +43,7 @@ needs to remember which side of the colon &lt;code&gt;:&lt;/code&gt; assumes the
 condition is &lt;code&gt;True&lt;/code&gt; and &lt;em&gt;vice versa&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id="c-style-ternary-operators-using-logical-operators"&gt;&lt;a class="toclink" href="#c-style-ternary-operators-using-logical-operators"&gt;C-style ternary operators using logical operators&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I found a trick to create similar obfuscated ternary operators in Python. Here it goes:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd_ugly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd_ugly&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Even or odd is defined for positive integers only!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -55,7 +55,7 @@ condition is &lt;code&gt;True&lt;/code&gt; and &lt;em&gt;vice versa&lt;/em&gt;.&
 It works because &lt;a href="https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not"&gt;how the logical boolean operators &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;
 short-circuits&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In Bash-like shells such expressions can be used to achieve the same effect:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;even_or_odd&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;even_or_odd&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
   &lt;span class="nb"&gt;local&lt;/span&gt; &lt;span class="nv"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;
 
   &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; x -le &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
@@ -72,7 +72,7 @@ short-circuits&lt;/a&gt;.&lt;/p&gt;
 commands returns a non-zero value in case of failure. This would be
 preferred over use of if-else constructs in Bash which, I think, are
 complicated in getting the syntax right.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir -p build
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir -p build
 ./build.sh &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Build successful!&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Build failed! Cleaning up ...&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm -r build
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -83,7 +83,7 @@ go on a tangent to look at some features baked into Python which further allow
 the need for if-else statements.&lt;/p&gt;
 &lt;h3 id="dictionary-lookup"&gt;&lt;a class="toclink" href="#dictionary-lookup"&gt;Dictionary lookup&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Instead of:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# assume the variable `color_of_fruits` is a dictionary&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# assume the variable `color_of_fruits` is a dictionary&lt;/span&gt;
 
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -93,14 +93,14 @@ the need for if-else statements.&lt;/p&gt;
 
 
 &lt;p&gt;you could use the oneliner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;color_of_fruits&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;apple&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Environment variables of the system are accessed via a special dictionary-like
 object &lt;code&gt;os.environ&lt;/code&gt;. However, for environment variables, there is a handy standard
 library function &lt;code&gt;os.getenv&lt;/code&gt; which is useful. Instead of:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;CC&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;c_compiler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CC&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -110,7 +110,7 @@ library function &lt;code&gt;os.getenv&lt;/code&gt; which is useful. Instead of:
 
 
 &lt;p&gt;use:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 
 &lt;span class="n"&gt;c_compiler&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getenv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;CC&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;gcc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -124,7 +124,7 @@ be raised.&lt;/p&gt;
 guarantee that the result would be what you expect. In that case you might need
 a fall-back value to work with. Take this naive case of reading and printing a
 file &lt;code&gt;config.cfg&lt;/code&gt; which is empty:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;config.cfg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -136,7 +136,7 @@ file &lt;code&gt;config.cfg&lt;/code&gt; which is empty:&lt;/p&gt;
 
 &lt;p&gt;From the previous discussion, we see that we can simplify it using
 conditional expressions as:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config_conditional&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config_conditional&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;config.cfg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
         &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;File is empty&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -145,7 +145,7 @@ conditional expressions as:&lt;/p&gt;
 
 &lt;p&gt;However in this case a cleaner option would be to use the short-circuiting
 property of the &lt;code&gt;or&lt;/code&gt; operator to assign a fall-back value.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config_fallback&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;print_config_fallback&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;config.cfg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;contents&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;File is empty&amp;quot;&lt;/span&gt;
         &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -707,7 +707,7 @@ webmention as follows:&lt;/p&gt;
   &lt;a href="https://brid.gy/about#webmentions"&gt;mentioned here&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Send a request &lt;a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL"&gt;using cURL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ curl -i -d &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://ashwinvis.github.io/tesing-indieweb-stack.html -d &lt;span class="nv"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ curl -i -d &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://ashwinvis.github.io/tesing-indieweb-stack.html -d &lt;span class="nv"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 &lt;span class="m"&gt;201&lt;/span&gt; 
 content-type: application/json&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;utf-8
 cache-control: no-cache
@@ -733,7 +733,7 @@ content-length: &lt;span class="m"&gt;3401&lt;/span&gt;
 &lt;ul&gt;
 &lt;li&gt;Ensure that accidental duplicate posts are avoided.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ curl -i -d &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://ashwinvis.github.io/tesing-indieweb-stack.html -d &lt;span class="nv"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ curl -i -d &lt;span class="nv"&gt;source&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://ashwinvis.github.io/tesing-indieweb-stack.html -d &lt;span class="nv"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 &lt;span class="m"&gt;400&lt;/span&gt; 
 content-type: application/json&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nv"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;utf-8
 cache-control: no-cache
@@ -1850,31 +1850,31 @@ is what I did following the instructions:&lt;/p&gt;
    Save it as &lt;code&gt;deletetweet.sh&lt;/code&gt; and make it executable.&lt;/li&gt;
 &lt;li&gt;And a personal twist: send delete requests in parallel:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweetstodelete.txt &lt;span class="p"&gt;|&lt;/span&gt; parallel -j4 &lt;span class="s2"&gt;&amp;quot;echo &amp;#39;Deleting {}&amp;#39; &amp;amp;&amp;amp; ./deletetweet.sh {}&amp;quot;&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&amp;gt; delete.log &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweetstodelete.txt &lt;span class="p"&gt;|&lt;/span&gt; parallel -j4 &lt;span class="s2"&gt;&amp;quot;echo &amp;#39;Deleting {}&amp;#39; &amp;amp;&amp;amp; ./deletetweet.sh {}&amp;quot;&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&amp;gt; delete.log &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
 tail -f delete.log
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;And the cURL command looks like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -s &lt;span class="s2"&gt;&amp;quot;https://api.twitter.com/1.1/statuses/destroy/&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.json&amp;quot;&lt;/span&gt; ...
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -s &lt;span class="s2"&gt;&amp;quot;https://api.twitter.com/1.1/statuses/destroy/&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.json&amp;quot;&lt;/span&gt; ...
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;So now I am down from 1400 tweets to 544 tweets. And the difference is almost
 correct:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ wc -l tweetstodelete.txt
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;❯ wc -l tweetstodelete.txt
 &lt;span class="m"&gt;844&lt;/span&gt; tweetstodelete.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;In step 3, the following command was used to extract the tweets with no
 interaction&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweet.json &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;.[] | select(.favorite_count == &amp;quot;0&amp;quot;) | select(.retweet_count == &amp;quot;0&amp;quot;) | select(has(&amp;quot;in_reply_to_user_id_str&amp;quot;) | not)  | .id&amp;#39;&lt;/span&gt; -r &amp;gt; tweetstodelete.txt&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweet.json &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;.[] | select(.favorite_count == &amp;quot;0&amp;quot;) | select(.retweet_count == &amp;quot;0&amp;quot;) | select(has(&amp;quot;in_reply_to_user_id_str&amp;quot;) | not)  | .id&amp;#39;&lt;/span&gt; -r &amp;gt; tweetstodelete.txt&lt;span class="sb"&gt;`&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;To get a list of all the tweets:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweet.json &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;.[] | .id&amp;#39;&lt;/span&gt; -r &amp;gt; tweetstodelete.txt
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweet.json &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;.[] | .id&amp;#39;&lt;/span&gt; -r &amp;gt; tweetstodelete.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1883,21 +1883,21 @@ interaction&lt;/p&gt;
 &lt;p&gt;Get a list of tweets to dislike from your archive in a
 similar approach. Take the &lt;code&gt;like.js&lt;/code&gt; file from your archive and make it a
 proper JSON file.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat like.json &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;.[] | .like.tweetId&amp;#39;&lt;/span&gt; -r &amp;gt;! tweetstodislike.txt
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat like.json &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;.[] | .like.tweetId&amp;#39;&lt;/span&gt; -r &amp;gt;! tweetstodislike.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;The POST request is also similar and contains "destroy". However the tweet ID
 should be in the data / payload. Therefore the curl command looks like (note
 the &lt;code&gt;$1&lt;/code&gt; where the tweet ID gets substituted):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 curl -s &lt;span class="s1"&gt;&amp;#39;https://api.twitter.com/1.1/favorites/destroy.json&amp;#39;&lt;/span&gt; ...lots of stuff here...&lt;span class="se"&gt;\&lt;/span&gt;
   --data&lt;span class="s2"&gt;&amp;quot;id=&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;amp;cards_platform=Web-13&amp;amp; ...even more stuff...&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Save the command in a file called &lt;code&gt;disliketweet.sh&lt;/code&gt; and then,&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweetstodislike.txt &lt;span class="p"&gt;|&lt;/span&gt; parallel -j4 &lt;span class="s2"&gt;&amp;quot;echo &amp;#39;Disliking {}&amp;#39; &amp;amp;&amp;amp; ./disliketweet.sh {}&amp;quot;&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&amp;gt; dislike.log &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
+&lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cat tweetstodislike.txt &lt;span class="p"&gt;|&lt;/span&gt; parallel -j4 &lt;span class="s2"&gt;&amp;quot;echo &amp;#39;Disliking {}&amp;#39; &amp;amp;&amp;amp; ./disliketweet.sh {}&amp;quot;&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&amp;gt;&amp;gt; dislike.log &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
 tail -f dislike.log
 &lt;/pre&gt;&lt;/div&gt;
 
