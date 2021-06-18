@@ -76,8 +76,8 @@ DIRECT_TEMPLATES = (
 
 MARKDOWN = {
     'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight'},
-        'markdown.extensions.toc': {'anchorlink': True},
+        'markdown.extensions.codehilite': {'css_class': 'm-code'},
+         'markdown.extensions.toc': {'anchorlink': True},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
     },
@@ -92,7 +92,7 @@ M_THEME_COLOR = "#22272e"
 with open("header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]
+PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata] #, myst_reader]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
 M_SITE_LOGO_TEXT = "@ashwinvis"
@@ -207,18 +207,11 @@ M_WEBMENTIONS = True
 PLUGINS += [
     #  webring,
     post_stats,
-    # myst_reader,
     #  markup,
     # "representative_image",
     # "tipue_search",
     # "pelican_bibtex",
 ]
-
-MYST_EXTENSIONS = [
-    "amsmath",
-    #  "dollarmath",
-]
-#  MYST_FORCE_SPHINX = True
 
 # ipynb
 MARKUP = ("md", "ipynb")
