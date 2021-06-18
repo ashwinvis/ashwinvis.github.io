@@ -10,7 +10,7 @@
     # via -r requirements.in
 -e ./src/pelican-planet
     # via -r requirements.in
-aiohttp==3.6.2
+aiohttp==3.7.4.post0
     # via
     #   -r requirements.in
     #   pelican-planet
@@ -128,6 +128,8 @@ text-unidecode==1.3
     # via python-slugify
 toolz==0.11.1
     # via -r requirements.in
+typing-extensions==3.10.0.0
+    # via aiohttp
 unidecode==1.2.0
     # via pelican
 urllib3==1.26.4
