@@ -1,5 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2021-06-10T23:49:40+02:00</updated><entry><title>GitHub - ashwinvis/ashwinvis-micropub</title><link href="https://ashwinvis.github.io/github-ashwinvis-ashwinvis-micropub.html" rel="alternate"></link><published>2021-06-10T23:49:40+02:00</published><updated>2021-06-10T23:49:40+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-06-10:/github-ashwinvis-ashwinvis-micropub.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Compared to last time I tried it (a year or two ago), now the &lt;a href="https://getindiekit.com"&gt;IndieKit project&lt;/a&gt; has matured and is fairly well documented. I have deployed my &lt;a href="https://github.com/ashwinvis/ashwinvis-micropub"&gt;micropub server&lt;/a&gt; to allow for effortless micro blogging to my Pelican blog. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/all.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2021-06-18T16:06:06+02:00</updated><entry><title>Show Your Stripes Day</title><link href="https://ashwinvis.github.io/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;The end of the COVID-19 pandemic is visible as vaccinations progress in most
+places across the world, slowly but surely,&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="COVID-19 vaccinations progress across the world as of 2021-06-18." src="images/coronavirus-data-explorer.svg" style="width: 100%" /&gt;
+&lt;figcaption&gt;Continent-wise share of people who received at least one dose of COVID-19
+vaccine.&lt;/figcaption&gt;
+&lt;span&gt;
+&lt;a href="https://ourworldindata.org/"&gt;Source&lt;/a&gt; CC-BY 4.0, Our world in data&lt;/span&gt;
+&lt;/figure&gt;
+&lt;p&gt;You and I must be looking forward to a return to normality and a happy ending
+as all children’s books end. However as all stories go, this is anything but
+the end. Humanity has been thrust into a series of struggles in this modern
+age. As I like to remind myself, it is humanity that needs saving — not life.
+Life always finds a way. We have to ensure that we are not the architects of
+our own doom.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://live.staticflickr.com/4033/5160100668_fb96c15527_b.jpg" alt="Life Will Find a Way" style="width: 100%"&gt;
+&lt;figcaption&gt;
+&lt;a href="https://www.flickr.com/photos/56413961@N00/5160100668"&gt;
+  "Life Will Find a Way"
+&lt;/a&gt;
+&lt;span&gt; by &lt;a href="https://www.flickr.com/photos/56413961@N00"&gt;JapanDave&lt;/a&gt;&lt;/span&gt; is licensed under &lt;a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&amp;atype=html" style="margin-right: 5px;"&gt;CC BY-NC-SA 2.0&lt;/a&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;Now we face the elephant in the room: the climate emergency, global heating
+(erstwhile, global warming) is still on. It did not take a break during the
+pandemic as most of us stopped commuting, travelling long distances and sat
+home for several months at a stretch. Why? It’s because the energy production
+and the economy continued to function as it has always been. A system with
+little incentive to reduce emissions without sweeping tax reforms and
+regulations to level the playing field.&lt;/p&gt;
+&lt;p&gt;Leading up to &lt;a href="https://nitter.snopyta.org/WMO/status/1405872275610554370#m"&gt;Show Your Stripes Day&lt;/a&gt; on 21 June, I took a moment to look at
+all the places I have lived.&lt;/p&gt;
+&lt;figure&gt;
+   &lt;video controls autoplay width="100%"&gt;
+
+       &lt;source src="/media/videos/stripes.mp4"
+               type="video/mp4"&gt;
+
+       Sorry, your browser doesn't support embedded videos.
+   &lt;/video&gt;
+   &lt;figcaption&gt;
+      &lt;a href="https://showyourstripes.info/"&gt;Source&lt;/a&gt;,
+      CC-BY 4.0,
+      Professor Ed Hawkins (University of Reading)
+   &lt;/figcaption&gt;
+&lt;/figure&gt;&lt;p&gt;Of the regions highlighted above, France and Kerala (India) have a stark
+contrast in the temperature anomalies in the past two decades. Naturally, in
+France owing to heat waves, there has been a wave of climate activism in recent
+years. I can vouch personally that summers in Kerala have been unbearable and I
+had to install air-conditioning in my home — something that was avoidable in
+my childhood. I also recall that during monsoon seasons of 2013 and &lt;a href="https://en.wikipedia.org/wiki/2018_Kerala_floods"&gt;2018&lt;/a&gt;
+triggered low depressions, widespread torrential rains to such an extent that
+dams had to be opened.&lt;/p&gt;
+&lt;p&gt;As most climate scientists believe, if the heating continues and more
+greenhouse gases are dumped into the atmosphere, unabated, then extreme events
+would become more frequent. I believe that you are aware of all of this. The data
+is clear. It is hot everywhere.&lt;/p&gt;
+</content><category term="Blog"></category><category term="life"></category><category term="climate"></category><category term="covid-19"></category></entry><entry><title>GitHub - ashwinvis/ashwinvis-micropub</title><link href="https://ashwinvis.github.io/github-ashwinvis-ashwinvis-micropub.html" rel="alternate"></link><published>2021-06-10T23:49:40+02:00</published><updated>2021-06-10T23:49:40+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-06-10:/github-ashwinvis-ashwinvis-micropub.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Compared to last time I tried it (a year or two ago), now the &lt;a href="https://getindiekit.com"&gt;IndieKit project&lt;/a&gt; has matured and is fairly well documented. I have deployed my &lt;a href="https://github.com/ashwinvis/ashwinvis-micropub"&gt;micropub server&lt;/a&gt; to allow for effortless micro blogging to my Pelican blog. &lt;/p&gt;
 &lt;p&gt;Since Pelican style metadata was not available, I had to implement it. I learned a bit of NodeJS development in the process - it was not easy.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>Micropub - IndieWeb | https://indieweb.org/</title><link href="https://ashwinvis.github.io/micropub-indieweb-https-indieweb-org.html" rel="alternate"></link><published>2021-06-10T22:39:46+02:00</published><updated>2021-06-10T22:39:46+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-06-10:/micropub-indieweb-https-indieweb-org.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Testing share function of my micropub server&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>Ternary operators</title><link href="https://ashwinvis.github.io/ternary-operators.html" rel="alternate"></link><published>2021-05-16T12:41:13+02:00</published><updated>2021-05-16T12:41:13+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-05-16:/ternary-operators.html</id><summary type="html">&lt;p&gt;Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the &lt;strong&gt;conditional expression&lt;/strong&gt; or &lt;strong&gt;ternary if-else
 "operator"&lt;/strong&gt; in Python. What it means is instead of:&lt;/p&gt;
