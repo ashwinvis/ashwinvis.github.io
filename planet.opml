@@ -59,6 +59,8 @@
         <outline title="Nikita Prokopov's blog" text="Nikita Prokopov's blog" type="rss" htmlUrl="https://tonsky.me/" xmlUrl="https://tonsky.me/blog/atom.xml"/>
         <outline title="Julia Evans" text="Julia Evans" type="rss" htmlUrl="https://jvns.ca" xmlUrl="https://jvns.ca/atom.xml"/>
         <outline title="Wizard Zines" text="Wizard Zines" type="rss" htmlUrl="https://wizardzines.com" xmlUrl="https://wizardzines.com/index.xml"/>
+        <outline title="Pluralistic" text="Pluralistic" type="rss" htmlUrl="https://pluralistic.net/" xmlUrl="https://pluralistic.net/feed/"/>
+        <outline title="noyb" text="noyb" type="rss" htmlUrl="https://noyb.eu/en" xmlUrl="https://noyb.eu/en/rss"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
