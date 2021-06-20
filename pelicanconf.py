@@ -200,7 +200,7 @@ if not shutil.which("latex"):
 # This disables it
 M_COLLAPSE_FIRST_ARTICLE = True
 
-M_BRIDGY_PUBLISH = "mastodon"
+#  M_BRIDGY_PUBLISH = "mastodon"
 
 M_WEBMENTIONS = True
 
