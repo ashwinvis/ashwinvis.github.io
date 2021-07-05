@@ -153,6 +153,231 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nibblestew.blogspot.com/2021/07/looking-at-performance-of-refterm.html" rel="bookmark" class="u-url"
+       title="Looking at the performance of Refterm" target="_blank">
+      <time class="m-date" datetime="2021-07-04 23:02:00+00:00">
+        Jul
+        <span class="m-date-day">
+          04
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Looking at the performance of Refterm
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Recently a known strong-opinion-holder Casey Muratori wrote a reference implementation for a new fast terminal renderer.  The goal is (as far as I can tell) to implement the same functionality as existing terminals using a lot less resources. The code is <a href="https://github.com/cmuratori/refterm">here</a> and according to the readme it supports, for example:</p><p></p><div><ul><li>All of Unicode, including combining characters and right-to-left text like Arabic</li><li>Line wrapping</li><li>Reflowing line wrapping on terminal resize</li></ul>The tests they perform show that the new terminal works several orders of magnitude faster than the default terminals in Windows. Seems nice, so let's do a simple code review to see how it actually stacks up.</div>Code setup<p>The code is arranged in a very non-standard way. There are two main source files, one C and one C++ that are built with a BAT file. Those files first <span>#define …</span></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2021-07-04 23:02:00+00:00" class="dt-published"></time>
+  Sun 04 Jul 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2021-07-04_Links_without_scheme" rel="bookmark" class="u-url"
+       title="Links without scheme" target="_blank">
+      <time class="m-date" datetime="2021-07-04 15:55:54+00:00">
+        Jul
+        <span class="m-date-day">
+          04
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Links without scheme
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I often write my blog posts using Elpher, a Gemini client for Emacs (a browser), using Gemini Mode (markup highlighting), posting them using Gemini Write (support for the Titan protocol). This Elpher setup ends up being smoother than using Eww (the Emacs Web Wowser, i.e. a web browser), and smoother than using Oddmuse Curl (the Oddmuse client for Emacs using curl).</p><p>When checking on the blog, when writing comments, I often use Firefox. Thus, I look at my own posts the Gemini browser Elpher, and the web browser Firefox. So how do I link from one page to the next? If I write “https://alexschroeder.ch/wiki/About” then following the link from Elpher opens it in the web browser Eww. If I write “gemini://alexschroeder.ch/page/About” then following the link from Firefox launches the Gemini browser …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-07-04 15:55:54+00:00" class="dt-published"></time>
+  Sun 04 Jul 2021
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nxos.org/news/updates-calamares-qml/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Updates: Calamares and QML" target="_blank">
+      <time class="m-date" datetime="2021-07-04 14:02:54+00:00">
+        Jul
+        <span class="m-date-day">
+          04
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Updates: Calamares and QML
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p> </p>
+
+<img alt="" src="//nxos.org/wp-content/uploads/2021/06/promo-1024x658.png">Calamares and QML
+<p>Calamares has been getting some refactoring to its modules to support QML as an alternative to QWidgets; for now, most of the module steps used by the Nitrux are being made available in QML.</p>
+<p>Porting modules to be used by QML is an ongoing task. Many more modules could benefit from this refactoring, so if you feel adventurous, you can join the team behind Calamares to have a much more versatile installing framework.</p>
+<p><a href="//github.com/calamares/calamares">https://github.com/calamares/calamares</a></p>
+<p>Some modules are still pending, like the <em>Partition</em> module, and if you want to help, you can fork Calamares, check how other modules were ported, and then create a merge request.</p>
+<p>To create a new QML style, you will need to import the following modules from Calamares:</p>
+<pre>import io.calamares.ui 1.0
+import io.calamares.core 1.0 …</pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Maui Project</b></span>
+  on <time datetime="2021-07-04 14:02:54+00:00" class="dt-published"></time>
+  Sun 04 Jul 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2021/07/2021-07-04-tyjca" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-07-04 09:06:00+02:00">
+        Jul
+        <span class="m-date-day">
+          04
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The swans have a meeting? 🦢🏞️
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-07-04 09:06:00+02:00" class="dt-published"></time>
+  Sun 04 Jul 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/07/04/Is-GitHub-a-derivative-work.html" rel="bookmark" class="u-url"
+       title="Is GitHub a derivative work of GPL'd software?" target="_blank">
+      <time class="m-date" datetime="2021-07-04 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          04
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Is GitHub a derivative work of GPL'd software?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>GitHub recently announced a tool called <a href="https://copilot.github.com">Copilot</a>, a tool which uses machine
+learning to provide code suggestions, inciting no small degree of controversy.
+One particular facet of the ensuing discussion piques my curiosity: what happens
+if the model was trained using software licensed with the GNU General Public
+License?</p>
+<p><em>Disclaimer: I am the founder of a company which competes with GitHub.</em></p>
+<p>The GPL is among a family of licenses considered &ldquo;copyleft&rdquo;, which are
+characterized by their &ldquo;viral&rdquo; nature. In particular, the trait common to
+copyleft works is the requirement that &ldquo;derivative works&rdquo; are required to
+publish their new work under the same terms as the original copyleft license.
+Some weak copyleft licenses, like the Mozilla Public License, only apply to any
+changes to specific files from the original code. Stronger licenses like the GPL
+family affect the broader work that …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-07-04 00:00:00+00:00" class="dt-published"></time>
+  Sun 04 Jul 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6777340" rel="bookmark" class="u-url"
+       title="The association between breast cancer capacity and resources with incidence and mortality in Arizona's low populous counties" target="_blank">
+      <time class="m-date" datetime="2021-07-04 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          04
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      The association between breast cancer capacity and resources with incidence and mortality in Arizona's low populous counties
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  While cancer deaths have decreased nationally, declines have been much slower in rural areas than in urban areas. Previous studies on rural cancer service capacity are limited to specific points along the cancer care continuum (eg screening, diagnosis or treatment) and require updating to capture the current rural health landscape since implementation of the 2010 Affordable Care Act in the USA. The association between current rural cancer service capacity across the cancer care continuum and cancer incidence and death is unclear. This cross-sectional study explored the association between breast cancer service capacity and incidence and mortality in Arizona's low populous counties.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>EA Calhoun</b></span>
+  on <time datetime="2021-07-04 00:00:00+00:00" class="dt-published"></time>
+  Sun 04 Jul 2021
+  in SciCombinator - Last 10 Days.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pluralistic.net/2021/07/03/beautiful-symmetry/" rel="bookmark" class="u-url"
        title="Pluralistic: 03 Jul 2021" target="_blank">
       <time class="m-date" datetime="2021-07-03 18:33:44+00:00">
@@ -179,203 +404,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-07-03 18:33:44+00:00" class="dt-published"></time>
   Sat 03 Jul 2021
   in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/links/2021/07/untold-sqlite" rel="bookmark" class="u-url"
-       title=""The Untold Story of SQLite"" target="_blank">
-      <time class="m-date" datetime="2021-07-03 20:31:09+02:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      "The Untold Story of SQLite"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I like listening to interviews with SQLite developer Richard Hipp (as you may know). He’s a great storyteller and you can always learn something new from him. This podcast episode is no exception.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-03 20:31:09+02:00" class="dt-published"></time>
-  Sat 03 Jul 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2021/07/03/kde-pim-may-june-2021.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="May/June in KDE PIM" target="_blank">
-      <time class="m-date" datetime="2021-07-03 06:45:00+00:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      May/June in KDE PIM
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Since the <a href="//www.volkerkrause.eu/2021/05/01/kde-pim-march-april-2021.html">last report</a>
-two month ago there have been two 21.04 patch releases of <a href="//kontact.kde.org/">Kontact</a>,
-and more than 1300 changes by more than 30 contributors have been integrated. Here are some of the highlights.</p>
-
-Kontact
-
-<p>A large focus remains preparing for the upcoming migration to Qt6 and KF6.
-This mainly consists of porting away from deprecated functionality in Qt and KDE Frameworks,
-as well as moving to more modern build system or C++ constructs. While not having any visible impact
-right now, this will allow for a smoother transition down the line. Particular noteworthy
-this time are the new recent files menu code and the still ongoing work on modernizing
-the various plugin related code paths.</p>
-
-<p>But that’s not all of course:</p>
-<ul>
-  <li>The KDE Kiosk setting to allow revealing passwords in their respective entry fields
-is now …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2021-07-03 06:45:00+00:00" class="dt-published"></time>
-  Sat 03 Jul 2021
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/07/03/How-does-IRC-federate.html" rel="bookmark" class="u-url"
-       title="How does IRC's federation model compare to ActivityPub?" target="_blank">
-      <time class="m-date" datetime="2021-07-03 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How does IRC's federation model compare to ActivityPub?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today&rsquo;s federated revolution is led by ActivityPub, leading to the rise of
-services like Mastodon, PeerTube, PixelFed, and more. These new technologies
-have a particular approach to federation, which is coloring perceptions on what
-it actually means for a system to be federated at all. Today&rsquo;s post will explain
-how <a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat">Internet Relay Chat</a>
-(IRC), a technology first introduced in the late 1980&rsquo;s, does federation
-differently, and why.</p>
-<p>As IRC has aged, many users today have only ever used a few networks, such as
-Liberachat (or Freenode, up until several weeks ago), which use a particular IRC
-model which does not, at first glance, appear to utilize federation. After all,
-everyone types &ldquo;irc.libera.chat&rdquo; into their client and they all end up on the
-same network and in the same namespace. However, this domain name is backed …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-03 00:00:00+00:00" class="dt-published"></time>
-  Sat 03 Jul 2021
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://www.scicombinator.com/articles/6768862" rel="bookmark" class="u-url"
-       title="Low-Dose Naltrexone Use for Patients with Chronic Regional Pain Syndrome: A Systematic Literature Review" target="_blank">
-      <time class="m-date" datetime="2021-07-03 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Low-Dose Naltrexone Use for Patients with Chronic Regional Pain Syndrome: A Systematic Literature Review
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Complex regional pain syndrome is a rare, neuropathic disorder that affects fewer than 200,000 individuals in the United States annually. Current treatments often focus on pain management and fall short of relieving symptoms of pain and dystonia in patients.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>J Italiano</b></span>
-  on <time datetime="2021-07-03 00:00:00+00:00" class="dt-published"></time>
-  Sat 03 Jul 2021
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://feaneron.com/2021/07/02/dark-light-style-selector-in-to-do/" rel="bookmark" class="u-url"
-       title="Dark & light style selector in To Do" target="_blank">
-      <time class="m-date" datetime="2021-07-02 17:45:01+00:00">
-        Jul
-        <span class="m-date-day">
-          02
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Dark & light style selector in To Do
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  We just started the development cycle of GNOME 41 for GNOME To Do, and the first new feature is a dark &amp; light style variant selector: There’s a lot to be done to make To Do actually useful. The inbox view is essentially useless as it is right now. It really needs more system-wide integration … <a href="https://feaneron.com/2021/07/02/dark-light-style-selector-in-to-do/">Continue reading <span>Dark &amp; light style selector in To Do</span> <span>→</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>feaneron</b></span>
-  on <time datetime="2021-07-02 17:45:01+00:00" class="dt-published"></time>
-  Fri 02 Jul 2021
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -484,40 +512,6 @@ same network and in the same namespace. However, this domain name is backed …<
   on <time datetime="2021-07-02 00:00:00+00:00" class="dt-published"></time>
   Fri 02 Jul 2021
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-07-01_How_to_make_conversation" rel="bookmark" class="u-url"
-       title="How to make conversation" target="_blank">
-      <time class="m-date" datetime="2021-07-01 20:39:27+00:00">
-        Jul
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How to make conversation
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>How does one make conversation? It’s something you have to learn, for sure. It’s tricky both offline and online. Here’s an example I’m running into sometimes: I post about a thing, something with multiple facets, multiple points of view, layers of understanding – and most interesting things out in the real world seem to be like that. Think of it as survivor bias: all the boring things, all the things with easy answers, all the things with obvious solutions – they are already answered, these problems are already solved. The interesting things that remain are either very new, or they require nuance.</p><p>Therefore, the first rule of replies is this: this is a thing in the real world, there’s probably some nuance to it. There are probably more layers to it than fit into the words and …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-01 20:39:27+00:00" class="dt-published"></time>
-  Thu 01 Jul 2021
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
