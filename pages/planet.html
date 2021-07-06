@@ -153,31 +153,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nibblestew.blogspot.com/2021/07/looking-at-performance-of-refterm.html" rel="bookmark" class="u-url"
-       title="Looking at the performance of Refterm" target="_blank">
-      <time class="m-date" datetime="2021-07-04 23:02:00+00:00">
+    <a href="https://blogs.gnome.org/chergert/2021/07/05/gtksourceview-searching-with-pcre2/" rel="bookmark" class="u-url"
+       title="GtkSourceView Searching with PCRE2" target="_blank">
+      <time class="m-date" datetime="2021-07-05 23:15:31+00:00">
         Jul
         <span class="m-date-day">
-          04
+          05
         </span>
         2021
       </time>
       <div class="p-name">
-      Looking at the performance of Refterm
+      GtkSourceView Searching with PCRE2
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Recently a known strong-opinion-holder Casey Muratori wrote a reference implementation for a new fast terminal renderer.  The goal is (as far as I can tell) to implement the same functionality as existing terminals using a lot less resources. The code is <a href="https://github.com/cmuratori/refterm">here</a> and according to the readme it supports, for example:</p><p></p><div><ul><li>All of Unicode, including combining characters and right-to-left text like Arabic</li><li>Line wrapping</li><li>Reflowing line wrapping on terminal resize</li></ul>The tests they perform show that the new terminal works several orders of magnitude faster than the default terminals in Windows. Seems nice, so let's do a simple code review to see how it actually stacks up.</div>Code setup<p>The code is arranged in a very non-standard way. There are two main source files, one C and one C++ that are built with a BAT file. Those files first <span>#define …</span></p>
+  Last year I did some work to make GtkSourceView use PCRE2 for syntax highlighting. The primary motivation there was to improve syntax highlighting performance by using PCRE2’s JIT capability. However, that left us in an odd place with how GtkSourceSearchContext works for regex-enabled search. It was using GRegex which itself uses PCRE (1). It’s pretty … <a href="https://blogs.gnome.org/chergert/2021/07/05/gtksourceview-searching-with-pcre2/">Continue reading <span>GtkSourceView Searching with PCRE2</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2021-07-04 23:02:00+00:00" class="dt-published"></time>
-  Sun 04 Jul 2021
+  <span class="p-author"><b>chergert</b></span>
+  on <time datetime="2021-07-05 23:15:31+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -187,32 +187,240 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-07-04_Links_without_scheme" rel="bookmark" class="u-url"
-       title="Links without scheme" target="_blank">
-      <time class="m-date" datetime="2021-07-04 15:55:54+00:00">
+    <a href="https://blog.kitware.com/holograms-how-to-with-tomviz/" rel="bookmark" class="u-url"
+       title="Desktop Holograms for Materials Science: How-to with Tomviz" target="_blank">
+      <time class="m-date" datetime="2021-07-05 17:57:20+00:00">
         Jul
         <span class="m-date-day">
-          04
+          05
         </span>
         2021
       </time>
       <div class="p-name">
-      Links without scheme
+      Desktop Holograms for Materials Science: How-to with Tomviz
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>I often write my blog posts using Elpher, a Gemini client for Emacs (a browser), using Gemini Mode (markup highlighting), posting them using Gemini Write (support for the Titan protocol). This Elpher setup ends up being smoother than using Eww (the Emacs Web Wowser, i.e. a web browser), and smoother than using Oddmuse Curl (the Oddmuse client for Emacs using curl).</p><p>When checking on the blog, when writing comments, I often use Firefox. Thus, I look at my own posts the Gemini browser Elpher, and the web browser Firefox. So how do I link from one page to the next? If I write “https://alexschroeder.ch/wiki/About” then following the link from Elpher opens it in the web browser Eww. If I write “gemini://alexschroeder.ch/page/About” then following the link from Firefox launches the Gemini browser …</p></div>
+  <p>Kitware has added Looking Glass Factory holographic display support to its materials science visualization application, Tomviz. ... <a href="https://blog.kitware.com/holograms-how-to-with-tomviz/">Read More</a></p>
+<p>The post <a href="https://blog.kitware.com/holograms-how-to-with-tomviz/">Desktop Holograms for Materials Science: How-to with Tomviz</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Patrick Avery</b></span>
+  on <time datetime="2021-07-05 17:57:20+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2021/07/05/ideomotor-response/" rel="bookmark" class="u-url"
+       title="Pluralistic: 05 Jul 2021" target="_blank">
+      <time class="m-date" datetime="2021-07-05 16:17:04+00:00">
+        Jul
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Pluralistic: 05 Jul 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Conspiracy fantasy: The political significance and personal appeal of conspiratorialism. Podcasting "Self Publishing": My column on monopolism, publishing, and the fortunes of authors. This day in history: 2001, 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Conspiracy fantasy (permalink) When we talk about conspiratorialism, we tend to focus (naturally) on the content of the conspiracy. Not only are those stories entertainingly outlandish &#8211; they're also the point of contact between conspiracists and the world. If your mom is shouting about "Hollywood pedos," it's natural that you'll end up discussing the relationship of this belief to observable reality. But while the content of conspiratorial beliefs gets lots of attention, we tend to neglect the significance of those beliefs. To the extent that we consider why the beliefs exist and proliferate, the discussion rarely gets …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2021-07-05 16:17:04+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/655881521822154752/the-variable-venusian-day" rel="bookmark" class="u-url"
+       title="The Variable Venusian Day" target="_blank">
+      <time class="m-date" datetime="2021-07-05 10:02:41-05:00">
+        Jul
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      The Variable Venusian Day
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="The Variable Venusian Day" src="https://64.media.tumblr.com/cd19219ea6fac2a7101420296434e805/248bb3cad248c16a-27/s540x810/b8350eedac86375aa6fca1637e242ae5b4378072.jpg"><a href="https://fyfluiddynamics.com/?p=15317">Venus</a><a> is a thoroughly unpleasant place thanks to its hellish temperatures and acidic clouds, but a new study adds another wrinkle to our strange sister planet: Venus&rsquo;s day varies by up to 21 minutes in length</a>.  (Image credit: <a href="https://photojournal.jpl.nasa.gov/catalog/PIA23791">NASA/JPL-Caltech</a>; research credit: <a href="https://doi.org/10.1038/s41550-021-01339-7">J. Margot et al.</a>; via <a href="https://eos.org/articles/fifteen-years-of-radar-reveal-venuss-most-basic-facts">AGU Eos</a>; submitted by <a href="https://twitter.com/sohkamyung/status/1399972502135136258">Kam-Yung Soh</a>)
+
+
+<a href="https://fyfluiddynamics.com/?p=15317">Read the full article</a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-04 15:55:54+00:00" class="dt-published"></time>
-  Sun 04 Jul 2021
+  on <time datetime="2021-07-05 10:02:41-05:00" class="dt-published"></time>
+  Mon 05 Jul 2021
+  in FYFD.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fyfluiddynamics.com/2021/07/the-variable-venusian-day/" rel="bookmark" class="u-url"
+       title="The Variable Venusian Day" target="_blank">
+      <time class="m-date" datetime="2021-07-05 15:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      The Variable Venusian Day
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Venus is a thoroughly unpleasant place thanks to its hellish temperatures and acidic clouds, but a new study adds another wrinkle to our strange sister planet: Venus&#8217;s day varies by <a href="https://fyfluiddynamics.com/2021/07/the-variable-venusian-day/">Keep reading</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicole Sharp</b></span>
+  on <time datetime="2021-07-05 15:00:00+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
+  in FYFD Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2021-07-05_Processing_images" rel="bookmark" class="u-url"
+       title="Processing images" target="_blank">
+      <time class="m-date" datetime="2021-07-05 12:07:37+00:00">
+        Jul
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Processing images
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>I use “sitelen mute” to create my image galleries. But how do I get my pictures there?</p><p>I usually dump all the pictures from phones and cameras into a big folder called “New”. Bad idea, but better than no backups, I guess.</p><pre>~/Pictures/New</pre><p>Sometimes I go through that folder and try to sort them into folders by year and topic. Care must be taken to not be overly specific otherwise the task never ends. About a dozen or two dozen subfolders per year usually do it. A subfolder per trip, for example!</p><pre>~/Pictures/2020/Rorschacherberg</pre><p>Sometimes I pick the nice ones to make an album. Like this one, from 2020. That is, I use “Geequie” in that folder and mark all the the images I want in the album by pressing “1”. I sometimes assign other meanings to the …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-07-05 12:07:37+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
   in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2485/" rel="bookmark" class="u-url"
+       title="Nightmare Code" target="_blank">
+      <time class="m-date" datetime="2021-07-05 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Nightmare Code
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Charsets even used to be known as 'alpha-bets' before that word's obvious negative associations caused it to die out." src="https://imgs.xkcd.com/comics/nightmare_code.png" title="Charsets even used to be known as 'alpha-bets' before that word's obvious negative associations caused it to die out.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-07-05 00:00:00+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6777344" rel="bookmark" class="u-url"
+       title="Rabies Infection: An Overview of Lyssavirus-Host Protein Interactions" target="_blank">
+      <time class="m-date" datetime="2021-07-05 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Rabies Infection: An Overview of Lyssavirus-Host Protein Interactions
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Viruses are obligatory intracellular parasites that use cell proteins to take the control of the cell functions in order to accomplish their life cycle. Studying the viral-host interactions would increase our knowledge of the viral biology and mechanisms of pathogenesis. Studies on pathogenesis mechanisms of lyssaviruses, which are the causative agents of rabies, have revealed some important host protein partners for viral proteins, especially for most studied species, i.e. Rabies virus. In this review article, the key physical lyssavirus-host protein interactions, their contributions to rabies infection, and their exploitation are discussed to improve the knowledge about rabies pathogenesis.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>B Vaziri</b></span>
+  on <time datetime="2021-07-05 00:00:00+00:00" class="dt-published"></time>
+  Mon 05 Jul 2021
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -344,8 +552,8 @@ family affect the broader work that …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6777340" rel="bookmark" class="u-url"
-       title="The association between breast cancer capacity and resources with incidence and mortality in Arizona's low populous counties" target="_blank">
+    <a href="https://www.scivision.dev/tmux-vs-screen-disconnect/" rel="bookmark" class="u-url"
+       title="Keep program running after disconnect" target="_blank">
       <time class="m-date" datetime="2021-07-04 00:00:00+00:00">
         Jul
         <span class="m-date-day">
@@ -354,199 +562,38 @@ family affect the broader work that …</p>
         2021
       </time>
       <div class="p-name">
-      The association between breast cancer capacity and resources with incidence and mortality in Arizona's low populous counties
+      Keep program running after disconnect
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  While cancer deaths have decreased nationally, declines have been much slower in rural areas than in urban areas. Previous studies on rural cancer service capacity are limited to specific points along the cancer care continuum (eg screening, diagnosis or treatment) and require updating to capture the current rural health landscape since implementation of the 2010 Affordable Care Act in the USA. The association between current rural cancer service capacity across the cancer care continuum and cancer incidence and death is unclear. This cross-sectional study explored the association between breast cancer service capacity and incidence and mortality in Arizona's low populous counties.
+  <p><a href="https://www.gnu.org/software/screen/manual/screen.html#Overview">Screen</a>
+is a terminal multiplexer program available for Linux, MacOS, BSD and similar.
+Screen allows programs to continue running after a remote user disconnects.
+If a remote connection is lost unintentionally, screen may not allow reconnection by default by the usual</p>
+<div><pre><code>screen -list
+screen -r &lt;id&gt;
+</code></pre></div><p>normally allows reconnecting to a remote session after logging off.
+When a connection is lost before disconnecting from <code>screen</code>, you may need the &ldquo;-x&rdquo; option:</p>
+<div><pre><code>screen -x &lt;id&gt;
+</code></pre></div><p>A downside of screen is the difficulty scrolling back in history.
+Although screen is a mature project, development is still
+<a href="https://git.savannah.gnu.org/cgit/screen.git">ongoing</a>.</p>
+<p>Screen is a terminal multiplexer, and some prefer
+<a href="https://github.com/tmux/tmux/wiki">tmux</a>
+over screen.
+Another option is using
+<a href="https://linux.die.net/man/1/nohup">nohup</a>.</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>EA Calhoun</b></span>
+  <span class="p-author"><b>Anonymous</b></span>
   on <time datetime="2021-07-04 00:00:00+00:00" class="dt-published"></time>
   Sun 04 Jul 2021
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2021/07/03/beautiful-symmetry/" rel="bookmark" class="u-url"
-       title="Pluralistic: 03 Jul 2021" target="_blank">
-      <time class="m-date" datetime="2021-07-03 18:33:44+00:00">
-        Jul
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Pluralistic: 03 Jul 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links The future is symmetrical: Broadband netizens vs asymmetrical mouse-potatoes. This day in history: 2006, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The future is symmetrical (permalink) When Mitch Kapor articulated the principle that "architecture is politics" at the founding of EFF, he was charging technologists with the moral duty to contemplate the kinds of social interactions their technological decisions would facilitate &#8211; and prohibit. At question was nothing less than the character of the networked society. Would the vast, pluripotent, general purpose, interconnected network serve as a glorified video-on-demand service, the world's greatest pornography distribution system, a giant high-tech mall? Or could it be a public square, and if so, who would have the loudest voices in that square, who would be excluded from it, who will set its rules, and how will …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2021-07-03 18:33:44+00:00" class="dt-published"></time>
-  Sat 03 Jul 2021
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fuckyeahfluiddynamics.tumblr.com/post/655609642970497024/phoenix-rising" rel="bookmark" class="u-url"
-       title=""Phoenix Rising"" target="_blank">
-      <time class="m-date" datetime="2021-07-02 10:01:16-05:00">
-        Jul
-        <span class="m-date-day">
-          02
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      "Phoenix Rising"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="" src="https://64.media.tumblr.com/763ea76b9a872061111440eef9e2fecf/53f8677655ebd8bd-49/s540x810/24650f52f8f8ae73eabec399de27a0390bfe3a0b.jpg">
-
-
-    This <a href="https://droneawards.photo/gallery/photo/57726">aerial photo of Lake Owens by Paul Hoelen</a> won a 2020 Drone Photo Award in the Abstract category. As Hoelen notes, &ldquo;The phoenix rising is a symbol of re-emergence from the ashes of fire.&rdquo; (Image credit: <a href="https://droneawards.photo/gallery/photo/57726">P. Hoelen</a>; via <a href="https://www.thisiscolossal.com/2020/09/2020-drone-photography-contest/">Colossal</a>)
-
-
-<a href="https://fyfluiddynamics.com/?p=15302">Read the full article</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-02 10:01:16-05:00" class="dt-published"></time>
-  Fri 02 Jul 2021
-  in FYFD.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fyfluiddynamics.com/2021/07/phoenix-rising/" rel="bookmark" class="u-url"
-       title="“Phoenix Rising”" target="_blank">
-      <time class="m-date" datetime="2021-07-02 15:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          02
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      “Phoenix Rising”
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This aerial photo of Lake Owens by Paul Hoelen won a 2020 Drone Photo Award in the Abstract category. As Hoelen notes, &#8220;The phoenix rising is a symbol of re-emergence <a href="https://fyfluiddynamics.com/2021/07/phoenix-rising/">Keep reading</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicole Sharp</b></span>
-  on <time datetime="2021-07-02 15:00:00+00:00" class="dt-published"></time>
-  Fri 02 Jul 2021
-  in FYFD Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2484/" rel="bookmark" class="u-url"
-       title="H-alpha" target="_blank">
-      <time class="m-date" datetime="2021-07-02 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          02
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      H-alpha
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="&quot;All the companies whose blimps I shot fireworks at are mad, but MetLife is especially miffed because I dressed up as the Red Baron.&quot;" src="https://imgs.xkcd.com/comics/h_alpha.png" title="&quot;All the companies whose blimps I shot fireworks at are mad, but MetLife is especially miffed because I dressed up as the Red Baron.&quot;">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-02 00:00:00+00:00" class="dt-published"></time>
-  Fri 02 Jul 2021
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.kitware.com/integrating-geometric-deep-learning-models-into-paraview/" rel="bookmark" class="u-url"
-       title="Integrating Geometric Deep-Learning models into Paraview" target="_blank">
-      <time class="m-date" datetime="2021-07-01 12:21:10+00:00">
-        Jul
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Integrating Geometric Deep-Learning models into Paraview
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Developed by the Swiss-based company Neural Concept, Neural Concept Software (NCS) is a 3D deep-learning software for engineering. It allows training non-parametric surrogate models to ... <a href="https://blog.kitware.com/integrating-geometric-deep-learning-models-into-paraview/">Read More</a></p>
-<p>The post <a href="https://blog.kitware.com/integrating-geometric-deep-learning-models-into-paraview/">Integrating Geometric Deep-Learning models into Paraview</a> appeared first on <a href="https://blog.kitware.com">Kitware Blog</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Helene Grandmontagne</b></span>
-  on <time datetime="2021-07-01 12:21:10+00:00" class="dt-published"></time>
-  Thu 01 Jul 2021
-  in Kitware blog - Paraview.
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -694,61 +741,6 @@ differences in behavior in IDLE and other Tk-based applications …</p>
   on <time datetime="2021-06-28 15:10:48.452000-04:00" class="dt-published"></time>
   Mon 28 Jun 2021
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-default-install-prefix/" rel="bookmark" class="u-url"
-       title="Avoid overriding CMake default install prefix" target="_blank">
-      <time class="m-date" datetime="2021-06-27 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          27
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Avoid overriding CMake default install prefix
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>CMake FetchContent is useful to incorporate subprojects at configure time.
-FetchContent subproject cache variables can override the top-level project cache, which can be confusing.
-A particular instance we&rsquo;ve found problematic is overriding the CMake default install prefix.
-A top level project desiring to install to the CMake default location will get a surprising result if the child project overrides this.</p>
-<div><pre><code><span># DON'T DO THIS
-</span><span></span><span>
-</span><span></span>if(<span>CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT</span>)<span>
-</span><span></span> <span># will not take effect without FORCE
-</span><span></span> set(<span>CMAKE_INSTALL_PREFIX</span> <span>${</span>PROJECT_BINARY_DIR<span>}</span> <span>CACHE</span> <span>PATH</span> <span>"Install top-level directory"</span> <span>FORCE</span>)<span>
-</span><span></span>endif()<span>
-</span></code></pre></div><p>Instead, we recommend projects, including projects intended to be consumed via FetchContent use CMakePresets.json to set the default install directory:</p>
-<div><pre><code>{
-<span>"version"</span>: <span>3</span>,
-<span>"configurePresets"</span>: [
-{
-<span>"name"</span>: <span>"default"</span>,
-<span>"binaryDir"</span>: <span>"${sourceDir}/build"</span>,
-<span>"installDir"</span>: <span>"${sourceDir}/build"</span>
-}
-]
-}
-</code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-06-27 00:00:00+00:00" class="dt-published"></time>
-  Sun 27 Jun 2021
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
