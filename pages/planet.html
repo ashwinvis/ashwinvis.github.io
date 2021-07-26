@@ -153,32 +153,38 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://veenanagar.wordpress.com/2021/07/24/modifying-expectations/" rel="bookmark" class="u-url"
-       title="Modifying Expectations" target="_blank">
-      <time class="m-date" datetime="2021-07-24 16:02:48+00:00">
+    <a href="https://nedbatchelder.com/blog/202107/aptus_v3.html" rel="bookmark" class="u-url"
+       title="Aptus v3" target="_blank">
+      <time class="m-date" datetime="2021-07-25 19:19:43-04:00">
         Jul
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      Modifying Expectations
+      Aptus v3
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Hey everyone! Welcome to my new blog post. This post will tell you about my mid-point progress and something related to the project expectations, “actual vs. expected.” I am currently working on “Making GNOME Asynchronous!”. If you’re interested in reading more about my project, kindly read this blog post where I explained what my project is all about.<a href="https://veenanagar.wordpress.com/2021/07/24/modifying-expectations/">Continue reading <span>"Modifying Expectations"</span></a>
+  <p>After a hiatus of almost 13 years, I&#8217;ve made a new release of
+<a href="//nedbatchelder.com/code/aptus/v3.html">Aptus</a>, my Mandelbrot explorer.  I got
+re-interested in it as a way to make Zoom backgrounds during the pandemic.</p><p>I started by moving it from Python 2 to Python 3.9.  Then the wxPython GUI
+needed to move up a few versions, but it wasn&#8217;t working too well.  So I built a
+new browser-based user interface.  A compute server in FastAPI and a UI in
+vanilla JavaScript are the new GUI.</p><p>There are features from the old GUI that aren&#8217;t available yet (You Are Here
+is my favorite), but it&#8217;s very usable.</p><p><a href="//nedbatchelder.com/code/aptus/v3.html"><img alt="Intricate Mandelbrot" src="//nedbatchelder.com/pix/CurrencyCurrent.png"></a></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>veena</b></span>
-  on <time datetime="2021-07-24 16:02:48+00:00" class="dt-published"></time>
-  Sat 24 Jul 2021
-  in Planet GNOME.
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2021-07-25 19:19:43-04:00" class="dt-published"></time>
+  Sun 25 Jul 2021
+  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -187,31 +193,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/appydroid/k9-new-design" rel="bookmark" class="u-url"
-       title="K-9 Mail's new design (not Holo anymore)" target="_blank">
-      <time class="m-date" datetime="2021-07-24 16:31:00+02:00">
+    <a href="https://jlelse.blog/thoughts/2021/07/more-thoughts-vpn" rel="bookmark" class="u-url"
+       title="More thoughts about VPN services" target="_blank">
+      <time class="m-date" datetime="2021-07-25 20:43:33+02:00">
         Jul
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      K-9 Mail's new design (not Holo anymore)
+      More thoughts about VPN services
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Over three years after I mused about what it is like to still use a Holo Design app in 2018, the final version of K-9 Mail has now been released with a revamped user interface.
+  While watching YouTube videos, I’ve been noticing more paid mentions of NordVPN or other similar services lately.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-24 16:31:00+02:00" class="dt-published"></time>
-  Sat 24 Jul 2021
+  on <time datetime="2021-07-25 20:43:33+02:00" class="dt-published"></time>
+  Sun 25 Jul 2021
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -221,32 +227,64 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-07-24_An_anatomy_of_the_request" rel="bookmark" class="u-url"
-       title="An anatomy of the request" target="_blank">
-      <time class="m-date" datetime="2021-07-24 12:28:40+00:00">
+    <a href="https://kubuntu.org/news/kubuntu-20-10-groovy-gorilla-reaches-end-of-life/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Kubuntu 20.10 Groovy Gorilla reaches end of life" target="_blank">
+      <time class="m-date" datetime="2021-07-25 13:47:23+00:00">
         Jul
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      An anatomy of the request
+      Kubuntu 20.10 Groovy Gorilla reaches end of life
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Early Internet protocols were simple. In order to make a request, you contact a machine on a particular port, and send some bytes, terminated by a carriage return (CR or \r) and a line feed (LF or \n). We can simulate this using echo and nc (netcat) to make these requests ourselves.</p><p>This is a request for user information using the finger protocol. Here, we’re sending a name to the server. The response is plain text.</p><pre>echo -ne "alex\r\n" | nc alexschroeder.ch 79</pre><p>Gopher, at the protocol level, is the same thing. Here, we’re sending a selector to the server. The response is plain text.</p><pre>echo -ne "page/Alex_Schroeder\r\n" | nc alexschroeder.ch 70</pre><p>HTML 1.0, at the protocol level, is already a lot more complicated. We’re sending the “method” (in our case …</p></div>
+  <p>Kubuntu  Groovy Gorilla was released on October 22nd, 2020 with 9 months support.</p>
+
+
+
+<p>As of July 22nd, 2021, 20.10 reached ‘end of life’. </p>
+
+
+
+<p>No more package updates will be accepted to 20.10, and it will be archived to old-releases.ubuntu.com in the coming weeks.</p>
+
+
+
+<p>The official end of life announcement for Ubuntu as a whole can be found <a href="//lists.ubuntu.com/archives/ubuntu-announce/2021-July/000270.html">here </a>[1].</p>
+
+
+
+<p>Kubuntu 20.04 Focal Fossa and 21.04 Hirsute Hippo continue to be supported.</p>
+
+
+
+<p>Users of 20.10 can follow the <a href="//help.ubuntu.com/community/HirsuteUpgrades/Kubuntu">Kubuntu 20.10 to 21.04 Upgrade</a> [2] instructions.</p>
+
+
+
+<p>Should for some reason your upgrade be delayed, and you find that the 20.10 repositories have been archived to old-releases.ubuntu.com, instructions to perform a EOL Upgrade can be found <a href="//help.ubuntu.com/community/EOLUpgrades">on the Ubuntu wiki</a> [3].</p>
+
+
+
+<p>Thank you for using Kubuntu 20.10 Groovy Gorilla.</p>
+
+
+
+<p><strong>The …</strong></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-24 12:28:40+00:00" class="dt-published"></time>
-  Sat 24 Jul 2021
-  in Alex Schroeder: Diary.
+  <span class="p-author"><b>Kubuntu News</b></span>
+  on <time datetime="2021-07-25 13:47:23+00:00" class="dt-published"></time>
+  Sun 25 Jul 2021
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -255,46 +293,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://skrooge.org/node/245?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Skrooge 2.26.1 released" target="_blank">
-      <time class="m-date" datetime="2021-07-24 07:32:04+00:00">
+    <a href="https://blogs.gnome.org/oleaamot/2021/07/25/gnome-radio-12-notes-at-guadec-2021/" rel="bookmark" class="u-url"
+       title="GNOME Radio 12 Notes at GUADEC 2021" target="_blank">
+      <time class="m-date" datetime="2021-07-25 06:39:21+00:00">
         Jul
         <span class="m-date-day">
-          24
+          25
         </span>
         2021
       </time>
       <div class="p-name">
-      Skrooge 2.26.1 released
+      GNOME Radio 12 Notes at GUADEC 2021
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><div><div>
-<p>The <a href="//skrooge.org">Skrooge</a> Team announces the release 2.26.1 version of its popular Personal Finances Manager based on <a href="//kde.org">KDE Frameworks</a>. </p>
-Changelog
-<ul>
-<li><strong>Correction bug 436006: import not working with woob bank 3.0</strong></li>
-<li>Correction bug 436081: Help text needs to be escaped</li>
-<li>Correction bug 436328: there's no word "reconciliate" in English, should be reconcile</li>
-<li><strong>Correction bug 439494: Downloading currency using skrooge-yahoodl.py fails with UnicodeDecodeError</strong></li>
-<li>Correction: Small fix for FEC monthly report</li>
-<li>Correction: Migration on new exchangeratesapi.io APIs. Need a API key now</li>
-<li>Correction: Fix deprecated knsrc file location</li>
-<li>Feature: Add confirmation message when an import is triggered by a double click on an imported file</li>
-</ul>
-Get it, Try it, Love it...
-<p>Grab Skrooge from your distro's packaging system. If it is not yet included in repositories, go <a href="//skrooge.org/download">get it from our website</a>, and bug your favorite distro for inclusion …</p></div></div></div>
+  GUADEC 2021 took place July 21 – 25. This year’s conference was to be held online and last five days. The first two days of the conference, July 21 – 22, was dedicated to presentations. The 23 – 24 were Birds of a Feather sessions and workshops, and the last day will be for social … <a href="https://blogs.gnome.org/oleaamot/2021/07/25/gnome-radio-12-notes-at-guadec-2021/">Continue reading <span>GNOME Radio 12 Notes at GUADEC 2021</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Stéphane MANKOWSKI (smankowski)</b></span>
-  on <time datetime="2021-07-24 07:32:04+00:00" class="dt-published"></time>
-  Sat 24 Jul 2021
-  in Planet KDE.
+  <span class="p-author"><b>oleaamot</b></span>
+  on <time datetime="2021-07-25 06:39:21+00:00" class="dt-published"></time>
+  Sun 25 Jul 2021
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -581,52 +605,6 @@ Ostrich Algorithm Ring any bells? Remember OS (Operating Systems)? It's one of t
   on <time datetime="2021-07-19 07:32:05+05:30" class="dt-published"></time>
   Mon 19 Jul 2021
   in Matplotblog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202107/coverage_60_beta_1.html" rel="bookmark" class="u-url"
-       title="Coverage 6.0 beta 1" target="_blank">
-      <time class="m-date" datetime="2021-07-18 16:30:50-04:00">
-        Jul
-        <span class="m-date-day">
-          18
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Coverage 6.0 beta 1
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I&#8217;ve just published <a href="https://pypi.org/project/coverage/6.0b1/">coverage.py 6.0 beta 1</a>. The
-<a href="https://coverage.readthedocs.io/en/6.0b1/changes.html#version-6-0b1-2021-07-18">latest changes</a>
-are not monumental, but I would love for you to test it.</p><p>The version bump to 6.0 is because I&#8217;ve dropped support for Python 2 and
-Python 3.5.  But also because the
-<a href="//nedbatchelder.com/blog/202104/coveragepy_and_thirdparty_code.html">changes to how third-party
-code is handled</a> felt potentially disruptive.  Please read
-<a href="//nedbatchelder.com/blog/202104/coveragepy_and_thirdparty_code.html">that blog post</a> for
-details.</p><p>The other big thing happening with coverage.py is Python 3.10.  Because of
-<a href="https://www.python.org/dev/peps/pep-0626/">PEP 626</a> (&#8220;Precise line
-numbers for debugging and other tools&#8221;), there have been many changes to how
-Python reports line numbers. Coverage.py depends on those line numbers, so there
-have been more than a few bug reports written against Python as the work has
-progressed.</p><p>It will be important to test with 3.10, but to be fair, there have …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2021-07-18 16:30:50-04:00" class="dt-published"></time>
-  Sun 18 Jul 2021
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
