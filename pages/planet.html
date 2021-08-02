@@ -153,31 +153,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nibblestew.blogspot.com/2021/07/looking-at-building-o3de-with-meson.html" rel="bookmark" class="u-url"
-       title="Looking at building O3DE with Meson, part II" target="_blank">
-      <time class="m-date" datetime="2021-07-31 18:04:00+00:00">
-        Jul
+    <a href="https://www.bassi.io/articles/2021/08/01/documenting-gnome-for-developers/" rel="bookmark" class="u-url"
+       title="Documenting GNOME for developers" target="_blank">
+      <time class="m-date" datetime="2021-08-01 18:31:00+00:00">
+        Aug
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      Looking at building O3DE with Meson, part II
+      Documenting GNOME for developers
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  After the <a href="https://nibblestew.blogspot.com/2021/07/a-quick-look-at-o3de-game-engine-and.html">first post</a>, some more time was spent on building O3DE with Meson. This is the second and most likely last post on the subject. Currently <a href="https://github.com/jpakkane/o3de">the repository</a> builds all of AzCore basic code and a notable chunk of its Qt code. Tests are not built and there are some caveats on the existing code, which will be discussed below. The rest of the conversion would most likely be just more of the same and would probably not provide all that much new things to tackle.Code parts and dependencies<p>Like most projects, the code is split into several independent modules like core, testing, various frameworks and so on. The way Meson is designed is that you traverse the source tree one directory at a time. You enter it, do something, possibly recurse into subdirectories and then exit it …</p>
+  <p>In which I outline what comes next in the developers documentation of the <span>GNOME</span> platform</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2021-07-31 18:04:00+00:00" class="dt-published"></time>
-  Sat 31 Jul 2021
+  <span class="p-author"><b>ebassi</b></span>
+  on <time datetime="2021-08-01 18:31:00+00:00" class="dt-published"></time>
+  Sun 01 Aug 2021
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -187,31 +187,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/posts/july-2021" rel="bookmark" class="u-url"
-       title="My July '21 in Review" target="_blank">
-      <time class="m-date" datetime="2021-07-31 19:05:15+02:00">
-        Jul
+    <a href="https://jlelse.blog/posts/migrated-to-onedrive" rel="bookmark" class="u-url"
+       title="I moved my files to OneDrive" target="_blank">
+      <time class="m-date" datetime="2021-08-01 20:06:00+02:00">
+        Aug
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      My July '21 in Review
+      I moved my files to OneDrive
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Now the end of July has already arrived. Another month over, another monthly review to read.
+  Probably some readers will now think about this post: “What’s wrong with you? Where have your ideals and principles gone? Microsoft is evil!” But why do I actually have to justify myself? I have my reasons and I am free in what I can and cannot do.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-31 19:05:15+02:00" class="dt-published"></time>
-  Sat 31 Jul 2021
+  on <time datetime="2021-08-01 20:06:00+02:00" class="dt-published"></time>
+  Sun 01 Aug 2021
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -221,59 +221,68 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2021/07/30/this-week-in-kde-better-hidpi-on-x11/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="This week in KDE: Better HiDPI on X11" target="_blank">
-      <time class="m-date" datetime="2021-07-31 03:40:06+00:00">
-        Jul
+    <a href="https://pluralistic.net/2021/08/01/balance-of-forces/" rel="bookmark" class="u-url"
+       title="Pluralistic: 01 Aug 2021" target="_blank">
+      <time class="m-date" datetime="2021-08-01 15:08:26+00:00">
+        Aug
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      This week in KDE: Better HiDPI on X11
+      Pluralistic: 01 Aug 2021
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>We made a big improvement to Plasma’s high DPI support on X11 this week! Beyond that, there’s a lot more cool stuff in progress that hasn’t been merged yet; look for that stuff next week and beyond.</p>
-
-
-
-New Features
-
-
-
-<p>You <a href="//invent.kde.org/plasma/kdeplasma-addons/-/merge_requests/81">can now search for localized text</a> to find timezones in KRunner and Kickoff (Kai Uwe Broulik, Plasma 5.23)</p>
-
-
-
-Bugfixes &amp; Performance Improvements
-
-
-
-<p>The buttons that appear when you hover your cursor over entries in the Clipboard applet <a href="//bugs.kde.org/show_bug.cgi?id=437044">are no longer sometimes mis-positioned</a> (Eugene Popov, Plasma 5.22.4)</p>
-
-
-
-<p>A System Tray popup that has been pinned open <a href="//bugs.kde.org/show_bug.cgi?id=440263">no longer closes unexpectedly when you open its configuration page</a> (David Redondo, Plasma 5.22.4)</p>
-
-
-
-<p>Plasma Panels <a href="//invent.kde.org/plasma/plasma-desktop/-/merge_requests/508#note_280318">once again use the correct edge-specific theme graphics, when present</a> (Obno Sim, Plasma 5.22.5)</p>
-
-
-
-<p>In the Plasma Wayland session, <a href="//bugs.kde.org/show_bug.cgi?id=440259">System …</a></p>
+  Today's links Github pledges legal aid for interoperators: Youtube-dl's legacy. This day in history: 2001, 2006, 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Github pledges legal aid for interoperators (permalink) Last October, the RIAA launched a bizarre campaign of legal bullying against youtube-dl, a free/open library that lets people save Youtube (and other) videos for a variety of purposes, including critical analysis, offline viewing, archiving and remixing. https://pluralistic.net/2020/10/24/1201-v-dl-youtube/#1201 The RIAA attacked youtube-dl under Section 1201 of the Digital Millennium Copyright Act (DMCA1201) a 1998 law that indiscriminately bans helping people remove DRM, even if no copyright infringement takes place. https://pluralistic.net/2020/10/28/trumpcicles/#yt-dl DMCA1201 is a pure hazard. For decades, manufacturers have weaponized it to prohibit otherwise legal uses of their …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2021-07-31 03:40:06+00:00" class="dt-published"></time>
-  Sat 31 Jul 2021
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2021-08-01 15:08:26+00:00" class="dt-published"></time>
+  Sun 01 Aug 2021
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://ev.kde.org//2021/08/01/job-project-lead-event-manager/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE e.V. is looking for a project lead/event manager for environmental sustainability project" target="_blank">
+      <time class="m-date" datetime="2021-08-01 13:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      KDE e.V. is looking for a project lead/event manager for environmental sustainability project
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>KDE e.V., the non-profit organisation supporting the KDE community, is looking for a great person to run a project related to the environmental sustainability of our software.
+The position we are looking to fill immediately is that of a project lead who can also do some event management duties.
+Please see the <a href="//ev.kde.org//resources/jobad-projectlead2021-2.pdf">job ad for the project lead</a> for more details about this employment opportunity.
+We are looking forward to your application.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDE e.V. news</b></span>
+  on <time datetime="2021-08-01 13:00:00+00:00" class="dt-published"></time>
+  Sun 01 Aug 2021
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -283,66 +292,34 @@ Bugfixes &amp; Performance Improvements
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.scicombinator.com/articles/6841335" rel="bookmark" class="u-url"
-       title="Comparison of characteristics and ventilatory course between coronavirus disease 2019 and middle east respiratory syndrome patients with acute respiratory distress syndrome" target="_blank">
-      <time class="m-date" datetime="2021-07-31 00:00:00+00:00">
-        Jul
+    <a href="https://vdwaa.nl/arch-repro-july-2021.html" rel="bookmark" class="u-url"
+       title="Arch Reproducible Progress July 2021" target="_blank">
+      <time class="m-date" datetime="2021-08-01 00:00:00+00:00">
+        Aug
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      Comparison of characteristics and ventilatory course between coronavirus disease 2019 and middle east respiratory syndrome patients with acute respiratory distress syndrome
+      Arch Reproducible Progress July 2021
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Both coronavirus disease 2019 (COVID-19) and middle east respiratory syndrome (MERS) can cause acute respiratory distress syndrome (ARDS); however, the former is postulated to lead to an atypical ARDS course and characteristics. We directly compare COVID-19 and MERS patients with ARDS to evaluate this issue.
+  At the end of July, I had some days off and some more time to focus on some unreproducible packages in Arch Linux and get some of the issues resolved. This post goes through the resolved issues by category. 
+gzipped man pages
+By default if a manpage is compressed with …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>GY Wali</b></span>
-  on <time datetime="2021-07-31 00:00:00+00:00" class="dt-published"></time>
-  Sat 31 Jul 2021
-  in SciCombinator - Last 10 Days.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2021/07/30/space-marines/" rel="bookmark" class="u-url"
-       title="Pluralistic: 30 Jul 2021" target="_blank">
-      <time class="m-date" datetime="2021-07-30 21:01:29+00:00">
-        Jul
-        <span class="m-date-day">
-          30
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Pluralistic: 30 Jul 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Games Workshop declares war on its customers (again): Terms of service banning fan art launch alongside a new transmedia subscription service. This day in history: 2006, 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Games Workshop declares war on its customers (again) (permalink) There's a difference between a con-artist and a grifter. A con-artist is just a gabby mugger, and when they vanish with your money, you know you've been robbed. A grifter, on the other hand, is someone who can work the law to declare your stuff to be their stuff, which makes you a lawless cur because your pockets are stuffed full of their money and merely handing it over is the least you can do to make up for your sin. IP trolls are grifters, not con artists, and …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2021-07-30 21:01:29+00:00" class="dt-published"></time>
-  Fri 30 Jul 2021
-  in Pluralistic.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-08-01 00:00:00+00:00" class="dt-published"></time>
+  Sun 01 Aug 2021
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -517,6 +494,40 @@ Bugfixes &amp; Performance Improvements
   on <time datetime="2021-07-30 00:00:00+00:00" class="dt-published"></time>
   Fri 30 Jul 2021
   in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.scicombinator.com/articles/6838134" rel="bookmark" class="u-url"
+       title="Recent Insights into the Management of Behçet Syndrome" target="_blank">
+      <time class="m-date" datetime="2021-07-30 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          30
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Recent Insights into the Management of Behçet Syndrome
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Behçet syndrome (BS) is a multisystem vasculitis with variable vessel involvement that shows significant heterogeneity among patients in terms of clinical manifestations and disease course. Treatment choice and response are both influenced by this heterogeneity. BS treatments' main goals are to quickly suppress inflammatory exacerbations and prevent relapses in order to protect organ functions and provide good quality of life. Besides the long-term experience with steroids and traditional immunosuppressives, biologic drugs, especially TNF inhibitors, have gained increasing importance in the treatment of BS over the years. In this review, we aimed to give an overview of the studies with conventional and biological drugs with proven efficacy in the treatment of BS, as well as promising drugs and current management strategies according to clinical phenotypes.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>G Hatemi</b></span>
+  on <time datetime="2021-07-30 00:00:00+00:00" class="dt-published"></time>
+  Fri 30 Jul 2021
+  in SciCombinator - Last 10 Days.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -770,44 +781,6 @@ About 400 charts in 40 sections The gallery currently provides more than 400 cha
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://vdwaa.nl/vim-setup-2021.html" rel="bookmark" class="u-url"
-       title="Vim setup 2021" target="_blank">
-      <time class="m-date" datetime="2021-07-22 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          22
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Vim setup 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Feeling inspired by watching <a href="https://www.twitch.tv/togglebit">togglebit</a>'s Rust/Vim setup and having some spare time due to my summer vacation I started re-investigating my Vim setup. For my setup I was looking for the following features/areas to improve:
-<ul>
-<li>Git integration</li>
-<li>Debugging projects in vim</li>
-<li>Language server features, completion, go to …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-07-22 00:00:00+00:00" class="dt-published"></time>
-  Thu 22 Jul 2021
-  in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://noyb.eu/en/breaking-austrian-ogh-asks-cjeu-if-facebook-undermines-gdpr-2018" rel="bookmark" class="u-url"
        title="BREAKING: Austrian OGH asks CJEU if Facebook "undermines" GDPR since 2018" target="_blank">
       <time class="m-date" datetime="2021-07-20 05:00:00+00:00">
@@ -838,40 +811,6 @@ About 400 charts in 40 sections The gallery currently provides more than 400 cha
   on <time datetime="2021-07-20 05:00:00+00:00" class="dt-published"></time>
   Tue 20 Jul 2021
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tonsky.me/blog/icfpc-2021/" rel="bookmark" class="u-url"
-       title="Zig, Skia, Clojure, Geometry and the Japanese TV Show: ICFP Contest 2021" target="_blank">
-      <time class="m-date" datetime="2021-07-12 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Zig, Skia, Clojure, Geometry and the Japanese TV Show: ICFP Contest 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  4-day coding marathon
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2021-07-12 00:00:00+00:00" class="dt-published"></time>
-  Mon 12 Jul 2021
-  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
