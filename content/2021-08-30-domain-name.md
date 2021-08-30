@@ -4,19 +4,19 @@ Author: Ashwin Vishnu Mohanan
 Date: 2021-08-30T21:06:13.588973
 Slug: domain-name
 Status: draft
-Summary: I bought a domain name - an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.
+Summary: I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.
 Category: Blog
 Tags: meta, software
 ---
 
-**TLDR;** The URL would soon be [fluid.quest][blog]
+**TLDR;** The URL of this website would soon be [fluid.quest][blog]
 
 Today, the thirtieth day of August 2021, as rain continue to shower on
 Stockholm nearly every day, I dedicated a few days on the hunt for a succinct
-domain name. For a long time, I was not convinced to spent a good handful of
-money on a virtual assets.
+domain name. For a long time, I was not convinced to spend a good handful of
+money on a virtual asset.
 
-After jumping ships from Blogger, to Wordpress, to Tumblr and finally to
+After jumping ships from Blogger, to WordPress, to Tumblr and finally to
 [GitHub][GitHub] pages using Pelican static-site generator, I thought I was
 done. I had full control on the content and the site generation. It was made
 using open-source software, which means there was no way the toolchain will not
@@ -25,14 +25,14 @@ Moreover, my precious visitors to my blog then do not get served ads, cookies
 or third party tracking scripts.
 
 Everything seemed fine. Until Microsoft bought it. Just because it is a free
-service and has a large user base does not give you any guarantee that it might
+service and has a large user base does not inspire any confidence that it might
 stay like this forever. I recall how I used to adore following other blogs on
 Google Reader until [Google swung the axe, decided it was not profitable
-enough](https://killedbygoogle.com/). However feed readers were easy, they
-continued to exist and it was still possible to find alternatives (server based
+enough](https://killedbygoogle.com/). However, feed readers were easy, they
+continued to exist, and it was still possible to find alternatives (server based
 and server-less). In fact this is not an isolated incident. Large corporations
 always change services, buy new ones, shutdown old ones on their whims and
-fancies. They would come abruptly and I should be prepared for this.
+fancies. They would come abruptly, and I should be prepared for this.
 
 > In fact, blog and email servers are like
 > [Hotel California (*You can check out any time you like, but you can never leave*)][california]
@@ -46,12 +46,12 @@ domain name which represents your interests better.
 
 Talking about interests, did you know there are a lot of [TLDs][TLDs] (top
 level domain names) right now. Dull `.com`, `.net` TLDs of yore are old-fashioned.
-The prices can vary a lot! And there are lot of gotchas to be considered in choosing
+The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
 the "domain registrar". Where to buy can be confusing to a total beginner.
 
-## Doing the research pre-purchase
+## Doing the pre-purchase research 
 
-The research that I did was a bit of informal hear say in the interweb. For instance the [following comics by Julia Evans][b0rk] were really useful.
+The research that I did was a bit of informal hearsay in the interweb. For instance the [following comics by Julia Evans][b0rk] were really useful.
 
 ![choosing a domain registrar](https://wizardzines.com/comics/registrar/registrar.png)
 ![whois protection can](https://wizardzines.com/comics/domain-privacy/domain-privacy.png)
@@ -60,9 +60,9 @@ The research that I did was a bit of informal hear say in the interweb. For inst
 
 And this one on receiving
 [emails](https://wizardzines.com/comics/receiving-email/) which I will think
-about later. Self hosting emails is not an easy feat.
+about later. Self-hosting emails is not an easy feat.
 
-On the choosing the domain registrar question, I got a really good tip from
+On the choosing the domain registrar question, I got a excellent tip from
 [Jan Lukas-Else](https://jlelse.blog/dev/free-website) who had good experience
 with [Porkbun][Porkbun]. Therefore, I went there and there were many good deals
 going on.
@@ -76,9 +76,9 @@ table for offline brainstorming.
 
 > The result was a small [domain-name-search Python tool](https://codeberg.org/ashwinvis/domain-name-search)
 
-By doing so, I was able to check availability of a different combinations of
+By doing so, I was able to check availability of different combinations of
 domain names using `whois` and visualize costs in an interactive plot. Of
-course it was not perfect, a few domain names which were available were up for
+course, it was not perfect, a few domain names which were available were up for
 premium registration (prices often exceeding thousands of dollars). Which were
 not for me.  Once I had a shortlist done, it was easy to reduce the options.
 
