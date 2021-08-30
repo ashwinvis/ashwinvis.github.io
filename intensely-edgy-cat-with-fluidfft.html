@@ -96,24 +96,25 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
                 <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
               </ol>
             </li>
             <li>
-              <a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a>
+              <a href="https://ashwinvis.github.io/pages/subscribe.html">📫 Subscribe</a>
               <ol>
-                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds: All</a></li>
                 <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/microblog.atom.xml">Feeds: Microblog</a></li>
                 <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
               </ol>
             </li>
           </ol>
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li>
-              <a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a>
+              <a href="https://ashwinvis.github.io/pages/showcase.html">✨Showcase</a>
               <ol>
                 <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
                 <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
@@ -121,9 +122,9 @@
                 <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
               </ol>
             </li>
-            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
-            <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
-            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">🖖Sponsors</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/planet.html">🪐Planet</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/contact.html">📧Contact</a></li>
           </ol>
         </div>
       </div>
@@ -154,39 +155,39 @@ Here, we
 use</em><a href="https://fluidfft.readthedocs.io">fluidfft</a><em>instead.</em></p>
 <section id="setup">
 <h2>Setup</h2>
-<pre class="m-code">import fluidfft     # fft, ifft and other operators
+<pre class="m-code"><span class="kn">import</span> <span class="nn">fluidfft</span>     <span class="c1"># fft, ifft and other operators</span>
 
-import numpy as np  # numpy arrays!
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># numpy arrays!</span>
 
-# for displaying images
-from PIL import Image
-import urllib
-import io
-import matplotlib.pyplot as plt</pre>
-<pre class="m-code"># We go one step further and directly load from the internet
-%matplotlib inline
+<span class="c1"># for displaying images</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span></pre>
+<pre class="m-code"><span class="c1"># We go one step further and directly load from the internet</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
 
-def load_image(url):
-    fd = urllib.request.urlopen(url)
-    image_file = io.BytesIO(fd.read())
-    im = Image.open(image_file)
-    im = np.array(im, dtype=np.float64)  # Convert the PIL.PngImagePlugin.PngImageFile object to a numpy array
-    return im
+<span class="k">def</span> <span class="nf">load_image</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">fd</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">image_file</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">fd</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_file</span><span class="p">)</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>  <span class="c1"># Convert the PIL.PngImagePlugin.PngImageFile object to a numpy array</span>
+    <span class="k">return</span> <span class="n">im</span>
 
-def display(im):
-    plt.imshow(im, cmap=&quot;gist_gray&quot;)
-    plt.axis(&#39;off&#39;)</pre>
+<span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">im</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gist_gray&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span></pre>
 </section>
 <section id="intense-cat">
 <h2>Intense cat</h2>
 <p>Let’s perform some Fourier space operations on <a href="https://commons.wikimedia.org/wiki/File:Intensity_image_with_gradient_images.png">this public domain,
 intense
 kitty</a>:</p>
-<pre class="m-code">image = load_image(&quot;https://upload.wikimedia.org/wikipedia/commons/6/67/Intensity_image_with_gradient_images.png&quot;)
-display(image)</pre>
+<pre class="m-code"><span class="n">image</span> <span class="o">=</span> <span class="n">load_image</span><span class="p">(</span><span class="s2">&quot;https://upload.wikimedia.org/wikipedia/commons/6/67/Intensity_image_with_gradient_images.png&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_7_0.png" />
-<pre class="m-code">image = image[5:-5, 5:205]  # Crop to the first frame and trim the frame edges
-display(image)</pre>
+<pre class="m-code"><span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">205</span><span class="p">]</span>  <span class="c1"># Crop to the first frame and trim the frame edges</span>
+<span class="n">display</span><span class="p">(</span><span class="n">image</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_8_0.png" />
 </section>
 <section id="edge-detection-on-intensity-image">
@@ -199,16 +200,16 @@ the kitty is already black and white, but in fact it’s still encoded
 in three RGB channels in the PNG file. Combining these, in general,
 could be done as follows …</blockquote>
 <p>we skip it, since PIL was kind enough to do it for us:</p>
-<pre class="m-code">image.shape</pre>
+<pre class="m-code"><span class="n">image</span><span class="o">.</span><span class="n">shape</span></pre>
 <pre>(200, 200)</pre>
-<pre class="m-code">image_bw = image</pre>
+<pre class="m-code"><span class="n">image_bw</span> <span class="o">=</span> <span class="n">image</span></pre>
 <p>Next, we transform to Fourier space using <code>fluidfft</code>’s real FFT
 transform. We have to rely on the <code>fft2d.with_pyfftw</code> backend since
 the other Cythonized <code>fft2d.with_fftw2d</code> implementation assumes a
 periodic boundary.</p>
-<pre class="m-code"># Prepare our FFT object
-o = fluidfft.create_fft_object(&quot;fft2d.with_pyfftw&quot;, *image.shape)  # A more powerful option is to use an &quot;Operator&quot; class, demonstrated below</pre>
-<pre class="m-code">image_fs_bw = o.fft(image_bw)</pre>
+<pre class="m-code"><span class="c1"># Prepare our FFT object</span>
+<span class="n">o</span> <span class="o">=</span> <span class="n">fluidfft</span><span class="o">.</span><span class="n">create_fft_object</span><span class="p">(</span><span class="s2">&quot;fft2d.with_pyfftw&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># A more powerful option is to use an &quot;Operator&quot; class, demonstrated below</span></pre>
+<pre class="m-code"><span class="n">image_fs_bw</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">image_bw</span><span class="p">)</span></pre>
 <p>The simplest way to do some edge detection is by calculating the
 derivative of the intensity image. The derivative (the rate of change)
 is high where a sharp transition from low to high intensity occurs
@@ -223,28 +224,28 @@ the gradient, which is a good multi-directional proxy for both kinds of
 edges (intensity transitions form low to high and from high to low).</p>
 <p><code>fluidfft</code>’s operator classes also supplies these wavenumbers
 <span class="formula"><b>k</b></span>, so you do not need to build them :).</p>
-<pre class="m-code">from fluidfft.fft2d.operators import OperatorsPseudoSpectral2D
+<pre class="m-code"><span class="kn">from</span> <span class="nn">fluidfft.fft2d.operators</span> <span class="kn">import</span> <span class="n">OperatorsPseudoSpectral2D</span>
 
-op = OperatorsPseudoSpectral2D(*image.shape, lx=np.pi, ly=np.pi, fft=&quot;fft2d.with_pyfftw&quot;)  # The lengths are arbitary</pre>
-<pre class="m-code">kx = op.KX
-ky = op.KY # N.B.: we use broadcasting to multiply in the right direction</pre>
-<pre class="m-code"># do both derivatives separately
-d_image_dx_fs_bw = 1j * kx * image_fs_bw
-d_image_dy_fs_bw = 1j * ky * image_fs_bw</pre>
+<span class="n">op</span> <span class="o">=</span> <span class="n">OperatorsPseudoSpectral2D</span><span class="p">(</span><span class="o">*</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">lx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">ly</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">fft</span><span class="o">=</span><span class="s2">&quot;fft2d.with_pyfftw&quot;</span><span class="p">)</span>  <span class="c1"># The lengths are arbitary</span></pre>
+<pre class="m-code"><span class="n">kx</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">KX</span>
+<span class="n">ky</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">KY</span> <span class="c1"># N.B.: we use broadcasting to multiply in the right direction</span></pre>
+<pre class="m-code"><span class="c1"># do both derivatives separately</span>
+<span class="n">d_image_dx_fs_bw</span> <span class="o">=</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">kx</span> <span class="o">*</span> <span class="n">image_fs_bw</span>
+<span class="n">d_image_dy_fs_bw</span> <span class="o">=</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">ky</span> <span class="o">*</span> <span class="n">image_fs_bw</span></pre>
 <p>An <strong>effortless and efficent</strong> way to do the gradient calculation was to
 use the Pythranized function.</p>
-<pre class="m-code">d_image_dx_fs_bw, d_image_dy_fs_bw = op.gradfft_from_fft(image_fs_bw)</pre>
-<pre class="m-code"># transform back to normal space
-d_image_dx_bw = op.ifft(d_image_dx_fs_bw)
-d_image_dy_bw = op.ifft(d_image_dy_fs_bw)</pre>
-<pre class="m-code"># and square-sum them in real space to get the gradient magnitude
-d_image_grad_bw = np.sqrt(d_image_dx_bw ** 2 + d_image_dy_bw ** 2)</pre>
-<pre class="m-code">display(d_image_grad_bw)</pre>
+<pre class="m-code"><span class="n">d_image_dx_fs_bw</span><span class="p">,</span> <span class="n">d_image_dy_fs_bw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">gradfft_from_fft</span><span class="p">(</span><span class="n">image_fs_bw</span><span class="p">)</span></pre>
+<pre class="m-code"><span class="c1"># transform back to normal space</span>
+<span class="n">d_image_dx_bw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">d_image_dx_fs_bw</span><span class="p">)</span>
+<span class="n">d_image_dy_bw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">d_image_dy_fs_bw</span><span class="p">)</span></pre>
+<pre class="m-code"><span class="c1"># and square-sum them in real space to get the gradient magnitude</span>
+<span class="n">d_image_grad_bw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_image_dx_bw</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">d_image_dy_bw</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_grad_bw</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_24_0.png" />
 <p>To get maximum contrast, rescale so that the maximum is 255 (the maximum
 brightness value, i.e. bright white):</p>
-<pre class="m-code">amax_d_image_grad_bw = d_image_grad_bw.max()</pre>
-<pre class="m-code">display(d_image_grad_bw / amax_d_image_grad_bw * 255)</pre>
+<pre class="m-code"><span class="n">amax_d_image_grad_bw</span> <span class="o">=</span> <span class="n">d_image_grad_bw</span><span class="o">.</span><span class="n">max</span><span class="p">()</span></pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_grad_bw</span> <span class="o">/</span> <span class="n">amax_d_image_grad_bw</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_27_0.png" />
 </section>
 <section id="rescaling">
@@ -256,21 +257,21 @@ values to zero and then divide by (max-min) and multiply by 255 to set
 the maximum to 255 (and scale all intermediate values accordingly).</p>
 <p>We can then also sum the both components to get a slightly different
 perspective on the above “absolute” multi-directional edge detector.</p>
-<pre class="m-code">d_image_dx_bw_rescale = 255 * (d_image_dx_bw - d_image_dx_bw.min()) / (d_image_dx_bw.max() - d_image_dx_bw.min())
-d_image_dy_bw_rescale = 255 * (d_image_dy_bw - d_image_dy_bw.min()) / (d_image_dy_bw.max() - d_image_dy_bw.min())
+<pre class="m-code"><span class="n">d_image_dx_bw_rescale</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">*</span> <span class="p">(</span><span class="n">d_image_dx_bw</span> <span class="o">-</span> <span class="n">d_image_dx_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">d_image_dx_bw</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">d_image_dx_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">d_image_dy_bw_rescale</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">*</span> <span class="p">(</span><span class="n">d_image_dy_bw</span> <span class="o">-</span> <span class="n">d_image_dy_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="p">(</span><span class="n">d_image_dy_bw</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">d_image_dy_bw</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
 
-d_image_grad_bw_rescale = np.sqrt(d_image_dx_bw_rescale * d_image_dx_bw_rescale + d_image_dy_bw_rescale * d_image_dy_bw_rescale);
-d_image_grad_bw_rescale -= d_image_grad_bw_rescale.min()
-d_image_grad_bw_rescale /= d_image_grad_bw_rescale.max()
-d_image_grad_bw_rescale *= 255</pre>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_image_dx_bw_rescale</span> <span class="o">*</span> <span class="n">d_image_dx_bw_rescale</span> <span class="o">+</span> <span class="n">d_image_dy_bw_rescale</span> <span class="o">*</span> <span class="n">d_image_dy_bw_rescale</span><span class="p">);</span>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">-=</span> <span class="n">d_image_grad_bw_rescale</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">/=</span> <span class="n">d_image_grad_bw_rescale</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">d_image_grad_bw_rescale</span> <span class="o">*=</span> <span class="mi">255</span></pre>
 <section id="horizontal">
 <h3>Horizontal</h3>
-<pre class="m-code">display(d_image_dx_bw_rescale)</pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_dx_bw_rescale</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_31_0.png" />
 </section>
 <section id="vertical">
 <h3>Vertical</h3>
-<pre class="m-code">display(d_image_dy_bw_rescale)</pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_dy_bw_rescale</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_33_0.png" />
 <p>The result differs slightly from that in <a href="https://commons.wikimedia.org/wiki/File:Intensity_image_with_gradient_images.png">the original Wikipedia
 image</a>,
@@ -280,7 +281,7 @@ less sharp edges, but also less sensitivity to noise in the image.</p>
 </section>
 <section id="combined">
 <h3>Combined</h3>
-<pre class="m-code">display(d_image_grad_bw_rescale)</pre>
+<pre class="m-code"><span class="n">display</span><span class="p">(</span><span class="n">d_image_grad_bw_rescale</span><span class="p">)</span></pre>
 <img src="images/intensely_edgy_cat_36_0.png" />
 <p>This modified post was written entirely in the Jupyter notebook. You can
 <a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/intensely_edgy_cat.ipynb">download</a>
@@ -472,14 +473,15 @@ nbviewer</a>.</p>
       <div class="m-col-s-3 m-col-t-6">
         <h3>Sitemap</h3>
         <ul>
-          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a></li>
-          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">📫 Subscribe</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds: All</a></li>
           <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/microblog.atom.xml">Feeds: Microblog</a></li>
           <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/showcase.html">✨Showcase</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">🖖Sponsors</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/planet.html">🪐Planet</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/contact.html">📧Contact</a></li>
         </ul>
       </div>
     </div>
