@@ -96,25 +96,24 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">✍️ Posts</a>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
               <ol>
                 <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
                 <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
               </ol>
             </li>
             <li>
-              <a href="https://ashwinvis.github.io/pages/subscribe.html">📫 Subscribe</a>
+              <a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a>
               <ol>
-                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds: All</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
                 <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
-                <li><a href="https://ashwinvis.github.io/feeds/microblog.atom.xml">Feeds: Microblog</a></li>
                 <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
               </ol>
             </li>
           </ol>
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li>
-              <a href="https://ashwinvis.github.io/pages/showcase.html">✨Showcase</a>
+              <a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a>
               <ol>
                 <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
                 <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
@@ -122,9 +121,9 @@
                 <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
               </ol>
             </li>
-            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">🖖Sponsors</a></li>
-            <li><a href="https://ashwinvis.github.io/pages/planet.html">🪐Planet</a></li>
-            <li><a href="https://ashwinvis.github.io/pages/contact.html">📧Contact</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
           </ol>
         </div>
       </div>
@@ -336,70 +335,70 @@ TDMA specially designed for problems with periodic BC.</blockquote>
 <h2>Demo</h2>
 <p>We will be reusing the following <code>Base</code> class to store the input
 parameters for OUCS3</p>
-<pre class="m-code"><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">diags</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<pre class="m-code">%matplotlib inline
+import numpy as np
+from scipy.sparse import diags
+from scipy.sparse.linalg import inv
+import seaborn as sns
 
 
-<span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Gather input parameters for OUCS3</span>
+class Base:
+    def __init__(self, L, N, alpha=0.0):
+        &quot;&quot;&quot;Gather input parameters for OUCS3
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        L: float</span>
-<span class="sd">            length of the domain</span>
-<span class="sd">        N: int</span>
-<span class="sd">            number of points</span>
-<span class="sd">        alpha: float</span>
-<span class="sd">            upwind factor, adds numerical dissipation</span>
+        Parameters
+        ----------
+        L: float
+            length of the domain
+        N: int
+            number of points
+        alpha: float
+            upwind factor, adds numerical dissipation
 
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># Scalar parameters</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="n">L</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">N</span> <span class="o">=</span> <span class="n">N</span>
+        &quot;&quot;&quot;
+        # Scalar parameters
+        self.L = L
+        self.N = N
 
-        <span class="n">delta</span> <span class="o">=</span> <span class="n">L</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        delta = L / (N - 1)
 
-        <span class="n">a0</span> <span class="o">=</span> <span class="o">-</span><span class="mi">11</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">150</span>
-        <span class="n">a1</span> <span class="o">=</span> <span class="mf">1.57557379</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mf">30.0</span>
-        <span class="n">a2</span> <span class="o">=</span> <span class="mf">0.183205192</span> <span class="o">/</span> <span class="mf">4.0</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mf">300.0</span>
+        a0 = -11 * alpha / 150
+        a1 = 1.57557379 / 2.0 + alpha / 30.0
+        a2 = 0.183205192 / 4.0 + alpha / 300.0
 
-        <span class="n">b0</span> <span class="o">=</span> <span class="mf">1.0</span>
-        <span class="n">b1</span> <span class="o">=</span> <span class="mf">0.3793894912</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mf">60.0</span>
+        b0 = 1.0
+        b1 = 0.3793894912 + alpha / 60.0
 
-        <span class="c1"># Create pentadiagonal matrix, A</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">diags</span><span class="p">(</span>
-            <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="n">a2</span><span class="p">,</span> <span class="o">-</span><span class="n">a1</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a2</span><span class="p">])</span> <span class="o">/</span> <span class="n">delta</span><span class="p">,</span>
-            <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,],</span>
-            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span>
-            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;csc&quot;</span>
-        <span class="p">)</span>
+        # Create pentadiagonal matrix, A
+        self.A = diags(
+            np.array([-a2, -a1, a0, a1, a2]) / delta,
+            [-2, -1, 0, 1, 2,],
+            shape=(N, N),
+            format=&quot;csc&quot;
+        )
 
-        <span class="c1"># Create tridiagonal matrix, B</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">diags</span><span class="p">(</span>
-            <span class="p">[</span><span class="n">b1</span><span class="p">,</span> <span class="n">b0</span><span class="p">,</span> <span class="n">b1</span><span class="p">],</span>
-            <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">),</span>
-            <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;csc&quot;</span>
-        <span class="p">)</span>
+        # Create tridiagonal matrix, B
+        self.B = diags(
+            [b1, b0, b1],
+            [-1, 0, 1],
+            shape=(N, N),
+            format=&quot;csc&quot;
+        )
 
-    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
-        <span class="n">Au</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">@</span> <span class="n">u</span>
-        <span class="c1"># inefficient alternative</span>
-        <span class="k">return</span> <span class="n">inv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">)</span> <span class="o">@</span> <span class="n">Au</span>
+    def diff(self, u):
+        Au = self.A @ u
+        # inefficient alternative
+        return inv(self.B) @ Au
 
-    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">fields</span><span class="p">):</span>
-        <span class="n">fields</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">N</span><span class="p">)})</span>
-        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">field</span> <span class="o">!=</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
-                <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">fields</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">field</span><span class="p">)</span></pre>
+    def plot(self, **fields):
+        fields.update({&quot;x&quot;: np.linspace(0, self.L, self.N)})
+        for field in fields:
+            if field != &quot;x&quot;:
+                sns.lineplot(&quot;x&quot;, field, data=fields, label=field)</pre>
 <p>Have a look at how the arrays look like</p>
-<pre class="m-code"><span class="n">o</span> <span class="o">=</span> <span class="n">Base</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">B = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">o</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span></pre>
+<pre class="m-code">o = Base(4 * np.pi, 6)
+print(&quot;\nA = \n&quot;, o.A.toarray())
+print(&quot;\nB = \n&quot;, o.B.toarray())</pre>
 <pre>A =
  [[ 0.          0.31345045  0.01822376  0.          0.          0.        ]
  [-0.31345045  0.          0.31345045  0.01822376  0.          0.        ]
@@ -418,35 +417,35 @@ B =
 <p>We can inherit the class to use an efficient algorithm to solve such
 arrays, such as <code>scipy.linalg.solve_toeplitz</code> which does not accept
 sparse arrays as inputs.</p>
-<pre class="m-code"><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">solve_toeplitz</span>
+<pre class="m-code">from scipy.linalg import solve_toeplitz
 
-<span class="k">class</span> <span class="nc">OUCS3</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A class to perform OUCS3 compact scheme finite differentiation.&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
-        <span class="n">Au</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">@</span> <span class="n">u</span>
-        <span class="n">B_column</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-        <span class="n">B_row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">solve_toeplitz</span><span class="p">((</span><span class="n">B_column</span><span class="p">,</span> <span class="n">B_row</span><span class="p">),</span> <span class="n">Au</span><span class="p">)</span></pre>
+class OUCS3(Base):
+    &quot;&quot;&quot;A class to perform OUCS3 compact scheme finite differentiation.&quot;&quot;&quot;
+    def diff(self, u):
+        Au = self.A @ u
+        B_column = self.B[:,0].toarray()
+        B_row = self.B[0,:].toarray()
+        return solve_toeplitz((B_column, B_row), Au)</pre>
 <section id="test-that-everything-works">
 <h3>Test that everything works</h3>
 <p>Let’s compare derivatives of a gaussian pulse computed using OUCS3 and
 explicit finite difference schemes.</p>
-<pre class="m-code"><span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">gausspulse</span>
+<pre class="m-code">from scipy.signal import gausspulse
 
-<span class="k">def</span> <span class="nf">init_params_fields</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Initialize parameters and generate a gaussian pulse.&quot;&quot;&quot;</span>
-    <span class="n">L</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+def init_params_fields(N):
+    &quot;&quot;&quot;Initialize parameters and generate a gaussian pulse.&quot;&quot;&quot;
+    L = 2 * np.pi
+    x = np.linspace(0, L, N)
 
-    <span class="n">u</span> <span class="o">=</span> <span class="n">gausspulse</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">L</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">fc</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span>
+    u = gausspulse(abs(x - L/2), fc=2)
+    return L, N, x, u
 
-<span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+L, N, x, u = init_params_fields(100)
 
-<span class="n">oper</span> <span class="o">=</span> <span class="n">OUCS3</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="n">ux</span> <span class="o">=</span> <span class="n">oper</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+oper = OUCS3(L, N)
+ux = oper.diff(u)
 
-<span class="n">oper</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="o">=</span><span class="n">u</span><span class="p">,</span> <span class="n">ux_OUCS3</span><span class="o">=</span><span class="n">ux</span><span class="p">,</span> <span class="n">ux_explicit</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span></pre>
+oper.plot(u=u, ux_OUCS3=ux, ux_explicit=np.gradient(u, x))</pre>
 <img src="images/lightweight_classes_8_0.png" />
 </section>
 <section id="cost-of-instantiation-and-computing-derivatives">
@@ -460,14 +459,14 @@ will use</p>
 simulations (<span class="formula"><i>N</i> = 1003</span> to <span class="formula"><i>N</i> = 10003</span>). We shall use the
 package <code>line_profiler</code> to time the time elapsed in each line. The
 system has been tuned using <code>perf</code> package to reduce jitter.</p>
-<pre class="m-code"><span class="o">%</span><span class="k">load_ext</span> line_profiler
+<pre class="m-code">%load_ext line_profiler
 
-<span class="k">def</span> <span class="nf">profile_OUCS3</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-    <span class="n">oper</span> <span class="o">=</span> <span class="n">OUCS3</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>  <span class="c1"># instantiate</span>
-    <span class="n">ux</span> <span class="o">=</span> <span class="n">oper</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>   <span class="c1"># compute derivative</span>
+def profile_OUCS3(N):
+    L, N, x, u = init_params_fields(N)
+    oper = OUCS3(L, N)  # instantiate
+    ux = oper.diff(u)   # compute derivative
 
-<span class="o">%</span><span class="k">lprun</span> -f profile_OUCS3 -f OUCS3.diff profile_OUCS3(1_000)</pre>
+%lprun -f profile_OUCS3 -f OUCS3.diff profile_OUCS3(1_000)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.01216 s
@@ -503,37 +502,37 @@ this scale, we see it can be benificial to store <code>B_column</code> and
 <h2>HOWTO: create a lightweight class with cached attributes</h2>
 <p>Let us begin by inheriting the <code>Base</code> class wherein the <code>diff</code>
 method uses stored values for <code>B_column</code> and <code>B_row</code>.</p>
-<pre class="m-code"><span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">solve_toeplitz</span>
+<pre class="m-code">from scipy.linalg import solve_toeplitz
 
-<span class="k">class</span> <span class="nc">BaseCached</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">u</span><span class="p">):</span>
-        <span class="n">Au</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">@</span> <span class="n">u</span>
-        <span class="n">B_column</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_B_column</span>
-        <span class="n">B_row</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_B_row</span>
-        <span class="k">return</span> <span class="n">solve_toeplitz</span><span class="p">((</span><span class="n">B_column</span><span class="p">,</span> <span class="n">B_row</span><span class="p">),</span> <span class="n">Au</span><span class="p">)</span></pre>
+class BaseCached(Base):
+    def diff(self, u):
+        Au = self.A @ u
+        B_column = self._B_column
+        B_row = self._B_row
+        return solve_toeplitz((B_column, B_row), Au)</pre>
 <section id="first-run">
 <h3>First run</h3>
 <p>If we are not going to rely on a third-party packages, we can do the
 following now (with Python 3) with <code>functools.lru_cache</code>
 (<a href="https://docs.python.org/3/library/functools.html?highlight=lru_cache#functools.lru_cache">docs</a>).</p>
-<pre class="m-code"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+<pre class="m-code">from functools import lru_cache
 
-<span class="k">class</span> <span class="nc">OUCS3Native</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A native implementation of a ``cached_property``.&quot;&quot;&quot;</span>
-    <span class="nd">@property</span>
-    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+class OUCS3Native(BaseCached):
+    &quot;&quot;&quot;A native implementation of a ``cached_property``.&quot;&quot;&quot;
+    @property
+    @lru_cache(maxsize=2)
+    def _B_column(self):
+        return self.B[:,0].toarray()
 
-    <span class="nd">@property</span>
-    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    @property
+    @lru_cache(maxsize=2)
+    def _B_row(self):
+        return self.B[0,:].toarray()
 
-<span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
-<span class="n">oper_native</span> <span class="o">=</span> <span class="n">OUCS3Native</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+L, N, x, u = init_params_fields(1_000)
+oper_native = OUCS3Native(L, N)
 
-<span class="o">%</span><span class="k">lprun</span> -f OUCS3Native.diff oper_native.diff(u)</pre>
+%lprun -f OUCS3Native.diff oper_native.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.011203 s
@@ -550,7 +549,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 </section>
 <section id="second-run">
 <h3>Second run</h3>
-<pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3Native.diff oper_native.diff(u)</pre>
+<pre class="m-code">%lprun -f OUCS3Native.diff oper_native.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.006538 s
@@ -575,7 +574,7 @@ the return value, and returns the cache for future calls if the function
 parameters were “unchanged”.</p>
 <p>Such an implementation would be protected from simple initialization
 attempts such as:</p>
-<pre class="m-code"><span class="n">oper_native</span><span class="o">.</span><span class="n">_B_column</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="m-code">oper_native._B_column = 0</pre>
 <pre>---------------------------------------------------------------------------
 
 AttributeError                            Traceback (most recent call last)
@@ -591,15 +590,15 @@ behaviours:</p>
 <li>Overwriting the original array after first run does not modify the
 result:</li>
 </ul>
-<pre class="m-code"><span class="n">oper_native</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span><span class="n">N</span><span class="p">))</span>
+<pre class="m-code">oper_native.B = np.zeros((N,N))
 
-<span class="n">ux</span> <span class="o">=</span> <span class="n">oper_native</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-<span class="n">oper_native</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ux</span><span class="o">=</span><span class="n">ux</span><span class="p">)</span></pre>
+ux = oper_native.diff(u)
+oper_native.plot(ux=ux)</pre>
 <img src="images/lightweight_classes_23_0.png" />
 <ul>
 <li>No error is raised when modifying the array in place</li>
 </ul>
-<pre class="m-code"><span class="n">oper_native</span><span class="o">.</span><span class="n">_B_column</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="m-code">oper_native._B_column[:] = 0</pre>
 <ul>
 <li>If <code>lru_cache(maxsize=None)</code> is used it would lead to a potential
 memory leak.</li>
@@ -620,27 +619,27 @@ random location in a memory.</p>
 </section>
 <section id="werkzeug">
 <h3>Werkzeug</h3>
-<pre class="m-code"><span class="kn">from</span> <span class="nn">werkzeug.utils</span> <span class="kn">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">wcached_property</span>
+<pre class="m-code">from werkzeug.utils import cached_property as wcached_property
 
 
-<span class="k">class</span> <span class="nc">OUCS3Werkzeug</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Werkzeug implementation of a ``cached_property``.</span>
+class OUCS3Werkzeug(BaseCached):
+    &quot;&quot;&quot;Werkzeug implementation of a ``cached_property``.
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@wcached_property</span>
-    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    &quot;&quot;&quot;
+    @wcached_property
+    def _B_column(self):
+        return self.B[:,0].toarray()
 
-    <span class="nd">@wcached_property</span>
-    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
+    @wcached_property
+    def _B_row(self):
+        return self.B[0,:].toarray()</pre>
 </section>
 <section id="id1">
 <h3>First run</h3>
-<pre class="m-code"><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
-<span class="n">oper_wz</span> <span class="o">=</span> <span class="n">OUCS3Werkzeug</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<pre class="m-code">L, N, x, u = init_params_fields(1_000)
+oper_wz = OUCS3Werkzeug(L, N)
 
-<span class="o">%</span><span class="k">lprun</span> -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
+%lprun -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.009176 s
@@ -657,7 +656,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 </section>
 <section id="id2">
 <h3>Second run</h3>
-<pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
+<pre class="m-code">%lprun -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.010082 s
@@ -674,27 +673,27 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 </section>
 <section id="cached-property">
 <h3>cached_property</h3>
-<pre class="m-code"><span class="kn">from</span> <span class="nn">cached_property</span> <span class="kn">import</span> <span class="n">cached_property</span> <span class="k">as</span> <span class="n">ccached_property</span>
+<pre class="m-code">from cached_property import cached_property as ccached_property
 
 
-<span class="k">class</span> <span class="nc">OUCS3CachedProperty</span><span class="p">(</span><span class="n">BaseCached</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Werkzeug implementation of a ``cached_property``.</span>
+class OUCS3CachedProperty(BaseCached):
+    &quot;&quot;&quot;Werkzeug implementation of a ``cached_property``.
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@ccached_property</span>
-    <span class="k">def</span> <span class="nf">_B_column</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    &quot;&quot;&quot;
+    @ccached_property
+    def _B_column(self):
+        return self.B[:,0].toarray()
 
-    <span class="nd">@ccached_property</span>
-    <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
+    @ccached_property
+    def _B_row(self):
+        return self.B[0,:].toarray()</pre>
 </section>
 <section id="id3">
 <h3>First run</h3>
-<pre class="m-code"><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
-<span class="n">oper_cp</span> <span class="o">=</span> <span class="n">OUCS3CachedProperty</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<pre class="m-code">L, N, x, u = init_params_fields(1_000)
+oper_cp = OUCS3CachedProperty(L, N)
 
-<span class="o">%</span><span class="k">lprun</span> -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
+%lprun -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.010591 s
@@ -711,7 +710,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 </section>
 <section id="id4">
 <h3>Second run</h3>
-<pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
+<pre class="m-code">%lprun -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
 
 Total time: 0.006916 s
@@ -729,8 +728,8 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 <section id="differences-from-the-native-implementation">
 <h3>Differences from the native implementation</h3>
 <p>Overwriting cached property is OK as follows</p>
-<pre class="m-code"><span class="n">oper_wz</span><span class="o">.</span><span class="n">_B_column</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">oper_cp</span><span class="o">.</span><span class="n">_B_column</span> <span class="o">=</span> <span class="mi">0</span></pre>
+<pre class="m-code">oper_wz._B_column = 0
+oper_cp._B_column = 0</pre>
 <p>An advantage of such implementation is there is no need to add a
 <code>maxsize</code> parameter, and thus no risk of having a memory leak.</p>
 <p>The rest of the “caveats” mentioned before still persist in the
@@ -948,15 +947,14 @@ nbviewer</a>.</p>
       <div class="m-col-s-3 m-col-t-6">
         <h3>Sitemap</h3>
         <ul>
-          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">📫 Subscribe</a></li>
-          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds: All</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
           <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
-          <li><a href="https://ashwinvis.github.io/feeds/microblog.atom.xml">Feeds: Microblog</a></li>
           <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/showcase.html">✨Showcase</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">🖖Sponsors</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/planet.html">🪐Planet</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/contact.html">📧Contact</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
