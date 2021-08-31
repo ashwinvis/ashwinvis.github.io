@@ -181,6 +181,8 @@ reuse.
   responsive pelican theme compiled node, grunt, sass technologies.
 - `dotfiles <https://source.coderefinery.org/ashwinvis/dotfiles>`__: My Linux
   configuration files a.k.a. dotfiles.
+- `domain-name-search <https://codeberg.org/ashwinvis/domain-name-search>`__:
+  Search for cheap and available domain names on Porkbun
 - `jupyter-wordcloud <https://github.com/ashwinvis/jupyter-wordcloud>`__:
   Generate wordclouds from Jupyter notebooks.
 - `pelican-planet <https://github.com/ashwinvis/pelican-planet>`__: Pelican

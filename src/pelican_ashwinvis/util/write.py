@@ -37,14 +37,13 @@ def write():
 def modify(files):
     content = here / "content"
     if not files:
-        all_files = [f for f in content.glob("*") if f.is_file()]
+        all_files = [f for f in content.glob("*") if f.is_file()][::-1]
         for i, f in enumerate(all_files):
             print(i, ":", f.relative_to(content))
 
-        ans = input("Enter file to edit: ")
-        if ans.isdigit():
+        ans = prompt.read_user_variable("Enter file to edit", 0)
+        if isinstance(ans, int):
             # as index of list
-            ans = int(ans)
             files = all_files[ans : ans + 1]
         else:
             # as filename
