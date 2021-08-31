@@ -3,7 +3,7 @@ Title: The good old blog with a new name
 Author: Ashwin Vishnu Mohanan
 Date: 2021-08-30T21:06:13.588973
 Slug: domain-name
-Status: draft
+Status: published
 Summary: I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.
 Category: Blog
 Tags: meta, software
@@ -11,10 +11,10 @@ Tags: meta, software
 
 **TLDR;** The URL of this website would soon be [fluid.quest][blog]
 
-Today, the thirtieth day of August 2021, as rain continue to shower on
-Stockholm nearly every day, I dedicated a few days on the hunt for a succinct
+Today, on the thirtieth day of August 2021, as rain continue to shower on
+Stockholm nearly every day, marks the end of my hunt for a succinct
 domain name. For a long time, I was not convinced to spend a good handful of
-money on a virtual asset.
+money on a virtual asset. That changed recently.
 
 After jumping ships from Blogger, to WordPress, to Tumblr and finally to
 [GitHub][GitHub] pages using Pelican static-site generator, I thought I was
@@ -94,11 +94,11 @@ For now, I can say that:
 ## What happens next?
 
 First I will archive a snapshot of the landing page and this post, in case
-someone runs into the blog years later with the old URL and receives a 404,
-wondering what had happened.
+someone runs into the blog years later with the old URL and receives a 404
+error message, wondering what had happened.
 
-I will soon a register [subdomain][subdomain] to point to this very website to
-the [new URL][blog]. Hopefully, all visits to the current URL
+I will soon a register [the apex domain / subdomain][subdomain] to point to this
+very website via the [new URL][blog]. Hopefully, all visits to the current URL
 [ashwinvis.github.io](https://ashwinvis.github.io) would be redirected by
 [GitHub][GitHub] as long I continue to use their service.
 
