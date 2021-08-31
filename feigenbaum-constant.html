@@ -98,24 +98,25 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">Posts</a>
+              <a href="https://ashwinvis.github.io/archives" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://ashwinvis.github.io/category/blog.html">Blog</a></li>
                 <li><a href="https://ashwinvis.github.io/category/tech-talk.html">Tech Talk</a></li>
               </ol>
             </li>
             <li>
-              <a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a>
+              <a href="https://ashwinvis.github.io/pages/subscribe.html">📫 Subscribe</a>
               <ol>
-                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds: All</a></li>
                 <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+                <li><a href="https://ashwinvis.github.io/feeds/microblog.atom.xml">Feeds: Microblog</a></li>
                 <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
               </ol>
             </li>
           </ol>
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li>
-              <a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a>
+              <a href="https://ashwinvis.github.io/pages/showcase.html">✨Showcase</a>
               <ol>
                 <li><a href="https://ashwinvis.github.io/pages/cv.html">CV</a></li>
                 <li><a href="https://ashwinvis.github.io/pages/research.html">Research</a></li>
@@ -123,9 +124,9 @@
                 <li><a href="https://ashwinvis.github.io/talks">Talks</a></li>
               </ol>
             </li>
-            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
-            <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
-            <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/sponsors.html">🖖Sponsors</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/planet.html">🪐Planet</a></li>
+            <li><a href="https://ashwinvis.github.io/pages/contact.html">📧Contact</a></li>
           </ol>
         </div>
       </div>
@@ -160,47 +161,47 @@ Hopf bifurcation. I wanted to check out myself.</p>
 </div>
 <p>Reference:
 <a href="https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/">https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/</a></p>
-<pre class="m-code">from sympy import *
+<pre class="m-code"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 
-## I would love to do it like this. Unfortunately I cannot find a nice way to make a recursive
-## sequence in sympy. So I went for the pythonic approach. If someone has a better idea let me
-## know!
+<span class="c1">## I would love to do it like this. Unfortunately I cannot find a nice way to make a recursive</span>
+<span class="c1">## sequence in sympy. So I went for the pythonic approach. If someone has a better idea let me</span>
+<span class="c1">## know!</span>
 
-# a, x = symbols(&#39;a x&#39;, real=True)
-# i = symbols(&#39;i&#39;, integer=True)
-# f, g = symbols(&#39;f g&#39;, cls=Function)
-init_printing()</pre>
-<pre class="m-code">from functools import lru_cache
+<span class="c1"># a, x = symbols(&#39;a x&#39;, real=True)</span>
+<span class="c1"># i = symbols(&#39;i&#39;, integer=True)</span>
+<span class="c1"># f, g = symbols(&#39;f g&#39;, cls=Function)</span>
+<span class="n">init_printing</span><span class="p">()</span></pre>
+<pre class="m-code"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
 
-@lru_cache(maxsize=8)
-def f(i, a, x0):
-    if i == 0:
-        return x0
-    else:
-        return a * f(i-1, a, x0) * (1 - f(i-1, a, x0))
+<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">))</span>
 
 
-# sequence(f, (x, 0, 10))</pre>
-<pre class="m-code">def series(n, a, x0=1/3): return [f(i, a, x0) for i in range(n)]
-series(30, 3.2)</pre>
+<span class="c1"># sequence(f, (x, 0, 10))</span></pre>
+<pre class="m-code"><span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span> <span class="k">return</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="n">series</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">)</span></pre>
 <div class="formula">
 <span class="displaystyle"><span class="symbol">[</span></span>0.3333333333333333,  0.7111111111111111,  0.6573827160493827,  0.720738178204542,  0.6440789013854076,  0.7335720645618368,  0.6254210901002277,  0.7496625605058258,  0.6005395388213597,  0.7676537636274826,  0.5707566810113398,  0.7839791746952305,  0.5419386506861306,  0.7943716786516055,  0.5227050073850749,  0.7983503444468598,  0.5151586302990083,  0.7992646909678656,  0.5134100631677054,  0.7994245446586822,  0.5131038145790108,  0.7994505281391325,  0.5130540198310227,  0.799454696212004,  0.5130460317330444,  0.7994553633792654,  0.5130447530988549,  0.7994554701330878,  0.5130445485035884,  0.79945548721388<span class="symbol">]</span>
 </div>
-<pre class="m-code">from statistics import mean
+<pre class="m-code"><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span>
 
-def series_mean(n, a, x0=1/3):
-    s = series(n, a, x0)
-    return s, mean(s[n//3:])</pre>
-<pre class="m-code">N = 50
-fig, axes = plt.subplots(2, 2, sharex=True, sharey=True)
-for a, ax in zip(
-    (2, 3.2, 3.4, 3.5),
-    axes.ravel()
-):
-    s, smean = series_mean(N, a)
-    ax.plot(s)
-    ax.set_title(f&#39;$a = {a}$&#39;)
-    ax.hlines(smean, N//3, N, linestyles=&#39;dashed&#39;)</pre>
+<span class="k">def</span> <span class="nf">series_mean</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">series</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="o">//</span><span class="mi">3</span><span class="p">:])</span></pre>
+<pre class="m-code"><span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">),</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="p">):</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">smean</span> <span class="o">=</span> <span class="n">series_mean</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;$a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">smean</span><span class="p">,</span> <span class="n">N</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span></pre>
 <img src="images/feigenbaum_constant_6_0.png" style="width: 547px; height: 434px" />
 <p>In the last subplot we begin to see period doublings.</p>
 <section id="bifurcation-diagram">
@@ -215,46 +216,46 @@ transients and upto 300 values are calculated vfor each value of
 <span class="w">    </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mf">.01</span><span class="p">}],</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">Frame</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">True</span><span class="p">,</span><span class="w"> </span><span class="n">FrameLabel</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">}]</span><span class="w"></span></pre>
 <p>Before we do that, let us see if it makes any difference if we vary the
 initial condition.</p>
-<pre class="m-code">import numpy as np
-N = 300
-a_values =  np.linspace(0, 4, 100)
-x0_values = np.linspace(0.1, 5, 100)
+<pre class="m-code"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">a_values</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x0_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
-plt.figure()
-for x0 in x0_values:
-    smeans = [series_mean(N, a, x0)[1] for a in a_values]
-    plt.scatter(a_values, smeans, s=1, c=&quot;r&quot;)
-    plt.xlabel(&quot;a&quot;)
-    plt.ylabel(&quot;series average&quot;)</pre>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x0</span> <span class="ow">in</span> <span class="n">x0_values</span><span class="p">:</span>
+    <span class="n">smeans</span> <span class="o">=</span> <span class="p">[</span><span class="n">series_mean</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_values</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a_values</span><span class="p">,</span> <span class="n">smeans</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;series average&quot;</span><span class="p">)</span></pre>
 <pre>/usr/lib/python3.7/site-packages/ipykernel_launcher.py:8: RuntimeWarning: overflow encountered in double_scalars</pre>
 <img src="images/feigenbaum_constant_11_1.png" style="width: 567px; height: 432px" />
 <p>The average value where the series oscillates around does not seem to
 depend on the value of <span class="formula"><i>x</i><sub>0</sub></span>. So now instead of plotting the mean,
 we can plot the full distribution where of values where the series
 oscillates around.</p>
-<pre class="m-code">import numpy as np
-N = 300
-a_values =  np.linspace(0, 4, 100)
+<pre class="m-code"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">a_values</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
-plt.figure()
-for a in a_values:
-    s = series(N, a)[50:]
-    plt.scatter(a * np.ones_like(s), s, s=1, c=&quot;r&quot;)
-    plt.xlabel(&quot;a&quot;)
-    plt.ylabel(&quot;series distribution&quot;)</pre>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">a_values</span><span class="p">:</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">series</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">)[</span><span class="mi">50</span><span class="p">:]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;series distribution&quot;</span><span class="p">)</span></pre>
 <img src="images/feigenbaum_constant_13_0.png" style="width: 567px; height: 432px" />
 <p>There is our multiple Hopf bifurcation :) Let us see what happens for
 <span class="formula"><i>a</i> &gt; 3.5</span>.</p>
-<pre class="m-code">N = 300
-fig, axes = plt.subplots(2, 2, sharex=True, sharey=True, figsize=(15, 5))
-for a, ax in zip(
-    (3.6, 3.7, 3.8, 3.9),
-    axes.ravel()
-):
-    s, smean = series_mean(N, a)
-    ax.plot(s)
-    ax.set_title(f&#39;$a = {a}$&#39;)
-    ax.hlines(smean, N//3, N, linestyles=&#39;dashed&#39;)</pre>
+<pre class="m-code"><span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="p">(</span><span class="mf">3.6</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">),</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="p">):</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">smean</span> <span class="o">=</span> <span class="n">series_mean</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;$a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">smean</span><span class="p">,</span> <span class="n">N</span><span class="o">//</span><span class="mi">3</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">)</span></pre>
 <img src="images/feigenbaum_constant_15_0.png" style="width: 1214px; height: 450px" />
 <p>Nice! Maybe I will do a follow up to compute the Lyapunov constant.</p>
 <p><em>You
@@ -365,6 +366,7 @@ nbviewer</a><em>.</em></p>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/linux.html">linux</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/list.html">list</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/markdown.html">markdown</a></li>
+        <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/meta.html">meta</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/mood.html">mood</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/motto.html">motto</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/music.html">music</a></li>
@@ -387,7 +389,7 @@ nbviewer</a><em>.</em></p>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rst.html">rst</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/social-media.html">social media</a></li>
-        <li class="m-tag-4"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
+        <li class="m-tag-5"><a href="https://ashwinvis.github.io/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://ashwinvis.github.io/tag/sympy.html">sympy</a></li>
@@ -446,14 +448,15 @@ nbviewer</a><em>.</em></p>
       <div class="m-col-s-3 m-col-t-6">
         <h3>Sitemap</h3>
         <ul>
-          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">Subscribe</a></li>
-          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/subscribe.html">📫 Subscribe</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/all.atom.xml">Feeds: All</a></li>
           <li><a href="https://ashwinvis.github.io/feeds/blog.atom.xml">Feeds: Blog</a></li>
+          <li><a href="https://ashwinvis.github.io/feeds/microblog.atom.xml">Feeds: Microblog</a></li>
           <li><a href="https://ashwinvis.github.io/feeds/tech-talk.atom.xml">Feeds: Tech Talk</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/showcase.html">Showcase</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">Sponsors</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/planet.html">Planet</a></li>
-          <li><a href="https://ashwinvis.github.io/pages/contact.html">Contact</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/showcase.html">✨Showcase</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/sponsors.html">🖖Sponsors</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/planet.html">🪐Planet</a></li>
+          <li><a href="https://ashwinvis.github.io/pages/contact.html">📧Contact</a></li>
         </ul>
       </div>
     </div>

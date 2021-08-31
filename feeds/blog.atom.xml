@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2021-06-18T16:06:06+02:00</updated><entry><title>Show Your Stripes Day</title><link href="https://ashwinvis.github.io/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://ashwinvis.github.io/" rel="alternate"></link><link href="https://ashwinvis.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://ashwinvis.github.io/</id><updated>2021-08-30T21:06:13+02:00</updated><entry><title>The good old blog with a new name</title><link href="https://ashwinvis.github.io/domain-name.html" rel="alternate"></link><published>2021-08-30T21:06:13+02:00</published><updated>2021-08-30T21:06:13+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-08-30:/domain-name.html</id><summary type="html">&lt;p&gt;I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; The URL of this website would soon be &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Today, on the thirtieth day of August 2021, as rain continue to shower on
+Stockholm nearly every day, marks the end of my hunt for a succinct
+domain name. For a long time, I was not convinced to spend a good handful of
+money on a virtual asset. That changed recently.&lt;/p&gt;
+&lt;p&gt;After jumping ships from Blogger, to WordPress, to Tumblr and finally to
+&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; pages using Pelican static-site generator, I thought I was
+done. I had full control on the content and the site generation. It was made
+using open-source software, which means there was no way the toolchain will not
+work in the foreseeable future. Therefore, in short the internals were intact.
+Moreover, my precious visitors to my blog then do not get served ads, cookies
+or third party tracking scripts.&lt;/p&gt;
+&lt;p&gt;Everything seemed fine. Until Microsoft bought it. Just because it is a free
+service and has a large user base does not inspire any confidence that it might
+stay like this forever. I recall how I used to adore following other blogs on
+Google Reader until &lt;a href="https://killedbygoogle.com/"&gt;Google swung the axe, decided it was not profitable
+enough&lt;/a&gt;. However, feed readers were easy, they
+continued to exist, and it was still possible to find alternatives (server based
+and server-less). In fact this is not an isolated incident. Large corporations
+always change services, buy new ones, shutdown old ones on their whims and
+fancies. They would come abruptly, and I should be prepared for this.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In fact, blog and email servers are like
+&lt;a href="https://genius.com/37517]"&gt;Hotel California (&lt;em&gt;You can check out any time you like, but you can never leave&lt;/em&gt;)&lt;/a&gt;
+as long as you care about others to be able to find you.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By buying a domain name, you get an address which stays the same,
+irrespective of where you host it. The host could be GitHub, Gitlab,
+&lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt; or even a small server powered by a Raspberry Pi!
+The readers will still be able to find you. And as a bonus, you can choose a
+domain name which represents your interests better.&lt;/p&gt;
+&lt;p&gt;Talking about interests, did you know there are a lot of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; (top
+level domain names) right now. Dull &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.net&lt;/code&gt; TLDs of yore are old-fashioned.
+The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
+the "domain registrar". Where to buy can be confusing to a total beginner.&lt;/p&gt;
+&lt;h2 id="doing-the-pre-purchase-research"&gt;&lt;a class="toclink" href="#doing-the-pre-purchase-research"&gt;Doing the pre-purchase research&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The research that I did was a bit of informal hearsay in the interweb. For instance the &lt;a href="https://wizardzines.com"&gt;following comics by Julia Evans&lt;/a&gt; were really useful.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="choosing a domain registrar" src="https://wizardzines.com/comics/registrar/registrar.png"&gt;
+&lt;img alt="whois protection can" src="https://wizardzines.com/comics/domain-privacy/domain-privacy.png"&gt;
+&lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;&lt;img alt="TLDs" src="https://wizardzines.com/comics/tld/tld.png"&gt;&lt;/a&gt;
+&lt;img alt="subdomains" src="https://wizardzines.com/comics/subdomains/subdomains.png"&gt;&lt;/p&gt;
+&lt;p&gt;And this one on receiving
+&lt;a href="https://wizardzines.com/comics/receiving-email/"&gt;emails&lt;/a&gt; which I will think
+about later. Self-hosting emails is not an easy feat.&lt;/p&gt;
+&lt;p&gt;On the choosing the domain registrar question, I got a excellent tip from
+&lt;a href="https://jlelse.blog/dev/free-website"&gt;Jan Lukas-Else&lt;/a&gt; who had good experience
+with &lt;a href="https://porkbun.com"&gt;Porkbun&lt;/a&gt;. Therefore, I went there and there were many good deals
+going on.&lt;/p&gt;
+&lt;h2 id="how-i-bought-the-domain-name"&gt;&lt;a class="toclink" href="#how-i-bought-the-domain-name"&gt;How I bought the domain name&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;No single correct or optimal answer exists to which domain name one should buy
+-- given the plethora of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; in the market! The &lt;a href="https://porkbun.com/products/domains"&gt;prices&lt;/a&gt; are
+nearly fixed for a given TLD. This caught my eye, and I decided to scrap the
+table for offline brainstorming.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The result was a small &lt;a href="https://codeberg.org/ashwinvis/domain-name-search"&gt;domain-name-search Python tool&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By doing so, I was able to check availability of different combinations of
+domain names using &lt;code&gt;whois&lt;/code&gt; and visualize costs in an interactive plot. Of
+course, it was not perfect, a few domain names which were available were up for
+premium registration (prices often exceeding thousands of dollars). Which were
+not for me.  Once I had a shortlist done, it was easy to reduce the options.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And thus I registered &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="why-fluidquest"&gt;&lt;a class="toclink" href="#why-fluidquest"&gt;Why &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For now, I can say that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is an ode to the skill that I have been trained in for nearly a decade, Fluid Mechanics.&lt;/li&gt;
+&lt;li&gt;The quest post Ph.D. still continues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-happens-next"&gt;&lt;a class="toclink" href="#what-happens-next"&gt;What happens next?&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First I will archive a snapshot of the landing page and this post, in case
+someone runs into the blog years later with the old URL and receives a 404
+error message, wondering what had happened.&lt;/p&gt;
+&lt;p&gt;I will soon a register &lt;a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"&gt;the apex domain / subdomain&lt;/a&gt; to point to this
+very website via the &lt;a href="https://fluid.quest"&gt;new URL&lt;/a&gt;. Hopefully, all visits to the current URL
+&lt;a href="https://ashwinvis.github.io"&gt;ashwinvis.github.io&lt;/a&gt; would be redirected by
+&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; as long I continue to use their service.&lt;/p&gt;
+&lt;p&gt;Over a longer period of time, I can turn to a different host with more ethical
+business model such as &lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry><entry><title>Show Your Stripes Day</title><link href="https://ashwinvis.github.io/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The end of the COVID-19 pandemic is visible as vaccinations progress in most
 places across the world, slowly but surely,&lt;/p&gt;
 &lt;figure&gt;
@@ -167,153 +246,4 @@ efficient and accurate code for an LES of diurnal cycle of the ABL. To
 coordinate this inter-disciplinary project a collaboration between KTH, SU, LiU
 and SMHI is set afoot. For the LES we will use the Nek5000 (KTH and SU) and
 ESSENSE (LiU and SMHI) codes.&lt;/p&gt;
-&lt;p&gt;&lt;a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"&gt;&lt;img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blog"></category><category term="postdoc"></category><category term="research"></category><category term="fluid-mechanics"></category></entry><entry><title>New article: Shallow water wave turbulence</title><link href="https://ashwinvis.github.io/new-article-shallow-water-wave-turbulence.html" rel="alternate"></link><published>2019-07-17T00:00:00+02:00</published><updated>2019-07-17T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2019-07-17:/new-article-shallow-water-wave-turbulence.html</id><summary type="html">&lt;p&gt;Paper about how turbulence in shallow water equations evolves and gives rise to shock waves.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;Just today another &lt;a href="https://doi.org/10.1017/jfm.2019.375"&gt;open access
-paper&lt;/a&gt; got published. This
-paper talks about some how turbulence in shallow water equations evolves
-and gives rise to shock waves. There are also some novel statistical
-results which might find use in other fields like acoustics.&lt;/p&gt;
-&lt;div&gt;
-&lt;p&gt;&lt;p&gt;Figure: Shocks becoming stronger and weaker with variations in
-Reynolds number and Froude numbers.&lt;/p&gt;
-&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Find more about it in &lt;a href="https://doi.org/10.1017/jfm.2019.375"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;section id="abstract"&gt;
-&lt;h2&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;The dynamics of irrotational shallow water wave turbulence forced in
-large scales and dissipated at small scales is investigated. First, we
-derive the shallow water analogue of the `four-fifths law’ of
-Kolmogorov turbulence for a third order structure function involving
-velocity and displacement increments. Using this relation and assuming
-that the flow is dominated by shocks we develop a simple model
-predicting that the shock amplitude scales as
-&lt;span class="formula"&gt;(&lt;i&gt;ϵ&lt;/i&gt;&lt;i&gt;d&lt;/i&gt;)&lt;sup&gt;1 ⁄ 3&lt;/sup&gt;&lt;/span&gt;, where &lt;span class="formula"&gt;&lt;i&gt;ϵ&lt;/i&gt;&lt;/span&gt; is the mean
-dissipation rate and &lt;span class="formula"&gt;&lt;i&gt;d&lt;/i&gt;&lt;/span&gt; the mean distance between the shocks, and
-that the &lt;span class="formula"&gt;&lt;i&gt;p&lt;/i&gt;&lt;/span&gt;:th order displacement and velocity structure
-functions scale as &lt;span class="formula"&gt;(&lt;i&gt;ϵ&lt;/i&gt;&lt;i&gt;d&lt;/i&gt;)&lt;sup&gt;&lt;i&gt;p&lt;/i&gt; ⁄ 3&lt;/sup&gt;&lt;i&gt;r&lt;/i&gt; ⁄ &lt;i&gt;d&lt;/i&gt;&lt;/span&gt;, where &lt;span class="formula"&gt;&lt;i&gt;r&lt;/i&gt;&lt;/span&gt; is
-the separation. Then we carry out a series of forced simulations with
-resolutions up to &lt;span class="formula"&gt;7680&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;, varying the Froude number,
-&lt;span class="formula"&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt; = &lt;i&gt;ϵ&lt;/i&gt;&lt;sup&gt;1 ⁄ 3&lt;/sup&gt; ⁄ &lt;i&gt;ck&lt;/i&gt;&lt;span class="scripts"&gt;&lt;sup class="script"&gt;1 ⁄ 3&lt;/sup&gt;&lt;sub class="script"&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;&lt;/span&gt;, where &lt;span class="formula"&gt;&lt;i&gt;k&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt; is the
-forcing wave number and &lt;span class="formula"&gt;&lt;i&gt;c&lt;/i&gt;&lt;/span&gt; is the wave speed. In all simulations
-a stationary state is reached in which there is a constant spectral
-energy flux and equipartition between kinetic and potential energy in
-the constant flux range. The third order structure function relation is
-satisfied with a high degree of accuracy. Mean energy is found to scale
-as &lt;span class="formula"&gt;&lt;i&gt;E&lt;/i&gt; ~ &lt;span class="sqrt"&gt;&lt;span class="radical"&gt;√&lt;/span&gt;&lt;span class="ignored"&gt;(&lt;/span&gt;&lt;span class="root"&gt;&lt;i&gt;ϵ&lt;/i&gt;&lt;i&gt;c&lt;/i&gt; ⁄ &lt;i&gt;k&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;&lt;span class="ignored"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, and is also dependent on
-resolution, indicating that shallow water wave turbulence does not fit
-into the paradigm of a Richardson-Kolmogorov cascade. In all simulations
-shocks develop, displayed as long thin bands of negative divergence in
-flow visualisations. The mean distance between the shocks is found to
-scale as &lt;span class="formula"&gt;&lt;i&gt;d&lt;/i&gt; ~ &lt;i&gt;F&lt;/i&gt;&lt;span class="scripts"&gt;&lt;sup class="script"&gt;1 ⁄ 2&lt;/sup&gt;&lt;sub class="script"&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt; ⁄ &lt;i&gt;k&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;. Structure functions of second and
-higher order are found to scale in good agreement with the model. We
-conclude that in the weak limit, &lt;span class="formula"&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt; → 0&lt;/span&gt;, shocks will
-become denser and weaker and finally disappear for a finite Reynolds
-number. On the other hand, for a given &lt;span class="formula"&gt;&lt;i&gt;F&lt;/i&gt;&lt;sub&gt;&lt;i&gt;f&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt;, no matter how
-small, shocks will prevail if the Reynolds number is sufficiently large.&lt;/p&gt;
-&lt;/section&gt;
-</content><category term="Blog"></category><category term="fluid-mechanics"></category><category term="open-source"></category><category term="open-access"></category><category term="research"></category><category term="academia"></category></entry><entry><title>Why Open-Source?</title><link href="https://ashwinvis.github.io/why-open-source.html" rel="alternate"></link><published>2018-01-06T00:00:00+01:00</published><updated>2018-01-06T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:ashwinvis.github.io,2018-01-06:/why-open-source.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Most of us who are engaged in development or use of open-source software have
-one reason or another to do it. The question of “Why open-source?” is something
-we should all reflect upon once, since we should be well prepared to answer the
-same question confidently in the future.&lt;/p&gt;
-&lt;p&gt;It was inspiring to see sessions dedicated to open-source in AGU 2017, and even
-more exciting to hear mentions of Python usage in talks here and there. I really
-encourage you to have a look at this informal session titled &lt;a href="https://www.youtube.com/watch?v=0GO4ZZ5Ry6M"&gt;Open-Source
-Software in the Geosciences&lt;/a&gt;.
-The content of the session applies to all open-source development in sciences in
-general, although it was intended to be focussed on geosciences.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://invidious.snopyta.org/embed/0GO4ZZ5Ry6M"
-frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;
-&lt;/iframe&gt;
-&lt;p&gt;Since the video is rather long, I have summarized the gist of the talk below.
-The following questions were asked to the panel.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. What considerations went into the decision of making a software openly
-available?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Because there were no alternative (both open or closed) for a specific new
-scientific method.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Because it is the right thing to do, since:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Journals require through terms and condition for the author to make
-results completely reproducible, a condition rarely enforced.&lt;/li&gt;
-&lt;li&gt;Science conducted using the public’s tax money, rightfully belongs to
-the public.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;1.1. … decision of not making a software openly available?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Slobbily written open-source code can flood your email inbox with queries in
-the future. Counterpoint: bad code is much better than no code at all.&lt;/li&gt;
-&lt;li&gt;Current academic setup does not consider software development as a metric for
-career advancement.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2. Has making FOSS affected your career?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;With community use, comes fame, and through fame one gets more citations
-(caution, in the long term). Documentation and tests are very important to
-promote community adoption.&lt;/li&gt;
-&lt;li&gt;A novel method implemented in an open source software can make it a lot more
-attractive to the community.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2.1. Means to promote your code&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Through talks, social and professional contacts, Github (and similar).&lt;/li&gt;
-&lt;li&gt;Should be citeable. i.e. include a BibTeX in the README. Options include
-&lt;a href="https://www.earthcube.org/"&gt;Earthcube (to publish workflows)&lt;/a&gt;, &lt;a href="https://openresearchsoftware.metajnl.com"&gt;JORS&lt;/a&gt;, &lt;a href="http://joss.theoj.org/"&gt;JOSS&lt;/a&gt;
-(open-access journals dedicated to open-source software).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;3. Community impact&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Colleagues inspired to use software, provided if they are open-minded and the
-supervisors are encouraging.&lt;/li&gt;
-&lt;li&gt;Adoption of the software is typically slow in the first few years, but picks
-up gradually - so stay strong!&lt;/li&gt;
-&lt;li&gt;Python is popular these days. Why? The possibility to integrate workflow,
-including I/O and plotting.&lt;/li&gt;
-&lt;li&gt;Could become a benchmark code, for even validating commercial codes!&lt;/li&gt;
-&lt;li&gt;Will license pose a barrier for use of the code? A general thumbrule could be
-as follows. Intended for industry use or to function as a library: choose GPL
-v2, BSD or MIT. Intended only for academic and non-profit applications, and to
-ensure pull-requests: choose GPL v3.&lt;/li&gt;
-&lt;li&gt;Learning version control (mercurial or git) can be a barrier to start with.&lt;/li&gt;
-&lt;li&gt;Grad students go for open-source software just to get the work done. In the
-long run however they &lt;strong&gt;may&lt;/strong&gt; contribute back. Encourage them, even if they
-don’t fully understand how to keep a consistent code style, and the importance
-of comments and documentations. In short, keep the code review process
-constructive. It is a good idea to maintain a one page &lt;em&gt;CODE_OF_CONDUCT&lt;/em&gt; text
-file.&lt;/li&gt;
-&lt;li&gt;Some organisations which are promoting open-science: &lt;a href="https://software-carpentry.org/"&gt;Software Carpentry&lt;/a&gt; and &lt;a href="https://science.mozilla.org/"&gt;Mozilla Science&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;4. Has your perception changed through making FOSS?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Version control offers sense of security in case your laptop gets stolen or
-broken.&lt;/li&gt;
-&lt;li&gt;Unittests offer confidence in your results, and ensures less bugs.&lt;/li&gt;
-&lt;li&gt;Continuous testing ensures others will not break your unittests, thus existing
-functionality.&lt;/li&gt;
-&lt;li&gt;Feel-good effect to have become a better scientist? Perhaps.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;5. Any regrets?&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Poor choice of license in the beginning. Hard to change in the long run.&lt;/li&gt;
-&lt;li&gt;Always ask your boss before you release the code.&lt;/li&gt;
-&lt;li&gt;Email queries about a piece of code you wrote long back, that you have no idea
-about now. No docs!&lt;/li&gt;
-&lt;li&gt;Lonely in the absence of community.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;6. Future of FOSS development&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;More professional, disciplined codes.&lt;/li&gt;
-&lt;li&gt;Web services - codes deployed as a service opens up the possibility for a
-layman to make a simulation even through one’s smart phone. Right now it is
-restricted to computationally non-intensive calculations (for eg. Jupyter
-notebooks, JupyterHub). An example of this is the &lt;a href="http://turbulence.pha.jhu.edu/webquery/query.aspx"&gt;JHU turbulence database&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Research funds and resources allocated to code development, not just for
-buying laboratory apparatus and commercial software.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;An inspiring quote to end with:&lt;/p&gt;
-&lt;img alt="Quote from the video" class="m-image" src="../images/why-open-source-quote.png" style="width: 75%" /&gt;
-</content><category term="Blog"></category><category term="open-source"></category><category term="conference"></category></entry></feed>
+&lt;p&gt;&lt;a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"&gt;&lt;img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blog"></category><category term="postdoc"></category><category term="research"></category><category term="fluid-mechanics"></category></entry></feed>
