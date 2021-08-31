@@ -99,7 +99,7 @@ error message, wondering what had happened.
 
 I will soon a register [the apex domain / subdomain][subdomain] to point to this
 very website via the [new URL][blog]. Hopefully, all visits to the current URL
-[ashwinvis.github.io](https://ashwinvis.github.io) would be redirected by
+[fluid.quest](https://fluid.quest) would be redirected by
 [GitHub][GitHub] as long I continue to use their service.
 
 Over a longer period of time, I can turn to a different host with more ethical

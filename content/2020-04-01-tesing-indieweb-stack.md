@@ -29,7 +29,7 @@ webmention as follows:
 - Send a request [using cURL](https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL)
 
 ```bash
-❯ curl -i -d source=https://ashwinvis.github.io/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+❯ curl -i -d source=https://fluid.quest/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 201 
 content-type: application/json; charset=utf-8
 cache-control: no-cache
@@ -54,7 +54,7 @@ content-length: 3401
 - Ensure that accidental duplicate posts are avoided.
 
 ```bash
-❯ curl -i -d source=https://ashwinvis.github.io/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+❯ curl -i -d source=https://fluid.quest/tesing-indieweb-stack.html -d target=https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 400 
 content-type: application/json; charset=utf-8
 cache-control: no-cache
