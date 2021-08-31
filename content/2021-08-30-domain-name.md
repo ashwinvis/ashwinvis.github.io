@@ -1,6 +1,7 @@
 ---
 Title: The good old blog with a new name
 Author: Ashwin Vishnu Mohanan
+Modified: 2021-09-01
 Date: 2021-08-30T21:06:13.588973
 Slug: domain-name
 Status: published
@@ -99,11 +100,15 @@ error message, wondering what had happened.
 
 I will soon a register [the apex domain / subdomain][subdomain] to point to this
 very website via the [new URL][blog]. Hopefully, all visits to the current URL
-[fluid.quest](https://fluid.quest) would be redirected by
+[ashwinvis.github.io](https://ashwinvis.github.io) would be redirected by
 [GitHub][GitHub] as long I continue to use their service.
 
 Over a longer period of time, I can turn to a different host with more ethical
 business model such as [Codeberg][codeberg].
+
+## Update
+
+The move is now complete to [fluid.quest][blog].
 
 [blog]: https://fluid.quest
 [GitHub]: https://pages.github.com/
