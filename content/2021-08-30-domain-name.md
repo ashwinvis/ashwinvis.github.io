@@ -1,6 +1,7 @@
 ---
 Title: The good old blog with a new name
 Author: Ashwin Vishnu Mohanan
+Modified: 2021-09-01
 Date: 2021-08-30T21:06:13.588973
 Slug: domain-name
 Status: published
@@ -104,6 +105,10 @@ very website via the [new URL][blog]. Hopefully, all visits to the current URL
 
 Over a longer period of time, I can turn to a different host with more ethical
 business model such as [Codeberg][codeberg].
+
+## Update
+
+The move is now complete to [fluid.quest][blog].
 
 [blog]: https://fluid.quest
 [GitHub]: https://pages.github.com/

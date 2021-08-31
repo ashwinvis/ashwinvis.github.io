@@ -35,7 +35,7 @@ Highlights
 
                 Conferences and seminars. :raw-html:`<br/><br/><br/>`
 
-                .. button-info:: https://ashwinvis.github.io/talks
+                .. button-info:: https://fluid.quest/talks
                     :class: m-fullwidth
 
                     See the slides

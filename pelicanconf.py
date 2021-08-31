@@ -95,7 +95,7 @@ with open("header.html") as header:
 PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata] #, myst_reader]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
-M_SITE_LOGO_TEXT = "@ashwinvis"
+M_SITE_LOGO_TEXT = "fluid.quest"
 M_FAVICON = (M_SITE_LOGO, "image/png")
 M_BLOG_FAVICON = M_FAVICON
 
