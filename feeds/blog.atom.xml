@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/blog.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-09-01T00:00:00+02:00</updated><subtitle></subtitle><entry><title>The good old blog with a new name</title><link href="https://fluid.quest/domain-name.html" rel="alternate"></link><published>2021-08-30T21:06:13+02:00</published><updated>2021-09-01T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-08-30:/domain-name.html</id><summary type="html">&lt;p&gt;I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; The URL of this website would soon be &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Blog</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/blog.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-09-06T00:00:00+02:00</updated><subtitle></subtitle><entry><title>The good old blog with a new name</title><link href="https://fluid.quest/domain-name.html" rel="alternate"></link><published>2021-08-30T21:06:13+02:00</published><updated>2021-09-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-08-30:/domain-name.html</id><summary type="html">&lt;p&gt;I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; The URL of this website would soon be &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Today, on the thirtieth day of August 2021, as rain continue to shower on
 Stockholm nearly every day, marks the end of my hunt for a succinct
 domain name. For a long time, I was not convinced to spend a good handful of
@@ -35,7 +35,7 @@ level domain names) right now. Dull &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.
 The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
 the "domain registrar". Where to buy can be confusing to a total beginner.&lt;/p&gt;
 &lt;h2 id="doing-the-pre-purchase-research"&gt;&lt;a class="toclink" href="#doing-the-pre-purchase-research"&gt;Doing the pre-purchase research&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The research that I did was a bit of informal hearsay in the interweb. For instance the &lt;a href="https://wizardzines.com"&gt;following comics by Julia Evans&lt;/a&gt; were really useful.&lt;/p&gt;
+&lt;p&gt;The research that I did was a bit of informal hearsay in the interweb. For instance the &lt;a href="https://wizardzines.com"&gt;following comics by Julia Evans&lt;/a&gt; were really useful&lt;sup id="fnref:zines"&gt;&lt;a class="footnote-ref" href="#fn:zines"&gt;1&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
 &lt;p&gt;&lt;img alt="choosing a domain registrar" src="https://wizardzines.com/comics/registrar/registrar.png"&gt;
 &lt;img alt="whois protection can" src="https://wizardzines.com/comics/domain-privacy/domain-privacy.png"&gt;
 &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;&lt;img alt="TLDs" src="https://wizardzines.com/comics/tld/tld.png"&gt;&lt;/a&gt;
@@ -80,7 +80,15 @@ very website via the &lt;a href="https://fluid.quest"&gt;new URL&lt;/a&gt;. Hope
 &lt;p&gt;Over a longer period of time, I can turn to a different host with more ethical
 business model such as &lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="update"&gt;&lt;a class="toclink" href="#update"&gt;Update&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The move is now complete to &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;.&lt;/p&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry><entry><title>Show Your Stripes Day</title><link href="https://fluid.quest/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
+&lt;p&gt;The move is now complete to &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:zines"&gt;
+&lt;p&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines &lt;a href="https://wizardzines.com/licensing/"&gt;CC-BY-NC-SA 4.0&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:zines" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry><entry><title>Show Your Stripes Day</title><link href="https://fluid.quest/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The end of the COVID-19 pandemic is visible as vaccinations progress in most
 places across the world, slowly but surely,&lt;/p&gt;
 &lt;figure&gt;
