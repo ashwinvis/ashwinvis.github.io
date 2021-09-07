@@ -364,9 +364,8 @@ article > footer {
   color: var(--article-footer-color);
 }
 article > footer p {
-  font-family: var(--code-font);
-  font-weight: 600;
-  font-size: 0.8rem;
+  font-style: italic;
+  font-size: 0.85rem;
   text-indent: 0;
 }
 
