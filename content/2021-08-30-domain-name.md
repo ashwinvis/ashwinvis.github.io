@@ -1,7 +1,7 @@
 ---
 Title: The good old blog with a new name
 Author: Ashwin Vishnu Mohanan
-Modified: 2021-09-01
+Modified: 2021-09-06
 Date: 2021-08-30T21:06:13.588973
 Slug: domain-name
 Status: published
@@ -52,7 +52,7 @@ the "domain registrar". Where to buy can be confusing to a total beginner.
 
 ## Doing the pre-purchase research 
 
-The research that I did was a bit of informal hearsay in the interweb. For instance the [following comics by Julia Evans][b0rk] were really useful.
+The research that I did was a bit of informal hearsay in the interweb. For instance the [following comics by Julia Evans][b0rk] were really useful[^zines] .
 
 ![choosing a domain registrar](https://wizardzines.com/comics/registrar/registrar.png)
 ![whois protection can](https://wizardzines.com/comics/domain-privacy/domain-privacy.png)
@@ -119,3 +119,5 @@ The move is now complete to [fluid.quest][blog].
 [b0rk]: https://wizardzines.com
 [Porkbun]: https://porkbun.com
 [prices]: https://porkbun.com/products/domains
+
+[^zines]: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines [CC-BY-NC-SA 4.0](https://wizardzines.com/licensing/)
