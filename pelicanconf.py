@@ -257,6 +257,11 @@ DIRECT_TEMPLATES = (
     #  "publications",
 )
 
+TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
+STATIC_PATHS = ['uploads', 'admin']
+CMS_ENV = "development"
+
+
 AV_THEME = ""
 
 if AV_THEME == "light":
