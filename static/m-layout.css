@@ -433,7 +433,7 @@ article#m-jumbo > header #m-jumbo-image {
   margin-bottom: -3rem;
 }
 article#m-jumbo > header h1 {
-  font-size: 10vmin;
+  font-size: 6vmin;
 }
 article#m-jumbo > header h2 {
   font-size: 3vmin;
@@ -441,7 +441,7 @@ article#m-jumbo > header h2 {
 /* 2.5vmin equals to 16px (= 1 rem) on 640px, use that as the lower limit */
 @media screen and (max-height: 640px) , screen and (max-width: 640px) {
   article#m-jumbo > header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   article#m-jumbo > header #m-jumbo-image, article#m-jumbo > header h2 {
     font-size: 1rem;
