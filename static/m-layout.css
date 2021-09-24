@@ -448,7 +448,7 @@ article#m-jumbo > header h2 {
   }
 }
 
-article#m-jumbo > header, article#m-jumbo > header h1, article#m-jumbo > header a {
+article#m-jumbo > header, article#m-jumbo > header h1, article#m-jumbo > header a, article#m-jumbo > header p {
   color: #ffffff;
 }
 article#m-jumbo > header a:hover, article#m-jumbo > header a:focus, article#m-jumbo > header a:active {
