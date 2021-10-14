@@ -157,6 +157,333 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.inspiredpython.com/article/assertions-and-exceptions-are-not-the-same?r=rss" rel="bookmark" class="u-url"
+       title="Inspired Python: Assertions and Exceptions are not the same" target="_blank">
+      <time class="m-date" datetime="2021-10-13 21:35:05+00:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Inspired Python: Assertions and Exceptions are not the same
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <span>
+
+        Assertions and Exceptions are not the same
+        <span></span><p>What&#8217;s wrong with the <code>withdraw_money</code> function in the code below?</p>
+        <pre># bank.py
+from dataclasses import dataclass
+
+@dataclass
+class Client:
+
+    balance: float
+
+def withdraw_money(client: Client, amount: float):
+    assert client.balance &gt;= amount, f'Insufficient funds: {client.balance}'
+    # Withdraw amount from the client's bank account.
+    client.balance -= amount
+    return client.balance
+
+client = Client(balance=10.0)
+new_balance = withdraw_money(client=client, amount=20.0)
+print(f'The new balance is {new_balance}')</pre>
+        <p>If you run it with <code>python bank.py</code> you&#8217;re given an error message:</p>
+        <pre>$ python bank.py
+Traceback (most recent call last):
+  File "bank.py", line 20, in &lt;module&gt;
+    new_balance = withdraw_money(client=client, amount=20.0)
+  File "bank.py", line 14, in withdraw_money
+    assert client.balance &gt;= amount, f'Insufficient funds: {client.balance}'
+AssertionError: Insufficient funds: 10.0</pre>
+        <p>Which, at first sight, is correct: I am withdrawing <code>20 …</code></p></span>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-13 21:35:05+00:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pointieststick.com/2021/10/13/why-i-only-have-one-computer/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Why I only have one computer" target="_blank">
+      <time class="m-date" datetime="2021-10-13 21:04:00+00:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Why I only have one computer
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>If you’re here for just the KDE-specific stuff, feel free to skip this post.</p>
+
+
+
+
+
+
+
+<p>I used to have a desktop and a laptop. But in the end I found that having only a single machine greatly simplified everything and increased my productivity. This is it:</p>
+
+
+
+<img alt="" src="//pointieststick.files.wordpress.com/2020/06/thinkpad-x1-yoga.jpg?w=1024">Just <a href="//pointieststick.com/2020/06/08/lenovo-thinkpad-x1-yoga-impressions-bugs-workarounds-and-thoughts-about-the-future/">a regular old Lenovo ThinkPad X1 Yoga laptop</a>
+
+
+
+
+
+
+
+<p><strong>The biggest problem was always keeping files in sync.</strong></p>
+
+
+
+<p>Assuming you’re more than just a consumer of online content, you probably have local files for things that are important to you: school work; in-progress projects; creative pursuits; family photos; a personal music collection; source code repos; saved memes–you name it. With more than one computer, you need to figure out a way to keep these files in sync, and good solutions are elusive.</p>
+
+
+
+<p>Cloud services are expensive and may compromise your privacy. Free …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nate Graham</b></span>
+  on <time datetime="2021-10-13 21:04:00+00:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com/blog/202110/django_chat_podcast.html" rel="bookmark" class="u-url"
+       title="Django Chat podcast" target="_blank">
+      <time class="m-date" datetime="2021-10-13 16:18:04-04:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Django Chat podcast
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I had a fun conversation on the
+<a href="https://djangochat.com/episodes/coveragepy-ned-batchelder">Django Chat</a>
+podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
+</p><p>Things we talked about:</p><ul>
+<li>Walking</li>
+<li>Right and wrong ways to do things</li>
+<li>Geographic meetups during virtual times</li>
+<li>Open source attention</li>
+<li>Coverage.py</li>
+<li>The evolution of the Python standard library</li>
+<li>Python 3.10&#8217;s trace behavior</li>
+<li>Coverage as a measure of test quality</li>
+<li>UX of test information</li>
+<li>Developer gamification</li>
+<li>Upgrading Django with third-party packages</li>
+<li>Convincing people to test</li>
+<li>Using non-public interfaces</li>
+<li><a href="//nedbatchelder.com/code/cog">Cog</a></li>
+<li>Side projects as outlets</li>
+<li>Rewriting my wacky personal site (this site)</li>
+<li>edX being acquired by 2U</li>
+<li>Open source from first principles</li>
+</ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2021-10-13 16:18:04-04:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2021/10/2021-10-13-isojz" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-10-13 19:47:46+02:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Sometimes I am a perfectionist. Having previously made my private diary blog available via a Tailscale sidecar container in my Tailnet, I have now integrated Tailscale directly into GoBlog. Both Tailscale and Tailscale’s Let’s Encrypt certificates can be configured directly in GoBlog. No sidecar container is needed anymore. A much simpler solution! (And Tailscale rocks!)
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-13 19:47:46+02:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2021/10/13/theres-an-app-for-that/" rel="bookmark" class="u-url"
+       title="Pluralistic: 13 Oct 2021" target="_blank">
+      <time class="m-date" datetime="2021-10-13 16:26:24+00:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Pluralistic: 13 Oct 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Charter uses bad credit threats to corral ex-subscribers: "Resubscribe or we'll keep trashing your credit report." Adobe uses copyfraud to preserve spyware: A free-as-in-surveillance-free Flash installer is gone thanks to a bogus copyright claim. India funded a starving kids' app, but not food: Solutionism at its worst. This day in history: 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Charter uses bad credit threats to corral ex-subscribers (permalink) I'm more of a Charter-Spectrum hostage than a customer: I need the internet to earn my living, and my town (Burbank) has signed an exclusive deal with Charter, so I send them $134.99/mo for some of the worst internet in California. It turns out that Charter doesn't stop abusing you when you stop being a customer: the company is now sending threatening …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2021-10-13 16:26:24+00:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article874/kde-s-25th-anniversary" rel="bookmark" class="u-url"
+       title="KDE's 25th Anniversary" target="_blank">
+      <time class="m-date" datetime="2021-10-13 15:12:00+02:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      KDE's 25th Anniversary
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-10-13_kde-25-anniversary.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-10-13_kde-25-anniversary.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p><strong>It's today tomorrow KDE's 25th Anniversary! </strong> and for this occasion, I painted this artwork (<a href="https://www.peppercarrot.com/en/viewer/comissions-src__2021-10-13_KDE-25-anniversary_by-David-Revoy.html">source file here</a>).</p>
+<p>You'll find on the website − <strong><a href="https://25years.kde.org/">https://25years.kde.org/</a></strong> − the full celebration of the event: videos, meeting, activities, old KDE distro ready to run on virtual machine, merch (Tee-Shirt/Stickers). </p>
+<p>But if you still wonder what is KDE; I'll try to give you an overview: KDE is an international free software community that develops free and open-source software. KDE helps these projects to get common tools: bug trackers, software development forge, distributing the software, organizing in real life events like sprints,conferences, etc... You might already know a couple of projects under the umbrella of KDE:</p>
+<ul>
+<li><strong>Krita</strong>, the painting software I use for all my artworks.</li>
+<li><strong>Kdenlive</strong>, the video editor I use for all videos on my channel.</li>
+<li><strong>Plasma</strong>, the desktop environment I …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2021-10-13 15:12:00+02:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://noyb.eu/en/irish-dpc-greenlights-facebooks-gdpr-bypass" rel="bookmark" class="u-url"
+       title="Irish DPC greenlights Facebook's "GDPR bypass"." target="_blank">
+      <time class="m-date" datetime="2021-10-13 10:20:26+00:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Irish DPC greenlights Facebook's "GDPR bypass".
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <span>Irish DPC greenlights Facebook's "GDPR bypass". </span>
+
+                    Schrems: “Decision undermines key element of GDPR.”
+
+                      <img alt="(C) noyb" src="https://noyb.eu/sites/default/files/styles/media_large/public/2021-10/thumb_terms_play.png?itok=lAs_1HBj">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>ps</b></span>
+  on <time datetime="2021-10-13 10:20:26+00:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://blogs.gnome.org/chergert/2021/10/12/gtksourcestyleschemepreview/" rel="bookmark" class="u-url"
        title="GtkSourceStyleSchemePreview" target="_blank">
       <time class="m-date" datetime="2021-10-12 22:30:13+00:00">
@@ -191,164 +518,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pycoders.com/issues/494" rel="bookmark" class="u-url"
-       title="PyCoder’s Weekly: Issue #494 (Oct. 12, 2021)" target="_blank">
-      <time class="m-date" datetime="2021-10-12 19:30:00+00:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      PyCoder’s Weekly: Issue #494 (Oct. 12, 2021)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p> <span>#494 – OCTOBER 12, 2021</span> <span><a href="https://pycoders.com/issues/494">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p>  <div> <a href="https://pycoders.com/link/7186/feed">Beating C and Java, Python Becomes the #1 Most Popular Programming Language, Says TIOBE</a> <p> ZDNet reports that Python &ldquo;is now the most popular language, according to one popularity ranking.&rdquo; &ldquo;For the first time in more than 20 years we have a new leader of the pack&hellip;&rdquo; the <a href="https://pycoders.com/link/7187/feed">TIOBE Index</a> announced this month. &ldquo;The long-standing hegemony of Java and C is over.&rdquo; <span><a href="https://pycoders.com/link/7186/feed">SLASHDOT.ORG</a></span> </p> </div> <div> <a href="https://pycoders.com/link/7177/feed">Python C API: Add Functions to Access <code>PyObject</code></a> <p> &ldquo;The <code>PyObject</code> structure prevents indirectly to optimize CPython. We will see why and how I prepared the C API to make this structure opaque. It took me 1 year and a half to add functions and to introduce incompatible C API changes (fear!)&rdquo; <span><a href="https://pycoders.com/link/7177/feed">VICTOR STINNER</a></span> </p> </div> <div> <a href="https://pycoders.com/link/7166/feed">Improve Inefficient App Code With Datadog Application Performance Monitoring</a> <a href="https://pycoders.com/link/7166/feed"><img alt="alt" src="https://cdn.pycoders.com/b164ba7a62cc90558f5f6fafa51662ca"></a> <p> Datadog&rsquo;s Continuous Profiler allows you to measure …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-12 19:30:00+00:00" class="dt-published"></time>
-  Tue 12 Oct 2021
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2021/10/12/no-criminals-no-crimes/" rel="bookmark" class="u-url"
-       title="Pluralistic: 12 Oct 2021" target="_blank">
-      <time class="m-date" datetime="2021-10-12 18:22:40+00:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Pluralistic: 12 Oct 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links This Thing Between Us, a neck-hair-stand-up cuycuy horror: Gus Moreno's debut novel. There are no corporate criminals in America: Because America doesn't have corporate crime prosecutions. This day in history: 2001, 2006, 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading This Thing Between Us, a neck-hair-stand-up cuycuy horror (permalink) Gus Moreno's debut novel, "This Thing Between Us," is a genuinely creepy supernatural horror novel, a book that made the hairs on the back of my neck stand up and prompted me to turn on the nightlight at bedtime. https://www.fsgoriginals.com/books/this-thing-between-us I almost didn't read it. It's billed as a book about a widower whose smart-speaker is haunted by his wife's ghost, which sounds gimmicky and foolish, but that's a very poor summary indeed. Thiago is the book's narrator …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2021-10-12 18:22:40+00:00" class="dt-published"></time>
-  Tue 12 Oct 2021
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article873/donation-campaign-framasoft-its-also" rel="bookmark" class="u-url"
-       title="Donation campaign: "Framasoft, it’s also…"" target="_blank">
-      <time class="m-date" datetime="2021-10-12 15:50:00+02:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Donation campaign: "Framasoft, it’s also…"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-10-12_framasoft-its-also-thumbnails_by_davidrevoy.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-10-12_framasoft-its-also-thumbnails_by_davidrevoy.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Framasoft published this morning a <a href="https://soutenir.framasoft.org/en/">donation campaign for 2022</a> <a href="https://soutenir.framasoft.org/en/">in English</a> and <a href="https://soutenir.framasoft.org/fr/">French</a>. </p>
-<p>I had the honor to illustrate this campaign. </p>
-<p>The campaign is named "Framasoft, it’s also…" and communicate in a playful way (a card game) their actions in the digital world, but also in real-life. You can flip more than thirty illustrated cards to discover the org. You'll probably be surprised by the amount of what they manage.</p>
-<p>It took me a lot of time to paint this campaign and it certainly had an impact on the episode of Pepper&amp;Carrot, but sharing the adventure of Framasoft is really important to me. It's really where I come from (how I discovered Free/Libre and Open Source Software back in the 2000s).</p>
-<p>It was also a pleasure to follow the conception and development from scratch, what a great …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2021-10-12 15:50:00+02:00" class="dt-published"></time>
-  Tue 12 Oct 2021
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kdenlive.org/en/2021/10/kdenlive-21-08-2-is-out/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Kdenlive 21.08.2 is out" target="_blank">
-      <time class="m-date" datetime="2021-10-12 12:17:18+00:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Kdenlive 21.08.2 is out
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>
-
-
-
-
-                    <div>
-                <div>
-
-
-                <div>
-
-
-                <div>
-<p>The second release of the 21.08 series is out with a polishing galore throughout all Kdenlive components. Compositing highlights include added align parameters to the <em>Composite</em> interface, fixing line artifacts affecting the <em>Slide</em> composition, compositions display correctly on clips with same track transitions, <em>Transform</em> and <em>Composite &amp; Transform</em> compositions adjust properly to frame size. <em>Fade to Alpha </em>effect is fixed. The <em>Color picker</em> now works properly when using multiple screens and the color display in the monitors is now accurate. Under the hood improvements include the crash detection and recovery system has been improved, fix <em>Stabilize</em> and <em>Scene Detection</em> jobs, removed noise when opening a project, don’t allow importing of project cache folders and always use UTF8 encoding when writing files.</p>
-<p><strong>Full log</strong></p>
-<ul>
-<li>Fix remove space in all tracks with locked tracks. <a href="//commits.kde.org/kdenlive/580efc69daa5938e7f00f1743bf6381f470e30fb">Commit.</a>
-</li>
-<li>Fix spacer track sometimes not allowing …</li></ul></div></div></div></div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Kdenlive</b></span>
-  on <time datetime="2021-10-12 12:17:18+00:00" class="dt-published"></time>
-  Tue 12 Oct 2021
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.scivision.dev/cmake-default-build-type/" rel="bookmark" class="u-url"
        title="CMake build type default" target="_blank">
       <time class="m-date" datetime="2021-10-12 00:00:00+00:00">
@@ -373,8 +542,10 @@ CMake ≥ 3.22 checks environment variable CMAKE_BUILD_TYPE, which can be a conv
 <p>We also generally recommend setting the
 <a href="https://www.scivision.dev/cmake-generator-ninja">default CMake generator</a>.</p>
 
-<p>For projects used by a range of users who may or may not know to set a default build type, and where the developers want to ensure users are normally getting the full performance of a Release build, consider logic like:</p>
-<div><pre><code>if(<span>NOT</span> <span>CMAKE_GENERATOR</span> <span>STREQUAL</span> <span>"Ninja Multi-Config"</span> <span>AND</span> <span>NOT</span> (<span>CMAKE_BUILD_TYPE</span> <span>OR</span> <span>DEFINED</span> <span>ENV{CMAKE_BUILD_TYPE}</span>))<span>
+<p>For projects used by a range of users who may or may not know to set a default build type, and where the developers want to ensure users are normally getting the full performance of a Release build, use
+<a href="https://cmake.org/cmake/help/latest/prop_gbl/GENERATOR_IS_MULTI_CONFIG.html">GENERATOR_IS_MULTI_CONFIG</a>:</p>
+<div><pre><code>get_property(<span>gen_multi</span> <span>GLOBAL</span> <span>PROPERTY</span> <span>GENERATOR_IS_MULTI_CONFIG</span>)<span>
+</span><span></span>if(<span>NOT</span> <span>gen_multi</span> <span>AND</span> <span>NOT</span> (<span>CMAKE_BUILD_TYPE</span> <span>OR</span> <span>DEFINED</span> <span>ENV{CMAKE_BUILD_TYPE}</span>))<span>
 </span><span></span> set(<span>CMAKE_BUILD_TYPE</span> <span>Release</span> <span>CACHE</span> <span>STRING</span> <span>"Release can have faster run time than Debug"</span>)<span>
 </span><span></span>endif()<span>
 </span></code></pre></div>
@@ -455,40 +626,6 @@ CMake ≥ 3.22 checks environment variable CMAKE_BUILD_TYPE, which can be a conv
   on <time datetime="2021-10-09 00:00:00+00:00" class="dt-published"></time>
   Sat 09 Oct 2021
   in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/thoughts/2021/10/win-11-winget" rel="bookmark" class="u-url"
-       title="Windows 11’s package manager" target="_blank">
-      <time class="m-date" datetime="2021-10-08 20:45:14+02:00">
-        Oct
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Windows 11’s package manager
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Windows 11 is even better than I expected and my first impression was. Next to running Linux GUI apps, there’s also winget included, the Windows Package Manager. winget allows installing and updating apps directly from the terminal. (I first blogged about it last year in May.)
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-08 20:45:14+02:00" class="dt-published"></time>
-  Fri 08 Oct 2021
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -703,47 +840,6 @@ Reflection from a user perspective
   on <time datetime="2021-10-05 00:00:00+00:00" class="dt-published"></time>
   Tue 05 Oct 2021
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202110/coverage_60.html" rel="bookmark" class="u-url"
-       title="Coverage 6.0" target="_blank">
-      <time class="m-date" datetime="2021-10-04 09:15:00-04:00">
-        Oct
-        <span class="m-date-day">
-          04
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Coverage 6.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://pypi.org/project/coverage/6.0/">Coverage.py 6.0 is now
-available</a>.  It&#8217;s a major version bump for two reasons:</p><ul>
-<li>Python 2 is no longer supported.</li>
-<li>Third-party packages are automatically ignored, which could be a big
-change for some people.</li>
-</ul><p>There are other smaller improvements,
-<a href="https://coverage.readthedocs.io/en/6.0/changes.html#changes-60">described
-in the change history.</a></p><p>Give it a try, and let me know what you think.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2021-10-04 09:15:00-04:00" class="dt-published"></time>
-  Mon 04 Oct 2021
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1065,40 +1161,6 @@ conda-forge which used this vulnerability.</strong></p>
   on <time datetime="2021-09-23 04:41:00.001000-04:00" class="dt-published"></time>
   Thu 23 Sep 2021
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tonsky.me/blog/python-build/" rel="bookmark" class="u-url"
-       title="Python as a build tool" target="_blank">
-      <time class="m-date" datetime="2021-09-23 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          23
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Python as a build tool
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Why Skija and JWM use Python instead of existing build tool
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2021-09-23 00:00:00+00:00" class="dt-published"></time>
-  Thu 23 Sep 2021
-  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
