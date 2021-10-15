@@ -157,60 +157,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.inspiredpython.com/article/assertions-and-exceptions-are-not-the-same?r=rss" rel="bookmark" class="u-url"
-       title="Inspired Python: Assertions and Exceptions are not the same" target="_blank">
-      <time class="m-date" datetime="2021-10-13 21:35:05+00:00">
+    <a href="https://testdriven.io/blog/django-coinbase/" rel="bookmark" class="u-url"
+       title="TestDriven.io: Accepting Crypto Payments with Django and Coinbase" target="_blank">
+      <time class="m-date" datetime="2021-10-14 21:40:34+00:00">
         Oct
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      Inspired Python: Assertions and Exceptions are not the same
+      TestDriven.io: Accepting Crypto Payments with Django and Coinbase
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <span>
-
-        Assertions and Exceptions are not the same
-        <span></span><p>What&#8217;s wrong with the <code>withdraw_money</code> function in the code below?</p>
-        <pre># bank.py
-from dataclasses import dataclass
-
-@dataclass
-class Client:
-
-    balance: float
-
-def withdraw_money(client: Client, amount: float):
-    assert client.balance &gt;= amount, f'Insufficient funds: {client.balance}'
-    # Withdraw amount from the client's bank account.
-    client.balance -= amount
-    return client.balance
-
-client = Client(balance=10.0)
-new_balance = withdraw_money(client=client, amount=20.0)
-print(f'The new balance is {new_balance}')</pre>
-        <p>If you run it with <code>python bank.py</code> you&#8217;re given an error message:</p>
-        <pre>$ python bank.py
-Traceback (most recent call last):
-  File "bank.py", line 20, in &lt;module&gt;
-    new_balance = withdraw_money(client=client, amount=20.0)
-  File "bank.py", line 14, in withdraw_money
-    assert client.balance &gt;= amount, f'Insufficient funds: {client.balance}'
-AssertionError: Insufficient funds: 10.0</pre>
-        <p>Which, at first sight, is correct: I am withdrawing <code>20 …</code></p></span>
+  This tutorial looks at how to accept crypto Payments with Django and Coinbase Commerce.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-13 21:35:05+00:00" class="dt-published"></time>
-  Wed 13 Oct 2021
+  on <time datetime="2021-10-14 21:40:34+00:00" class="dt-published"></time>
+  Thu 14 Oct 2021
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -220,60 +191,79 @@ AssertionError: Insufficient funds: 10.0</pre>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2021/10/13/why-i-only-have-one-computer/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Why I only have one computer" target="_blank">
-      <time class="m-date" datetime="2021-10-13 21:04:00+00:00">
+    <a href="https://www.qt.io/blog/qt-creator-6-beta-released?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Qt Creator 6 Beta released" target="_blank">
+      <time class="m-date" datetime="2021-10-14 10:00:23+00:00">
         Oct
         <span class="m-date-day">
-          13
+          14
         </span>
         2021
       </time>
       <div class="p-name">
-      Why I only have one computer
+      Qt Creator 6 Beta released
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>If you’re here for just the KDE-specific stuff, feel free to skip this post.</p>
-
-
-
-
-
-
-
-<p>I used to have a desktop and a laptop. But in the end I found that having only a single machine greatly simplified everything and increased my productivity. This is it:</p>
-
-
-
-<img alt="" src="//pointieststick.files.wordpress.com/2020/06/thinkpad-x1-yoga.jpg?w=1024">Just <a href="//pointieststick.com/2020/06/08/lenovo-thinkpad-x1-yoga-impressions-bugs-workarounds-and-thoughts-about-the-future/">a regular old Lenovo ThinkPad X1 Yoga laptop</a>
-
-
-
-
-
-
-
-<p><strong>The biggest problem was always keeping files in sync.</strong></p>
-
-
-
-<p>Assuming you’re more than just a consumer of online content, you probably have local files for things that are important to you: school work; in-progress projects; creative pursuits; family photos; a personal music collection; source code repos; saved memes–you name it. With more than one computer, you need to figure out a way to keep these files in sync, and good solutions are elusive.</p>
-
-
-
-<p>Cloud services are expensive and may compromise your privacy. Free …</p>
+  <p>We are happy to announce the release of Qt Creator 6 Beta !</p>  
+<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-6-beta-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2021-10-13 21:04:00+00:00" class="dt-published"></time>
-  Wed 13 Oct 2021
+  <span class="p-author"><b>Qt Dev Loop</b></span>
+  on <time datetime="2021-10-14 10:00:23+00:00" class="dt-published"></time>
+  Thu 14 Oct 2021
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/mount-usb-drives-windows-subsystem-for-linux/" rel="bookmark" class="u-url"
+       title="WSL mount external and network drives" target="_blank">
+      <time class="m-date" datetime="2021-10-14 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          14
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      WSL mount external and network drives
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Windows Subsystem for Linux can mount SD card, USB thumb flash drives, CD / DVD drives (CDFS), network drives, and UNC paths via
+<a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-mount-disk">&ldquo;wsl &ndash;mount&rdquo;</a>.
+WSL can mount disk formats FAT, ExFAT or NTFS and VHD images.</p>
+
+<p>For Windows 10 or those not desiring to use &ldquo;wsl &ndash;mount&rdquo; to mount external drives, the following can be used instead.</p>
+<p>If Windows changes the external drive letter on a subsequent session, you need to repeat this process.
+These commands are typed into the Windows Subsystem for Linux Terminal.</p>
+<p>Create a mount location in WSL and mount the drive (assume the drive shows in Windows as &ldquo;F:&quot;):</p>
+<div><pre><code>mkdir /mnt/f
+mount -t drvfs f: /mnt/f
+</code></pre></div><p>One can then create and manipulate files from both Windows and WSL on the same external drive.</p>
+
+<p>For <strong>network storage</strong>, assume networked storage is already showing in Windows …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-14 00:00:00+00:00" class="dt-published"></time>
+  Thu 14 Oct 2021
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -484,6 +474,40 @@ podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://xkcd.com/2528/" rel="bookmark" class="u-url"
+       title="Flag Map Sabotage" target="_blank">
+      <time class="m-date" datetime="2021-10-13 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          13
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Flag Map Sabotage
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Delaware hopes to explore the western edge of areas marked with the Belgian flag, once the tornadoes die down." src="https://imgs.xkcd.com/comics/flag_map_sabotage.png" title="Delaware hopes to explore the western edge of areas marked with the Belgian flag, once the tornadoes die down.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-13 00:00:00+00:00" class="dt-published"></time>
+  Wed 13 Oct 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://blogs.gnome.org/chergert/2021/10/12/gtksourcestyleschemepreview/" rel="bookmark" class="u-url"
        title="GtkSourceStyleSchemePreview" target="_blank">
       <time class="m-date" datetime="2021-10-12 22:30:13+00:00">
@@ -510,88 +534,6 @@ podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
   on <time datetime="2021-10-12 22:30:13+00:00" class="dt-published"></time>
   Tue 12 Oct 2021
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-default-build-type/" rel="bookmark" class="u-url"
-       title="CMake build type default" target="_blank">
-      <time class="m-date" datetime="2021-10-12 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      CMake build type default
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The default <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html">CMAKE_BUILD_TYPE</a> is often desired to be set to Release.
-CMake ≥ 3.22 checks environment variable CMAKE_BUILD_TYPE, which can be a convenient user default</p>
-<p>On Linux and MacOS add to ~/.bashrc, ~/.zshrc or similar:</p>
-<div><pre><code>export CMAKE_BUILD_TYPE<span>=</span>Release
-</code></pre></div><p>On Windows, set this via the user environment variable GUI.</p>
-<p>We also generally recommend setting the
-<a href="https://www.scivision.dev/cmake-generator-ninja">default CMake generator</a>.</p>
-
-<p>For projects used by a range of users who may or may not know to set a default build type, and where the developers want to ensure users are normally getting the full performance of a Release build, use
-<a href="https://cmake.org/cmake/help/latest/prop_gbl/GENERATOR_IS_MULTI_CONFIG.html">GENERATOR_IS_MULTI_CONFIG</a>:</p>
-<div><pre><code>get_property(<span>gen_multi</span> <span>GLOBAL</span> <span>PROPERTY</span> <span>GENERATOR_IS_MULTI_CONFIG</span>)<span>
-</span><span></span>if(<span>NOT</span> <span>gen_multi</span> <span>AND</span> <span>NOT</span> (<span>CMAKE_BUILD_TYPE</span> <span>OR</span> <span>DEFINED</span> <span>ENV{CMAKE_BUILD_TYPE}</span>))<span>
-</span><span></span> set(<span>CMAKE_BUILD_TYPE</span> <span>Release</span> <span>CACHE</span> <span>STRING</span> <span>"Release can have faster run time than Debug"</span>)<span>
-</span><span></span>endif()<span>
-</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-12 00:00:00+00:00" class="dt-published"></time>
-  Tue 12 Oct 2021
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2527/" rel="bookmark" class="u-url"
-       title="New Nobel Prizes" target="_blank">
-      <time class="m-date" datetime="2021-10-11 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          11
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      New Nobel Prizes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="They've endowed a separate prize in Physiology or Medicine or Stopping Dr. Adams." src="https://imgs.xkcd.com/comics/new_nobel_prizes.png" title="They've endowed a separate prize in Physiology or Medicine or Stopping Dr. Adams.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-11 00:00:00+00:00" class="dt-published"></time>
-  Mon 11 Oct 2021
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1087,80 +1029,6 @@ The 0.14.0 release introduced experimental support to rebuild <a href="https://t
   on <time datetime="2021-09-27 00:04:26-07:00" class="dt-published"></time>
   Mon 27 Sep 2021
   in PHD Comics.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="www.conda-forge.org/blog/posts/2021-09-24-travis-security/" rel="bookmark" class="u-url"
-       title="Travis CI Security Incident" target="_blank">
-      <time class="m-date" datetime="2021-09-24 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          24
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Travis CI Security Incident
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>On September 9, 2021 one of our core devs discovered that artifacts building on
-Travis CI were being uploaded to our conda channel from PRs running on forked
-repositories. A quick investigation revealed that Travis CI was passing encrypted
-secrets to PR builds on forks. Further examination of our logs and artifacts indicated
-that this had been happening since about September 3, 2021. This security bug was subsequently confirmed by Travis CI. See this <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41077">CVE</a>
-for more details on this incident. <strong>As far as we know, there were no actual exploits against
-conda-forge which used this vulnerability.</strong></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Matthew R. Becker</b></span>
-  on <time datetime="2021-09-24 00:00:00+00:00" class="dt-published"></time>
-  Fri 24 Sep 2021
-  in conda-forge blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pyfound.blogspot.com/2021/09/katia-lira-awarded-psf-community.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
-       title="Katia Lira Awarded the PSF Community Service Award for Q2 2020" target="_blank">
-      <time class="m-date" datetime="2021-09-23 04:41:00.001000-04:00">
-        Sep
-        <span class="m-date-day">
-          23
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Katia Lira Awarded the PSF Community Service Award for Q2 2020
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>&nbsp;</p><div><a href="https://1.bp.blogspot.com/-HqnycPNU9wI/YUjMkW947NI/AAAAAAABCb0/DyHaQTZTV5Q6Ph8cc6o-wzsnJ7V0c4beQCLcBGAsYHQ/s1200/katiaLira.jpeg"><img src="https://1.bp.blogspot.com/-HqnycPNU9wI/YUjMkW947NI/AAAAAAABCb0/DyHaQTZTV5Q6Ph8cc6o-wzsnJ7V0c4beQCLcBGAsYHQ/w400-h388/katiaLira.jpeg"></a></div><p></p><p><a href="https://twitter.com/lakatialira">Katia Lira</a>, Software Engineer from Mexico city, has been awarded the Python Software Foundation 2020 Q2 Community Service Award.</p><p></p><blockquote><p>RESOLVED, that the Python Software Foundation award the Q2 2020 Community Service Award to Katia Lira for her contributions to PyCon LatAm as conference chair, which held its inaugural conference in 2019. Additionally, Katia is the <a href="https://www.defna.org/">DEFNA</a> (Django Events Foundation North America) President and has collaborated in crafting the vision of PyLadies Global. She hosts and produces multiple Python/tech/community podcasts like El Dev Show in Spanish. She's a PyCon speaker and is well respected in the community.</p></blockquote><p></p><p>We interviewed Katia to learn more about her inspiration and work with the Python community. We also asked two of Katia's associates - Valery Calderon and Cristian Maureira-Fredes to share more light about Katia's impact on the community.</p><p><b>What was your earliest memory …</b></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Charles Freeborn (noreply@blogger.com)</b></span>
-  on <time datetime="2021-09-23 04:41:00.001000-04:00" class="dt-published"></time>
-  Thu 23 Sep 2021
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
