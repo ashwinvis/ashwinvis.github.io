@@ -157,31 +157,60 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://testdriven.io/blog/django-coinbase/" rel="bookmark" class="u-url"
-       title="TestDriven.io: Accepting Crypto Payments with Django and Coinbase" target="_blank">
-      <time class="m-date" datetime="2021-10-14 21:40:34+00:00">
+    <a href="https://www.inspiredpython.com/article/assertions-and-exceptions-are-not-the-same?r=rss" rel="bookmark" class="u-url"
+       title="Inspired Python: Assertions and Exceptions are not the same" target="_blank">
+      <time class="m-date" datetime="2021-10-15 20:40:13+00:00">
         Oct
         <span class="m-date-day">
-          14
+          15
         </span>
         2021
       </time>
       <div class="p-name">
-      TestDriven.io: Accepting Crypto Payments with Django and Coinbase
+      Inspired Python: Assertions and Exceptions are not the same
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  This tutorial looks at how to accept crypto Payments with Django and Coinbase Commerce.
+  <span>
+
+        Assertions and Exceptions are not the same
+        <span></span><p>What&#8217;s wrong with the <code>withdraw_money</code> function in the code below?</p>
+        <pre># bank.py
+from dataclasses import dataclass
+
+@dataclass
+class Client:
+
+    balance: float
+
+def withdraw_money(client: Client, amount: float):
+    assert client.balance &gt;= amount, f'Insufficient funds: {client.balance}'
+    # Withdraw amount from the client's bank account.
+    client.balance -= amount
+    return client.balance
+
+client = Client(balance=10.0)
+new_balance = withdraw_money(client=client, amount=20.0)
+print(f'The new balance is {new_balance}')</pre>
+        <p>If you run it with <code>python bank.py</code> you&#8217;re given an error message:</p>
+        <pre>$ python bank.py
+Traceback (most recent call last):
+  File "bank.py", line 20, in &lt;module&gt;
+    new_balance = withdraw_money(client=client, amount=20.0)
+  File "bank.py", line 14, in withdraw_money
+    assert client.balance &gt;= amount, f'Insufficient funds: {client.balance}'
+AssertionError: Insufficient funds: 10.0</pre>
+        <p>Which, at first sight, is correct: I am withdrawing <code>20 …</code></p></span>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-14 21:40:34+00:00" class="dt-published"></time>
-  Thu 14 Oct 2021
+  on <time datetime="2021-10-15 20:40:13+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -191,32 +220,159 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.qt.io/blog/qt-creator-6-beta-released?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Qt Creator 6 Beta released" target="_blank">
-      <time class="m-date" datetime="2021-10-14 10:00:23+00:00">
+    <a href="https://jlelse.blog/posts/retiring-pi" rel="bookmark" class="u-url"
+       title="Retiring my Raspberry Pi (again)" target="_blank">
+      <time class="m-date" datetime="2021-10-15 21:17:24+02:00">
         Oct
         <span class="m-date-day">
-          14
+          15
         </span>
         2021
       </time>
       <div class="p-name">
-      Qt Creator 6 Beta released
+      Retiring my Raspberry Pi (again)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>We are happy to announce the release of Qt Creator 6 Beta !</p>  
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-6-beta-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
+  And again I changed something in my setup. Now I have turned off the Raspberry Pi 4 again and handed over the tasks to my EliteDesk 800 G1 USDT. But why? Here is my explanation.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2021-10-14 10:00:23+00:00" class="dt-published"></time>
-  Thu 14 Oct 2021
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-15 21:17:24+02:00" class="dt-published"></time>
+  Fri 15 Oct 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2021/10/15/fargo-north-decoder/" rel="bookmark" class="u-url"
+       title="Pluralistic: 15 Oct 2021" target="_blank">
+      <time class="m-date" datetime="2021-10-15 17:54:57+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Pluralistic: 15 Oct 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links ROT 8000 and what "security" means: AKA, "infosec is a team sport." This day in history: 2001, 2006, 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading ROT 8000 and what "security" means (permalink) If you're an Internet Person of a Certain Vintage, you'll likely experience the same thrill of delight I felt this morning when I discovered ROT8000, a Unicode version of the old ROT13 cipher. But after I finished smiling, I got to thinking. http://rot8000.com/Index ROT13 is a toy cipher with a simple method for scrambling text &#8211; simply change each character in the message to the character that comes 13 letters after it in the alphabet: A=M, B=N, C=O, etc. You're ROTating each character 13 positions forward &#8211; hence, ROT13. The cool thing about ROT13 is …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2021-10-15 17:54:57+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.gnome.org/~michael/blog/2021-10-15.html" rel="bookmark" class="u-url"
+       title="2021-10-15 Friday" target="_blank">
+      <time class="m-date" datetime="2021-10-15 16:55:06+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      2021-10-15 Friday
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <ul> 
+    <li>
+        Mail chew; admin, patch review here &amp; there - encouraging to
+    see more fixes &amp; performance improvements for Online as well as
+    good progress to our next major release.
+    </li>
+    <li>
+        After Italo's keynote announcement of the new LibreOffice Technology
+    marketing plan at the LibreOffice conference, we lost no time integrating
+    this great way to fairly present the goodness of LibreOffice that we depend
+    on to build Collabora Online &amp; Collabora Office mobile into the product.
+    With new links that can take you to our <a href="https://www.collaboraoffice.com/community-lot/">LibreOffice Technology
+    page</a> where we can celebrate the community &amp; credit all the hard work
+    done under the hood here, and of course the logo. Still a work-in-progress,
+    and will start to appear in our products over the next weeks as/when we
+    refresh them, but so far it looks like this for desktop &amp; mobile:
+
+
+    <a href="https://www.collaboraoffice.com/community-lot/"><img alt="up-coming COOL About dialog" src="https://people.gnome.org/~michael/images/2021-10-15-online-about.png"></a>
+    <a href="https://www.collaboraoffice.com/community-lot/"><img alt="up-coming COOL About dialog" src="https://people.gnome.org/~michael/images/2021-10-15-online-mobile.png"></a>
+
+
+    Thanks to Italo &amp; Mike at TDF for …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-15 16:55:06+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kdenlive.org/en/2021/10/kdenlive-on-tv-for-a-main-national-italian-broadcaster/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Kdenlive on TV for a main national Italian broadcaster." target="_blank">
+      <time class="m-date" datetime="2021-10-15 13:12:47+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Kdenlive on TV for a main national Italian broadcaster.
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>On October the 13th, the Italian broadcaster Mediaset showed a 2-minute clip during the prime-time Comedy Show Honolulu on its Italia 1 channel. This is that clip:</p>
+<p><a href="//www.mediasetplay.mediaset.it/video/honolulu/alessandro-bianchi-il-tg-del-futuro_F311066901003C03">https://www.mediasetplay.mediaset.it/video/honolulu/alessandro-bianchi-il-tg-del-futuro_F311066901003C03</a></p>
+<p>The “News from the Future” segment was produced using Kdenlive, and that is a milestone for our community because, along with the recent inclusion of Kdenlive in ASWF’s landscape catalog (<a href="//landscape.aswf.io/">https://landscape.aswf.io/</a>), it places Kdenlive on a whole new level.</p>
+<p>Our beloved application was able to deliver the content keeping to a deadline (which on TV is always very tight), at the requested quality standard, and in the required format. Also, Kdenlive allowed us to quickly carry out a lot of the modifications the network asked for to better adjust the content to their internal policy.</p>
+<p>But this is not the end …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2021-10-15 13:12:47+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -226,43 +382,174 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/mount-usb-drives-windows-subsystem-for-linux/" rel="bookmark" class="u-url"
-       title="WSL mount external and network drives" target="_blank">
-      <time class="m-date" datetime="2021-10-14 00:00:00+00:00">
+    <a href="https://alexschroeder.ch/wiki/2021-10-15_Re:_Mark_It_Down" rel="bookmark" class="u-url"
+       title="Re: Mark It Down" target="_blank">
+      <time class="m-date" datetime="2021-10-15 09:01:36+00:00">
         Oct
         <span class="m-date-day">
-          14
+          15
         </span>
         2021
       </time>
       <div class="p-name">
-      WSL mount external and network drives
+      Re: Mark It Down
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Windows Subsystem for Linux can mount SD card, USB thumb flash drives, CD / DVD drives (CDFS), network drives, and UNC paths via
-<a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-mount-disk">&ldquo;wsl &ndash;mount&rdquo;</a>.
-WSL can mount disk formats FAT, ExFAT or NTFS and VHD images.</p>
-
-<p>For Windows 10 or those not desiring to use &ldquo;wsl &ndash;mount&rdquo; to mount external drives, the following can be used instead.</p>
-<p>If Windows changes the external drive letter on a subsequent session, you need to repeat this process.
-These commands are typed into the Windows Subsystem for Linux Terminal.</p>
-<p>Create a mount location in WSL and mount the drive (assume the drive shows in Windows as &ldquo;F:&quot;):</p>
-<div><pre><code>mkdir /mnt/f
-mount -t drvfs f: /mnt/f
-</code></pre></div><p>One can then create and manipulate files from both Windows and WSL on the same external drive.</p>
-
-<p>For <strong>network storage</strong>, assume networked storage is already showing in Windows …</p>
+  <div><blockquote><p>The sun is up but in autumn, our flat lies in the shadow of the neighbouring building, so all I can see are glorious spots of light in the bedroom. Here in the living room, we live in the shade.</p></blockquote><p> This is my response to the Markdown and ANSI escape thread winding its way through gemspace… </p><ul><li><a href="">Thread summary by Sky Jake</a></li></ul><p>Here’s what I think about it all.</p><p>If servers serve Markdown as text/markdown and Lagrange knows how to handle it, that’d be great. In the beginning, all my sites just served their raw wiki text as terrible Markdown and it worked just fine (for me). I used mdcat as a renderer inside AV-98.</p><p>A Gemini client that only handles gemtext is fine, too. Those pages are simply not available. Serving HTML via Gemini is fine!</p><p>If …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-14 00:00:00+00:00" class="dt-published"></time>
-  Thu 14 Oct 2021
+  on <time datetime="2021-10-15 09:01:36+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://noyb.eu/en/dpc-requires-noyb-take-down-documents-website" rel="bookmark" class="u-url"
+       title="DPC "requires" noyb to take down documents from website" target="_blank">
+      <time class="m-date" datetime="2021-10-15 07:51:48+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      DPC "requires" noyb to take down documents from website
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <span>DPC "requires" noyb to take down documents from website</span>
+
+                    We have invited the DPC to continue this debate in courts, as there is no legal basis for censoring a non-profit when criticizing an authority.
+
+                      <img alt="noyb" src="https://noyb.eu/sites/default/files/styles/media_large/public/2021-10/dpc_censored.png?itok=7LWzwU1a">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>ms</b></span>
+  on <time datetime="2021-10-15 07:51:48+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
+  in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/10/15/Status-update-October-2021.html" rel="bookmark" class="u-url"
+       title="Status update, October 2021" target="_blank">
+      <time class="m-date" datetime="2021-10-15 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Status update, October 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>On this dreary morning here in Amsterdam, I&rsquo;ve made my cup of coffee and
+snuggled my cat, and so I&rsquo;m pleased to share some FOSS news with you. Some cool
+news today! We&rsquo;re preparing for a new core product launch at sr.ht, cool updates
+for our secret programming language, plus news for visurf.</p>
+<p>Simon Ser has been hard at work on expanding his <a href="https://sr.ht/~emersion/soju/">soju</a> and <a href="https://sr.ht/~emersion/gamja/">gamja</a>
+projects for the purpose of creating a new core sourcehut product: chat.sr.ht.
+We&rsquo;re rolling this out in a private beta at first, to seek a fuller
+understanding of the system&rsquo;s performance characteristics, to make sure
+everything is well-tested and reliable, and to make plans for scaling,
+maintenance, and general availability. In short, chat.sr.ht is a hosted IRC
+bouncer which is being made available to …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-15 00:00:00+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-default-install-prefix/" rel="bookmark" class="u-url"
+       title="Avoid overriding CMake default install prefix" target="_blank">
+      <time class="m-date" datetime="2021-10-15 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          15
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Avoid overriding CMake default install prefix
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>CMake FetchContent is useful to incorporate subprojects at configure time.
+FetchContent subproject cache variables can override the top-level project cache, which can be confusing.</p>
+<p>Projects may wish to use a default install prefix when &ldquo;cmake &ndash;install-prefix&rdquo; is not specified.
+Usually we use
+<a href="https://cmake.org/cmake/help/latest/variable/PROJECT_BINARY_DIR.html">PROJECT_BINARY_DIR</a>
+instead of
+<a href="https://cmake.org/cmake/help/latest/variable/CMAKE_BINARY_DIR.html">CMAKE_BINARY_DIR</a>,
+but in this case CMAKE_BINARY_DIR is a better choice to set the
+<a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT.html">default install directory</a>.</p>
+<div><pre><code>if(<span>CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT</span>)<span>
+</span><span></span> <span># will not take effect without FORCE
+</span><span></span> set(<span>CMAKE_INSTALL_PREFIX</span> <span>${</span>CMAKE_BINARY_DIR<span>}</span> <span>CACHE</span> <span>PATH</span> <span>"Install top-level directory"</span> <span>FORCE</span>)<span>
+</span><span></span>endif()<span>
+</span></code></pre></div>
+<p>Another possibility is using
+<a href="https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html">CMakePresets.json</a>
+to set the default install directory:</p>
+<div><pre><code>{
+<span>"version"</span>: <span>3</span>,
+<span>"configurePresets"</span>: [
+{
+<span>"name"</span>: <span>"default"</span>,
+<span>"binaryDir"</span>: <span>"${sourceDir}/build"</span>,
+<span>"installDir"</span>: <span>"${sourceDir}/build"</span>
+}
+]
+}
+</code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-15 00:00:00+00:00" class="dt-published"></time>
+  Fri 15 Oct 2021
   in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
@@ -328,74 +615,6 @@ podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2021/10/2021-10-13-isojz" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2021-10-13 19:47:46+02:00">
-        Oct
-        <span class="m-date-day">
-          13
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Sometimes I am a perfectionist. Having previously made my private diary blog available via a Tailscale sidecar container in my Tailnet, I have now integrated Tailscale directly into GoBlog. Both Tailscale and Tailscale’s Let’s Encrypt certificates can be configured directly in GoBlog. No sidecar container is needed anymore. A much simpler solution! (And Tailscale rocks!)
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-13 19:47:46+02:00" class="dt-published"></time>
-  Wed 13 Oct 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2021/10/13/theres-an-app-for-that/" rel="bookmark" class="u-url"
-       title="Pluralistic: 13 Oct 2021" target="_blank">
-      <time class="m-date" datetime="2021-10-13 16:26:24+00:00">
-        Oct
-        <span class="m-date-day">
-          13
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Pluralistic: 13 Oct 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Charter uses bad credit threats to corral ex-subscribers: "Resubscribe or we'll keep trashing your credit report." Adobe uses copyfraud to preserve spyware: A free-as-in-surveillance-free Flash installer is gone thanks to a bogus copyright claim. India funded a starving kids' app, but not food: Solutionism at its worst. This day in history: 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Charter uses bad credit threats to corral ex-subscribers (permalink) I'm more of a Charter-Spectrum hostage than a customer: I need the internet to earn my living, and my town (Burbank) has signed an exclusive deal with Charter, so I send them $134.99/mo for some of the worst internet in California. It turns out that Charter doesn't stop abusing you when you stop being a customer: the company is now sending threatening …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2021-10-13 16:26:24+00:00" class="dt-published"></time>
-  Wed 13 Oct 2021
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.davidrevoy.com/article874/kde-s-25th-anniversary" rel="bookmark" class="u-url"
        title="KDE's 25th Anniversary" target="_blank">
       <time class="m-date" datetime="2021-10-13 15:12:00+02:00">
@@ -428,44 +647,6 @@ podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
   on <time datetime="2021-10-13 15:12:00+02:00" class="dt-published"></time>
   Wed 13 Oct 2021
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://noyb.eu/en/irish-dpc-greenlights-facebooks-gdpr-bypass" rel="bookmark" class="u-url"
-       title="Irish DPC greenlights Facebook's "GDPR bypass"." target="_blank">
-      <time class="m-date" datetime="2021-10-13 10:20:26+00:00">
-        Oct
-        <span class="m-date-day">
-          13
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Irish DPC greenlights Facebook's "GDPR bypass".
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <span>Irish DPC greenlights Facebook's "GDPR bypass". </span>
-
-                    Schrems: “Decision undermines key element of GDPR.”
-
-                      <img alt="(C) noyb" src="https://noyb.eu/sites/default/files/styles/media_large/public/2021-10/thumb_terms_play.png?itok=lAs_1HBj">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>ps</b></span>
-  on <time datetime="2021-10-13 10:20:26+00:00" class="dt-published"></time>
-  Wed 13 Oct 2021
-  in noyb.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -508,40 +689,6 @@ podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/chergert/2021/10/12/gtksourcestyleschemepreview/" rel="bookmark" class="u-url"
-       title="GtkSourceStyleSchemePreview" target="_blank">
-      <time class="m-date" datetime="2021-10-12 22:30:13+00:00">
-        Oct
-        <span class="m-date-day">
-          12
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      GtkSourceStyleSchemePreview
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In the past, we had a style scheme chooser widget to help people find style schemes that look useful. It was fairly rudimentary and doesn’t fit how we’d like style scheme selection to work going forward. So in what will become GtkSourceView 5.4, I’ve added the GtkSourceStyleSchemePreview widget which you can use to preview a … <a href="https://blogs.gnome.org/chergert/2021/10/12/gtksourcestyleschemepreview/">Continue reading <span>GtkSourceStyleSchemePreview</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>chergert</b></span>
-  on <time datetime="2021-10-12 22:30:13+00:00" class="dt-published"></time>
-  Tue 12 Oct 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pradyunsg.me/blog/2021/10/09/oss-update-13/" rel="bookmark" class="u-url"
        title="OSS Work update #13" target="_blank">
       <time class="m-date" datetime="2021-10-09 00:00:00+00:00">
@@ -568,40 +715,6 @@ podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
   on <time datetime="2021-10-09 00:00:00+00:00" class="dt-published"></time>
   Sat 09 Oct 2021
   in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-10-08_How_to_write_a_letter" rel="bookmark" class="u-url"
-       title="How to write a letter" target="_blank">
-      <time class="m-date" datetime="2021-10-08 18:17:22+00:00">
-        Oct
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How to write a letter
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><blockquote><p>It’s dark outside and quiet inside. Flogging Molly are no longer playing, Claudia is reading the newspaper and I’m looking at Mastodon.</p></blockquote><p> I currently have one pen pal, and just yesterday I wrote her a six page letter. It’s weird. It’s slow. And the blog post has a target audience of one. Every time I do it I feel transported back in time.</p><p>What do I write about? I’m still learning how to do it! Part of it is “here’s something I cared about that recently happened to me.” You need to make sure that there are some open elements to it so that the recipient can answer with their own story, or ask follow-up questions. It should be personal enough to be interesting, mention something you value. Opening up and being vulnerable enables …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-08 18:17:22+00:00" class="dt-published"></time>
-  Fri 08 Oct 2021
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -732,56 +845,6 @@ I can&rsquo;t publish BGP routes
   on <time datetime="2021-10-05 08:53:24+00:00" class="dt-published"></time>
   Tue 05 Oct 2021
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/10/05/Reflection.html" rel="bookmark" class="u-url"
-       title="How reflection works in ****" target="_blank">
-      <time class="m-date" datetime="2021-10-05 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          05
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How reflection works in ****
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><em>Note: this is a redacted copy of a blog post published on the internal
-development blog of a new systems programming language. The name of the project
-and further details are deliberately being kept in confidence until the initial
-release. You may be able to find it if you look hard enough — you have my
-thanks in advance for keeping it to yourself. For more information, see &ldquo;<a href="https://drewdevault.com/2021/03/19/A-new-systems-language.html">We are
-building a new systems programming language</a>&rdquo;.</em></p>
-
-<p>I&rsquo;ve just merged support for reflection in <span>xxxx</span>.
-Here&rsquo;s how it works!</p>
-Background
-<p>&ldquo;Reflection&rdquo; refers to the ability for a program to examine the type system of
-its programming language, and to dynamically manipulate types and their values
-at runtime. You can learn more at <a href="https://en.wikipedia.org/wiki/Reflective_programming">Wikipedia</a>.</p>
-Reflection from a user perspective
-<p>Let&rsquo;s start with a small sample program:</p>
-<div><pre><code><span>use fmt;</span>
-<span>use types …</span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-05 00:00:00+00:00" class="dt-published"></time>
-  Tue 05 Oct 2021
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
