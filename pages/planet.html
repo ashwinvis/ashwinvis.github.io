@@ -157,31 +157,39 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pycoders.com/issues/495" rel="bookmark" class="u-url"
-       title="PyCoder’s Weekly: Issue #495 (Oct. 19, 2021)" target="_blank">
-      <time class="m-date" datetime="2021-10-19 19:30:00+00:00">
+    <a href="https://sparrow.dev/python-poetry-machine-learning/" rel="bookmark" class="u-url"
+       title="Ben Cook: Poetry for Package Management in Machine Learning Projects" target="_blank">
+      <time class="m-date" datetime="2021-10-20 21:33:31+00:00">
         Oct
         <span class="m-date-day">
-          19
+          20
         </span>
         2021
       </time>
       <div class="p-name">
-      PyCoder’s Weekly: Issue #495 (Oct. 19, 2021)
+      Ben Cook: Poetry for Package Management in Machine Learning Projects
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p> <span>#495 – OCTOBER 19, 2021</span> <span><a href="https://pycoders.com/issues/495">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p>  <div> <a href="https://pycoders.com/link/7237/feed">No-GIL Fork of CPython</a> <p> This is a proof-of-concept implementation of CPython that supports multithreading without the global interpreter lock (GIL), from Facebook research. An overview of the design is described in the <a href="https://pycoders.com/link/7231/feed">Python Multithreading without the GIL</a> Google doc. Also see the related discussions <a href="https://pycoders.com/link/7229/feed">on LWN</a> and <a href="https://pycoders.com/link/7221/feed">Hacker News</a>. <span><a href="https://pycoders.com/link/7237/feed">GITHUB.COM/COLESBURY</a> • Shared by <a href="https://pycoders.com/link/7218/feed">Henry Schreiner</a></span> </p> </div> <div> <a href="https://pycoders.com/link/7209/feed">Why You Shouldn&rsquo;t Invoke <code>setup.py</code> Directly</a> <p> &ldquo;The <code>setuptools</code> team no longer wants to be in the business of providing a command line interface and is actively working to become just a library for building packages. What you should do instead depends on your use case, but if you want some basic rules of thumb, there is a table in the summary section.&rdquo; <span><a href="https://pycoders.com/link/7209/feed">PAUL GANSSLE</a></span> </p> </div> <div> <a href="https://pycoders.com/link/7203/feed">Data Elixir: Data Science Newsletter</a> <a href="https://pycoders.com/link/7203/feed"><img alt="alt" src="https://cdn.pycoders.com/ba63cfcfcdb97c2316e9e951705da8d7"></a> <p> Data Elixir is an email newsletter …</p></div>
+  <p>When you&#8217;re building a production machine learning system, reproducibility is a proxy for the effectiveness of your development process. But without locking all your Python dependencies, your builds are not actually repeatable. If you work in a Python project without locking long enough, you will eventually get a broken build because of a <a href="https://medium.com/knerd/the-nine-circles-of-python-dependency-hell-481d53e3e025">transitive dependency</a> (that is, a dependency of a dependency).</p>
+
+
+
+<p>But a broken build isn&#8217;t the most dangerous problem. A transitive dependency can change in a way that affects an algorithm&#8217;s results without you ever knowing it. Imagine being unable to reproduce an algorithm result because an ancestor dependency that never got pinned changes in an unexpected way. Not good.</p>
+
+
+
+<p>Enter Poetry. Poetry is an environment management tool for Python projects. Admittedly, there are a lot of environment management tools for Python and there&#8217;s …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-19 19:30:00+00:00" class="dt-published"></time>
-  Tue 19 Oct 2021
+  on <time datetime="2021-10-20 21:33:31+00:00" class="dt-published"></time>
+  Wed 20 Oct 2021
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -191,32 +199,272 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2021/10/19/moist-von-lipwig/" rel="bookmark" class="u-url"
-       title="Pluralistic: 19 Oct 2021" target="_blank">
-      <time class="m-date" datetime="2021-10-19 15:56:12+00:00">
+    <a href="https://kubuntu.org/news/plasma-5-23-available-for-kubuntu-21-10-impish-indri-in-backports-ppa/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Plasma 5.23 available for Kubuntu 21.10 (Impish Indri) in backports PPA" target="_blank">
+      <time class="m-date" datetime="2021-10-20 19:18:12+00:00">
         Oct
         <span class="m-date-day">
-          19
+          20
         </span>
         2021
       </time>
       <div class="p-name">
-      Pluralistic: 19 Oct 2021
+      Plasma 5.23 available for Kubuntu 21.10 (Impish Indri) in backports PPA
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links The true, Terry Pratchett-esque origins of the trillion-dollar coin: It's a feature, not a bug. This day in history: 2001, 2006, 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The true, Terry Pratchett-esque origins of the trillion-dollar coin (permalink) The debt ceiling debate is genuinely absurd: Congress authorized the spending of new dollars, so the Treasury has to create them. For Congress to turn around and force the Treasury not to create the dollars it ordered the Treasury to create is an obvious political gimmick. Hence the trillion dollar coin &#8211; a proposal to use a 2000 amendment to 31USC§5112k ("Denominations, specifications, and design of coins") that permits the Treasury Secretary to "mint and issue platinum bullion coins and proof platinum coin [at] the Secretary’s discretion." The big idea behind "mint …
+  <p>We are pleased to announce that Plasma 5.23.1 is now available in our <a href="//launchpad.net/~kubuntu-ppa/+archive/ubuntu/backports?field.series_filter=impish">backports PPA</a> for Kubuntu 21.10 (Impish Indri).</p>
+
+
+
+<p>The release announcement detailing the new features and improvements in Plasma 5.23 can be <a href="//kde.org/announcements/plasma/5/5.23.0/">found here</a>.</p>
+
+
+
+<p></p>
+
+
+
+<a href="//kde.org/announcements/plasma/5/5.23.0/"><img alt="" src="//kubuntu.org/wp-content/uploads/2021/10/3f56/KubuntuBackports523.png"></a>
+
+
+
+<p></p>
+
+
+
+<p><strong>To upgrade:</strong></p>
+
+
+
+<p>Add the following repository to your software sources list:</p>
+
+
+
+<p><strong><em>ppa:kubuntu-ppa/backports</em></strong></p>
+
+
+
+<p>or if it is already added, the updates should become available via your preferred update method.</p>
+
+
+
+<p>The PPA can be added manually in the Konsole terminal with the command:</p>
+
+
+
+<p><em>sudo add-apt-repository ppa:kubuntu-ppa/backports</em></p>
+
+
+
+<p>and packages then updated with</p>
+
+
+
+<p><em>sudo apt full-upgrade</em></p>
+
+
+
+<p><strong>IMPORTANT</strong></p>
+
+
+
+<p><em>Please note that more bugfix releases are scheduled by KDE for Plasma 5.23, so while we feel these backports will be beneficial to enthusiastic adopters, users wanting to use a Plasma release with more rounds of stabilisation/bugfixes ‘baked in’ may find …</em></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kubuntu News</b></span>
+  on <time datetime="2021-10-20 19:18:12+00:00" class="dt-published"></time>
+  Wed 20 Oct 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2021/10/20/vizio-vs-the-world/" rel="bookmark" class="u-url"
+       title="Pluralistic: 20 Oct 2021" target="_blank">
+      <time class="m-date" datetime="2021-10-20 17:19:18+00:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Pluralistic: 20 Oct 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Copyleft lawsuit against Vizio will allow anyone to defend the commons: Software Freedom Conservancy realizes the dream of "Community-Oriented GPL Enforcement." The monopoly strategy behind the Google/Microsoft mobile patent wars: The victory condition isn't highest profits, it's market dominance. This day in history: 2006, 2011, 2016, 2020. Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Copyleft lawsuit against Vizio will allow anyone to defend the commons (permalink) When the free software movement started to make headway, proprietary software companies like Microsoft went to war against it, describing the licenses at its core (like the GPL) as "viral licenses" to scare companies off from using free software. The GPL is a software license that coders add to their work that says, "You can do anything with this &#8211; change it, sell it, copy it, incorporate it …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2021-10-19 15:56:12+00:00" class="dt-published"></time>
-  Tue 19 Oct 2021
+  on <time datetime="2021-10-20 17:19:18+00:00" class="dt-published"></time>
+  Wed 20 Oct 2021
   in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2021/10/2021-10-20-lhigd" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-10-20 18:46:34+02:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  My home and code server now has 2 TB of SSD storage and 16 GB of RAM. While I’ll be using the storage for backups, etc., I’m not quite sure what I can use the 16 GB of RAM for yet. What else can I run besides Home Assistant, AdGuard Home, Drone and Tailscale? I still have my VPS running my websites, Miniflux, Bitwarden, Firefox Sync Server, RSS-Bridge, Firefly III, Nitter and Gitea. 🤔
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-20 18:46:34+02:00" class="dt-published"></time>
+  Wed 20 Oct 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.hadess.net/2021/10/psa-gnome-settings-daemons-mediakeys.html" rel="bookmark" class="u-url"
+       title="PSA: gnome-settings-daemon's MediaKeys API is going away" target="_blank">
+      <time class="m-date" datetime="2021-10-20 12:12:00+00:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      PSA: gnome-settings-daemon's MediaKeys API is going away
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p></p></div><p> In 2007, Jan Arne Petersen <a href="https://gitlab.gnome.org/GNOME/gnome-control-center/-/commit/989857cd9fa67aadb652da4233cf01f22ee34df9">added a D-Bus API</a> to what was still pretty much <a href="https://help.gnome.org/misc/release-notes/2.2/#rnmultimediakeys">an import into gnome-control-center</a> of the "acme" utility I wrote to have all the keys on my iBook working.</p><p></p><p>It switched the code away from remapping keyboard keys to "XF86Audio*", to expecting players to contact the D-Bus daemon and ask to be forwarded key events.</p><p> </p><p></p><p><img src="https://help.gnome.org/misc/release-notes/2.2/figures/acme.png.en"><i>Multimedia keys circa 2003</i></p><p></p><p>In 2013, we added support for controlling media players using <a href="https://specifications.freedesktop.org/mpris-spec/latest/">MPRIS</a>, as another interface. Fast-forward to 2021, and MPRIS support is ubiquitous, whether in free software, proprietary applications or even browsers. So we'll be <a href="https://gitlab.gnome.org/GNOME/gnome-settings-daemon/-/merge_requests/268">parting with the "org.gnome.SettingsDaemon.MediaKeys" D-Bus API</a>. If your application still wants to work with older versions of GNOME, it is recommended to at least quiet the MediaKeys API's unavailability.</p><p></p><p> </p><p><a href="https://1.bp.blogspot.com/-4vmYi2sF6kA/YXAHYCT1e9I/AAAAAAAABCo/ur9itb57OgkcKI4sM1H0Xaji5B8hu-eoACLcBGAsYHQ/s599/Screenshot%2Bfrom%2B2021-10-20%2B14-10-52.png"><img src="https://1.bp.blogspot.com/-4vmYi2sF6kA/YXAHYCT1e9I/AAAAAAAABCo/ur9itb57OgkcKI4sM1H0Xaji5B8hu-eoACLcBGAsYHQ/s16000/Screenshot%2Bfrom%2B2021-10-20%2B14-10-52.png"></a><i>Multimedia keys in 2021</i> </p><p></p><p>TL;DR: Remove code that relies …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Bastien Nocera (noreply@blogger.com)</b></span>
+  on <time datetime="2021-10-20 12:12:00+00:00" class="dt-published"></time>
+  Wed 20 Oct 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article876/episode-36-first-panel" rel="bookmark" class="u-url"
+       title="Episode 36 first panel" target="_blank">
+      <time class="m-date" datetime="2021-10-20 13:37:00+02:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Episode 36 first panel
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-10-20_ep36_panel1.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-10-20_ep36_panel1.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>First panel for the next Pepper&amp;Carrot episode (click on the picture for full resolution).</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2021-10-20 13:37:00+02:00" class="dt-published"></time>
+  Wed 20 Oct 2021
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/macos-hardware-requirements-by-version/" rel="bookmark" class="u-url"
+       title="MacOS hardware requirements vs. version" target="_blank">
+      <time class="m-date" datetime="2021-10-20 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      MacOS hardware requirements vs. version
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Like most other operating systems, MacOS requirements increase over time.
+If Apple hardware is too old for a currently supported MacOS version, consider installing Linux.
+Linux normally works very well on Apple computer hardware.
+Apple maintains a list of
+<a href="https://support.apple.com/en-us/HT201624">no longer supported Apple hardware</a>.</p>
+
+<img alt="MacOS hardware requirement vs version" src="https://www.scivision.dev/macos-hardware-requirements-by-version/macos_hardware.png"> 
+MacOS requirements by version.
+
+
+<p><a href="https://github.com/scivision/macos-requirements">Plotted data</a>
+sources include
+<a href="https://en.wikipedia.org/wiki/MacOS_Big_Sur#System_requirements">Wikipedia</a>
+and
+<a href="https://support.apple.com/en-us/HT211238">Apple</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-20 00:00:00+00:00" class="dt-published"></time>
+  Wed 20 Oct 2021
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -227,7 +475,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <h1>
     <a href="https://pyfound.blogspot.com/2021/10/announcing-python-software-foundation.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonSoftwareFoundationNews+(Python+Software+Foundation+News)" rel="bookmark" class="u-url"
        title="Announcing Python Software Foundation Fellow Members for Q3 2021! 🎉" target="_blank">
-      <time class="m-date" datetime="2021-10-19 11:30:00.001000-04:00">
+      <time class="m-date" datetime="2021-10-19 11:30:00.002000-04:00">
         Oct
         <span class="m-date-day">
           19
@@ -241,52 +489,16 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p><span>The PSF is pleased to announced its third batch of PSF Fellows for 2021! Let us welcome the new PSF Fellows for Q3! The following people continue to do amazing things for the Python community:</span></p><p><span><span><b>Anthony Sottile</b></span></span></p><p><a href="https://twitch.tv/anthonywritescode">Twitch</a>, <a href="https://youtube.com/anthonywritescode">YouTube</a>, <a href="https://github.com/sponsors/asottile">GitHub Sponsors</a>, <a href="https://twitter.com/codewithanthony">Twitter</a></p><p><span><span><b>Bernát Gábor</b></span></span></p><p><a href="https://twitter.com/gjbernat">Twitter</a>, <a href="https://bernat.tech/about/">Website</a>, <a href="https://github.com/gaborbernat/">GitHub</a></p><p><span><span><b>Cristián Danilo Maureira-Fredes</b></span></span></p><p><span><span><b>Michael Iyanda</b></span></span></p><p><a href="https://www.linkedin.com/in/micheal-iyanda-24819111b">LinkedIn</a>, <a href="https://www.github.com/miyanda2">GitHub</a></p><p><span><span><b>Nicolás Demarchi</b></span></span></p><p><span><a href="http://twitter.com/gilgamezh">Twitter</a>, <a href="https://github.com/gilgamezh">GitHub</a>, <a href="https://www.linkedin.com/in/nicolasdemarchi/">LinkedIn</a></span></p><p><span></span></p><p><span>Thank you for your continued contributions. We have added you to our Fellow roster<span>&nbsp;</span><a href="https://www.python.org/psf/members/">online</a>.</span></p><p><span>The above members help support the Python ecosystem by being phenomenal leaders, sustaining the growth of the Python scientific community, maintaining virtual Python communities, maintaining Python libraries, creating educational material, organizing Python events and conferences, starting Python communities in local regions, and overall being great mentors in our community. Each of them continues to help make Python more accessible around the world. To learn more about …</span></p>
+  <p><span>The PSF is pleased to announced its third batch of PSF Fellows for 2021! Let us welcome the new PSF Fellows for Q3! The following people continue to do amazing things for the Python community:</span></p><p><span><span><b>Anthony Sottile</b></span></span></p><p><a href="https://twitch.tv/anthonywritescode">Twitch</a>, <a href="https://youtube.com/anthonywritescode">YouTube</a>, <a href="https://github.com/sponsors/asottile">GitHub Sponsors</a>, <a href="https://twitter.com/codewithanthony">Twitter</a></p><p><span><span><b>Bernát Gábor</b></span></span></p><p><a href="https://twitter.com/gjbernat">Twitter</a>, <a href="https://bernat.tech/about/">Website</a>, <a href="https://github.com/gaborbernat/">GitHub</a></p><p><span><span><b>Cristián Danilo Maureira-Fredes</b></span></span></p><div><span><span><a href="https://maureira.xyz">Website</a>, <a href="https://twitter.com/cmaureir">Twitter</a>, <a href="https://github.com/cmaureir">GitHub</a></span></span></div><p><span><span><b>Michael Iyanda</b></span></span></p><p><a href="https://www.linkedin.com/in/micheal-iyanda-24819111b">LinkedIn</a>, <a href="https://www.github.com/miyanda2">GitHub</a></p><p><span><span><b>Nicolás Demarchi</b></span></span></p><p><span><a href="http://twitter.com/gilgamezh">Twitter</a>, <a href="https://github.com/gilgamezh">GitHub</a>, <a href="https://www.linkedin.com/in/nicolasdemarchi/">LinkedIn</a></span></p><p><span></span></p><p><span>Thank you for your continued contributions. We have added you to our Fellow roster<span>&nbsp;</span><a href="https://www.python.org/psf/members/">online</a>.</span></p><p><span>The above members help support the Python ecosystem by being phenomenal leaders, sustaining the growth of the Python scientific community, maintaining virtual Python communities, maintaining Python libraries, creating educational material, organizing Python events and conferences, starting Python communities in local regions, and overall being great mentors in our community. Each of them continues to help make Python more accessible around the world. To …</span></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Ewa Jodlowska (noreply@blogger.com)</b></span>
-  on <time datetime="2021-10-19 11:30:00.001000-04:00" class="dt-published"></time>
+  on <time datetime="2021-10-19 11:30:00.002000-04:00" class="dt-published"></time>
   Tue 19 Oct 2021
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kdab.com/wayland-on-windows/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Wayland on Windows" target="_blank">
-      <time class="m-date" datetime="2021-10-19 09:00:55+00:00">
-        Oct
-        <span class="m-date-day">
-          19
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Wayland on Windows
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Wayland is a display protocol, a protocol (and accompanying C library) spoken by a graphical application with a display server in order to communicate about both input to the application (keyboard, mouse, …) and about output from the application — that is, the rendered window. Wayland was developed to replace the X11 server on the Linux system. After quite a few years of incubation, it’s becoming much more common. It’s a far simpler and more attractive protocol compared to X11, allowing much more flexibility in developing custom compositors and control in the display compositor on how the client applications are shown and with less decades-old baggage to keep around and take into account.</p>
-So, what’s the problem?
-<p>Qt provides both a Wayland platform allowing you to run Qt applications as Wayland clients in a Wayland compositor and a library …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDAB on Qt</b></span>
-  on <time datetime="2021-10-19 09:00:55+00:00" class="dt-published"></time>
-  Tue 19 Oct 2021
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -321,40 +533,6 @@ So, what’s the problem?
   on <time datetime="2021-10-19 00:00:00+00:00" class="dt-published"></time>
   Tue 19 Oct 2021
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-10-18_WebDAV_is_tricky" rel="bookmark" class="u-url"
-       title="WebDAV is tricky" target="_blank">
-      <time class="m-date" datetime="2021-10-18 09:32:21+00:00">
-        Oct
-        <span class="m-date-day">
-          18
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      WebDAV is tricky
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Yesterday I spent the day adding a WebDAV module to Phoebe, my Gemini wiki. Luckily, I had many code pieces already lying around. In 2005 (?) I had written a WebDAV extension for Oddmuse, my regular wiki. Back then, I found that the command-line client cadaver is the best one to use. I knew that in theory, file managers often offer a way to mount WebDAV-enabled servers, so I tried Gnome Files, too. It seems to work, surprisingly! Back then I had only tried the Microsoft Windows Explorer and the macOS Finder.</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2021-10-18_WebDAV_is_tricky"><img alt="Gnome Files mounting the wiki" src="https://alexschroeder.ch/wiki/download/Image_1_for_2021-10-18_WebDAV_is_tricky" title="Gnome Files mounting the wiki"></a></p><p>Once the WebDAV-enabled server is mounted, other applications can open these files as if they’re local files. The path might look weird, but that’s it.</p><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2021-10-18_WebDAV_is_tricky"><img alt="Gnome Text Editor editing a page" src="https://alexschroeder.ch/wiki/download/Image_2_for_2021-10-18_WebDAV_is_tricky" title="Gnome Text Editor editing a page"></a></p><p>As soon as I had it working, however, I ran into an issue: what about the token? I wanted to add some …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-18 09:32:21+00:00" class="dt-published"></time>
-  Mon 18 Oct 2021
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -435,41 +613,6 @@ So, what’s the problem?
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.davidrevoy.com/article875/jack-o-lantern-derivation-by-elizabeth-mongenel" rel="bookmark" class="u-url"
-       title="jack-o-lantern derivation by Elizabeth Mongenel" target="_blank">
-      <time class="m-date" datetime="2021-10-17 17:10:00+02:00">
-        Oct
-        <span class="m-date-day">
-          17
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      jack-o-lantern derivation by Elizabeth Mongenel
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2021/2021-10-17_jack-o-lantern_by_elizabeth-mongenel_thumbnail.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2021/2021-10-17_jack-o-lantern_by_elizabeth-mongenel_thumbnail.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Amazing carving skill by Elizabeth Mongenel on a jack-o-lantern of the season. She shared <a href="https://twitter.com/MarilynMongenel/status/1449278541791592449">the photo yesterday on Twitter</a>. (I repost it here with her permission.)</p>
-<p><a href="https://www.davidrevoy.com/data/images/blog/2021/2021-10-17_jack-o-lantern_by_elizabeth-mongenel.jpg"><img alt="" src="https://www.davidrevoy.com/data/images/blog/2021/2021-10-17_jack-o-lantern_by_elizabeth-mongenel.jpg"></a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2021-10-17 17:10:00+02:00" class="dt-published"></time>
-  Sun 17 Oct 2021
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://drewdevault.com/2021/10/17/Reliability.html" rel="bookmark" class="u-url"
        title="Software developers have stopped caring about reliability" target="_blank">
       <time class="m-date" datetime="2021-10-17 00:00:00+00:00">
@@ -507,117 +650,6 @@ monitors into waking up properly to do their job. On many occasions, I have …<
   on <time datetime="2021-10-17 00:00:00+00:00" class="dt-published"></time>
   Sun 17 Oct 2021
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/powershell-command-substitution/" rel="bookmark" class="u-url"
-       title="PowerShell command substitution" target="_blank">
-      <time class="m-date" datetime="2021-10-17 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          17
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      PowerShell command substitution
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Linux / Unix / MacOS users are often familiar with using shell
-<a href="https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html">command substition</a>.
-PowerShell
-<a href="https://docs.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-string-substitutions?view=powershell-7.1#command-substitution">command substitution</a>
-works similarly.
-On any of these systems, command substitution works by enclosing the first command in &ldquo;$()&rdquo; like:</p>
-<div><pre><code>echo <span>$(</span>whoami<span>)</span>
-</code></pre></div><p>To use additional strings adjacent to the command output, like when wanting to change directory relative to command output, enclose in quotes like:</p>
-<div><pre><code>cd <span>"</span><span>$(</span>my_command<span>)</span><span>/rel/to/"</span>
-</code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-17 00:00:00+00:00" class="dt-published"></time>
-  Sun 17 Oct 2021
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/oleaamot/2021/10/16/gnome-gingerblue-2-0-0-recording-software-supports-xspf-1-0/" rel="bookmark" class="u-url"
-       title="GNOME Gingerblue 2.0.0 Recording Software supports XSPF 1.0" target="_blank">
-      <time class="m-date" datetime="2021-10-16 19:10:31+00:00">
-        Oct
-        <span class="m-date-day">
-          16
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      GNOME Gingerblue 2.0.0 Recording Software supports XSPF 1.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  GNOME Gingerblue 2.0.0 is Free Recording Software for GNOME. In the 2.0.0 release I have added support for XSPF 1.0 from Xiph.org. If you launch the software, a immediate recording is stored into the $HOME/Music folder along with the playlist in $HOME/Music/GNOME.xspf You can download the source code from download.gnome.org/sources/gingerblue/2.0/gingerblue-2.0.0.tar.xz for the software and read … <a href="https://blogs.gnome.org/oleaamot/2021/10/16/gnome-gingerblue-2-0-0-recording-software-supports-xspf-1-0/">Continue reading <span>GNOME Gingerblue 2.0.0 Recording Software supports XSPF 1.0</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>oleaamot</b></span>
-  on <time datetime="2021-10-16 19:10:31+00:00" class="dt-published"></time>
-  Sat 16 Oct 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/links/2021/10/humanity-future" rel="bookmark" class="u-url"
-       title="“I’m worried about humanity’s future.”" target="_blank">
-      <time class="m-date" datetime="2021-10-16 17:27:40+02:00">
-        Oct
-        <span class="m-date-day">
-          16
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      “I’m worried about humanity’s future.”
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Via Nicholas Danes I came across the video of Arun Maini (Mrwhosetheboss): “I’m worried about humanity’s future”. In this he addresses some good aspects. It’s about the impact of technology on our lives, society and behaviour. For example, he talks about the fact that algorithms are increasingly trying to keep us in front of the screen for as long as possible, that echo chambers are creating more and more negativity, and that we may soon no longer be able to distinguish between fiction and reality because of AI.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-16 17:27:40+02:00" class="dt-published"></time>
-  Sat 16 Oct 2021
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -915,46 +947,6 @@ Work …
   on <time datetime="2021-10-01 00:00:00+00:00" class="dt-published"></time>
   Fri 01 Oct 2021
   in Fortran Newsletter.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://vulns.xyz/2021/09/monthly-report/" rel="bookmark" class="u-url"
-       title="Monthly Report (September 2021)" target="_blank">
-      <time class="m-date" datetime="2021-09-30 00:00:00+00:00">
-        Sep
-        <span class="m-date-day">
-          30
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Monthly Report (September 2021)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This is the monthly report of what I’ve been up to in September 2021. 🙌
-
-Reproducible Builds
-
-There have been 3 releases of rebuilderd this month, <a href="https://github.com/kpcyrd/rebuilderd/releases/tag/v0.14.0">0.14.0</a>, and two minor bugfix releases, <a href="https://github.com/kpcyrd/rebuilderd/releases/tag/v0.14.1">0.14.1</a> and <a href="https://github.com/kpcyrd/rebuilderd/releases/tag/v0.14.2">0.14.2</a>.
-
-The 0.14.0 release introduced experimental support to rebuild <a href="https://tails.boum.org/">Tails images</a> in <a href="https://github.com/kpcyrd/rebuilderd/pull/66">#66</a>. Tails is a portable operating system that’s known for it’s strong focus on privacy and security, and commonly used by activists, journalists and various human-rights NGOs. It already had reproducible images for a long time (since around 2017), but you had to reproduce the images manually. Starting with this release …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-09-30 00:00:00+00:00" class="dt-published"></time>
-  Thu 30 Sep 2021
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
