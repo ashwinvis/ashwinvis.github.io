@@ -157,31 +157,337 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://lu.is/blog/2021/10/21/my-teleconf-setup/" rel="bookmark" class="u-url"
-       title="My teleconf setup" target="_blank">
-      <time class="m-date" datetime="2021-10-21 22:41:16+00:00">
+    <a href="https://sparrow.dev/torchvision-datasets/" rel="bookmark" class="u-url"
+       title="Ben Cook: TorchVision Datasets: Getting Started" target="_blank">
+      <time class="m-date" datetime="2021-10-22 21:31:08+00:00">
         Oct
         <span class="m-date-day">
-          21
+          22
         </span>
         2021
       </time>
       <div class="p-name">
-      My teleconf setup
+      Ben Cook: TorchVision Datasets: Getting Started
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Several friends have asked about my camera/videoconferencing setup, so some notes on that. Why? I’ve joked that for lawyers, a good videoconferencing setup is now like a good suit—sort of pointless but nevertheless can help make a good impression in a field where impressions, for better and for worse, matter. I picked up the new… <a href="https://lu.is/blog/2021/10/21/my-teleconf-setup/">Continue reading <span>My teleconf setup</span> <span>→</span></a>
+  <p>The TorchVision datasets subpackage is a convenient utility for accessing well-known public image and video datasets. You can use these tools to start training new computer vision models very quickly.</p>
+
+
+
+TorchVision Datasets Example
+
+
+
+<p>To get started, all you have to do is import one of the <code>Dataset</code> classes. Then, instantiate it and access one of the samples with indexing:</p>
+
+
+
+<div><pre><code>from torchvision import datasets
+
+dataset = datasets.MNIST(root=&quot;./&quot;, download=True)
+img, label = dataset[10]
+img.size
+
+# Expected result
+# (28, 28)</code></pre></div>
+
+
+
+<p>You&#8217;ll get a tuple with a Pillow image and an integer label back:</p>
+
+
+
+<div><img alt="torchvision datasets mnist 3" src="https://sparrow.dev/wp-content/uploads/2021/10/torchvision-datasets-mnist-3.jpg"></div>
+
+
+
+<p>The TorchVision datasets implement <code>__len__()</code> and <code>__getitem__()</code> methods, which means that in addition to getting specific elements by index, you can also get the number of samples with the <code>len()</code> function:</p>
+
+
+
+<div><pre><code>len(dataset)
+
+# Expected result
+# 60000</code></pre></div>
+
+
+
+<p>Additionally, <code><a href="https://sparrow.dev/pytorch-dataloader/">DataLoader</a></code> classes can use TorchVision Dataset objects to create automatic …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Luis Villa</b></span>
-  on <time datetime="2021-10-21 22:41:16+00:00" class="dt-published"></time>
-  Thu 21 Oct 2021
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-22 21:31:08+00:00" class="dt-published"></time>
+  Fri 22 Oct 2021
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://ervin.ipsquad.net/blog/2021/10/22/web-review-week-2021-42/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Web Review, Week 2021-42" target="_blank">
+      <time class="m-date" datetime="2021-10-22 13:05:11+00:00">
+        Oct
+        <span class="m-date-day">
+          22
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Web Review, Week 2021-42
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Let’s go for my web review for the week 2021-42.</p>
+
+
+
+Facebook Plans to Rebrand Company With New Name, Verge Says
+
+<p><em>Tags: tech, facebook, business</em></p>
+
+<p>Lipstick on a pig as they say. :-)</p>
+
+<p><a href="//www.inkl.com/news/facebook-plans-to-rebrand-company-with-new-name-verge-says?share=pWQmVXfrAQr">https://www.inkl.com/news/facebook-plans-to-rebrand-company-with-new-name-verge-says?share=pWQmVXfrAQr</a></p>
+
+<p></p>
+
+Software Freedom Conservancy files lawsuit against California TV manufacturer Vizio Inc. for GPL violations
+
+<p><em>Tags: legal, free-software, compliance</em></p>
+
+<p>Important lawsuit, let’s hope it goes through.</p>
+
+<p><a href="//sfconservancy.org/copyleft-compliance/vizio.html">https://sfconservancy.org/copyleft-compliance/vizio.html</a></p>
+
+<p></p>
+
+Jira: Razor Blades?
+
+<p><em>Tags: tech, agile, jira</em></p>
+
+<p>With the amount of time I spent with this particular beast I have to agree. It can be used well of course, but it’s designed in a way that makes it very hard to use properly at all.</p>
+
+<p><a href="//ronjeffries.com/articles/021-01ff/jira-blades/">https://ronjeffries.com/articles/021-01ff/jira-blades/</a></p>
+
+<p></p>
+
+How to win at CORS - JakeArchibald.com
+
+<p><em>Tags: tech, http, cors</em></p>
+
+<p>Very extensive post about CORS …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kevin Ottens (ervin)</b></span>
+  on <time datetime="2021-10-22 13:05:11+00:00" class="dt-published"></time>
+  Fri 22 Oct 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/10/22/Smarter-every-day-and-4privacy.html" rel="bookmark" class="u-url"
+       title="How SmarterEveryDay's 4privacy can, and cannot, meet its goals" target="_blank">
+      <time class="m-date" datetime="2021-10-22 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          22
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      How SmarterEveryDay's 4privacy can, and cannot, meet its goals
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I don&rsquo;t particularly find myself to be a fan of the SmarterEveryDay YouTube
+channel, simply for being outside of Destin&rsquo;s target audience most of the time.
+I understand that Destin, the channel&rsquo;s host, is a friendly person and a great
+asset to his peers, and that he generally strives to do good. When I saw that he
+was involved in a Kickstarter to develop a privacy product, it piqued my
+interest. As a privacy advocate and jaded software engineer, I set out to find
+out what it&rsquo;s all about.</p>
+<p><em>You can watch the YouTube video <a href="https://www.youtube.com/watch?v=KMtrY6lbjcY">here</a>, and a short follow-up <a href="https://www.youtube.com/watch?v=Hy6STq337qo">here</a>.</em></p>
+<p>There are several things to praise here. I honestly thought that Destin&rsquo;s
+coverage of the topic of privacy for the layman was really well presented, and
+took some notes to use the next time …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-22 00:00:00+00:00" class="dt-published"></time>
+  Fri 22 Oct 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2532/" rel="bookmark" class="u-url"
+       title="Censored Vaccine Card" target="_blank">
+      <time class="m-date" datetime="2021-10-22 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          22
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Censored Vaccine Card
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="CVS's pharmacies are fine, but I much prefer their [censored]s." src="https://imgs.xkcd.com/comics/censored_vaccine_card.png" title="CVS's pharmacies are fine, but I much prefer their [censored]s.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-22 00:00:00+00:00" class="dt-published"></time>
+  Fri 22 Oct 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/review-soundcore-life-p2/" rel="bookmark" class="u-url"
+       title="Anker Soundcore Life P2 earbuds" target="_blank">
+      <time class="m-date" datetime="2021-10-22 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          22
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Anker Soundcore Life P2 earbuds
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The Anker Soundcore Life P2 has excellent sound quality.
+For use with more than one device, consider instead earbuds that have
+<a href="https://phiaton.com/blogs/audio/bluetooth-multipoint-pairing-what-is-it-and-how-does-it-work">multipoint Blueooth</a>
+(the Soundcore Life P2 earbuds do not have multipoint).
+The FCC ID is &ldquo;2AOKB-A3919RT&rdquo;.</p>
+<p>In general for Bluetooth earbuds of any brand, it&rsquo;s best to carry the charging container with you to protect and charge the earbuds when not in use.
+You may need to manually select &ldquo;headset&rdquo; or &ldquo;stereo&rdquo; mode in your operating system.
+Windows for example allows per-app defaults, or switch by clicking on Windows toolbar speaker icon.</p>
+<p>The &ldquo;pros&rdquo; or upsides of these earbuds:</p>
+<ul>
+<li>Excellent stereo sound quality including aptX</li>
+<li>Works well with single earbud (left or right) and auto-enables stereo if 2nd earbud turned on (or mono if 2nd earbud turned off).</li>
+<li>four microphones (two per ear) give excellent quality on two-way …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-22 00:00:00+00:00" class="dt-published"></time>
+  Fri 22 Oct 2021
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://thisweek.gnome.org/posts/2021/10/twig-15/" rel="bookmark" class="u-url"
+       title="#15 Sepia and App Updates" target="_blank">
+      <time class="m-date" datetime="2021-10-22 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          22
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      #15 Sepia and App Updates
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Update on what happened across the GNOME project in the week from October 15 to October 22.</p>
+
+<a href="https://thisweek.gnome.org/author/felix/index.xml#core-apps-and-libraries"></a>Core Apps and Libraries
+
+
+
+<a href="https://thisweek.gnome.org/author/felix/index.xml#libadwaita"></a>Libadwaita <a href="https://gitlab.gnome.org/GNOME/libadwaita"></a>
+<p>Building blocks for modern GNOME apps using GTK4.</p>
+<p><a href="https://matrix.to/#/@alexm:gnome.org">Alexander Mikhaylenko</a> says</p>
+<blockquote>
+<p>A large stylesheet refactoring has landed in libadwaita, light and dark variants are now shared with all their differences exported as public variables and customizable by apps. This allows to do things such as reliably recoloring the whole application into sepia.
+<img alt="" src="https://thisweek.gnome.org/author/felix/cb0628dd650c4721f2b57c951f0e430984bec98a.png"></p>
+</blockquote>
+
+
+
+<a href="https://thisweek.gnome.org/author/felix/index.xml#circle-apps-and-libraries"></a>Circle Apps and Libraries
+
+
+
+<a href="https://thisweek.gnome.org/author/felix/index.xml#solanum"></a>Solanum <a href="https://gitlab.gnome.org/World/Solanum"></a>
+<p>Balance working time and break time.</p>
+<p><a href="https://matrix.to/#/@brainblasted:gnome.org">Chris 🌱️</a> reports</p>
+<blockquote>
+<p>Solanum 3.0.0 is out and available on Flathub, with new preferences for timer length and updated translations.
+<img alt="" src="https://thisweek.gnome.org/author/felix/18d2bb14278fb1d877fc229e71d28242ab6f9316.png"></p>
+</blockquote>
+
+
+
+<a href="https://thisweek.gnome.org/author/felix/index.xml#shortwave"></a>Shortwave <a href="https://gitlab.gnome.org/World/Shortwave"></a>
+<p>Internet radio player with over 25000 stations.</p>
+<p><a href="https://matrix.to/#/@felix:haecker.io">Felix</a> reports</p>
+<blockquote>
+<p>I have revamped the Shortwave station details dialog, it now includes more information, and shows the location on a map for some stations. It …</p></blockquote>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-10-22 00:00:00+00:00" class="dt-published"></time>
+  Fri 22 Oct 2021
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -225,40 +531,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://lukasz.langa.pl/61df599c-d9d8-4938-868b-36b67fdb4448/" rel="bookmark" class="u-url"
-       title="Łukasz Langa: PEP 563 and PEP 649" target="_blank">
-      <time class="m-date" datetime="2021-10-21 19:54:44+00:00">
-        Oct
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Łukasz Langa: PEP 563 and PEP 649
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>As the author of <a href="https://www.python.org/dev/peps/pep-0563/">PEP 563</a>, I can summarize my position as follows: had PEP 563 never been implemented, it would be easy to accept <a href="https://www.python.org/dev/peps/pep-0649/">PEP 649</a>. However, in the current situation it’s not that clear because I find it very important to allow writing a single codebase that works on Python 3.7 - 3.11. If we can secure this behavior, I’m +1 to accepting PEP 649. If not, I have an alternative idea.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-21 19:54:44+00:00" class="dt-published"></time>
-  Thu 21 Oct 2021
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pluralistic.net/2021/10/21/sidechannels/" rel="bookmark" class="u-url"
        title="Pluralistic: 21 Oct 2021" target="_blank">
       <time class="m-date" datetime="2021-10-21 12:31:15+00:00">
@@ -293,9 +565,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.broulik.de/2021/10/psa-plasma-browser-integration-currently-unavailable/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="PSA: Plasma Browser Integration Currently Unavailable" target="_blank">
-      <time class="m-date" datetime="2021-10-21 12:29:19+00:00">
+    <a href="https://noyb.eu/en/black-box-amazon-algorithm-discriminates-customers" rel="bookmark" class="u-url"
+       title=""Black box" Amazon: algorithm discriminates customers" target="_blank">
+      <time class="m-date" datetime="2021-10-21 11:31:35+00:00">
         Oct
         <span class="m-date-day">
           21
@@ -303,30 +575,26 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2021
       </time>
       <div class="p-name">
-      PSA: Plasma Browser Integration Currently Unavailable
+      "Black box" Amazon: algorithm discriminates customers
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>on the <a href="//addons.mozilla.org/en-US/firefox/addon/plasma-integration/">Firefox Add-ons page</a>.</p>
+  <span>"Black box" Amazon: algorithm discriminates customers </span>
 
+                    Another complaint against Amazon Europe: a customer made an access request to find out why he was denied certain payment options; he did not receive a reply.
 
-
-<a href="//blog.broulik.de/wp-content/uploads/2021/10/Banner-dead.png"><img alt="Dead Konqi sitting on the Earth" src="//blog.broulik.de/wp-content/uploads/2021/10/Banner-dead-1024x410.png"></a>Konqi is somewhat impaired today.
-
-
-
-<p>A fix is being worked on, but might take a bit, sorry about that.</p>
+                      <img alt="Man slouching over laptop, clearly irritated" src="https://noyb.eu/sites/default/files/styles/media_large/public/2021-10/amazon_rechnung.png?itok=VQqjAaC8">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Kai Uwe Broulik</b></span>
-  on <time datetime="2021-10-21 12:29:19+00:00" class="dt-published"></time>
+  <span class="p-author"><b>pt</b></span>
+  on <time datetime="2021-10-21 11:31:35+00:00" class="dt-published"></time>
   Thu 21 Oct 2021
-  in Planet KDE.
+  in noyb.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -387,50 +655,6 @@ frustrating (it often …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/github-actions-windows-msys2-path/" rel="bookmark" class="u-url"
-       title="GitHub Actions MSYS2 Windows path" target="_blank">
-      <time class="m-date" datetime="2021-10-21 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          21
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      GitHub Actions MSYS2 Windows path
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The MSYS2
-<a href="https://github.com/msys2/setup-msys2">GitHub Action</a>
-v2.5.0
-<a href="https://github.com/msys2/setup-msys2/pull/163">updated the path to MSYS</a>,
-affecting
-<a href="https://www.scivision.dev/github-actions-windows-mpi-msys">workflows using MSYS2</a>.</p>
-<p>The new path is used like:</p>
-<div><pre><code>- <span>name</span>: <span>Put MSYS2_MinGW64 on PATH</span>
-<span># there is not yet an environment variable for this path from msys2/setup-msys2</span>
-<span>run</span>: <span>echo "D:/a/_temp/msys64/mingw64/bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append</span>
-</code></pre></div><p>The old path was &ldquo;D:/a/_temp/msys/msys64/mingw64/bin&rdquo;.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-21 00:00:00+00:00" class="dt-published"></time>
-  Thu 21 Oct 2021
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.davidrevoy.com/article876/episode-36-first-panel" rel="bookmark" class="u-url"
        title="Episode 36 first panel" target="_blank">
       <time class="m-date" datetime="2021-10-20 13:37:00+02:00">
@@ -457,40 +681,6 @@ affecting
   on <time datetime="2021-10-20 13:37:00+02:00" class="dt-published"></time>
   Wed 20 Oct 2021
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2531/" rel="bookmark" class="u-url"
-       title="Dark Arts" target="_blank">
-      <time class="m-date" datetime="2021-10-20 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          20
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Dark Arts
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="You think, 'okay, THIS is an ideal use case for hardlinks!' but then 6 months later you're doing some extremely cursed Google search like 'javascript ext4' and wondering where things went wrong." src="https://imgs.xkcd.com/comics/dark_arts.png" title="You think, 'okay, THIS is an ideal use case for hardlinks!' but then 6 months later you're doing some extremely cursed Google search like 'javascript ext4' and wondering where things went wrong.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-20 00:00:00+00:00" class="dt-published"></time>
-  Wed 20 Oct 2021
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -601,44 +791,6 @@ affecting
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://noyb.eu/en/illegal-credit-scores-noyb-amplify-pressure" rel="bookmark" class="u-url"
-       title="Illegal credit scores: noyb to amplify pressure" target="_blank">
-      <time class="m-date" datetime="2021-10-18 00:13:17+00:00">
-        Oct
-        <span class="m-date-day">
-          18
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Illegal credit scores: noyb to amplify pressure
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <span>Illegal credit scores: noyb to amplify pressure</span>
-
-                    Diverting direct marketing data to assess creditworthiness is unlawful and needs to stop. noyb filed a complaint against CRIF Bürgel and Acxiom who have been engaging in such practices.
-
-                      <img alt="illegal data trade" src="https://noyb.eu/sites/default/files/styles/media_large/public/2021-10/data-exchange_0.png?itok=VR3VPGyn">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>ps</b></span>
-  on <time datetime="2021-10-18 00:13:17+00:00" class="dt-published"></time>
-  Mon 18 Oct 2021
-  in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://vulns.xyz/2021/10/rebuilderd-v0.15.0/" rel="bookmark" class="u-url"
        title="Release: rebuilderd v0.15.0" target="_blank">
       <time class="m-date" datetime="2021-10-18 00:00:00+00:00">
@@ -673,51 +825,6 @@ We’re starting with a script that generates a json. In our case we’ll simply
   on <time datetime="2021-10-18 00:00:00+00:00" class="dt-published"></time>
   Mon 18 Oct 2021
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/10/17/Reliability.html" rel="bookmark" class="u-url"
-       title="Software developers have stopped caring about reliability" target="_blank">
-      <time class="m-date" datetime="2021-10-17 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          17
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Software developers have stopped caring about reliability
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Of all the principles of software engineering which has fallen by the wayside in
-the modern &ldquo;move fast and break things&rdquo; mentality of assholes modern
-software developers, reliability is perhaps the most neglected, along with its
-cousin, robustness. Almost all software that users encounter in $CURRENTYEAR is
-straight-up broken, and often badly.</p>
-<p>Honestly, it&rsquo;s pretty embarassing. Consider all of the stupid little things
-you&rsquo;ve learned how to do in order to work around broken software. Often
-something as simple as refreshing the page or rebooting the program to knock
-some sense back into it — most users can handle that. There are much
-stupider problems, however, and they are <em>everywhere</em>. Every morning, I boot,
-then immediately hard-reboot, my workstation, because it seems to jigger my
-monitors into waking up properly to do their job. On many occasions, I have …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-17 00:00:00+00:00" class="dt-published"></time>
-  Sun 17 Oct 2021
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
