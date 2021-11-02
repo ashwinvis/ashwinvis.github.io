@@ -157,67 +157,383 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://itsmycode.com/python-pip-command-not-found-solution/" rel="bookmark" class="u-url"
-       title="ItsMyCode: Python pip: command not found Solution" target="_blank">
-      <time class="m-date" datetime="2021-10-31 21:15:51+00:00">
-        Oct
+    <a href="https://nedbatchelder.com/blog/202111/coverage_goals.html" rel="bookmark" class="u-url"
+       title="Coverage goals" target="_blank">
+      <time class="m-date" datetime="2021-11-01 19:06:45-04:00">
+        Nov
         <span class="m-date-day">
-          31
+          01
         </span>
         2021
       </time>
       <div class="p-name">
-      ItsMyCode: Python pip: command not found Solution
+      Coverage goals
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>ItsMyCode |</p>
+  <p>There&#8217;s a feature request to add a
+<a href="https://github.com/nedbat/coveragepy/issues/691">per-file
+threshold</a> to coverage.py. I didn&#8217;t add the feature, I wrote a
+proof-of-concept:
+<a href="https://github.com/nedbat/coveragepy/blob/master/lab/goals.py">goals.py</a>.</p><p>Coverage.py has a --fail-under option that will check the total coverage
+percentage, and exit with a failing status if it is too low.  This lets people
+set a goal, and then check that they are meeting it in their CI systems.</p><p>The feature request is to check each file individually, rather than the
+project as a whole, to exert tighter control over the goal.  That sounds fine,
+but I could see that it would actually be more complicated than that, because
+people sometimes have more complicated goals: 100% coverage in tests and 85% in
+product code, or whatever.</p><p>I
+<a href="https://github.com/nedbat/coveragepy/issues/691#issuecomment-945166307">suggested</a>
+implementing it as a separate tool that used data from a JSON report.  Then …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2021-11-01 19:06:45-04:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
 
-<p>Pip is a recursive acronym for either &#8220;<strong>Pip Installs Packages&#8221;</strong>&nbsp;or &#8220;<strong>Pip Installs Python</strong>.&#8221; Alternatively, pip stands for &#8220;<strong>preferred installer program.&#8221;&nbsp;</strong>Basically, it is a package manager that allows you to download and install packages. If you try to install packages without pip installed, you will get an error&nbsp;<strong>pip: command not found.</strong></p>
+</article>
 
-
-
-<p>In this article, we will look at the cause of this error and possible solutions to fix this error which you are encountering.</p>
-
-
-
-pip: command not found
-
-
-
-<p>The issue differs based on the environment and the os which you are using. Let&#8217;s understand how the pip is packaged into different environments.</p>
-
-
-
-<p>Error Message from Bash:</p>
-
-
-
-<pre>bash: pip: command not found</pre>
-
-
-
-<p>Error Message from DOS command line:</p>
-
-
-
-<pre>'pip' is not recognized as an internal or external command,
-operable program or batch file.</pre>
-
-
-
-<ol><li><strong>Linux &#8211;</strong> If you have …</li></ol>
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2021/11/robot-dogs" rel="bookmark" class="u-url"
+       title="“What are robot dogs actually being used for?”" target="_blank">
+      <time class="m-date" datetime="2021-11-01 20:10:39+01:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      “What are robot dogs actually being used for?”
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Many people have seen the videos of Boston Dynamics with their robots. While watching the videos, I always wondered what the possible use cases for such robots (dogs) are? Just millitary? But now Tom Scott clarifies it with a new video: Hydroelectric power plant inspection for example! With the robots it is cheaper and easier to monitor the power plants centrally.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-31 21:15:51+00:00" class="dt-published"></time>
-  Sun 31 Oct 2021
+  on <time datetime="2021-11-01 20:10:39+01:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://discuss.tryton.org/t/tryton-release-6-2/4730" rel="bookmark" class="u-url"
+       title="Tryton News: Tryton Release 6.2" target="_blank">
+      <time class="m-date" datetime="2021-11-01 19:00:41+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Tryton News: Tryton Release 6.2
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div> </div>
+<div>
+<p></p><div><a href="https://discuss-cdn.tryton.org/uploads/default/original/2X/d/d47b39b7ab822f9a850b5e25ce2d8f41c1c906e4.jpeg" title="Photography of Tree"><img alt="Photography of Tree" src="https://discuss-cdn.tryton.org/uploads/default/optimized/2X/d/d47b39b7ab822f9a850b5e25ce2d8f41c1c906e4_2_375x500.jpeg"></a></div><p></p>
+</div>
+<p>We are proud to announce the 6.2 release of <a href="https://www.tryton.org/">Tryton </a>.
+This release provides many bug fixes, fine tuning and many performance improvements. But it is also remarkable by the addition of not less than 13 new modules from which we can highlight the basis for a point of sale and an integration with Shopify.
+You can give it a <a href="https://www.tryton.org/download#demo">try on the demo server</a>, <a href="https://www.tryton.org/download#docker">use the docker image </a> or <a href="https://www.tryton.org/download">download it here</a>.
+As usual migration from previous series is fully supported. No manual operations are required.</p>
+<p>Here is a list of the most noticeable changes:</p>
+Changes for the User
+<p>It is now possible to import and export data from binary fields using CSV. The data is encoded into base64 in the file.</p>
+<p>You can now customize the name of the records used in the report to construct the filename …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-01 19:00:41+00:00" class="dt-published"></time>
+  Mon 01 Nov 2021
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/chergert/2021/11/01/gtksourceview-is-getting-a-vim-emulator/" rel="bookmark" class="u-url"
+       title="GtkSourceView is getting a VIM emulator" target="_blank">
+      <time class="m-date" datetime="2021-11-01 17:06:08+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      GtkSourceView is getting a VIM emulator
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  One of the things we spent some time on early with Builder was creating built-in VIM emulation. Originally it was written in C, but then got converted to this nasty CSS for a couple of reasons. First, that keybindings in GTK 3 were largely done with CSS due to how we moved away from gtkrc … <a href="https://blogs.gnome.org/chergert/2021/11/01/gtksourceview-is-getting-a-vim-emulator/">Continue reading <span>GtkSourceView is getting a VIM emulator</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>chergert</b></span>
+  on <time datetime="2021-11-01 17:06:08+00:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://treyhunner.com/2021/11/how-to-flatten-a-list-in-python/" rel="bookmark" class="u-url"
+       title="How to flatten a list in Python" target="_blank">
+      <time class="m-date" datetime="2021-11-01 08:00:00-07:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      How to flatten a list in Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>You&rsquo;ve somehow ended up with lists nested inside of lists, possibly like this one:</p>
+
+<span></span><div><pre><span>1</span>
+</pre><pre><code><span><span>&gt;&gt;&gt; </span><span>groups</span> <span>=</span> <span>[[</span><span>&quot;Hong&quot;</span><span>,</span> <span>&quot;Ryan&quot;</span><span>],</span> <span>[</span><span>&quot;Anthony&quot;</span><span>,</span> <span>&quot;Wilhelmina&quot;</span><span>],</span> <span>[</span><span>&quot;Margaret&quot;</span><span>,</span> <span>&quot;Adrian&quot;</span><span>]]</span>
+</span></code></pre></div>
+
+
+<p>But you <em>want</em> just a single list (without the nesting) like this:</p>
+
+<span></span><div><pre><span>1</span>
+</pre><pre><code><span><span>&gt;&gt;&gt; </span><span>expected_output</span> <span>=</span> <span>[</span><span>&quot;Hong&quot;</span><span>,</span> <span>&quot;Ryan&quot;</span><span>,</span> <span>&quot;Anthony&quot;</span><span>,</span> <span>&quot;Wilhelmina&quot;</span><span>,</span> <span>&quot;Margaret&quot;</span><span>,</span> <span>&quot;Adrian&quot;</span><span>]</span>
+</span></code></pre></div>
+
+
+<p>You need to flatten your list-of-lists.</p>
+
+We&rsquo;re looking for a &ldquo;shallow&rdquo; flatten
+
+<p>We can think of this as a <strong>shallow flatten</strong> operation, meaning we&rsquo;re flattening this list by one level.
+A <strong>deep flatten</strong> operation would handle lists-of-lists-of-lists-of-lists (and so on) and that&rsquo;s a bit more than we need for our use case.</p>
+
+<p>The flattening strategy we come up with should work on lists-of-lists as well as any other type of <a href="https://www.pythonmorsels.com/topics/iterable/">iterable</a>-of-iterables.
+For example lists of tuples should be flattenable:</p>
+
+<span></span><div><pre><span>1</span>
+</pre><pre><code><span><span>&gt;&gt;&gt; </span><span>groups</span> <span>=</span> <span>[(</span><span>&quot;Hong&quot;</span><span>,</span> <span>&quot;Ryan&quot;</span><span>),</span> <span>(</span><span>&quot;Anthony&quot;</span><span>,</span> <span>&quot;Wilhelmina&quot;</span><span>),</span> <span>(</span><span>&quot;Margaret&quot;</span><span>,</span> <span>&quot;Adrian&quot;</span><span>)]</span>
+</span></code></pre></div>
+
+
+<p>And even an odd type like …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-01 08:00:00-07:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in Trey Hunner.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2536/" rel="bookmark" class="u-url"
+       title="Wirecutter" target="_blank">
+      <time class="m-date" datetime="2021-11-01 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Wirecutter
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="This was always going to be a controversial Wirecutter post, but what really got them in trouble were their 'budget' and 'upgrade' picks." src="https://imgs.xkcd.com/comics/wirecutter.png" title="This was always going to be a controversial Wirecutter post, but what really got them in trouble were their 'budget' and 'upgrade' picks.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-01 00:00:00+00:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fortran-lang.org/newsletter/2021/11/01/Fortran-Newsletter-November-2021/" rel="bookmark" class="u-url"
+       title="Fortran newsletter: November 2021" target="_blank">
+      <time class="m-date" datetime="2021-11-01 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Fortran newsletter: November 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Welcome to the November 2021 edition of the monthly Fortran newsletter.
+The newsletter comes out at the beginning of every month and details
+Fortran news from the previous month.</p>
+
+<ul></ul>
+
+fortran-lang.org
+
+<p>This month we’ve had several updates to the website:</p>
+
+<ul>
+  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/345">#345</a>:
+Fix title in learning resources</li>
+  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/341">#341</a>:
+Add Cantera to package index</li>
+  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/329">#329</a>:
+Quantum Information book, WSL GUI, and typos</li>
+  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/340">#340</a>:
+Minor fixes in Best Practices</li>
+</ul>
+
+Work in progress
+
+<ul>
+  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/201">#201</a> (WIP):
+Internationalization for fortran-lang</li>
+</ul>
+
+<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us know</a>
+if you have any suggestions for the website and its content.
+We welcome any new contributors to the website and the tutorials page in particular - see the
+<a href="https://github.com/fortran-lang/fortran-lang.org/blob/master/CONTRIBUTING.md">contributor guide</a>
+for how to get started.</p>
+
+Fortran Standard Library
+
+<p>Here’s what’s new in stdlib:</p>
+
+<ul>
+  <li><a href="https://github.com/fortran-lang/stdlib/releases/tag/v0.1.0">0.1.0</a>:
+Initial version of the Fortran standard library</li>
+  <li><a href="https://github.com/fortran-lang/stdlib/pull/543">#543</a>:
+Fix string concat</li>
+</ul>
+
+Work in progress
+
+<ul>
+  <li><a href="https://github.com/fortran-lang/stdlib/pull/554">#554 …</a></li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-01 00:00:00+00:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in Fortran Newsletter.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-macos-framework-link/" rel="bookmark" class="u-url"
+       title="CMake MacOS Framework link" target="_blank">
+      <time class="m-date" datetime="2021-11-01 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      CMake MacOS Framework link
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>MacOS
+<a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemFrameworks/SystemFrameworks.html">Frameworks</a>
+are linked with the <code>-framework</code> flag.
+CMake has special handling for these flags, so target_link_libraries should be used for them.
+The quoting in the example below is necessary to get CMake handling the flags correctly.</p>
+<div><pre><code>add_executable(<span>main</span> <span>main.c</span>)<span>
+</span><span>
+</span><span></span>if(<span>APPLE</span>)<span>
+</span><span></span> target_link_libraries(<span>main</span> <span>PRIVATE</span>
+<span>"-framework Foundation"</span>
+<span>"-framework IOKit"</span>
+)<span>
+</span><span></span>endif()<span>
+</span></code></pre></div><p>Alternatively, use find_library() with the framework name.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-01 00:00:00+00:00" class="dt-published"></time>
+  Mon 01 Nov 2021
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -252,40 +568,6 @@ operable program or batch file.</pre>
   on <time datetime="2021-10-31 16:51:57+00:00" class="dt-published"></time>
   Sun 31 Oct 2021
   in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/posts/october-21" rel="bookmark" class="u-url"
-       title="My October ‘21 in Review" target="_blank">
-      <time class="m-date" datetime="2021-10-31 15:49:21+01:00">
-        Oct
-        <span class="m-date-day">
-          31
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      My October ‘21 in Review
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The end of the year is approaching and another month is over. With the end of October and today’s time change - which I had briefly forgotten this morning for inexplicable reasons - but already comes a bit of the winter feeling. The last weeks it was sometimes unusually warm, but now the cold season is just around the corner.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-31 15:49:21+01:00" class="dt-published"></time>
-  Sun 31 Oct 2021
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -329,69 +611,6 @@ operable program or batch file.</pre>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://k-d-w.org/blog/2021/10/scikit-survival-0.16-released/" rel="bookmark" class="u-url"
-       title="scikit-survival 0.16 released" target="_blank">
-      <time class="m-date" datetime="2021-10-30 10:41:06+00:00">
-        Oct
-        <span class="m-date-day">
-          30
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      scikit-survival 0.16 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I am proud to announce the release if version 0.16.0 of <a href="https://github.com/sebp/scikit-survival">scikit-survival</a>,
-The biggest improvement in this release is that you can now
-change the evaluation metric that is used in estimators’ <code>score</code> method.
-This is particular useful
-for hyper-parameter optimization using scikit-learn’s <code>GridSearchCV</code>.
-You can now use <a href="https://scikit-survival.readthedocs.io/en/v0.16.0/api/generated/sksurv.metrics.as_concordance_index_ipcw_scorer.html#sksurv.metrics.as_concordance_index_ipcw_scorer">as_concordance_index_ipcw_scorer</a>,
-<a href="https://scikit-survival.readthedocs.io/en/v0.16.0/api/generated/sksurv.metrics.as_cumulative_dynamic_auc_scorer.html#sksurv.metrics.as_cumulative_dynamic_auc_scorer">as_cumulative_dynamic_auc_scorer</a>, or
-<a href="https://scikit-survival.readthedocs.io/en/v0.16.0/api/generated/sksurv.metrics.as_integrated_brier_score_scorer.html#sksurv.metrics.as_integrated_brier_score_scorer">as_integrated_brier_score_scorer</a> to adjust the
-<code>score</code> method to your needs.
-The
-<a href="https://k-d-w.org/blog/2021/10/scikit-survival-0.16-released/#hyper-parameter-optimization-with-alternative-metrics">
-example below
-</a>
-illustrates how to use these in practice.</p>
-<p>For a full list of changes in scikit-survival 0.16.0, please see the
-<a href="https://scikit-survival.readthedocs.io/en/v0.16.0/release_notes.html">release notes</a>.</p>
-Installation
-<p>Pre-built conda packages are available for Linux, macOS, and Windows via</p>
-<pre><code> conda install -c sebp scikit-survival
-</code></pre>
-<p>Alternatively, scikit-survival can be installed from source following
-<a href="https://scikit-survival.readthedocs.io/en/v0.16.0/install.html#from-source">these instructions</a>.</p>
-Hyper-Parameter Optimization with Alternative Metrics
-<p>The code below is also available as a
-<a href="https://github.com/sebp/scikit-survival/blob/v0.16.0/doc/user_guide/evaluating-survival-models.ipynb">notebook</a>
-and can directly be executed by clicking
-<a href="https://mybinder.org/v2/gh/sebp/scikit-survival/master?urlpath=lab/tree/notebooks/evaluating-survival-models.ipynb">
-<img src="https://mybinder.org/badge_logo.svg">
-</a></p>
-<p>In this example …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-30 10:41:06+00:00" class="dt-published"></time>
-  Sat 30 Oct 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pluralistic.net/2021/10/29/norwegian-potato-flour-enchiladas/" rel="bookmark" class="u-url"
        title="Pluralistic: 29 Oct 2021" target="_blank">
       <time class="m-date" datetime="2021-10-30 02:12:11+00:00">
@@ -418,40 +637,6 @@ and can directly be executed by clicking
   on <time datetime="2021-10-30 02:12:11+00:00" class="dt-published"></time>
   Sat 30 Oct 2021
   in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2535/" rel="bookmark" class="u-url"
-       title="Common Cold Viruses" target="_blank">
-      <time class="m-date" datetime="2021-10-29 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          29
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Common Cold Viruses
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="&quot;It's not an influenza, but the onset has notes of the '09 H1N1 strain.&quot; &quot;Ah yes, that was a good year for H1N1.&quot;" src="https://imgs.xkcd.com/comics/common_cold_viruses.png" title="&quot;It's not an influenza, but the onset has notes of the '09 H1N1 strain.&quot; &quot;Ah yes, that was a good year for H1N1.&quot;">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-29 00:00:00+00:00" class="dt-published"></time>
-  Fri 29 Oct 2021
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -574,40 +759,6 @@ feature request, or fix every bug, or even acknowledge them in any way …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-10-25_Impressionable_minds_at_the_movie_theatre" rel="bookmark" class="u-url"
-       title="Impressionable minds at the movie theatre" target="_blank">
-      <time class="m-date" datetime="2021-10-25 20:25:42+00:00">
-        Oct
-        <span class="m-date-day">
-          25
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Impressionable minds at the movie theatre
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><blockquote><p>When I close my eyes, I see the Arrakis desert; space ships; fire and sand.</p></blockquote><p> I went to see a movie. In a theatre. We were about 7 people in there. COVID-19 is still ongoing.</p><p>Going to the theatre is not an easy thing for me. The pandemic makes me distrustful of people. They have unvaccinated kids. They touch stuff. They don’t wear their masks correctly.</p><p>But I’m also a cry baby. I don’t like cruelty. I don’t like body horror. I don’t like people getting killed gratuitously. I don’t like to see injuries, surgery, wounds. I don’t like non-stop action. I don’t want to see endless fights and destruction. I don’t like breakups. I don’t like unhappy couples. I don’t like to see the struggles of the disabled …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-25 20:25:42+00:00" class="dt-published"></time>
-  Mon 25 Oct 2021
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="http://phdcomics.com/comics.php?f=2049" rel="bookmark" class="u-url"
        title="10/22/21 PHD comic: 'Current Status'" target="_blank">
       <time class="m-date" datetime="2021-10-25 02:09:47-07:00">
@@ -659,55 +810,6 @@ feature request, or fix every bug, or even acknowledge them in any way …</p>
   on <time datetime="2021-10-25 02:09:47-07:00" class="dt-published"></time>
   Mon 25 Oct 2021
   in PHD Comics.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/python-random-seed-intialization/" rel="bookmark" class="u-url"
-       title="Python random seed init" target="_blank">
-      <time class="m-date" datetime="2021-10-25 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          25
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Python random seed init
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Most programming languages have a built-in random number generator.
-Using an <em>a priori</em> random seed can be useful in testing simulations using randomness.
-In simulations with non-linear growth, small differences at the beginning of the simulations can result in significantly different time evolution of the outputs.
-To help test such simulations as compared against known-good reference data, it can be useful to set a known random seed to see that expected outputs result.</p>
-<p>In Python Numpy, the random
-<a href="https://numpy.org/doc/stable/reference/random/generator.html">seed can be set</a>:</p>
-<div><pre><code><span>import</span> numpy.random
-r <span>=</span> numpy<span>.</span>random<span>.</span>default_rng(seed<span>=</span><span>0</span>)
-x <span>=</span> r<span>.</span>standard_normal(<span>3</span>)
-</code></pre></div><p>Observe that &ldquo;x&rdquo; will always be</p>
-<blockquote>
-<p>[ 0.12573022 -0.13210486 0.64042265]</p>
-</blockquote>
-<p>using different seed values result in a different set of repeatable pseudorandom numbers.</p>
-<p>NOTE: the default RNG is not guaranteed to be stable over Numpy releases.
-The user may wish to specify a …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-25 00:00:00+00:00" class="dt-published"></time>
-  Mon 25 Oct 2021
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -877,62 +979,6 @@ We’re starting with a script that generates a json. In our case we’ll simply
   on <time datetime="2021-10-18 00:00:00+00:00" class="dt-published"></time>
   Mon 18 Oct 2021
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202110/django_chat_podcast.html" rel="bookmark" class="u-url"
-       title="Django Chat podcast" target="_blank">
-      <time class="m-date" datetime="2021-10-13 16:18:04-04:00">
-        Oct
-        <span class="m-date-day">
-          13
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Django Chat podcast
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I had a fun conversation on the
-<a href="https://djangochat.com/episodes/coveragepy-ned-batchelder">Django Chat</a>
-podcast with Will Vincent and Carlton Gibson.  It was a great discussion.
-</p><p>Things we talked about:</p><ul>
-<li>Walking</li>
-<li>Right and wrong ways to do things</li>
-<li>Geographic meetups during virtual times</li>
-<li>Open source attention</li>
-<li>Coverage.py</li>
-<li>The evolution of the Python standard library</li>
-<li>Python 3.10&#8217;s trace behavior</li>
-<li>Coverage as a measure of test quality</li>
-<li>UX of test information</li>
-<li>Developer gamification</li>
-<li>Upgrading Django with third-party packages</li>
-<li>Convincing people to test</li>
-<li>Using non-public interfaces</li>
-<li><a href="//nedbatchelder.com/code/cog">Cog</a></li>
-<li>Side projects as outlets</li>
-<li>Rewriting my wacky personal site (this site)</li>
-<li>edX being acquired by 2U</li>
-<li>Open source from first principles</li>
-</ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2021-10-13 16:18:04-04:00" class="dt-published"></time>
-  Wed 13 Oct 2021
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
