@@ -157,6 +157,333 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://pythoninsider.blogspot.com/2021/11/python-398-and-3110a2-are-now-available.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed:+PythonInsider+(Python+Insider)" rel="bookmark" class="u-url"
+       title="Python 3.9.8 and 3.11.0a2 are now available" target="_blank">
+      <time class="m-date" datetime="2021-11-05 19:09:00-04:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Python 3.9.8 and 3.11.0a2 are now available
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p></p>Tcl/Tk updates
+<p>With the recent release of macOS 12 Monterey, we noticed that <code>tkinter</code>
+ file dialogs are failing to show up on this new operating system, 
+including in our built-in IDLE. Thanks to rapid help from the Tk team, 
+and Marc Culler in particular, we were able to fix the issue by bundling
+ Python 3.9.8 and Python 3.11.0a2 with a fixed Tcl/Tk version. In 3.9.8 
+it’s a patched 8.6.11 release while 3.11.0a2 is rocking the 
+bleeding-edge 8.6.12rc1.</p>
+<p>Since the issue also affected our latest stable version, 3.10.0, an 
+updated macOS installer for this version was issued. You can recognize 
+it by the <code>post2</code> version appendix: <a href="https://www.python.org/ftp/python/3.10.0/python-3.10.0post2-macos11.pkg">python-3.10.0post2-macos11.pkg</a>.
+ We didn’t have to bump the version number of Python itself since there …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
+  on <time datetime="2021-11-05 19:09:00-04:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2021-11-05_Compressing_video,_extremely" rel="bookmark" class="u-url"
+       title="Compressing video, extremely" target="_blank">
+      <time class="m-date" datetime="2021-11-05 21:25:52+00:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Compressing video, extremely
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Today I was looking to compress a video for upload to social media. It was a few minutes of video from my phone. I figured 1MiB/min is good enough for MP3, so perhaps at 5MiB/min we can get good enough video? I actually only really cared about the audio, so video quality I was ready to sacrifice.</p><p>The video I got from the phone was 1015MiB. One Gigabyte! 🙄</p><p>A simple rescaling to CGA resolution suggested by <a href="https://merveilles.town/users/sejo">@sejo</a> brought that down to 14MiB!</p><pre>ffmpeg -i "$1" -vf scale=320:240 "small-$1"</pre><p><a href="https://sunbeam.city/users/makeworld">@makeworld</a> added that I should be using “-acodec copy” in order to prevent audio from getting reencoded. Good point!</p><p>The following gets it down to 9MiB, based on a solution I found on StackExchange. Increasing “-crf” reduces the quality with up to 30 being noted as OK …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-05 21:25:52+00:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://ervin.ipsquad.net/blog/2021/11/05/web-review-week-2021-44/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Web Review, Week 2021-44" target="_blank">
+      <time class="m-date" datetime="2021-11-05 16:50:07+00:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Web Review, Week 2021-44
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Let’s go for my web review for the week 2021-44.</p>
+
+
+
+Preindustrial workers worked fewer hours than today’s
+
+<p><em>Tags: history, work, economics</em></p>
+
+<p>Definitely contradicts our preconceived ideas regarding labor before the industrial revolution.</p>
+
+<p><a href="//groups.csail.mit.edu/mac/users/rauch/worktime/hours_workweek.html">https://groups.csail.mit.edu/mac/users/rauch/worktime/hours_workweek.html</a></p>
+
+<p></p>
+
+Research: People prefer friendliness, trustworthiness in teammates over skill competency | Binghamton News
+
+<p><em>Tags: management, team</em></p>
+
+<p>Interesting findings about team dynamics. It’s actually a good thing that we seem to usually prefer people exhibiting skills + friendly and trustworthy, but that if we can get only one of the two we favor friendly and trustworthy over skills. It’s healthy, just skills tend to drag teams down.</p>
+
+<p><a href="//www.binghamton.edu/news/story/3318/research-people-prefer-friendliness-trustworthiness-in-teammates-over-skill-competency">https://www.binghamton.edu/news/story/3318/research-people-prefer-friendliness-trustworthiness-in-teammates-over-skill-competency</a></p>
+
+<p></p>
+
+The metaverse is bullshit
+
+<p><em>Tags: tech, cyberpunk, metaverse, gafam, capitalism</em></p>
+
+<p>Definitely this. We got a bunch of rich people with a …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kevin Ottens (ervin)</b></span>
+  on <time datetime="2021-11-05 16:50:07+00:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://lu.is/blog/2021/11/05/editing-a-background-check-policy/" rel="bookmark" class="u-url"
+       title="Editing a background check policy" target="_blank">
+      <time class="m-date" datetime="2021-11-05 15:25:24+00:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Editing a background check policy
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  We’re implementing a background check policy for some roles at Tidelift, because we see security-critical information from our customers. Our background check provider (who I won’t name, because this isn’t about them) has a template policy that is pretty good! But the rest of their product has a very high standard for UX—their designers generally… <a href="https://lu.is/blog/2021/11/05/editing-a-background-check-policy/">Continue reading <span>Editing a background check policy</span> <span>→</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Luis Villa</b></span>
+  on <time datetime="2021-11-05 15:25:24+00:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://realpython.com/podcasts/rpp/85/" rel="bookmark" class="u-url"
+       title="Real Python: The Real Python Podcast – Episode #85: Exploring Django Templates, Tags, and Filters" target="_blank">
+      <time class="m-date" datetime="2021-11-05 12:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Real Python: The Real Python Podcast – Episode #85: Exploring Django Templates, Tags, and Filters
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Are you getting the most out of the Django framework? It's a powerful web framework if you're not interested in reinventing the wheel. Django includes a useful template system with inheritance for composing reusable HTML. This week on the show, we have previous guest and Real Python author Christopher Trudeau to talk about his recent articles and courses about Django.</p>
+
+        <p><em>[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp; sweet Python Trick delivered to your inbox every couple of days. <a href="https://realpython.com/python-tricks/?utm_source=realpython&amp;utm_medium=rss&amp;utm_campaign=footer">&gt;&gt; Click here to learn more and see examples</a> ]</em></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-05 12:00:00+00:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2021/11/2021-11-05-xfzbs" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2021-11-05 11:02:37+01:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  How many posts have I read now with people buying a new MacBook Pro to use for a very long time? How many of them will buy new devices in two years? 😅
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-05 11:02:37+01:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/11/05/Apollo-federation-2-gaslighting.html" rel="bookmark" class="u-url"
+       title="Breaking down Apollo Federation's anti-FOSS corporate gaslighting" target="_blank">
+      <time class="m-date" datetime="2021-11-05 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Breaking down Apollo Federation's anti-FOSS corporate gaslighting
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Gather around, my friends, for there is another company which thinks we are
+stupid and we enjoy having our faces spat in. <a href="https://www.apollographql.com/blog/announcement/moving-apollo-federation-2-to-the-elastic-license-v2/">Apollo Federation</a><a href="#fn:1">1</a> has
+announced that they will switch to a non-free license. Let&rsquo;s find out just how
+much the Elastic license really is going to &ldquo;protect the community&rdquo; like they
+want you to believe.</p>
+<p>Let&rsquo;s start by asking ourselves, objectively, what practical changes can we
+expect from a switch from the <a href="https://mit-license.org">MIT license</a> to the <a href="https://www.elastic.co/licensing/elastic-license">Elastic
+License</a>? Both licenses are pretty short, so I recommend quickly
+reading them yourself before we move on.</p>
+<p>I&rsquo;ll summarize the difference between these licenses. First, the Elastic license
+offers you (the recipient of the software) one benefit that MIT does not: an
+explicit license for any applicable patents. However, it also has many
+additional restrictions, such as:</p>
+<ul>
+<li>No …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-05 00:00:00+00:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2538/" rel="bookmark" class="u-url"
+       title="Snack" target="_blank">
+      <time class="m-date" datetime="2021-11-05 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          05
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Snack
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Although grad students, suddenly reminded that food exists, tend to just grab and devour both without further discussion." src="https://imgs.xkcd.com/comics/snack.png" title="Although grad students, suddenly reminded that food exists, tend to just grab and devour both without further discussion.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-05 00:00:00+00:00" class="dt-published"></time>
+  Fri 05 Nov 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://blog.kitware.com/kitware-at-the-2021-supercomputing-conference/" rel="bookmark" class="u-url"
        title="Kitware at the 2021 Supercomputing Conference" target="_blank">
       <time class="m-date" datetime="2021-11-04 18:36:59+00:00">
@@ -184,111 +511,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-11-04 18:36:59+00:00" class="dt-published"></time>
   Thu 04 Nov 2021
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://anarc.at/blog/2021-11-04-contextmanager-gotcha/" rel="bookmark" class="u-url"
-       title="Anarcat: A Python contextmanager gotcha" target="_blank">
-      <time class="m-date" datetime="2021-11-04 15:46:12+00:00">
-        Nov
-        <span class="m-date-day">
-          04
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Anarcat: A Python contextmanager gotcha
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Dear lazy web...</p>
-
-<p>I've had this code sitting around as a <code>wtf.py</code> for a while. I've been
-meaning to understand what's going on and write a blog post about it
-for a while, but I'm lacking the time. Now that I have a few minutes,
-I actually sat down to look at it and I think I figured it out:</p>
-
-<div><pre><span>from</span> contextlib <span>import</span> contextmanager
-
-
-<span>&#64;contextmanager</span>
-<span>def</span> <span>bad</span><span>():</span>
-    <span>print</span><span>(</span><span>&amp;aposin the context manager&amp;apos</span><span>)</span>
-    <span>try</span><span>:</span>
-        <span>print</span><span>(</span><span>&quot;yielding value&quot;</span><span>)</span>
-        <span>yield</span> <span>&amp;aposvalue&amp;apos</span>
-    <span>finally</span><span>:</span>
-        <span>return print</span><span>(</span><span>&amp;aposcleaning up&amp;apos</span><span>)</span>
-
-
-<span>&#64;contextmanager</span>
-<span>def</span> <span>good</span><span>():</span>
-    <span>print</span><span>(</span><span>&amp;aposin the context manager&amp;apos</span><span>)</span>
-    <span>try</span><span>:</span>
-        <span>print</span><span>(</span><span>&quot;yielding value&quot;</span><span>)</span>
-        <span>yield</span> <span>&amp;aposvalue&amp;apos</span>
-    <span>finally</span><span>:</span>
-        <span>print</span><span>(</span><span>&amp;aposcleaning up&amp;apos</span><span>)</span>
-
-
-with <span>bad</span><span>()</span> <span>as</span> v<span>:</span>
-    <span>print</span><span>(</span><span>&amp;aposgot v =</span> <span>%s</span><span>&amp;apos</span> <span>%</span> v<span>)</span>
-    <span>raise</span> <span>Exception</span><span>(</span><span>&amp;aposexception not raised!&amp;apos</span><span>)</span>  <span># SILENCED!</span>
-
-<span>print</span><span>(</span><span>&quot;this code is reached&quot;</span><span>)</span>
-with <span>good</span><span>()</span> <span>as</span> v<span>:</span>
-    <span>print</span><span>(</span><span>&amp;aposgot v =</span> <span>%s</span><span>&amp;apos</span> <span>%</span> v …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-04 15:46:12+00:00" class="dt-published"></time>
-  Thu 04 Nov 2021
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.qt.io/blog/qt-creator-5.0.3-released?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Qt Creator 5.0.3 released" target="_blank">
-      <time class="m-date" datetime="2021-11-04 11:41:52+00:00">
-        Nov
-        <span class="m-date-day">
-          04
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Qt Creator 5.0.3 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We are happy to announce the release of Qt Creator 5.0.3!</p>  
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-5.0.3-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2021-11-04 11:41:52+00:00" class="dt-published"></time>
-  Thu 04 Nov 2021
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -345,74 +567,6 @@ mine doesn&rsquo;t seem to do so in any obvious way.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2021/11/github-copilot" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2021-11-04 08:07:11+01:00">
-        Nov
-        <span class="m-date-day">
-          04
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I’m a bit skeptical about GitHub Copilot, but now that I’ve really tried it out for the first time, I’m amazed by its capabilities. Copilot doesn’t replace programming, but it does take a lot of the work out of it. What works well, for example, is the completion of comments in the code.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-04 08:07:11+01:00" class="dt-published"></time>
-  Thu 04 Nov 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2021-11-03_Why_talk%3F" rel="bookmark" class="u-url"
-       title="Why talk?" target="_blank">
-      <time class="m-date" datetime="2021-11-03 19:01:42+00:00">
-        Nov
-        <span class="m-date-day">
-          03
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Why talk?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><blockquote><p>In winter, the sun goes down early. I look up from my laptop and it’s dark. I’ve put on my jacket and watered the plants on the balcony, mixed up a cup or two of urid daal, a table spoon of tahina, a glove of garlic, lots of olive oil, salt and pepper for later, made some tea, and settled down with my other laptop, on the red sofa…</p></blockquote><p> Yesterday, I finished listening to a fascinating podcast episode about Iris Murdoch on In Our Time. Also, strange to be listening to people talking about people who write instead of reading their works directly. A few years ago, I might have ordered a book. These days I already know that I have the time to listen to podcasts – but to whole books, nor time to read them. How different …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-03 19:01:42+00:00" class="dt-published"></time>
-  Wed 03 Nov 2021
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://snarky.ca/unravelling-decorators/" rel="bookmark" class="u-url"
        title="Unravelling decorators" target="_blank">
       <time class="m-date" datetime="2021-11-03 01:36:41+00:00">
@@ -449,8 +603,8 @@ def func():
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2537/" rel="bookmark" class="u-url"
-       title="Painbow Award" target="_blank">
+    <a href="www.conda-forge.org/blog/posts/2021-11-03-tensorflow-gpu/" rel="bookmark" class="u-url"
+       title="GPU enabled TensorFlow builds on conda-forge" target="_blank">
       <time class="m-date" datetime="2021-11-03 00:00:00+00:00">
         Nov
         <span class="m-date-day">
@@ -459,22 +613,22 @@ def func():
         2021
       </time>
       <div class="p-name">
-      Painbow Award
+      GPU enabled TensorFlow builds on conda-forge
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="This year, our team took home the dark blue ribbon, better than the midnight blue we got last year but still short of the winning navy blue." src="https://imgs.xkcd.com/comics/painbow_award.png" title="This year, our team took home the dark blue ribbon, better than the midnight blue we got last year but still short of the winning navy blue.">
+  <p>Recently we’ve been able to add GPU-enabled TensorFlow builds to conda-forge! This was quite a journey, with multiple contributors trying different ways to convince the Bazel-based build system of TensorFlow to build CUDA-enabled packages. But we managed, <a href="https://github.com/conda-forge/tensorflow-feedstock/pull/157">and the pull request got merged</a>.</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
+  <span class="p-author"><b>Wolf Vollprecht</b></span>
   on <time datetime="2021-11-03 00:00:00+00:00" class="dt-published"></time>
   Wed 03 Nov 2021
-  in xkcd.com.
+  in conda-forge blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -509,40 +663,6 @@ def func():
   on <time datetime="2021-11-02 14:24:00.001000-04:00" class="dt-published"></time>
   Tue 02 Nov 2021
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/christopherdavis/2021/11/02/announcing-solanum/" rel="bookmark" class="u-url"
-       title="Announcing Solanum" target="_blank">
-      <time class="m-date" datetime="2021-11-02 00:16:59+00:00">
-        Nov
-        <span class="m-date-day">
-          02
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Announcing Solanum
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  A little while ago I released version 3.0.0 of my app Solanum. When doing the release, I realized something: I never announced the app here. Woops. So, here is the announcement. Solanum is an app that lets you work in timed sessions with regular breaks, based on the Pomodoro Technique. By default work sessions are … <p><a href="https://blogs.gnome.org/christopherdavis/2021/11/02/announcing-solanum/">Continue reading<span> "Announcing Solanum"</span></a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Chris Davis</b></span>
-  on <time datetime="2021-11-02 00:16:59+00:00" class="dt-published"></time>
-  Tue 02 Nov 2021
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -919,52 +1039,6 @@ The quoting in the example below is necessary to get CMake handling the flags co
   on <time datetime="2021-10-28 00:00:00+00:00" class="dt-published"></time>
   Thu 28 Oct 2021
   in Wizard Zines.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/10/26/stalebot.html" rel="bookmark" class="u-url"
-       title="GitHub stale bot considered harmful" target="_blank">
-      <time class="m-date" datetime="2021-10-26 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          26
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      GitHub stale bot considered harmful
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Disclaimer: I work for a GitHub competitor.</p>
-<p>One of GitHub&rsquo;s &ldquo;recommended&rdquo; marketplace features is the &ldquo;stale&rdquo; bot. The
-purpose of this bot is to automatically close GitHub issues after a period of
-inactivity, 60 days by default. You have probably encountered it yourself in the
-course of your work.</p>
-<p>This is a terrible, horrible, no good, very bad idea.</p>
-<p><img alt="A screenshot of an interaction with this bot" src="https://l.sr.ht/nNyI.png"></p>
-<p>I&rsquo;m not sure what motivates maintainers to install this on their repository,
-other than the fact that GitHub recommends it to them. Perhaps it&rsquo;s motivated by
-a feeling of shame for having a lot of unanswered issues? If so, this might stem
-from a misunderstanding of the responsibilities a maintainer has to their
-project. You are not obligated to respond to every issue, implement every
-feature request, or fix every bug, or even acknowledge them in any way …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-26 00:00:00+00:00" class="dt-published"></time>
-  Tue 26 Oct 2021
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
