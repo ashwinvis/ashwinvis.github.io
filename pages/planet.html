@@ -157,31 +157,69 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://lukasz.langa.pl/a30a8166-cd99-4818-a3f1-b7bafabe93c4/" rel="bookmark" class="u-url"
-       title="Łukasz Langa: Weekly Report, November 1 - 7" target="_blank">
-      <time class="m-date" datetime="2021-11-06 21:06:46+00:00">
+    <a href="https://itsmycode.com/numpy-argmax-in-python/" rel="bookmark" class="u-url"
+       title="ItsMyCode: numpy.argmax() in Python" target="_blank">
+      <time class="m-date" datetime="2021-11-07 19:03:04+00:00">
         Nov
         <span class="m-date-day">
-          06
+          07
         </span>
         2021
       </time>
       <div class="p-name">
-      Łukasz Langa: Weekly Report, November 1 - 7
+      ItsMyCode: numpy.argmax() in Python
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Python 3.9.8 got released this week! At this point in the 3.9 lifecycle this should be a relatively uneventful release. Instead, it took us a few days of work to get it out of the door. I still managed to squeeze in 51 closed PRs and even organized a meeting between the core developers and Daan Leijen, the author of <a href="https://github.com/microsoft/mimalloc">mimalloc</a>.</p>
+  <p>ItsMyCode |</p>
+
+<p>The&nbsp;<strong>numpy.argmax()&nbsp;</strong>function returns the indices of the maximum values along an axis. In case of multiple occurrences of the maximum values, the indices corresponding to the first occurrence will be returned.</p>
+
+
+
+Syntax
+
+
+
+<pre>numpy.argmax(<em>a</em>,&nbsp;<em>axis=None</em>,&nbsp;<em>out=None</em>)</pre>
+
+
+
+Parameters
+
+
+
+<ul><li><strong>array:&nbsp;</strong>Input array</li><li><strong>axis&nbsp;</strong>[int, optional]<strong>:&nbsp;</strong>By default, the index is into the flattened array, otherwise along the specified axis.</li><li><strong>out&nbsp;</strong>[array optional]<strong>:</strong>&nbsp;If provided, the result will be inserted into this array. It should be of the appropriate shape and dtype.</li></ul>
+
+
+
+Return Value
+
+
+
+<p>An array of indices into the array. It will have the same shape as the array.shape with the dimension along the axis removed.</p>
+
+
+
+Finding the maximum element from a matrix with Python numpy.argmax()
+
+
+
+<pre><code>import numpy as np
+a = np.arange(6).reshape(2,3) + 10
+print(a)
+
+print("The maxiumm count …</code></pre>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-06 21:06:46+00:00" class="dt-published"></time>
-  Sat 06 Nov 2021
+  on <time datetime="2021-11-07 19:03:04+00:00" class="dt-published"></time>
+  Sun 07 Nov 2021
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -191,9 +229,141 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://claudiocambra.com/2021/11/06/kalendar-is-launching-its-beta-kalendar-devlog-21/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Kalendar is out! — Kalendar devlog 21" target="_blank">
-      <time class="m-date" datetime="2021-11-06 16:03:53+00:00">
+    <a href="https://www.hanyoung.uk/blog/polkit-explained/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="PolKit Explained" target="_blank">
+      <time class="m-date" datetime="2021-11-07 14:53:19+00:00">
+        Nov
+        <span class="m-date-day">
+          07
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      PolKit Explained
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Polkit explained What is PolKit PolKit is a standard authorization method for Linux. It usually consists of PolKit daemon, PolKit session agent and the helper program shipped by applications who use PolKit. As an user, you don’t really deal with PolKit itself, normally you interact with PolKit session agent. Like KDE’s PolKit agent:
+You can think it as Gui’s sudo. But it works totally different from sudo. I spent two days to figure what is PolKit, how does it work, and how one can utilize it to write a Gui tool that requires root permission but can’t be started as root itself.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Han Young</b></span>
+  on <time datetime="2021-11-07 14:53:19+00:00" class="dt-published"></time>
+  Sun 07 Nov 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com/blog/202111/github_action_matrix_with_cog.html" rel="bookmark" class="u-url"
+       title="Computing a GitHub Action matrix with cog" target="_blank">
+      <time class="m-date" datetime="2021-11-07 08:11:00-05:00">
+        Nov
+        <span class="m-date-day">
+          07
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Computing a GitHub Action matrix with cog
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I had a complex three-axis GitHub Action matrix, but needed to skip some
+combinations.  I couldn&#8217;t get what I needed with the direct YAML syntax, so I
+used <a href="//nedbatchelder.com/code/cog">Cog</a> to generate the matrix with
+Python.</p><p>The matrix made Python wheels with
+<a href="https://cibuildwheel.readthedocs.io">cibuildwheel</a>, and it worked.
+It had 15 jobs, but they built different numbers of architectures (ubuntu made
+three, windows made two, macos made only one).  This made the overall run take
+longer, and made it harder to dig through logs to see if everything went OK.
+Conceptually, the matrix was three-axis, but expressed as two-axis, with a list
+of architectures for each job:</p><blockquote><pre><span>strategy</span><span>:</span>
+&#xa0;&#xa0;<span>matrix</span><span>:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>os</span><span>:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>ubuntu-latest</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>macos-latest</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>windows-latest</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>cibw_build</span><span>:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>cp36</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>cp37</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>cp38</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>cp39</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>cp310</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>include</span><span>:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>os</span><span>:</span>&#xa0;<span>ubuntu-latest</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>cibw_arch</span><span>:</span>&#xa0;<span>x86_64&#xa0;i686&#xa0;aarch64</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>os</span><span>:</span>&#xa0;<span>windows-latest</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>cibw_arch</span><span>:</span>&#xa0;<span>x86&#xa0;AMD64</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>-</span>&#xa0;<span>os</span><span>:</span>&#xa0;<span>macos-latest</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>cibw_arch</span><span>:</span>&#xa0;<span>x86_64</span>
+</pre></blockquote><p>I wanted to make the architectures a …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2021-11-07 08:11:00-05:00" class="dt-published"></time>
+  Sun 07 Nov 2021
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://shibumi.dev/posts/first-look-into-cosign/" rel="bookmark" class="u-url"
+       title="Keyless signatures for blobs with cosign" target="_blank">
+      <time class="m-date" datetime="2021-11-07 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          07
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Keyless signatures for blobs with cosign
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  While reading the cosign-installer I have stumbled upon these lines in the documentation:
+- name:SigntheimageswithGitHubOIDC**notproductionready**run:cosignsign-oidc-issuerhttps://token.actions.githubusercontent.com${TAGS}env:TAGS:${{steps.docker_meta.outputs.tags}}COSIGN_EXPERIMENTAL:1The shown lines are a step of a Github Action and are still experimental, but very interesting. It allows to sign a docker image via making use of the OpenID Connect standard. OpenID Connect can be summarized as follows: If you login into Github, Github will create a number of tokens. These tokens are then associated with your Github Action and with these tokens you can sign any artifact.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-07 00:00:00+00:00" class="dt-published"></time>
+  Sun 07 Nov 2021
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2021-11-06_How_to_join_Gemini_space" rel="bookmark" class="u-url"
+       title="How to join Gemini space" target="_blank">
+      <time class="m-date" datetime="2021-11-06 20:39:53+00:00">
         Nov
         <span class="m-date-day">
           06
@@ -201,22 +371,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2021
       </time>
       <div class="p-name">
-      Kalendar is out! — Kalendar devlog 21
+      How to join Gemini space
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  That’s right! Kalendar is now on version 0.1, and we have a first release. There’s still a lot we have left to work on before we get to 1.0, but we are getting there! More on this below. We also have a truly titanic changelog for the past two weeks. Some truly big changes and … <p><a href="//claudiocambra.com/2021/11/06/kalendar-is-launching-its-beta-kalendar-devlog-21/">Continue reading<span> "Kalendar is out! — Kalendar devlog 21"</span></a></p>
+  <div><blockquote><p>I’m hungry, and my wife is hungry, but I want to write this page, and my wife is reading about mutations and genomes and what not, so we keep postponing it. It’s now 21:36.</p></blockquote><p> If you’re interested in <a href="https://alexschroeder.ch/wiki?action=tag;id=Gemini" title="Tag">#Gemini</a>, a (small) hypertext world outside the world wide web, there are a few options out there. The Transjovian Capsules is a project I host that works well with Emacs (you know me) and Lagrange (a Gemini client by <a href="https://skyjake.fi/users/jk">@jk</a>).</p><p>Here’s how you would get started:</p><ul><li><a href="https://transjovian.org:1965/phoebe/page/Capsules">Transjovian Capsules</a></li></ul><p>These instructions available on the web, of course, since there needs to be a way to cross over…</p><p>I’m still writing the documentation, so if you get stuck, mail me, and we’ll fix it, together. 🥳🚀🚀</p><p><a href="https://alexschroeder.ch/wiki?action=tag;id=Gemini" title="Tag">#Gemini</a> <a href="https://alexschroeder.ch/wiki?action=tag;id=Emacs" title="Tag">#Emacs</a></p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Claudio Cambra</b></span>
-  on <time datetime="2021-11-06 16:03:53+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-06 20:39:53+00:00" class="dt-published"></time>
   Sat 06 Nov 2021
-  in Planet KDE.
+  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -599,52 +769,6 @@ def func():
   on <time datetime="2021-11-02 14:24:00.001000-04:00" class="dt-published"></time>
   Tue 02 Nov 2021
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202111/coverage_goals.html" rel="bookmark" class="u-url"
-       title="Coverage goals" target="_blank">
-      <time class="m-date" datetime="2021-11-01 19:06:45-04:00">
-        Nov
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Coverage goals
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>There&#8217;s a feature request to add a
-<a href="https://github.com/nedbat/coveragepy/issues/691">per-file
-threshold</a> to coverage.py. I didn&#8217;t add the feature, I wrote a
-proof-of-concept:
-<a href="https://github.com/nedbat/coveragepy/blob/master/lab/goals.py">goals.py</a>.</p><p>Coverage.py has a --fail-under option that will check the total coverage
-percentage, and exit with a failing status if it is too low.  This lets people
-set a goal, and then check that they are meeting it in their CI systems.</p><p>The feature request is to check each file individually, rather than the
-project as a whole, to exert tighter control over the goal.  That sounds fine,
-but I could see that it would actually be more complicated than that, because
-people sometimes have more complicated goals: 100% coverage in tests and 85% in
-product code, or whatever.</p><p>I
-<a href="https://github.com/nedbat/coveragepy/issues/691#issuecomment-945166307">suggested</a>
-implementing it as a separate tool that used data from a JSON report.  Then …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2021-11-01 19:06:45-04:00" class="dt-published"></time>
-  Mon 01 Nov 2021
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1072,48 +1196,6 @@ The quoting in the example below is necessary to get CMake handling the flags co
   on <time datetime="2021-10-21 11:31:35+00:00" class="dt-published"></time>
   Thu 21 Oct 2021
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://vulns.xyz/2021/10/rebuilderd-v0.15.0/" rel="bookmark" class="u-url"
-       title="Release: rebuilderd v0.15.0" target="_blank">
-      <time class="m-date" datetime="2021-10-18 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          18
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Release: rebuilderd v0.15.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://github.com/kpcyrd/rebuilderd/releases/tag/v0.15.0">rebuilderd 0.15.0</a> very recently released, this is a short intro into what it is, how it works and how to build our own integrations!
-
-<a href="https://vulns.xyz/img/Vx35qrG.png"></a>
-
-rebuilderd monitors an index of artifacts and parses it into a datastructure that looks like this. In the most basic case, based on the <code>distro</code> field it’s going to pick the right build script and attempt to generate an artifact identical to the file linked to in <code>url</code>.
-
-<a href="https://vulns.xyz/img/V6r1iXsRTpLp.png"></a>
-
-We’re starting with a script that generates a json. In our case we’ll simply hard-code all values for demonstration purpose. Most of these values can be arbitrary …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-10-18 00:00:00+00:00" class="dt-published"></time>
-  Mon 18 Oct 2021
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
