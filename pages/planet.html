@@ -157,6 +157,143 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://blog.blackquill.cc/porting-tok-to-not-linux-the-journey-of-incessant-failure?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Porting Tok To Not Linux: The Journey Of Incessant Failure" target="_blank">
+      <time class="m-date" datetime="2021-11-21 19:32:01+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Porting Tok To Not Linux: The Journey Of Incessant Failure
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This response from a reader pretty much sums it up:
+<img src="//img.blackquill.cc/Screenshot%202021-11-21%20at%2014-40-47%20Discord%20-%20A%20New%20Way%20to%20Chat%20with%20Friends%20Communities.png"></p>
+
+Stop One: Will Craft Work?
+
+<p>Craft seems like the no-brainer for a KDE project to use, considering it's in-house and supports all of KDE's frameworks and has packaging capabilities. Unfortunately, what sounds good on paper does not translate to what's good in execution.</p>
+
+<p>When I first checked it out, the current version being shipped had incorrect code that would have failed to compile had it been a compiled language instead of Python. Heck, even running a typechecker for Python would have revealed the fact that the code was trying to call a function that didn't exist. Yet, this managed to get shipped. Not a good first impression.</p>
+
+<p>After manually patching in the function into existence on my system, I ran into another hurdle: Craft's env script is broken; mangling PATH …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Janet Blackquill</b></span>
+  on <time datetime="2021-11-21 19:32:01+00:00" class="dt-published"></time>
+  Sun 21 Nov 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://anarc.at/blog/2021-11-21-mbsync-vs-offlineimap/" rel="bookmark" class="u-url"
+       title="Anarcat: mbsync vs OfflineIMAP" target="_blank">
+      <time class="m-date" datetime="2021-11-21 16:04:18+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Anarcat: mbsync vs OfflineIMAP
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>After recovering from my <a href="https://anarc.at/blog/2021-11-21-one-last-smd-crash/">latest email
+crash</a>
+(<a href="https://anarc.at/blog/2021-06-29-another-mail-crash/">previously</a>,
+<a href="https://anarc.at/blog/2021-03-22-email-crash/">previously</a>), I had to figure out
+which tool I should be using. I had many options but I figured I would
+start with a popular one (<code>mbsync</code>).</p>
+
+<p>But I also evaluated OfflineIMAP which was resurrected from the Python
+2 apocalypse, and because I had used it before, for a long time.</p>
+
+<p>Read on for the details.</p>
+
+Benchmark setup
+
+<p>All programs were tested against a Dovecot 1:2.3.13+dfsg1-2 server,
+running Debian bullseye.</p>
+
+<p>The <a href="https://anarc.at/hardware/angela/">client</a> is a Purism 13v4 laptop with a Samsung
+SSD 970 EVO 1TB NVMe drive.</p>
+
+<p>The <a href="https://anarc.at/hardware/server/marcos/">server</a> is a custom build with a AMD
+Ryzen 5 2600 CPU, and a RAID-1 array made of two NVMe drives (Intel
+SSDPEKNW010T8 and WDC WDS100T2B0C).</p>
+
+<p>The mail spool I am testing against has almost 400k messages and takes
+13GB of …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-21 16:04:18+00:00" class="dt-published"></time>
+  Sun 21 Nov 2021
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://shibumi.dev/posts/hetzner-pulumi-intro/" rel="bookmark" class="u-url"
+       title="Hetzner Pulumi Intro" target="_blank">
+      <time class="m-date" datetime="2021-11-21 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          21
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Hetzner Pulumi Intro
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The full configuration for this article can be visited here: https://github.com/shibumi/infra/tree/pulumi-migration
+This weekend I had finally some time to have a longer glimpse on Hetzner and Pulumi. Pulumi sparked my interest for a pretty long time now after reading Engin&rsquo;s blog post about pulumi and Microsoft Azure. I tried Pulumi earlier, but I gave up pretty fast, because it had no Netlify support. The missing Netlify support did not change, but I did not want to invest time in my Terraform configuration, hence I decided to have a look on Pulumi instead.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-11-21 00:00:00+00:00" class="dt-published"></time>
+  Sun 21 Nov 2021
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://blogs.gnome.org/tchx84/2021/11/20/flatseal-1-7-5/" rel="bookmark" class="u-url"
        title="Flatseal 1.7.5" target="_blank">
       <time class="m-date" datetime="2021-11-20 23:05:56+00:00">
@@ -259,40 +396,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://evennia.blogspot.com/2021/11/the-evennia-blog-has-moved-to-evenniacom.html" rel="bookmark" class="u-url"
-       title="Evennia: The Evennia blog has moved to evennia.com!" target="_blank">
-      <time class="m-date" datetime="2021-11-20 15:31:56+00:00">
-        Nov
-        <span class="m-date-day">
-          20
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Evennia: The Evennia blog has moved to evennia.com!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This dev blog has moved! All past and future posts will now be found <a href="https://www.evennia.com/devblog/">here instead</a> on evennia.com. The linked post discusses the move in more detail, including the little custom blog platform I wrote for it.</p><p></p><p>The new blog has a new RSS feed address, so if you follow this blog via RSS, update your feed link (all old entries were migrated as well).</p><p></p><p>The old posts here on blogspot/bloggly will remain but won't be updated anymore.</p><p>Cheers,</p><p>Griatch</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-20 15:31:56+00:00" class="dt-published"></time>
-  Sat 20 Nov 2021
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2021-11-20_Climate_Catastrophe_in_1990" rel="bookmark" class="u-url"
        title="Climate Catastrophe in 1990" target="_blank">
       <time class="m-date" datetime="2021-11-20 15:01:22+00:00">
@@ -319,72 +422,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2021-11-20 15:01:22+00:00" class="dt-published"></time>
   Sat 20 Nov 2021
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pointieststick.com/2021/11/19/this-week-in-kde-most-of-gnome-shell-in-the-overview-effect/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="This week in KDE: most of GNOME shell in the Overview effect" target="_blank">
-      <time class="m-date" datetime="2021-11-20 04:11:17+00:00">
-        Nov
-        <span class="m-date-day">
-          20
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      This week in KDE: most of GNOME shell in the Overview effect
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This week the new KWin Overview effect gained the ability to <a href="//bugs.kde.org/show_bug.cgi?id=445207">shows results from KRunner when you search!</a> This brings it fairly close to feature parity with GNOME’s central Activities Overview feature!</p>
-
-
-
-<div><img alt="" src="//pointieststick.files.wordpress.com/2021/11/overview-with-search-results.png?w=1024">At this rate, we’re about halfway to implementing all of GNOME shell in the Overview effect</div>
-
-
-
-<p>Thanks to Vlad Zahorodnii for this work, which lands in Plasma 5.24!</p>
-
-
-
-Other new Features
-
-
-
-<p>Gwenview <a href="//bugs.kde.org/show_bug.cgi?id=236056">now has “Print Preview” functionality</a>, which as I’m sure you can imagine would be quite useful in an image viewer app (Alexander Volkov, Gwenview 22.04)</p>
-
-
-
-<p>Discover <a href="//bugs.kde.org/show_bug.cgi?id=445226">now prevents you from doing anything that would uninstall Plasma in the process</a>, which is probably not what you were intending to do (Aleix Pol Gonzalez, Plasma 5.24):</p>
-
-
-
-<div><img alt="" src="//pointieststick.files.wordpress.com/2021/11/cant-remove-plasma-1.png?w=1024">Hopefully this is Linus-Sebastian-proof</div>
-
-
-
-Bugfixes &amp; Performance Improvements
-
-
-
-<p>When you print an image in <a href="//invent.kde.org/graphics/gwenview/-/merge_requests/115">Gwenview</a> or <a href="//invent.kde.org/graphics/kolourpaint/-/merge_requests/11">Kolourpaint …</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2021-11-20 04:11:17+00:00" class="dt-published"></time>
-  Sat 20 Nov 2021
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -868,40 +905,6 @@ deserialize it again in a slightly different format …</p></div>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://shibumi.dev/posts/keyless-signatures-with-github-actions/" rel="bookmark" class="u-url"
-       title="Keyless signatures with Github Actions" target="_blank">
-      <time class="m-date" datetime="2021-11-13 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          13
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Keyless signatures with Github Actions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  As Arch Linux package maintainer I heavily rely on a secure upstream and a secure source code distribution process. I have spent days or maybe even weeks discussing with maintainers why I rely on a secure upstream and how important signatures on tags, commits or source tarballs are. Many maintainers have started signing their source tarballs after such a discussion, others mentioned problems with their PGP keys and a minority saw signing their source tarballs as waste of time.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-13 00:00:00+00:00" class="dt-published"></time>
-  Sat 13 Nov 2021
-  in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.davidrevoy.com/article881/aerith" rel="bookmark" class="u-url"
        title="Aerith" target="_blank">
       <time class="m-date" datetime="2021-11-12 17:45:00+01:00">
@@ -1132,88 +1135,6 @@ of architectures for each job:</p><blockquote><pre><span>strategy</span><span>:<
   on <time datetime="2021-11-03 00:00:00+00:00" class="dt-published"></time>
   Wed 03 Nov 2021
   in conda-forge blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fortran-lang.org/newsletter/2021/11/01/Fortran-Newsletter-November-2021/" rel="bookmark" class="u-url"
-       title="Fortran newsletter: November 2021" target="_blank">
-      <time class="m-date" datetime="2021-11-01 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          01
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Fortran newsletter: November 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Welcome to the November 2021 edition of the monthly Fortran newsletter.
-The newsletter comes out at the beginning of every month and details
-Fortran news from the previous month.</p>
-
-<ul></ul>
-
-fortran-lang.org
-
-<p>This month we’ve had several updates to the website:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/345">#345</a>:
-Fix title in learning resources</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/341">#341</a>:
-Add Cantera to package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/329">#329</a>:
-Quantum Information book, WSL GUI, and typos</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/340">#340</a>:
-Minor fixes in Best Practices</li>
-</ul>
-
-Work in progress
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/201">#201</a> (WIP):
-Internationalization for fortran-lang</li>
-</ul>
-
-<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us know</a>
-if you have any suggestions for the website and its content.
-We welcome any new contributors to the website and the tutorials page in particular - see the
-<a href="https://github.com/fortran-lang/fortran-lang.org/blob/master/CONTRIBUTING.md">contributor guide</a>
-for how to get started.</p>
-
-Fortran Standard Library
-
-<p>Here’s what’s new in stdlib:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/stdlib/releases/tag/v0.1.0">0.1.0</a>:
-Initial version of the Fortran standard library</li>
-  <li><a href="https://github.com/fortran-lang/stdlib/pull/543">#543</a>:
-Fix string concat</li>
-</ul>
-
-Work in progress
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/stdlib/pull/554">#554 …</a></li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-11-01 00:00:00+00:00" class="dt-published"></time>
-  Mon 01 Nov 2021
-  in Fortran Newsletter.
 </footer>
 <div class="m-clearfix-l"></div>
 
