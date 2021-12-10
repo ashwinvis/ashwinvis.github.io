@@ -157,9 +157,193 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://hansdegoede.livejournal.com/25948.html" rel="bookmark" class="u-url"
+       title="PSA: The 5.17 kernel will require some initrd generator changes for kms drivers" target="_blank">
+      <time class="m-date" datetime="2021-12-09 21:42:42+00:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      PSA: The 5.17 kernel will require some initrd generator changes for kms drivers
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Starting with kernel 5.17 the kernel supports the builtin privacy screens built into the LCD panel of some new laptop models.This means that the drm drivers will now return -EPROBE_DEFER from their probe() method on models with a builtin privacy screen when the privacy screen provider driver has not been loaded yet.To avoid any regressions distors should modify their initrd generation tools to include privacy screen provider drivers in the initrd (at least on systems with a privacy screen), before 5.17 kernels start showing up in their repos.If this change is not made, then users using a graphical bootsplash (plymouth) will get an extra boot-delay of up to 8 seconds (DeviceTimeout in plymouthd.defaults) before plymouth will show and when using disk-encryption where the LUKS password is requested from the initrd, the system will fallback …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-09 21:42:42+00:00" class="dt-published"></time>
+  Thu 09 Dec 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://devblogs.microsoft.com/python/python-in-visual-studio-code-december-2021-release/" rel="bookmark" class="u-url"
+       title="Python Engineering at Microsoft: Python in Visual Studio Code – December 2021 Release" target="_blank">
+      <time class="m-date" datetime="2021-12-09 21:30:10+00:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Python Engineering at Microsoft: Python in Visual Studio Code – December 2021 Release
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>We are pleased to announce that the December 2021 release of the Python Extension for Visual Studio Code is now available. You can <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">download the Python extension</a> from the Marketplace, or install it directly from the extension gallery in Visual Studio Code. If you already have the Python extension installed, you can also get the latest update by restarting Visual Studio Code. You can learn more about <a href="https://code.visualstudio.com/docs/python/python-tutorial">Python support in Visual Studio Code</a> in the documentation.</p>
+<p>This announcement includes:</p>
+<ul>
+<li>Module rename refactoring with change preview, via Pylance</li>
+<li>A rich editing experience when working with virtual or untrusted workspaces</li>
+<li>An update regarding debugging with Python 2.7</li>
+<li>A community highlight: Don Jayamanne’s new Python environment management extension</li>
+</ul>
+<p>If you’re interested, you can check the full list of improvements included in this release in our <a href="https://github.com/Microsoft/vscode-python/blob/master/CHANGELOG.md">changelog</a>.</p>
+Module rename with change …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-09 21:30:10+00:00" class="dt-published"></time>
+  Thu 09 Dec 2021
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2021/12/09/practical-visionary/" rel="bookmark" class="u-url"
+       title="Pluralistic: 09 Dec 2021" target="_blank">
+      <time class="m-date" datetime="2021-12-09 21:15:38+00:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Pluralistic: 09 Dec 2021
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Electrify: Saul Griffith's visionary, practical program for a US clean energy transition. This day in history: 2011, 2016 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Electrify (permalink) In Electrify, the MacArthur prizewinning engineer Saul Griffith offers a detailed, optimistic and urgent roadmap for a climate-respecting energy transition that we can actually accomplish in 10-15 years. There are a lot of popular science books out there, but the world really needs more popular engineering books &#8211; books that set out the technical parameters of our problems and the various proposed solutions, sorting the likely from the plausible to the foolish, and laying out a practical range of plans to accomplish the best of them. The first book like this I ever read was David McKay's superb 2009 "Sustainable Energy Without the Hot Air," a life-changing book …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2021-12-09 21:15:38+00:00" class="dt-published"></time>
+  Thu 09 Dec 2021
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pyfound.blogspot.com/2021/12/pypi-user-feedback-summary.html" rel="bookmark" class="u-url"
+       title="PyPI User Feedback Summary" target="_blank">
+      <time class="m-date" datetime="2021-12-09 11:49:00.003000-05:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      PyPI User Feedback Summary
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div></div><div><span><span>The PSF conducted a series of three surveys to identify key user requirements that have not been addressed so far.&nbsp;We used this round of surveys to engage with the PyPI community and understand ways to support community needs better. This post summarizes the feedback we have received and key decisions we have made based on the feedback.</span></span></div><span></span><span><span>Purpose of the surveys</span></span><ul><li><p><span><span>Identify one feature or group of features that would be most useful for users who are part of a corporate or community project</span></span></p></li><li><p><span><span>Identify features that can offered to companies on a subscription basis, and community projects at no cost</span></span></p></li></ul><div><span></span><span></span></div><p><span><span>First Survey</span></span></p><div><span></span><span></span></div><p><span><span>The </span><a href="https://docs.google.com/forms/d/e/1FAIpQLScBMtuf6kIQo6OVPmKPgCA3MPFhtrX1UvqrlZA3fAvbvPU7Hg/viewform"><span>first survey</span></a><span> was a general survey where PyPI users were invited to submit features they would like PyPI to offer. This survey was targeted at users who used PyPI as a team in their corporate …</span></span></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>smm (noreply@blogger.com)</b></span>
+  on <time datetime="2021-12-09 11:49:00.003000-05:00" class="dt-published"></time>
+  Thu 09 Dec 2021
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://tube.kockatoo.org/w/djqwKiVYvSx1GXZYFatqA6?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE News: What's Up With KDE, And How Was It Implemented!" target="_blank">
+      <time class="m-date" datetime="2021-12-09 11:36:58+00:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      KDE News: What's Up With KDE, And How Was It Implemented!
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  💸💸 Help me contribute to KDE and do these videos: 💸💸
+Patreon: https://www.patreon.com/niccolove
+Youtube: https://www.youtube.com/channel/UCONH73CdRXUjlh3-DdLGCPw/join
+Paypal: https://paypal.me/niccolove
+Stay in the loop: https://t.me/veggeroblog
+My website is https://niccolo.venerandi.com and if you want to contact me, my telegram handle is [at] veggero.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Niccolò Venerandi Video</b></span>
+  on <time datetime="2021-12-09 11:36:58+00:00" class="dt-published"></time>
+  Thu 09 Dec 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pythoninsider.blogspot.com/2021/12/python-3110a3-is-available.html" rel="bookmark" class="u-url"
        title="Python 3.11.0a3 is available" target="_blank">
-      <time class="m-date" datetime="2021-12-08 18:54:00.002000-05:00">
+      <time class="m-date" datetime="2021-12-08 18:54:00.003000-05:00">
         Dec
         <span class="m-date-day">
           08
@@ -173,14 +357,14 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p><span>You can tell that we are slowly getting closer to the first beta as the number of release blockers that we need to fix on every release starts to increase</span><span>&nbsp;</span><img alt=":sweat_smile:" src="https://emoji.discourse-cdn.com/apple/sweat_smile.png?v=10" title=":sweat_smile:">&nbsp;<span>But we did it!&nbsp;</span></p><div><a href="https://www.python.org/downloads/release/python-3110a3/"><span>https://www.python.org/downloads/release/python-3110a1/</span></a></div><div></div><div><span>Major new features of the 3.11 series, compared to 3.10</span><p><span><span>Among the new major new features and changes so far:</span><span></span></span></p><ul><li><span><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657</a>&nbsp;– Include Fine-Grained Error Locations in Tracebacks</span></li><li><span><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654</a>&nbsp;– PEP 654 – Exception Groups and except*</span></li><li><span>The&nbsp;<a href="https://github.com/faster-cpython">Faster Cpython Project</a><span>&nbsp;is already yielding some exciting results: this version of CPython 3.11</span></span></li><li><span>(Hey,&nbsp;<span>fellow core developer,</span>&nbsp;if a feature you find important is missing from this list,&nbsp;<a href="mailto:pablogsal@python.org">let Pablo know</a>.)</span></li></ul><div><p><span>The next pre-release of Python 3.11 will be 3.11.0a3, currently scheduled for 2022-01-03.</span></p></div><span>More resources</span><ul><li><a href="https://docs.python.org/3.10/">Online Documentation</a></li></ul><ul><li><a href="https://www.python.org/dev/peps/pep-0664/">PEP 664</a>, 3.11 Release Schedule</li><li><span>Report …</span></li></ul></div>
+  <p><span>You can tell that we are slowly getting closer to the first beta as the number of release blockers that we need to fix on every release starts to increase</span><span>&nbsp;</span><img alt=":sweat_smile:" src="https://emoji.discourse-cdn.com/apple/sweat_smile.png?v=10" title=":sweat_smile:">&nbsp;<span>But we did it!&nbsp;</span></p><div><a href="https://www.python.org/downloads/release/python-3110a3/"><span>https://www.python.org/downloads/release/python-3110a1/</span></a></div><div></div><div><span>Major new features of the 3.11 series, compared to 3.10</span><p><span><span>Among the new major new features and changes so far:</span><span></span></span></p><ul><li><span><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657</a>&nbsp;– Include Fine-Grained Error Locations in Tracebacks</span></li><li><span><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654</a>&nbsp;– PEP 654 – Exception Groups and except*</span></li><li></li><li><span>The <a href="https://github.com/faster-cpython">Faster Cpython Project</a> is already yielding some exciting results: this version of CPython 3.11 is ~19% faster on the geometric mean of the <a href="http://speed.python.org">performance benchmarks</a>, compared to 3.10.0.</span></li><span><span>(Hey,&nbsp;</span></span><span>fellow core developer,</span><span>&nbsp;if a feature you find important is missing from this list,&nbsp;</span><a href="mailto:pablogsal@python.org">let Pablo know</a><span>.)</span></ul><div><p><span>The next pre-release of Python 3.11 will be 3.11 …</span></p></div></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Pablo Galindo (noreply@blogger.com)</b></span>
-  on <time datetime="2021-12-08 18:54:00.002000-05:00" class="dt-published"></time>
+  on <time datetime="2021-12-08 18:54:00.003000-05:00" class="dt-published"></time>
   Wed 08 Dec 2021
   in Python Insider.
 </footer>
@@ -259,120 +443,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/shell-dev/2021/12/08/an-eventful-instant/" rel="bookmark" class="u-url"
-       title="An Eventful Instant" target="_blank">
-      <time class="m-date" datetime="2021-12-08 17:48:22+00:00">
-        Dec
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      An Eventful Instant
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Artist, gamers, rejoice! GNOME Shell 42 will let applications handle input events at the full input device rate. It’s a long story Traditionally, GNOME Shell has been compressing pointer motion events so its handling is synchronized to the monitor refresh rate, this means applications would typically see approximately 60 events per second (or 144 if … <p><a href="https://blogs.gnome.org/shell-dev/2021/12/08/an-eventful-instant/">Continue reading<span> "An Eventful Instant"</span></a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>carlosg</b></span>
-  on <time datetime="2021-12-08 17:48:22+00:00" class="dt-published"></time>
-  Wed 08 Dec 2021
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.pythonforbeginners.com/basics/indexerror-in-python" rel="bookmark" class="u-url"
-       title="Python for Beginners: IndexError in Python" target="_blank">
-      <time class="m-date" datetime="2021-12-08 17:13:26+00:00">
-        Dec
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Python for Beginners: IndexError in Python
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Lists are one of the most used data structures in Python. You might have got the message “<em>IndexError: list index out of range</em>” when your program ran into an error while using lists. In this article, we will discuss how to avoid this error by studying the IndexError in Python.</p>
-
-
-
-What is an IndexError in Python?
-
-
-
-<p>IndexError is an exception in python that occurs when we try to access an element from a list or tuple from an index that is not present in the list. For example, we have a list of 10 elements, the index is in the range 0 to 9. If we try to access an element at index 10 or 11 or more, it will cause the program to raise IndexError with the message “<em>IndexError: list index out of range</em>”&nbsp; as follows.</p>
-
-
-
-<pre><code>myList = &#91;1, 2 …</code></pre>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-08 17:13:26+00:00" class="dt-published"></time>
-  Wed 08 Dec 2021
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2021/12/08/required-ish-reading/" rel="bookmark" class="u-url"
-       title="Pluralistic: 08 Dec 2021" target="_blank">
-      <time class="m-date" datetime="2021-12-08 16:15:37+00:00">
-        Dec
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Pluralistic: 08 Dec 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links All the books I reviewed in 2021: Plus one I published! Broken Promises: The Writers Guild of America West makes the case for media un-consolidation. How elite hobbies let billionaires pay no tax: More from Propublica's IRS Leaks. This day in history: 2011, 2016, 2020 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading All the books I reviewed in 2021 (permalink) This is more-or-less my last blogging day of 2021 (I may sneak a post or two in before the New Year, but I might not), so it's time for my annual roundup of my book reviews from the year gone by. I've sorted this year's books by genre (sf/f, other novels, graphic novels, YA, nonfic) and summarized the reviews with links to the full review. Here's last year's installment: https://pluralistic.net/2020 …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2021-12-08 16:15:37+00:00" class="dt-published"></time>
-  Wed 08 Dec 2021
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.davidrevoy.com/article883/krita-4-splash-screen" rel="bookmark" class="u-url"
        title="Krita 4 splash screen" target="_blank">
       <time class="m-date" datetime="2021-12-08 14:12:00+01:00">
@@ -416,45 +486,6 @@ What is an IndexError in Python?
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tube.kockatoo.org/w/qPV7j5x5qfJBWtwvbuhPZu?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Make Your Own KDE Colorscheme: How To!" target="_blank">
-      <time class="m-date" datetime="2021-12-08 10:53:30+00:00">
-        Dec
-        <span class="m-date-day">
-          08
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Make Your Own KDE Colorscheme: How To!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  💸💸 Help me contribute to KDE and do these videos: 💸💸
-Patreon: https://www.patreon.com/niccolove
-Youtube: https://www.youtube.com/channel/UCONH73CdRXUjlh3-DdLGCPw/join
-Paypal: https://paypal.me/niccolove
-Stay in the loop: https://t.me/veggeroblog
-My website is https://niccolo.venerandi.com and if you want to contact me, my telegram handle is [at] veggero.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Niccolò Venerandi Video</b></span>
-  on <time datetime="2021-12-08 10:53:30+00:00" class="dt-published"></time>
-  Wed 08 Dec 2021
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://blog.kitware.com/supporting-tomorrows-data-storage-systems-in-vtk-paraview/" rel="bookmark" class="u-url"
        title="Supporting tomorrow’s data storage systems in VTK / ParaView" target="_blank">
       <time class="m-date" datetime="2021-12-08 08:51:30+00:00">
@@ -490,32 +521,32 @@ My website is https://niccolo.venerandi.com and if you want to contact me, my te
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pyfound.blogspot.com/2021/12/a-message-from-psfs-outgoing-executive.html" rel="bookmark" class="u-url"
-       title="A message from the PSF's outgoing Executive Director" target="_blank">
-      <time class="m-date" datetime="2021-12-07 10:00:00.001000-05:00">
+    <a href="https://xkcd.com/2552/" rel="bookmark" class="u-url"
+       title="The Last Molecule" target="_blank">
+      <time class="m-date" datetime="2021-12-08 00:00:00+00:00">
         Dec
         <span class="m-date-day">
-          07
+          08
         </span>
         2021
       </time>
       <div class="p-name">
-      A message from the PSF's outgoing Executive Director
+      The Last Molecule
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><span>Today is my last day at the PSF. It's been an honor and a pleasure serving the Python community for over a decade.&nbsp;</span></p><p><span>It's a very bittersweet feeling for me. Although I recognized that I needed change, this community has always been much more than just a job. I like to say that I helped the PSF grow to what it is today, and in turn, the PSF certainly has helped me grow into who I am today.&nbsp;</span></p><p><span>I've met people from our community who have forever impacted my life professionally and personally. I've contributed to what has grown to be the most popular programming language on the planet. I've led a small non-profit to financial sustainability. We've been through a few crises that nearly spelled the end of our foundation, including this ongoing pandemic. I've gotten a chance to …</span></p>
+  <img alt="Biology is really struggling; they're barely at 93% and they keep finding more ants." src="https://imgs.xkcd.com/comics/the_last_molecule.png" title="Biology is really struggling; they're barely at 93% and they keep finding more ants.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Unknown (noreply@blogger.com)</b></span>
-  on <time datetime="2021-12-07 10:00:00.001000-05:00" class="dt-published"></time>
-  Tue 07 Dec 2021
-  in Python Software Foundation News.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-08 00:00:00+00:00" class="dt-published"></time>
+  Wed 08 Dec 2021
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -562,40 +593,6 @@ in the first place?</p>
   on <time datetime="2021-12-06 09:44:31+00:00" class="dt-published"></time>
   Mon 06 Dec 2021
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2551/" rel="bookmark" class="u-url"
-       title="Debunking" target="_blank">
-      <time class="m-date" datetime="2021-12-06 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          06
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Debunking
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Mark Zuckerberg has only neutral feelings toward Peppa Pig, who he understands is a fictional character, and he blames the coronavirus pandemic on other factors." src="https://imgs.xkcd.com/comics/debunking.png" title="Mark Zuckerberg has only neutral feelings toward Peppa Pig, who he understands is a fictional character, and he blames the coronavirus pandemic on other factors.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-06 00:00:00+00:00" class="dt-published"></time>
-  Mon 06 Dec 2021
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -986,40 +983,6 @@ from mpl_toolkits.
   on <time datetime="2021-11-19 08:46:00-08:00" class="dt-published"></time>
   Fri 19 Nov 2021
   in Matplotblog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://hynek.me/articles/ditch-codecov-python/" rel="bookmark" class="u-url"
-       title="How to Ditch Codecov for Python Projects" target="_blank">
-      <time class="m-date" datetime="2021-11-18 08:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          18
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      How to Ditch Codecov for Python Projects
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><em>Codecov</em>&rsquo;s unreliability breaking CI on my open source projects has been a constant source of frustration for me for years. I have found a way to enforce coverage over a whole <em>GitHub Actions</em> build matrix that doesn&rsquo;t rely on third-party services.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
-  on <time datetime="2021-11-18 08:00:00+00:00" class="dt-published"></time>
-  Thu 18 Nov 2021
-  in Hynek Schlawak.
 </footer>
 <div class="m-clearfix-l"></div>
 
