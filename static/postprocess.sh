@@ -5,5 +5,4 @@
   custom.css \
   landing.css \
   print.css \
-  webmention.css \
   -o custom.compiled.css

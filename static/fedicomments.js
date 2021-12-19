@@ -33,22 +33,32 @@ loadComment.addEventListener('click', function () {
             reply.account.display_name = reply.account.display_name.replace(`:${emoji.shortcode}:`,
                 `<img src="${escapeHtml(emoji.static_url)}" alt="Emoji ${emoji.shortcode}" height="20" width="20" />`)
           })
+          let fediCommentContent
+          if (reply.spoiler_text === '') {
+            fediCommentContent = reply.content
+          } else {
+            fediCommentContent =
+                 `<details><summary><span id="fedicomment-cw">CW: ${escapeHtml(reply.spoiler_text)}</span></summary>
+                    ${reply.content}
+                 </details>`
+          }
           const mastodonComment =
-              `<div class="fedicomments">
+              `<div class="fedicomment">
                  <div class="avatar">
                    <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
-                 </div>
-                 <div class="content">
-                   <div class="author">
+                   <span class="author">
                      <a href="${reply.account.url}" rel="nofollow">
-                       <span>${reply.account.display_name}</span>
-                       <span class="disabled">${escapeHtml(reply.account.acct)}</span>
+                       <span title="${escapeHtml(reply.account.acct)}">
+                        ${reply.account.display_name}
+                       </span>
                      </a>
                      <a class="date" href="${reply.uri}" rel="nofollow">
                        ${reply.created_at.substr(0, 10)}
                      </a>
-                   </div>
-                   <div class="fedicomments-content">${reply.content}</div>
+                   </span>
+                 </div>
+                 <div class="content">
+                   <div class="fedicomment-content">${fediCommentContent}</div>
                  </div>
                </div>`
           fediCommentsList.appendChild(DOMPurify.sanitize(mastodonComment, { RETURN_DOM_FRAGMENT: true }))

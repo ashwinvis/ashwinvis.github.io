@@ -16,7 +16,7 @@
     font-size: medium;
     margin: 0;
     padding: 2px;
-    background: #ccc;
+    background: var(--footer-background-color);
 }
 
 #webmentions .reacts img {
@@ -60,12 +60,12 @@
 }
 
 #webmentions .comments li .text {
-    color: #555;
+    color: var(--article-footer-color);
     font-style: italic;
     text-decoration: none;
 }
 
 #webmentions .comments li .name {
-    color: #111;
+    color: var(--article-footer-color);
 }
 
