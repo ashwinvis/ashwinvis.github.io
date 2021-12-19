@@ -7,7 +7,7 @@
 &lt;/ul&gt;
 &lt;p&gt;I have found a way to integrate comments from Fediverse into the blog. The
 implementation is integrated into my Pelican theme. See 
-&lt;a href="https://codeberg.org/ashwinvis/m.css/commit/8ef74bdc10dfcef770a2be0ea48feb935a7df7e9"&gt;this
+&lt;a href="https://codeberg.org/ashwinvis/m.css/commit/e7df1f4ff9a5f870f2a8973d7571aab64306b587"&gt;this
 commit&lt;/a&gt;.
 Now, I need to find a smart way to automate this workflow -- possibly using the
 command line Toot client.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Ternary operators</title><link href="https://fluid.quest/ternary-operators.html" rel="alternate"></link><published>2021-05-16T12:41:13+02:00</published><updated>2021-05-16T12:41:13+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-05-16:/ternary-operators.html</id><summary type="html">&lt;p&gt;Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python has made a concious choice of promoting readability through its syntax.
