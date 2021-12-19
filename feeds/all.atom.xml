@@ -7,7 +7,7 @@
 &lt;/ul&gt;
 &lt;p&gt;I have found a way to integrate comments from Fediverse into the blog. The
 implementation is integrated into my Pelican theme. See 
-&lt;a href="https://codeberg.org/ashwinvis/m.css/commit/e7df1f4ff9a5f870f2a8973d7571aab64306b587"&gt;this
+&lt;a href="https://codeberg.org/ashwinvis/m.css/commit/d5093d090f3e8458e53f5f4b534f757ffb311d57"&gt;this
 commit&lt;/a&gt;.
 Now, I need to find a smart way to automate this workflow -- possibly using the
 command line Toot client.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Global Climate Strike</title><link href="https://fluid.quest/global-climate-strike-sept-2021.html" rel="alternate"></link><published>2021-09-24T00:00:00+02:00</published><updated>2021-09-24T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-09-24:/global-climate-strike-sept-2021.html</id><summary type="html">&lt;p&gt;
