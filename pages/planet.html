@@ -157,40 +157,129 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://testandcode.com/173" rel="bookmark" class="u-url"
-       title="Test and Code: 173: Why NOT unittest?" target="_blank">
-      <time class="m-date" datetime="2021-12-17 20:00:00+00:00">
+    <a href="https://blog.blackquill.cc/janets-shenanigans?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Janet's Mid-December Shenanigans" target="_blank">
+      <time class="m-date" datetime="2021-12-18 19:33:16+00:00">
         Dec
         <span class="m-date-day">
-          17
+          18
         </span>
         2021
       </time>
       <div class="p-name">
-      Test and Code: 173: Why NOT unittest?
+      Janet's Mid-December Shenanigans
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>In the preface of &quot;Python Testing with pytest&quot; I list some reasons to use pytest, under a section called &quot;why pytest?&quot;. Someone asked me recently, a different but related question &quot;why NOT unittest?&quot;.</p>
+  <a href="//invent.kde.org/cblack/qew-em-el-el-ess-pee">qml-lsp</a>
 
-<p>unittest is an xUnit style framework. For me, xUnit style frameworks are fatally flawed for software testing.</p>
+<p>I worked on fancying up qml-lsp's underlying infrastructure and added some new features. One of the more noticeable things is that attached properties can complete now:</p>
 
-<p>That's what this episode is about, my opinion of </p>
+<p><img alt="screenshot of completing an attached property" src="//img.blackquill.cc/mald%20layout.png"></p>
 
-<ul>
-<li>&quot;Why NOT unittest?&quot;, or more broadly, </li>
-<li>&quot;What are the fatal flaws of xUnit?&quot;</li>
-</ul><p>Sponsored By:</p><ul><li><a href="https://testandcode.com/pycharm">PyCharm Professional</a>: <a href="https://testandcode.com/pycharm">Try PyCharm Pro for 4 months and learn how PyCharm will save you time.</a> Promo Code: TESTANDCODE22</li></ul><p><a href="https://www.patreon.com/testpodcast">Support Test &amp; Code in Python</a></p><p>Links:</p><ul><li><a href="https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/" title="Python Testing with pytest, Second Edition">Python Testing with pytest, Second Edition</a></li><li><a href="https://docs.python.org/3/library/unittest.html" title="unittest docs">unittest docs</a></li><li><a href="https://docs.python.org/3/library/unittest.html#assert-methods" title="unittest assert methods">unittest assert methods</a></li><li><a href="https://en.wikipedia.org/wiki/XUnit" title="xUnit - Wikipedia">xUnit - Wikipedia</a></li></ul>&lt;p&gt;In the preface of &amp;quot;Python Testing with pytest&amp;quot; I list some reasons to use pytest, under a section called &amp;quot;why pytest?&amp;quot;. Someone asked …
+<p>There's also some lints:</p>
+
+<p><img alt="screenshot of linting warning about an unused import" src="//img.blackquill.cc/unused%20import.png"></p>
+
+<p>Currently there's some lints warning against usage of language features that negatively impair readability, (<code>with</code> statements, <code>alias</code>, etc.), warning about using anchors in a Layout, and unused imports.</p>
+
+Shades
+
+<p>Shades is a small utility app I made that lets you grab shades of a colour.</p>
+
+<p><img alt="screenshot of shades" src="//img.blackquill.cc/shades.png"></p>
+
+<p>It uses the OKLAB colour space to generate shades, which means it produces really good variations on a colour that only differ in visual brightness instead of going “off-brand” like other colour spaces would have.</p>
+
+Tok
+
+<p>Yeah, Tok just has the “saved messages” room display as such instead of using your account's name and avatar. Not much, which is why it's getting lumped in …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Janet Blackquill</b></span>
+  on <time datetime="2021-12-18 19:33:16+00:00" class="dt-published"></time>
+  Sat 18 Dec 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://itsmycode.com/python-string-count/" rel="bookmark" class="u-url"
+       title="ItsMyCode: Python String count()" target="_blank">
+      <time class="m-date" datetime="2021-12-18 18:17:11+00:00">
+        Dec
+        <span class="m-date-day">
+          18
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      ItsMyCode: Python String count()
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>ItsMyCode |</p>
+
+<p>Python String&nbsp;<strong>count()</strong>&nbsp;method is a built-in function that returns the number of occurrences of a substring in the given string.</p>
+
+
+
+count() Syntax
+
+
+
+<p>The syntax of <strong><code>count()</code></strong> method is:</p>
+
+
+
+<pre>string.count(substring, start=..., end=...)</pre>
+
+
+
+count() Parameter
+
+
+
+<p>The <strong><code>count()</code></strong> function can take three parameters, of which two are optional.</p>
+
+
+
+<ul><li><strong>substring</strong>&nbsp;&#8211; the string that needs to be searched and get the count.</li><li><strong>start (Optional)</strong>&nbsp;&#8211; The starting index in the string from which the search needs to begin. Default is 0.</li><li><strong>end (Optional)</strong>&nbsp;&#8211; The ending index in the string from which the search ends. Default is the end of the string.</li></ul>
+
+
+
+&nbsp;count() Return Value
+
+
+
+<p>The <strong><code>count()</code></strong> function returns an integer that denotes the number of times the substring occurs in a given string.</p>
+
+
+
+Example 1: Count the number of occurrences of a given substring without optional arguments
+
+
+
+<pre><code>text = "Python is a popular …</code></pre>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-17 20:00:00+00:00" class="dt-published"></time>
-  Fri 17 Dec 2021
+  on <time datetime="2021-12-18 18:17:11+00:00" class="dt-published"></time>
+  Sat 18 Dec 2021
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -200,39 +289,78 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://cullmann.io/posts/farewell-telegram-hello-signal/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Farewell Telegram - Hello Signal!" target="_blank">
-      <time class="m-date" datetime="2021-12-17 18:51:00+00:00">
+    <a href="http://knocte.blogspot.com/2021/12/geewallet-043000-released.html" rel="bookmark" class="u-url"
+       title="geewallet 0.4.300.0 released!" target="_blank">
+      <time class="m-date" datetime="2021-12-18 16:50:00+00:00">
         Dec
         <span class="m-date-day">
-          17
+          18
         </span>
         2021
       </time>
       <div class="p-name">
-      Farewell Telegram - Hello Signal!
+      geewallet 0.4.300.0 released!
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>In the last few years I started to use Telegram as my main messenger, beside good old SMS/e-mail.</p>
-<p>I never used WhatsApp as I try to stay away from the Facebook/Meta/… ecosystem.</p>
-<p>Telegram seemed like a good choice as a lot of people I know are there and we e.g. mirror our KDE channels often to Telegram for better outreach, too.
-And all old messengers like ICQ more or less were abandoned by everybody I know including myself ;=)</p>
-<p>Unfortunately, during the <a href="//en.wikipedia.org/wiki/COVID-19_pandemic">current pandemic</a>, I met more and more people that went down into the rabbit hole thanks to totally uncontrolled Telegram groups.</p>
-<p>Yes, you can say: this is free speech.</p>
-<p>It is.</p>
-<p>But on the other side, I think it can’t really be tolerated that people start to live in some parallel universe that completely ignores …</p>
+  <p>10th of my 21-day quarantine*! And to celebrate, I'm going to release a new version of <a href="https://gitlab.com/nblockchain/geewallet">geewallet</a>. It's not that I blog about geewallet releases often (or blog at all, lately), but this one is a special one for me. We decided to call it <strong>0.4.300.0</strong></p><p></p><div><a href="https://lh3.googleusercontent.com/-JPWx7Al3VY0/YbqzELx7_6I/AAAAAAAAIIE/EYaXFz78llQ-9j23SxCxJFhFq4Am5hzYACNcBGAsYHQ/300.jpeg"><img alt="" src="https://lh3.googleusercontent.com/-JPWx7Al3VY0/YbqzELx7_6I/AAAAAAAAIIE/EYaXFz78llQ-9j23SxCxJFhFq4Am5hzYACNcBGAsYHQ/w596-h335/300.jpeg"></a></div><p></p><p>The highlights:</p><p></p><ul><li>We fixed the GTK theme for our <a href="https://snapcraft.io/geewallet">snap</a> package. (Long version of the story: ever since we upgraded our snap generation process to take place in Ubuntu 20.04 instead of Ubuntu 18.04, the theme stopped working so the app was not showing anymore with the default theme of the system, but with the default Gtk theme, which is very <i>plain</i>. Even if you might consider this issue important, we haven't had time to look at it because we've been very busy finishing <a href="https://gitlab.com/nblockchain/geewallet/-/commits/rc/LN-m10/">Lightning support</a>. Sorry.)</li><li>The chart …</li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Christoph Cullmann (cullmann)</b></span>
-  on <time datetime="2021-12-17 18:51:00+00:00" class="dt-published"></time>
-  Fri 17 Dec 2021
-  in Planet KDE.
+  <span class="p-author"><b>knocte (noreply@blogger.com)</b></span>
+  on <time datetime="2021-12-18 16:50:00+00:00" class="dt-published"></time>
+  Sat 18 Dec 2021
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/12/18/Commercial-forks-of-FOSS-projects.html" rel="bookmark" class="u-url"
+       title="On commercial forks of FOSS projects" target="_blank">
+      <time class="m-date" datetime="2021-12-18 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          18
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      On commercial forks of FOSS projects
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The gaming and live streaming industry is a lucrative and rapidly growing
+commercial sector with a unique understanding of copyright and intellectual
+property, and many parties with conflicting interests and access to different
+economic resources.</p>
+<p>The understanding of intellectual property among gamers and the companies which
+serve them differs substantailly from that of free software, and literacy in the
+values and philosophy of free software among this community is very low. It is
+then of little surprise that we see abuse of free software from this community,
+namely in the recent (and illegal) commercial forks of a popular FOSS streaming
+platform called <a href="https://obsproject.com">OBS Studio</a> by companies like TikTok.</p>
+<p>These forks are in violation of the software license of OBS Studio, which is
+both illegal and unethical. But the &ldquo;why&rdquo; behind this is interesting for a
+number of reasons. For one …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-18 00:00:00+00:00" class="dt-published"></time>
+  Sat 18 Dec 2021
+  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -267,80 +395,6 @@ And all old messengers like ICQ more or less were abandoned by everybody I know 
   on <time datetime="2021-12-17 00:00:00+00:00" class="dt-published"></time>
   Fri 17 Dec 2021
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://thisweek.gnome.org/posts/2021/12/twig-23/" rel="bookmark" class="u-url"
-       title="#23 Modernized Settings" target="_blank">
-      <time class="m-date" datetime="2021-12-17 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          17
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      #23 Modernized Settings
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Update on what happened across the GNOME project in the week from December 10 to December 17.</p>
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#core-apps-and-libraries"></a>Core Apps and Libraries
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#settings"></a>Settings <a href="https://gitlab.gnome.org/GNOME/gnome-control-center"></a>
-<p>Configure various aspects of your GNOME desktop.</p>
-<p><a href="https://matrix.to/#/@feaneron:gnome.org">Georges Stavracas (feaneron)</a> says</p>
-<blockquote>
-<p>This week, the GTK4 / libadwaita port of GNOME Settings landed. This was a massive port, with more than 330 files rewritten or adjusted to GTK4. All but 3 panels were ported - we’ll be porting the remaining panels and their dependencies soon.
-
-<img alt="" src="https://thisweek.gnome.org/posts/2021/12/twig-23/1087c6af75214d1de6c62e70000d312839f7eaeb.png">
-
-
-<img alt="" src="https://thisweek.gnome.org/posts/2021/12/twig-23/8ceafeee336eea011ac5329d5d027cfa411e5544.png">
-
-
-<img alt="" src="https://thisweek.gnome.org/posts/2021/12/twig-23/47bddf5d44285be3d869f98c97cbc88a59bea7f4.png">
-
-
-<img alt="" src="https://thisweek.gnome.org/posts/2021/12/twig-23/ed9efe4e9729481dc90529bc8eac47b9e7e2db3c.png">
-</p>
-</blockquote>
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#libadwaita"></a>Libadwaita <a href="https://gitlab.gnome.org/GNOME/libadwaita"></a>
-<p>Building blocks for modern GNOME apps using GTK4.</p>
-<p><a href="https://matrix.to/#/@alexm:gnome.org">Alexander Mikhaylenko</a> reports</p>
-<blockquote>
-<p>libadwaita finally documents the <a href="https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/style-classes.html">style classes</a> and <a href="https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/named-colors.html">named colors</a> its stylesheet provides</p>
-</blockquote>
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#glib"></a>GLib <a href="https://gitlab.gnome.org/GNOME/glib"></a>
-<p>The low-level core library that forms the basis for projects such as GTK and GNOME.</p>
-<p><a href="https://matrix.to/#/@pwithnall:matrix.org">Philip Withnall</a> says</p>
-<blockquote>
-<p>Michael Catanzaro has <a href="https://gitlab.gnome.org/GNOME/glib/-/merge_requests/1968">fixed a devious bug with FD remapping</a> in <code>g_spawn_*()</code> in GLib, and included full unit tests for a very …</p></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-17 00:00:00+00:00" class="dt-published"></time>
-  Fri 17 Dec 2021
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -601,50 +655,6 @@ a screencast
   on <time datetime="2021-12-15 03:59:07+00:00" class="dt-published"></time>
   Wed 15 Dec 2021
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/12/15/Status-update-December-2021.html" rel="bookmark" class="u-url"
-       title="Status update, December 2021" target="_blank">
-      <time class="m-date" datetime="2021-12-15 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          15
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Status update, December 2021
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Greetings! It has been a cold and wet month here in Amsterdam, much like the
-rest of them, as another period of FOSS progress rolls on by. I have been taking
-it a little bit easier this month, and may continue to take some time off in the
-coming weeks, so I can have a bit of a rest for the holidays. However, I do
-have some progress to report, so let&rsquo;s get to it.</p>
-<p>In programming language progress, we&rsquo;ve continued to see improvement in
-cryptography, with more AES cipher modes and initial work on AES-NI support for
-Intel processors, as well as support for HMAC and blake2b. Improved support for
-linking with C libraries has also landed, which is the basis of a few
-third-party libraries which are starting to appear, such as bindings to <a href="https://github.com/andlabs/libui">libui</a>.
-I …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-15 00:00:00+00:00" class="dt-published"></time>
-  Wed 15 Dec 2021
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
