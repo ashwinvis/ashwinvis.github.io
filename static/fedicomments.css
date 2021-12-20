@@ -1,3 +1,23 @@
+.fedicomment {
+    background-color:var(--footer-background-color);
+    border-radius:0.2rem;
+    padding:0.2rem;
+    margin-bottom: 1rem;
+}
+
+.fedicomment .author {
+    display: flex;
+}
+
+.fedicomment .name {
+     padding-top:0;
+     padding-left:0.2rem;
+}
+
+.fedicomment .date {
+     margin-left:auto;
+}
+
 .fedicomment .avatar img {
     max-height: 1.3em;
     max-width: 1.3em;
@@ -10,35 +30,3 @@
     color: var(--article-footer-color);
 }
 
-/*Carl's*/
-
-/*
-.fedicomment {
- background-color:var(--body-background);
- border-radius:var(--card-border-radius);
- padding:var(--card-padding);
- margin-bottom:1rem;
- display:flex
-}
-.fedicomment .content {
- flex-grow:2
-}
-.fedicomment .avatar img {
- margin-right:1rem;
- min-width:60px
-}
-.fedicomment .author {
- padding-top:0;
- display:flex
-}
-.fedicomment .disabled {
- color:var(--accent-color)
-}
-
-.fedicomment .author .date {
- margin-left:auto
-}
-.fedicomment-content p:first-child {
- margin-top:0
-}
-*/
