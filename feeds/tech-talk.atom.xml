@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/tech-talk.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-05-16T12:41:13+02:00</updated><subtitle></subtitle><entry><title>Ternary operators</title><link href="https://fluid.quest/ternary-operators.html" rel="alternate"></link><published>2021-05-16T12:41:13+02:00</published><updated>2021-05-16T12:41:13+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-05-16:/ternary-operators.html</id><summary type="html">&lt;p&gt;Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python has made a concious choice of promoting readability through its syntax.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/tech-talk.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-12-19T15:30:21+01:00</updated><subtitle></subtitle><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/"&gt;https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.xmgz.eu/jekyll-mastodon-comment/"&gt;https://blog.xmgz.eu/jekyll-mastodon-comment/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fossacademic.tech/2021/12/16/CommentsTest.html"&gt;https://fossacademic.tech/2021/12/16/CommentsTest.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have found a way to integrate comments from Fediverse into the blog. The
+implementation is integrated into my Pelican theme. See 
+&lt;a href="https://codeberg.org/ashwinvis/m.css/commit/d5093d090f3e8458e53f5f4b534f757ffb311d57"&gt;this
+commit&lt;/a&gt;.
+Now, I need to find a smart way to automate this workflow -- possibly using the
+command line Toot client.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Ternary operators</title><link href="https://fluid.quest/ternary-operators.html" rel="alternate"></link><published>2021-05-16T12:41:13+02:00</published><updated>2021-05-16T12:41:13+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-05-16:/ternary-operators.html</id><summary type="html">&lt;p&gt;Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the &lt;strong&gt;conditional expression&lt;/strong&gt; or &lt;strong&gt;ternary if-else
 "operator"&lt;/strong&gt; in Python. What it means is instead of:&lt;/p&gt;
 &lt;div class="m-code"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;even_or_odd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -398,159 +409,4 @@ Fira Code font:&lt;/p&gt;
 &lt;aside class="m-note m-primary"&gt;
 Feel free to copy the &lt;a href="https://raw.githubusercontent.com/ashwinvis/ashwinvis.github.io/develop/content/2020-06-15-ultimate-monospace.rst"&gt;raw-text&lt;/a&gt; and try it out on &lt;a href="https://www.programmingfonts.org/"&gt;programming-fonts&lt;/a&gt;.&lt;/aside&gt;
 &lt;/section&gt;
-</content><category term="Tech Talk"></category><category term="software"></category><category term="typography"></category><category term="ligatures"></category><category term="programming"></category></entry><entry><title>Automate boring writing with Vim</title><link href="https://fluid.quest/automate-boring-writing-with-vim.html" rel="alternate"></link><published>2020-05-29T18:23:23+02:00</published><updated>2020-11-20T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2020-05-29:/automate-boring-writing-with-vim.html</id><summary type="html">&lt;p&gt;Constructing obscure keyboard maps a.k.a. shortcuts in Vim to make repetitive tasks easier&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;Two of my most used markup languages these days are Markdown and
-reStructuredText. For instance, a common operation is two add hyperlinks while
-blogging.  Both languages provide concise syntaxes to make links, but they tend
-to need a lot more keystrokes to get it right. Another pain-point is the need for
-escaping certain special characters while searching and replacing text.&lt;/p&gt;
-&lt;p&gt;Well, not anymore!&lt;/p&gt;
-&lt;section id="requirements"&gt;
-&lt;h2&gt;Requirements&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/tpope/vim-surround"&gt;vim-surround&lt;/a&gt;, &lt;a href="https://github.com/neovim/pynvim"&gt;pynvim&lt;/a&gt; + Neovim / Vim compiled with Python bindings&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="how-it-works"&gt;
-&lt;h2&gt;How it works&lt;/h2&gt;
-&lt;p&gt;Vim can be configured to behave differently based on the state it is in (reading to
-buffer, file type, vim mode etc.). Keyboard shortcuts can be &lt;em&gt;mapped&lt;/em&gt; for such
-scenarios either of these commands &lt;code&gt;map, nmap, imap, vmap, noremap, nnoremap,
-inoremap, vnoremap&lt;/code&gt;.&lt;/p&gt;
-&lt;section id="markdown"&gt;
-&lt;h3&gt;Markdown&lt;/h3&gt;
-&lt;p&gt;The following maps &lt;span class="strike"&gt;Shift+Enter&lt;/span&gt; &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
-&lt;aside class="m-block m-warning"&gt;
-&lt;h3&gt;Warning&lt;/h3&gt;
-&lt;p&gt;Due to a quirk in terminals, it would be difficult to map &lt;code&gt;Shift+Enter&lt;/code&gt; /
-&lt;code&gt;&amp;lt;S-CR&amp;gt;&lt;/code&gt; and &lt;code&gt;Ctrl+Enter&lt;/code&gt; / &lt;code&gt;&amp;lt;C-CR&amp;gt;&lt;/code&gt;.  Mapping &lt;code&gt;Shift-Enter&lt;/code&gt; might
-be possible with some &lt;a href="https://stackoverflow.com/questions/16359878/vim-how-to-map-shift-enter"&gt;extra configuration&lt;/a&gt;
-in your terminal. See also this stackoverflow &lt;a href="https://stackoverflow.com/a/598404"&gt;answer&lt;/a&gt;.&lt;/p&gt;
-&lt;/aside&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: inline-link maker&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;surround with [], find ], append ()&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt; ysiW]&lt;span class="k"&gt;f&lt;/span&gt;]&lt;span class="k"&gt;a&lt;/span&gt;&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;to add an inline link:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
-A sample sentence with a link
-
-&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;after&lt;/span&gt;
-A sample sentence with a [link]()&lt;/pre&gt;
-&lt;p&gt;The following maps &lt;code&gt;Enter&lt;/code&gt; in the normal mode:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: link maker&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;yank inner word, surround with [], find ], append [], paste word, move right&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;mark l, go to end of file, add a line, append [], paste, move right, append:&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; yiWysiW]&lt;span class="k"&gt;f&lt;/span&gt;]&lt;span class="k"&gt;a&lt;/span&gt;[]&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;PlmlGo&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt;[]&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Pla:&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;to add a link with a handle:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
-A sample passage with a link and containing
-a lot of text.
-
-&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;after&lt;/span&gt;
-A sample passage with a [&lt;span class="nt"&gt;link&lt;/span&gt;][&lt;span class="nl"&gt;link&lt;/span&gt;] and containing
-a lot of text.
-[link]:&lt;/pre&gt;
-&lt;p&gt;You can return back to the text by visiting the mark with &lt;code&gt;l&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The following maps &lt;code&gt;h1&lt;/code&gt;, &lt;code&gt;h2&lt;/code&gt;, &lt;code&gt;h3&lt;/code&gt;, &lt;code&gt;h4&lt;/code&gt; to create headings in the
-normal mode:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;Markdown: heading maker&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;mark h, go to beginning of the line, add #/##/###/### , go back to mark h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h1 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;#&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h2 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;##&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h3 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;###&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; markdown&lt;span class="p"&gt;,&lt;/span&gt;pandoc nmap h4 &lt;span class="nb"&gt;mh&lt;/span&gt;^&lt;span class="k"&gt;i&lt;/span&gt;####&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;`&lt;span class="k"&gt;h&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;before&lt;/span&gt;
-A Heading
-
-&lt;span class="k"&gt;&amp;gt; &lt;/span&gt;&lt;span class="ge"&gt;after&lt;/span&gt;
-&lt;span class="gh"&gt;# A Heading&lt;/span&gt;&lt;/pre&gt;
-&lt;/section&gt;
-&lt;section id="restructuredtext"&gt;
-&lt;h3&gt;reStructuredText&lt;/h3&gt;
-&lt;p&gt;The following maps &lt;span class="strike"&gt;Shift+Enter&lt;/span&gt; &lt;code&gt;\a&lt;/code&gt; in the normal mode:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;rST: inline-link maker&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;surround with ``, find `, append __, move left by 2 characters, insert &amp;lt;&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;a&lt;/span&gt; ysiW`&lt;span class="k"&gt;f&lt;/span&gt;`a__&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;hi&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;lt&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;to add an inline link:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="cp"&gt;.. before&lt;/span&gt;
-A sample sentence with a link
-
-&lt;span class="cp"&gt;.. after&lt;/span&gt;
-A sample sentence with a &lt;span class="s"&gt;`link &amp;lt;&amp;gt;`__&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;The following maps &lt;code&gt;Enter&lt;/code&gt; in the normal mode:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;rST: link maker&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;yank inner word, go to end of word, append _, mark l, end of document, add a&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;new line, insert .. _, paste, append:&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; yiWEa_&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;mlGo&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;i&lt;/span&gt;..&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;SPACE&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;_&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;ESC&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;pa&lt;/span&gt;:&lt;/pre&gt;
-&lt;p&gt;to add a link with a handle:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="cp"&gt;.. before&lt;/span&gt;
-A sample passage with a link and containing
-a lot of text.
-
-&lt;span class="cp"&gt;.. after&lt;/span&gt;
-A sample passage with a link_ and containing
-a lot of text.
-&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="nt"&gt;_link:&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;You can return back to the text by visiting the mark with &lt;code&gt;l&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The following maps &lt;code&gt;h1&lt;/code&gt;, &lt;code&gt;h2&lt;/code&gt;, &lt;code&gt;h3&lt;/code&gt;, &lt;code&gt;h4&lt;/code&gt; to create headings in the
-normal mode:&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;&amp;quot;rST: heading maker&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h1 yypVr#
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h2 yypVr&lt;span class="p"&gt;=&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h3 yypVr&lt;span class="p"&gt;-&lt;/span&gt;
-&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;FileType&lt;/span&gt; rst nmap h4 yypVr&lt;span class="p"&gt;~&lt;/span&gt;&lt;/pre&gt;
-&lt;pre class="m-code"&gt;&lt;span class="cp"&gt;.. before&lt;/span&gt;
-A Heading
-
-&lt;span class="cp"&gt;.. after&lt;/span&gt;
-&lt;span class="gh"&gt;A Heading&lt;/span&gt;
-&lt;span class="gh"&gt;#########&lt;/span&gt;&lt;/pre&gt;
-&lt;/section&gt;
-&lt;section id="search-and-replace"&gt;
-&lt;h3&gt;Search and replace&lt;/h3&gt;
-&lt;p&gt;In most editors, you could use &lt;code&gt;Ctrl+f&lt;/code&gt; to search text and &lt;code&gt;Ctrl+r&lt;/code&gt; to
-search and replace text. While searching in Vim is a piece of cake with &lt;code&gt;/&lt;/code&gt;
-key, search and replace is often a bit more painful.&lt;/p&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;quot;{{{ Select (visual mode) and search / replace&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;python3&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;python3&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; endpython3
-import &lt;span class="k"&gt;re&lt;/span&gt;
-import &lt;span class="k"&gt;vim&lt;/span&gt;
-
-&lt;span class="nb"&gt;def&lt;/span&gt; py_regex_escape&lt;span class="p"&gt;(&lt;/span&gt;string&lt;span class="p"&gt;=&lt;/span&gt;None&lt;span class="p"&gt;)&lt;/span&gt;:
-    &lt;span class="k"&gt;h&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; string &lt;span class="k"&gt;if&lt;/span&gt; string &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;vim&lt;/span&gt;.eval&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;@h&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;h&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;re&lt;/span&gt;.escape&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;.replace&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;#39;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; string:
-      print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;else&lt;/span&gt;:
-      &lt;span class="k"&gt;vim&lt;/span&gt;.command&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;let @h=&amp;#39;{}&amp;#39;&amp;quot;&lt;/span&gt;.format&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;h&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-
-endpython3
-
-command&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;nargs&lt;span class="p"&gt;=&lt;/span&gt;? RegexEscape :&lt;span class="k"&gt;py3&lt;/span&gt; py_regex_escape&lt;span class="p"&gt;(&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;f&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;args&lt;span class="p"&gt;&amp;gt;)&lt;/span&gt;
-
-&lt;span class="c"&gt;&amp;quot; http://stackoverflow.com/questions/676600/#676619&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot; Below h is used as a register to yank into&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot; Also search with \v prefix for searching with very magic and&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot; if needed \V prefix with very nomagic. See `:help magic`&lt;/span&gt;
-&lt;span class="nb"&gt;vnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;f&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;quot;hy:RegexEscape&amp;lt;CR&amp;gt;/\v&amp;lt;C-r&amp;gt;h&lt;/span&gt;
-&lt;span class="nb"&gt;vnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;r&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;quot;hy:RegexEscape&amp;lt;CR&amp;gt;:%s/\v&amp;lt;C-r&amp;gt;h//gc&amp;lt;left&amp;gt;&amp;lt;left&amp;gt;&amp;lt;left&amp;gt;&lt;/span&gt;
-&lt;span class="k"&gt;endif&lt;/span&gt;
-&lt;span class="c"&gt;&amp;quot;}}}&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;This powerful mapping would automatically try to do &lt;strong&gt;a Python regular expression
-escape and fill the search or search-and-replace command&lt;/strong&gt; with a sample text
-you selected in visual mode. An obvious caveat is that Python regex and Vim
-regex are not identical. I have found the &lt;em&gt;very-magic&lt;/em&gt; mode to be close to
-Python regex.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="improvements"&gt;
-&lt;h3&gt;Improvements?&lt;/h3&gt;
-&lt;p&gt;Before you say it, I agree these solutions are &lt;em&gt;far from elegant&lt;/em&gt;. Perhaps
-&lt;a href="https://github.com/SirVer/ultisnips"&gt;UltiSnips&lt;/a&gt; can come in handy to create links. Let me know you find it useful or
-you can improve it.&lt;/p&gt;
-&lt;aside class="m-block m-info"&gt;
-&lt;h3&gt;License&lt;/h3&gt;
-&lt;p&gt;The code snippets above can be reused with an &lt;a href="https://www.apache.org/licenses/LICENSE-2.0"&gt;Apache-2.0&lt;/a&gt; license.&lt;/p&gt;
-&lt;/aside&gt;
-&lt;/section&gt;
-&lt;/section&gt;
-</content><category term="Tech Talk"></category><category term="software"></category><category term="markdown"></category><category term="rst"></category><category term="vim"></category><category term="writing"></category></entry></feed>
+</content><category term="Tech Talk"></category><category term="software"></category><category term="typography"></category><category term="ligatures"></category><category term="programming"></category></entry></feed>
