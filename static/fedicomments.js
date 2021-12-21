@@ -44,19 +44,15 @@ loadComment.addEventListener('click', function () {
           }
           const mastodonComment =
               `<div class="fedicomment">
-                 <div class="author">
-                   <span class="avatar">
-                     <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
-                   </span>
-                   <span class="name">
+                 <div class="avatar">
+                   <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
+                   <span class="author">
                      <a href="${reply.account.url}" rel="nofollow">
                        <span title="${escapeHtml(reply.account.acct)}">
                         ${reply.account.display_name}
                        </span>
                      </a>
-                   </span>
-                   <span class="date">
-                     <a href="${reply.uri}" rel="nofollow">
+                     <a class="date" href="${reply.uri}" rel="nofollow">
                        ${reply.created_at.substr(0, 10)}
                      </a>
                    </span>
