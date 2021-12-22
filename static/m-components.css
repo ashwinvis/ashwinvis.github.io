@@ -138,6 +138,10 @@ pre.m-console-wrap {
 code {
   padding: 0.125rem;
 }
+summary {
+  cursor: pointer;
+  color: var(--link-color);
+}
 
 /* Focus outline on link, canvas and input: match the focused header item. */
 *:focus { outline-color: var(--header-link-current-color); }
