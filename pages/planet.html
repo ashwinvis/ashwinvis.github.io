@@ -161,32 +161,89 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://lamarque-lvs.blogspot.com/2021/12/nvidia-optimus-with-wayland-help-needed.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Nvidia optimus with wayland. Help needed." target="_blank">
-      <time class="m-date" datetime="2021-12-25 18:27:00+00:00">
+    <a href="https://itsmycode.com/python-string-isspace/" rel="bookmark" class="u-url"
+       title="ItsMyCode: Python String isspace()" target="_blank">
+      <time class="m-date" datetime="2021-12-26 11:14:28+00:00">
         Dec
         <span class="m-date-day">
-          25
+          26
         </span>
         2021
       </time>
       <div class="p-name">
-      Nvidia optimus with wayland. Help needed.
+      ItsMyCode: Python String isspace()
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <span>I have given a try on wayland and it works in my notebook (Gigabyte p34v5) when using only the Intel gpu (/dev/dri/card0) and mesa. Now I have been trying to make it work with the Nvidia gpu (GeForce GTX 970M, /dev/dri/card1) using proprietary driver. The thing about that gpu is that is uses <a href="//www.nvidia.com/en-us/geforce/technologies/optimus/">optimus</a> and thus need the following command to work with X11:</span><div><span></span></div><span># /usr/share/sddm/scripts/Xsetup filexrandr --setprovideroutputsource modesetting NVIDIA-0</span><div><span></span></div><div><span>There is just a blank screen on sddm whithout that command (the Nvidia gpu is not physically connected to the display, it needs the Intel gpu to send image to any display, the command above connects the Nvidia gpu to the Intel one). Since xrandr does not work with wayland I am kind of stuck trying figure out the equivalent of that …</span></div>
+  <p>Python string isspace() method is a built-in function that returns True if all the characters in a string are whitespace characters. Otherwise, it returns false.</p>
+
+
+
+What are whitespace characters in Python?
+
+
+
+<p>Characters that are used for spacing are called whitespace characters. For example: tabs, spaces, newline, etc.</p>
+
+
+
+<p>The <strong><code>isspace()</code></strong> function is used to check if the argument contains all whitespace characters such as:</p>
+
+
+
+<ul><li>&#8221;– Space</li><li>&#8216;\t&#8217; – Horizontal tab</li><li>&#8216;\n&#8217; – Newline</li><li>&#8216;\v&#8217; – Vertical tab</li><li>&#8216;\f&#8217; – Feed</li><li>&#8216;\r&#8217; – Carriage return</li></ul>
+
+
+
+isspace() Syntax
+
+
+
+<p>The syntax of isspace() method is:</p>
+
+
+
+<pre>string.isspace()</pre>
+
+
+
+isspace() Parameters
+
+
+
+<p>The <strong><code>isspace()</code></strong> method doesn&#8217;t take any parameters.</p>
+
+
+
+isspace() Return value
+
+
+
+<p>The <strong><code>isspace()</code></strong> method returns:</p>
+
+
+
+<ul><li>True if all characters in the string are whitespace characters</li><li>False if the string is empty or contains at least one or more non-whitespace character</li></ul>
+
+
+
+Example 1: Working with isspace() method 
+
+
+
+<pre><code># whitespace characters. returns true
+text1 …</code></pre>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Lamarque Souza (lamarque or lvsouza)</b></span>
-  on <time datetime="2021-12-25 18:27:00+00:00" class="dt-published"></time>
-  Sat 25 Dec 2021
-  in Planet KDE.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-26 11:14:28+00:00" class="dt-published"></time>
+  Sun 26 Dec 2021
+  in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -195,58 +252,35 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://itsmycode.com/menu-driven-program-in-python/" rel="bookmark" class="u-url"
-       title="ItsMyCode: Menu Driven Program in Python" target="_blank">
-      <time class="m-date" datetime="2021-12-25 16:46:22+00:00">
+    <a href="https://nicolasfella.de/posts/fixing-wayland-taskbar-icons/?utm_source=atom_feed?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Fixing Wayland taskbar icons" target="_blank">
+      <time class="m-date" datetime="2021-12-26 01:00:00+00:00">
         Dec
         <span class="m-date-day">
-          25
+          26
         </span>
         2021
       </time>
       <div class="p-name">
-      ItsMyCode: Menu Driven Program in Python
+      Fixing Wayland taskbar icons
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>ItsMyCode |</p>
-
-Introduction to Menu-Driven Program
-
-
-
-<p>A menu driven program is a program that takes input from a user by displaying a list of options and allows users to choose the input from the list of options.</p>
-
-
-
-<p>A simple example of a menu-driven program is an ATM( Automated teller machine). In the case of a transaction, it takes input from the user by the keypress and processes the transaction at the background. Similarly one can think an example of a coffee vending machine, Fast food menu, TV Remote control etc. There are several advantages of menu driven programs in real world. </p>
-
-
-
-Advantages of Menu-Driven Program
-
-
-
-<p>The major advantage of menu-driven systems are:</p>
-
-
-
-<ul><li>Simple and User-friendly interface</li><li>Best of Novice or Beginners</li><li>Not necessary to remember the long list of commands</li><li>Self-explanatory</li></ul>
-
-
-
-<p>Now that we know menu-driven let us look at some …</p>
+  <p>A common papercut in a Wayland session is entries in the task manager showing a generic Wayland icon instead of the proper application icon. Here’s a KWallet window having a generic icon in the task manager (on the right):</p>
+<p><img alt="Task manager with generic Wayland icon on the right" src="kwallet-before.png"></p>
+<p>This is due to the shell not being able to properly map a window to an application. This breaks more things than just icons, but those are often the first thing that is noticed. Fortunately this is usually very easy to fix, particularly for Qt/KDE apps. I fixed a couple of those over the holidays and now I am writing down what needs to be done so you know what to do the next time you encounter such a case.</p>
+<p>Window to application mapping is based on the desktop entry name. That is the filename of the application’s …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-25 16:46:22+00:00" class="dt-published"></time>
-  Sat 25 Dec 2021
-  in Planet Python.
+  <span class="p-author"><b>Nicolas Fella</b></span>
+  on <time datetime="2021-12-26 01:00:00+00:00" class="dt-published"></time>
+  Sun 26 Dec 2021
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
