@@ -161,89 +161,172 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://itsmycode.com/python-string-isspace/" rel="bookmark" class="u-url"
-       title="ItsMyCode: Python String isspace()" target="_blank">
-      <time class="m-date" datetime="2021-12-26 11:14:28+00:00">
+    <a href="https://jlelse.blog/thoughts/2021/12/not-enough-tests" rel="bookmark" class="u-url"
+       title="Not enough tests" target="_blank">
+      <time class="m-date" datetime="2021-12-27 22:06:07+01:00">
         Dec
         <span class="m-date-day">
-          26
+          27
         </span>
         2021
       </time>
       <div class="p-name">
-      ItsMyCode: Python String isspace()
+      Not enough tests
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Python string isspace() method is a built-in function that returns True if all the characters in a string are whitespace characters. Otherwise, it returns false.</p>
-
-
-
-What are whitespace characters in Python?
-
-
-
-<p>Characters that are used for spacing are called whitespace characters. For example: tabs, spaces, newline, etc.</p>
-
-
-
-<p>The <strong><code>isspace()</code></strong> function is used to check if the argument contains all whitespace characters such as:</p>
-
-
-
-<ul><li>&#8221;– Space</li><li>&#8216;\t&#8217; – Horizontal tab</li><li>&#8216;\n&#8217; – Newline</li><li>&#8216;\v&#8217; – Vertical tab</li><li>&#8216;\f&#8217; – Feed</li><li>&#8216;\r&#8217; – Carriage return</li></ul>
-
-
-
-isspace() Syntax
-
-
-
-<p>The syntax of isspace() method is:</p>
-
-
-
-<pre>string.isspace()</pre>
-
-
-
-isspace() Parameters
-
-
-
-<p>The <strong><code>isspace()</code></strong> method doesn&#8217;t take any parameters.</p>
-
-
-
-isspace() Return value
-
-
-
-<p>The <strong><code>isspace()</code></strong> method returns:</p>
-
-
-
-<ul><li>True if all characters in the string are whitespace characters</li><li>False if the string is empty or contains at least one or more non-whitespace character</li></ul>
-
-
-
-Example 1: Working with isspace() method 
-
-
-
-<pre><code># whitespace characters. returns true
-text1 …</code></pre>
+  GoBlog’s test coverage is increasing (currently about 41%), but I keep being reminded there is nothing like enough or even too many tests. I still find some stupid bugs that aren’t covered by automatic tests.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-26 11:14:28+00:00" class="dt-published"></time>
-  Sun 26 Dec 2021
+  on <time datetime="2021-12-27 22:06:07+01:00" class="dt-published"></time>
+  Mon 27 Dec 2021
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.pythonmorsels.com/topics/representing-binary-data-with-bytes/" rel="bookmark" class="u-url"
+       title="Python Morsels: Representing binary data with bytes" target="_blank">
+      <time class="m-date" datetime="2021-12-27 19:17:49+00:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Python Morsels: Representing binary data with bytes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.pythonmorsels.com/topics/representing-binary-data-with-bytes/">
+  <img src="https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1319465745-b11fe7dc99c03417fdcc58f32b6cd2f0a633da9dd7aee9dce392c62e1ae6a068-d_1920x1080&amp;src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png">
+</a>
+<p>Let's talk about <strong>the difference between strings and bytes</strong> in Python.</p>
+Creating <code>bytes</code> objects in Python
+<p>Strings represent text (human language that is).
+For example, here we have a string named <code>text</code>:</p>
+<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>text</span> <span>=</span> <span>&quot;hello&quot;</span>
+</code></pre></div>
+
+<p>But there's another type that's closely associated with strings, which kind of looks like making a string with a <code>b</code> prefixed in front of it.</p>
+<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>data</span> <span>=</span> <span>b</span><span>&quot;hello&quot;</span>
+</code></pre></div>
+
+<p>That <code>b</code> is sort of like an <code>f</code> before an <a href="https://www.pythonmorsels.com/topics/string-concatenation-and-string-interpolation/">f-string</a>, or an <code>r</code> before a <a href="https://www.pythonmorsels.com/topics/raw-strings/">raw string</a>.
+But that <code>b</code> doesn't actually make a string, it makes a <code>bytes</code> object:</p>
+<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>data</span>
+<span>b'hello'</span>
+<span>&gt;&gt;&gt; </span><span>type</span><span>(</span><span>data</span><span>)</span>
+<span>&lt;class 'bytes'&gt;</span>
+</code></pre></div>
+
+Strings represent text, <code>bytes</code> objects represent binary data
+<p>If we loop over a string in Python, we'll get back <strong>sub-strings representing each of the characters in that string</strong>:</p>
+<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>text</span> <span>=</span> <span>&quot;hello&quot;</span>
+<span>&gt;&gt;&gt; </span><span>list</span><span>(</span><span>text</span><span>)</span>
+<span>['h', 'e', 'l', 'l', 'o']</span>
+</code></pre></div>
+
+<p>What do you think …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-27 19:17:49+00:00" class="dt-published"></time>
+  Mon 27 Dec 2021
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2560/" rel="bookmark" class="u-url"
+       title="Confounding Variables" target="_blank">
+      <time class="m-date" datetime="2021-12-27 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Confounding Variables
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="You can find a perfect correlation if you just control for the residual." src="https://imgs.xkcd.com/comics/confounding_variables.png" title="You can find a perfect correlation if you just control for the residual.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-27 00:00:00+00:00" class="dt-published"></time>
+  Mon 27 Dec 2021
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://archlinux.org/news/libxml22912-6-update-may-require-manual-intervention/" rel="bookmark" class="u-url"
+       title="libxml2>=2.9.12-6 update may require manual intervention" target="_blank">
+      <time class="m-date" datetime="2021-12-27 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      libxml2>=2.9.12-6 update may require manual intervention
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The libxml2 package prior to version 2.9.12-6 was missing the compiled python modules. This has been fixed in 2.9.12-6, so the upgrade may need to overwrite any untracked pyc files created. If you get errors like these
+<code>libxml2: /usr/lib/python3.10/site-packages/__pycache__/drv_libxml2.cpython-310.opt-1.pyc exists in filesystem
+libxml2: /usr/lib/python3.10/site-packages/__pycache__/drv_libxml2.cpython-310.pyc exists in filesystem
+libxml2: /usr/lib/python3.10/site-packages/__pycache__/libxml2.cpython-310.opt-1.pyc exists in filesystem
+libxml2: /usr/lib/python3.10/site-packages/__pycache__/libxml2.cpython-310.pyc exists in filesystem
+</code>
+when updating, use
+<code>pacman -Syu --overwrite /usr/lib/python3.10/site-packages/__pycache__/\*
+</code>
+to perform the upgrade.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jan Alexander Steffens</b></span>
+  on <time datetime="2021-12-27 00:00:00+00:00" class="dt-published"></time>
+  Mon 27 Dec 2021
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -437,40 +520,6 @@ with you one-on-one. Here are some things people have reached out to me for:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2021/12/2021-12-24-iiuco" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2021-12-24 18:18:00+01:00">
-        Dec
-        <span class="m-date-day">
-          24
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Merry Christmas! 🎄🎅
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-24 18:18:00+01:00" class="dt-published"></time>
-  Fri 24 Dec 2021
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://nibblestew.blogspot.com/2021/12/this-year-receive-gift-of-free-meson.html" rel="bookmark" class="u-url"
        title="This year receive the gift of a free Meson manual" target="_blank">
       <time class="m-date" datetime="2021-12-24 11:28:00+00:00">
@@ -505,32 +554,32 @@ with you one-on-one. Here are some things people have reached out to me for:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2559/" rel="bookmark" class="u-url"
-       title="December 25th Launch" target="_blank">
-      <time class="m-date" datetime="2021-12-24 00:00:00+00:00">
+    <a href="https://chomsky.info/20211223/" rel="bookmark" class="u-url"
+       title="Chomsky: Outdated US Cold War Policy Worsens Ongoing Russia-Ukraine Conflict" target="_blank">
+      <time class="m-date" datetime="2021-12-23 19:22:00+00:00">
         Dec
         <span class="m-date-day">
-          24
+          23
         </span>
         2021
       </time>
       <div class="p-name">
-      December 25th Launch
+      Chomsky: Outdated US Cold War Policy Worsens Ongoing Russia-Ukraine Conflict
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="Update: Santa has been destroyed by the range safety officer." src="https://imgs.xkcd.com/comics/december_25th_launch.png" title="Update: Santa has been destroyed by the range safety officer.">
+  Chomsky: Outdated US Cold War Policy Worsens Ongoing Russia-Ukraine Conflict Noam Chomsky Interviewed by C.J. Polychroniou December 23, 2021. Truthout. The tension on the Russia-Ukraine border represents an ongoing conflict between two nations with many cultural affinities, but is also part of a much larger rivalry between the U.S. and Europe on one side, and [&#8230;]
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-24 00:00:00+00:00" class="dt-published"></time>
-  Fri 24 Dec 2021
-  in xkcd.com.
+  <span class="p-author"><b>anthony</b></span>
+  on <time datetime="2021-12-23 19:22:00+00:00" class="dt-published"></time>
+  Thu 23 Dec 2021
+  in chomsky.info.
 </footer>
 <div class="m-clearfix-l"></div>
 
