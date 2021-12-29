@@ -161,31 +161,110 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/thoughts/2021/12/not-enough-tests" rel="bookmark" class="u-url"
-       title="Not enough tests" target="_blank">
-      <time class="m-date" datetime="2021-12-27 22:06:07+01:00">
+    <a href="https://pycoders.com/issues/505" rel="bookmark" class="u-url"
+       title="PyCoder’s Weekly: Issue #505 (Dec. 28, 2021)" target="_blank">
+      <time class="m-date" datetime="2021-12-28 19:30:00+00:00">
         Dec
         <span class="m-date-day">
-          27
+          28
         </span>
         2021
       </time>
       <div class="p-name">
-      Not enough tests
+      PyCoder’s Weekly: Issue #505 (Dec. 28, 2021)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  GoBlog’s test coverage is increasing (currently about 41%), but I keep being reminded there is nothing like enough or even too many tests. I still find some stupid bugs that aren’t covered by automatic tests.
+  <p> <span>#505 – DECEMBER 28, 2021</span> <span><a href="https://pycoders.com/issues/505">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p>  <div> <a href="https://pycoders.com/link/7707/feed">Python Zip Imports: Distribute Modules and Packages Quickly</a> <p> In this step-by-step tutorial, you&rsquo;ll learn what Zip imports are and how to use them in Python. You&rsquo;ll learn to create your own importable ZIP files and make them available for use. Finally, you&rsquo;ll learn how to use the <code>zipimport</code> module to dynamically import code from ZIP files. <span><a href="https://pycoders.com/link/7707/feed">REAL PYTHON</a></span> </p> </div> <div> <a href="https://pycoders.com/link/7716/feed">Writing Fast Async HTTP Requests in Python</a> <p> Different formats and code snippets to make a large amount of network requests locally, with controls for rate limiting and error handling. <span><a href="https://pycoders.com/link/7716/feed">JONLUCA DECARO</a></span> </p> </div> <div> <a href="https://pycoders.com/link/7669/feed">Shortcut Provides Speedy Task Management, Reporting, and Collaboration for Software Teams</a> <a href="https://pycoders.com/link/7669/feed"><img alt="alt" src="https://cdn.pycoders.com/26787b06c5ecad4f728451ae343d0a61"></a> <p> Shortcut is project management built for developers. Whether you&rsquo;re a startup that iterates quickly by providing every engineer with a free pallet of Red Bull, or a large org …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-27 22:06:07+01:00" class="dt-published"></time>
-  Mon 27 Dec 2021
+  on <time datetime="2021-12-28 19:30:00+00:00" class="dt-published"></time>
+  Tue 28 Dec 2021
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://lamarque-lvs.blogspot.com/2021/12/custom-keyboard-layout-in-wayland.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Custom keyboard layout in Wayland" target="_blank">
+      <time class="m-date" datetime="2021-12-28 15:11:00+00:00">
+        Dec
+        <span class="m-date-day">
+          28
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Custom keyboard layout in Wayland
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Going forward with migrating to Wayland. There are several smalls things to fix in my setup, one of them is adding a custom layout to workaround the fact that my child broken the Up key of my laptop's keyboard. I had mapped F9 to Up using $HOME/.Xmodmap, which does not work in Wayland. I have figure out how to that in Wayland <a href="//blog.stigok.com/2020/10/27/from-x11-xmodmap-to-wayland-xkb-custom-keyboard-layout.html">[1]</a> <a href="//who-t.blogspot.com/2020/07/user-specific-xkb-configuration-part-2.html">[2]</a> and maybe this can help other people.</p><p></p>Create this file to configure XDG_CONFIG_HOME variable:<div>
+<span># /etc/profile.d/xdg.sh</span><span>export XDG_CONFIG_HOME=$HOME/.config</span><p></p>
+<p>Create the $HOME/.config/xkb/rules/evdev.xml</p>
+<p><span>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></p>
+<p><span>&lt;!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd"&gt;</span></p>
+<p><span>&lt;xkbConfigRegistry version="1.1"&gt;</span></p>
+<p><span>  &lt;layoutList&gt;</span></p>
+<p><span>    &lt;layout&gt;</span></p>
+<p><span>      &lt;configItem&gt;</span></p>
+<p><span>        &lt;name&gt;lvs&lt;/name&gt; </span><span>&lt;!-- Change to any name you want --&gt;</span></p>
+<p><span>        &lt;shortDescription&gt;Layout LVS&lt;/shortDescription&gt; </span><span>&lt;!-- Same here --&gt;</span></p>
+<p><span>        &lt;description&gt;Layout com F8, F9 e F10 remapeadas&lt;/description&gt; </span><span>&lt;!-- Any description …</span></p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Lamarque Souza (lamarque or lvsouza)</b></span>
+  on <time datetime="2021-12-28 15:11:00+00:00" class="dt-published"></time>
+  Tue 28 Dec 2021
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/links/2021/12/web0" rel="bookmark" class="u-url"
+       title="web0?" target="_blank">
+      <time class="m-date" datetime="2021-12-28 12:00:57+01:00">
+        Dec
+        <span class="m-date-day">
+          28
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      web0?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  With all the hype (or bullshit) about “web3”, it’s good to see a counter movement as well. Whether this site is really “web0” or just pre-“Web 2++” (my term for websites overloaded with frameworks, JavaScript and CSS) remains to be debated…
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2021-12-28 12:00:57+01:00" class="dt-published"></time>
+  Tue 28 Dec 2021
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -195,61 +274,135 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.pythonmorsels.com/topics/representing-binary-data-with-bytes/" rel="bookmark" class="u-url"
-       title="Python Morsels: Representing binary data with bytes" target="_blank">
-      <time class="m-date" datetime="2021-12-27 19:17:49+00:00">
+    <a href="https://nedbatchelder.com/blog/202112/gem_exploding_string_alternatives.html" rel="bookmark" class="u-url"
+       title="Gem: exploding string alternatives" target="_blank">
+      <time class="m-date" datetime="2021-12-28 05:25:29-05:00">
         Dec
         <span class="m-date-day">
-          27
+          28
         </span>
         2021
       </time>
       <div class="p-name">
-      Python Morsels: Representing binary data with bytes
+      Gem: exploding string alternatives
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <a href="https://www.pythonmorsels.com/topics/representing-binary-data-with-bytes/">
-  <img src="https://i.vimeocdn.com/filter/overlay?src0=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1319465745-b11fe7dc99c03417fdcc58f32b6cd2f0a633da9dd7aee9dce392c62e1ae6a068-d_1920x1080&amp;src1=http%3A%2F%2Ff.vimeocdn.com%2Fp%2Fimages%2Fcrawler_play.png">
-</a>
-<p>Let's talk about <strong>the difference between strings and bytes</strong> in Python.</p>
-Creating <code>bytes</code> objects in Python
-<p>Strings represent text (human language that is).
-For example, here we have a string named <code>text</code>:</p>
-<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>text</span> <span>=</span> <span>&quot;hello&quot;</span>
-</code></pre></div>
+  <p>Here&#8217;s a Python gem: a small bit of Python that uses the power of the
+language and standard library well.</p><p>It&#8217;s a function to list strings generated by a pattern with embedded
+alternatives.  It takes an input string with brace-wrapped possibilities, and
+generates all the strings made from making choices among them:</p><blockquote><pre><span>&gt;&gt;&gt;&#xa0;</span><span>list</span><span>(</span><span>explode</span><span>(</span><span>&quot;{Alice,Bob}&#xa0;ate&#xa0;a&#xa0;{banana,donut}.&quot;</span><span>))</span>
+<span>[</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;'Alice&#xa0;ate&#xa0;a&#xa0;banana.',</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;'Alice&#xa0;ate&#xa0;a&#xa0;donut.',</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;'Bob&#xa0;ate&#xa0;a&#xa0;banana.',</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;'Bob&#xa0;ate&#xa0;a&#xa0;donut.'</span>
+<span>]</span>
+</pre></blockquote><p>Here&#8217;s the function:</p><blockquote><pre><span>def</span>&#xa0;<span>explode</span><span>(</span><span>pattern</span><span>:</span>&#xa0;<span>str</span><span>)</span>&#xa0;<span>-&gt;</span>&#xa0;<span>Iterable</span><span>[</span><span>str</span><span>]:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>&quot;&quot;&quot;</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;Expand&#xa0;the&#xa0;brace-delimited&#xa0;possibilities&#xa0;in&#xa0;a&#xa0;string.</span>
+<span>&#xa0;&#xa0;&#xa0;&#xa0;&quot;&quot;&quot;</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>seg_choices</span>&#xa0;<span>=</span>&#xa0;<span>[]</span>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>for</span>&#xa0;<span>segment</span>&#xa0;<span>in</span>&#xa0;<span>re</span><span>.</span><span>split</span><span>(</span><span>r</span><span>&quot;(\{.*?\})&quot;</span><span>,</span>&#xa0;<span>pattern</span><span>):</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>if</span>&#xa0;<span>segment</span><span>.</span><span>startswith</span><span>(</span><span>&quot;{&quot;</span><span>):</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>seg_choices</span><span>.</span><span>append</span><span>(</span><span>segment</span><span>.</span><span>strip</span><span>(</span><span>&quot;</span><span>{}</span><span>&quot;</span><span>)</span><span>.</span><span>split</span><span>(</span><span>&quot;,&quot;</span><span>))</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>else</span><span>:</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>seg_choices</span><span>.</span><span>append</span><span>([</span><span>segment</span><span>])</span>
 
-<p>But there's another type that's closely associated with strings, which kind of looks like making a string with a <code>b</code> prefixed in front of it.</p>
-<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>data</span> <span>=</span> <span>b</span><span>&quot;hello&quot;</span>
-</code></pre></div>
+&#xa0;&#xa0;&#xa0;&#xa0;<span>for</span>&#xa0;<span>parts</span>&#xa0;<span>in</span>&#xa0;<span>itertools</span><span>.</span><span>product</span><span>(</span><span>*</span><span>seg_choices</span><span>):</span>
+&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;<span>yield</span>&#xa0;<span>&quot;&quot;</span><span>.</span><span>join</span><span>(</span><span>parts</span><span>)</span>
+</pre></blockquote><p>I call this a gem because it&#8217;s concise without being tricky, and uses
+Python&#8217;s …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2021-12-28 05:25:29-05:00" class="dt-published"></time>
+  Tue 28 Dec 2021
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
 
-<p>That <code>b</code> is sort of like an <code>f</code> before an <a href="https://www.pythonmorsels.com/topics/string-concatenation-and-string-interpolation/">f-string</a>, or an <code>r</code> before a <a href="https://www.pythonmorsels.com/topics/raw-strings/">raw string</a>.
-But that <code>b</code> doesn't actually make a string, it makes a <code>bytes</code> object:</p>
-<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>data</span>
-<span>b'hello'</span>
-<span>&gt;&gt;&gt; </span><span>type</span><span>(</span><span>data</span><span>)</span>
-<span>&lt;class 'bytes'&gt;</span>
-</code></pre></div>
+</article>
 
-Strings represent text, <code>bytes</code> objects represent binary data
-<p>If we loop over a string in Python, we'll get back <strong>sub-strings representing each of the characters in that string</strong>:</p>
-<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>text</span> <span>=</span> <span>&quot;hello&quot;</span>
-<span>&gt;&gt;&gt; </span><span>list</span><span>(</span><span>text</span><span>)</span>
-<span>['h', 'e', 'l', 'l', 'o']</span>
-</code></pre></div>
-
-<p>What do you think …</p>
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2021/12/28/Dont-use-Discord-for-FOSS.html" rel="bookmark" class="u-url"
+       title="Please don't use Discord for FOSS projects" target="_blank">
+      <time class="m-date" datetime="2021-12-28 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          28
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      Please don't use Discord for FOSS projects
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Six years ago, I wrote a post speaking out against the use of Slack for the
+instant messaging needs of FOSS projects. In retrospect, this article is not
+very good, and in the years since, another proprietary chat fad has stepped up
+to bat: Discord. It&rsquo;s time to revisit this discussion.</p>
+<p>In short, using Discord for your free software/open source (FOSS) software
+project is a very bad idea. Free software matters — that&rsquo;s why you&rsquo;re
+writing it, after all. Using Discord partitions your community on either side of
+a walled garden, with one side that&rsquo;s willing to use the proprietary Discord
+client, and one side that isn&rsquo;t. It sets up users who are passionate about free
+software — i.e. your most passionate contributors or potential
+contributors — as second-class citizens.</p>
+<p>By choosing Discord, you also lock …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-27 19:17:49+00:00" class="dt-published"></time>
-  Mon 27 Dec 2021
-  in Planet Python.
+  on <time datetime="2021-12-28 00:00:00+00:00" class="dt-published"></time>
+  Tue 28 Dec 2021
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://hynek.me/articles/import-attrs/" rel="bookmark" class="u-url"
+       title="import attrs" target="_blank">
+      <time class="m-date" datetime="2021-12-28 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          28
+        </span>
+        2021
+      </time>
+      <div class="p-name">
+      import attrs
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>An attempt at catharsis.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Hynek Schlawack (hs@ox.cx)</b></span>
+  on <time datetime="2021-12-28 00:00:00+00:00" class="dt-published"></time>
+  Tue 28 Dec 2021
+  in Hynek Schlawak.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -335,43 +488,6 @@ to perform the upgrade.
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nicolasfella.de/posts/fixing-wayland-taskbar-icons/?utm_source=atom_feed?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Fixing Wayland taskbar icons" target="_blank">
-      <time class="m-date" datetime="2021-12-26 01:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          26
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Fixing Wayland taskbar icons
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>A common papercut in a Wayland session is entries in the task manager showing a generic Wayland icon instead of the proper application icon. Here’s a KWallet window having a generic icon in the task manager (on the right):</p>
-<p><img alt="Task manager with generic Wayland icon on the right" src="kwallet-before.png"></p>
-<p>This is due to the shell not being able to properly map a window to an application. This breaks more things than just icons, but those are often the first thing that is noticed. Fortunately this is usually very easy to fix, particularly for Qt/KDE apps. I fixed a couple of those over the holidays and now I am writing down what needs to be done so you know what to do the next time you encounter such a case.</p>
-<p>Window to application mapping is based on the desktop entry name. That is the filename of the application’s …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicolas Fella</b></span>
-  on <time datetime="2021-12-26 01:00:00+00:00" class="dt-published"></time>
-  Sun 26 Dec 2021
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2021-12-25_Limits_of_AI_training" rel="bookmark" class="u-url"
        title="Limits of AI training" target="_blank">
       <time class="m-date" datetime="2021-12-25 14:35:51+00:00">
@@ -432,52 +548,6 @@ to perform the upgrade.
   on <time datetime="2021-12-25 04:45:37+00:00" class="dt-published"></time>
   Sat 25 Dec 2021
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2021/12/25/Use-me-as-a-resource.html" rel="bookmark" class="u-url"
-       title="Please use me as a resource" target="_blank">
-      <time class="m-date" datetime="2021-12-25 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          25
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Please use me as a resource
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I write a lot of blog posts about my ideas,<a href="#fn:1">1</a> some of which are even good
-ideas. Some of these ideas stick, and many readers have attempted to put them
-into practice, taking on challenges like starting a business in FOSS or stepping
-up to be leaders in their communities. It makes me proud to see the difference
-you&rsquo;re making, and I&rsquo;m honored to have inspired many of you.</p>
-<p>I&rsquo;m sitting here on my soapbox shouting into the void, but I also want to work
-with you one-on-one. Here are some things people have reached out to me for:</p>
-<ul>
-<li>Pitching their project/business ideas for feedback</li>
-<li>Sharing something they&rsquo;re proud of</li>
-<li>Cc&rsquo;ing me in mailing list discussions, GitHub/GitLab threads, etc, for input</li>
-<li>Clarifying finer points in my blog posts</li>
-<li>Asking for feedback on …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2021-12-25 00:00:00+00:00" class="dt-published"></time>
-  Sat 25 Dec 2021
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -902,49 +972,6 @@ a screencast
   on <time datetime="2021-12-12 00:00:00+00:00" class="dt-published"></time>
   Sun 12 Dec 2021
   in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202112/loadbalanced_xdist.html" rel="bookmark" class="u-url"
-       title="Load-balanced xdist" target="_blank">
-      <time class="m-date" datetime="2021-12-11 09:02:28-05:00">
-        Dec
-        <span class="m-date-day">
-          11
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Load-balanced xdist
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I wrote a pytest plugin to evenly balance tests across xdist workers.</p><p>Back story: the coverage.py test suite seemed to be running oddly: it would
-run to near-completion, and then stall before actually finishing. To understand
-why, I
-<a href="https://github.com/nedbat/coveragepy/commit/40131f076c0784b331c6e0a5d8f88ff7b84b7296">added
-some debug output</a> to see what tests were running on which workers.</p><p>I have some very slow tests (they create a virtualenv and install packages).
-It turned out those tests were being run near the end of the test suite, after
-their worker had already run a bunch of other tests.  So that one worker was
-taking 10 seconds longer to finish than all the others. This is what made the
-test suite seem to stall at the end.</p><p>I figured it would be easy to schedule tests more optimally. We could record
-the time each test takes, then use …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2021-12-11 09:02:28-05:00" class="dt-published"></time>
-  Sat 11 Dec 2021
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
