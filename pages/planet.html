@@ -161,6 +161,230 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.dvratil.cz/2022/01/qcoro-0.4.0-release-announcement/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="QCoro 0.5.0 Release Announcement" target="_blank">
+      <time class="m-date" datetime="2022-01-06 19:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      QCoro 0.5.0 Release Announcement
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>It took a few months, but there’s a new release of QCoro with some new cool features. This change contains a breaking
+change in CMake, wich requires QCoro users to adjust their CMakeLists.txt. I sincerely hope this is the last breaking
+change for a very long time.</p>
+
+<p>Major highlights in this release:</p>
+
+<ul>
+  <li>Co-installability of Qt5 and Qt6 builds of QCoro</li>
+  <li>Complete re-work of CMake configuration</li>
+  <li>Support for compiling QCoro with Clang against libstdc++</li>
+</ul>
+
+Co-installability of Qt5 and Qt6 builds of QCoro
+
+<p>This change mostly affects packagers of QCoro. It is now possible to install both Qt5 and Qt6 versions
+of QCoro alongside each other without conflicting files. The shared libraries now contain the Qt version
+number in their name (e.g. <code>libQCoro6Core.so</code>) and header files are also located in dedicated subdirectories
+(e.g. <code>/usr/include/qcoro6/{qcoro …</code></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Daniel Vrátil (dvratil)</b></span>
+  on <time datetime="2022-01-06 19:00:00+00:00" class="dt-published"></time>
+  Thu 06 Jan 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.pythonforbeginners.com/basics/recursion-in-python" rel="bookmark" class="u-url"
+       title="Python for Beginners: Recursion In Python" target="_blank">
+      <time class="m-date" datetime="2022-01-06 14:10:00+00:00">
+        Jan
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Python for Beginners: Recursion In Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>You might have studied <a href="https://www.pythonforbeginners.com/basics/python-functions-cheat-sheet">functions in python</a>. You might also have used for loops and while loops to perform a task repetitively while programming in Python. In this article, we will discuss recursion and recursive functions in Python.</p>
+
+
+
+What Is Recursion?
+
+
+
+<p>Recursion is a mathematical concept in which we define something in terms of itself.&nbsp;</p>
+
+
+
+<p>For instance, we can define the sum of the first ten natural numbers as the sum of the first nine natural numbers added to the tenth number.&nbsp;</p>
+
+
+
+<p>Similarly, we can define the sum of the first nine natural numbers as the sum of the first eight natural numbers added to the ninth natural number.</p>
+
+
+
+<p>Here, you can see that we are breaking the problem of the first ten natural numbers into smaller problems like finding the sum of the first 9 numbers, then finding the …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-06 14:10:00+00:00" class="dt-published"></time>
+  Thu 06 Jan 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2022/01/switching-purelymail" rel="bookmark" class="u-url"
+       title="Switching to Purelymail" target="_blank">
+      <time class="m-date" datetime="2022-01-06 13:21:14+01:00">
+        Jan
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Switching to Purelymail
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  After long consideration, I have now moved email for all but my main domain (but that’s coming too) to Purelymail. Email without bullshit. And with the “Advanced billing mode” they really only charge by usage or $10 per year with the “Simple billing”, but even with Advanced that shouldn’t be much more than $1 per month for me.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-06 13:21:14+01:00" class="dt-published"></time>
+  Thu 06 Jan 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2022/1/6/rust-extension-map/" rel="bookmark" class="u-url"
+       title="Extension Maps in Rust" target="_blank">
+      <time class="m-date" datetime="2022-01-06 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Extension Maps in Rust
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Sometimes in Rust you want to design APIs that provide a little bit of
+flexibility for the user.  A common approach for this is to introduce a
+generic type parameter that can be filled in.  Let's for instance think of
+a web application framework.  It might have an application type which is
+passed to all kinds of functions.  That application type might want to be
+parametrized over the configuration of the application:</p>
+<div><pre><span></span><span>struct</span> <span>App</span><span>&lt;</span><span>Config</span><span>&gt;</span><span> </span><span>{</span><span></span>
+<span>    </span><span>config</span>: <span>Config</span><span></span>
+<span>}</span><span></span>
+</pre></div>
+<p>While this works, it quickly becomes complex.  What if in addition to a
+config you also want to have custom state there?  It also means all
+functions that want to work with that app need to be generic over the
+config as well.  Worse: what if you don't even know which parametrizations
+are needed?</p>
+<div>
+Enter The Any Type
+<p>A solution for this issue …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2022-01-06 00:00:00+00:00" class="dt-published"></time>
+  Thu 06 Jan 2022
+  in Armin Ronacher's Thoughts and Writings.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wizardzines.com/comics/dns-queries/" rel="bookmark" class="u-url"
+       title="dns queries" target="_blank">
+      <time class="m-date" datetime="2022-01-06 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      dns queries
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://wizardzines.com/comics/dns-queries/dns-queries.png">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-06 00:00:00+00:00" class="dt-published"></time>
+  Thu 06 Jan 2022
+  in Wizard Zines.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pyfound.blogspot.com/2022/01/announcing-python-software-foundation.html" rel="bookmark" class="u-url"
        title="Announcing Python Software Foundation Fellow Members for Q4 2021! 🎉" target="_blank">
       <time class="m-date" datetime="2022-01-05 17:14:00.001000-05:00">
@@ -196,7 +420,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <header>
   <h1>
     <a href="https://nasahnashdeveloper.com/2022/01/05/philip-chimento/" rel="bookmark" class="u-url"
-       title="Philip Chimento’s Open source Story" target="_blank">
+       title="Philip Chimento’s Open Source Story" target="_blank">
       <time class="m-date" datetime="2022-01-05 21:44:27+00:00">
         Jan
         <span class="m-date-day">
@@ -205,13 +429,13 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2022
       </time>
       <div class="p-name">
-      Philip Chimento’s Open source Story
+      Philip Chimento’s Open Source Story
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Hi, I’m Philip Chimento! My open source journey started in the early 2000s when I was at university. I wanted to learn how to program games, and I had been told that would require programming in C. Paying money for a compiler seems unbelievable today, but C compilers were quite expensive at the time. A<a href="https://nasahnashdeveloper.com/2022/01/05/philip-chimento/">Continue reading <span>"Philip Chimento’s Open source Story"</span></a>
+  Hi, I’m Philip Chimento! My open source journey started in the early 2000s when I was at university. I wanted to learn how to program games, and I had been told that would require programming in C. Paying money for a compiler seems unbelievable today, but C compilers were quite expensive at the time. A<a href="https://nasahnashdeveloper.com/2022/01/05/philip-chimento/">Continue reading <span>"Philip Chimento’s Open Source Story"</span></a>
   </p>
   </div>
 </header>
@@ -221,40 +445,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2022-01-05 21:44:27+00:00" class="dt-published"></time>
   Wed 05 Jan 2022
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://testdriven.io/blog/django-pagination/" rel="bookmark" class="u-url"
-       title="TestDriven.io: Pagination in Django" target="_blank">
-      <time class="m-date" datetime="2022-01-05 21:40:23+00:00">
-        Jan
-        <span class="m-date-day">
-          05
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      TestDriven.io: Pagination in Django
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This article looks at how to add pagination to a Django project.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-05 21:40:23+00:00" class="dt-published"></time>
-  Wed 05 Jan 2022
-  in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -289,42 +479,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2022-01-05 16:21:05+00:00" class="dt-published"></time>
   Wed 05 Jan 2022
   in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://krita.org/en/item/krita-in-2021-and-2022/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Krita in 2021 and 2022" target="_blank">
-      <time class="m-date" datetime="2022-01-05 13:13:37+00:00">
-        Jan
-        <span class="m-date-day">
-          05
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Krita in 2021 and 2022
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>A bit later than planned… Our overview of last year and a look forward to this year! We’re all still alive and working hard — sometimes a bit too hard. We kept the same core team this year, but we also had a lot of contributions from volunteers. Over a hundred people made all in all over ten thousand contributions to Krita, the website, the manual and the translations.</p>
-<p>We also launched the <a href="//fund.krita.org/">Krita Dev Fund</a>, based on Blender’s funding website code. We are really pleased with the community response to this initiative, but we’re not yet at a point where we won’t need the income from the various app stores. We launched Krita on the Epic app store, and we’ve made our first submission to the Apple MacOS store. (note: NOT the iPadOS store!)</p>
-Releases …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Krita News</b></span>
-  on <time datetime="2022-01-05 13:13:37+00:00" class="dt-published"></time>
-  Wed 05 Jan 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -415,6 +569,50 @@ DNS is still scaling well even though it&rsquo;s almost 40 years old. This is �
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/cmake-packaging-basic/" rel="bookmark" class="u-url"
+       title="CMake packaging essentials" target="_blank">
+      <time class="m-date" datetime="2022-01-05 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          05
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      CMake packaging essentials
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>CMake can install
+<a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html">relocatable packages</a>
+<a href="https://www.scivision.dev/cmake-cpack-basic">with CPack</a>
+or without CPack.
+Here we discuss creating CMake config-file packages without CPack, as CPack is merely added on to an existing CMake package.
+C and C++ programs generally use header files (.h or .hpp) that must be part of an installed package.
+Fortran programs likewise use module files (.mod) that must be installed.</p>
+<p>A basic structure for a CMake project that can create a CMake config-file package is shown in
+<a href="https://github.com/scivision/cmake-package-install">cmake-package-install</a>.
+The boilerplate code under cmake/ directory is only slightly modified between projects.
+For example, see <a href="https://github.com/geospace-code/h5fortran">h5fortran</a> for more advanced example in cmake/install.cmake and cmake/config.cmake.in.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-05 00:00:00+00:00" class="dt-published"></time>
+  Wed 05 Jan 2022
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://www.kitware.com/paraview-5-10-0-release-notes/" rel="bookmark" class="u-url"
        title="ParaView 5.10.0 Release Notes" target="_blank">
       <time class="m-date" datetime="2022-01-04 15:58:01+00:00">
@@ -431,7 +629,7 @@ DNS is still scaling well even though it&rsquo;s almost 40 years old. This is �
   </h1>
   <div class="p-summary">
   <p>
-  Major changes made since ParaView 5.9.1 are listed in this document. The full list of issues addressed by this release is available here. New features Rendering enhancements Plugin updates Filter changes Readers, writers, and filters changes Interface improvements Python scripting improvements Virtual reality improvements Miscellaneous bug fixes Catalyst Cinema Developer notes New features macOS arm64 [&#8230;]
+  Major changes made since ParaView 5.9.1 are listed in this document. The full list of issues addressed by this release is available here. New features Rendering enhancements Plugin updates Filter changes Readers, writers, and filters changes Interface improvements Python scripting improvements Virtual reality improvements Miscellaneous bug fixes and updates Catalyst Cinema Developer notes New features [&#8230;]
   </p>
   </div>
 </header>
@@ -441,40 +639,6 @@ DNS is still scaling well even though it&rsquo;s almost 40 years old. This is �
   on <time datetime="2022-01-04 15:58:01+00:00" class="dt-published"></time>
   Tue 04 Jan 2022
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/thoughts/2022/01/new-year-habits" rel="bookmark" class="u-url"
-       title="New year, new habits?!" target="_blank">
-      <time class="m-date" datetime="2022-01-04 11:57:05+01:00">
-        Jan
-        <span class="m-date-day">
-          04
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      New year, new habits?!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Colin’s post yesterday inspired me to install the Loop Habit Tracker app. How did I not know about this app yet? Free, no ads, and even open source!
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-04 11:57:05+01:00" class="dt-published"></time>
-  Tue 04 Jan 2022
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
