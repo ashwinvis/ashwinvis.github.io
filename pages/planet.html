@@ -161,69 +161,205 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://kdenlive.org/en/2022/01/kdenlive-21-12-1-released/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Kdenlive 21.12.1 released" target="_blank">
-      <time class="m-date" datetime="2022-01-07 19:56:33+00:00">
+    <a href="https://snarky.ca/unravelling-from/" rel="bookmark" class="u-url"
+       title="Unravelling `from` for `raise` statements" target="_blank">
+      <time class="m-date" datetime="2022-01-08 23:07:24+00:00">
         Jan
         <span class="m-date-day">
-          07
+          08
         </span>
         2022
       </time>
       <div class="p-name">
-      Kdenlive 21.12.1 released
+      Unravelling `from` for `raise` statements
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-
-
-
-
-                    <div>
-                <div>
-
-
-                <div>
-
-
-                <div>
-<p>The first maintenance release of the 21.12 series is out with fixes to ripple mode, project archiving and multiple bins. This version also enforces to transcode footage with variable framerates to a standard framerate value.  </p>
-<p> </p>
-<ul>
-<li>Fix multiple bins should always stay tabbed together. <a href="//commits.kde.org/kdenlive/f71fde9f00e7b9a4fe897ca1bbc4fad37421131e">Commit.</a>
-</li>
-<li>Fix shortcuts sometimes broken on fullscreen monitor. <a href="//commits.kde.org/kdenlive/3a5964ca4868962938d2dfbd49fcbf2b8016818b">Commit.</a>
-</li>
-<li>Enforce 29.97 fps when using a clip with 29.94 or 29.96 fps. <a href="//commits.kde.org/kdenlive/f59033daba9060f384e69e57af3a6cf245b8830a">Commit.</a>
-</li>
-<li>Fix audio thumbs not created after profile change. <a href="//commits.kde.org/kdenlive/96c4dc5f3f11f3ba102a48f256c0b6437be903bd">Commit.</a>
-</li>
-<li>Fix compilation warnings (function type compatibility). <a href="//commits.kde.org/kdenlive/5b8ff6de6527963a4a2f8575f94b5e518e1f88ad">Commit.</a>
-</li>
-<li>Ripple: fix strange behaviour on Windows and macOS. <a href="//commits.kde.org/kdenlive/569374950a17eaa03a7e69e25d5c3fad7b6617de">Commit.</a>
-</li>
-<li>Add xml ui for audiolevelgraph effect and other xml format fixes. <a href="//commits.kde.org/kdenlive/08b1465b72f82fa6d3e4096efac8547ee2737b8f">Commit.</a>
-</li>
-<li>Improvements and fixes for the status bar message field. <a href="//commits.kde.org/kdenlive/0b0face087c7d2cfc5395aa7de3f94e3ac871302">Commit.</a>
-</li>
-<li>Add ripple test for single track groups. <a href="//commits.kde.org/kdenlive/672ef532630eae5dc98cb44277f3334fcf8c00b1">Commit.</a>
-</li>
-<li>Fix ripple in several scenarios with groups. <a href="//commits.kde.org/kdenlive/75cbe22a43fd2d334483b8faaedcf2cd284b60d6">Commit.</a>
-</li>
-<li>Improve Keybind Info with compositions. <a href="//commits.kde.org/kdenlive/d0a4f2d9dc636c394959ca2f6975798ea6173291">Commit.</a>
-</li>
-<li>Fix crash …</li></ul></div></div></div></div></div>
+  <p>As part of my <a href="https://snarky.ca/tag/syntactic-sugar/">series on Python&apos;s syntax</a>, I want to tackle the <code>from</code> clause for <a href="https://docs.python.org/3.8/reference/simple_stmts.html#the-raise-statement"><code>raise</code> statements</a>. In case you&apos;re unfamiliar, <code>raise A from B</code> causes <code>B</code> to be assigned to <code>A.__cause__</code> which lets chained tracebacks exist (as well as <code>__context__</code>, but that&apos;</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Kdenlive</b></span>
-  on <time datetime="2022-01-07 19:56:33+00:00" class="dt-published"></time>
-  Fri 07 Jan 2022
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2022-01-08 23:07:24+00:00" class="dt-published"></time>
+  Sat 08 Jan 2022
+  in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nibblestew.blogspot.com/2022/01/portability-is-not-sufficient-for.html" rel="bookmark" class="u-url"
+       title="Portability is not sufficient for portability" target="_blank">
+      <time class="m-date" datetime="2022-01-08 17:54:00+00:00">
+        Jan
+        <span class="m-date-day">
+          08
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Portability is not sufficient for portability
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p></p>A forenote<div><p>This blog post has some examples of questionable quality. This should not be meant as an attack on those projects. The issues listed here are fairly widespread, these are just the examples I ran into while doing other work.</p>What is meant by portability?<p>Before looking into portable software, let's first examine portability from a hardware perspective. When you ask most people what they consider a "portable computer", they'll probably think of laptops or possibly even a modern smartphone. But what about this:</p><div><a href="https://www.blogger.com/"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhLFeurXG7V_cgge3EZ8j3sPArXsu1cWCno4qUF_nMH4SayyFXSeQKYpmhczw2Q3LieGm6W5dztrWOzUh_jO52R74_ubIlSec0lNfESH0tcj79k_UHowPdO0-9zTtGAXjTd7T46r2x-1vEb-2KUYXRrNnopd4O32cVekVRO1aUGPc74-DdpsEwuARu4=s320"></a></div><p>This is most definitely a computer (the one I'm using to write this blog post, in fact), but not portable. It weighs something on the order of 10 kilos and it is too big to comfortably wrap your hands around.</p><p>And yet, I have carried this computer from one end of the Helsinki metropolitan region …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2022-01-08 17:54:00+00:00" class="dt-published"></time>
+  Sat 08 Jan 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://itsmycode.com/python-string-swapcase/" rel="bookmark" class="u-url"
+       title="ItsMyCode: Python String swapcase()" target="_blank">
+      <time class="m-date" datetime="2022-01-08 11:50:27+00:00">
+        Jan
+        <span class="m-date-day">
+          08
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      ItsMyCode: Python String swapcase()
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>ItsMyCode |</p>
+
+<p>Python string swapcase() method is a built-in function that converts all uppercase characters into lowercase and all lowercase characters into uppercase characters of a given string and returns a new string.</p>
+
+
+
+<span>swapcase() Syntax</span>
+
+
+
+<p>The Syntax of <strong><code>swapcase()</code></strong> method is:</p>
+
+
+
+<pre>string.swapcase()</pre>
+
+
+
+<span>swapcase() Parameters</span>
+
+
+
+<p>The <code><strong>swapcase()</strong></code>&nbsp;method doesn&#8217;t take any parameters.</p>
+
+
+
+<span>swapcase() Return Value</span>
+
+
+
+<p>The <strong><code>swapcase()</code></strong> method returns a copy of the string where all the uppercase characters are converted into lowercase characters and vice-versa.</p>
+
+
+
+<p>In case the string has other than alphabets those characters will not be converted and returned as-is.</p>
+
+
+
+<span>Example: Python Program to change the case of a given string</span>
+
+
+
+<pre><code>text1 = "pYTHON tUTORIALS"
+print(text1.swapcase())
+
+text2 = "HELLO WORLD"
+print(text2.swapcase())
+
+text3 = "welcome to itsmycode"
+print(text3.swapcase())
+
+text4 ="12345!!!"
+print(text4.swapcase())</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre><code>Python Tutorials
+hello world
+WELCOME TO ITSMYCODE
+12345!!!</code></pre>
+
+
+
+<pre><strong>Note:</strong>&#xa0;If you …</pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-08 11:50:27+00:00" class="dt-published"></time>
+  Sat 08 Jan 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://tube.kockatoo.org/w/gYYvWMS7umTiwUTPu8tP1v?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE Developer Contributes To GNOME!?" target="_blank">
+      <time class="m-date" datetime="2022-01-08 10:51:09+00:00">
+        Jan
+        <span class="m-date-day">
+          08
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      KDE Developer Contributes To GNOME!?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  💸💸 Help me contribute to KDE and do these videos: 💸💸
+Patreon: https://www.patreon.com/niccolove
+Youtube: https://www.youtube.com/channel/UCONH73CdRXUjlh3-DdLGCPw/join
+Paypal: https://paypal.me/niccolove
+Stay in the loop: https://t.me/veggeroblog
+My website is https://niccolo.venerandi.com and if you want to contact me, my telegram handle is [at] veggero.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Niccolò Venerandi Video</b></span>
+  on <time datetime="2022-01-08 10:51:09+00:00" class="dt-published"></time>
+  Sat 08 Jan 2022
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -301,9 +437,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://opensourcehacker.com/2022/01/07/building-cryptocurrency-site-with-svelte-python-and-timescaledb/" rel="bookmark" class="u-url"
-       title="Mikko Ohtamaa: Building cryptocurrency site with Svelte, Python and TimescaleDB" target="_blank">
-      <time class="m-date" datetime="2022-01-07 12:02:50+00:00">
+    <a href="https://xkcd.com/2565/" rel="bookmark" class="u-url"
+       title="Latency" target="_blank">
+      <time class="m-date" datetime="2022-01-07 00:00:00+00:00">
         Jan
         <span class="m-date-day">
           07
@@ -311,28 +447,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2022
       </time>
       <div class="p-name">
-      Mikko Ohtamaa: Building cryptocurrency site with Svelte, Python and TimescaleDB
+      Latency
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><em>This blog post is a repost of<a href="https://tradingstrategy.ai/blog/building-cryptocurrency-website"> the original technical overview of the Trading Strategy protocol software stack for community feed aggregators</a>. Please read the original blog post for the best layout and formatting.</em></p>
-<p>The audience of this post is software developers who are looking to build scalable software-as-a-service solutions and are interested in Svelte, Python and TimescaleDB technologies. Developers who are interested in Web3, Ethereum, cryptocurrency and blockchain technologies will also find this post useful.</p>
-<p></p>
-<p><a></a></p>
-What are Trading Strategy protocol and algorithmic trading?
-<p>Trading Strategy is a new service for algorithmic and technical trading of cryptocurrencies on <a href="https://tradingstrategy.ai/docs/glossary.html#term-Decentralised-exchange">decentralised exchange (DEXes)</a>.</p>
-<p>Algorithmic trading is a derivative of <a href="https://tradingstrategy.ai/docs/glossary.html#term-Technical-analysis">technical analysis</a>; taking trading positions based on pure mathematics and data. Algorithmic trading is part of quantitative finance, the opposite of value investing where trading decisions are made based on fundamentals. Algorithmic trading …</p>
+  <img alt="Each SCAPDFATIAT point increases the chance that the process will involve the phrase 'by the next business day.'" src="https://imgs.xkcd.com/comics/latency.png" title="Each SCAPDFATIAT point increases the chance that the process will involve the phrase 'by the next business day.'">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-07 12:02:50+00:00" class="dt-published"></time>
+  on <time datetime="2022-01-07 00:00:00+00:00" class="dt-published"></time>
   Fri 07 Jan 2022
-  in Planet Python.
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -387,66 +517,6 @@ debug.  This is what we basically want to accomplish:</p>
   on <time datetime="2022-01-07 00:00:00+00:00" class="dt-published"></time>
   Fri 07 Jan 2022
   in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://thisweek.gnome.org/posts/2022/01/twig-25/" rel="bookmark" class="u-url"
-       title="#25 The Big 1.0" target="_blank">
-      <time class="m-date" datetime="2022-01-07 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          07
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      #25 The Big 1.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Update on what happened across the GNOME project in the week from December 31 to January 07.</p>
-<p>We wish everyone a Happy New Year 🎆! The new year starts right with a “Big 1.0”, Libadwaita - an important cornerstone for GNOME apps, had its first stable release!</p>
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#core-apps-and-libraries"></a>Core Apps and Libraries
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#libadwaita"></a>Libadwaita <a href="https://gitlab.gnome.org/GNOME/libadwaita"></a>
-<p>Building blocks for modern GNOME apps using GTK4.</p>
-<p><a href="https://matrix.to/#/@alexm:gnome.org">Alexander Mikhaylenko</a> reports</p>
-<blockquote>
-<p>Libadwaita 1.0.0 has been released. Check out <a href="https://blogs.gnome.org/alexm/2021/12/31/libadwaita-1-0/">the announcement</a></p>
-</blockquote>
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#tracker"></a>Tracker <a href="https://gitlab.gnome.org/GNOME/tracker/"></a>
-<p>A filesystem indexer, metadata storage system and search tool.</p>
-<p><a href="https://matrix.to/#/@ssssam:matrix.org">Sam Thursfield</a> says</p>
-<blockquote>
-<p>In Tracker Miners, there are big performance improvements thanks to Carlos Garnacho. The way that we generate identifiers for file contents is changing, for more information see: <a href="https://discourse.gnome.org/t/tracker-3-3-will-reindex-files-and-change-content-ids/8583">https://discourse.gnome.org/t/tracker-3-3-will-reindex-files-and-change-content-ids/8583</a></p>
-</blockquote>
-<p><a href="https://matrix.to/#/@ssssam:matrix.org">Sam Thursfield</a> reports</p>
-<blockquote>
-<p>Also in Tracker Miners, there is a new filesystem monitoring backend using FANotify. This requires some kernel …</p></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-07 00:00:00+00:00" class="dt-published"></time>
-  Fri 07 Jan 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -563,40 +633,6 @@ DNS is still scaling well even though it&rsquo;s almost 40 years old. This is �
   on <time datetime="2022-01-05 06:42:51+00:00" class="dt-published"></time>
   Wed 05 Jan 2022
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2564/" rel="bookmark" class="u-url"
-       title="Sunshield" target="_blank">
-      <time class="m-date" datetime="2022-01-05 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          05
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Sunshield
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="RIP the surface of Mars" src="https://imgs.xkcd.com/comics/sunshield.png" title="RIP the surface of Mars">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-05 00:00:00+00:00" class="dt-published"></time>
-  Wed 05 Jan 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1069,40 +1105,6 @@ to perform the upgrade.
   on <time datetime="2021-12-27 00:00:00+00:00" class="dt-published"></time>
   Mon 27 Dec 2021
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://snarky.ca/unravelling-finally-and-else-from-try/" rel="bookmark" class="u-url"
-       title="Unravelling `finally` and `else` from `try` statements" target="_blank">
-      <time class="m-date" datetime="2021-12-25 04:45:37+00:00">
-        Dec
-        <span class="m-date-day">
-          25
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      Unravelling `finally` and `else` from `try` statements
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In the <a href="https://snarky.ca/unravelling-elif-else-from-if-statements/">last post</a> of my <a href="https://snarky.ca/tag/syntactic-sugar/">syntactic sugar series</a>, I showed how you can get away with not having <code>elif</code> and <code>else</code> clauses on an <code>if</code> statement. It turns out you can use the same trick to help get rid of <code>else</code> clauses on <code>try</code> statements. And then there&apos;</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Brett Cannon</b></span>
-  on <time datetime="2021-12-25 04:45:37+00:00" class="dt-published"></time>
-  Sat 25 Dec 2021
-  in Tall, Snarky Canadian.
 </footer>
 <div class="m-clearfix-l"></div>
 
