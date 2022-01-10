@@ -161,6 +161,183 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://itsmycode.com/solved-nameerror-name-pd-is-not-defined/" rel="bookmark" class="u-url"
+       title="ItsMyCode: [Solved] NameError: name &#8216;pd&#8217; is not defined" target="_blank">
+      <time class="m-date" datetime="2022-01-09 20:26:53+00:00">
+        Jan
+        <span class="m-date-day">
+          09
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      ItsMyCode: [Solved] NameError: name &#8216;pd&#8217; is not defined
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>ItsMyCode |</p>
+
+<p>In Python,&#xa0;<strong>&#xa0;NameError: name &#8216;pd&#8217; is not defined&#xa0;</strong>occurs when you import the pandas library but fail to provide the alias as pd while importing it.</p>
+
+
+
+<p>In this article, let us look at what is  NameError name pd is not defined and how to resolve this error with examples.</p>
+
+
+
+<span> Solution NameError: name &#8216;pd&#8217; is not defined </span>
+
+
+
+<p>Let us take a simple example to reproduce this error. In the below example, we have imported the pandas library and created a pandas DataFrame.</p>
+
+
+
+<pre><code># import pandas library
+import pandas 
+import numpy as np
+
+# create pandas DataFrame
+df =  pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
+                   columns=['a', 'b', 'c'])
+
+# print dataframe
+print(df)</code></pre>
+
+
+
+<p><strong>Output</strong></p>
+
+
+
+<pre><code>Traceback (most recent call last):
+  File "C:\Personal\IJS\Code\main.py", line 6, in &lt;module&gt;
+    df =  pd.DataFrame(np.array([[1, 2 …</code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-09 20:26:53+00:00" class="dt-published"></time>
+  Sun 09 Jan 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://k-d-w.org/blog/2022/01/scikit-survival-0.17-released/" rel="bookmark" class="u-url"
+       title="scikit-survival 0.17 released" target="_blank">
+      <time class="m-date" datetime="2022-01-09 15:45:38+00:00">
+        Jan
+        <span class="m-date-day">
+          09
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      scikit-survival 0.17 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>This release adds support for scikit-learn 1.0, which includes support for feature names. If you pass a pandas dataframe to <code>fit</code>, the estimator will set a <code>feature_names_in_</code> attribute containing the feature names. When a dataframe is passed to <code>predict</code>, it is checked that the column names are consistent with those passed to <code>fit</code>.
+The
+<a href="https://k-d-w.org/blog/2022/01/scikit-survival-0.17-released/#feature-names-support">
+example below
+</a>
+illustrates this feature.</p>
+<p>For a full list of changes in scikit-survival 0.17.0, please see the
+<a href="https://scikit-survival.readthedocs.io/en/v0.17.0/release_notes.html#scikit-survival-0-17-0-2022-01-09">release notes</a>.</p>
+Installation
+<p>Pre-built conda packages are available for Linux, macOS, and Windows via</p>
+<pre><code> conda install -c sebp scikit-survival
+</code></pre>
+<p>Alternatively, scikit-survival can be installed from source following
+<a href="https://scikit-survival.readthedocs.io/en/v0.17.0/install.html#from-source">these instructions</a>.</p>
+Feature Names Support
+<p>Prior to scikit-survival 0.17, you could pass a pandas dataframe to estimators’ <code>fit</code>
+and <code>predict</code> methods, but the estimator was oblivious to the
+feature names accessible via the dataframe’s <code>columns</code> attribute.
+With …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-09 15:45:38+00:00" class="dt-published"></time>
+  Sun 09 Jan 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://toscalix.com/2022/01/09/2022-resolution-become-machine-independent-again/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="2022 resolution: become machine independent again" target="_blank">
+      <time class="m-date" datetime="2022-01-09 15:39:35+00:00">
+        Jan
+        <span class="m-date-day">
+          09
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      2022 resolution: become machine independent again
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I change jobs frequently, I travel a lot, I work in the operating system space so I like to try out new distros, installers, recovery measures… In addition, even when I am at home, in Málaga or Los Llanos De Aridane, Canary Islands, I like to take notes and write at different places since I find little inspiration at my office…</p>
+
+
+
+<p>All these factors together means that I end up having several machines: laptops, convertibles, tablets, phone, RPis… and with various machines it comes the information, configurations and applications hell.</p>
+
+
+
+The mess
+
+
+
+<p>There used to be a time when I had the discipline to keep my information well managed as well as separated between work, personal related and junk. The result was that when travelling, I used to carry a single machine.</p>
+
+
+
+<p>Those days are long time gone.</p>
+
+
+
+<p>When working …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Agustín Benito Bethencourt (toscalix)</b></span>
+  on <time datetime="2022-01-09 15:39:35+00:00" class="dt-published"></time>
+  Sun 09 Jan 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://snarky.ca/unravelling-from/" rel="bookmark" class="u-url"
        title="Unravelling `from` for `raise` statements" target="_blank">
       <time class="m-date" datetime="2022-01-08 23:07:24+00:00">
@@ -187,180 +364,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2022-01-08 23:07:24+00:00" class="dt-published"></time>
   Sat 08 Jan 2022
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nibblestew.blogspot.com/2022/01/portability-is-not-sufficient-for.html" rel="bookmark" class="u-url"
-       title="Portability is not sufficient for portability" target="_blank">
-      <time class="m-date" datetime="2022-01-08 17:54:00+00:00">
-        Jan
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Portability is not sufficient for portability
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p></p>A forenote<div><p>This blog post has some examples of questionable quality. This should not be meant as an attack on those projects. The issues listed here are fairly widespread, these are just the examples I ran into while doing other work.</p>What is meant by portability?<p>Before looking into portable software, let's first examine portability from a hardware perspective. When you ask most people what they consider a "portable computer", they'll probably think of laptops or possibly even a modern smartphone. But what about this:</p><div><a href="https://www.blogger.com/"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhLFeurXG7V_cgge3EZ8j3sPArXsu1cWCno4qUF_nMH4SayyFXSeQKYpmhczw2Q3LieGm6W5dztrWOzUh_jO52R74_ubIlSec0lNfESH0tcj79k_UHowPdO0-9zTtGAXjTd7T46r2x-1vEb-2KUYXRrNnopd4O32cVekVRO1aUGPc74-DdpsEwuARu4=s320"></a></div><p>This is most definitely a computer (the one I'm using to write this blog post, in fact), but not portable. It weighs something on the order of 10 kilos and it is too big to comfortably wrap your hands around.</p><p>And yet, I have carried this computer from one end of the Helsinki metropolitan region …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2022-01-08 17:54:00+00:00" class="dt-published"></time>
-  Sat 08 Jan 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://itsmycode.com/python-string-swapcase/" rel="bookmark" class="u-url"
-       title="ItsMyCode: Python String swapcase()" target="_blank">
-      <time class="m-date" datetime="2022-01-08 11:50:27+00:00">
-        Jan
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      ItsMyCode: Python String swapcase()
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>ItsMyCode |</p>
-
-<p>Python string swapcase() method is a built-in function that converts all uppercase characters into lowercase and all lowercase characters into uppercase characters of a given string and returns a new string.</p>
-
-
-
-<span>swapcase() Syntax</span>
-
-
-
-<p>The Syntax of <strong><code>swapcase()</code></strong> method is:</p>
-
-
-
-<pre>string.swapcase()</pre>
-
-
-
-<span>swapcase() Parameters</span>
-
-
-
-<p>The <code><strong>swapcase()</strong></code>&nbsp;method doesn&#8217;t take any parameters.</p>
-
-
-
-<span>swapcase() Return Value</span>
-
-
-
-<p>The <strong><code>swapcase()</code></strong> method returns a copy of the string where all the uppercase characters are converted into lowercase characters and vice-versa.</p>
-
-
-
-<p>In case the string has other than alphabets those characters will not be converted and returned as-is.</p>
-
-
-
-<span>Example: Python Program to change the case of a given string</span>
-
-
-
-<pre><code>text1 = "pYTHON tUTORIALS"
-print(text1.swapcase())
-
-text2 = "HELLO WORLD"
-print(text2.swapcase())
-
-text3 = "welcome to itsmycode"
-print(text3.swapcase())
-
-text4 ="12345!!!"
-print(text4.swapcase())</code></pre>
-
-
-
-<p><strong>Output</strong></p>
-
-
-
-<pre><code>Python Tutorials
-hello world
-WELCOME TO ITSMYCODE
-12345!!!</code></pre>
-
-
-
-<pre><strong>Note:</strong>&#xa0;If you …</pre>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-08 11:50:27+00:00" class="dt-published"></time>
-  Sat 08 Jan 2022
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tube.kockatoo.org/w/gYYvWMS7umTiwUTPu8tP1v?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Developer Contributes To GNOME!?" target="_blank">
-      <time class="m-date" datetime="2022-01-08 10:51:09+00:00">
-        Jan
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Developer Contributes To GNOME!?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  💸💸 Help me contribute to KDE and do these videos: 💸💸
-Patreon: https://www.patreon.com/niccolove
-Youtube: https://www.youtube.com/channel/UCONH73CdRXUjlh3-DdLGCPw/join
-Paypal: https://paypal.me/niccolove
-Stay in the loop: https://t.me/veggeroblog
-My website is https://niccolo.venerandi.com and if you want to contact me, my telegram handle is [at] veggero.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Niccolò Venerandi Video</b></span>
-  on <time datetime="2022-01-08 10:51:09+00:00" class="dt-published"></time>
-  Sat 08 Jan 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1177,44 +1180,6 @@ to perform the upgrade.
   on <time datetime="2021-12-22 14:35:16+00:00" class="dt-published"></time>
   Wed 22 Dec 2021
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.python.org/dev/peps/pep-0678/" rel="bookmark" class="u-url"
-       title="PEP 678: Enriching Exceptions with Notes" target="_blank">
-      <time class="m-date" datetime="2021-12-20 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          20
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      PEP 678: Enriching Exceptions with Notes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Exception objects are typically initialized with a message that describes the
-error which has occurred.  Because further information may be available when the
-exception is caught and re-raised, this PEP proposes to add a .__note__
-attribute and update the builtin traceback formatting code to include it in
-the formatted traceback following the exception string.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Zac Hatfield-Dodds <zac@zhd.dev></b></span>
-  on <time datetime="2021-12-20 00:00:00+00:00" class="dt-published"></time>
-  Mon 20 Dec 2021
-  in Newest Python PEPs.
 </footer>
 <div class="m-clearfix-l"></div>
 
