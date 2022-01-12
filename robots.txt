@@ -5,7 +5,6 @@ Disallow: /author/
 Disallow: /category/
 Disallow: /drafts/
 Disallow: /images/
-Disallow: /pages/
 Disallow: /pdf/
 Disallow: /static/
 Disallow: /tag/

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-12-19T15:30:21+01:00</updated><subtitle></subtitle><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-11T00:50:07+01:00</updated><subtitle></subtitle><entry><title>Email services</title><link href="https://fluid.quest/email-services.html" rel="alternate"></link><published>2022-01-11T00:50:07+01:00</published><updated>2022-01-11T00:50:07+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-11:/email-services.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My current email server &lt;a href="https://protonmail.com"&gt;Protonmail&lt;/a&gt;, while reliable and easy to get started, ends up indirectly holding you hostage, if you need to add your own domain name, it comes with a steep cost of  € 48 per year (not to mention there is no official support for IMAP for the free tier). The next best option I had seen so far was &lt;a href="https://register.mailbox.org/en"&gt;mailbox.de&lt;/a&gt; with the same at € 36 per year.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://purelymail.com/"&gt;Purelymail&lt;/a&gt; is an interesting service offering this and much more at $ 10 per year. Looks like an indie operation from the website, but it does come with a compelling pricing. It is, however a US based company so all the privacy caveats attaches with the service. Although the company themselves do not sell any data, they do acknowledge the &lt;a href="https://purelymail.com/docs/security"&gt;limitations in their approach&lt;/a&gt;. Nevertheless I am curious to know how it goes for &lt;a href="https://jlelse.blog/"&gt;jlelse&lt;/a&gt;.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/"&gt;https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://blog.xmgz.eu/jekyll-mastodon-comment/"&gt;https://blog.xmgz.eu/jekyll-mastodon-comment/&lt;/a&gt;&lt;/li&gt;
@@ -181,62 +182,4 @@ business model such as &lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt;
 &lt;p&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines &lt;a href="https://wizardzines.com/licensing/"&gt;CC-BY-NC-SA 4.0&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:zines" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry><entry><title>Show Your Stripes Day</title><link href="https://fluid.quest/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;The end of the COVID-19 pandemic is visible as vaccinations progress in most
-places across the world, slowly but surely,&lt;/p&gt;
-&lt;figure&gt;
-&lt;img alt="COVID-19 vaccinations progress across the world as of 2021-06-18." src="images/coronavirus-data-explorer.svg" style="width: 100%" /&gt;
-&lt;figcaption&gt;Continent-wise share of people who received at least one dose of COVID-19
-vaccine.&lt;/figcaption&gt;
-&lt;span&gt;
-&lt;a href="https://ourworldindata.org/"&gt;Source&lt;/a&gt; CC-BY 4.0, Our world in data&lt;/span&gt;
-&lt;/figure&gt;
-&lt;p&gt;You and I must be looking forward to a return to normality and a happy ending
-as all children’s books end. However as all stories go, this is anything but
-the end. Humanity has been thrust into a series of struggles in this modern
-age. As I like to remind myself, it is humanity that needs saving — not life.
-Life always finds a way. We have to ensure that we are not the architects of
-our own doom.&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src="https://live.staticflickr.com/4033/5160100668_fb96c15527_b.jpg" alt="Life Will Find a Way" style="width: 100%"&gt;
-&lt;figcaption&gt;
-&lt;a href="https://www.flickr.com/photos/56413961@N00/5160100668"&gt;
-  "Life Will Find a Way"
-&lt;/a&gt;
-&lt;span&gt; by &lt;a href="https://www.flickr.com/photos/56413961@N00"&gt;JapanDave&lt;/a&gt;&lt;/span&gt; is licensed under &lt;a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&amp;atype=html" style="margin-right: 5px;"&gt;CC BY-NC-SA 2.0&lt;/a&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;p&gt;Now we face the elephant in the room: the climate emergency, global heating
-(erstwhile, global warming) is still on. It did not take a break during the
-pandemic as most of us stopped commuting, travelling long distances and sat
-home for several months at a stretch. Why? It’s because the energy production
-and the economy continued to function as it has always been. A system with
-little incentive to reduce emissions without sweeping tax reforms and
-regulations to level the playing field.&lt;/p&gt;
-&lt;p&gt;Leading up to &lt;a href="https://nitter.snopyta.org/WMO/status/1405872275610554370#m"&gt;Show Your Stripes Day&lt;/a&gt; on 21 June, I took a moment to look at
-all the places I have lived.&lt;/p&gt;
-&lt;figure&gt;
-   &lt;video controls autoplay width="100%"&gt;
-
-       &lt;source src="/media/videos/stripes.mp4"
-               type="video/mp4"&gt;
-
-       Sorry, your browser doesn't support embedded videos.
-   &lt;/video&gt;
-   &lt;figcaption&gt;
-      &lt;a href="https://showyourstripes.info/"&gt;Source&lt;/a&gt;,
-      CC-BY 4.0,
-      Professor Ed Hawkins (University of Reading)
-   &lt;/figcaption&gt;
-&lt;/figure&gt;&lt;p&gt;Of the regions highlighted above, France and Kerala (India) have a stark
-contrast in the temperature anomalies in the past two decades. Naturally, in
-France owing to heat waves, there has been a wave of climate activism in recent
-years. I can vouch personally that summers in Kerala have been unbearable and I
-had to install air-conditioning in my home — something that was avoidable in
-my childhood. I also recall that during monsoon seasons of 2013 and &lt;a href="https://en.wikipedia.org/wiki/2018_Kerala_floods"&gt;2018&lt;/a&gt;
-triggered low depressions, widespread torrential rains to such an extent that
-dams had to be opened.&lt;/p&gt;
-&lt;p&gt;As most climate scientists believe, if the heating continues and more
-greenhouse gases are dumped into the atmosphere, unabated, then extreme events
-would become more frequent. I believe that you are aware of all of this. The data
-is clear. It is hot everywhere.&lt;/p&gt;
-</content><category term="Blog"></category><category term="life"></category><category term="climate"></category><category term="covid-19"></category></entry></feed>
+&lt;/div&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry></feed>
