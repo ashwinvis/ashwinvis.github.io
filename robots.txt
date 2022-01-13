@@ -1,13 +1,12 @@
 # See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
 
+Sitemap: https://fluid.quest/sitemap.xml
+
 User-agent: *
-Disallow: /author/
-Disallow: /category/
 Disallow: /drafts/
 Disallow: /images/
 Disallow: /pdf/
 Disallow: /static/
-Disallow: /tag/
 
 # Whitelist some known good bots: DuckDuckGo, Qwant
 User-agent: DuckDuckBot
