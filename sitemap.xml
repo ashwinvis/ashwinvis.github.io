@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/</loc>
-<lastmod>2022-01-15T04:25:15-00:00</lastmod>
+<lastmod>2022-01-16T00:18:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/planet.html</loc>
-<lastmod>2022-01-15T04:25:15-00:00</lastmod>
+<lastmod>2022-01-16T00:18:14-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -26,7 +26,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/cv.html</loc>
-<lastmod>2019-02-18T15:10:00+01:00</lastmod>
+<lastmod>2022-01-16T00:10:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -40,7 +40,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/planet.html</loc>
-<lastmod>2022-01-15T04:25:15-00:00</lastmod>
+<lastmod>2022-01-16T00:18:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -54,7 +54,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/showcase.html</loc>
-<lastmod>2022-01-15T04:25:15-00:00</lastmod>
+<lastmod>2022-01-16T00:18:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -68,7 +68,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/sponsors.html</loc>
-<lastmod>2022-01-15T04:25:15-00:00</lastmod>
+<lastmod>2022-01-16T00:18:14-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -81,15 +81,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://fluid.quest/email-services.html</loc>
-<lastmod>2022-01-11T00:50:07+01:00</lastmod>
+<loc>https://fluid.quest/ashwin-vishnu-mohanan.html</loc>
+<lastmod>2022-01-15T23:01:55+00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://fluid.quest/ashwin-vishnu-mohanan.html</loc>
-<lastmod>2022-01-01T00:00:00+01:00</lastmod>
+<loc>https://fluid.quest/email-services.html</loc>
+<lastmod>2022-01-11T00:50:07+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -495,7 +495,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/category/static.html</loc>
-<lastmod>2022-01-01T00:00:00+01:12</lastmod>
+<lastmod>2022-01-15T23:01:55+01:12</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1097,7 +1097,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/author/ashwin-vishnu-mohanan.html</loc>
-<lastmod>2022-01-11T00:50:07+01:12</lastmod>
+<lastmod>2022-01-15T23:01:55+01:12</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
