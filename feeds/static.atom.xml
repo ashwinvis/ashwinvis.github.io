@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-11T00:50:07+01:00</updated><subtitle></subtitle><entry><title>Email services</title><link href="https://fluid.quest/email-services.html" rel="alternate"></link><published>2022-01-11T00:50:07+01:00</published><updated>2022-01-11T00:50:07+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-11:/email-services.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My current email server &lt;a href="https://protonmail.com"&gt;Protonmail&lt;/a&gt;, while reliable and easy to get started, ends up indirectly holding you hostage, if you need to add your own domain name, it comes with a steep cost of  € 48 per year (not to mention there is no official support for IMAP for the free tier). The next best option I had seen so far was &lt;a href="https://register.mailbox.org/en"&gt;mailbox.de&lt;/a&gt; with the same at € 36 per year.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://purelymail.com/"&gt;Purelymail&lt;/a&gt; is an interesting service offering this and much more at $ 10 per year. Looks like an indie operation from the website, but it does come with a compelling pricing. It is, however a US based company so all the privacy caveats attaches with the service. Although the company themselves do not sell any data, they do acknowledge the &lt;a href="https://purelymail.com/docs/security"&gt;limitations in their approach&lt;/a&gt;. Nevertheless I am curious to know how it goes for &lt;a href="https://jlelse.blog/"&gt;jlelse&lt;/a&gt;.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>Ashwin Vishnu Mohanan</title><link href="https://fluid.quest/ashwin-vishnu-mohanan.html" rel="alternate"></link><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-01:/ashwin-vishnu-mohanan.html</id><summary type="html"></summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - static</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/static.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-01T00:00:00+01:00</updated><subtitle></subtitle><entry><title>Ashwin Vishnu Mohanan</title><link href="https://fluid.quest/ashwin-vishnu-mohanan.html" rel="alternate"></link><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-01:/ashwin-vishnu-mohanan.html</id><summary type="html"></summary><content type="html">
 
 	&lt;div id="resume"&gt;
 
@@ -519,97 +518,4 @@ engineering backgrounds.&lt;/li&gt;
 
 	&lt;/div&gt;
 
-	</content><category term="static"></category></entry><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/"&gt;https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://blog.xmgz.eu/jekyll-mastodon-comment/"&gt;https://blog.xmgz.eu/jekyll-mastodon-comment/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://fossacademic.tech/2021/12/16/CommentsTest.html"&gt;https://fossacademic.tech/2021/12/16/CommentsTest.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I have found a way to integrate comments from Fediverse into the blog. The
-implementation is integrated into my Pelican theme. See 
-&lt;a href="https://codeberg.org/ashwinvis/m.css/commit/d5093d090f3e8458e53f5f4b534f757ffb311d57"&gt;this
-commit&lt;/a&gt;.
-Now, I need to find a smart way to automate this workflow -- possibly using the
-command line Toot client.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Global Climate Strike</title><link href="https://fluid.quest/global-climate-strike-sept-2021.html" rel="alternate"></link><published>2021-09-24T00:00:00+02:00</published><updated>2021-09-24T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-09-24:/global-climate-strike-sept-2021.html</id><summary type="html">&lt;p&gt;
-On September 24th many a soul around the world participate in a Global Climate Strike. Here I participate with some thoughts I wish to share. The only feasible solution to the Climate Crisis, is not a scientific one, but through policy. It is upto the ones in power - both in industry, finance and politics to make the right call, uproot the system and plant it anew. Why? I am glad you asked.  Let me explain…&lt;br /&gt;
-&lt;/p&gt;
-</summary><content type="html">&lt;section id="do-not-despair-let-s-face-it-together"&gt;
-&lt;h2&gt;Do not despair, let’s face it together&lt;/h2&gt;
-&lt;p&gt;When it comes attitudes on facing Climate Change, there are three kinds of people. They may choose to:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;ignore or downplay dangers of Climate Change&lt;/li&gt;
-&lt;li&gt;recognize the dangers that await us, but tackle them objectively
-rather than emotionally by making lifestyle choices&lt;/li&gt;
-&lt;li&gt;take it as a personal crusade, making emotionally attached to the
-crisis – which it is – and succumbing to negativity or anger&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Which one is the right attitude? I would say all three are flawed
-behaviours. My reasons are as follows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;ignoring the dangers are what got us into the mess in the first place&lt;/li&gt;
-&lt;li&gt;taking personal responsibility is not enough to make a dent the
-system (more on this later)&lt;/li&gt;
-&lt;li&gt;protests do works in energising the people around you, but if it has
-a detrimental effect if the result is nothing more than &lt;em&gt;be the
-change you want to see in the world&lt;/em&gt; and then grieving over it&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;At this point I should make it clear that the solutions that we should
-focus on is a systemic, economic, industrial and political one. The
-science has been clear for far too long. Waiting for a engineering
-marvel to save us all is a foolish dream (i.e. it may not happen as soon as we
-want it).&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="taking-personal-responsibility-does-it-work"&gt;
-&lt;h2&gt;Taking personal responsibility - does it work?&lt;/h2&gt;
-&lt;p&gt;I recall a conversation between graduate students in Earth sciences commenting
-that it is uncomfortable when they go for a one-off mission on a research
-vessel to the Arctic, because it is powered by diesel. Some things are
-unavoidable, but some are not.  You are not alone. At some point in life I used
-to believe so that if I make the right choices towards reducing my carbon
-footprint would fix everything.  Less plastic. Less waste. Less cars. Less
-electricity.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;em&gt;Less is more&lt;/em&gt;, &lt;strong&gt;but not enough&lt;/strong&gt;.&lt;/blockquote&gt;
-&lt;p&gt;Today, I am inclined to say that this is &lt;a href="https://www.theguardian.com/commentisfree/2019/jul/10/individuals-climate-crisis-government-planet-priority"&gt;not enough as a society&lt;/a&gt;.  Sure,
-small gestures do help, but it always end up in the minority who try to fix
-things. The cumulative effect as a society remains virtually unchanged.  Even
-if we all choose not to fly, go vegetarian / vegan, consume less and basically
-bide time – as most of us have done during Covid-19 pandemic – the emissions
-continued to pile up to new &lt;a href="https://public.wmo.int/en/media/press-release/carbon-dioxide-levels-continue-record-levels-despite-covid-19-lockdown"&gt;record levels&lt;/a&gt;.
-Why did it happen? It is a systemic issue. A vicious cycle which keeps the &lt;a href="https://www.theguardian.com/sustainable-business/2017/jul/10/100-fossil-fuel-companies-investors-responsible-71-global-emissions-cdp-study-climate-change"&gt;industry&lt;/a&gt;
-(particularly the oil and gas, but also food, transport, energy, construction
-and basically everything) functioning as it always had. Market forces such as
-fossil-fuel subsidies (which still exists!) would delay the move to a clean,
-sustainable society.&lt;/p&gt;
-&lt;p&gt;Did you know that the &lt;a href="https://www.theguardian.com/commentisfree/2021/aug/23/big-oil-coined-carbon-footprints-to-blame-us-for-their-greed-keep-them-on-the-hook"&gt;concept of carbon footprint&lt;/a&gt; was an invention of an oil
-company originally intended to shift the blame onto powerless individuals.
-Neither did I. At least now that is used to keep tabs on corporations! This
-&lt;a href="https://www.youtube.com/watch?v=yiw6_JakZFc"&gt;video essay&lt;/a&gt; by Kurzgesagt also discusses this issue at length.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="how-much-time-do-we-have-left"&gt;
-&lt;h2&gt;How much time do we have left?&lt;/h2&gt;
-&lt;p&gt;Scientists have conservatively &lt;a href="https://cds.climate.copernicus.eu/cdsapp#!/software/app-c3s-global-temperature-trend-monitor?tab=app"&gt;estimated&lt;/a&gt; that at around 2030 we will reach the tipping point of 1.5 degrees warming.&lt;/p&gt;
-&lt;figure&gt;
-&lt;a href="https://cds.climate.copernicus.eu/cdsapp#!/software/app-c3s-global-temperature-trend-monitor"&gt;&lt;img alt="How close are we to reaching a global warming of 1.5˚C?" src="https://fluid.quest/images/global_temp_trend.png" style="width: 100%" /&gt;&lt;/a&gt;
-&lt;figcaption&gt;How close are we to reaching a global warming of 1.5˚C? (Generated using
-Copernicus Climate Change Service information [2021]. click to go to the web
-app and see for yourselves)&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;By now you should be convinced that this is an urgent matter. If not have a
-look at web app above or &lt;a href="https://climateclock.net/"&gt;this infographic&lt;/a&gt; (Note: it plays some sombre music
-when you click) or see the one below. Share your thoughts with your friends and
-family. Talk about it. Make sure our voices are heard and our votes count. We
-have little time left to act.&lt;/p&gt;
-&lt;script src="https://api.climateclock.world/assets/widget-v2.js" async&gt;&lt;/script&gt;
-&lt;noscript&gt;&lt;a href="https://climateclock.world/"&gt;Climate Clock&lt;/a&gt;&lt;/noscript&gt;
-&lt;climate-clock/&gt;&lt;/section&gt;
-</content><category term="Blog"></category><category term="life"></category><category term="climate"></category><category term="FridaysForFuture"></category><category term="DigitalStrike"></category><category term="covid-19"></category></entry><entry><title>The Carpentries Instructor Training</title><link href="https://fluid.quest/the-carpentries-instructor-training.html" rel="alternate"></link><published>2021-09-14T10:42:36+02:00</published><updated>2021-09-16T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-09-14:/the-carpentries-instructor-training.html</id><summary type="html"></summary><content type="html">&lt;p&gt;I have signed up to be trained as a certified Carpentry instructor and it has been wonderful learning experience so far. I received this information from Coderefinery and there are more &lt;a href="https://carpentries.github.io/instructor-training/training_calendar/#upcoming-instructor-training"&gt;upcoming online instructor trainings this fall&lt;/a&gt;. If you are:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;in Nordics or Estonia,&lt;/li&gt;
-&lt;li&gt;can attend the training on October 18-21, 4 hours in evening check your local time without any absence, and&lt;/li&gt;
-&lt;li&gt;agree with the conditions to take the training (refer &lt;a href="https://amy.carpentries.org/forms/request_training/"&gt;https://amy.carpentries.org/forms/request_training/&lt;/a&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;reach out to&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://coderefinery.zulipchat.com/#narrow/stream/300025-carpentries/topic/Announcement.20of.20new.20upcoming.20instructor.20trainings"&gt;https://coderefinery.zulipchat.com/#narrow/stream/300025-carpentries/topic/Announcement.20of.20new.20upcoming.20instructor.20trainings&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;to help you through the process. This priority would expire soon as NeIC's
-membership of the Carpentries expire at the end of October.&lt;/p&gt;</content><category term="Microblog"></category></entry></feed>
+	</content><category term="static"></category></entry></feed>
