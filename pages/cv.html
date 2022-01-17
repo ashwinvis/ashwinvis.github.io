@@ -145,7 +145,7 @@
         <h1>Curriculum Vitae</h1>
 <!-- content -->
 <div class="m-row">
-<div class="m-col-l-3">
+<div class="m-col-l-3 m-push-l-8 m-col-m-4 m-push-m-8 m-col-s-6 m-push-s-4 m-col-t-8 m-push-t-2">
 <div class="m-fullwidth m-button m-primary">
 <a href="../pdf/CV_Mohanan_AshwinVishnu.pdf"><span>Download PDF</span></a>
 </div>
@@ -157,17 +157,20 @@
 
 	<meta name="encoding" charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	<meta name="date" content="2022-01-01">
+	<meta name="date" content="2022-01-15T23:01:55.126Z">
 
 	<title>Ashwin Vishnu Mohanan</title>
 
 	<style>
-	body {
-	background: #fff;
+	
+#resume {
 	font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
 	line-height: 1.4;
-	margin: 0 0;
 	margin-bottom: 100px;
+	/* box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); */
+	margin: 2em auto 2em auto;
+	max-width: 960px;
+	padding: 1em;
 }
 em {
 	color: #999;
@@ -178,7 +181,6 @@ p {
 }
 
 a {
-	color: #2C85B1;
 	text-decoration: none;
 	font-weight: 400;
 }
@@ -191,10 +193,6 @@ section {
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
-}
-#resume {
-	margin: 2em auto 2em auto;
-	max-width: 760px;
 }
 
 /* Resume heading */
@@ -231,9 +229,9 @@ blockquote {
 /* section / line breaks */
 section h2 {
 	font-size: 140%;
+	font-style: normal !important;
 	margin: 0 0 1em;
 	text-transform: uppercase;
-	color: #BC1B39;
 	font-weight: 400;
 }
 
@@ -295,6 +293,23 @@ section h2 {
 	text-transform: uppercase;
 }
 
+/* @media (prefers-color-scheme: light) { */
+html[data-theme='light'] #resume a {
+	color: #2C85B1 !important;
+}
+
+html[data-theme='light'] section h2 {
+	color: #BC1B39 !important;
+}
+
+/* @media (prefers-color-scheme: dark) {*/
+html[data-theme='dark'] #resume a {
+	color: #A5C9EA !important;
+}
+
+html[data-theme='dark'] section h2 {
+	color: #CE99A3 !important;
+}
 
 @media(min-width: 600px) {
 	#skills .item .name {
@@ -339,7 +354,7 @@ section h2 {
 		</header>
 
 
-		<p><p>I identify myself as a experienced software developer who enjoys developing software primarly using Python. I have a Ph.D. from Department of Engineering Mechanics at KTH, Sweden, where my main focus was on simulating turbulence in the atmosphere. I am always keen on working at the intersection of sciences, software development and I am well versed in the Python open-source ecosystem and good practices. My guiding principle is to "Leave this world a little better than you found it."</p><p>	</p></p>
+		<p><p>I identify myself as a experienced software developer who enjoys developing software primarly using Python. I have a Ph.D. from Department of Engineering Mechanics at KTH, Sweden, where my main focus was on simulating turbulence in the atmosphere. I am always keen on working at the intersection of sciences, software development and well versed in the Python open-source ecosystem and good practices. My guiding principle is to "Leave this world a little better than you found it."</p><p>	</p></p>
 
 			<div class="profile">
 				<strong class="network">
@@ -456,7 +471,9 @@ section h2 {
 
 			<div class="heading">
 				<header>
+						<a href="https://www.su.se/department-of-meteorology/">
 						<h3 class="name">Stockholm University</h3>
+						</a>
 				</header>
 				<span class="startDate">
 					Oct 2019
@@ -477,7 +494,7 @@ section h2 {
 				<li>Made Python package &#x60;pymech&#x60; 100 times faster &amp; added user-friendly functions.</li>
 				<li>Developed an ABL solver using spectral element code Nek5000.</li>
 				<li>Created Python package &#x60;snek5000&#x60; as a scriptable framework for Nek5000.</li>
-				<li>Worked within a multi-disciplinary team comprising of researchers with applied mathematics, meteorology and
+				<li>Worked within a multi-disciplinary team comprising of researchers with applied mathematics, meteorology and 
 engineering backgrounds.</li>
 			</ul>
 		</section>
@@ -485,7 +502,9 @@ engineering backgrounds.</li>
 
 			<div class="heading">
 				<header>
+						<a href="https://www.legi.grenoble-inp.fr/web/?lang&#x3D;en">
 						<h3 class="name">Université Grenoble Alpes</h3>
+						</a>
 				</header>
 				<span class="startDate">
 					May 2016
@@ -511,7 +530,9 @@ engineering backgrounds.</li>
 
 			<div class="heading">
 				<header>
+						<a href="https://web.archive.org/web/20210301163718/https://delhi.gsconst.co.in/">
 						<h3 class="name">GS Engineering and Construction</h3>
+						</a>
 				</header>
 				<span class="startDate">
 					Jul 2011
@@ -538,7 +559,9 @@ engineering backgrounds.</li>
 		<h2>Education</h2>
 		<div class="item">
 			<header>
+					<a href="https://www.kth.se/mech">
 					<h3 class="name">KTH Royal Institute of Technology</h3>
+					</a>
 			</header>
 
 			<div class="dates">
@@ -570,7 +593,9 @@ engineering backgrounds.</li>
 		</div>
 		<div class="item">
 			<header>
+					<a href="https://iitk.ac.in/aero/">
 					<h3 class="name">Indian Institute of Technology (IIT), Kanpur</h3>
+					</a>
 			</header>
 
 			<div class="dates">
@@ -614,7 +639,9 @@ engineering backgrounds.</li>
 
 			<div class="heading">
 				<header>
+						<a href="https://carpentries.org/">
 						<h3 class="name">Software Carpentry</h3>
+						</a>
 				</header>
 				<span class="startDate">
 					Nov 2021
@@ -636,7 +663,9 @@ engineering backgrounds.</li>
 
 			<div class="heading">
 				<header>
+						<a href="https://reddit.com/r/FluidMechanics">
 						<h3 class="name">Subreddit r/FluidMechanics</h3>
+						</a>
 				</header>
 				<span class="startDate">
 					Apr 2015

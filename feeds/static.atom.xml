@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - static</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/static.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-01T00:00:00+01:00</updated><subtitle></subtitle><entry><title>Ashwin Vishnu Mohanan</title><link href="https://fluid.quest/ashwin-vishnu-mohanan.html" rel="alternate"></link><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-01:/ashwin-vishnu-mohanan.html</id><summary type="html"></summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - static</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/static.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-15T23:01:55+00:00</updated><subtitle></subtitle><entry><title>Ashwin Vishnu Mohanan</title><link href="https://fluid.quest/ashwin-vishnu-mohanan.html" rel="alternate"></link><published>2022-01-15T23:01:55+00:00</published><updated>2022-01-15T23:01:55+00:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-15:/ashwin-vishnu-mohanan.html</id><summary type="html"></summary><content type="html">
 
 	&lt;div id="resume"&gt;
 
@@ -11,7 +11,7 @@
 		&lt;/header&gt;
 
 
-		&lt;p&gt;&lt;p&gt;I identify myself as a experienced software developer who enjoys developing software primarly using Python. I have a Ph.D. from Department of Engineering Mechanics at KTH, Sweden, where my main focus was on simulating turbulence in the atmosphere. I am always keen on working at the intersection of sciences, software development and I am well versed in the Python open-source ecosystem and good practices. My guiding principle is to "Leave this world a little better than you found it."&lt;/p&gt;&lt;p&gt;	&lt;/p&gt;&lt;/p&gt;
+		&lt;p&gt;&lt;p&gt;I identify myself as a experienced software developer who enjoys developing software primarly using Python. I have a Ph.D. from Department of Engineering Mechanics at KTH, Sweden, where my main focus was on simulating turbulence in the atmosphere. I am always keen on working at the intersection of sciences, software development and well versed in the Python open-source ecosystem and good practices. My guiding principle is to "Leave this world a little better than you found it."&lt;/p&gt;&lt;p&gt;	&lt;/p&gt;&lt;/p&gt;
 
 			&lt;div class="profile"&gt;
 				&lt;strong class="network"&gt;
@@ -128,7 +128,9 @@
 
 			&lt;div class="heading"&gt;
 				&lt;header&gt;
+						&lt;a href="https://www.su.se/department-of-meteorology/"&gt;
 						&lt;h3 class="name"&gt;Stockholm University&lt;/h3&gt;
+						&lt;/a&gt;
 				&lt;/header&gt;
 				&lt;span class="startDate"&gt;
 					Oct 2019
@@ -149,7 +151,7 @@
 				&lt;li&gt;Made Python package &amp;#x60;pymech&amp;#x60; 100 times faster &amp;amp; added user-friendly functions.&lt;/li&gt;
 				&lt;li&gt;Developed an ABL solver using spectral element code Nek5000.&lt;/li&gt;
 				&lt;li&gt;Created Python package &amp;#x60;snek5000&amp;#x60; as a scriptable framework for Nek5000.&lt;/li&gt;
-				&lt;li&gt;Worked within a multi-disciplinary team comprising of researchers with applied mathematics, meteorology and
+				&lt;li&gt;Worked within a multi-disciplinary team comprising of researchers with applied mathematics, meteorology and 
 engineering backgrounds.&lt;/li&gt;
 			&lt;/ul&gt;
 		&lt;/section&gt;
@@ -157,7 +159,9 @@ engineering backgrounds.&lt;/li&gt;
 
 			&lt;div class="heading"&gt;
 				&lt;header&gt;
+						&lt;a href="https://www.legi.grenoble-inp.fr/web/?lang=en"&gt;
 						&lt;h3 class="name"&gt;Université Grenoble Alpes&lt;/h3&gt;
+						&lt;/a&gt;
 				&lt;/header&gt;
 				&lt;span class="startDate"&gt;
 					May 2016
@@ -183,7 +187,9 @@ engineering backgrounds.&lt;/li&gt;
 
 			&lt;div class="heading"&gt;
 				&lt;header&gt;
+						&lt;a href="https://web.archive.org/web/20210301163718/https://delhi.gsconst.co.in/"&gt;
 						&lt;h3 class="name"&gt;GS Engineering and Construction&lt;/h3&gt;
+						&lt;/a&gt;
 				&lt;/header&gt;
 				&lt;span class="startDate"&gt;
 					Jul 2011
@@ -210,7 +216,9 @@ engineering backgrounds.&lt;/li&gt;
 		&lt;h2&gt;Education&lt;/h2&gt;
 		&lt;div class="item"&gt;
 			&lt;header&gt;
+					&lt;a href="https://www.kth.se/mech"&gt;
 					&lt;h3 class="name"&gt;KTH Royal Institute of Technology&lt;/h3&gt;
+					&lt;/a&gt;
 			&lt;/header&gt;
 
 			&lt;div class="dates"&gt;
@@ -242,7 +250,9 @@ engineering backgrounds.&lt;/li&gt;
 		&lt;/div&gt;
 		&lt;div class="item"&gt;
 			&lt;header&gt;
+					&lt;a href="https://iitk.ac.in/aero/"&gt;
 					&lt;h3 class="name"&gt;Indian Institute of Technology (IIT), Kanpur&lt;/h3&gt;
+					&lt;/a&gt;
 			&lt;/header&gt;
 
 			&lt;div class="dates"&gt;
@@ -286,7 +296,9 @@ engineering backgrounds.&lt;/li&gt;
 
 			&lt;div class="heading"&gt;
 				&lt;header&gt;
+						&lt;a href="https://carpentries.org/"&gt;
 						&lt;h3 class="name"&gt;Software Carpentry&lt;/h3&gt;
+						&lt;/a&gt;
 				&lt;/header&gt;
 				&lt;span class="startDate"&gt;
 					Nov 2021
@@ -308,7 +320,9 @@ engineering backgrounds.&lt;/li&gt;
 
 			&lt;div class="heading"&gt;
 				&lt;header&gt;
+						&lt;a href="https://reddit.com/r/FluidMechanics"&gt;
 						&lt;h3 class="name"&gt;Subreddit r/FluidMechanics&lt;/h3&gt;
+						&lt;/a&gt;
 				&lt;/header&gt;
 				&lt;span class="startDate"&gt;
 					Apr 2015

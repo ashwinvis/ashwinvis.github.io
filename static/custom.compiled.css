@@ -86,12 +86,12 @@ main p {
 	text-indent: unset;
 }
 html[data-theme='dark'] article section > :is(h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a) {
-      font-style: italic !important;
-      color: white !important;
+      font-style: italic;
+      color: white;
 }
 html[data-theme='light'] article section > :is(h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a) {
-      font-style: italic !important;
-      color: black !important;
+      font-style: italic;
+      color: black;
 }
 article section > h2 {
 	margin-top: 2.1rem;

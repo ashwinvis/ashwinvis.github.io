@@ -161,33 +161,157 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.pythonpodcast.com/effective-pandas-book-episode-348/" rel="bookmark" class="u-url"
-       title="Podcast.__init__: An Exploration Of Effective Pandas Practices With Matt Harrison" target="_blank">
-      <time class="m-date" datetime="2022-01-15 19:45:48+00:00">
+    <a href="https://jlelse.blog/micro/2022/01/2022-01-16-nsngf" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2022-01-16 18:39:36+01:00">
         Jan
         <span class="m-date-day">
-          15
+          16
         </span>
         2022
       </time>
       <div class="p-name">
-      Podcast.__init__: An Exploration Of Effective Pandas Practices With Matt Harrison
+      💬
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Pandas has grown to be a ubiquitous tool for working with data at every stage. It has become so well known that many people learn Python solely for the purpose of using Pandas. With all of this activity and the long history of the project it can be easy to find misleading or outdated information about how to use it. In this episode Matt Harrison shares his work on the book &amp;quot;Effective Pandas&amp;quot; and some of the best practices and potential pitfalls that you should know for applying Pandas in your own work.<div>Summary
-<p>Pandas has grown to be a ubiquitous tool for working with data at every stage. It has become so well known that many people learn Python solely for the purpose of using Pandas. With all of this activity and the long history of the …</p></div>
+  Let’s see whether the DSL provider change goes smoothly tonight / tomorrow morning, or if I have to use my mobile hotspot tomorrow.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-15 19:45:48+00:00" class="dt-published"></time>
-  Sat 15 Jan 2022
+  on <time datetime="2022-01-16 18:39:36+01:00" class="dt-published"></time>
+  Sun 16 Jan 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://juripakaste.fi/swift-date-ranges/" rel="bookmark" class="u-url"
+       title="Juri Pakaste: Date component ranges in Swift" target="_blank">
+      <time class="m-date" datetime="2022-01-16 17:12:00+00:00">
+        Jan
+        <span class="m-date-day">
+          16
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Juri Pakaste: Date component ranges in Swift
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Ever needed to iterate over a list of days or months in Swift? Ever needed to have a random-access collection of those?</p>
+<p>The first thing they teach you in the How to not Operate on Dates Horribly Wrong class (aka <a href="https://yourcalendricalfallacyis.com">Calendrical Fallacies</a>) is to forget about using seconds for calendar correct calculations. On the Apple platforms you should be using Foundation's Calendar type instead. You will still write bugs, but hopefully they'll be more interesting than calendar drift caused by leap seconds and days.</p>
+<p>To get a list of months you can start with an integer range and do fancy operations with it. Define a few example values to get started:</p>
+<pre><code><span>let</span><span> now = Date()
+</span><span>let</span><span> valueRange = </span><span>1 </span><span>... </span><span>120
+</span><span>let</span><span> calendar = Calendar(identifier: .gregorian)
+</span></code></pre>
+<p>Making a list of dates corresponding to that <code>valueRange</code> is easy enough:</p>
+<pre><code><span>let</span><span> months = valueRange.map {
+</span><span>    calendar …</span></code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-16 17:12:00+00:00" class="dt-published"></time>
+  Sun 16 Jan 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://psifidotos.blogspot.com/2022/01/latte-dock-v011-multi-screens-dream.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Latte Dock v0.11~ | Multi-Screens Dream, an AllScreens option..." target="_blank">
+      <time class="m-date" datetime="2022-01-16 12:20:00+00:00">
+        Jan
+        <span class="m-date-day">
+          16
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Latte Dock v0.11~ | Multi-Screens Dream, an AllScreens option...
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p> </p><div>
+<div><a href="//phabricator.kde.org/source/latte-dock/"><img alt="https://phabricator.kde.org/source/latte-dock/" src="//camo.githubusercontent.com/48c6397fd11941c944a77813bad6e9fd8f285aa2/687474703a2f2f692e696d6775722e636f6d2f4c4c6f5864674b2e706e67"></a></div>
+<div></div>Hello everyone,<div>This is a long awaited feature for multi-screens users. In Latte upcoming v0.11 users can now choose their docks and panels to be on all screens or on all secondary screens. Docks and panels will be up to date in such case and it is also easier for users to make changes to them and use them in general.
+</div>
+
+</div><div>
+
+
+<b><i><span>- youtube presentation -</span></i></b>
+ <a></a>
+</div><p><b>Information</b></p><div>
+<ul>
+<li>Users can now choose for their docks and panels to belong at various screen groups. The first two screen groups introduced are <b>AllScreensGroup</b> and <b>AllSecondaryScreensGroup</b>. In the future it might be possible to provide CustomScreensGroup that the user will be able to define specific screens in which a dock or panel should be always present.</li>
+<li>
+<b>Current solution</b> specifies an Original dock or panel and clones/copies itself automatically to other screens. So docks and panels …</li></ul></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Michail Vourlakos</b></span>
+  on <time datetime="2022-01-16 12:20:00+00:00" class="dt-published"></time>
+  Sun 16 Jan 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.gunibert.de/posts/librest-0.9.0/" rel="bookmark" class="u-url"
+       title="Announce new release 0.9.0 of librest" target="_blank">
+      <time class="m-date" datetime="2022-01-16 11:20:00+00:00">
+        Jan
+        <span class="m-date-day">
+          16
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Announce new release 0.9.0 of librest
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I’m pleased to announce the release of 0.9.0 of librest, a library meant to interact with “Restful” web services. This library is very old and not really big but it handles the aspect of interaction with REST-APIs in a convenient fashion. After a long period of maintenance state i picked it up and brought it into 2022. Most of the deprecated API calls are gone now and it should be now possible to parallel-install librest with the previous release.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-01-16 11:20:00+00:00" class="dt-published"></time>
+  Sun 16 Jan 2022
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -275,124 +399,6 @@ problem: slow network requests
   on <time datetime="2022-01-15 12:25:37+00:00" class="dt-published"></time>
   Sat 15 Jan 2022
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2022/01/2022-01-15-gmwvj" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2022-01-15 11:43:00+01:00">
-        Jan
-        <span class="m-date-day">
-          15
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I just signed my own first apartment lease. 🎉 I will now have a lot to do over the next few months. 😅
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-01-15 11:43:00+01:00" class="dt-published"></time>
-  Sat 15 Jan 2022
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2022/01/15/kf6-continuous-integration.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Frameworks 6 Continuous Integration" target="_blank">
-      <time class="m-date" datetime="2022-01-15 09:30:00+00:00">
-        Jan
-        <span class="m-date-day">
-          15
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Frameworks 6 Continuous Integration
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Just a month ago we had <a href="//www.volkerkrause.eu/2021/12/11/kf6-building-against-qt6.html">the first KDE Framework build against Qt6</a>
-without requiring local modifications. Things progressed rapidly from there,
-just with 2021 ending <a href="//kate-editor.org/">Kate</a> has been seen running with proper styling
-and proper file dialogs. And by now we also have KF6 continuous integration for
-a number of Frameworks modules.</p>
-
-Building against Qt6
-
-<p>More than 40 frameworks are meanwhile building out of the box, close to 60 build with pending merge
-requests applied or individual problematic parts commented out.</p>
-
-<p>To support this <a href="//commits.kde.org/kdesrc-build">kdesrc-build</a>
-now also provides initial configuration files for KF6 development builds, covering Frameworks and
-their dependencies as far as available already.</p>
-
-<p>Note that this is all experimental and only meant for KF6 development. It uses the latest development branches as well
-as a number of changes still in review or not even submitted to review …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2022-01-15 09:30:00+00:00" class="dt-published"></time>
-  Sat 15 Jan 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://noraisin.net/diary/?p=1064" rel="bookmark" class="u-url"
-       title="Pulling on a thread" target="_blank">
-      <time class="m-date" datetime="2022-01-15 09:10:53+00:00">
-        Jan
-        <span class="m-date-day">
-          15
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pulling on a thread
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I’m attending the https://linux.conf.au/ conference online this weekend, which is always a good opportunity for some sideline hacking. I found something boneheaded doing that today. There have been a few times while inventing the OpenHMD Rift driver where I’ve noticed something strange and followed the thread until it made sense. Sometimes that leads to improvements … <a href="https://noraisin.net/diary/?p=1064">Continue reading<span> "Pulling on a thread"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>thaytan</b></span>
-  on <time datetime="2022-01-15 09:10:53+00:00" class="dt-published"></time>
-  Sat 15 Jan 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -1145,49 +1151,6 @@ Fortran Standard Library …
   on <time datetime="2021-12-28 00:00:00+00:00" class="dt-published"></time>
   Tue 28 Dec 2021
   in Sajith.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://archlinux.org/news/libxml22912-6-update-may-require-manual-intervention/" rel="bookmark" class="u-url"
-       title="libxml2>=2.9.12-6 update may require manual intervention" target="_blank">
-      <time class="m-date" datetime="2021-12-27 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          27
-        </span>
-        2021
-      </time>
-      <div class="p-name">
-      libxml2>=2.9.12-6 update may require manual intervention
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The libxml2 package prior to version 2.9.12-6 was missing the compiled python modules. This has been fixed in 2.9.12-6, so the upgrade may need to overwrite any untracked pyc files created. If you get errors like these
-<code>libxml2: /usr/lib/python3.10/site-packages/__pycache__/drv_libxml2.cpython-310.opt-1.pyc exists in filesystem
-libxml2: /usr/lib/python3.10/site-packages/__pycache__/drv_libxml2.cpython-310.pyc exists in filesystem
-libxml2: /usr/lib/python3.10/site-packages/__pycache__/libxml2.cpython-310.opt-1.pyc exists in filesystem
-libxml2: /usr/lib/python3.10/site-packages/__pycache__/libxml2.cpython-310.pyc exists in filesystem
-</code>
-when updating, use
-<code>pacman -Syu --overwrite /usr/lib/python3.10/site-packages/__pycache__/\*
-</code>
-to perform the upgrade.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jan Alexander Steffens</b></span>
-  on <time datetime="2021-12-27 00:00:00+00:00" class="dt-published"></time>
-  Mon 27 Dec 2021
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
