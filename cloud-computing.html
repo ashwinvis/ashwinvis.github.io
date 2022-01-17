@@ -180,10 +180,10 @@ top-notch Quadro RTX 3000 Mobile GPU, so I decided to give it a go.</p>
 <section id="references">
 <h3>References</h3>
 <ul>
-<li><a href="https://wiki.archlinux.org/index.php/BOINC">https://wiki.archlinux.org/index.php/BOINC</a></li>
-<li><a href="https://boinc.berkeley.edu/projects.php">https://boinc.berkeley.edu/projects.php</a></li>
-<li><a href="http://www.gpugrid.net/join.php">http://www.gpugrid.net/join.php</a></li>
-<li><a href="https://www.gpugrid.net/team_display.php?teamid=2985">https://www.gpugrid.net/team_display.php?teamid=2985</a></li>
+<li><a class="m-link-wrap" href="https://wiki.archlinux.org/index.php/BOINC">https://wiki.archlinux.org/index.php/BOINC</a></li>
+<li><a class="m-link-wrap" href="https://boinc.berkeley.edu/projects.php">https://boinc.berkeley.edu/projects.php</a></li>
+<li><a class="m-link-wrap" href="http://www.gpugrid.net/join.php">http://www.gpugrid.net/join.php</a></li>
+<li><a class="m-link-wrap" href="https://www.gpugrid.net/team_display.php?teamid=2985">https://www.gpugrid.net/team_display.php?teamid=2985</a></li>
 </ul>
 </section>
 <section id="how-to">
@@ -244,15 +244,15 @@ project:</p>
 </section>
 <section id="folding-home">
 <h2>Folding &#64; home</h2>
-<section id="id1">
+<section id="references-1">
 <h3>References</h3>
 <ul>
-<li><a href="https://foldingathome.org/start-folding">https://foldingathome.org/start-folding</a></li>
-<li><a href="https://wiki.archlinux.org/index.php/Folding&#64;home">https://wiki.archlinux.org/index.php/Folding&#64;home</a></li>
-<li><a href="https://stats.foldingathome.org/team/45032">https://stats.foldingathome.org/team/45032</a></li>
+<li><a class="m-link-wrap" href="https://foldingathome.org/start-folding">https://foldingathome.org/start-folding</a></li>
+<li><a class="m-link-wrap" href="https://wiki.archlinux.org/index.php/Folding&#64;home">https://wiki.archlinux.org/index.php/Folding&#64;home</a></li>
+<li><a class="m-link-wrap" href="https://stats.foldingathome.org/team/45032">https://stats.foldingathome.org/team/45032</a></li>
 </ul>
 </section>
-<section id="id2">
+<section id="how-to-1">
 <h3>How to</h3>
 <p>Install:</p>
 <pre># pacman -S foldingathome</pre>
@@ -269,12 +269,12 @@ Enable GPU [true]:
 Name of configuration file [config.xml]:
 ❯ mkdir -p ~/.config/systemd/user/</pre>
 <p>Create a service <code>~/.config/systemd/user/foldingathome.service</code>:</p>
-<pre class="m-code"><span class="k">[Unit]</span>
-<span class="na">Description</span><span class="o">=</span><span class="s">Run folding at home client</span>
+<pre class="m-code"><span class="k">[Unit]</span><span class="w"></span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Run folding at home client</span><span class="w"></span>
 
-<span class="k">[Service]</span>
-<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/avmo/.cache/foldingathome</span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml</span></pre>
+<span class="k">[Service]</span><span class="w"></span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/avmo/.cache/foldingathome</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml</span><span class="w"></span></pre>
 <p>Execute:</p>
 <pre>❯ systemctl --user start foldingathome.service
 ❯ systemctl --user status foldingathome.service
@@ -317,12 +317,12 @@ Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Steps: first
 Mar 20 09:55:19 archmage FAHClient[149577]: 08:55:19:WU00:FS00:0xa7:Completed 1 out of 250000 steps (0%)
 Mar 20 09:57:25 archmage FAHClient[149577]: 08:57:25:WU00:FS00:0xa7:Completed 2500 out of 250000 steps (1%)</pre>
 <p>While the client is running / idle, you can schedule and tweak using the <a href="http://0.0.0.0:7396/">web client</a>.</p>
-<div class="admonition note">
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want GPU jobs alone, comment out the CPU slots in
 <code>~/.config/foldingathome/config.xml</code> and set power to “Medium” in the web
 client.</p>
-</div>
+</aside>
 </section>
 </section>
 </div>
@@ -385,7 +385,6 @@ client.</p>
         <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
         <li><a href="https://fluid.quest/category/blogger-archive.html">Blogger archive</a></li>
         <li><a href="https://fluid.quest/category/microblog.html">Microblog</a></li>
-        <li><a href="https://fluid.quest/category/static.html">static</a></li>
         <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
         <li><a href="https://fluid.quest/category/tumblr-archive.html">Tumblr archive</a></li>
       </ol>

@@ -181,66 +181,66 @@ out, I have been using the latter as it is noticeably faster. Snippets
 of the configuration files that I used are shown below.</p>
 <section id="travis-ci-configuration">
 <h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml">Travis CI configuration</a></h3>
-<pre class="m-code"><span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+<pre class="m-code"><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span><span class="w"></span>
 
-<span class="nn">...</span>
+<span class="nn">...</span><span class="w"></span>
 
-<span class="nt">install</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pelican-themes -i pelican-bluedrop/bluedrop</span>
+<span class="nt">install</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pelican-themes -i pelican-bluedrop/bluedrop</span><span class="w"></span>
 
-<span class="nt">script</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">cd src</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">make publish</span>
+<span class="nt">script</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd src</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">make publish</span><span class="w"></span>
 
-<span class="nt">deploy</span><span class="p">:</span>
-  <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pages</span>
-  <span class="nt">skip-cleanup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">github-token</span><span class="p">:</span> <span class="s">&quot;$GITHUB_TOKEN&quot;</span>
-  <span class="nt">keep-history</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">target-branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Travis CI</span>
-  <span class="nt">local-dir</span><span class="p">:</span> <span class="s">&quot;./output&quot;</span>
-  <span class="nt">on</span><span class="p">:</span>
-    <span class="nt">branch</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">develop</span></pre>
+<span class="nt">deploy</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pages</span><span class="w"></span>
+<span class="w">  </span><span class="nt">skip-cleanup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">github-token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$GITHUB_TOKEN&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">keep-history</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">  </span><span class="nt">target-branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Travis CI</span><span class="w"></span>
+<span class="w">  </span><span class="nt">local-dir</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./output&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="nt">on</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">develop</span><span class="w"></span></pre>
 <p>An extra step you have to do is to generate a personal access token,
-<code>`GITHUB_TOKEN</code> &lt;<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>&gt;`__ for Travis to
+<code>`GITHUB_TOKEN</code> &lt;<a class="m-link-wrap" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>&gt;`__ for Travis to
 get permissions. Then, you save the token as a secret environment
 variable in Travis. The process is <a href="https://docs.travis-ci.com/user/deployment/pages/">nicely
 documented</a>.</p>
 </section>
 <section id="github-actions-workflow">
 <h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml">GitHub actions workflow</a></h3>
-<pre class="m-code"><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span>
+<pre class="m-code"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span><span class="w"></span>
 
-<span class="nt">on</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span><span class="w"></span>
 
-<span class="nt">env</span><span class="p">:</span>
-  <span class="nt">PIP_CACHE_DIR</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span>
+<span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">PIP_CACHE_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span><span class="w"></span>
 
-<span class="nt">jobs</span><span class="p">:</span>
-  <span class="nt">build</span><span class="p">:</span>
+<span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w"></span>
 
-    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-    <span class="nt">strategy</span><span class="p">:</span>
-      <span class="nt">max-parallel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
-      <span class="nt">matrix</span><span class="p">:</span>
-        <span class="nt">python-version</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
+<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">max-parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w"></span>
+<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span><span class="w"></span>
 
-    <span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
 
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
-      <span class="nt">if</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">success()</span>
-      <span class="nt">env</span><span class="p">:</span>
-        <span class="nt">ACTIONS_DEPLOY_KEY</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
-        <span class="nt">PUBLISH_BRANCH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span>
-        <span class="nt">PUBLISH_DIR</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./output</span>
-        <span class="nt">SCRIPT_MODE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-        <span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span>
-        <span class="no">bash ./entrypoint.sh</span></pre>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span><span class="w"></span>
+<span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success()</span><span class="w"></span>
+<span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">ACTIONS_DEPLOY_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.ACTIONS_DEPLOY_KEY }}</span><span class="w"></span>
+<span class="w">        </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
+<span class="w">        </span><span class="nt">PUBLISH_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./output</span><span class="w"></span>
+<span class="w">        </span><span class="nt">SCRIPT_MODE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">        </span><span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span><span class="w"></span>
+<span class="w">        </span><span class="no">bash ./entrypoint.sh</span><span class="w"></span></pre>
 <p>Here we use a <a href="https://github.com/peaceiris/actions-gh-pages">third-party
 action</a> created to
 deploy generated files to GitHub pages. We may not want to give too many
@@ -371,7 +371,6 @@ is self explanatory, I hope!</p>
         <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
         <li><a href="https://fluid.quest/category/blogger-archive.html">Blogger archive</a></li>
         <li><a href="https://fluid.quest/category/microblog.html">Microblog</a></li>
-        <li><a href="https://fluid.quest/category/static.html">static</a></li>
         <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
         <li><a href="https://fluid.quest/category/tumblr-archive.html">Tumblr archive</a></li>
       </ol>

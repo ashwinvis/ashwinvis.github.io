@@ -198,19 +198,19 @@ Dipankar, A., <a href="https://doi.org/10.1007/s10915-005-4928-3">J Sci Comput (
 <p>Differentiation using explicit finite difference scheme can be
 represented as:</p>
 <div class="formula">
-{<i>u</i>’} = <b>A</b>{<i>u</i>}
+{<i>u</i>’} = <b>A</b>{<i>u</i>}
 </div>
 <p>Where <span class="formula"><i>u</i></span> is a known 1-D vector and <span class="formula"><i>u</i>’</span> is the desired
 first derivative of <span class="formula"><i>u</i></span>. For <em>second-order central difference</em>
 (<span class="formula"><i>CD</i><sub>2</sub></span>), the “matrix” <span class="formula"><b>A</b></span> takes the form of a
 tri-diagonal matrix with repeating elements like:</p>
 <div class="formula">
-<b>A</b> = <span class="array"><span class="arrayrow">
+<b>A</b> = <span class="array"><span class="arrayrow">
 <span class="arraycell align-c">
 0
 </span>
 <span class="arraycell align-c">
-1 ⁄ Δ
+1 ⁄ Δ
 </span>
 <span class="arraycell align-c">
 ⋯
@@ -237,7 +237,7 @@ tri-diagonal matrix with repeating elements like:</p>
 </span>
 <span class="arrayrow">
 <span class="arraycell align-c">
- − 1 ⁄ Δ
+ − 1 ⁄ Δ
 </span>
 <span class="arraycell align-c">
 ⋱
@@ -276,7 +276,7 @@ tri-diagonal matrix with repeating elements like:</p>
 ⋱
 </span>
 <span class="arraycell align-c">
-1 ⁄ Δ
+1 ⁄ Δ
 </span>
 
 </span>
@@ -303,7 +303,7 @@ tri-diagonal matrix with repeating elements like:</p>
 0
 </span>
 <span class="arraycell align-c">
- − 1 ⁄ Δ
+ − 1 ⁄ Δ
 </span>
 <span class="arraycell align-c">
 0
@@ -326,11 +326,11 @@ higher order schemes such as compact finite difference schemes:</p>
 <p>we end up initializing arrays. Here <span class="formula"><b>A</b></span> and
 <span class="formula"><b>B</b></span> can be sparse matrices, typically pentadiagonal and
 tridiagonal respectively. The resultant operator,
-<span class="formula"><b>C</b> = <b>B</b> − 1<b> A</b></span> is quite dense, and thus
+<span class="formula"><b>C</b> = <b>B</b>  − 1<b> A</b></span> is quite dense, and thus
 in practice it is easier to compute the derivative in two steps:</p>
 <ol>
-<li>Matrix multiplication <span class="formula"><b>A</b>{<i>u</i>} → {<i>d</i>}</span></li>
-<li>Solve <span class="formula"><b>B</b>{<i>u</i>’} = {<i>d</i>}</span> iteratively, using TDMA</li>
+<li>Matrix multiplication <span class="formula"><b>A</b>{<i>u</i>} → {<i>d</i>}</span></li>
+<li>Solve <span class="formula"><b>B</b>{<i>u</i>’} = {<i>d</i>}</span> iteratively, using TDMA</li>
 </ol>
 <blockquote>
 <strong>Note</strong>: Boundary conditions (BC) would mean the matrices would be
@@ -461,10 +461,10 @@ explicit finite difference schemes.</p>
 <p>Let us have a look at the time consumed in instantiating the class. We
 will use</p>
 <ul>
-<li><span class="formula"><i>N</i> = 1000</span> (typical array size for a well resolved 1D simulation)</li>
+<li><span class="formula"><i>N</i> = 1000</span> (typical array size for a well resolved 1D simulation)</li>
 </ul>
-<p>We might extend what we observe here to 2D (<span class="formula"><i>N</i> = 10002</span>) and 3D
-simulations (<span class="formula"><i>N</i> = 1003</span> to <span class="formula"><i>N</i> = 10003</span>). We shall use the
+<p>We might extend what we observe here to 2D (<span class="formula"><i>N</i> = 1000 2</span>) and 3D
+simulations (<span class="formula"><i>N</i> = 100 3</span> to <span class="formula"><i>N</i> = 1000 3</span>). We shall use the
 package <code>line_profiler</code> to time the time elapsed in each line. The
 system has been tuned using <code>perf</code> package to reduce jitter.</p>
 <pre class="m-code"><span class="o">%</span><span class="k">load_ext</span> line_profiler
@@ -642,7 +642,7 @@ random location in a memory.</p>
     <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
 </section>
-<section id="id1">
+<section id="first-run-1">
 <h3>First run</h3>
 <pre class="m-code"><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
 <span class="n">oper_wz</span> <span class="o">=</span> <span class="n">OUCS3Werkzeug</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
@@ -662,7 +662,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
      7         1        887.0    887.0      9.7          B_row = self._B_row
      8         1       7251.0   7251.0     79.0          return solve_toeplitz((B_column, B_row), Au)</pre>
 </section>
-<section id="id2">
+<section id="second-run-1">
 <h3>Second run</h3>
 <pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3Werkzeug.diff oper_wz.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
@@ -696,7 +696,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
     <span class="k">def</span> <span class="nf">_B_row</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></pre>
 </section>
-<section id="id3">
+<section id="first-run-2">
 <h3>First run</h3>
 <pre class="m-code"><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">init_params_fields</span><span class="p">(</span><span class="mi">1_000</span><span class="p">)</span>
 <span class="n">oper_cp</span> <span class="o">=</span> <span class="n">OUCS3CachedProperty</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
@@ -716,7 +716,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
      7         1       1935.0   1935.0     18.3          B_row = self._B_row
      8         1       7402.0   7402.0     69.9          return solve_toeplitz((B_column, B_row), Au)</pre>
 </section>
-<section id="id4">
+<section id="second-run-2">
 <h3>Second run</h3>
 <pre class="m-code"><span class="o">%</span><span class="k">lprun</span> -f OUCS3CachedProperty.diff oper_cp.diff(u)</pre>
 <pre>Timer unit: 1e-06 s
@@ -831,7 +831,6 @@ nbviewer</a>.</p>
         <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
         <li><a href="https://fluid.quest/category/blogger-archive.html">Blogger archive</a></li>
         <li><a href="https://fluid.quest/category/microblog.html">Microblog</a></li>
-        <li><a href="https://fluid.quest/category/static.html">static</a></li>
         <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
         <li><a href="https://fluid.quest/category/tumblr-archive.html">Tumblr archive</a></li>
       </ol>

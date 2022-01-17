@@ -1,538 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-15T23:01:55+00:00</updated><subtitle></subtitle><entry><title>Ashwin Vishnu Mohanan</title><link href="https://fluid.quest/ashwin-vishnu-mohanan.html" rel="alternate"></link><published>2022-01-15T23:01:55+00:00</published><updated>2022-01-15T23:01:55+00:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-15:/ashwin-vishnu-mohanan.html</id><summary type="html"></summary><content type="html">
-
-	&lt;div id="resume"&gt;
-
-	&lt;section class="heading"&gt;
-		&lt;header&gt;
-			&lt;h1&gt;Ashwin Vishnu Mohanan&lt;/h1&gt;
-			&lt;div class="contact"&gt;
-			&lt;/div&gt;
-		&lt;/header&gt;
-
-
-		&lt;p&gt;&lt;p&gt;I identify myself as a experienced software developer who enjoys developing software primarly using Python. I have a Ph.D. from Department of Engineering Mechanics at KTH, Sweden, where my main focus was on simulating turbulence in the atmosphere. I am always keen on working at the intersection of sciences, software development and well versed in the Python open-source ecosystem and good practices. My guiding principle is to "Leave this world a little better than you found it."&lt;/p&gt;&lt;p&gt;	&lt;/p&gt;&lt;/p&gt;
-
-			&lt;div class="profile"&gt;
-				&lt;strong class="network"&gt;
-					LinkedIn
-				&lt;/strong&gt;
-				&lt;span class="username"&gt;
-					&lt;a href="https://www.linkedin.com/in/ashwinvishnu/"&gt;ashwinvishnu&lt;/a&gt;
-				&lt;/span&gt;
-			&lt;/div&gt;
-			&lt;div class="profile"&gt;
-				&lt;strong class="network"&gt;
-					GitHub
-				&lt;/strong&gt;
-				&lt;span class="username"&gt;
-					&lt;a href="https://github.com/ashwinvis"&gt;ashwinvis&lt;/a&gt;
-				&lt;/span&gt;
-			&lt;/div&gt;
-			&lt;div class="profile"&gt;
-				&lt;strong class="network"&gt;
-					ORCID
-				&lt;/strong&gt;
-				&lt;span class="username"&gt;
-					&lt;a href="https://orcid.org/0000-0002-2979-6327"&gt;0000-0002-2979-6327&lt;/a&gt;
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-	&lt;/section&gt;
-
-	&lt;section id="skills"&gt;
-		&lt;h2&gt;Skills&lt;/h2&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="name"&gt;
-				Scientific Domains
-			&lt;/div&gt;
-			&lt;div class="keywords"&gt;
-					Fluid dynamics,
-					turbulence,
-					geophysical flows,
-					boundary layers
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="name"&gt;
-				Scientific Computing
-			&lt;/div&gt;
-			&lt;div class="keywords"&gt;
-					Numerical methods,
-					Finite difference,
-					Spectral methods
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="name"&gt;
-				Programming Languages
-			&lt;/div&gt;
-			&lt;div class="keywords"&gt;
-					Python,
-					Fortran,
-					C,
-					C++,
-					Awk,
-					LaTeX,
-					HTML,
-					CSS,
-					Shell scripting in Linux
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="name"&gt;
-				Programming skills
-			&lt;/div&gt;
-			&lt;div class="keywords"&gt;
-					High performance computing,
-					Object-oriented programming,
-					Functional programming,
-					Version control,
-					Visualization,
-					Continuous integration,
-					Testing,
-					Code Coverage,
-					Python packaging,
-					GUI designing with Qt,
-					Basic web development
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="name"&gt;
-				Python packages
-			&lt;/div&gt;
-			&lt;div class="keywords"&gt;
-					Standard library,
-					NumPy,
-					SciPy,
-					mpi4py,
-					Cython,
-					Pythran,
-					Numba,
-					Dask,
-					requests,
-					Jupyter,
-					IPython,
-					Matplotlib,
-					h5py,
-					h5netcdf,
-					xarray,
-					Sympy
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/section&gt;
-
-	&lt;section class="experience"&gt;
-		&lt;h2&gt;Experience&lt;/h2&gt;
-		&lt;section class="item"&gt;
-
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-						&lt;a href="https://www.su.se/department-of-meteorology/"&gt;
-						&lt;h3 class="name"&gt;Stockholm University&lt;/h3&gt;
-						&lt;/a&gt;
-				&lt;/header&gt;
-				&lt;span class="startDate"&gt;
-					Oct 2019
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Jan 2022
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="position"&gt;
-				Researcher
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;&lt;p&gt;Project: Improving boundary conditions and turbulence models for simulation of atmospheric boundary layer (ABL) flows.&lt;/p&gt;&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;ul class="highlights"&gt;
-				&lt;li&gt;Made Python package &amp;#x60;pymech&amp;#x60; 100 times faster &amp;amp; added user-friendly functions.&lt;/li&gt;
-				&lt;li&gt;Developed an ABL solver using spectral element code Nek5000.&lt;/li&gt;
-				&lt;li&gt;Created Python package &amp;#x60;snek5000&amp;#x60; as a scriptable framework for Nek5000.&lt;/li&gt;
-				&lt;li&gt;Worked within a multi-disciplinary team comprising of researchers with applied mathematics, meteorology and 
-engineering backgrounds.&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/section&gt;
-		&lt;section class="item"&gt;
-
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-						&lt;a href="https://www.legi.grenoble-inp.fr/web/?lang=en"&gt;
-						&lt;h3 class="name"&gt;Université Grenoble Alpes&lt;/h3&gt;
-						&lt;/a&gt;
-				&lt;/header&gt;
-				&lt;span class="startDate"&gt;
-					May 2016
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Jul 2016
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="position"&gt;
-				Visiting Researcher
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;&lt;p&gt;Project: MILESTONE (Mixing and Length Scales in Stratified Turbulence).&lt;/p&gt;&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;ul class="highlights"&gt;
-				&lt;li&gt;Hands-on experience with experimental fluid dynamics and Particle Image Velocimetry (PIV).&lt;/li&gt;
-				&lt;li&gt;Development of a new package FluidImage, a libre framework for scientific treatments of large sets of images.&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/section&gt;
-		&lt;section class="item"&gt;
-
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-						&lt;a href="https://web.archive.org/web/20210301163718/https://delhi.gsconst.co.in/"&gt;
-						&lt;h3 class="name"&gt;GS Engineering and Construction&lt;/h3&gt;
-						&lt;/a&gt;
-				&lt;/header&gt;
-				&lt;span class="startDate"&gt;
-					Jul 2011
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Jun 2012
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="position"&gt;
-				Graduate Engineer Trainee
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;&lt;p&gt;First job as an engineer in an organization.&lt;/p&gt;&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;ul class="highlights"&gt;
-				&lt;li&gt;Prepared material take-off and isometric drawings of piping lines for various oil refineries.&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/section&gt;
-	&lt;/section&gt;
-
-	&lt;section id="education"&gt;
-		&lt;h2&gt;Education&lt;/h2&gt;
-		&lt;div class="item"&gt;
-			&lt;header&gt;
-					&lt;a href="https://www.kth.se/mech"&gt;
-					&lt;h3 class="name"&gt;KTH Royal Institute of Technology&lt;/h3&gt;
-					&lt;/a&gt;
-			&lt;/header&gt;
-
-			&lt;div class="dates"&gt;
-				&lt;span class="startDate"&gt;
-					Oct 2014
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Sep 2019
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;div class="qualification"&gt;
-				&lt;span class="studyType"&gt;
-					Ph.D.
-				&lt;/span&gt;
-
-				&lt;span class="area"&gt;
-					- Engineering Mechanics
-				&lt;/span&gt;
-
-			&lt;/div&gt;
-
-			&lt;ul class="highlights"&gt;
-				&lt;li&gt;Co-created Python package &amp;#x60;fluidsim&amp;#x60; --- one of the fastest pseudo-spectral Python CFD codes with performance similar to compiled codes.&lt;/li&gt;
-				&lt;li&gt;Core developer for FluidDyn project --- a collection of open-source packages for research and teaching.&lt;/li&gt;
-				&lt;li&gt;Simulated shallow water models to study geophysical turbulence with focus on energy cascade and wave-vortex interactions.&lt;/li&gt;
-			&lt;/ul&gt;
-
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;header&gt;
-					&lt;a href="https://iitk.ac.in/aero/"&gt;
-					&lt;h3 class="name"&gt;Indian Institute of Technology (IIT), Kanpur&lt;/h3&gt;
-					&lt;/a&gt;
-			&lt;/header&gt;
-
-			&lt;div class="dates"&gt;
-				&lt;span class="startDate"&gt;
-					Aug 2012
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- May 2014
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;div class="qualification"&gt;
-				&lt;span class="studyType"&gt;
-					M. Tech.
-				&lt;/span&gt;
-
-				&lt;span class="area"&gt;
-					- Aerospace Engineering
-				&lt;/span&gt;
-
-				&lt;span class="score"&gt;
-					GPA: 9.58 / 10
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;Thesis: Mixed convection instablities with and without Boussinesq approximation.&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;ul class="highlights"&gt;
-				&lt;li&gt;Experience in deriving accurate finite-difference schemes&lt;/li&gt;
-				&lt;li&gt;Analysing numerical error dynamics.&lt;/li&gt;
-			&lt;/ul&gt;
-
-		&lt;/div&gt;
-	&lt;/section&gt;
-
-
-	&lt;section class="experience"&gt;
-		&lt;h2&gt;Volunteering&lt;/h2&gt;
-		&lt;div class="item"&gt;
-
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-						&lt;a href="https://carpentries.org/"&gt;
-						&lt;h3 class="name"&gt;Software Carpentry&lt;/h3&gt;
-						&lt;/a&gt;
-				&lt;/header&gt;
-				&lt;span class="startDate"&gt;
-					Nov 2021
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Present
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="position"&gt;
-				Certified instructor
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;Trained to teach and organize workshops using the Carpentries course material&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-						&lt;a href="https://reddit.com/r/FluidMechanics"&gt;
-						&lt;h3 class="name"&gt;Subreddit r/FluidMechanics&lt;/h3&gt;
-						&lt;/a&gt;
-				&lt;/header&gt;
-				&lt;span class="startDate"&gt;
-					Apr 2015
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Present
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="position"&gt;
-				Creator and moderator
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;An active community of approximately 8500 users, facilitating news and discussions around fluid mechanics.&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-						&lt;h3 class="name"&gt;Open science&lt;/h3&gt;
-				&lt;/header&gt;
-				&lt;span class="startDate"&gt;
-					Aug 2014
-				&lt;/span&gt;
-				&lt;span class="endDate"&gt;
-					- Present
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="position"&gt;
-				Developer and contributor
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;Open science through open-source, open-data and open-access&lt;/p&gt;
-			&lt;/div&gt;
-			&lt;ul class="highlights"&gt;
-				&lt;li&gt;Active participation in GitHub and open-source software in the form of development, bug reports, pull requests and code-review.&lt;/li&gt;
-				&lt;li&gt;Maintainer of a handful of packages in Python Package Index (PyPI), conda-forge and Arch Linux User Repository (AUR).&lt;/li&gt;
-				&lt;li&gt;Complete list of software projects available at &amp;lt;https://fluid.quest/pages/software.html&amp;gt;.&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/div&gt;
-	&lt;/section&gt;
-
-	&lt;section id="awards"&gt;
-		&lt;h2&gt;Awards&lt;/h2&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-					&lt;h3 class="name"&gt;
-						AGU
-					&lt;/h3&gt;
-				&lt;/header&gt;
-
-				&lt;span class="startDate"&gt;
-					Jan 2017
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="title"&gt;
-				Student travel grant
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;American Geophysical Union (AGU) Fall Meeting&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-					&lt;h3 class="name"&gt;
-						GRE
-					&lt;/h3&gt;
-				&lt;/header&gt;
-
-				&lt;span class="startDate"&gt;
-					Jan 2014
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="title"&gt;
-				317/340
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;Graduate Record Examination&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-					&lt;h3 class="name"&gt;
-						TOEFL
-					&lt;/h3&gt;
-				&lt;/header&gt;
-
-				&lt;span class="startDate"&gt;
-					Jan 2014
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="title"&gt;
-				110/120
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;Test of English as a Foriegn Language&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-					&lt;h3 class="name"&gt;
-						GATE
-					&lt;/h3&gt;
-				&lt;/header&gt;
-
-				&lt;span class="startDate"&gt;
-					Jan 2011
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="title"&gt;
-				All India Rank 390
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;Graduate Aptitude Test in Engineering (Mechanical)&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="heading"&gt;
-				&lt;header&gt;
-					&lt;h3 class="name"&gt;
-						All India Secondary School Certificate Examination
-					&lt;/h3&gt;
-				&lt;/header&gt;
-
-				&lt;span class="startDate"&gt;
-					Jan 2007
-				&lt;/span&gt;
-			&lt;/div&gt;
-
-			&lt;span class="title"&gt;
-				School topper
-			&lt;/span&gt;
-
-			&lt;div class="summary"&gt;
-				&lt;p&gt;A1 grade in all subjects&lt;/p&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/section&gt;
-
-
-	&lt;section id="languages"&gt;
-		&lt;h2&gt;Languages&lt;/h2&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="language"&gt;
-				English
-			&lt;/div&gt;
-			&lt;div class="fluency"&gt;
-				&lt;em&gt;Native speaker&lt;/em&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="language"&gt;
-				Malayalam
-			&lt;/div&gt;
-			&lt;div class="fluency"&gt;
-				&lt;em&gt;Native speaker&lt;/em&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="language"&gt;
-				Hindi
-			&lt;/div&gt;
-			&lt;div class="fluency"&gt;
-				&lt;em&gt;Working proficiency&lt;/em&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="language"&gt;
-				Swedish
-			&lt;/div&gt;
-			&lt;div class="fluency"&gt;
-				&lt;em&gt;B1 level proficiency&lt;/em&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/section&gt;
-
-	&lt;section id="interests"&gt;
-		&lt;h2&gt;Interests&lt;/h2&gt;
-		&lt;div class="item"&gt;
-			&lt;div class="name"&gt;
-				Hobbies
-			&lt;/div&gt;
-			&lt;ul class="keywords"&gt;
-				&lt;li&gt;Reading&lt;/li&gt;
-				&lt;li&gt;Blogging&lt;/li&gt;
-				&lt;li&gt;Music&lt;/li&gt;
-			&lt;/ul&gt;
-		&lt;/div&gt;
-	&lt;/section&gt;
-
-
-	&lt;/div&gt;
-
-	</content><category term="static"></category></entry><entry><title>Email services</title><link href="https://fluid.quest/email-services.html" rel="alternate"></link><published>2022-01-11T00:50:07+01:00</published><updated>2022-01-11T00:50:07+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-11:/email-services.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My current email server &lt;a href="https://protonmail.com"&gt;Protonmail&lt;/a&gt;, while reliable and easy to get started, ends up indirectly holding you hostage, if you need to add your own domain name, it comes with a steep cost of  € 48 per year (not to mention there is no official support for IMAP for the free tier). The next best option I had seen so far was &lt;a href="https://register.mailbox.org/en"&gt;mailbox.de&lt;/a&gt; with the same at € 36 per year.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-11T00:50:07+01:00</updated><entry><title>Email services</title><link href="https://fluid.quest/email-services.html" rel="alternate"></link><published>2022-01-11T00:50:07+01:00</published><updated>2022-01-11T00:50:07+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-11:/email-services.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My current email server &lt;a href="https://protonmail.com"&gt;Protonmail&lt;/a&gt;, while reliable and easy to get started, ends up indirectly holding you hostage, if you need to add your own domain name, it comes with a steep cost of  € 48 per year (not to mention there is no official support for IMAP for the free tier). The next best option I had seen so far was &lt;a href="https://register.mailbox.org/en"&gt;mailbox.de&lt;/a&gt; with the same at € 36 per year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://purelymail.com/"&gt;Purelymail&lt;/a&gt; is an interesting service offering this and much more at $ 10 per year. Looks like an indie operation from the website, but it does come with a compelling pricing. It is, however a US based company so all the privacy caveats attaches with the service. Although the company themselves do not sell any data, they do acknowledge the &lt;a href="https://purelymail.com/docs/security"&gt;limitations in their approach&lt;/a&gt;. Nevertheless I am curious to know how it goes for &lt;a href="https://jlelse.blog/"&gt;jlelse&lt;/a&gt;.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/"&gt;https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/&lt;/a&gt;&lt;/li&gt;
@@ -626,4 +93,93 @@ have little time left to act.&lt;/p&gt;
 &lt;p&gt;reach out to&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://coderefinery.zulipchat.com/#narrow/stream/300025-carpentries/topic/Announcement.20of.20new.20upcoming.20instructor.20trainings"&gt;https://coderefinery.zulipchat.com/#narrow/stream/300025-carpentries/topic/Announcement.20of.20new.20upcoming.20instructor.20trainings&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;to help you through the process. This priority would expire soon as NeIC's
-membership of the Carpentries expire at the end of October.&lt;/p&gt;</content><category term="Microblog"></category></entry></feed>
+membership of the Carpentries expire at the end of October.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>The good old blog with a new name</title><link href="https://fluid.quest/domain-name.html" rel="alternate"></link><published>2021-08-30T21:06:13+02:00</published><updated>2021-09-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-08-30:/domain-name.html</id><summary type="html">&lt;p&gt;I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; The URL of this website would soon be &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Today, on the thirtieth day of August 2021, as rain continue to shower on
+Stockholm nearly every day, marks the end of my hunt for a succinct
+domain name. For a long time, I was not convinced to spend a good handful of
+money on a virtual asset. That changed recently.&lt;/p&gt;
+&lt;p&gt;After jumping ships from Blogger, to WordPress, to Tumblr and finally to
+&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; pages using Pelican static-site generator, I thought I was
+done. I had full control on the content and the site generation. It was made
+using open-source software, which means there was no way the toolchain will not
+work in the foreseeable future. Therefore, in short the internals were intact.
+Moreover, my precious visitors to my blog then do not get served ads, cookies
+or third party tracking scripts.&lt;/p&gt;
+&lt;p&gt;Everything seemed fine. Until Microsoft bought it. Just because it is a free
+service and has a large user base does not inspire any confidence that it might
+stay like this forever. I recall how I used to adore following other blogs on
+Google Reader until &lt;a href="https://killedbygoogle.com/"&gt;Google swung the axe, decided it was not profitable
+enough&lt;/a&gt;. However, feed readers were easy, they
+continued to exist, and it was still possible to find alternatives (server based
+and server-less). In fact this is not an isolated incident. Large corporations
+always change services, buy new ones, shutdown old ones on their whims and
+fancies. They would come abruptly, and I should be prepared for this.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In fact, blog and email servers are like
+&lt;a href="https://genius.com/37517]"&gt;Hotel California (&lt;em&gt;You can check out any time you like, but you can never leave&lt;/em&gt;)&lt;/a&gt;
+as long as you care about others to be able to find you.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By buying a domain name, you get an address which stays the same,
+irrespective of where you host it. The host could be GitHub, Gitlab,
+&lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt; or even a small server powered by a Raspberry Pi!
+The readers will still be able to find you. And as a bonus, you can choose a
+domain name which represents your interests better.&lt;/p&gt;
+&lt;p&gt;Talking about interests, did you know there are a lot of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; (top
+level domain names) right now. Dull &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.net&lt;/code&gt; TLDs of yore are old-fashioned.
+The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
+the "domain registrar". Where to buy can be confusing to a total beginner.&lt;/p&gt;
+&lt;h2 id="doing-the-pre-purchase-research"&gt;&lt;a class="toclink" href="#doing-the-pre-purchase-research"&gt;Doing the pre-purchase research&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The research that I did was a bit of informal hearsay in the interweb. For instance the &lt;a href="https://wizardzines.com"&gt;following comics by Julia Evans&lt;/a&gt; were really useful&lt;sup id="fnref:zines"&gt;&lt;a class="footnote-ref" href="#fn:zines"&gt;1&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
+&lt;p&gt;&lt;img alt="choosing a domain registrar" src="https://wizardzines.com/comics/registrar/registrar.png"&gt;
+&lt;img alt="whois protection can" src="https://wizardzines.com/comics/domain-privacy/domain-privacy.png"&gt;
+&lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;&lt;img alt="TLDs" src="https://wizardzines.com/comics/tld/tld.png"&gt;&lt;/a&gt;
+&lt;img alt="subdomains" src="https://wizardzines.com/comics/subdomains/subdomains.png"&gt;&lt;/p&gt;
+&lt;p&gt;And this one on receiving
+&lt;a href="https://wizardzines.com/comics/receiving-email/"&gt;emails&lt;/a&gt; which I will think
+about later. Self-hosting emails is not an easy feat.&lt;/p&gt;
+&lt;p&gt;On the choosing the domain registrar question, I got a excellent tip from
+&lt;a href="https://jlelse.blog/dev/free-website"&gt;Jan Lukas-Else&lt;/a&gt; who had good experience
+with &lt;a href="https://porkbun.com"&gt;Porkbun&lt;/a&gt;. Therefore, I went there and there were many good deals
+going on.&lt;/p&gt;
+&lt;h2 id="how-i-bought-the-domain-name"&gt;&lt;a class="toclink" href="#how-i-bought-the-domain-name"&gt;How I bought the domain name&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;No single correct or optimal answer exists to which domain name one should buy
+-- given the plethora of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; in the market! The &lt;a href="https://porkbun.com/products/domains"&gt;prices&lt;/a&gt; are
+nearly fixed for a given TLD. This caught my eye, and I decided to scrap the
+table for offline brainstorming.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The result was a small &lt;a href="https://codeberg.org/ashwinvis/domain-name-search"&gt;domain-name-search Python tool&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By doing so, I was able to check availability of different combinations of
+domain names using &lt;code&gt;whois&lt;/code&gt; and visualize costs in an interactive plot. Of
+course, it was not perfect, a few domain names which were available were up for
+premium registration (prices often exceeding thousands of dollars). Which were
+not for me.  Once I had a shortlist done, it was easy to reduce the options.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And thus I registered &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="why-fluidquest"&gt;&lt;a class="toclink" href="#why-fluidquest"&gt;Why &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For now, I can say that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is an ode to the skill that I have been trained in for nearly a decade, Fluid Mechanics.&lt;/li&gt;
+&lt;li&gt;The quest post Ph.D. still continues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-happens-next"&gt;&lt;a class="toclink" href="#what-happens-next"&gt;What happens next?&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First I will archive a snapshot of the landing page and this post, in case
+someone runs into the blog years later with the old URL and receives a 404
+error message, wondering what had happened.&lt;/p&gt;
+&lt;p&gt;I will soon a register &lt;a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"&gt;the apex domain / subdomain&lt;/a&gt; to point to this
+very website via the &lt;a href="https://fluid.quest"&gt;new URL&lt;/a&gt;. Hopefully, all visits to the current URL
+&lt;a href="https://ashwinvis.github.io"&gt;ashwinvis.github.io&lt;/a&gt; would be redirected by
+&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; as long I continue to use their service.&lt;/p&gt;
+&lt;p&gt;Over a longer period of time, I can turn to a different host with more ethical
+business model such as &lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="update"&gt;&lt;a class="toclink" href="#update"&gt;Update&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The move is now complete to &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:zines"&gt;
+&lt;p&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines &lt;a href="https://wizardzines.com/licensing/"&gt;CC-BY-NC-SA 4.0&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:zines" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry></feed>

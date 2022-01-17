@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/tech-talk.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-12-19T15:30:21+01:00</updated><subtitle></subtitle><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website - Tech Talk</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/tech-talk.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2021-12-19T15:30:21+01:00</updated><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/"&gt;https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://blog.xmgz.eu/jekyll-mastodon-comment/"&gt;https://blog.xmgz.eu/jekyll-mastodon-comment/&lt;/a&gt;&lt;/li&gt;
@@ -175,10 +175,10 @@ variable &lt;code&gt;contents&lt;/code&gt; is for illustrative purposes and can 
 &lt;/ul&gt;</content><category term="Tech Talk"></category><category term="software"></category><category term="python"></category><category term="bash"></category><category term="c"></category><category term="cpp"></category><category term="java"></category><category term="ecmascript"></category></entry><entry><title>Fixing 434 links in 111 files for pyenv</title><link href="https://fluid.quest/fixing-links-for-pyenv.html" rel="alternate"></link><published>2020-08-20T16:50:51+02:00</published><updated>2020-08-20T16:50:51+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2020-08-20:/fixing-links-for-pyenv.html</id><summary type="html">&lt;p&gt;A.K.A. shell scripting is awesome, and why don’t-repeat-yourself (DRY) matters. Context: PyPy moved its repositories to Heptapod (unrelated, but I have to mention it is an awesome source-code forge and a project) and binary builds to downloads.python.org. PyPy could no longer be installed using pyenv. Since I happened to try install PyPy the same day it stopped working, I was among the few it noticed it.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The project pyenv has several small bash scripts, one for each version, both
 binary and source builds. This totalled to a staggering 111 files with 434
-lines of code containing the base URL &lt;a href="https://bitbucket.org/pypy/pypy/downloads"&gt;https://bitbucket.org/pypy/pypy/downloads&lt;/a&gt;
+lines of code containing the base URL &lt;a class="m-link-wrap" href="https://bitbucket.org/pypy/pypy/downloads"&gt;https://bitbucket.org/pypy/pypy/downloads&lt;/a&gt;
 (which no longer works). On one hand, it makes it easier to understand, to
 contribute to and to maintain pyenv. But at rare events such as this, when the
-entire PyPy repository gets moved to &lt;a href="https://downloads.python.org/pypy"&gt;https://downloads.python.org/pypy&lt;/a&gt;, it
+entire PyPy repository gets moved to &lt;a class="m-link-wrap" href="https://downloads.python.org/pypy"&gt;https://downloads.python.org/pypy&lt;/a&gt;, it
 becomes unnecessarily painful to fix the code, because the &lt;strong&gt;same “value” gets
 repeated&lt;/strong&gt; all over the code base. Here is &lt;code&gt;pypy3.5-6.0.0-src&lt;/code&gt; for example:&lt;/p&gt;
 &lt;pre&gt;#require_gcc
@@ -377,7 +377,7 @@ as raw text.&lt;/aside&gt;
 &lt;ul&gt;
 &lt;li&gt;HTML&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c"&gt;&amp;lt;!-- INFO: Ligatures for HTML  --&amp;gt;&lt;/span&gt;
+&lt;pre class="m-code"&gt;&lt;span class="cm"&gt;&amp;lt;!-- INFO: Ligatures for HTML  --&amp;gt;&lt;/span&gt;
 &lt;span class="err"&gt;&amp;lt;&lt;/span&gt;/&amp;gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;empty&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; tag &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;empty&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Perl / Ruby / PHP&lt;/li&gt;
@@ -386,20 +386,20 @@ as raw text.&lt;/aside&gt;
 &lt;ul&gt;
 &lt;li&gt;Haskell&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;-- INFO: Ligatures for Haskell operators: ++, &amp;gt;&amp;gt;=,&amp;lt;&amp;lt;=, &amp;gt;=&amp;gt;, &amp;lt;=&amp;lt;&lt;/span&gt;
-&lt;span class="nf"&gt;a&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;pre class="m-code"&gt;&lt;span class="c1"&gt;-- INFO: Ligatures for Haskell operators: ++, &amp;gt;&amp;gt;=,&amp;lt;&amp;lt;=, &amp;gt;=&amp;gt;, &amp;lt;=&amp;lt;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="c1"&gt;-- instead of&lt;/span&gt;
-&lt;span class="nf"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
-&lt;span class="c1"&gt;-- simply go with&lt;/span&gt;
-&lt;span class="nf"&gt;f&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
+&lt;span class="c1"&gt;-- instead of&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="c1"&gt;-- simply go with&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="c1"&gt;-- instead of&lt;/span&gt;
-&lt;span class="nf"&gt;\&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
-&lt;span class="c1"&gt;-- simply go with&lt;/span&gt;
-&lt;span class="nf"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
-&lt;span class="c1"&gt;-- or&lt;/span&gt;
-&lt;span class="nf"&gt;g&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;/pre&gt;
+&lt;span class="c1"&gt;-- instead of&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;\&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="c1"&gt;-- simply go with&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="c1"&gt;-- or&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="nf"&gt;g&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;/pre&gt;
 &lt;/section&gt;
 &lt;section id="try-it-yourself"&gt;
 &lt;h2&gt;Try it yourself&lt;/h2&gt;

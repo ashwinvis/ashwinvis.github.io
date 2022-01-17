@@ -164,10 +164,10 @@
 equation can yield chaotic behaviour and seems to have properties like
 Hopf bifurcation. I wanted to check out myself.</p>
 <div class="formula">
-<i>x</i><sub><i>i</i> + 1</sub> = <i>a</i><i>x</i><sub><i>i</i></sub>(1 − <i>x</i><sub><i>i</i></sub>)
+<i>x</i><sub><i>i</i> + 1</sub> = <i>a</i><i>x</i><sub><i>i</i></sub>(1 − <i>x</i><sub><i>i</i></sub>)
 </div>
 <p>Reference:
-<a href="https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/">https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/</a></p>
+<a class="m-link-wrap" href="https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/">https://blog.stephenwolfram.com/2019/07/mitchell-feigenbaum-1944-2019-4-66920160910299067185320382/</a></p>
 <pre class="m-code"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1">## I would love to do it like this. Unfortunately I cannot find a nice way to make a recursive</span>
@@ -192,7 +192,7 @@ Hopf bifurcation. I wanted to check out myself.</p>
 <pre class="m-code"><span class="k">def</span> <span class="nf">series</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">):</span> <span class="k">return</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
 <span class="n">series</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">)</span></pre>
 <div class="formula">
-<span class="displaystyle"><span class="symbol">[</span></span>0.3333333333333333,  0.7111111111111111,  0.6573827160493827,  0.720738178204542,  0.6440789013854076,  0.7335720645618368,  0.6254210901002277,  0.7496625605058258,  0.6005395388213597,  0.7676537636274826,  0.5707566810113398,  0.7839791746952305,  0.5419386506861306,  0.7943716786516055,  0.5227050073850749,  0.7983503444468598,  0.5151586302990083,  0.7992646909678656,  0.5134100631677054,  0.7994245446586822,  0.5131038145790108,  0.7994505281391325,  0.5130540198310227,  0.799454696212004,  0.5130460317330444,  0.7994553633792654,  0.5130447530988549,  0.7994554701330878,  0.5130445485035884,  0.79945548721388<span class="symbol">]</span>
+<span class="displaystyle"><span class="stretchy">[</span></span>0.3333333333333333,  0.7111111111111111,  0.6573827160493827,  0.720738178204542,  0.6440789013854076,  0.7335720645618368,  0.6254210901002277,  0.7496625605058258,  0.6005395388213597,  0.7676537636274826,  0.5707566810113398,  0.7839791746952305,  0.5419386506861306,  0.7943716786516055,  0.5227050073850749,  0.7983503444468598,  0.5151586302990083,  0.7992646909678656,  0.5134100631677054,  0.7994245446586822,  0.5131038145790108,  0.7994505281391325,  0.5130540198310227,  0.799454696212004,  0.5130460317330444,  0.7994553633792654,  0.5130447530988549,  0.7994554701330878,  0.5130445485035884,  0.79945548721388<span class="stretchy">]</span>
 </div>
 <pre class="m-code"><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mean</span>
 
@@ -252,7 +252,7 @@ oscillates around.</p>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;series distribution&quot;</span><span class="p">)</span></pre>
 <img src="images/feigenbaum_constant_13_0.png" style="width: 567px; height: 432px" />
 <p>There is our multiple Hopf bifurcation :) Let us see what happens for
-<span class="formula"><i>a</i> &gt; 3.5</span>.</p>
+<span class="formula"><i>a</i> &gt; 3.5</span>.</p>
 <pre class="m-code"><span class="n">N</span> <span class="o">=</span> <span class="mi">300</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
@@ -330,7 +330,6 @@ nbviewer</a><em>.</em></p>
         <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
         <li><a href="https://fluid.quest/category/blogger-archive.html">Blogger archive</a></li>
         <li><a href="https://fluid.quest/category/microblog.html">Microblog</a></li>
-        <li><a href="https://fluid.quest/category/static.html">static</a></li>
         <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
         <li><a href="https://fluid.quest/category/tumblr-archive.html">Tumblr archive</a></li>
       </ol>
