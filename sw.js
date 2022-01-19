@@ -4,13 +4,12 @@ https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Servic
 https://serviceworke.rs/strategy-network-or-cache_service-worker_doc.html
 https://github.com/mozilla/serviceworker-cookbook
  */
-var CACHE = 'fluid.quest-v20.10.30'
+var CACHE = 'fluid.quest-v22.01.19'
 var contentToCache = [
   '/',
   '/app.js',
   '/index.html',
   '/archives.html',
-  '/pages/showcase.html',
   '/pages/research.html',
   '/pages/software.html',
   '/pages/sponsors.html',

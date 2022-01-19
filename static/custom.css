@@ -60,3 +60,22 @@ article > .e-content > p:first-child::first-letter {
   text-decoration: line-through;
 }
 
+.flex-item {
+  display: flex;
+}
+
+.grid-item {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-row-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.button-down {
+  /* FIXME: this does not work with CSS grid as intended */
+  margin-top: auto;
+}

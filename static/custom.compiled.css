@@ -115,6 +115,21 @@ article > .e-content > p:first-child::first-letter {
 .strike {
   text-decoration: line-through;
 }
+.flex-item {
+  display: flex;
+}
+.grid-item {
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .grid-row-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.button-down {
+  margin-top: auto;
+}
 
 h1#landing {
   font-size: 1.5rem;
