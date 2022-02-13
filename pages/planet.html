@@ -161,6 +161,93 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nibblestew.blogspot.com/2022/02/supporting-external-modules-in-godot.html" rel="bookmark" class="u-url"
+       title="Supporting external modules in Godot game engine with Meson" target="_blank">
+      <time class="m-date" datetime="2022-02-12 20:29:00+00:00">
+        Feb
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Supporting external modules in Godot game engine with Meson
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The disclaimer<p>None of this is in upstream Godot yet. It is only a proposal. The actual code can be obtained from the <span>meson2</span> branch of <a href="https://github.com/jpakkane/godot">this repository</a>. Further discussion on the issue should be posted <a href="https://github.com/jpakkane/godot/discussions/3">here</a>.</p>The problem<p>Godot's code base is split into independent modules that can be enabled and disabled at will. However many games require custom native code and thus need to define their own modules. The simplest way to do this (which, I'm told, game developers quite often do) is to fork the upstream repo and put your your code in it. This works and is a good solution for one-off projects that write all extra code by themselves. This approach also has its downsides. The two major ones are that updating to a newer version of the engine can turn into a rebasing hell …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2022-02-12 20:29:00+00:00" class="dt-published"></time>
+  Sat 12 Feb 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.volkerkrause.eu/2022/02/12/kf6-unit-test-status.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE Frameworks 6 Unit Tests" target="_blank">
+      <time class="m-date" datetime="2022-02-12 09:45:00+00:00">
+        Feb
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      KDE Frameworks 6 Unit Tests
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Here’s another small update on the progress around KDE Frameworks 6, a lot has
+happened again since <a href="//www.volkerkrause.eu/2022/01/15/kf6-continuous-integration.html">last month’s post</a>.
+Only a few modules aren’t building yet, and the vast majority of building modules
+now also has passing unit tests.</p>
+
+Building against Qt6
+
+<p>Only three frameworks don’t build out of the box yet.</p>
+
+<ul>
+  <li>KTextEditor, due to <code>QTextStream::setCodec</code> gone and needing a manual replacement, as
+well as due to issues with the first attempt of porting from <code>QDesktopWidget</code> to <code>QScreen</code>
+for completion popup placement.</li>
+  <li>Plasma Frameworks, due to changes in the low-level X11 and OpenGL APIs of Qt and a
+few remaining uses of deprecated <code>KPluginInfo</code> API.</li>
+  <li>KQuickCharts, due to needing to be ported to QtShaderTools.</li>
+</ul>
+
+<p>Note that this is only about compilation, this doesn’t automatically mean things are
+also expected to run yet, especially …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2022-02-12 09:45:00+00:00" class="dt-published"></time>
+  Sat 12 Feb 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pluralistic.net/2022/02/11/bezzlers-gonna-bezzle/" rel="bookmark" class="u-url"
        title="Pluralistic: 11 Feb 2022" target="_blank">
       <time class="m-date" datetime="2022-02-11 19:02:50+00:00">
@@ -263,70 +350,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://ervin.ipsquad.net/blog/2022/02/11/web-review-week-2022-06/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Web Review, Week 2022-06" target="_blank">
-      <time class="m-date" datetime="2022-02-11 13:27:35+00:00">
-        Feb
-        <span class="m-date-day">
-          11
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Web Review, Week 2022-06
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Let’s go for my web review for the week 2022-06.</p>
-
-
-
-Mark Zuckerberg and team consider shutting down Facebook and Instagram in Europe if Meta can not process Europeans’ data on US servers
-
-<p><em>Tags: tech, facebook, surveillance</em></p>
-
-<p>That sounds great to me. Could they do it already please?</p>
-
-<p><a href="//www.cityam.com/mark-zuckerberg-and-team-consider-shutting-down-facebook-and-instagram-in-europe-if-meta-can-not-process-europeans-data-on-us-servers/">https://www.cityam.com/mark-zuckerberg-and-team-consider-shutting-down-facebook-and-instagram-in-europe-if-meta-can-not-process-europeans-data-on-us-servers/</a></p>
-
-<p></p>
-
-Thank you, Valve
-
-<p><em>Tags: tech, valve, linux, gaming</em></p>
-
-<p>Thank you indeed. The amount of upstream contributions their efforts fostered is enormous at this point.</p>
-
-<p><a href="//kinduff.com/2022/02/06/thank-you-valve/">https://kinduff.com/2022/02/06/thank-you-valve/</a></p>
-
-<p></p>
-
-KDE: A Nice Tiling Environment and a Surprisingly Awesome DE
-
-<p><em>Tags: tech, KDE</em></p>
-
-<p>It is nice to hear from a happy user from time to time. And yes, KWin is a very nice tiling environment once you have the right extensions (I use Bismuth and dynamic virtual desktops nowadays). I’m fairly happy with those.</p>
-
-<p><a href="//changelog.complete.org/archives/10338-kde-a-nice-tiling-envieonment-and-a-surprisingly-awesome-de">https …</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Kevin Ottens (ervin)</b></span>
-  on <time datetime="2022-02-11 13:27:35+00:00" class="dt-published"></time>
-  Fri 11 Feb 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://realpython.com/podcasts/rpp/97/" rel="bookmark" class="u-url"
        title="Real Python: The Real Python Podcast – Episode #97: Improving Your Django and Python Developer Experience" target="_blank">
       <time class="m-date" datetime="2022-02-11 12:00:00+00:00">
@@ -389,74 +412,6 @@ KDE: A Nice Tiling Environment and a Surprisingly Awesome DE
   on <time datetime="2022-02-11 00:00:00+00:00" class="dt-published"></time>
   Fri 11 Feb 2022
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://thisweek.gnome.org/posts/2022/02/twig-30/" rel="bookmark" class="u-url"
-       title="#30 Fragmented" target="_blank">
-      <time class="m-date" datetime="2022-02-11 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          11
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      #30 Fragmented
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Update on what happened across the GNOME project in the week from February 04 to February 11.</p>
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#core-apps-and-libraries"></a>Core Apps and Libraries
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#software"></a>Software <a href="https://gitlab.gnome.org/GNOME/gnome-software/"></a>
-<p>Lets you install and update applications and system extensions.</p>
-<p><a href="https://matrix.to/#/@pwithnall:matrix.org">Philip Withnall</a> announces</p>
-<blockquote>
-<p>Adrien Plazas has <a href="https://gitlab.gnome.org/GNOME/gnome-software/-/merge_requests/1101">updated the appearance of app reviews in gnome-software</a>, as well as a number of other improvements across the UI</p>
-</blockquote>
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#settings"></a>Settings <a href="https://gitlab.gnome.org/GNOME/gnome-control-center"></a>
-<p>Configure various aspects of your GNOME desktop.</p>
-<p><a href="https://matrix.to/#/@alexm:gnome.org">Alexander Mikhaylenko</a> says</p>
-<blockquote>
-<p>Backgrounds can now change depending on the light/dark preference. Thanks Jakub Steiner for making dark versions of all default backgrounds and Georges Stavracas (feaneron) for reviews
-
-<img alt="" src="https://thisweek.gnome.org/posts/2022/02/twig-30/e268c933560e14de1b12153f7fdcbc8f5db11e00.png">
-
-
-<img alt="" src="https://thisweek.gnome.org/posts/2022/02/twig-30/7161d8924ee8df4911f1e6883a4e163210d98bf3.png">
-</p>
-</blockquote>
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#vala"></a>Vala <a href="https://gitlab.gnome.org/GNOME/vala"></a>
-<p>An object-oriented programming language with a self-hosting compiler that generates C code and uses the GObject system</p>
-<p><a href="https://matrix.to/#/@lw64:gnome.org">lwildberg</a> says</p>
-<blockquote>
-<p>The examples in the <a href="https://developer.gnome.org/documentation/tutorials/beginners/components.html">beginners tutorial</a> are also now available in Vala. So the perfect time to start your GNOME app in Vala! Thanks also to …</p></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-02-11 00:00:00+00:00" class="dt-published"></time>
-  Fri 11 Feb 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
