@@ -161,12 +161,12 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2022/02/2022-02-22-ejvbe" rel="bookmark" class="u-url"
+    <a href="https://jlelse.blog/micro/2022/02/2022-02-23-kkqkz" rel="bookmark" class="u-url"
        title="" target="_blank">
-      <time class="m-date" datetime="2022-02-22 22:26:18+01:00">
+      <time class="m-date" datetime="2022-02-23 21:46:19+01:00">
         Feb
         <span class="m-date-day">
-          22
+          23
         </span>
         2022
       </time>
@@ -177,15 +177,15 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  What a good feeling when the hours you have invested in optimizing and testing actually bear fruit. In other words, my blog now uses less than 100 MB of memory, even though I have quite a few features enabled. My diary for example needs less than 20 MB. And if you compare that with WordPress, where the database alone needs more than 300 MB… 😄
+  Why didn’t I think of the very helpful Go module “net/http/pprof” earlier? This way I can profile my blog live. 🤓 (And hopefully find parts that I should or can optimize.)
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-02-22 22:26:18+01:00" class="dt-published"></time>
-  Tue 22 Feb 2022
+  on <time datetime="2022-02-23 21:46:19+01:00" class="dt-published"></time>
+  Wed 23 Feb 2022
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -195,56 +195,283 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://death.andgravity.com/yaml-unknown-tag" rel="bookmark" class="u-url"
-       title="death and gravity: yaml: could not determine a constructor for the tag" target="_blank">
-      <time class="m-date" datetime="2022-02-22 19:41:05+00:00">
+    <a href="https://kubuntu.org/news/plasma-5-24-2-available-on-kubuntu-21-10/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Plasma 5.24.2 available on Kubuntu 21.10" target="_blank">
+      <time class="m-date" datetime="2022-02-23 18:15:14+00:00">
         Feb
         <span class="m-date-day">
-          22
+          23
         </span>
         2022
       </time>
       <div class="p-name">
-      death and gravity: yaml: could not determine a constructor for the tag
+      Plasma 5.24.2 available on Kubuntu 21.10
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>So you're trying to read some YAML using <a href="https://github.com/yaml/pyyaml">PyYAML</a>,
-and get an exception like this:</p>
-<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>yaml</span><span>.</span><span>safe_load</span><span>(</span><span>&quot;!!python/tuple [0,0]&quot;</span><span>)</span>
-<span>Traceback (most recent call last):</span>
-  <span>...</span>
-<span>yaml.constructor.ConstructorError</span>: <span>could not determine a constructor for the tag 'tag:yaml.org,2002:python/tuple'</span>
-<span>  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:</span>
-<span>    !!python/tuple [0,0]</span>
-<span>    ^</span>
-</code></pre></div>
-<p>... or like this:</p>
-<div><pre><span></span><code><span>&gt;&gt;&gt; </span><span>yaml</span><span>.</span><span>safe_load</span><span>(</span><span>&quot;!GetAZs us-east-1&quot;</span><span>)</span>
-<span>Traceback (most recent call last):</span>
-  <span>...</span>
-<span>yaml.constructor.ConstructorError</span>: <span>could not determine a constructor for the tag '!GetAZs'</span>
-<span>  in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:</span>
-<span>    !GetAZs us-east-1</span>
-<span>    ^</span>
-</code></pre></div>
-What does it mean?<span> <a href="https://death.andgravity.com/yaml-unknown-tag#what-does-it-mean" title="permalink">#</a></span>
-<p>First, a bit of background.</p>
-<p>On top of basic types (strings, integers, sequences, and so on),
-YAML can represent native and user-defined data structures.
-To denote the type of a node, you mark it with an explicit <a href="https://yaml.org/spec/1.2.2/#tags">tag</a>.
-Even basic types end up with a tag; the …</p>
+  <p>We are pleased to announce that Plasma 5.24.2 is now available in our <a href="//launchpad.net/~kubuntu-ppa/+archive/ubuntu/backports?field.series_filter=impish">backports PPA</a> for Kubuntu 21.10 (Impish Indri).</p>
+
+
+
+<p>The release announcement detailing the new features and improvements in Plasma 5.24.2 can be <a href="//kde.org/announcements/changelogs/plasma/5/5.24.1-5.24.2/">found here</a>.</p>
+
+
+
+<p></p>
+
+
+
+<img alt="" src="//kubuntu.org/wp-content/uploads/2022/02/1a3f/Screenshot_20220223_111449.png">
+
+
+
+<p></p>
+
+
+
+<p><strong>To upgrade:</strong></p>
+
+
+
+<p>Add the following repository to your software sources list:</p>
+
+
+
+<p><strong><em>ppa:kubuntu-ppa/backports</em></strong></p>
+
+
+
+<p>or if it is already added, the updates should become available via your preferred update method.</p>
+
+
+
+<p>The PPA can be added manually in the Konsole terminal with the command:</p>
+
+
+
+<p><em><code>sudo add-apt-repository ppa:kubuntu-ppa/backports</code></em></p>
+
+
+
+<p>and packages then updated with</p>
+
+
+
+<p><em>sudo apt full-upgrade</em></p>
+
+
+
+<p><strong>IMPORTANT</strong></p>
+
+
+
+<p><em>Please note that more bugfix releases are scheduled by KDE for Plasma 5.24, so while we feel these backports will be beneficial to enthusiastic adopters, users wanting to use a Plasma release with more rounds of stabilisation/bugfixes ‘baked in’ may …</em></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kubuntu News</b></span>
+  on <time datetime="2022-02-23 18:15:14+00:00" class="dt-published"></time>
+  Wed 23 Feb 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://fortintam.com/blog/how-long-does-it-take-to-write-and-design-a-website/" rel="bookmark" class="u-url"
+       title="How long does it take to create a website? (and why your FLOSS project doesn’t need one)" target="_blank">
+      <time class="m-date" datetime="2022-02-23 15:56:43+00:00">
+        Feb
+        <span class="m-date-day">
+          23
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      How long does it take to create a website? (and why your FLOSS project doesn’t need one)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  A case study on how long it takes to create a fairly simple, high-quality website
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jeff</b></span>
+  on <time datetime="2022-02-23 15:56:43+00:00" class="dt-published"></time>
+  Wed 23 Feb 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://realpython.com/python-assert-statement/" rel="bookmark" class="u-url"
+       title="Real Python: Python's assert: Debug and Test Your Code Like a Pro" target="_blank">
+      <time class="m-date" datetime="2022-02-23 14:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          23
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Real Python: Python's assert: Debug and Test Your Code Like a Pro
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Python’s <code>assert</code> statement allows you to write <a href="https://en.wikipedia.org/wiki/Sanity_check">sanity checks</a> in your code. These checks are known as <strong>assertions</strong>, and you can use them to test if certain assumptions remain true while you’re developing your code. If any of your assertions turn false, then you have a bug in your code.</p>
+<p>Assertions are a convenient tool for <strong>documenting</strong>, <strong>debugging</strong>, and <strong>testing</strong> code during development. Once you’ve debugged and tested your code with the help of assertions, then you can turn them off to optimize the code for production. Assertions will help you make your code more efficient, robust, and reliable.</p>
+<p><strong>In this tutorial, you’ll learn:</strong></p>
+<ul>
+<li>What <strong>assertions</strong> are and when to use them</li>
+<li>How Python’s <strong><code>assert</code> statement</strong> works</li>
+<li>How <code>assert</code> can help you <strong>document</strong>, <strong>debug</strong>, and <strong>test</strong> your code</li>
+<li>How assertions can be <strong>disabled</strong> to improve …</li></ul></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-02-22 19:41:05+00:00" class="dt-published"></time>
-  Tue 22 Feb 2022
+  on <time datetime="2022-02-23 14:00:00+00:00" class="dt-published"></time>
+  Wed 23 Feb 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2022/02/23/getaddrinfo-is-kind-of-weird/" rel="bookmark" class="u-url"
+       title="Some things about getaddrinfo that surprised me" target="_blank">
+      <time class="m-date" datetime="2022-02-23 08:33:56+00:00">
+        Feb
+        <span class="m-date-day">
+          23
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Some things about getaddrinfo that surprised me
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! Here are some things you may or may not have noticed about DNS:</p>
+
+<ul>
+<li>when you resolve a DNS name in a Python program, it checks <code>/etc/hosts</code>, but when you use <code>dig</code>, it doesn&rsquo;t.</li>
+<li>switching Linux distributions can sometimes change how your DNS works, for example if you use Alpine Linux instead of Ubuntu it can cause problems.</li>
+<li>Mac OS has DNS caching, but Linux doesn&rsquo;t necessarily unless you use <code>systemd-resolved</code> or something</li>
+</ul>
+
+<p>To understand all of these, we need to learn about a function called
+<code>getaddrinfo</code> which is responsible for doing DNS lookups.</p>
+
+<p>There are a bunch of surprising-to-me things about <code>getaddrinfo</code>, and once I
+learned about them, it explained a bunch of the confusing DNS behaviour I&rsquo;d
+seen in the past.</p>
+
+where does <code>getaddrinfo</code> come from?
+
+<p><code>getaddrinfo</code> is part of a library called <code>libc …</code></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-02-23 08:33:56+00:00" class="dt-published"></time>
+  Wed 23 Feb 2022
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2585/" rel="bookmark" class="u-url"
+       title="Rounding" target="_blank">
+      <time class="m-date" datetime="2022-02-23 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          23
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Rounding
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="I've developed a novel propulsion system powered by loss of precision in unit conversion." src="https://imgs.xkcd.com/comics/rounding.png" title="I've developed a novel propulsion system powered by loss of precision in unit conversion.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-02-23 00:00:00+00:00" class="dt-published"></time>
+  Wed 23 Feb 2022
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://archlinux.org/news/arch-linux-leader-election-results/" rel="bookmark" class="u-url"
+       title="Arch Linux Leader Election Results" target="_blank">
+      <time class="m-date" datetime="2022-02-23 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          23
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Arch Linux Leader Election Results
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  This month we held our leader election, and our current leader Levente Polyák ran unopposed. As per <a href="https://wiki.archlinux.org/title/DeveloperWiki:Project_Leader#Election">our election rules</a> he is re-elected for a new term.
+<strong>Congratulations to Levente Polyak on a new term!</strong>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Giancarlo Razzolini</b></span>
+  on <time datetime="2022-02-23 00:00:00+00:00" class="dt-published"></time>
+  Wed 23 Feb 2022
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -287,56 +514,6 @@ Even basic types end up with a tag; the …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2022/02/21/its-normal-and-it-works/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="It’s normal and it works" target="_blank">
-      <time class="m-date" datetime="2022-02-22 04:12:00+00:00">
-        Feb
-        <span class="m-date-day">
-          22
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      It’s normal and it works
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I read <a href="//www.phoronix.com/forums/forum/software/desktop-linux/1309866-kde-developers-had-a-very-busy-valentine-s-week-with-many-plasma-improvements?p=1309944#post1309944">a comment on Phoronix</a> recently that reminded me why I love KDE Plasma:</p>
-
-
-
-<img alt="" src="//pointieststick.files.wordpress.com/2022/02/comment.png">
-
-
-
-<p><strong>“KDE is normal and it works”</strong></p>
-
-
-
-<p>We can ignore the argument to which this is a response, and forgive alcade for confusing the name of the community with the desktop environment. Regardless, “KDE is normal and it works” is in a nutshell what I think makes KDE Plasma such a unique and shining point of light in the FOSS world.</p>
-
-
-
-<p>Plasma uses a normal, familiar layout: Panel on the bottom with an app launcher, pinned apps, system tray, and clock; desktop icons; visible buttons that mostly have text labels; minimize/maximize/close buttons on windows. You know, normal stuff. You can change everything, but it starts out normal, unlike other desktop environment projects that are explicitly abnormal–being controversially opinionated about matters of design or …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2022-02-22 04:12:00+00:00" class="dt-published"></time>
-  Tue 22 Feb 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://tonsky.me/blog/humble-dx/" rel="bookmark" class="u-url"
        title="Humble Chronicles: Developer Experience" target="_blank">
       <time class="m-date" datetime="2022-02-22 00:00:00+00:00">
@@ -371,40 +548,6 @@ Even basic types end up with a tag; the …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2584/" rel="bookmark" class="u-url"
-       title="Headline Words" target="_blank">
-      <time class="m-date" datetime="2022-02-21 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          21
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Headline Words
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Roundly-condemned headlinese initiative shuttered indefinitely." src="https://imgs.xkcd.com/comics/headline_words.png" title="Roundly-condemned headlinese initiative shuttered indefinitely.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-02-21 00:00:00+00:00" class="dt-published"></time>
-  Mon 21 Feb 2022
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2022-02-20_Caring_for_Amaryllis" rel="bookmark" class="u-url"
        title="Caring for Amaryllis" target="_blank">
       <time class="m-date" datetime="2022-02-20 18:07:11+00:00">
@@ -431,40 +574,6 @@ Even basic types end up with a tag; the …</p>
   on <time datetime="2022-02-20 18:07:11+00:00" class="dt-published"></time>
   Sun 20 Feb 2022
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fortintam.com/blog/gtg-0-6-release-candidate/" rel="bookmark" class="u-url"
-       title="GTG 0.6 release candidate" target="_blank">
-      <time class="m-date" datetime="2022-02-20 16:20:00+00:00">
-        Feb
-        <span class="m-date-day">
-          20
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      GTG 0.6 release candidate
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today we are publishing a “release candidate” version of Getting Things GNOME 0.6. You can either try it out directly from the git master version (by running launch.sh; see the general instructions), or from the testing package available on Flathub’s “beta” repository, separately from the standard stable flathub/flatpak release you may already be running. To … <p><a href="https://fortintam.com/blog/gtg-0-6-release-candidate/">Continue reading<span> "GTG 0.6 release candidate"</span></a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jeff</b></span>
-  on <time datetime="2022-02-20 16:20:00+00:00" class="dt-published"></time>
-  Sun 20 Feb 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -513,57 +622,6 @@ Download and Install
   on <time datetime="2022-02-20 13:48:00+01:00" class="dt-published"></time>
   Sun 20 Feb 2022
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2022/02/20/things-that-used-to-be-hard-and-are-now-easy/" rel="bookmark" class="u-url"
-       title="Things that used to be hard and are now easy" target="_blank">
-      <time class="m-date" datetime="2022-02-20 09:00:36+00:00">
-        Feb
-        <span class="m-date-day">
-          20
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Things that used to be hard and are now easy
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! I was talking to some friends the other day about the types of
-conference talks we enjoyed.</p>
-
-<p>One category we came up with was &ldquo;you know this thing that used to be super
-hard? Turns out now it&rsquo;s WAY EASIER and maybe you can do it now!&ldquo;.</p>
-
-<p>So I asked on Twitter about <a href="https://twitter.com/b0rk/status/1494301227533967369?s=20&amp;t=M_RYvWzEOymZ--YjE9jvpQ">programming things that used to be hard and are now easy</a></p>
-
-<p>Here are some of the answers I got. Not all of them are equally &ldquo;easy&rdquo;, but I
-found reading the list really fun and it gave me some ideas for things to
-learn. Maybe it&rsquo;ll give you some ideas too.</p>
-
-<ul>
-<li>SSL certificates, with Let&rsquo;s Encrypt</li>
-<li>Concurrency, with async/await (in several languages)</li>
-<li>Centering in CSS, with flexbox/grid</li>
-<li>Building fast programs, with Go</li>
-<li>Image recognition, with <a href="https://simonwillison.net/2018/Oct/29/transfer-learning/">transfer learning</a> (someone pointed out that …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-02-20 09:00:36+00:00" class="dt-published"></time>
-  Sun 20 Feb 2022
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
