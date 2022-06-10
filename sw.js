@@ -4,7 +4,7 @@ https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Servic
 https://serviceworke.rs/strategy-network-or-cache_service-worker_doc.html
 https://github.com/mozilla/serviceworker-cookbook
  */
-var CACHE = 'fluid.quest-v22.01.19'
+var CACHE = 'fluid.quest-v22.06.07'
 var contentToCache = [
   '/',
   '/app.js',
@@ -16,7 +16,18 @@ var contentToCache = [
   '/pages/cv.html',
   '/pages/contact.html',
   '/static/custom.compiled.css',
+  '/static/fedicomments.css',
+  '/static/m-components.css',
+  '/static/m-grid.css',
+  '/static/m-layout.css',
+  '/static/m-theme-dark.css',
+  '/static/m-theme-light.css',
   '/static/m-unified.css',
+  '/static/pygments-console.css',
+  '/static/pygments-dark.css',
+  '/static/pygments-light.css',
+  '/static/webmention.css',
+  '/static/purify.min.js',
   '/static/theme.js',
   '/static/webmention.min.js',
   '/images/logo_ashwin.png',

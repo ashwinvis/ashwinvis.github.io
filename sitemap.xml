@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/</loc>
-<lastmod>2022-06-09T22:01:35-00:00</lastmod>
+<lastmod>2022-06-10T00:12:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/planet.html</loc>
-<lastmod>2022-06-09T22:01:35-00:00</lastmod>
+<lastmod>2022-06-10T00:12:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/pages/contact.html</loc>
-<lastmod>2019-10-18T00:00:00+02:00</lastmod>
+<lastmod>2022-06-07T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -32,15 +32,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://fluid.quest/</loc>
-<lastmod>2019-11-12T00:00:00+01:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-
-<url>
 <loc>https://fluid.quest/pages/planet.html</loc>
-<lastmod>2022-06-09T22:01:35-00:00</lastmod>
+<lastmod>2022-06-10T00:12:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -61,7 +54,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/sponsors.html</loc>
-<lastmod>2022-06-09T22:01:35-00:00</lastmod>
+<lastmod>2022-06-10T00:12:31-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
