@@ -66,12 +66,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -106,7 +108,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives" id="m-navbar-current">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -177,7 +179,7 @@ webmention as follows:</p>
   <a href="https://brid.gy/about#webmentions">mentioned here</a></li>
 <li>Send a request <a href="https://indieweb.org/Webmention-developer#How_to_send_webmentions_with_cURL">using cURL</a></li>
 </ul>
-<div class="m-code"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://fluid.quest/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+<div class="m-code"><pre><span></span><code>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://fluid.quest/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 <span class="m">201</span> 
 content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
 cache-control: no-cache
@@ -197,13 +199,12 @@ content-length: <span class="m">3401</span>
   <span class="s2">&quot;id&quot;</span>:<span class="s2">&quot;103920181819443082&quot;</span>,
   <span class="s2">&quot;created_at&quot;</span>:<span class="s2">&quot;2020-03-31T23:08:53.759Z&quot;</span>,
   ...
-</pre></div>
-
+</code></pre></div>
 
 <ul>
 <li>Ensure that accidental duplicate posts are avoided.</li>
 </ul>
-<div class="m-code"><pre><span></span>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://fluid.quest/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
+<div class="m-code"><pre><span></span><code>❯ curl -i -d <span class="nv">source</span><span class="o">=</span>https://fluid.quest/tesing-indieweb-stack.html -d <span class="nv">target</span><span class="o">=</span>https://brid.gy/publish/mastodon https://brid.gy/publish/webmention
 HTTP/2 <span class="m">400</span> 
 content-type: application/json<span class="p">;</span> <span class="nv">charset</span><span class="o">=</span>utf-8
 cache-control: no-cache
@@ -223,12 +224,10 @@ content-length: <span class="m">3731</span>
   <span class="s2">&quot;original&quot;</span>:<span class="o">{</span>
     <span class="s2">&quot;id&quot;</span>:<span class="s2">&quot;103920181819443082</span>
 <span class="s2">    ...</span>
-</pre></div>
-
+</code></pre></div>
 
 <h3 id="end-result"><a class="toclink" href="#end-result">End result</a></h3>
 <iframe src="https://mastodon.acc.sunet.se/@ashwinvis/103920181819443082/embed" class="mastodon-embed" style="max-width: 100%; border: 0" allowfullscreen="allowfullscreen"></iframe>
-
 <script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
 <h3 id="next-steps"><a class="toclink" href="#next-steps">Next steps</a></h3>
@@ -438,6 +437,7 @@ content-length: <span class="m">3731</span>
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>

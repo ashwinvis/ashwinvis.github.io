@@ -63,12 +63,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -103,7 +105,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -162,31 +164,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/appydroid/smartphone-story" rel="bookmark" class="u-url"
-       title="My smartphone story" target="_blank">
-      <time class="m-date" datetime="2022-06-13 19:17:37+02:00">
+    <a href="https://chomsky.info/20220616/" rel="bookmark" class="u-url"
+       title="Chomsky and Barsamian, In Ukraine, Diplomacy Has Been Ruled Out" target="_blank">
+      <time class="m-date" datetime="2022-06-16 20:56:34+00:00">
         Jun
         <span class="m-date-day">
-          13
+          16
         </span>
         2022
       </time>
       <div class="p-name">
-      My smartphone story
+      Chomsky and Barsamian, In Ukraine, Diplomacy Has Been Ruled Out
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  I’ve recently read a few posts where the authors have shared their smartphone stories. Then last week I got my hands on my very first smartphone again (I’m a bit of a hoarder when it comes to that and still own every single one of my smartphones) and figured why not blog about it? So here it is, my smartphone story.
+  Chomsky and Barsamian, In Ukraine, Diplomacy Has Been Ruled Out Noam Chomsky with David Barsamian, “Chronicles of Dissent” Interview Transcript June 16, 2022. TomDispatch. Can you even remember when it began? Doesn’t it seem like forever? And the timing — if forever can even be said to have timing — has been little short of [&#8230;]
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>anthony</b></span>
+  on <time datetime="2022-06-16 20:56:34+00:00" class="dt-published"></time>
+  Thu 16 Jun 2022
+  in chomsky.info.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2022/06/bunny-fonts" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2022-06-16 19:51:03+02:00">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I am a Bunny.net fan as they offer a CDN at a good price, are based in Europe and really care about privacy. The latest tool they offer: Bunny Fonts as a replacement for Google Fonts, because its use is illegal in Germany. 👍
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-13 19:17:37+02:00" class="dt-published"></time>
-  Mon 13 Jun 2022
+  on <time datetime="2022-06-16 19:51:03+02:00" class="dt-published"></time>
+  Thu 16 Jun 2022
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -196,40 +232,101 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://realpython.com/python-subprocess/" rel="bookmark" class="u-url"
-       title="Real Python: The subprocess Module: Wrapping Programs With Python" target="_blank">
-      <time class="m-date" datetime="2022-06-13 14:00:00+00:00">
+    <a href="https://nedbatchelder.com/blog/202206/math_factoid_of_the_day_60.html" rel="bookmark" class="u-url"
+       title="Math factoid of the day: 60" target="_blank">
+      <time class="m-date" datetime="2022-06-16 06:53:00-04:00">
         Jun
         <span class="m-date-day">
-          13
+          16
         </span>
         2022
       </time>
       <div class="p-name">
-      Real Python: The subprocess Module: Wrapping Programs With Python
+      Math factoid of the day: 60
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>If you’ve ever wanted to simplify your command-line scripting or use Python alongside command-line applications—or any applications for that matter—then the Python <code>subprocess</code> module can help. From running shell commands and command-line applications to launching <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a> applications, the Python <code>subprocess</code> module can help.</p>
-<p>By the end of this tutorial, you’ll be able to:</p>
-<ul>
-<li>Understand how the Python <code>subprocess</code> module interacts with the <strong>operating system</strong></li>
-<li>Issue <strong>shell commands</strong> like <code>ls</code> or <code>dir</code></li>
-<li>Feed <strong>input</strong> into a process and use its <strong>output</strong>.</li>
-<li>Handle <strong>errors</strong> when using <code>subprocess</code></li>
-<li>Understand the <strong>use cases</strong> for <code>subprocess</code> by considering practical examples</li>
-</ul>
-<p>In this tutorial, you’ll get a <a href="https://realpython.com/atom.xml#processes-and-subprocesses">high-level mental model</a> for understanding processes, subprocesses, and Python before getting stuck into the <code>subprocess</code> module and <a href="https://realpython.com/atom.xml#basic-usage-of-the-python-subprocess-module">experimenting with an example</a>. After that, you’ll start exploring the shell and learn how you can …</p></div>
+  <p><a href="https://en.wikipedia.org/wiki/60_(number)">60</a> shows up in lots
+of places.  It&#8217;s the smallest number divisible by 1 through 6, and perhaps
+because of that, it&#8217;s the basis of our timekeeping and angular measurements.</p><p>Of course the angles in an equilateral triangle are 60 degrees.  But
+60 also appears in solid geometry. There are four Archimedean solids (regular
+polyhedra made with any mixture of regular polygons) with 60 vertices. You can
+use Nat Alison&#8217;s beautiful <a href="https://polyhedra.tessera.li/">polyhedra
+viewer</a> to explore them:</p><div><a href="https://polyhedra.tessera.li/truncated-dodecahedron/info">
+
+<source type="image/webp"><img alt="truncated dodecahedron" src="//nedbatchelder.com/pix/poly60/truncated-dodecahedron.png">
+truncated dodeca­hedron
+</a><a href="https://polyhedra.tessera.li/truncated-icosahedron/info">
+
+<source type="image/webp"><img alt="truncated icosahedron" src="//nedbatchelder.com/pix/poly60/truncated-icosahedron.png">
+truncated icosa­hedron
+</a><a href="https://polyhedra.tessera.li/rhombicosidodecahedron/info">
+
+<source type="image/webp"><img alt="rhombicosidodecahedron" src="//nedbatchelder.com/pix/poly60/rhombicosidodecahedron.png">
+rhomb­icosi­dodeca­hedron
+</a><a href="https://polyhedra.tessera.li/snub-dodecahedron/info">
+
+<source type="image/webp"><img alt="snub dodecahedron" src="//nedbatchelder.com/pix/poly60/snub-dodecahedron.png">
+snub dodeca­hedron
+</a></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2022-06-16 06:53:00-04:00" class="dt-published"></time>
+  Thu 16 Jun 2022
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com/blog/202206/math_factoid_of_the_day_60.html" rel="bookmark" class="u-url"
+       title="Ned Batchelder: Math factoid of the day: 60" target="_blank">
+      <time class="m-date" datetime="2022-06-16 10:53:00+00:00">
+        Jun
+        <span class="m-date-day">
+          16
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Ned Batchelder: Math factoid of the day: 60
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://en.wikipedia.org/wiki/60_(number)">60</a> shows up in lots
+of places.  It&#8217;s the smallest number divisible by 1 through 6, and perhaps
+because of that, it&#8217;s the basis of our timekeeping and angular measurements.</p><p>Of course the angles in an equilateral triangle are 60 degrees.  But
+60 also appears in solid geometry. There are four Archimedean solids (regular
+polyhedra made with any mixture of regular polygons) with 60 vertices. You can
+use Nat Alison&#8217;s beautiful <a href="https://polyhedra.tessera.li/">polyhedra
+viewer</a> to explore them:</p><div><a href="https://polyhedra.tessera.li/truncated-dodecahedron/info">
+    <img alt="truncated dodecahedron" src="https://nedbatchelder.com/pix/poly60/truncated-dodecahedron.png">truncated dodeca­hedron
+</a><a href="https://polyhedra.tessera.li/truncated-icosahedron/info">
+    <img alt="truncated icosahedron" src="https://nedbatchelder.com/pix/poly60/truncated-icosahedron.png">truncated icosa­hedron
+</a><a href="https://polyhedra.tessera.li/rhombicosidodecahedron/info">
+    <img alt="rhombicosidodecahedron" src="https://nedbatchelder.com/pix/poly60/rhombicosidodecahedron.png">rhomb­icosi­dodeca­hedron
+</a><a href="https://polyhedra.tessera.li/snub-dodecahedron/info">
+    <img alt="snub dodecahedron" src="https://nedbatchelder.com/pix/poly60/snub-dodecahedron.png">snub dodeca­hedron
+</a></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-13 14:00:00+00:00" class="dt-published"></time>
-  Mon 13 Jun 2022
+  on <time datetime="2022-06-16 10:53:00+00:00" class="dt-published"></time>
+  Thu 16 Jun 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -239,31 +336,103 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/06/13/public-choice/" rel="bookmark" class="u-url"
-       title="Pluralistic: 13 Jun 2022" target="_blank">
-      <time class="m-date" datetime="2022-06-13 12:40:15+00:00">
+    <a href="https://blogs.gnome.org/xjuan/2022/06/15/cambalache-0-10-0-is-out/" rel="bookmark" class="u-url"
+       title="Cambalache 0.10.0 is out!" target="_blank">
+      <time class="m-date" datetime="2022-06-15 22:06:01+00:00">
         Jun
         <span class="m-date-day">
-          13
+          15
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: 13 Jun 2022
+      Cambalache 0.10.0 is out!
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Podcasting "Regulatory Capture": My column about the difference between a left and a right theory of sound regulation. Hey look at this: Delights to delectate. This day in history: 2012, 2017. Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Podcasting "Regulatory Capture" (permalink) This week on my podcast, I read my Medium column, "Regulatory Capture: Beyond Revolving Doors and Against Regulatory Nihilism," about the left/right split on theories of sound regulation: https://doctorow.medium.com/regulatory-capture-59b2013e2526 If you'd like an essay-formatted version of this thread to read or share, here's a link to it on pluralistic.net, my surveillance-free, ad-free, tracker-free blog: https://pluralistic.net/2022/06/13/public-choice/#ajit-pai-still-terrible The column opens by recounting a recent, extremely public, extremely egregious example of regulatory capture: the way that Trump's FCC chair Ajit Pai &#8211; a …
+  3rd party libs release! After almost 6 months of work I am pleased to announce a new Cambalache release! Adwaita and Handy support This cycle main focus was to add support for 3rd parties libraries and what better than Adwaita and Handy to start with. Keep in mind that workspace support for new widgets is […]
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>xjuan</b></span>
+  on <time datetime="2022-06-15 22:06:01+00:00" class="dt-published"></time>
+  Wed 15 Jun 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.qt.io/blog/qt-for-mcus-2.2-lts-released?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Qt for MCUs 2.2 LTS released" target="_blank">
+      <time class="m-date" datetime="2022-06-15 11:55:52+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Qt for MCUs 2.2 LTS released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div> 
+ <a href="//www.qt.io/blog/qt-for-mcus-2.2-lts-released" title=""> <img alt="Qt for MCUs 2.2 LTS released" src="//www.qt.io/hubfs/_Website_Blog/Upload_Here/Qt%20for%20MCUs%202.2%20thumbnail.png"> </a> 
+</div> 
+<p>We're excited to announce that Qt for MCUs 2.2 LTS is now available! It is the first release of Qt for MCUs that will be <a href="//www.qt.io/blog/qt-for-mcus-2.0-is-out#long-term-support">long-term supported</a>; bug fixes for it will be released for a period of 18 months. This release adds improvements to text rendering,&nbsp; new APIs to handle errors in GUI code, new tools to generate C++ from QML independently from CMake, and a new performance and footprint guide to help you get the best results with Qt for MCUs.</p>  
+<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-for-mcus-2.2-lts-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Qt Dev Loop</b></span>
+  on <time datetime="2022-06-15 11:55:52+00:00" class="dt-published"></time>
+  Wed 15 Jun 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/06/15/simple-as-abc/" rel="bookmark" class="u-url"
+       title="Pluralistic: 15 Jun 2022" target="_blank">
+      <time class="m-date" datetime="2022-06-15 07:01:02+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: 15 Jun 2022
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Boy, gig companies sure hire disastrously sloppy lawyers: $100m flushed down the drain in Massachusetts. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Boy, gig companies sure hire disastrously sloppy lawyers (permalink) In the run-up to the 2020 election, "gig work" companies, led by Uber and Lyft, firehosed $225m to back the passage of Proposition 22, a law that would permanently allow them to misclassify employees as contractors, not entitled to benefits or workplace protections. More than a decade after Citizen United &#8211; the Supreme Court ruling that paved the way for unlimited dark money in US election spending &#8211; it's sometimes hard to get a sense of scale. Is $225m a lot of money to spend on a California ballot …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-06-13 12:40:15+00:00" class="dt-published"></time>
-  Mon 13 Jun 2022
+  on <time datetime="2022-06-15 07:01:02+00:00" class="dt-published"></time>
+  Wed 15 Jun 2022
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -273,44 +442,41 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://drewdevault.com/2022/06/13/helios.html" rel="bookmark" class="u-url"
-       title="The Helios microkernel" target="_blank">
-      <time class="m-date" datetime="2022-06-13 00:00:00+00:00">
+    <a href="https://drewdevault.com/2022/06/15/Status-update-June-2022.html" rel="bookmark" class="u-url"
+       title="Status update, June 2022" target="_blank">
+      <time class="m-date" datetime="2022-06-15 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          13
+          15
         </span>
         2022
       </time>
       <div class="p-name">
-      The Helios microkernel
+      Status update, June 2022
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I&rsquo;ve been working on a cool project lately that I&rsquo;d like to introduce you to:
-<a href="https://sr.ht/~sircmpwn/helios">the Helios microkernel</a>. Helios is written in <a href="https://harelang.org">Hare</a> and currently
-targets x86_64, and riscv64 and aarch64 are on the way. It&rsquo;s very much a
-work-in-progress: don&rsquo;t expect to pick this up and start building anything with
-it today.</p>
-<p><img alt="A picture of a ThinkPad running Helios, demonstrating userspace memory allocation" src="https://l.sr.ht/gnrA.jpg"></p>
-<p>Drawing some inspiration from seL4, Helios uses a capability-based design for
-isolation and security. The kernel offers primitives for allocating physical
-pages, mapping them into address spaces, and managing tasks, plus features like
-platform-specific I/O (e.g. reading and writing x86 ports). The entire system is
-written in Hare, plus some necessary assembly for the platform bits (e.g.
-configuring the GDT or IDT).</p>
-<p>Things are still quite early, but I&rsquo;m pretty excited about this project. I
-haven&rsquo;t had …</p>
+  <p>Hello again! I would like to open this post by acknowledging the response to my
+earlier post, &ldquo;bleh&rdquo;. Since it was published, I have received several hundred
+emails expressing support and kindness. I initially tried to provide these with
+thoughtful replies, then shorter replies, then I had to stop replying at all,
+but I did read every one. Thank you, everyone, for sending these. I appreciate
+it very much, and it means a lot to me.</p>
+<p>I have actually had a lot more fun programming this month than usual, since I
+decided to spend more time on experimental and interesting projects and less
+time on routine maintenance or long-term developments. So, the feature you&rsquo;ve
+been waiting for in SourceHut might be delayed, but in return, there&rsquo;s cool
+progress on the projects that you didn&rsquo;t even know you …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-13 00:00:00+00:00" class="dt-published"></time>
-  Mon 13 Jun 2022
+  on <time datetime="2022-06-15 00:00:00+00:00" class="dt-published"></time>
+  Wed 15 Jun 2022
   in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -320,76 +486,32 @@ haven&rsquo;t had …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2632/" rel="bookmark" class="u-url"
-       title="Greatest Scientist" target="_blank">
-      <time class="m-date" datetime="2022-06-13 00:00:00+00:00">
+    <a href="https://xkcd.com/2633/" rel="bookmark" class="u-url"
+       title="Astronomer Hotline" target="_blank">
+      <time class="m-date" datetime="2022-06-15 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          13
+          15
         </span>
         2022
       </time>
       <div class="p-name">
-      Greatest Scientist
+      Astronomer Hotline
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="&quot;Ow! One of the petri dishes I left on the tower railing fell and hit me on the head! Hey, that gives me an idea...&quot;" src="https://imgs.xkcd.com/comics/greatest_scientist.png" title="&quot;Ow! One of the petri dishes I left on the tower railing fell and hit me on the head! Hey, that gives me an idea...&quot;">
+  <img alt="Employment statistics have to correct for the fact that the Weird Bug Hotline hires on a bunch of extra temporary staff every 17 years." src="https://imgs.xkcd.com/comics/astronomer_hotline.png" title="Employment statistics have to correct for the fact that the Weird Bug Hotline hires on a bunch of extra temporary staff every 17 years.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-13 00:00:00+00:00" class="dt-published"></time>
-  Mon 13 Jun 2022
+  on <time datetime="2022-06-15 00:00:00+00:00" class="dt-published"></time>
+  Wed 15 Jun 2022
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.jimmac.eu/2022/flatpak-refresh/" rel="bookmark" class="u-url"
-       title="Flatpak Brand Refresh" target="_blank">
-      <time class="m-date" datetime="2022-06-12 22:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Flatpak Brand Refresh
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><img alt="Flatpak" src="https://blog.jimmac.eu/2022/flatpak-refresh/flatpak.png"></p>
-
-<p><a href="https://flatpak.org">Flatpak</a> has been at the center of the recent app renaissance, but its visual identity has remained fairly stale.</p>
-
-<p>Without diverging too much from the <a href="https://github.com/flatpak/flatpak.github.io/issues/537">main elements of its visual identity</a> we’ve made it more contemporary. The logo in particular has been simplified to work in all of the size scenarios and visual complexity contexts.</p>
-
-<p><img alt="Flatpak Logo" src="https://blog.jimmac.eu/2022/flatpak-refresh/flatpak-logo.webp"></p>
-
-<p>There’s definitely a few spots where the rebrand has yet to propagate to, so please refer to <a href="https://flatpak.org/img/flatpak-logos.zip">the guidelines</a> if you spot and old coat of paint.</p>
-
-<p>If you’re giving a talk on Flatpak, feel free to make use of the <a href="https://blog.jimmac.eu/2022/flatpak-refresh/impress-flatpak-template.otp">LibreOffice Impress Template</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jakub Steiner (jimmac@gmail.com)</b></span>
-  on <time datetime="2022-06-12 22:00:00+00:00" class="dt-published"></time>
-  Sun 12 Jun 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -416,6 +538,7 @@ haven&rsquo;t had …</p>
   <p>
   <p>NOTE: This process is for <strong>Intel CPU hardware only</strong>!
 While it may be possible to compile MPICH on Apple Silicon with Intel oneAPI, most programs will not compile or run.</p>
+
 
 <p>Intel oneAPI for MacOS currently does NOT include MPI.
 MPICH can be compiled with Intel oneAPI for MPI programs on MacOS with Intel oneAPI.
@@ -444,61 +567,6 @@ Install Xcode and <a href="https://developer.apple.com/download">Xcode Command L
   on <time datetime="2022-06-12 00:00:00+00:00" class="dt-published"></time>
   Sun 12 Jun 2022
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kde.org/announcements/frameworks/5/5.95.0/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Ships Frameworks 5.95.0" target="_blank">
-      <time class="m-date" datetime="2022-06-12 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Ships Frameworks 5.95.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Sunday, 12 June 2022</p>
-<p>KDE today announces the release of KDE Frameworks 5.95.0.</p>
-<p>KDE Frameworks are 83 addon libraries to Qt which provide a wide variety of commonly needed functionality in mature, peer reviewed and well tested libraries with friendly licensing terms. For an introduction see <a href="//kde.org/announcements/frameworks/5/5.0">the KDE Frameworks release announcement</a>.</p>
-<p>This release is part of a series of planned monthly releases making improvements available to developers in a quick and predictable manner.</p>
-New in this version
-Baloo
-<ul>
-<li>tag:/ better handle uds name field (bug 449126)</li>
-</ul>
-Extra CMake Modules
-<ul>
-<li>fix linking on OpenBSD</li>
-<li>ECMQtDeclareLoggingCategory: drop support for Qt &lt; 5.4</li>
-<li>ECMAddQtDesignerPlugin: drop support for Qt &lt; 5.9</li>
-<li>ECMAddQtDesignerPlugin: fix support for Qt6</li>
-<li>ECMAddQtDesignerPlugin: fix missing FeatureSummary include</li>
-<li>KDEGitCommitHooks: Fix quoting of variables</li>
-</ul>
-KArchive
-<ul>
-<li>KArchive::addLocalDirectory: preserve empty directories</li>
-<li>Fix zstd KCompressionDevice not compressing as much as it could …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDE Community</b></span>
-  on <time datetime="2022-06-12 00:00:00+00:00" class="dt-published"></time>
-  Sun 12 Jun 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -597,6 +665,7 @@ Fortran news from the previous month.</p>
 
 <ul></ul>
 
+
 fortran-lang.org
 
 <p>Here’s what’s new in the fortran-lang.org repo:</p>
@@ -630,6 +699,7 @@ if you have any suggestions for the website and its content.
 We welcome any new contributors to the website and the tutorials page in particular - see the
 <a href="https://github.com/fortran-lang/fortran-lang.org/blob/HEAD/CONTRIBUTING.md">contributor guide</a>
 for how to get started.</p>
+
 
 Fortran Standard Library
 
@@ -741,7 +811,11 @@ sudo -u gotosocial tar -xzf …</pre></div>
   </h1>
   <div class="p-summary">
   <p>
-  <p><span>The latest bugfix drop for Python 3.10 is here: Python 3.10.5. This release packs more than 230 bugfixes and docs changes, so you surely want to update :) You can get it here:</span></p><div><p>https://www.python.org/downloads/release/python-3105/</p><span></span><span>This is the first maintenance release of Python 3.10</span><div><span></span></div><div><span>Python 3.10.5 is the newest major release of the Python programming language, and it contains many new features and optimizations.</span></div><span></span><span>Major new features of the 3.10 series, compared to 3.9</span><p><span>Among the new major new features and changes so far:</span><span></span></p><ul><li><span><a href="https://www.python.org/dev/peps/pep-0623/">PEP 623</a>&nbsp;– Deprecate and prepare for the removal of the wstr member in PyUnicodeObject.</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0604/">PEP 604</a>&nbsp;– Allow writing union types as X | Y</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0612/">PEP 612</a>&nbsp;– Parameter Specification Variables</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0626/">PEP 626</a>&nbsp;– Precise line numbers for debugging and other tools.</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0618/">PEP 618&nbsp;</a>– Add Optional Length-Checking To …</span></li></ul></div>
+  <p><span>The latest bugfix drop for Python 3.10 is here: Python 3.10.5. This release packs more than 230 bugfixes and docs changes, so you surely want to update :) You can get it here:</span></p><div><p>https://www.python.org/downloads/release/python-3105/</p>
+<span></span>
+<span>This is the first maintenance release of Python 3.10</span><div><span></span></div><div><span>Python 3.10.5 is the newest major release of the Python programming language, and it contains many new features and optimizations.</span></div>
+<span></span>
+<span>Major new features of the 3.10 series, compared to 3.9</span><p><span>Among the new major new features and changes so far:</span><span></span></p><ul><li><span><a href="https://www.python.org/dev/peps/pep-0623/">PEP 623</a>&nbsp;– Deprecate and prepare for the removal of the wstr member in PyUnicodeObject.</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0604/">PEP 604</a>&nbsp;– Allow writing union types as X | Y</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0612/">PEP 612</a>&nbsp;– Parameter Specification Variables</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0626/">PEP 626</a>&nbsp;– Precise line numbers for debugging and other tools.</span></li></ul><ul><li><span><a href="https://www.python.org/dev/peps/pep-0618/">PEP 618&nbsp;</a>– Add Optional Length-Checking To …</span></li></ul></div>
   </p>
   </div>
 </header>
@@ -751,47 +825,6 @@ sudo -u gotosocial tar -xzf …</pre></div>
   on <time datetime="2022-06-06 13:33:00-04:00" class="dt-published"></time>
   Mon 06 Jun 2022
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202206/adding_a_dunder_to_an_object.html" rel="bookmark" class="u-url"
-       title="Adding a dunder to an object" target="_blank">
-      <time class="m-date" datetime="2022-06-05 10:29:00-04:00">
-        Jun
-        <span class="m-date-day">
-          05
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Adding a dunder to an object
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We had a tricky debugging need at work: we wanted to track how an attribute
-on an object was changing.  Here&#8217;s the unusual solution we used.</p><p>The __setattr__ special method (dunder) is called when an attribute is
-changed on an object.  But like all special methods, it&#8217;s not found on the
-object, only on the class.  We didn&#8217;t want to track changes to all objects of
-the class because it would produce too much noise in the logs.</p><p>So we wanted a per-object special method.  The way we came up with was to
-define a new class with the special method.  The class is derived from the
-object&#8217;s existing class, so that everything would work the way it should.  Then
-we changed the object&#8217;s class.</p><p>Changing an object&#8217;s class sounds kind of impossible, but …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2022-06-05 10:29:00-04:00" class="dt-published"></time>
-  Sun 05 Jun 2022
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -826,44 +859,6 @@ we changed the object&#8217;s class.</p><p>Changing an object&#8217;s class soun
   on <time datetime="2022-06-05 00:00:00+00:00" class="dt-published"></time>
   Sun 05 Jun 2022
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://noyb.eu/en/statement-4-years-gdpr" rel="bookmark" class="u-url"
-       title="Statement on 4 Years of GDPR" target="_blank">
-      <time class="m-date" datetime="2022-05-24 17:32:33+00:00">
-        May
-        <span class="m-date-day">
-          24
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Statement on 4 Years of GDPR
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <span>Statement on 4 Years of GDPR</span>
-
-                    When the GDPR became applicable on 25 May 2018, it was perceived as a watershed moment. The past 4 years have shown that a law alone does not change business models. 
-
-                      <img alt="4 years GDPR" src="https://noyb.eu/sites/default/files/styles/media_large/public/2022-05/4-y-gdpr.png?itok=Zn7vycRC">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>ms</b></span>
-  on <time datetime="2022-05-24 17:32:33+00:00" class="dt-published"></time>
-  Tue 24 May 2022
-  in noyb.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -930,6 +925,7 @@ we changed the object&#8217;s class.</p><p>Changing an object&#8217;s class soun
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>

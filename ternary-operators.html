@@ -66,12 +66,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -106,7 +108,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives" id="m-navbar-current">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -164,7 +166,7 @@
 <p>Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the <strong>conditional expression</strong> or <strong>ternary if-else
 "operator"</strong> in Python. What it means is instead of:</p>
-<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="m-code"><pre><span></span><code><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -173,17 +175,15 @@ A good example of this is the <strong>conditional expression</strong> or <strong
         <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;odd&quot;</span>
 
     <span class="k">return</span> <span class="n">result</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>you can write in a condensed yet easy to decipher:</p>
-<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="m-code"><pre><span></span><code><span class="k">def</span> <span class="nf">even_or_odd</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="s2">&quot;even&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;odd&quot;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>If you are new to this, I highly recommend that you use this. It would
 reduce the indentation in nested if-else statements and need for intermediate
@@ -191,33 +191,31 @@ variables in more real-life codes.</p>
 <h2 id="in-other-languages"><a class="toclink" href="#in-other-languages">In other languages</a></h2>
 <p>In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:</p>
-<div class="m-code"><pre><span></span><span class="kd">function</span> <span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">throw</span> <span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="p">(</span><span class="nx">x</span> <span class="o">%</span> <span class="mf">2</span> <span class="o">===</span> <span class="mf">0</span> <span class="o">?</span> <span class="s2">&quot;even&quot;</span> <span class="o">:</span> <span class="s2">&quot;odd&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
+<div class="m-code"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;even&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;odd&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
 <p>An advantage is that the syntax is more condensed; but as a downside, one
 needs to remember which side of the colon <code>:</code> assumes the value when the
 condition is <code>True</code> and <em>vice versa</em>.</p>
 <h2 id="c-style-ternary-operators-using-logical-operators"><a class="toclink" href="#c-style-ternary-operators-using-logical-operators">C-style ternary operators using logical operators</a></h2>
 <p>I found a trick to create similar obfuscated ternary operators in Python. Here it goes:</p>
-<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="m-code"><pre><span></span><code><span class="k">def</span> <span class="nf">even_or_odd_ugly</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="s2">&quot;even&quot;</span> <span class="ow">or</span> <span class="s2">&quot;odd&quot;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>It looks nearly like the C-style ternary operator, but is not at all readable.
 It works because <a href="https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not">how the logical boolean operators <code>and</code>, <code>or</code>
 short-circuits</a>.</p>
 <p>In Bash-like shells such expressions can be used to achieve the same effect:</p>
-<div class="m-code"><pre><span></span>even_or_odd<span class="o">()</span> <span class="o">{</span>
+<div class="m-code"><pre><span></span><code>even_or_odd<span class="o">()</span> <span class="o">{</span>
   <span class="nb">local</span> <span class="nv">x</span><span class="o">=</span><span class="nv">$1</span>
 
   <span class="k">if</span> <span class="o">[[</span> x -le <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
@@ -227,17 +225,15 @@ short-circuits</a>.</p>
 
   <span class="o">[[</span> <span class="k">$((</span>x <span class="o">%</span> <span class="m">2</span><span class="k">))</span> <span class="o">==</span> <span class="m">0</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;even&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;odd&quot;</span>
 <span class="o">}</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>While writing shell scripts such "ternary operators" are an idiom, because Bash
 commands returns a non-zero value in case of failure. This would be
 preferred over use of if-else constructs in Bash which, I think, are
 complicated in getting the syntax right.</p>
-<div class="m-code"><pre><span></span>mkdir -p build
+<div class="m-code"><pre><span></span><code>mkdir -p build
 ./build.sh <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Build successful!&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Build failed! Cleaning up ...&quot;</span> <span class="o">&amp;&amp;</span> rm -r build
-</pre></div>
-
+</code></pre></div>
 
 <h2 id="bonus-when-to-avoid-if-else-statements-in-python"><a class="toclink" href="#bonus-when-to-avoid-if-else-statements-in-python">Bonus: when to avoid if-else statements in Python</a></h2>
 <p>We saw a good example of when to use conditional expressions in Python. Now we
@@ -245,38 +241,34 @@ go on a tangent to look at some features baked into Python which further allow
 the need for if-else statements.</p>
 <h3 id="dictionary-lookup"><a class="toclink" href="#dictionary-lookup">Dictionary lookup</a></h3>
 <p>Instead of:</p>
-<div class="m-code"><pre><span></span><span class="c1"># assume the variable `color_of_fruits` is a dictionary</span>
+<div class="m-code"><pre><span></span><code><span class="c1"># assume the variable `color_of_fruits` is a dictionary</span>
 
 <span class="k">if</span> <span class="s2">&quot;apple&quot;</span> <span class="ow">in</span> <span class="n">color_of_fruits</span><span class="p">:</span>
     <span class="n">color</span> <span class="o">=</span> <span class="n">color_of_fruits</span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>you could use the oneliner:</p>
-<div class="m-code"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="n">color_of_fruits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
-</pre></div>
-
+<div class="m-code"><pre><span></span><code><span class="n">color</span> <span class="o">=</span> <span class="n">color_of_fruits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 <p>Environment variables of the system are accessed via a special dictionary-like
 object <code>os.environ</code>. However, for environment variables, there is a handy standard
 library function <code>os.getenv</code> which is useful. Instead of:</p>
-<div class="m-code"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="m-code"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="k">if</span> <span class="s2">&quot;CC&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
     <span class="n">c_compiler</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CC&quot;</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">c_compiler</span> <span class="o">=</span> <span class="s2">&quot;gcc&quot;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>use:</p>
-<div class="m-code"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="m-code"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="n">c_compiler</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CC&quot;</span><span class="p">,</span> <span class="s2">&quot;gcc&quot;</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>For both the <a href="https://docs.python.org/3/library/stdtypes.html#dict.get"><code>dict.get</code></a> method and <a href="https://docs.python.org/3.8/library/os.html?#os.getenv"><code>os.getenv</code></a> function, if
 you leave out the default value, you get <code>None</code> and no <code>KeyError</code> would
@@ -286,33 +278,30 @@ be raised.</p>
 guarantee that the result would be what you expect. In that case you might need
 a fall-back value to work with. Take this naive case of reading and printing a
 file <code>config.cfg</code> which is empty:</p>
-<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">print_config</span><span class="p">():</span>
+<div class="m-code"><pre><span></span><code><span class="k">def</span> <span class="nf">print_config</span><span class="p">():</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.cfg&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
         <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">contents</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File is empty&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>From the previous discussion, we see that we can simplify it using
 conditional expressions as:</p>
-<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">print_config_conditional</span><span class="p">():</span>
+<div class="m-code"><pre><span></span><code><span class="k">def</span> <span class="nf">print_config_conditional</span><span class="p">():</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.cfg&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
         <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File is empty&quot;</span> <span class="k">if</span> <span class="n">contents</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="n">contents</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>However in this case a cleaner option would be to use the short-circuiting
 property of the <code>or</code> operator to assign a fall-back value.</p>
-<div class="m-code"><pre><span></span><span class="k">def</span> <span class="nf">print_config_fallback</span><span class="p">():</span>
+<div class="m-code"><pre><span></span><code><span class="k">def</span> <span class="nf">print_config_fallback</span><span class="p">():</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;config.cfg&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
         <span class="n">contents</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;File is empty&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Note that in Python world, evaluating <code>False</code>, <code>""</code>, <code>0</code> or <code>None</code> as a part of
 a boolean expression would mean the same.  Also in <code>print_config_fallback</code>, the
@@ -530,6 +519,7 @@ variable <code>contents</code> is for illustrative purposes and can be avoided.<
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>

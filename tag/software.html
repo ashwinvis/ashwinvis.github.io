@@ -62,12 +62,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -102,7 +104,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives" id="m-navbar-current">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -642,6 +644,7 @@
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>

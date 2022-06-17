@@ -43,10 +43,6 @@
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
      crossorigin=""></script>
-  <script language="JavaScript" type="text/javascript">
-     var map = L.map('map').setView([58.581188, 16.148062], 13);
-     var marker = L.marker([58.581188, 16.148062]).addTo(map);
-  </script>
   <!-- Fediverse Link verification -->
   <link rel="me" href="https://mastodon.acc.sunet.se/@ashwinvis">
   <link rel="me" href="https://fediscience.org/@ashwinvis">
@@ -92,12 +88,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -132,7 +130,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -180,7 +178,6 @@ Drop me a message if you wish to talk to me or even leave a comment about my
 <table class="m-table m-flat m-big">
 <tbody>
   <tr>
-    <td class="m-text-center">
       <div class="m-button m-info m-fullwidth" align-content="normal">
                 <div class="m-big"><b>Visiting / mailing address</b></div>
                 <span class="m-text m-small">
@@ -188,7 +185,6 @@ Drop me a message if you wish to talk to me or even leave a comment about my
                     Norrköping, Sweden
                 </span>
       </div>
-    </td>
   </tr>
 
   <tr>
@@ -217,8 +213,31 @@ Drop me a message if you wish to talk to me or even leave a comment about my
 Let me know beforehand if you drop by.</p>
 <div class="m-row">
 <div class="m-col-l-10 m-push-l-1 m-col-m-7 m-nopadb">
-<style>#map { height: 180px; }</style>
-<div id="map"></div></div>
+<style>#map { height: 360px; }</style>
+<div id="map"></div>
+<script language="JavaScript" type="text/javascript" defer>
+
+   var map = L.map('map').setView([58.581188, 16.148062], 13);
+   var marker = L.marker([58.581188, 16.148062], {alt: "SMHI"})
+      .addTo(map)
+      .bindPopup('SMHI 🔗 <a href="https://www.qwant.com/maps/place/osm:node:4743840719@Sveriges_meteorologiska_och_hydrologiska_institut#map=15.26/58.5795811/16.1459828">Qwant Maps ↗ </a>');
+
+
+   var popup = L.popup();
+
+   function onMapClick(e) {
+       popup
+           .setLatLng(e.latlng)
+           .setContent("You clicked the map at " + e.latlng.toString())
+           .openOn(map);
+   }
+
+   map.on('click', onMapClick);
+
+   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      { maxZoom: 19, attribution: '© OpenStreetMap' }
+   ).addTo(map);
+</script></div>
 </div>
 </aside>
 <p>You can also reach me via social media accounts listed in the footer.</p>
@@ -282,6 +301,7 @@ Let me know beforehand if you drop by.</p>
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>

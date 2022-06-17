@@ -66,12 +66,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -106,7 +108,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives" id="m-navbar-current">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -210,7 +212,6 @@ of my Mastodon account<sup id="fnref:archive"><a class="footnote-ref" href="#fn:
 also have this idea:</p>
 <iframe src="https://mastodon.acc.sunet.se/@ashwinvis/102518259996206758/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" height="300" allowfullscreen="allowfullscreen">
 </iframe>
-
 <script src="https://mastodon.acc.sunet.se/embed.js" async="async"></script>
 
 <h4 id="appendix-1-mass-tweet-deletion"><a class="toclink" href="#appendix-1-mass-tweet-deletion">Appendix 1: Mass tweet deletion</a></h4>
@@ -225,57 +226,49 @@ is what I did following the instructions:</p>
    Save it as <code>deletetweet.sh</code> and make it executable.</li>
 <li>And a personal twist: send delete requests in parallel:</li>
 </ol>
-<div class="m-code"><pre><span></span>cat tweetstodelete.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Deleting {}&#39; &amp;&amp; ./deletetweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; delete.log <span class="p">&amp;</span>
+<div class="m-code"><pre><span></span><code>cat tweetstodelete.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Deleting {}&#39; &amp;&amp; ./deletetweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; delete.log <span class="p">&amp;</span>
 tail -f delete.log
-</pre></div>
-
+</code></pre></div>
 
 <p>And the cURL command looks like:</p>
-<div class="m-code"><pre><span></span>curl -s <span class="s2">&quot;https://api.twitter.com/1.1/statuses/destroy/</span><span class="nv">$1</span><span class="s2">.json&quot;</span> ...
-</pre></div>
-
+<div class="m-code"><pre><span></span><code>curl -s <span class="s2">&quot;https://api.twitter.com/1.1/statuses/destroy/</span><span class="nv">$1</span><span class="s2">.json&quot;</span> ...
+</code></pre></div>
 
 <p>So now I am down from 1400 tweets to 544 tweets. And the difference is almost
 correct:</p>
-<div class="m-code"><pre><span></span>❯ wc -l tweetstodelete.txt
+<div class="m-code"><pre><span></span><code>❯ wc -l tweetstodelete.txt
 <span class="m">844</span> tweetstodelete.txt
-</pre></div>
-
+</code></pre></div>
 
 <p>In step 3, the following command was used to extract the tweets with no
 interaction</p>
-<div class="m-code"><pre><span></span>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.favorite_count == &quot;0&quot;) | select(.retweet_count == &quot;0&quot;) | select(has(&quot;in_reply_to_user_id_str&quot;) | not)  | .id&#39;</span> -r &gt; tweetstodelete.txt<span class="sb">`</span>
-</pre></div>
-
+<div class="m-code"><pre><span></span><code>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.favorite_count == &quot;0&quot;) | select(.retweet_count == &quot;0&quot;) | select(has(&quot;in_reply_to_user_id_str&quot;) | not)  | .id&#39;</span> -r &gt; tweetstodelete.txt<span class="sb">`</span>
+</code></pre></div>
 
 <p>To get a list of all the tweets:</p>
-<div class="m-code"><pre><span></span>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .id&#39;</span> -r &gt; tweetstodelete.txt
-</pre></div>
-
+<div class="m-code"><pre><span></span><code>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .id&#39;</span> -r &gt; tweetstodelete.txt
+</code></pre></div>
 
 <p>Now we need something similar for undoing all the likes on Twitter.</p>
 <p><strong>EDIT:</strong> A short how-to "dislike" all your tweets.</p>
 <p>Get a list of tweets to dislike from your archive in a
 similar approach. Take the <code>like.js</code> file from your archive and make it a
 proper JSON file.</p>
-<div class="m-code"><pre><span></span>cat like.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .like.tweetId&#39;</span> -r &gt;! tweetstodislike.txt
-</pre></div>
-
+<div class="m-code"><pre><span></span><code>cat like.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .like.tweetId&#39;</span> -r &gt;! tweetstodislike.txt
+</code></pre></div>
 
 <p>The POST request is also similar and contains "destroy". However the tweet ID
 should be in the data / payload. Therefore the curl command looks like (note
 the <code>$1</code> where the tweet ID gets substituted):</p>
-<div class="m-code"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="m-code"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 curl -s <span class="s1">&#39;https://api.twitter.com/1.1/favorites/destroy.json&#39;</span> ...lots of stuff here...<span class="se">\</span>
   --data<span class="s2">&quot;id=</span><span class="nv">$1</span><span class="s2">&amp;cards_platform=Web-13&amp; ...even more stuff...&quot;</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Save the command in a file called <code>disliketweet.sh</code> and then,</p>
-<div class="m-code"><pre><span></span>cat tweetstodislike.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Disliking {}&#39; &amp;&amp; ./disliketweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; dislike.log <span class="p">&amp;</span>
+<div class="m-code"><pre><span></span><code>cat tweetstodislike.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Disliking {}&#39; &amp;&amp; ./disliketweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; dislike.log <span class="p">&amp;</span>
 tail -f dislike.log
-</pre></div>
-
+</code></pre></div>
 
 <h4 id="appendix-2-unstar-github-repositories"><a class="toclink" href="#appendix-2-unstar-github-repositories">Appendix 2: Unstar GitHub repositories</a></h4>
 <ol>
@@ -560,6 +553,7 @@ tail -f dislike.log
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>

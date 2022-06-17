@@ -64,12 +64,14 @@
           https://bibbase.org
           https://ajax.googleapis.com
           'unsafe-inline' 'unsafe-eval' 'self';
-         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
-         img-src 'unsafe-inline' 'self' https: data:;
-         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
-         worker-src 'self';
+        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+        img-src 'unsafe-inline' 'self' https: data:;
+        frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
+        worker-src 'self';
         "
   >
+  <!-- FIXME: The following rule is required for livereload to work-->
+  <!-- connect-src 'self' ws://localhost:8000; -->
 
   <!-- Progressive web app -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -104,7 +106,7 @@
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
             <li>
-              <a href="https://fluid.quest/archives" id="m-navbar-current">✍️ Posts</a>
+              <a href="https://fluid.quest/archives.html" id="m-navbar-current">✍️ Posts</a>
               <ol>
                 <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
                 <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
@@ -159,12 +161,12 @@
 <p>This post demonstrates a strange behaviour encountered while
 initializing a dictionary using the <code>dict.fromkeys</code> method. TLDR: be
 careful while passing mutable arguments such as lists.</p>
-<pre class="m-code"><span class="n">planets</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Mercury&quot;</span><span class="p">,</span> <span class="s2">&quot;Venus&quot;</span><span class="p">,</span> <span class="s2">&quot;Earth&quot;</span><span class="p">,</span> <span class="s2">&quot;Mars&quot;</span><span class="p">)</span>
+<pre class="m-code">planets = (&quot;Mercury&quot;, &quot;Venus&quot;, &quot;Earth&quot;, &quot;Mars&quot;)
 
-<span class="n">sattelites</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">planets</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">[])</span>
-<span class="n">sattelites</span></pre>
+sattelites = dict.fromkeys(planets, value=[])
+sattelites</pre>
 <pre>{'Mercury': [], 'Venus': [], 'Earth': [], 'Mars': []}</pre>
-<pre class="m-code"><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Earth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Moon&quot;</span><span class="p">)</span></pre>
+<pre class="m-code">sattelites[&quot;Earth&quot;].append(&quot;Moon&quot;)</pre>
 <section id="what-you-expect">
 <h2>What you expect</h2>
 <pre class="m-code"><span class="o">&gt;&gt;&gt;</span> <span class="n">sattelites</span>
@@ -172,31 +174,31 @@ careful while passing mutable arguments such as lists.</p>
 </section>
 <section id="what-you-actually-get">
 <h2>What you actually get</h2>
-<pre class="m-code"><span class="n">sattelites</span></pre>
+<pre class="m-code">sattelites</pre>
 <pre>{'Mercury': ['Moon'], 'Venus': ['Moon'], 'Earth': ['Moon'], 'Mars': ['Moon']}</pre>
 <section id="why">
 <h3>Why?</h3>
 <p>Surely string as keys are valid and hashable, no doubt about that, but
 this behaviour is weird.</p>
-<pre class="m-code"><span class="nb">id</span><span class="p">(</span><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Earth&quot;</span><span class="p">]),</span> <span class="nb">id</span><span class="p">(</span><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Mars&quot;</span><span class="p">])</span></pre>
+<pre class="m-code">id(sattelites[&quot;Earth&quot;]), id(sattelites[&quot;Mars&quot;])</pre>
 <pre>(139764445576200, 139764445576200)</pre>
 <p>Apparently the same <code>list</code> instance is assigned to all the dictionary
 items which gets mutated. This is also the case if you initialize as
 follows.</p>
-<pre class="m-code"><span class="n">sattelites</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">planets</span><span class="p">,</span> <span class="nb">list</span><span class="p">())</span>
-<span class="nb">id</span><span class="p">(</span><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Earth&quot;</span><span class="p">]),</span> <span class="nb">id</span><span class="p">(</span><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Mars&quot;</span><span class="p">])</span></pre>
+<pre class="m-code">sattelites = dict.fromkeys(planets, list())
+id(sattelites[&quot;Earth&quot;]), id(sattelites[&quot;Mars&quot;])</pre>
 <pre>(139764445511368, 139764445511368)</pre>
 <p>The <code>id</code> is still the same across dictionaries!</p>
 </section>
 <section id="the-solution-use-dictionary-comprehensions">
 <h3>The solution: Use dictionary comprehensions</h3>
-<pre class="m-code"><span class="n">sattelites</span> <span class="o">=</span> <span class="p">{</span><span class="n">planet</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="n">planets</span><span class="p">}</span>
-<span class="n">sattelites</span></pre>
+<pre class="m-code">sattelites = {planet: [] for planet in planets}
+sattelites</pre>
 <pre>{'Mercury': [], 'Venus': [], 'Earth': [], 'Mars': []}</pre>
-<pre class="m-code"><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Earth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Moon&quot;</span><span class="p">)</span>
-<span class="n">sattelites</span></pre>
+<pre class="m-code">sattelites[&quot;Earth&quot;].append(&quot;Moon&quot;)
+sattelites</pre>
 <pre>{'Mercury': [], 'Venus': [], 'Earth': ['Moon'], 'Mars': []}</pre>
-<pre class="m-code"><span class="nb">id</span><span class="p">(</span><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Earth&quot;</span><span class="p">]),</span> <span class="nb">id</span><span class="p">(</span><span class="n">sattelites</span><span class="p">[</span><span class="s2">&quot;Mars&quot;</span><span class="p">])</span></pre>
+<pre class="m-code">id(sattelites[&quot;Earth&quot;]), id(sattelites[&quot;Mars&quot;])</pre>
 <pre>(139764445567048, 139764351351752)</pre>
 <p>Finally the <code>id</code>s are different :)</p>
 <p><em>You
@@ -410,6 +412,7 @@ nbviewer</a> <em>.</em></p>
         <p>
         <img alt="license" src="/images/cc-by.svg" style="height: 31px" /><br />
         Except where otherwise noted, content on this site is licensed under <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/content/LICENSE">CC-BY 4.0</a> | Ashwin Vishnu Mohanan 2010 - 2022<br />
+        The views expressed in this website are personal and does not necessarily reflect that of my employer.<br />
         <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/05A85046340A0249B9EFF1572BF1534545A73FAD">GnuPG: 45A73FAD</a> | <a href="https://www.svgbackgrounds.com/">Cover photo credit</a><br />
         </p>
       </div>
