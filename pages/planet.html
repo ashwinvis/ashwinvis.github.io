@@ -164,6 +164,227 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://itsmycode.com/solved-attributeerror-tuple-object-has-no-attribute-get/" rel="bookmark" class="u-url"
+       title="ItsMyCode: [Solved] AttributeError: &#8216;tuple&#8217; object has no attribute &#8216;get&#8217;" target="_blank">
+      <time class="m-date" datetime="2022-06-22 21:05:02+00:00">
+        Jun
+        <span class="m-date-day">
+          22
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      ItsMyCode: [Solved] AttributeError: &#8216;tuple&#8217; object has no attribute &#8216;get&#8217;
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The&#xa0;<strong>AttributeError: &#8216;tuple&#8217; object has no attribute &#8216;get&#8217;</strong>&#xa0;mainly occurs when you try to call the&#xa0;<strong><code>get()</code></strong>&#xa0;method on the <strong>tuple</strong> value. The attribute&#xa0;<strong><strong><code>get()</code></strong></strong>&#xa0;method is present in the dictionary and must be called on the dictionary data type.</p>
+
+
+
+<p>In this tutorial, we will look at what exactly is<strong> AttributeError: &#8216;tuple&#8217; object has no attribute &#8216;get&#8217;</strong>&#xa0;and how to resolve this error with examples.</p>
+
+
+
+
+What is AttributeError: &#8216;tuple&#8217; object has no attribute &#8216;get&#8217;?
+
+
+
+<p>If we call the&#xa0;<strong><strong><code>get()</code></strong></strong>&#xa0;method on the <strong>tuple</strong> value, Python will raise an&#xa0;<strong>AttributeError: &#8216;tuple&#8217; object has no attribute &#8216;get&#8217;</strong>. The error can also happen if you have a method which returns an <strong>tuple</strong> instead of a dictionary.</p>
+
+
+
+<p>Let us take a simple example to reproduce this error.</p>
+
+
+
+<pre><code># Method return None instead of dict
+def fetch_data():
+    output = ("Audi", "BMW")
+    return output
+
+
+data = fetch_data …</code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-22 21:05:02+00:00" class="dt-published"></time>
+  Wed 22 Jun 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/mclasen/2022/06/22/pango-1-90/" rel="bookmark" class="u-url"
+       title="Pango 1.90" target="_blank">
+      <time class="m-date" datetime="2022-06-22 20:19:55+00:00">
+        Jun
+        <span class="m-date-day">
+          22
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pango 1.90
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I’ve finally convinced myself that I need to make a Pango 2.0 release to clean up the API, and introduce some new APIs without breaking users that expect Pango to be very stable. So, here it is… well not quite. What I am presenting today is not Pango 2.0  yet,  but 1.90 – an unstable … <a href="https://blogs.gnome.org/mclasen/2022/06/22/pango-1-90/">Continue reading <span>Pango 1.90</span> <span>→</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>mclasen</b></span>
+  on <time datetime="2022-06-22 20:19:55+00:00" class="dt-published"></time>
+  Wed 22 Jun 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.mardy.it/blog/2022/06/mitubo-comes-to-macos.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="MiTubo comes to macOS" target="_blank">
+      <time class="m-date" datetime="2022-06-22 19:44:47+00:00">
+        Jun
+        <span class="m-date-day">
+          22
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      MiTubo comes to macOS
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I just released <a href="//mardy.it/mitubo/#downloads">MiTubo 1.2</a>. New in this version:</p>
+<ul>
+<li>As suggested by <code>alphas12</code> in the comments, I added the author name in the
+  YouTube search results.</li>
+<li>In the same results list, there's now a clickable link to the channel, which
+  makes it easier to subscribe to it.</li>
+<li>Improve layout of some pages on narrow displays (though there's still much to
+  be done!).</li>
+<li>Skip invoking youtube-dl if the video information is already encoded in the
+  page <code>HEAD</code> meta properties.</li>
+<li>Remember the preferred playback resolution; this can be helpful on low
+  bandwith connections.</li>
+<li>First macOS release!</li>
+</ul>
+<p>While bringing in the macOS version, I updated the <a href="//gitlab.com/qt-goodies/qscreensaver">QScreenSaver
+library</a> to support inhibiting the
+screensaver on macOS too.</p>
+<p>I also tested the AppImage on openSUSE, and it seems to work fine there too.
+So, fewer and fewer people have valid excuses not to try …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Alberto Mardegan</b></span>
+  on <time datetime="2022-06-22 19:44:47+00:00" class="dt-published"></time>
+  Wed 22 Jun 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2022-06-22_New_tea_pot" rel="bookmark" class="u-url"
+       title="New tea pot" target="_blank">
+      <time class="m-date" datetime="2022-06-22 17:25:17+00:00">
+        Jun
+        <span class="m-date-day">
+          22
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      New tea pot
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><blockquote><p>I’m going to pick up my wife from the train station in 10min. Time to write a short blog post! 😆</p></blockquote><p> The old tea pot poured water all over the place and a lot of it didn’t go into the cup. It also had a sieve that didn’t go all the way down to the bottom of the pot so I always had to make at least two cups. This is not good since I like to steep my tea multiple times and my wife usually doesn’t drink.</p><p>This new tea pot has a finer tip which helps pouring, and the sieve basically is a built-in cylinder that goes all the way to the bottom. I hope it’s not going to be hard to clean! For the moment, I’m happy.</p><p>Old:</p><p><a href="https://alexschroeder.ch/wiki/Image_2_for_2022-06-22_New_tea_pot"><img alt="Red iron tea pot" src="https://alexschroeder.ch/wiki/download/Image_2_for_2022-06-22_New_tea_pot" title="Red iron tea pot"></a></p><p>New:</p><p><a href="https://alexschroeder.ch/wiki/Image_1_for_2022-06-22_New_tea_pot"><img alt="Tokoname tea pot" src="https://alexschroeder.ch/wiki/download/Image_1_for_2022-06-22_New_tea_pot" title="Tokoname tea pot"></a></p><p><a href="https://alexschroeder.ch/wiki?action=tag;id=Tea" title="Tag">#Tea</a></p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-22 17:25:17+00:00" class="dt-published"></time>
+  Wed 22 Jun 2022
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article915/two-signing-session-this-week-paris-and-amiens" rel="bookmark" class="u-url"
+       title="Two signing session this week: Paris and Amiens" target="_blank">
+      <time class="m-date" datetime="2022-06-22 18:13:00+02:00">
+        Jun
+        <span class="m-date-day">
+          22
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Two signing session this week: Paris and Amiens
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-06-21_signing-session-in-amiens_by-david-revoy.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-06-21_signing-session-in-amiens_by-david-revoy.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Two signing sessions incoming this week!</p>
+<ul>
+<li>PARIS: Fri. 24, 16h-19h, at <a href="https://www.alivrouvert.fr/">https://www.alivrouvert.fr/</a> bookstore.</li>
+<li>AMIENS: Sat.25, 11h-12h, 15h-18h, at <a href="https://rdvbdamiens.com/">https://rdvbdamiens.com/</a> comic festival 
+( with a drawing demo on large screen in the main hall from 14h-15h, I'll take laptop and a tablet!). </li>
+</ul>
+<p>Here is a quick painting about Amiens, a "cityscape" of the old town of Amiens that starts on a bridge in foreground with Pepper and Carrot. In the distance, you can see the cathedral of Amiens. It's a paint-over a photo (manipulated with GMIC filters) originally shot <a href="https://en.wikipedia.org/wiki/Amiens#/media/File:0_Amiens_-_Place_du_Don_-_Cath%C3%A9drale_(1).JPG">by Jean-Pol GRAMONT and uploaded on Wikimedia Commons here</a>. A big thanks to him for his quality work distributed as CC-By-Sa, and his portfolio on Wikimedia is incredible.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2022-06-22 18:13:00+02:00" class="dt-published"></time>
+  Wed 22 Jun 2022
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://noyb.eu/en/sweden-users-are-not-party-their-own-privacy-rights" rel="bookmark" class="u-url"
        title="Sweden: Users are not party to their own privacy rights?" target="_blank">
       <time class="m-date" datetime="2022-06-22 13:34:33+00:00">
@@ -194,6 +415,40 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2022-06-22 13:34:33+00:00" class="dt-published"></time>
   Wed 22 Jun 2022
   in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2636/" rel="bookmark" class="u-url"
+       title="What If? 2 Countdown" target="_blank">
+      <time class="m-date" datetime="2022-06-22 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          22
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      What If? 2 Countdown
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="If you don't end the 99 Bottles of Beer recursion at N=0 it just becomes The Other Song That Never Ends." src="https://imgs.xkcd.com/comics/what_if_2_countdown.png" title="If you don't end the 99 Bottles of Beer recursion at N=0 it just becomes The Other Song That Never Ends.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-22 00:00:00+00:00" class="dt-published"></time>
+  Wed 22 Jun 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -236,44 +491,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pycoders.com/issues/530" rel="bookmark" class="u-url"
-       title="PyCoder’s Weekly: Issue #530 (June 21, 2022)" target="_blank">
-      <time class="m-date" datetime="2022-06-21 19:30:00+00:00">
-        Jun
-        <span class="m-date-day">
-          21
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      PyCoder’s Weekly: Issue #530 (June 21, 2022)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p> <span>#530 – JUNE 21, 2022</span> <span><a href="https://pycoders.com/issues/530">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p> 
- <div> 
-<a href="https://pycoders.com/link/8964/feed">Objects, Functions, Generators, and Coroutines</a> <p> Although different concepts, objects, functions, generators, and coroutines can be used almost interchangeably because of Python&rsquo;s dynamic nature. Learn more about how these mechanisms are related and how to switch between them. <span><a href="https://pycoders.com/link/8964/feed">DUSTY PHILLIPS</a></span> </p> </div> <div> 
-<a href="https://pycoders.com/link/8963/feed">Combining Data in pandas With <code>concat()</code> and <code>merge()</code></a> <p> In this video course, you&rsquo;ll learn two techniques for combining data in pandas: <code>merge()</code> and <code>concat()</code>. Combining Series and DataFrame objects in pandas is a powerful way to gain new insights into your data. <span><a href="https://pycoders.com/link/8963/feed">REAL PYTHON</a></span> <span>course</span> </p> </div> <div> 
-<a href="https://pycoders.com/link/8954/feed">ButterCMS Melts Into Your Python app. Try the #1 Headless CMS for Python and Django</a> <a href="https://pycoders.com/link/8954/feed"><img alt="alt" src="https://cdn.pycoders.com/55011ecee0d16557fb80554d3a4a4823"></a> <p> ButterCMS is your content backend. Enable your marketing team to update website + app content without bothering you. Try the #1 rated Headless CMS for Python today. <a href="https://pycoders.com/link/8954/feed">Free for 30 days →</a> <span><a href="https://pycoders.com/link/8954/feed">BUTTERCMS</a></span> <span>sponsor …</span></p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-21 19:30:00+00:00" class="dt-published"></time>
-  Tue 21 Jun 2022
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pluralistic.net/2022/06/21/early-adopters/" rel="bookmark" class="u-url"
        title="Pluralistic: 21 Jun 2022" target="_blank">
       <time class="m-date" datetime="2022-06-21 17:46:45+00:00">
@@ -308,134 +525,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jriddell.org/2022/06/21/openuk-awards-2022/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="OpenUK Awards 2022" target="_blank">
-      <time class="m-date" datetime="2022-06-21 17:27:44+00:00">
-        Jun
-        <span class="m-date-day">
-          21
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      OpenUK Awards 2022
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="//openuk.uk/nominations-2022/"><img alt="" src="//openuk.uk/wp-content/uploads/2022/06/openuk-awards-2022.jpg"></a>
-OpenUK is the non-profit body which promotes Open tech in the UK.
-
-
-
-<p>Nominations are now open for the<a href="//openuk.uk/nominations-2022/"> OpenUK Awards 2022.</a></p>
-
-
-
-<p>We&#8217;ve run our annual awards ceremony to recognise great Open tech contributions for the last two years with great success and this year nominations are open for you to join or point is to the best people, organisations and projects that need rewarded.</p>
-
-
-
-<p>Two years ago it we had dinner sent to your door during Covid.  Last year we dined at the centre of the world at COP26.  This year we&#8217;re Lording it up with a ceremony and dinner in the House of Lords on 30 November.</p>
-
-
-
-
-<a href="//jriddell.org/wp-content/uploads/2022/06/image.png"><img alt="" src="//jriddell.org/wp-content/uploads/2022/06/image-1024x613.png"></a>
-House of Commons
-
-
-
-<p>Last week we had a preview of the event, a delayed Burns supper in the House of Commons.  One of the wonderful aspects of Open tech is …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jonathan Riddell</b></span>
-  on <time datetime="2022-06-21 17:27:44+00:00" class="dt-published"></time>
-  Tue 21 Jun 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article914/dryad-fan-art" rel="bookmark" class="u-url"
-       title="Dryad (fan-art)" target="_blank">
-      <time class="m-date" datetime="2022-06-21 17:29:00+02:00">
-        Jun
-        <span class="m-date-day">
-          21
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Dryad (fan-art)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-06-20_dryad_legend-of-mana_fan-art_by-david_revoy_net.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-06-20_dryad_legend-of-mana_fan-art_by-david_revoy_net.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>I love the art-direction and music of the Mana franchise; especially Secret of Mana. If you haven't played it, Dryad is a small magical creature representing the 'green' magic (in a nutshell). The <a href="https://mana.fandom.com/wiki/Dryad">Dryad's page on the Wiki of Mana</a> details it better. </p>
-<p>This artwork started as a doodle in my sketchbook. I wanted to test something with going a little bit more on saturated colors, and it was the ideal target for my test. Shading her hair was surprisingly more complex than I thought.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-06-21 17:29:00+02:00" class="dt-published"></time>
-  Tue 21 Jun 2022
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://wingolog.org/archives/2022/06/21/an-optimistic-evacuation-of-my-wordhoard" rel="bookmark" class="u-url"
-       title="an optimistic evacuation of my wordhoard" target="_blank">
-      <time class="m-date" datetime="2022-06-21 12:21:38+00:00">
-        Jun
-        <span class="m-date-day">
-          21
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      an optimistic evacuation of my wordhoard
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>Good morning, mallocators.  <a href="https://wingolog.org/archives/2022/06/20/blocks-and-pages-and-large-objects">Last time</a> we talked about how to split available memory between a block-structured main space and a large object space.  Given a fixed heap size, making a new large object allocation will steal available pages from the block-structured space by finding empty blocks and temporarily returning them to the operating system.</p><p>Today I'd like to talk more about nothing, or rather, why might you want nothing rather than something.  Given an Immix heap, why would you want it organized in such a way that live data is packed into some blocks, leaving other blocks completely free?  How bad would it be if instead the live data were spread all over the heap?  When might it be a good idea to try to compact the heap?  Ideally we'd like to be able to translate the answers to these …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Andy Wingo</b></span>
-  on <time datetime="2022-06-21 12:21:38+00:00" class="dt-published"></time>
-  Tue 21 Jun 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://hynek.me/articles/what-to-mock-in-5-mins/" rel="bookmark" class="u-url"
-       title="Don’t Mock What You Don’t Own in 5 Minutes" target="_blank">
+       title="“Don’t Mock What You Don’t Own” in 5 Minutes" target="_blank">
       <time class="m-date" datetime="2022-06-21 09:00:00+00:00">
         Jun
         <span class="m-date-day">
@@ -444,7 +535,7 @@ House of Commons
         2022
       </time>
       <div class="p-name">
-      Don’t Mock What You Don’t Own in 5 Minutes
+      “Don’t Mock What You Don’t Own” in 5 Minutes
       </div>
     </a>
   </h1>
@@ -509,40 +600,6 @@ so:</p>
   on <time datetime="2022-06-20 00:00:00+00:00" class="dt-published"></time>
   Mon 20 Jun 2022
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2635/" rel="bookmark" class="u-url"
-       title="Superintelligent AIs" target="_blank">
-      <time class="m-date" datetime="2022-06-20 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          20
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Superintelligent AIs
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Your scientists were so preoccupied with whether or not they should, they didn't stop to think if they could." src="https://imgs.xkcd.com/comics/superintelligent_ais.png" title="Your scientists were so preoccupied with whether or not they should, they didn't stop to think if they could.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-20 00:00:00+00:00" class="dt-published"></time>
-  Mon 20 Jun 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -670,40 +727,6 @@ interacting with binutils and having a working&nbsp;libgcc.</p>
   on <time datetime="2022-06-19 08:04:00-04:00" class="dt-published"></time>
   Sun 19 Jun 2022
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2022-06-16_Bought_some_tea" rel="bookmark" class="u-url"
-       title="Bought some tea" target="_blank">
-      <time class="m-date" datetime="2022-06-17 14:51:53+00:00">
-        Jun
-        <span class="m-date-day">
-          17
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Bought some tea
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><blockquote><p>I went for a long hike, yesterday. My wife had a day of management training in Schwarzenburg and I asked a friend to go hiking in the same area. Afterwards, as I was waiting for my wife to finish, I went to Länggasstee in Berne. I ended up tasting some Ooolong tea and it was great.</p></blockquote><p> It felt good to visit the tea shop in person for a change.</p><ul><li>Wuyi Oolong Grade 1 (武夷岩茶, Rock Tea)</li><li>Dong Fang Mei Ren (东方美人, Oriental Beauty)</li><li>Ye Lai Xiang (凤凰单丛, Phoenix Single Bush)</li><li>Gang Kou Cha (老乌龙茶, Meer Oolong, 2006)</li><li>Jinggu (景谷 生茶 Pu Er Sheng Bing Gu Shu Cha, 2018)</li></ul><p>I didnt want to check my blog while standing in the shop and so this is how I …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-17 14:51:53+00:00" class="dt-published"></time>
-  Fri 17 Jun 2022
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
