@@ -166,10 +166,10 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <h1>
     <a href="https://zerotomastery.io/blog/python-monthly-newsletter-june-2022/?utm_source=python-rss-feed" rel="bookmark" class="u-url"
        title="Zero to Mastery: Python Monthly Newsletter 💻🐍" target="_blank">
-      <time class="m-date" datetime="2022-06-28 21:41:27+00:00">
+      <time class="m-date" datetime="2022-06-29 21:41:41+00:00">
         Jun
         <span class="m-date-day">
-          28
+          29
         </span>
         2022
       </time>
@@ -187,8 +187,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-28 21:41:27+00:00" class="dt-published"></time>
-  Tue 28 Jun 2022
+  on <time datetime="2022-06-29 21:41:41+00:00" class="dt-published"></time>
+  Wed 29 Jun 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,31 +198,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2022/06/2022-06-28-gekvh" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2022-06-28 21:07:00+02:00">
+    <a href="https://jlelse.blog/posts/ama-answers" rel="bookmark" class="u-url"
+       title="My answers (to your AMA questions)" target="_blank">
+      <time class="m-date" datetime="2022-06-29 21:36:19+02:00">
         Jun
         <span class="m-date-day">
-          28
+          29
         </span>
         2022
       </time>
       <div class="p-name">
-      💬
+      My answers (to your AMA questions)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Thanks to mobile working, I had a few nice days with my girlfriend. ❤️
+  Recently I made an invitation to ask me anything. Only two mails arrived, but I would like to answer them anyway:
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-28 21:07:00+02:00" class="dt-published"></time>
-  Tue 28 Jun 2022
+  on <time datetime="2022-06-29 21:36:19+02:00" class="dt-published"></time>
+  Wed 29 Jun 2022
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -232,31 +232,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/06/28/bartlebytron-3000/" rel="bookmark" class="u-url"
-       title="Pluralistic: 28 Jun 2022" target="_blank">
-      <time class="m-date" datetime="2022-06-28 17:38:05+00:00">
+    <a href="http://ml4711.blogspot.com/2022/06/summer-maps.html" rel="bookmark" class="u-url"
+       title="Summer Maps" target="_blank">
+      <time class="m-date" datetime="2022-06-29 18:38:00+00:00">
         Jun
         <span class="m-date-day">
-          28
+          29
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: 28 Jun 2022
+      Summer Maps
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Decrapify cookie consent dialogs with the Consent-O-Matic: Comcom steps in where GDPR enforcement failed. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Decrapify cookie consent dialogs with the Consent-O-Matic (permalink) Remember when they sneered at Geocities pages for being unusable eyesores? It's true, those old sites had some, uh, idiosyncratic design choices, but at least they reflected a real person's exuberant ideas about what looked and worked well. Today's web is an unusable eyesore by design. Start with those fucking "sign up for our newsletter" interruptors. Email is the last federated protocol standing, so everyone who publishes is desperate to get you to sign up to their newsletter, which nominally bypasses Big Tech's chokepoint on communications between creators and …
+  <p> So, as tradition has it here's the (Northern Hemisphere) summer blog post about GNOME Maps.</p><p>One large under-the-hood change I've made in Maps since last time is migrating the JS code to use ES6 modules.</p><p>So, using “import” instead of referring modules as objects from the old-school global “imports” object in GJS.</p><p>When using GI modules to access introspectable GObject-based libraries it means something like</p><blockquote><p><span>const GLib = imports.gi.GLib;</span></p></blockquote><blockquote><p><span>let var = new GLib.SomeClassFromGLib();</span></p></blockquote><p>becomes</p><blockquote><p><span>import GLib from 'gi://GLib';</span></p></blockquote><blockquote><p><span>let var = new GLib.SomeClassFromGLib();</span></p></blockquote><p> </p><p>Here the URI scheme gi:// referres to the GObject introspectable libraries as seen in runtime in the managed code (in this case JS).</p><p>When using our own classes locally defined in JS, we can refer to resources found inside the program's GResource, so something that was before</p><blockquote><p><span>const MapMarker = imports.mapMarker;</span></p></blockquote><blockquote><p><span>let marker = new …</span></p></blockquote>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Marcus Lundblad (noreply@blogger.com)</b></span>
+  on <time datetime="2022-06-29 18:38:00+00:00" class="dt-published"></time>
+  Wed 29 Jun 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/06/29/no-i-in-uter-us/" rel="bookmark" class="u-url"
+       title="Pluralistic: 29 Jun 2022" target="_blank">
+      <time class="m-date" datetime="2022-06-29 16:15:17+00:00">
+        Jun
+        <span class="m-date-day">
+          29
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: 29 Jun 2022
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Abortion surveillance only incidentally involves period-trackers: It's all your digital stuff, plus snitchy friends and doctors. Hey look at this: Delights to delectate. This day in history: 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Abortion surveillance only incidentally involves period-trackers (permalink) I get it. The deeper we get into this GOP christofascist Handmaid's Tale LARP, the more it feels like we are living in a dystopian novel and the more draw on stories to understand our experience. The idea that a cyberpunk Red State sheriff &#8211; Boss Hogg meets Robocop &#8211; would use period-tracking apps for dragnet abortion surveillance is a great setup for a novel, but it's not very reflective of reality. I'm a novelist and I work on public policy, and the difference is that novels are very, very simplified …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-06-28 17:38:05+00:00" class="dt-published"></time>
-  Tue 28 Jun 2022
+  on <time datetime="2022-06-29 16:15:17+00:00" class="dt-published"></time>
+  Wed 29 Jun 2022
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -266,37 +300,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://viruta.org/fixing-test-coverage.html" rel="bookmark" class="u-url"
-       title="Fixing test coverage reports in at-spi2-core" target="_blank">
-      <time class="m-date" datetime="2022-06-28 16:13:47+00:00">
+    <a href="https://xkcd.com/2639/" rel="bookmark" class="u-url"
+       title="Periodic Table Changes" target="_blank">
+      <time class="m-date" datetime="2022-06-29 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          28
+          29
         </span>
         2022
       </time>
       <div class="p-name">
-      Fixing test coverage reports in at-spi2-core
+      Periodic Table Changes
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Over the past weeks I have been fixing the test coverage report for
-at-spi2-core.  It has been a bit of an adventure where I had to do these:</p>
-<ul>
-<li>Replace a code coverage tool for another one...</li>
-<li>... which was easier to modify to produce more accessible HTML reports.</li>
-<li>Figuring out why …</li></ul>
+  <img alt="It's nice how the end of the periodic table is flush with the edge these days, so I think we should agree no one should find any new elements after #118 unless they discover a whole row at once." src="https://imgs.xkcd.com/comics/periodic_table_changes.png" title="It's nice how the end of the periodic table is flush with the edge these days, so I think we should agree no one should find any new elements after #118 unless they discover a whole row at once.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Federico Mena Quintero</b></span>
-  on <time datetime="2022-06-28 16:13:47+00:00" class="dt-published"></time>
-  Tue 28 Jun 2022
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-29 00:00:00+00:00" class="dt-published"></time>
+  Wed 29 Jun 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -427,6 +456,42 @@ some disclaimers
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="/blog/hello-openbsd/" rel="bookmark" class="u-url"
+       title="Hello OpenBSD" target="_blank">
+      <time class="m-date" datetime="2022-06-28 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          28
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Hello OpenBSD
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Oh, hi!
+This is a blog post about the things I stumbled upon when I thought I&rsquo;ll give OpenBSD a go. Therefore, this post is going to sound more like a walkthrough than an ordinary blog post.
+The reason why I decided to try it out was primarily for the learning experience, and to use it as a hobby OS- something you boot up every once in a while when you want to slow down and relax a bit.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-28 00:00:00+00:00" class="dt-published"></time>
+  Tue 28 Jun 2022
+  in Aswin's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://alexschroeder.ch/wiki/2022-06-26_Does_email_spark_joy%3F" rel="bookmark" class="u-url"
        title="Does email spark joy?" target="_blank">
       <time class="m-date" datetime="2022-06-27 14:14:32+00:00">
@@ -453,40 +518,6 @@ some disclaimers
   on <time datetime="2022-06-27 14:14:32+00:00" class="dt-published"></time>
   Mon 27 Jun 2022
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2638/" rel="bookmark" class="u-url"
-       title="Extended NFPA Hazard Diamond" target="_blank">
-      <time class="m-date" datetime="2022-06-27 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          27
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Extended NFPA Hazard Diamond
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="With most labs, the hushed horror stories are about something like dimethylmercury or prions, but occasionally you'll get a weird lab where it's about the soda machine or the drop ceiling." src="https://imgs.xkcd.com/comics/extended_nfpa_hazard_diamond.png" title="With most labs, the hushed horror stories are about something like dimethylmercury or prions, but occasionally you'll get a weird lab where it's about the soda machine or the drop ceiling.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-27 00:00:00+00:00" class="dt-published"></time>
-  Mon 27 Jun 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -846,7 +877,7 @@ snub dodeca­hedron
   </h1>
   <div class="p-summary">
   <p>
-  There currently is not a standardized API for uploading files to a Python package repository such as PyPI. Instead everyone has been forced to reverse engineer the non-standard API from PyPI.
+  There is currently no standardized API for uploading files to a Python package repository such as PyPI. Instead, everyone has been forced to reverse engineer the non-standard API from PyPI.
   </p>
   </div>
 </header>
@@ -890,84 +921,6 @@ snub dodeca­hedron
   on <time datetime="2022-06-10 10:44:44+00:00" class="dt-published"></time>
   Fri 10 Jun 2022
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://fortran-lang.org/newsletter/2022/06/09/Fortran-Newsletter-June-2022/" rel="bookmark" class="u-url"
-       title="Fortran newsletter: June 2022" target="_blank">
-      <time class="m-date" datetime="2022-06-09 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          09
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Fortran newsletter: June 2022
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Welcome to the June edition of the monthly Fortran newsletter.
-The newsletter comes out at the beginning of every month and details
-Fortran news from the previous month.</p>
-
-<ul></ul>
-
-
-fortran-lang.org
-
-<p>Here’s what’s new in the fortran-lang.org repo:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/401">#401</a>:
-Newsletter May 2022</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/403">#403</a>:
-Add SeisSol to package index</li>
-</ul>
-
-<p>Work in progress:</p>
-
-<ul>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/397">#397</a> (WIP):
-Add NUFFT to package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/396">#396</a> (WIP):
-Add OpenFFT to package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/395">#395</a> (WIP):
-Add 2DECOMP&amp;FFT to package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/394">#394</a> (WIP):
-Add SLICOT to package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/393">#393</a> (WIP):
-Add FATODE to package index</li>
-  <li><a href="https://github.com/fortran-lang/fortran-lang.org/pull/347">#347</a> (WIP):
-Fortran Intrinsics</li>
-</ul>
-
-<p><a href="https://github.com/fortran-lang/fortran-lang.org/issues">Let us know</a>
-if you have any suggestions for the website and its content.
-We welcome any new contributors to the website and the tutorials page in particular - see the
-<a href="https://github.com/fortran-lang/fortran-lang.org/blob/HEAD/CONTRIBUTING.md">contributor guide</a>
-for how to get started.</p>
-
-
-Fortran Standard Library
-
-<p>Here’s what’s new in stdlib …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-09 00:00:00+00:00" class="dt-published"></time>
-  Thu 09 Jun 2022
-  in Fortran Newsletter.
 </footer>
 <div class="m-clearfix-l"></div>
 
