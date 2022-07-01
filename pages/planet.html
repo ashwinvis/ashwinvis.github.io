@@ -166,10 +166,10 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <h1>
     <a href="https://zerotomastery.io/blog/python-monthly-newsletter-june-2022/?utm_source=python-rss-feed" rel="bookmark" class="u-url"
        title="Zero to Mastery: Python Monthly Newsletter 💻🐍" target="_blank">
-      <time class="m-date" datetime="2022-06-29 21:41:41+00:00">
+      <time class="m-date" datetime="2022-06-30 21:41:08+00:00">
         Jun
         <span class="m-date-day">
-          29
+          30
         </span>
         2022
       </time>
@@ -187,8 +187,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-29 21:41:41+00:00" class="dt-published"></time>
-  Wed 29 Jun 2022
+  on <time datetime="2022-06-30 21:41:08+00:00" class="dt-published"></time>
+  Thu 30 Jun 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,32 +198,52 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/posts/ama-answers" rel="bookmark" class="u-url"
-       title="My answers (to your AMA questions)" target="_blank">
-      <time class="m-date" datetime="2022-06-29 21:36:19+02:00">
+    <a href="https://samarthrajwrites.wordpress.com/2022/07/01/the-coding-period-week-1-2/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="The Coding Period: Week 1 & 2" target="_blank">
+      <time class="m-date" datetime="2022-06-30 19:33:39+00:00">
         Jun
         <span class="m-date-day">
-          29
+          30
         </span>
         2022
       </time>
       <div class="p-name">
-      My answers (to your AMA questions)
+      The Coding Period: Week 1 & 2
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Recently I made an invitation to ask me anything. Only two mails arrived, but I would like to answer them anyway:
+  <p>Community Bonding Period</p>
+
+
+
+<p>During this period, I prepared the mock-ups for the activities &#8220;<a href="//phabricator.kde.org/T15276">10&#8217;s complement</a>&#8221; and &#8220;<a href="//phabricator.kde.org/T15277">Grammatical analyze</a>.&#8221; Based on my mentor&#8217;s reviews the mock-ups were modified further.</p>
+
+
+
+<p>The design for other levels of 10&#8217;s complement can be found <a href="//phabricator.kde.org/T15276">here</a>.</p>
+
+
+
+<p>This bonding period is provided so the newcomers can get familiar with mentors and projects. As I&#8217;ve contributed for a few months now, I am comfortable with mentors and a little less confident with the project. So I decided to increase my understanding by finding the sub-tasks in other activities I needed to complete <em>10&#8217;s complement </em>and <em>Grammatical analyze</em>.I also contributed to one another <a href="//invent.kde.org/education/gcompris/-/merge_requests/114">issue</a>. Also, during this time, my first activity got merged (<a href="//invent.kde.org/education/gcompris/-/merge_requests/94">Left and Right Click Training</a> which was later renamed as Mouse Click Training).</p>
+
+
+
+<p>Current Progress</p>
+
+
+
+<p>The first activity is going …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-06-29 21:36:19+02:00" class="dt-published"></time>
-  Wed 29 Jun 2022
-  in jlelse's Blog.
+  <span class="p-author"><b>Samarth Raj</b></span>
+  on <time datetime="2022-06-30 19:33:39+00:00" class="dt-published"></time>
+  Thu 30 Jun 2022
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -232,31 +252,46 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://ml4711.blogspot.com/2022/06/summer-maps.html" rel="bookmark" class="u-url"
-       title="Summer Maps" target="_blank">
-      <time class="m-date" datetime="2022-06-29 18:38:00+00:00">
+    <a href="https://meeksfamily.uk/~michael/blog/2022-06-30.html" rel="bookmark" class="u-url"
+       title="2022-06-30 Thursday" target="_blank">
+      <time class="m-date" datetime="2022-06-30 18:49:47+00:00">
         Jun
         <span class="m-date-day">
-          29
+          30
         </span>
         2022
       </time>
       <div class="p-name">
-      Summer Maps
+      2022-06-30 Thursday
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p> So, as tradition has it here's the (Northern Hemisphere) summer blog post about GNOME Maps.</p><p>One large under-the-hood change I've made in Maps since last time is migrating the JS code to use ES6 modules.</p><p>So, using “import” instead of referring modules as objects from the old-school global “imports” object in GJS.</p><p>When using GI modules to access introspectable GObject-based libraries it means something like</p><blockquote><p><span>const GLib = imports.gi.GLib;</span></p></blockquote><blockquote><p><span>let var = new GLib.SomeClassFromGLib();</span></p></blockquote><p>becomes</p><blockquote><p><span>import GLib from 'gi://GLib';</span></p></blockquote><blockquote><p><span>let var = new GLib.SomeClassFromGLib();</span></p></blockquote><p> </p><p>Here the URI scheme gi:// referres to the GObject introspectable libraries as seen in runtime in the managed code (in this case JS).</p><p>When using our own classes locally defined in JS, we can refer to resources found inside the program's GResource, so something that was before</p><blockquote><p><span>const MapMarker = imports.mapMarker;</span></p></blockquote><blockquote><p><span>let marker = new …</span></p></blockquote>
+  <ul> 
+    <li>
+        Catch up with Miklos, partner call, COOL community call bits,
+    call with Philippe &amp; an old friend.
+    </li>
+    <li>
+        Today Collabora's app-store experiment with LibreOffice Vanilla
+    was ended. In time we will write up and publish the data more widely,
+    make final donations to TDF and as/when sensible finish up some Mac work
+    in due course. Many thanks to all those who
+    <a href="https://www.mail-archive.com/board-discuss@documentfoundation.org/msg05832.html">worked
+    hard</a> over the years to get LibreOffice into many app-stores - you rock.
+    Of course - you can still get <a href="https://apps.apple.com/us/app/collabora-office/id1440482071">Collabora
+    Office</a> for your Mac, and help to support FOSS development that way.
+    </li>
+</ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Marcus Lundblad (noreply@blogger.com)</b></span>
-  on <time datetime="2022-06-29 18:38:00+00:00" class="dt-published"></time>
-  Wed 29 Jun 2022
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-30 18:49:47+00:00" class="dt-published"></time>
+  Thu 30 Jun 2022
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -266,31 +301,101 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/06/29/no-i-in-uter-us/" rel="bookmark" class="u-url"
-       title="Pluralistic: 29 Jun 2022" target="_blank">
-      <time class="m-date" datetime="2022-06-29 16:15:17+00:00">
+    <a href="https://www.davidrevoy.com/article917/asleep" rel="bookmark" class="u-url"
+       title="Asleep" target="_blank">
+      <time class="m-date" datetime="2022-06-30 20:06:00+02:00">
         Jun
         <span class="m-date-day">
-          29
+          30
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: 29 Jun 2022
+      Asleep
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Abortion surveillance only incidentally involves period-trackers: It's all your digital stuff, plus snitchy friends and doctors. Hey look at this: Delights to delectate. This day in history: 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Abortion surveillance only incidentally involves period-trackers (permalink) I get it. The deeper we get into this GOP christofascist Handmaid's Tale LARP, the more it feels like we are living in a dystopian novel and the more draw on stories to understand our experience. The idea that a cyberpunk Red State sheriff &#8211; Boss Hogg meets Robocop &#8211; would use period-tracking apps for dragnet abortion surveillance is a great setup for a novel, but it's not very reflective of reality. I'm a novelist and I work on public policy, and the difference is that novels are very, very simplified …
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/2020-06-30_asleep_by-david-revoy.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2020-06-30_asleep_by-david-revoy.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>I detailed today an old sketch to test something technical about painting (and also to keep beta testing Krita 5.1beta1). After the Rendez Vous de la BD in Amiens Festival, I saw hundreds of comic styles but rarely painterly style. </p>
+<p>So, I'm reconsidering the orientation I took on the <a href="https://www.davidrevoy.com/article906/ep37-production-report-style">last production report about style</a>.  It might help to push forward episode 37 because I'm not happy right now with the rendering of the first page colored and I'm looking to solve this issue.</p>
+<p>The goal of this test illustration was to study the contrast of detailing; leaving part brushed and heavy textured on one side, and to detail with a lot of care focus point on the other side. (here, the face of Shichimi). It helps at crunching production time, while keeping the fun to detail as much as …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2022-06-30 20:06:00+02:00" class="dt-published"></time>
+  Thu 30 Jun 2022
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/posts/june-22" rel="bookmark" class="u-url"
+       title="My June ‘22 in Review" target="_blank">
+      <time class="m-date" datetime="2022-06-30 19:30:00+02:00">
+        Jun
+        <span class="m-date-day">
+          30
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      My June ‘22 in Review
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  And now June and thus half of the year is over, how fast time flies, blazing fast! Time for a little review.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-06-30 19:30:00+02:00" class="dt-published"></time>
+  Thu 30 Jun 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/06/30/mckinsey-mafia/" rel="bookmark" class="u-url"
+       title="Pluralistic: 30 Jun 2022" target="_blank">
+      <time class="m-date" datetime="2022-06-30 17:06:04+00:00">
+        Jun
+        <span class="m-date-day">
+          30
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: 30 Jun 2022
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links McKinsey, consiglieri of the opioid crisis: "Without admitting any wrongdoing." Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading McKinsey, consiglieri of the opioid crisis (permalink) McKinsey is a global "consulting" giant, with its tendrils in every unsavory industry from private ICE gulags to (mis)managing violent prisons to publicly funded private charter schools. Internally, McKinsey promotes itself as akin to the Jesuits and the Marines (no, really): "analytically rigorous, deeply principled seekers of knowledge and truth." https://www.propublica.org/article/how-mckinsey-makes-its-own-rules McKinsey has been embroiled in an endless series of grotesque scandals, caught "advising" companies and governments on projects that produced literal crimes against humanity, at scale. Naturally, the company downplays its role in these scandals, insisting that …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-06-29 16:15:17+00:00" class="dt-published"></time>
-  Wed 29 Jun 2022
+  on <time datetime="2022-06-30 17:06:04+00:00" class="dt-published"></time>
+  Thu 30 Jun 2022
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -378,76 +483,6 @@ some disclaimers
   on <time datetime="2022-06-28 12:24:34+00:00" class="dt-published"></time>
   Tue 28 Jun 2022
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article916/toulouse-signing-session-on-sunday" rel="bookmark" class="u-url"
-       title="Toulouse - Signing Session on Sunday" target="_blank">
-      <time class="m-date" datetime="2022-06-28 12:38:00+02:00">
-        Jun
-        <span class="m-date-day">
-          28
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Toulouse - Signing Session on Sunday
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-06-27_signing-session-in-toulouse_001.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-06-27_signing-session-in-toulouse_001.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>As a part of my 'tour' of signing session for the release of Pepper&amp;Carrot book 4, I'll be on Sunday 3 July in Toulouse for a signing session at the book store "Les Petits Ruisseaux" <a href="https://www.librairielespetitsruisseaux.fr/">https://www.librairielespetitsruisseaux.fr/</a> from 10h to 13h. </p>
-<p>Here is a painting of the lovely bell tower of the Basilica of Saint-Sernin, Toulouse.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-06-28 12:38:00+02:00" class="dt-published"></time>
-  Tue 28 Jun 2022
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.qt.io/blog/qt-creator-8-beta2-released?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Qt Creator 8 Beta2 released" target="_blank">
-      <time class="m-date" datetime="2022-06-28 09:46:40+00:00">
-        Jun
-        <span class="m-date-day">
-          28
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Qt Creator 8 Beta2 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We are happy to announce the release of Qt Creator 8 Beta2!</p>  
-<img alt="" src="//track.hubspot.com/__ptq.gif?a=149513&amp;k=14&amp;r=https%3A%2F%2Fwww.qt.io%2Fblog%2Fqt-creator-8-beta2-released&amp;bu=https%253A%252F%252Fwww.qt.io%252Fblog&amp;bvt=rss">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Qt Dev Loop</b></span>
-  on <time datetime="2022-06-28 09:46:40+00:00" class="dt-published"></time>
-  Tue 28 Jun 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
