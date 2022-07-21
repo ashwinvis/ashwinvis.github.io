@@ -166,10 +166,10 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <h1>
     <a href="https://labs.quansight.org/blog/hello-world-post" rel="bookmark" class="u-url"
        title="Quansight Labs Blog: This is hello world post!" target="_blank">
-      <time class="m-date" datetime="2022-07-19 21:40:16+00:00">
+      <time class="m-date" datetime="2022-07-20 21:40:27+00:00">
         Jul
         <span class="m-date-day">
-          19
+          20
         </span>
         2022
       </time>
@@ -187,8 +187,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-07-19 21:40:16+00:00" class="dt-published"></time>
-  Tue 19 Jul 2022
+  on <time datetime="2022-07-20 21:40:27+00:00" class="dt-published"></time>
+  Wed 20 Jul 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,55 +198,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://dev.to/redoca2k/outreachy-mid-way-blog-post-3nck" rel="bookmark" class="u-url"
-       title="Outreachy: Mid way blog post" target="_blank">
-      <time class="m-date" datetime="2022-07-19 05:45:36+00:00">
+    <a href="https://alexschroeder.ch/wiki/2022-07-20_What_about_Javascript%3F" rel="bookmark" class="u-url"
+       title="What about Javascript?" target="_blank">
+      <time class="m-date" datetime="2022-07-20 21:27:50+00:00">
         Jul
         <span class="m-date-day">
-          19
+          20
         </span>
         2022
       </time>
       <div class="p-name">
-      Outreachy: Mid way blog post
+      What about Javascript?
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <blockquote>
-<p>Time flies ! Now I have reached to middle of my outreachy internship. This blog post will throw some light on my journey till now .</p>
-</blockquote>
-
-
-
-
-
-
-
-
-
-
-  Timeline
-
-
-<p>Initially when I applied for outreachy I proposed this timeline .</p>
-
-<ul>
-<li>May 30 - June 13 =&gt; replace gtk+-3.0 with gtk4 library and fix all build error which comes while doing so .( 2 weeks)</li>
-<li>June 14 - June 27 =&gt; Fix runtime errors ( 2 weeks)</li>
-<li>June 27 - july 18 =&gt; Replace libhandy with libadwaita and rewrite needed ui files and fix error which come in doing so ( 3 weeks )</li>
-<li>July 18 - August 1 =&gt; Improve custom stlyes to make app work better with dark theme ( 2 weeks)</li>
-<li>August 1 - August 15 =&gt; Make app follow Gnome HIG guidelines . (2 weeks)</li>
-<li>August 15 - August 26 =&gt; It is the time which I have kept as empty to adjust my timeline above in case …</li></ul>
+  <div><blockquote><p>We packed for the hike tomorrow and now we should go to bed, I guess.</p></blockquote><p> <a href="https://federation.p1k3.com/users/brennen">@brennen</a> was replying to <a href="https://social.coop/users/jonny">@jonny</a> regarding the problem with Javascript, and one point I wanted to add is that JavaScript is fine when writing webapps and the problem is only when everything is an app.</p><p>Documents have many positive aspects and forcing people to use an app (anything with Javascript) means that almost always the experience degrades: less accessibility, less freedom in layout, theming, archiving, printing, navigation, and so on.</p><p>The two problems are thus: apps instead of documents, and badly designed apps.</p><p>In the case of things that are in fact apps that run on the virtual machine that is the browser, I have nothing against Javascript and use it myself (<a href="https://alexschroeder.ch/wiki/Gridmapper">Gridmapper</a>).</p><p>The fact that the virtual machine is super hard to implement and …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>redoC-A2k</b></span>
-  on <time datetime="2022-07-19 05:45:36+00:00" class="dt-published"></time>
-  Tue 19 Jul 2022
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-07-20 21:27:50+00:00" class="dt-published"></time>
+  Wed 20 Jul 2022
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wingolog.org/archives/2022/07/20/unintentional-concurrency" rel="bookmark" class="u-url"
+       title="unintentional concurrency" target="_blank">
+      <time class="m-date" datetime="2022-07-20 21:26:57+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      unintentional concurrency
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Good evening, gentle hackfolk.  <a href="https://wingolog.org/archives/2022/06/21/an-optimistic-evacuation-of-my-wordhoard">Last time</a> we talked about heuristics for when you might want to compact a heap.  Compacting garbage collection is nice and tidy and appeals to our orderly instincts, and it enables heap shrinking and reallocation of pages to large object spaces and it can reduce fragmentation: all very good things.  But evacuation is more expensive than just marking objects in place, and so a production garbage collector will usually just mark objects in place, and only compact or evacuate when needed.</p><p>Today's post is more details!</p><p><b>dedication</b></p><p>Just because it's been, oh, a couple decades, I would like to reintroduce a term I learned from <a href="https://marnanel.org/">Marnanel</a> years ago on <a href="https://advogato.org/">advogato</a>, a nerdy group blog kind of a site.  As I recall, there is a word that originates in the Oxbridge social environment, "narg", from "Not A …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2022-07-20 21:26:57+00:00" class="dt-published"></time>
+  Wed 20 Jul 2022
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -256,44 +266,68 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://dantti.wordpress.com/2022/07/18/cutelyst-v3-5-relicensed-as-bsd-3-clause/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Cutelyst v3.5 relicensed as BSD-3-Clause" target="_blank">
-      <time class="m-date" datetime="2022-07-18 20:30:35+00:00">
+    <a href="https://krita.org/en/item/get-started-making-your-own-brush-presets/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Get started making your own brush presets!" target="_blank">
+      <time class="m-date" datetime="2022-07-20 16:42:13+00:00">
         Jul
         <span class="m-date-day">
-          18
+          20
         </span>
         2022
       </time>
       <div class="p-name">
-      Cutelyst v3.5 relicensed as BSD-3-Clause
+      Get started making your own brush presets!
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Cutelyst the Qt Web framework just got a new license, the more permissive BSD-3-Clause. Back in 2013 when I started the project the LGPL was a perfectly fine license as software on servers can be closed as long they are not AGPL, thus it was permissive enough for the web and REST backends use-cases I had in mind.</p>
-
-
-
-<p>Fast-forward almost 10 years and I have used for a few of projects where it was embedded into another application, and I realized that there might be users with commercial Qt license that would like to use it but can&#8217;t due the current license.</p>
-
-
-
-<p>Hesitate no more! It&#8217;s amazing how much nicer it is to implement client-server applications using HTTP/REST APIs all with Qt/C++, and when real time is needed WebSockets is also there to the rescue.</p>
-
-
-
-<p>Since …</p>
+  <p>Get started crafting your own brush presets! Join Ramon for the first of a set of comprehensive videos!</p>
+<p></p>
+<p>The post <a href="https://krita.org/en/item/get-started-making-your-own-brush-presets/">Get started making your own brush presets!</a> appeared first on <a href="https://krita.org/en">Krita</a>.</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Daniel Nicoletti</b></span>
-  on <time datetime="2022-07-18 20:30:35+00:00" class="dt-published"></time>
-  Mon 18 Jul 2022
+  <span class="p-author"><b>Krita News</b></span>
+  on <time datetime="2022-07-20 16:42:13+00:00" class="dt-published"></time>
+  Wed 20 Jul 2022
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2648/" rel="bookmark" class="u-url"
+       title="Chemicals" target="_blank">
+      <time class="m-date" datetime="2022-07-20 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          20
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Chemicals
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="It's hard to believe, but lots of kids these days ONLY know how to buy prepackaged molecules." src="https://imgs.xkcd.com/comics/chemicals.png" title="It's hard to believe, but lots of kids these days ONLY know how to buy prepackaged molecules.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-07-20 00:00:00+00:00" class="dt-published"></time>
+  Wed 20 Jul 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -339,40 +373,6 @@ a lot cleaner, without …</p>
   on <time datetime="2022-07-18 00:00:00+00:00" class="dt-published"></time>
   Mon 18 Jul 2022
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2647/" rel="bookmark" class="u-url"
-       title="Capri Suns" target="_blank">
-      <time class="m-date" datetime="2022-07-18 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          18
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Capri Suns
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="[As security is dragging me away] &quot;Come on, at least I didn't make the mistake in the other direction!&quot;" src="https://imgs.xkcd.com/comics/capri_suns.png" title="[As security is dragging me away] &quot;Come on, at least I didn't make the mistake in the other direction!&quot;">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-07-18 00:00:00+00:00" class="dt-published"></time>
-  Mon 18 Jul 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -794,40 +794,6 @@ the users of the package index really do want to reduce the chance that a …</p
   on <time datetime="2022-07-09 00:00:00+00:00" class="dt-published"></time>
   Sat 09 Jul 2022
   in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2022-07-06_Trying_to_write_a_regular_program" rel="bookmark" class="u-url"
-       title="Trying to write a regular program" target="_blank">
-      <time class="m-date" datetime="2022-07-08 21:22:53+00:00">
-        Jul
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Trying to write a regular program
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><blockquote><p>It’s warm, the sun is up, I really should go outside!</p></blockquote><p> I have this SVG/Javascript application (<a href="https://alexschroeder.ch/wiki/Gridmapper">Gridmapper</a>) and I’m sort of wanting to rewrite it into a program that runs without a browser. At least I want to see whether I could potentially do it. I’d like to be able to do it.</p><p>My problem with GUI stuff is that the last piece of well-written integration into a programming language was … Perl/Tk in the last millennium? Maybe. I think I had a book about it, back then. Or a chapter in a book. Perhaps GTK and C is also well documented? I guess not, because I can sort of understand the <a href="https://www.gtk.org/docs/getting-started/hello-world/">Hello World</a> program and the next one is already pretty long and the third one defines the layout of the user interface in an …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-07-08 21:22:53+00:00" class="dt-published"></time>
-  Fri 08 Jul 2022
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
