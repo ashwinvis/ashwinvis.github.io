@@ -164,49 +164,203 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://itsmycode.com/no-module-named-flask-cors/" rel="bookmark" class="u-url"
-       title="ItsMyCode: ModuleNotFoundError: No module named &#8216;flask_cors&#8217;" target="_blank">
-      <time class="m-date" datetime="2022-08-03 17:24:51+00:00">
+    <a href="https://devblogs.microsoft.com/python/python-in-visual-studio-code-august-2022-release/" rel="bookmark" class="u-url"
+       title="Python Engineering at Microsoft: Python in Visual Studio Code – August 2022 Release" target="_blank">
+      <time class="m-date" datetime="2022-08-04 20:56:53+00:00">
         Aug
         <span class="m-date-day">
-          03
+          04
         </span>
         2022
       </time>
       <div class="p-name">
-      ItsMyCode: ModuleNotFoundError: No module named &#8216;flask_cors&#8217;
+      Python Engineering at Microsoft: Python in Visual Studio Code – August 2022 Release
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>In Python, <strong>ModuleNotFoundError: No module named &#8216;flask_cors&#8217;</strong> error occurs if we try to import the &#8216;<em><strong>Flask-Cors</strong></em>&#8216; module without installing the package or if you have not installed it in the correct environment.</p>
+  <p>We’re excited to announce that the August 2022 release of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> and <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a> extensions for Visual Studio Code are now available!</p>
+<p>This release includes the following improvements:</p>
+<ul>
+<li>Automatic debug configurations for web apps</li>
+<li>Improvements to the Getting Started Experience</li>
+<li>Setting to move the interpreter status bar</li>
+<li>A new Python Tools extension template</li>
+<li>Remove all unused imports with Pylance</li>
+<li>Double click to accept type hints with Pylance</li>
+<li>Copy output image in Jupyter cells</li>
+<li>Go to most recently failed cell</li>
+</ul>
+<p>If you’re interested, you can check the full list of improvements in our changelogs for the <a href="https://github.com/Microsoft/vscode-python/releases">Python</a>, <a href="https://github.com/microsoft/vscode-jupyter/blob/main/CHANGELOG.md">Jupyter</a> and <a href="https://github.com/microsoft/pylance-release/blob/main/CHANGELOG.md">Pylance</a> extensions.</p>
 
-
-
-<p>In this tutorial, let&#8217;s look at installing the&nbsp;<code><em><strong>Flask-Cors</strong></em></code> module correctly in different operating systems and solve<strong>&nbsp;ModuleNotFoundError: No module named &#8216;flask_cors&#8217; error</strong>.&nbsp;&nbsp;</p>
-
-
-
-
-What is ModuleNotFoundError: No module named &#8216;flask_cors&#8217;?
-
-
-
-<p>There are various reasons why we get the <strong>ModuleNotFoundError: No module named &#8216;flask_cors&#8217;</strong>&nbsp;error</p>
-
-
-
-<ul><li>Trying to use the module- without installing the <strong>Flask-Cors </strong>package.</li><li>If the IDE is set to the incorrect version of the Python/Python interpreter.</li><li>You are using the virtual environment and the <strong>Flask-Cors</strong> module is not installed inside a virtual environment</li><li>Installing the <strong>Flask-Cors</strong> package in a different version of Python than the one which is used currently.</li><li>Declaring …</li></ul>
+Automatic debug configurations for web apps
+<p>To simplify the process of setting up VS Code to run and/or debug your web applications, this release includes new automatic debug configurations for projects that use <a href="https://code.visualstudio.com/docs/python/tutorial-flask">Flask</a>, <a href="https://code.visualstudio.com/docs/python/tutorial-django">Django</a> or <a href="https://fastapi.tiangolo.com/tutorial/">FastAPI …</a></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-03 17:24:51+00:00" class="dt-published"></time>
-  Wed 03 Aug 2022
+  on <time datetime="2022-08-04 20:56:53+00:00" class="dt-published"></time>
+  Thu 04 Aug 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://apachelog.wordpress.com/2022/08/04/kio-admin/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KIO Admin" target="_blank">
+      <time class="m-date" datetime="2022-08-04 19:57:58+00:00">
+        Aug
+        <span class="m-date-day">
+          04
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      KIO Admin
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I&#8217;ve gotten annoyed with the inability to manage system files so I&#8217;ve made a KIO worker that enables Dolphin to view and edit files as root.</p>
+
+
+
+
+<a href="https://apachelog.files.wordpress.com/2022/08/screenshot_20220804_212547-1.png"><img alt="" src="https://apachelog.files.wordpress.com/2022/08/screenshot_20220804_212547-1.png?w=1024"></a>
+<em>This is dolphin viewing the system root with administrative access.</em>
+
+
+
+<p>The way this works is actually fairly exciting. It&#8217;s pulling off worker chaining: The admin worker itself contains gloriously little logic, all it does is translate all worker calls to dbus calls, and those dbus calls go out to a privileged polkit helper. The polkit helper then translates the URIs from admin:///foo to file:///foo and uses the regular KIO API to recreate the request in root-scope. KIO then, behind the scenes, acts just like it would in dolphin proper, using the <strong>existing</strong> file worker code to execute the file operations.</p>
+
+
+
+<p>The advantages are amazing! It&#8217;s fairly little actual …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Harald Sitter</b></span>
+  on <time datetime="2022-08-04 19:57:58+00:00" class="dt-published"></time>
+  Thu 04 Aug 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/08/04/its-a-trap/" rel="bookmark" class="u-url"
+       title="Pluralistic: 04 Aug 2022" target="_blank">
+      <time class="m-date" datetime="2022-08-04 15:10:05+00:00">
+        Aug
+        <span class="m-date-day">
+          04
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: 04 Aug 2022
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links A TRAP for workers: Oops, we re-invented indenture. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading A TRAP for workers (permalink) One of the weirdest parts of conspiratorialism is the hunt for anagrams as secret expressions of guilt. Ken Cheng's recent BBC Comedy of the Week show, he has a great bit on this, pointing out how weird it is that someone figured out that "delta" and "omicron" are an anagram for "media control." https://www.bbc.co.uk/programmes/p0ckq7pb As Cheng says, "do they think the coronavirus was invented by Tom Marvolo Riddle?" And yet, sometimes, villains really do use word-games to tip their hands. How else to explain that Petsmart's predatory "job training" scheme for new …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2022-08-04 15:10:05+00:00" class="dt-published"></time>
+  Thu 04 Aug 2022
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blogs.gnome.org/alatiera/2022/08/04/aarch64-for-gnome-nightly-apps/" rel="bookmark" class="u-url"
+       title="Aarch64 for GNOME Nightly apps" target="_blank">
+      <time class="m-date" datetime="2022-08-04 14:23:58+00:00">
+        Aug
+        <span class="m-date-day">
+          04
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Aarch64 for GNOME Nightly apps
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  We had aarch64 builds of the runtime since the very early days of Flatpak (long before Flathub), and you could manually build your applications for aarc64 natively or by using qemu. Now you will also be able to download aarc64 builds of GNOME applications straight from the Nightly repository so all 3 of you out … <a href="https://blogs.gnome.org/alatiera/2022/08/04/aarch64-for-gnome-nightly-apps/">Continue reading <span>Aarch64 for GNOME Nightly apps</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jordan Petridis</b></span>
+  on <time datetime="2022-08-04 14:23:58+00:00" class="dt-published"></time>
+  Thu 04 Aug 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-external-project-nmake/" rel="bookmark" class="u-url"
+       title="NMake external projects from CMake" target="_blank">
+      <time class="m-date" datetime="2022-08-04 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          04
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      NMake external projects from CMake
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>CMake ExternalProject builds subprojects isolated from the main CMake project.
+For Visual Studio NMake projects, it is necessary to invoke the <code>nmake</code> command.</p>
+<div><pre><code><span><span>find_program(<span>MAKE_EXECUTABLE</span>
+</span></span><span><span><span>NAMES</span> <span>nmake</span>
+</span></span><span><span>)<span>
+</span></span></span></code></pre></div><p>A real-life
+<a href="https://github.com/scivision/intel-mkl-lapack95">example of CMake with NMake ExternalProject</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-04 00:00:00+00:00" class="dt-published"></time>
+  Thu 04 Aug 2022
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -252,40 +406,6 @@ What is ModuleNotFoundError: No module named &#8216;flask_cors&#8217;?
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/tvb/2022/08/03/buildstream-2-news/" rel="bookmark" class="u-url"
-       title="BuildStream 2 news" target="_blank">
-      <time class="m-date" datetime="2022-08-03 08:48:13+00:00">
-        Aug
-        <span class="m-date-day">
-          03
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      BuildStream 2 news
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  After a long time passed without any BuildStream updates, I’m proud to finally announce that unstable BuildStream 2 development phase is coming to a close. As of the 1.95.0 beta release, we have now made the promise to remain stable and refrain from introducing any more API breaking changes. At this time, we are encouraging … <a href="https://blogs.gnome.org/tvb/2022/08/03/buildstream-2-news/">Continue reading <span>BuildStream 2 news</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>tvb</b></span>
-  on <time datetime="2022-08-03 08:48:13+00:00" class="dt-published"></time>
-  Wed 03 Aug 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://xkcd.com/2654/" rel="bookmark" class="u-url"
        title="Chemtrails" target="_blank">
       <time class="m-date" datetime="2022-08-03 00:00:00+00:00">
@@ -312,57 +432,6 @@ What is ModuleNotFoundError: No module named &#8216;flask_cors&#8217;?
   on <time datetime="2022-08-03 00:00:00+00:00" class="dt-published"></time>
   Wed 03 Aug 2022
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cray-intel-toolchain/" rel="bookmark" class="u-url"
-       title="Cray compiler CMake toolchain" target="_blank">
-      <time class="m-date" datetime="2022-08-03 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          03
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Cray compiler CMake toolchain
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Cray PE can select from multiple compilers as backends for better language standard support while maintaining performance of Cray frontend optimizations.
-Compilers such as Intel oneAPI themselves use GCC as a backend on Linux.
-Manual configuration may be required as the default system GCC may be too old for the desired language standard features.
-Or, the libstdc++ can be too old in the system default GCC.
-These issues are remediated by purposeful specification of the Cray-Intel-GCC toolchain in a CMake
-<a href="https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html">toolchain file</a>.</p>
-<p>This toolchain file can be copied to a common location like ~ and used among many projects,
-such as our
-<a href="https://github.com/scivision/fortran-filesystem/blob/main/cray.cmake">cray.cmake</a>.</p>
-<p>For CMake project that have ExternalProject inside them, there must be a
-<a href="https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html">CMAKE_TOOLCHAIN_FILE</a>
-parameter to
-<a href="https://cmake.org/cmake/help/latest/module/ExternalProject.html#command:externalproject_add">ExternalProject_Add</a>
-like:</p>
-<div><pre><code><span><span>set(<span>cmake_args</span> <span>...</span>)<span>
-</span></span></span><span><span><span>
-</span></span></span><span><span><span></span>if(<span>CMAKE_TOOLCHAIN_FILE</span>)<span>
-</span></span></span><span><span><span></span> list(<span>APPEND</span> <span>cmake_args</span> <span>-DCMAKE_TOOLCHAIN_FILE:FILEPATH=</span><span>${</span>CMAKE_TOOLCHAIN …</span></span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-03 00:00:00+00:00" class="dt-published"></time>
-  Wed 03 Aug 2022
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -405,40 +474,6 @@ like:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/08/02/oligarchs-r-us/" rel="bookmark" class="u-url"
-       title="Pluralistic: 02 Aug 2022" target="_blank">
-      <time class="m-date" datetime="2022-08-02 15:26:55+00:00">
-        Aug
-        <span class="m-date-day">
-          02
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: 02 Aug 2022
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links The high cost of "self-funded" Democrats: Rich dilletantes will not save us. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The high cost of "self-funded" Democrats (permalink) It costs a lot to win a US election &#8211; even if it's just a race for (formerly) low-stakes offices that have emerged as culture-war battlegrounds (like school and election boards). In the 12 years since Citizens United, the dark money firehose has turned many races into plute-on-plute economic warfare, where cash from the 1% matters far more than votes from the 99%. Republicans have a structural advantage when it comes to moneyball elections, because they are the party of rich people (or, more specifically, the party of rich farmers who convince poor …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-08-02 15:26:55+00:00" class="dt-published"></time>
-  Tue 02 Aug 2022
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pythoninsider.blogspot.com/2022/08/python-3106-is-available.html" rel="bookmark" class="u-url"
        title="Python 3.10.6 is available" target="_blank">
       <time class="m-date" datetime="2022-08-02 06:14:00.004000-04:00">
@@ -468,48 +503,6 @@ like:</p>
   on <time datetime="2022-08-02 06:14:00.004000-04:00" class="dt-published"></time>
   Tue 02 Aug 2022
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kde.org/announcements/plasma/5/5.25.4/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Plasma 5.25.4, Bugfix Release for August" target="_blank">
-      <time class="m-date" datetime="2022-08-02 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          02
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Plasma 5.25.4, Bugfix Release for August
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Tuesday, 2 August 2022. Today KDE releases a bugfix update to KDE Plasma 5, versioned 5.25.4.</p>
-<p><a href="https://kde.org/announcements/plasma/5/5.25.0">Plasma 5.25</a> was released in June 2022 with many feature refinements and new modules to complete the desktop experience.</p>
-<p>This release adds three weeks' worth of new translations and fixes from KDE's contributors. The bugfixes are typically small but important and include:</p>
-<ul>
-<li>KWin Effects/colorpicker: Fix picking colors. <a href="https://commits.kde.org/kwin/420636a2a1300423212bda751097d267bd214d7d">Commit.</a> Fixes bug <a href="https://bugs.kde.org/454974">#454974</a></li>
-<li>Plasma Workspace: Fix unable to remove manually added wallpaper. <a href="https://commits.kde.org/plasma-workspace/d6d47393bab32dc60b43e0eeac16c035000a0358">Commit.</a> Fixes bug <a href="https://bugs.kde.org/457019">#457019</a></li>
-<li>Update battery notifications if they remain open. <a href="https://commits.kde.org/powerdevil/ee3d3ea6e0d3019c6585608d3a0d14b71556dc7b">Commit.</a></li>
-</ul>
-<a href="https://kde.org/announcements/changelogs/plasma/5/5.25.3-5.25.4">View full changelog</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDE Community</b></span>
-  on <time datetime="2022-08-02 00:00:00+00:00" class="dt-published"></time>
-  Tue 02 Aug 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -930,40 +923,6 @@ Introduction:
   on <time datetime="2022-07-21 10:23:14+00:00" class="dt-published"></time>
   Thu 21 Jul 2022
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kitware.com/advanced-multi-channel-volume-visualization-in-paraview/" rel="bookmark" class="u-url"
-       title="New in ParaView 5.11: Advanced Multi-Channel Volume Visualization" target="_blank">
-      <time class="m-date" datetime="2022-07-14 14:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          14
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      New in ParaView 5.11: Advanced Multi-Channel Volume Visualization
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Previous versions of ParaView supported the creation and editing of 1-dimensional color and opacity transfer functions for volume rendering. With the upcoming version 5.11, ParaView&#8217;s user interface will allow you to define and edit 2-dimensional transfer functions for volume visualization of structured data. 2D transfer functions enable the color and opacity of a data sample [&#8230;]
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Sankhesh Jhaveri</b></span>
-  on <time datetime="2022-07-14 14:00:00+00:00" class="dt-published"></time>
-  Thu 14 Jul 2022
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
