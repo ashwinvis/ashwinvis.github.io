@@ -164,46 +164,48 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://devblogs.microsoft.com/python/python-in-visual-studio-code-august-2022-release/" rel="bookmark" class="u-url"
-       title="Python Engineering at Microsoft: Python in Visual Studio Code – August 2022 Release" target="_blank">
-      <time class="m-date" datetime="2022-08-04 20:56:53+00:00">
+    <a href="https://itsmycode.com/no-module-named-matplotlib/" rel="bookmark" class="u-url"
+       title="ItsMyCode: ModuleNotFoundError: No module named &#8216;matplotlib&#8217;" target="_blank">
+      <time class="m-date" datetime="2022-08-05 20:08:33+00:00">
         Aug
         <span class="m-date-day">
-          04
+          05
         </span>
         2022
       </time>
       <div class="p-name">
-      Python Engineering at Microsoft: Python in Visual Studio Code – August 2022 Release
+      ItsMyCode: ModuleNotFoundError: No module named &#8216;matplotlib&#8217;
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>We’re excited to announce that the August 2022 release of the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a> and <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a> extensions for Visual Studio Code are now available!</p>
-<p>This release includes the following improvements:</p>
-<ul>
-<li>Automatic debug configurations for web apps</li>
-<li>Improvements to the Getting Started Experience</li>
-<li>Setting to move the interpreter status bar</li>
-<li>A new Python Tools extension template</li>
-<li>Remove all unused imports with Pylance</li>
-<li>Double click to accept type hints with Pylance</li>
-<li>Copy output image in Jupyter cells</li>
-<li>Go to most recently failed cell</li>
-</ul>
-<p>If you’re interested, you can check the full list of improvements in our changelogs for the <a href="https://github.com/Microsoft/vscode-python/releases">Python</a>, <a href="https://github.com/microsoft/vscode-jupyter/blob/main/CHANGELOG.md">Jupyter</a> and <a href="https://github.com/microsoft/pylance-release/blob/main/CHANGELOG.md">Pylance</a> extensions.</p>
+  <p>In Python, <strong>ModuleNotFoundError: No module named &#8216;matplotlib&#8217;</strong> error occurs if we try to import the &#8216;<em><strong>matplotlib</strong></em>&#8216; module without installing the package or if you have not installed it in the correct environment.</p>
 
-Automatic debug configurations for web apps
-<p>To simplify the process of setting up VS Code to run and/or debug your web applications, this release includes new automatic debug configurations for projects that use <a href="https://code.visualstudio.com/docs/python/tutorial-flask">Flask</a>, <a href="https://code.visualstudio.com/docs/python/tutorial-django">Django</a> or <a href="https://fastapi.tiangolo.com/tutorial/">FastAPI …</a></p>
+
+
+<p>In this tutorial, let&#8217;s look at installing the&nbsp;<code><em><strong>matplotlib</strong></em></code> module correctly in different operating systems and solve<strong>&nbsp;ModuleNotFoundError: No module named &#8216;matplotlib&#8217; error</strong>.&nbsp;&nbsp;</p>
+
+
+
+
+What is ModuleNotFoundError: No module named &#8216;matplotlib&#8217;?
+
+
+
+<p>There are various reasons why we get the <strong>ModuleNotFoundError: No module named &#8216;matplotlib&#8217;</strong>&nbsp;error</p>
+
+
+
+<ul><li>Trying to use the module- without installing the <strong>matplotlib </strong>package.</li><li>If the IDE is set to the incorrect version of the Python/Python interpreter.</li><li>You are using the virtual environment and the <strong>matplotlib</strong> module is not installed inside a virtual environment</li><li>Installing the <strong>matplotlib</strong> package in a different version of Python than the one which is used currently.</li><li>Declaring a variable name as …</li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-04 20:56:53+00:00" class="dt-published"></time>
-  Thu 04 Aug 2022
+  on <time datetime="2022-08-05 20:08:33+00:00" class="dt-published"></time>
+  Fri 05 Aug 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -213,46 +215,32 @@ Automatic debug configurations for web apps
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://apachelog.wordpress.com/2022/08/04/kio-admin/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KIO Admin" target="_blank">
-      <time class="m-date" datetime="2022-08-04 19:57:58+00:00">
+    <a href="https://blogs.gnome.org/wjjt/2022/08/05/fitting-endless-os-images-on-small-disks/" rel="bookmark" class="u-url"
+       title="Fitting Endless OS images on small disks" target="_blank">
+      <time class="m-date" datetime="2022-08-05 20:01:25+00:00">
         Aug
         <span class="m-date-day">
-          04
+          05
         </span>
         2022
       </time>
       <div class="p-name">
-      KIO Admin
+      Fitting Endless OS images on small disks
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I&#8217;ve gotten annoyed with the inability to manage system files so I&#8217;ve made a KIO worker that enables Dolphin to view and edit files as root.</p>
-
-
-
-
-<a href="https://apachelog.files.wordpress.com/2022/08/screenshot_20220804_212547-1.png"><img alt="" src="https://apachelog.files.wordpress.com/2022/08/screenshot_20220804_212547-1.png?w=1024"></a>
-<em>This is dolphin viewing the system root with administrative access.</em>
-
-
-
-<p>The way this works is actually fairly exciting. It&#8217;s pulling off worker chaining: The admin worker itself contains gloriously little logic, all it does is translate all worker calls to dbus calls, and those dbus calls go out to a privileged polkit helper. The polkit helper then translates the URIs from admin:///foo to file:///foo and uses the regular KIO API to recreate the request in root-scope. KIO then, behind the scenes, acts just like it would in dolphin proper, using the <strong>existing</strong> file worker code to execute the file operations.</p>
-
-
-
-<p>The advantages are amazing! It&#8217;s fairly little actual …</p>
+  Last week I read Jorge Castro’s article On “Wasting disk space” with interest, and not only because it cites one of my own articles 😉. Jorge encouraged me to write up the conversation we had off the back of it, so here we go! People like to fixate on the disk space used by installing … <a href="https://blogs.gnome.org/wjjt/2022/08/05/fitting-endless-os-images-on-small-disks/">Continue reading<span> "Fitting Endless OS images on small disks"</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Harald Sitter</b></span>
-  on <time datetime="2022-08-04 19:57:58+00:00" class="dt-published"></time>
-  Thu 04 Aug 2022
-  in Planet KDE.
+  <span class="p-author"><b>Will Thompson</b></span>
+  on <time datetime="2022-08-05 20:01:25+00:00" class="dt-published"></time>
+  Fri 05 Aug 2022
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -261,31 +249,31 @@ Automatic debug configurations for web apps
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/08/04/its-a-trap/" rel="bookmark" class="u-url"
-       title="Pluralistic: 04 Aug 2022" target="_blank">
-      <time class="m-date" datetime="2022-08-04 15:10:05+00:00">
+    <a href="https://pluralistic.net/2022/08/05/a-lousy-taxi/" rel="bookmark" class="u-url"
+       title="Pluralistic: 05 Aug 2022" target="_blank">
+      <time class="m-date" datetime="2022-08-05 14:09:17+00:00">
         Aug
         <span class="m-date-day">
-          04
+          05
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: 04 Aug 2022
+      Pluralistic: 05 Aug 2022
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links A TRAP for workers: Oops, we re-invented indenture. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading A TRAP for workers (permalink) One of the weirdest parts of conspiratorialism is the hunt for anagrams as secret expressions of guilt. Ken Cheng's recent BBC Comedy of the Week show, he has a great bit on this, pointing out how weird it is that someone figured out that "delta" and "omicron" are an anagram for "media control." https://www.bbc.co.uk/programmes/p0ckq7pb As Cheng says, "do they think the coronavirus was invented by Tom Marvolo Riddle?" And yet, sometimes, villains really do use word-games to tip their hands. How else to explain that Petsmart's predatory "job training" scheme for new …
+  Today's links Uber's still not profitable: An effective wealth transfer of $2.8 billion from labor to capital in just three months. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Uber's still not profitable (permalink) Uber just released its Q2 numbers for 2022 and trumpeted that it had finally achieved cash-flow positivity &#8211; and it only took 13 years and $32 billion in losses! So has Uber finally turned a corner? Will the company finally attain profitability and repay those billions? Nope. The best analyst of Uber's financial disclosures &#8211; as always &#8211; is Hubert Horan, a transport analyst who has made a second career out of debullshitifying Uber's balance-sheet deceptions, proving that the company is a bezzle ("the magic interval when a confidence trickster …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-08-04 15:10:05+00:00" class="dt-published"></time>
-  Thu 04 Aug 2022
+  on <time datetime="2022-08-05 14:09:17+00:00" class="dt-published"></time>
+  Fri 05 Aug 2022
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -295,32 +283,179 @@ Automatic debug configurations for web apps
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/alatiera/2022/08/04/aarch64-for-gnome-nightly-apps/" rel="bookmark" class="u-url"
-       title="Aarch64 for GNOME Nightly apps" target="_blank">
-      <time class="m-date" datetime="2022-08-04 14:23:58+00:00">
+    <a href="https://alexschroeder.ch/wiki/2022-08-05_Rewards_in_a_small_world" rel="bookmark" class="u-url"
+       title="Rewards in a small world" target="_blank">
+      <time class="m-date" datetime="2022-08-05 11:29:05+00:00">
         Aug
         <span class="m-date-day">
-          04
+          05
         </span>
         2022
       </time>
       <div class="p-name">
-      Aarch64 for GNOME Nightly apps
+      Rewards in a small world
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  We had aarch64 builds of the runtime since the very early days of Flatpak (long before Flathub), and you could manually build your applications for aarc64 natively or by using qemu. Now you will also be able to download aarc64 builds of GNOME applications straight from the Nightly repository so all 3 of you out … <a href="https://blogs.gnome.org/alatiera/2022/08/04/aarch64-for-gnome-nightly-apps/">Continue reading <span>Aarch64 for GNOME Nightly apps</span></a>
+  <div><blockquote><p>It’s hot. Topless computing! 🥵</p></blockquote><p> I was exchanging emails with Greta Goetz the other day. We were talking about a post of hers:</p><blockquote><p>Bernard Stiegler wrote a lot about entropic features of the Anthropocene. … Stiegler’s response was to propose the “contributive economy” — in which everyone can be a contributor, emitting their own symbols. In his economy of contribution, people are so much more than consumers. – <a href="https://gretzuni.com/articles/value-for-value">Value for value</a></p></blockquote><p>I was picking up on the idea of a sort of exchange taking place as I was considering what a “contributive economy” might be in light of Marcia B.’s criticism of the commercialisation of the role-playing games hobby:</p><blockquote><p>By the time I decided to join the conversation, the predominant mode of interacting with everyone else was selling PDFs on the internet. … Something we can do, on an individual and a …</p></blockquote></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jordan Petridis</b></span>
-  on <time datetime="2022-08-04 14:23:58+00:00" class="dt-published"></time>
-  Thu 04 Aug 2022
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-05 11:29:05+00:00" class="dt-published"></time>
+  Fri 05 Aug 2022
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://ervin.ipsquad.net/blog/2022/08/05/web-review-week-2022-31/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Web Review, Week 2022-31" target="_blank">
+      <time class="m-date" datetime="2022-08-05 09:58:19+00:00">
+        Aug
+        <span class="m-date-day">
+          05
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Web Review, Week 2022-31
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Let&rsquo;s go for my web review for the week 2022-31.</p>
+
+
+
+
+
+How far can you go by train in 5h?
+
+<p><em>Tags: tech, train, map</em></p>
+
+<p>Very cool map. Definitely useful tool to push for more train use.</p>
+
+<p><a href="https://chronotrains-eu.vercel.app/">https://chronotrains-eu.vercel.app/</a></p>
+
+<p></p>
+
+
+Remote attestation is coming back. How much freedom will it take? – Gabriel Sieben
+
+<p><em>Tags: tech, microsoft, vendor-lockin, surveillance, security</em></p>
+
+<p>Palladium is coming back and it&rsquo;s not good news in my opinion.</p>
+
+<p><a href="https://gabrielsieben.tech/2022/07/29/remote-assertion-is-coming-back-how-much-freedom-will-it-take/">https://gabrielsieben.tech/2022/07/29/remote-assertion-is-coming-back-how-much-freedom-will-it-take/</a></p>
+
+<p></p>
+
+
+How Tor is fighting—and beating—Russian censorship | Ars Technica
+
+<p><em>Tags: tech, tor, security, censorship</em></p>
+
+<p>It&rsquo;s nice to see Tor is still winning even in difficult countries.</p>
+
+<p><a href="https://arstechnica.com/information-technology/2022/07/how-tor-is-fighting-and-beating-russian-censorship/">https://arstechnica.com/information-technology/2022/07/how-tor-is-fighting-and-beating-russian-censorship/</a></p>
+
+<p></p>
+
+
+The OG Social Network: Other People’s Websites - Jim Nielsen’s Blog
+
+<p><em>Tags: tech, google, search, attention-economy, advertisement, open-access, web</em></p>
+
+<p>The paradox of how walled gardens …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kevin Ottens</b></span>
+  on <time datetime="2022-08-05 09:58:19+00:00" class="dt-published"></time>
+  Fri 05 Aug 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article921/a-gift-from-wacom" rel="bookmark" class="u-url"
+       title="A gift from Wacom" target="_blank">
+      <time class="m-date" datetime="2022-08-05 11:43:00+02:00">
+        Aug
+        <span class="m-date-day">
+          05
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      A gift from Wacom
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-08-05_wacom-intuos-pro_unboxing.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-08-05_wacom-intuos-pro_unboxing.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Just received a gift: a Intuos Pro Large from Wacom. They plan to reuse on their blog some of my illustrations/tutorials (eg. <a href="https://www.davidrevoy.com/article30/ergonomics-of-graphics-tablets">on tablet ergonomics</a>). They wanted to thanks me because all my content was already available for free on my blog under Creative Commons CC-By ☺️ So cool!</p>
+<p>They let me choose the model − even among all their Cintiqs model − but I deeply think pen-display-tablets are not for me. I really tried on the last episode, and I had to switch back to comfort zone in mid way. </p>
+<p>My comfort zone is still a 10 year old Wacom Intuos 4 XL with DIY on the top (Huion WH1409 sheet overlay, tweaked to be 16:9 ratio instead of the default 4:3, etc). That is still the only tablet I found that can have an active surface large enough …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2022-08-05 11:43:00+02:00" class="dt-published"></time>
+  Fri 05 Aug 2022
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2655/" rel="bookmark" class="u-url"
+       title="Asking Scientists Questions" target="_blank">
+      <time class="m-date" datetime="2022-08-05 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          05
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Asking Scientists Questions
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="'Does the substance feel weird to the touch?' is equally likely to get the answers 'Don't be ridiculous, you would never put your hand near a sample. We have safety protocols.' and 'Yeah, and it tastes AWFUL.'" src="https://imgs.xkcd.com/comics/asking_scientists_questions.png" title="'Does the substance feel weird to the touch?' is equally likely to get the answers 'Don't be ridiculous, you would never put your hand near a sample. We have safety protocols.' and 'Yeah, and it tastes AWFUL.'">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-05 00:00:00+00:00" class="dt-published"></time>
+  Fri 05 Aug 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -361,111 +496,6 @@ For Visual Studio NMake projects, it is necessary to invoke the <code>nmake</cod
   on <time datetime="2022-08-04 00:00:00+00:00" class="dt-published"></time>
   Thu 04 Aug 2022
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article920/episode-37-the-tears-of-the-phoenix" rel="bookmark" class="u-url"
-       title="Episode 37: The Tears of the Phoenix" target="_blank">
-      <time class="m-date" datetime="2022-08-03 18:08:00+02:00">
-        Aug
-        <span class="m-date-day">
-          03
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Episode 37: The Tears of the Phoenix
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/webcomics/peppercarrot/pepper-and-carrot_by-david-revoy_e37.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/webcomics/peppercarrot/pepper-and-carrot_by-david-revoy_e37.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Hi! I just posted a new Pepper&amp;Carrot episode on peppercarrot website:
-<a href="https://www.peppercarrot.com/xx/webcomic/ep37_The-Tears-of-the-Phoenix.html">https://www.peppercarrot.com/xx/webcomic/ep37_The-Tears-of-the-Phoenix.html</a></p>
-<p>Have a good read !</p>
-<p>(I'll add more infos in the comments later)</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-08-03 18:08:00+02:00" class="dt-published"></time>
-  Wed 03 Aug 2022
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2654/" rel="bookmark" class="u-url"
-       title="Chemtrails" target="_blank">
-      <time class="m-date" datetime="2022-08-03 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          03
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Chemtrails
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Ants have reverse chemtrails--regular citizens spraying chemicals everywhere they go to control the government." src="https://imgs.xkcd.com/comics/chemtrails.png" title="Ants have reverse chemtrails--regular citizens spraying chemicals everywhere they go to control the government.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-03 00:00:00+00:00" class="dt-published"></time>
-  Wed 03 Aug 2022
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2022-08-02_Money" rel="bookmark" class="u-url"
-       title="Money" target="_blank">
-      <time class="m-date" datetime="2022-08-02 20:45:28+00:00">
-        Aug
-        <span class="m-date-day">
-          02
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Money
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p>I was reading a blog post on David Graeber’s book <em>Debt</em>, by Marcia B. It’s a good post, and an excellent reminder that I should finish reading the damn book, and also read the new one that got published posthumously.</p><blockquote><p>If debt and commerce … are transhistorical conditions of sufficiently organized society, with no respect to the differences between such societies … then the only political option possible is to impose periodic jubilees to free people of their chains. Graeber, in this sense, accomplishes something very remarkable: he refutes the barter myth, but replaces it with the eternal condition of commodity valuation … My hunch is that this attitude is why many readers of Graeber call themselves anti-capitalists but really tend to advocate for workplace democracy, universal basic income, or owning one’s own means of life. They do not oppose …</p></blockquote></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-02 20:45:28+00:00" class="dt-published"></time>
-  Tue 02 Aug 2022
-  in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -656,6 +686,40 @@ checked out. I was telling the bike …</li></ul>
   on <time datetime="2022-07-29 06:00:00+00:00" class="dt-published"></time>
   Fri 29 Jul 2022
   in Hynek Schlawak.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pradyunsg.me/blog/2022/07/29/oss-update-17/" rel="bookmark" class="u-url"
+       title="OSS Work update #17" target="_blank">
+      <time class="m-date" datetime="2022-07-29 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          29
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      OSS Work update #17
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Oh hey, backfilling is fun.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-07-29 00:00:00+00:00" class="dt-published"></time>
+  Fri 29 Jul 2022
+  in Pradyun Gedam.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -923,6 +987,40 @@ Introduction:
   on <time datetime="2022-07-21 10:23:14+00:00" class="dt-published"></time>
   Thu 21 Jul 2022
   in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.kitware.com/vtk-hdf-reader/" rel="bookmark" class="u-url"
+       title="VTK HDF Reader" target="_blank">
+      <time class="m-date" datetime="2022-07-19 18:47:45+00:00">
+        Jul
+        <span class="m-date-day">
+          19
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      VTK HDF Reader
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Motivation HDF&#160;is a widely used data format which consists of n-dimensional named arrays (datasets) organized in a directory structure (groups). Storing VTK data in HDF is complicated because HDF does not have a&#160;standard&#160;way to attach meaning to its arrays &#8211; so a reader does not know which array represents points, cells, and other attributes. Traditionally, [&#8230;]
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Dan Lipsa</b></span>
+  on <time datetime="2022-07-19 18:47:45+00:00" class="dt-published"></time>
+  Tue 19 Jul 2022
+  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
