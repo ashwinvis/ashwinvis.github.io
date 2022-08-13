@@ -164,32 +164,134 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/mcatanzaro/2022/08/11/common-glib-programming-errors-part-two-weak-pointers/" rel="bookmark" class="u-url"
-       title="Common GLib Programming Errors, Part Two: Weak Pointers" target="_blank">
-      <time class="m-date" datetime="2022-08-11 21:40:03+00:00">
+    <a href="https://www.nbshare.io/notebook/374005461/Pyspark-Expr-Example/" rel="bookmark" class="u-url"
+       title="John Ludhi/nbshare.io: Pyspark Expr Example" target="_blank">
+      <time class="m-date" datetime="2022-08-12 19:38:53+00:00">
         Aug
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      Common GLib Programming Errors, Part Two: Weak Pointers
+      John Ludhi/nbshare.io: Pyspark Expr Example
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  This post is a sequel to Common GLib Programming Errors, where I covered four common errors: failure to disconnect a signal handler, misuse of a GSource handle ID, failure to cancel an asynchronous function, and misuse of main contexts in library or threaded code. Although there are many ways to mess up when writing programs … <p><a href="https://blogs.gnome.org/mcatanzaro/2022/08/11/common-glib-programming-errors-part-two-weak-pointers/">Continue reading<span> "Common GLib Programming Errors, Part Two: Weak Pointers"</span></a></p>
+  <div>
+    <div>
+
+<div>
+<div>
+</div>
+<div>
+<div>
+
+PySpark expr()<a href="https://www.nbshare.io/feeds/all.atom.xml#PySpark-expr()"></a>
+</div>
+</div>
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+<p>expr(str) function takes in and executes a sql-like expression. It returns a pyspark Column data type. This is useful to execute statements that are not available with Column type and functional APIs. Using expr(), we can use the Pyspark column names in the expressions as shown in the examples below.</p>
+
+</div>
+</div>
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+
+First we load the important libraries<a href="https://www.nbshare.io/feeds/all.atom.xml#First-we-load-the-important-libraries"></a>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In&#160;[1]:</div>
+<div>
+    <div>
+<div><pre><span></span><span>from</span> <span>pyspark.sql</span> <span>import</span> <span>SparkSession</span>
+<span>from</span> <span>pyspark.sql.functions</span> <span>import</span> <span>(</span><span>col</span><span>,</span> <span>expr</span><span>)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+<div>In&#160;[3]:</div>
+<div>
+    <div>
+<div><pre><span></span><span># initializing spark session instance</span>
+<span>spark</span> <span>=</span> <span>SparkSession</span><span>.</span><span>builder</span><span>.</span><span>appName</span><span>(</span><span>'snippets'</span><span>)</span><span>.</span><span>getOrCreate</span><span>()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+
+Then load our initial records<a href="https://www.nbshare.io/feeds/all.atom.xml#Then-load-our-initial-records"></a>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In&#160;[4]:</div>
+<div>
+    <div>
+<div><pre><span></span><span>columns</span> <span>=</span> <span>[</span><span>"Name"</span><span>,</span><span>"Salary"</span><span>,</span><span>"Age"</span><span>,</span><span>"Classify"</span><span>]</span>
+<span>data</span> <span>=</span> <span>[(</span><span>"Sam"</span><span>,</span> <span>1000</span><span>,</span><span>20</span><span>,</span><span>0</span><span>),</span> <span>(</span><span>"Alex"</span><span>,</span> <span>120000</span><span>,</span><span>40</span><span>,</span><span>0</span><span>),</span> <span>(</span><span>"Peter"</span><span>,</span> <span>5000</span><span>,</span><span>30</span><span>,</span><span>0</span><span>)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+<p>Let us convert our data to rdds. To learn more about Pyspark rdd. check out following link ...
+<a href="https://www.nbshare.io/notebook/403283317/How-To-Analyze-Data-Using-Pyspark-RDD/">How To Analyze Data Using Pyspark RDD
+</a></p>
+
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In&#160;[5]:</div>
+<div>
+    <div>
+<div><pre><span></span><span># converting data to rdds …</span></pre></div></div></div></div></div></div></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Michael Catanzaro</b></span>
-  on <time datetime="2022-08-11 21:40:03+00:00" class="dt-published"></time>
-  Thu 11 Aug 2022
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-12 19:38:53+00:00" class="dt-published"></time>
+  Fri 12 Aug 2022
+  in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -198,32 +300,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://midi-clorianos.blogspot.com/2022/08/summer-releases.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Summer Releases" target="_blank">
-      <time class="m-date" datetime="2022-08-11 21:09:00+00:00">
+    <a href="https://jlelse.blog/dev/tailscale-ssh" rel="bookmark" class="u-url"
+       title="Tailscale SSH" target="_blank">
+      <time class="m-date" datetime="2022-08-12 21:35:51+02:00">
         Aug
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      Summer Releases
+      Tailscale SSH
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This week I have published several new versions of my music applications:</p> <ul><li> <a href="https://sourceforge.net/projects/kmetronome/files/kmetronome/1.3.1/">Drumstick Metronome (kmetronome) v1.3.1</a></li><li> <a href="https://sourceforge.net/projects/kmidimon/files/1.3.1/">Drumstick MIDI Monitor (kmidimon) v1.3.1</a></li><li> <a href="https://sourceforge.net/projects/dmidiplayer/files/v1.7.0/">Drumstick MIDI File Player (dmidiplayer) v1.7.0</a></li></ul> <p>The first two applications, kmetronome and kmidimon, are now over fifteen years old and are only available for Linux. These two new versions are simply bug fixes, with no new features. But it is interesting to note that in FlatHub they are already based on Qt6 and supporting both Wayland and X11, although the packages in AppImage format still use Qt5. The chances of finding these applications in the official repositories of Linux distributions are slim. In fact, kmidimon was removed from the official Debian repositories with some lame excuse, and it is unlikely to be included again. I can't do anything about it, so please: direct …</p>
+  I finally got around to using Tailscale SSH. I’ve been using Tailscale for over a year to access my servers via SSH (my VPS is even available via Tailscale only), but I haven’t used the new Tailscale SSH feature yet.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Pedro Lopez-Cabanillas</b></span>
-  on <time datetime="2022-08-11 21:09:00+00:00" class="dt-published"></time>
-  Thu 11 Aug 2022
-  in Planet KDE.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-12 21:35:51+02:00" class="dt-published"></time>
+  Fri 12 Aug 2022
+  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -232,31 +334,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/08/11/rope-a-dope/" rel="bookmark" class="u-url"
-       title="Pluralistic: 11 Aug 2022" target="_blank">
-      <time class="m-date" datetime="2022-08-11 13:46:45+00:00">
+    <a href="https://pluralistic.net/2022/08/12/regulatory-uncapture/" rel="bookmark" class="u-url"
+       title="Pluralistic: 12 Aug 2022" target="_blank">
+      <time class="m-date" datetime="2022-08-12 15:37:30+00:00">
         Aug
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: 11 Aug 2022
+      Pluralistic: 12 Aug 2022
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links A dark money group is lying about Medicare cuts: Who the fuck are the "American Prosperity Alliance?" Hey look at this: Delights to delectate. This day in history: 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading A dark money group is lying about Medicare cuts (permalink) The "American Prosperity Alliance" does not exist, except as an anonymously controlled bank account that has paid for the production and dissemination of a slick ad that spreads the falsehood that the Democrats have cut $300b from Medicare: https://www.youtube.com/watch?v=-xCep6NvbhE Let me repeat: this is a lie. What "American Prosperity Alliance" is talking about here is a provision in the bill that allows Medicare to negotiate drug prices, rather than simply paying whatever Big Pharma wants to charge. This practice is …
+  Today's links The FTC takes aim at commercial surveillance: Oh, the sheer poetry of "Commercial Surveillance and Data Security Rulemaking." Hey look at this: Delights to delectate. This day in history: 2007, 2012, 2017 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The FTC takes aim at commercial surveillance (permalink) The biggest fallacy in the online privacy is that there is a difference between "state surveillance" and "commercial surveillance." Bizarrely, it's a fallacy that is widely held by both government snoops and Big Tech snoops. Many's the time I've spoken to a DC audience about privacy, only to have an audience member say, "I'm OK with Uncle Sam spying on me &#8211; after all, I've already given up every sensitive scrap of information about my personal life to the Office of Personnel Management when I applied for security …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-08-11 13:46:45+00:00" class="dt-published"></time>
-  Thu 11 Aug 2022
+  on <time datetime="2022-08-12 15:37:30+00:00" class="dt-published"></time>
+  Fri 12 Aug 2022
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -266,48 +368,129 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.jetbrains.com/pycharm/2022/08/2022-2-1-rc-2/" rel="bookmark" class="u-url"
-       title="PyCharm: The Second Release Candidate for PyCharm 2022.2.1 Is Available!" target="_blank">
-      <time class="m-date" datetime="2022-08-11 13:36:21+00:00">
+    <a href="http://honk.sigxcpu.org/con/On_a_road_to_Prizren_with_a_Free_Software_Phone.html" rel="bookmark" class="u-url"
+       title="On a road to Prizren with a Free Software Phone" target="_blank">
+      <time class="m-date" datetime="2022-08-12 14:06:09+00:00">
         Aug
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      PyCharm: The Second Release Candidate for PyCharm 2022.2.1 Is Available!
+      On a road to Prizren with a Free Software Phone
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>This is a new update for the upcoming minor bug-fix release for 2022.2. Last week, in the <a href="https://blog.jetbrains.com/pycharm/2022/08/2022-2-1-rc/">first release candidate for 2022.2.1</a>, we delivered some critical fixes to use the new functionality of PyCharm 2022.2 without having issues with remote interpreters.</p>
+  <p>Since people are sometimes slightly surprised that you can go onto a
+multi week trip with a smartphone running free sofware so only I
+wanted to share some impressions from my recent trip to Prizren/Kosovo
+to attend Debconf 22 using a <a href="https://puri.sm/products/librem-5/">Librem 5</a>. It's a mix of things that
+happend and bits that got improved to hopefully make things more fun
+to use. And, yes, there won't be any big surprises like being stranded
+without the ability to do phone calls in this read because there
+weren't and there shouldn't be.</p>
 
-
-
-<p>If you encounter an issue in PyCharm 2022.2, please reach out to our <a href="https://intellij-support.jetbrains.com/hc/en-us/requests/new?ticket_form_id=66731" title="https://intellij-support.jetbrains.com/hc/en-us/requests/new?ticket_form_id=66731&amp;_ga=2.122220424.222902906.1659947926-341523743.1603695368&amp;_gac=1.180047318.1657803223.CjwKCAjw_b6WBhAQEiwAp4HyIJmfoMxAfbH993p3FuktrW-iGKjOWo3_Ft4b9jMaLGze43PlnsKr2hoC0FIQAvD_BwE&amp;_gl=1*lyqia7*_ga*MzQxNTIzNzQzLjE2MDM2OTUzNjg.*_ga_9J976DJZ68*MTY2MDIxNzYzMi42NS4xLjE2NjAyMTc2NDEuNjA.">support team</a>. This will help us quickly investigate the major issues that are affecting your daily work and solve them.</p>
-
-
-
-<p>You can get the new build from our <a href="https://youtrack.jetbrains.com/articles/PY-A-23004355">page</a>, via the free <a href="https://www.jetbrains.com/toolbox/app/">Toolbox App</a>, or by using snaps for Ubuntu. </p>
-
-
-
-<p>This week we’re delivering a second release candidate for PyCharm 2022.2.1 with the following bug fixes:</p>
-
-
-
-<ul><li>Docker: Docker container settings for Docker-based interpreter are now applied to the run.[<a href="https://youtrack.jetbrains.com/issue/PY-53116">PY-53116</a>], [<a href="https://youtrack.jetbrains.com/issue/PY-53638">PY-53638</a>]</li><li>Docker Compose: running Django with a Docker …</li></ul>
+<p>After two online versions <a href="https://debconf22.debconf.org/">Debconf 22</a> (the annual Debian Conference)
+took place in Prizren / Kosovo this year and I sure wanted to go.
+Looking for options I settled for a train trip to Vienna, to meet
+there with friends and continue the trip via bus to Zagreb,
+then …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-11 13:36:21+00:00" class="dt-published"></time>
-  Thu 11 Aug 2022
-  in Planet Python.
+  on <time datetime="2022-08-12 14:06:09+00:00" class="dt-published"></time>
+  Fri 12 Aug 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kubuntu.org/news/kubuntu-22-04-1-lts-update-available/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Kubuntu 22.04.1 LTS Update Available" target="_blank">
+      <time class="m-date" datetime="2022-08-12 11:34:04+00:00">
+        Aug
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Kubuntu 22.04.1 LTS Update Available
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>The first point release update to Kubuntu 22.04 LTS (Jammy Jellyfish) is out now. This contains all the bug-fixes added to 22.04 since its first release in April 2022. Users of 22.04 can run the normal update procedure to get these bug-fixes.</p>
+
+
+
+<p></p>
+
+
+
+<p>The first point release is also significant because it is the default upgrade version for users of Kubuntu 20.04 LTS (Focal Fossa).</p>
+
+
+
+<p>See the <a href="https://lists.ubuntu.com/archives/ubuntu-announce/2022-August/000282.html">Ubuntu 22.04.1 LTS Release Announcement</a>, the <a href="https://discourse.ubuntu.com/t/jammy-jellyfish-point-release-changes/29835">Ubuntu 22.04.1 Release Notes</a>, and the <a href="https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu">Kubuntu Release Notes</a>.</p>
+
+
+
+<p><a href="https://kubuntu.org/alternative-downloads">Download all available released images</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kubuntu News</b></span>
+  on <time datetime="2022-08-12 11:34:04+00:00" class="dt-published"></time>
+  Fri 12 Aug 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2658/" rel="bookmark" class="u-url"
+       title="Coffee Cup Holes" target="_blank">
+      <time class="m-date" datetime="2022-08-12 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Coffee Cup Holes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Theoretical physicist: At the Planck length, uncountably many." src="https://imgs.xkcd.com/comics/coffee_cup_holes.png" title="Theoretical physicist: At the Planck length, uncountably many.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-12 00:00:00+00:00" class="dt-published"></time>
+  Fri 12 Aug 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -360,40 +543,6 @@ What would that look like?</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2657/" rel="bookmark" class="u-url"
-       title="Complex Vowels" target="_blank">
-      <time class="m-date" datetime="2022-08-10 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          10
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Complex Vowels
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Pronouncing [ṡṡċċḣḣẇẇȧȧ] is easy; you just say it like the 'x' in 'fire'." src="https://imgs.xkcd.com/comics/complex_vowels.png" title="Pronouncing [ṡṡċċḣḣẇẇȧȧ] is easy; you just say it like the 'x' in 'fire'.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-10 00:00:00+00:00" class="dt-published"></time>
-  Wed 10 Aug 2022
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://noyb.eu/en/226-complaints-lodged-against-deceptive-cookie-banners" rel="bookmark" class="u-url"
        title="226 complaints lodged against deceptive cookie banners" target="_blank">
       <time class="m-date" datetime="2022-08-09 08:35:07+00:00">
@@ -424,40 +573,6 @@ What would that look like?</p>
   on <time datetime="2022-08-09 08:35:07+00:00" class="dt-published"></time>
   Tue 09 Aug 2022
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2022/08/2022-08-08-ogdfm" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2022-08-08 19:32:46+02:00">
-        Aug
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Just got my second booster shot. 💉 Hoping to stay free of COVID-19 on vacation and beyond…
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-08 19:32:46+02:00" class="dt-published"></time>
-  Mon 08 Aug 2022
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
