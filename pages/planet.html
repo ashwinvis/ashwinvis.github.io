@@ -164,134 +164,130 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.nbshare.io/notebook/374005461/Pyspark-Expr-Example/" rel="bookmark" class="u-url"
-       title="John Ludhi/nbshare.io: Pyspark Expr Example" target="_blank">
-      <time class="m-date" datetime="2022-08-12 19:38:53+00:00">
+    <a href="https://nibblestew.blogspot.com/2022/08/making-decision-without-all-information.html" rel="bookmark" class="u-url"
+       title="Making decision without all the information is tricky, a case study" target="_blank">
+      <time class="m-date" datetime="2022-08-13 19:06:00+00:00">
         Aug
         <span class="m-date-day">
-          12
+          13
         </span>
         2022
       </time>
       <div class="p-name">
-      John Ludhi/nbshare.io: Pyspark Expr Example
+      Making decision without all the information is tricky, a case study
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-    <div>
+  <p>In a <a href="https://nibblestew.blogspot.com/feeds/posts/default">recent blog post</a>, Michal Catanzaro wrote about choosing proper configurations for your build, especially the <span>buildtype</span> attribute. As noted in the text, Meson's build type setup is not the greatest in the world., so I figured I'd write why that is, what would a better design look like and why we don't use that (and probably won't for the foreseeable future).</p><p>The concept of build types was copied almost directly from CMake. The main thing that they do is to set compiler flags like <span>-g</span> and <span>-O2</span>. Quite early in the development process of Meson I planned on adding top level options for debug info and optimization but the actual implementation for those was done much later. I copied the build types and flags almost directly except for build types <span>RelWithDebInfo</span> and <span>Release</span>. Having these two as separate …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2022-08-13 19:06:00+00:00" class="dt-published"></time>
+  Sat 13 Aug 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
 
-<div>
-<div>
-</div>
-<div>
-<div>
+</article>
 
-PySpark expr()<a href="https://www.nbshare.io/feeds/all.atom.xml#PySpark-expr()"></a>
-</div>
-</div>
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
-<p>expr(str) function takes in and executes a sql-like expression. It returns a pyspark Column data type. This is useful to execute statements that are not available with Column type and functional APIs. Using expr(), we can use the Pyspark column names in the expressions as shown in the examples below.</p>
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://journal.paoloamoroso.com/next-suite8080-features-trim-uninitialized-data-macro-assembler?pk_campaign=rss-feed" rel="bookmark" class="u-url"
+       title=""Paolo Amoroso's Journal": Next Suite8080 features: trim uninitialized data, macro assembler" target="_blank">
+      <time class="m-date" datetime="2022-08-13 12:54:07+00:00">
+        Aug
+        <span class="m-date-day">
+          13
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      "Paolo Amoroso's Journal": Next Suite8080 features: trim uninitialized data, macro assembler
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I decided what to work on next on <a href="https://journal.paoloamoroso.com/tag:Suite8080">Suite8080</a>, the suite of Intel 8080 Assembly cross-development tools I'm writing in Python. I'll add two features, the ability for the assembler to trim trailing uninitialized data and a macro assembler script.</p>
 
-</div>
-</div>
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
 
-First we load the important libraries<a href="https://www.nbshare.io/feeds/all.atom.xml#First-we-load-the-important-libraries"></a>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>In&#160;[1]:</div>
-<div>
-    <div>
-<div><pre><span></span><span>from</span> <span>pyspark.sql</span> <span>import</span> <span>SparkSession</span>
-<span>from</span> <span>pyspark.sql.functions</span> <span>import</span> <span>(</span><span>col</span><span>,</span> <span>expr</span><span>)</span>
-</pre></div>
+Trimming uninitialized data
 
-</div>
-</div>
-</div>
+<p>Consider this 8080 Assembly code, which declares a 1024 bytes uninitialized data area at the end of the program:</p>
 
-</div>
-<div>
-<div>
-<div>In&#160;[3]:</div>
-<div>
-    <div>
-<div><pre><span></span><span># initializing spark session instance</span>
-<span>spark</span> <span>=</span> <span>SparkSession</span><span>.</span><span>builder</span><span>.</span><span>appName</span><span>(</span><span>'snippets'</span><span>)</span><span>.</span><span>getOrCreate</span><span>()</span>
-</pre></div>
+<pre><code># . . .
 
-</div>
-</div>
-</div>
+data:        ds    1024
+             end
+</code></pre>
 
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
+<p>For this <code>ds</code> directive, the Suite8080 assembler <code>asm80</code> emits a sequence of 1024 null bytes at the end of the binary program. Similarly, <code>dw</code> emits 16-bit words. The executable file is thus longer and may be slower to load on the host system, typically CP/M.</p>
 
-Then load our initial records<a href="https://www.nbshare.io/feeds/all.atom.xml#Then-load-our-initial-records"></a>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>In&#160;[4]:</div>
-<div>
-    <div>
-<div><pre><span></span><span>columns</span> <span>=</span> <span>[</span><span>"Name"</span><span>,</span><span>"Salary"</span><span>,</span><span>"Age"</span><span>,</span><span>"Classify"</span><span>]</span>
-<span>data</span> <span>=</span> <span>[(</span><span>"Sam"</span><span>,</span> <span>1000</span><span>,</span><span>20</span><span>,</span><span>0</span><span>),</span> <span>(</span><span>"Alex"</span><span>,</span> <span>120000</span><span>,</span><span>40</span><span>,</span><span>0</span><span>),</span> <span>(</span><span>"Peter"</span><span>,</span> <span>5000</span><span>,</span><span>30</span><span>,</span><span>0</span><span>)]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
-<p>Let us convert our data to rdds. To learn more about Pyspark rdd. check out following link ...
-<a href="https://www.nbshare.io/notebook/403283317/How-To-Analyze-Data-Using-Pyspark-RDD/">How To Analyze Data Using Pyspark RDD
-</a></p>
-
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>In&#160;[5]:</div>
-<div>
-    <div>
-<div><pre><span></span><span># converting data to rdds …</span></pre></div></div></div></div></div></div></div>
+<p>The Digital Research CP/M assemblers, <code>ASM.COM</code> and <code>MAC.COM</code>, strip such trailing uninitialized data from binaries. After <a href="https://www.reddit.com/r/asm/comments/v9y32g/ds_section_at_end_of_program_strip_or_keep_the/">asking for feedback to r/asm</a>, I decided to …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-12 19:38:53+00:00" class="dt-published"></time>
-  Fri 12 Aug 2022
+  on <time datetime="2022-08-13 12:54:07+00:00" class="dt-published"></time>
+  Sat 13 Aug 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.volkerkrause.eu/2022/08/13/kf6-qml-porting-progress.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE Frameworks 6 QML porting" target="_blank">
+      <time class="m-date" datetime="2022-08-13 06:45:00+00:00">
+        Aug
+        <span class="m-date-day">
+          13
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      KDE Frameworks 6 QML porting
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>It’s been three months since my <a href="//www.volkerkrause.eu/2022/05/14/kf6-plasma-build-progress.html">last post</a>
+about the ongoing transition to KDE Frameworks 6, so another update is long overdue
+given how much has happened since.</p>
+
+
+QML Porting
+
+<p>While the main attention had been on porting build system and C++ code so far, meanwhile QML code
+has also moved into focus. QML code is generally harder to port, due to the lack of compile-time
+checking and the lack of conditional code based on the Qt version.</p>
+
+<p>Only seeing mistakes at runtime means for every single change we need to ensure to manually exercise
+the affected code paths. That is much easier to do if everything else is fully working, ie. in the
+current Qt 5 codebase.</p>
+
+<p>That however is only an option for changes that result in code that works with both Qt 5 and Qt 6 …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2022-08-13 06:45:00+00:00" class="dt-published"></time>
+  Sat 13 Aug 2022
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -360,103 +356,6 @@ Then load our initial records<a href="https://www.nbshare.io/feeds/all.atom.xml#
   on <time datetime="2022-08-12 15:37:30+00:00" class="dt-published"></time>
   Fri 12 Aug 2022
   in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="http://honk.sigxcpu.org/con/On_a_road_to_Prizren_with_a_Free_Software_Phone.html" rel="bookmark" class="u-url"
-       title="On a road to Prizren with a Free Software Phone" target="_blank">
-      <time class="m-date" datetime="2022-08-12 14:06:09+00:00">
-        Aug
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      On a road to Prizren with a Free Software Phone
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Since people are sometimes slightly surprised that you can go onto a
-multi week trip with a smartphone running free sofware so only I
-wanted to share some impressions from my recent trip to Prizren/Kosovo
-to attend Debconf 22 using a <a href="https://puri.sm/products/librem-5/">Librem 5</a>. It's a mix of things that
-happend and bits that got improved to hopefully make things more fun
-to use. And, yes, there won't be any big surprises like being stranded
-without the ability to do phone calls in this read because there
-weren't and there shouldn't be.</p>
-
-<p>After two online versions <a href="https://debconf22.debconf.org/">Debconf 22</a> (the annual Debian Conference)
-took place in Prizren / Kosovo this year and I sure wanted to go.
-Looking for options I settled for a train trip to Vienna, to meet
-there with friends and continue the trip via bus to Zagreb,
-then …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-12 14:06:09+00:00" class="dt-published"></time>
-  Fri 12 Aug 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kubuntu.org/news/kubuntu-22-04-1-lts-update-available/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Kubuntu 22.04.1 LTS Update Available" target="_blank">
-      <time class="m-date" datetime="2022-08-12 11:34:04+00:00">
-        Aug
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Kubuntu 22.04.1 LTS Update Available
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The first point release update to Kubuntu 22.04 LTS (Jammy Jellyfish) is out now. This contains all the bug-fixes added to 22.04 since its first release in April 2022. Users of 22.04 can run the normal update procedure to get these bug-fixes.</p>
-
-
-
-<p></p>
-
-
-
-<p>The first point release is also significant because it is the default upgrade version for users of Kubuntu 20.04 LTS (Focal Fossa).</p>
-
-
-
-<p>See the <a href="https://lists.ubuntu.com/archives/ubuntu-announce/2022-August/000282.html">Ubuntu 22.04.1 LTS Release Announcement</a>, the <a href="https://discourse.ubuntu.com/t/jammy-jellyfish-point-release-changes/29835">Ubuntu 22.04.1 Release Notes</a>, and the <a href="https://wiki.ubuntu.com/JammyJellyfish/ReleaseNotes/Kubuntu">Kubuntu Release Notes</a>.</p>
-
-
-
-<p><a href="https://kubuntu.org/alternative-downloads">Download all available released images</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Kubuntu News</b></span>
-  on <time datetime="2022-08-12 11:34:04+00:00" class="dt-published"></time>
-  Fri 12 Aug 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -990,77 +889,6 @@ the server can get a shell and run commands.</p>
   on <time datetime="2022-07-26 00:00:00+00:00" class="dt-published"></time>
   Tue 26 Jul 2022
   in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nskm.xyz/posts/linreg/" rel="bookmark" class="u-url"
-       title="Linear regression" target="_blank">
-      <time class="m-date" datetime="2022-07-24 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          24
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Linear regression
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>For the <a href="https://dit.sn">Dakar Institute of Technology</a>, I give Python introductory classes. During one of my sessions I was asked about simple linear regression with Python. Let the music <a href="https://www.youtube.com/watch?v=adBfKzfemtI">play</a></p>
-
-
-<img src="https:&#x2F;&#x2F;nskm.xyz&#x2F;processed_images&#x2F;49aedcae11b5c8fa00.jpg">
-
-
-
-
-TOC:
-<ul>
-<li><a href="https://nskm.xyz/posts/linreg/#introduction">Introduction</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#first-solution">First solution</a>
-<ul>
-<li><a href="https://nskm.xyz/posts/linreg/#reading-the-data-set">Reading the data set</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#plotting-the-data-set">Plotting the data set</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#splitting-the-data-set">Splitting the data set</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#ordinary-least-squares">Least squares estimates</a>
-<ul>
-<li><a href="https://nskm.xyz/posts/linreg/#mean">Mean</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#variance">Variance</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#covariance">Covariance</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#estimates">Estimates</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#prediction">Prediction</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#error">How good is the model</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#final-plot">Regression line</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="https://nskm.xyz/posts/linreg/#class">The complete program</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#statistics">Another solution using the statistics module</a></li>
-<li><a href="https://nskm.xyz/posts/linreg/#code">Just give me the code please</a></li>
-</ul>
-
-Introduction:
-<p>Simple linear regression is a commonly used type of predictive analysis. The idea of regression is to examine if a set of predictor variables do a good job in predicting an outcome variable.</p>
-<p>Linear regression models are used in many industries such as healthcare (predicting disease from biological factors), economics (predicting growth), businesses (predicting product sales), etc ...</p>
-<p>For simple linear regression, the relationship between …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-07-24 00:00:00+00:00" class="dt-published"></time>
-  Sun 24 Jul 2022
-  in Nsukami.
 </footer>
 <div class="m-clearfix-l"></div>
 
