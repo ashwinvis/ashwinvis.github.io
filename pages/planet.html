@@ -164,6 +164,302 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.nbshare.io/notebook/829042414/PySpark-concat_ws/" rel="bookmark" class="u-url"
+       title="John Ludhi/nbshare.io: PySpark concat_ws" target="_blank">
+      <time class="m-date" datetime="2022-08-14 21:38:39+00:00">
+        Aug
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      John Ludhi/nbshare.io: PySpark concat_ws
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>
+    <div>
+
+<div>
+<div>
+</div>
+<div>
+<div>
+
+PySpark concat_ws()<a href="https://www.nbshare.io/feeds/all.atom.xml#PySpark-concat_ws()"></a>
+</div>
+</div>
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+<p>split(str) function is used to convert a string column into an array of strings using a delimiter for the split. concat_ws() is the opposite of split. It creates a string column from an array of strings. The resulting array is concatenated with the provided delimiter.</p>
+
+</div>
+</div>
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+<p>pyspark functions used in this notebook are 
+<a href="https://www.nbshare.io/feeds/all.atom.xml#createOrReplaceTempView">rdd.createOrReplaceTempView</a>, <a href="https://www.nbshare.io/feeds/all.atom.xml#rdddrop">rdd.drop</a>, <a href="https://www.nbshare.io/feeds/all.atom.xml#createOrReplaceTempView">spark.sql</a></p>
+
+</div>
+</div>
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+<p>First we load the important libraries</p>
+
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In&#160;[1]:</div>
+<div>
+    <div>
+<div><pre><span></span><span>from</span> <span>pyspark.sql</span> <span>import</span> <span>SparkSession</span>
+<span>from</span> <span>pyspark.sql.functions</span> <span>import</span> <span>(</span><span>col</span><span>,</span> <span>concat_ws</span><span>,</span> <span>split</span><span>)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+<div>In&#160;[3]:</div>
+<div>
+    <div>
+<div><pre><span></span><span># initializing spark session instance</span>
+<span>spark</span> <span>=</span> <span>SparkSession</span><span>.</span><span>builder</span><span>.</span><span>appName</span><span>(</span><span>'pyspark concat snippets'</span><span>)</span><span>.</span><span>getOrCreate</span><span>()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+</div>
+<div>
+<div>
+<p>Then load our initial records</p>
+
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In&#160;[4]:</div>
+<div>
+    <div>
+<div><pre><span></span><span>columns</span> <span>=</span> <span>[</span><span>"Full_Name"</span><span>,</span><span>"Salary"</span><span>]</span>
+<span>data</span> <span>=</span> <span>[(</span><span>"Sam A Smith"</span><span>,</span> <span>1000</span><span>),</span> <span>(</span><span>"Alex Wesley Jones"</span><span>,</span> <span>120000</span><span>),</span> <span>(</span><span>"Steve Paul Jobs"</span><span>,</span> <span>5000</span><span>)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+<div>In&#160;[5]:</div>
+<div>
+    <div>
+<div><pre><span></span><span># converting data to rdds</span>
+<span>rdd</span> <span>=</span> <span>spark</span><span>.</span><span>sparkContext</span><span>.</span><span>parallelize</span><span>(</span><span>data</span><span>)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+<div>In&#160;[6]:</div>
+<div>
+    <div>
+<div><pre><span></span><span># Then creating a dataframe …</span></pre></div></div></div></div></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-14 21:38:39+00:00" class="dt-published"></time>
+  Sun 14 Aug 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://snarky.ca/mvpy-minimum-viable-python/" rel="bookmark" class="u-url"
+       title="MVPy: Minimum Viable Python" target="_blank">
+      <time class="m-date" datetime="2022-08-14 21:19:48+00:00">
+        Aug
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      MVPy: Minimum Viable Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Over 29 posts spanning 2 years, this is the final post in my <a href="https://snarky.ca/tag/syntactic-sugar/">blog series on Python&apos;s syntactic sugar</a>. I had set out to find all of the Python 3.8 syntax that could be rewritten if you were to run a tool over a single Python source</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2022-08-14 21:19:48+00:00" class="dt-published"></time>
+  Sun 14 Aug 2022
+  in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2022/08/2022-08-14-nztyu" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2022-08-14 20:18:04+02:00">
+        Aug
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I’ve realized that trying to strictly follow what is on the IndieWeb wiki won’t work well for me. Thus, I have to invent and change some things to make it work better.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-14 20:18:04+02:00" class="dt-published"></time>
+  Sun 14 Aug 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article923/kiki" rel="bookmark" class="u-url"
+       title="Kiki" target="_blank">
+      <time class="m-date" datetime="2022-08-14 18:52:00+02:00">
+        Aug
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Kiki
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/kiki-mascot-in-my-own-style_final.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/kiki-mascot-in-my-own-style_final.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>🪷Kiki (the Krita’s mascot), but in my style. </p>
+<p>It's the topic of the contest of the <a href="https://krita-artists.org/t/monthly-art-contest-august-2022-topic-draw-kiki-the-krita-s-mascot-in-your-own-style/45135">monthly Krita-Artist art contest</a>.  That's also for my future mega tutorial for this summer.</p>
+<p>I recorded it this week; commenting everything and I'm right now derushing 6h of talk and screenrecord to crush that to a "smaller" 1h40 video. It will be my second "from A to Z" big video friendly for beginners. The artwork was done for the needs of the video with a Krita without preferences, from stock install and with only default brushes. </p>
+<p>I'm back at video editing it! I hope Kdenlive will be able to render this huge monster.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2022-08-14 18:52:00+02:00" class="dt-published"></time>
+  Sun 14 Aug 2022
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kamikazow.wordpress.com/2022/08/14/how-to-use-angelfish-as-touch-friendly-web-browser-in-steam-decks-game-mode/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="How to use Angelfish as touch-friendly web browser in Steam Deck’s Game Mode" target="_blank">
+      <time class="m-date" datetime="2022-08-14 07:53:30+00:00">
+        Aug
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      How to use Angelfish as touch-friendly web browser in Steam Deck’s Game Mode
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>For whatever reason Steam Deck pretty much has two default browsers: Google Chrome in Game Mode and Firefox in Plasma aka. Desktop Mode. Firefox is absolutely unusable in Game Mode. Chrome (probably most other Chromium variants as well, I&#8217;ve only tried a handful) work okay-ish – at least they don&#8217;t go ballistic on touch events but they are not a truly nice experience either.</p>
+
+
+
+<p>Readers of <a href="https://planet.kde.org/">Planet KDE</a> probably already know that some KDE applications have convergent GUIs thanks to <a href="https://plasma-mobile.org/">Plasma Mobile</a>, including the <a href="https://invent.kde.org/plasma-mobile/angelfish">Angelfish web browser</a>. It took some fiddling but after a while I managed to get it into a shape that’s very usable in Game Mode. Without any tweaks Angelfish defaults to use its desktop GUI and thereby runs just fine in Plasma Desktop, perhaps docked to a monitor.</p>
+
+
+
+<p>First step is to enter Desktop …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Markus Slopianka</b></span>
+  on <time datetime="2022-08-14 07:53:30+00:00" class="dt-published"></time>
+  Sun 14 Aug 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://nibblestew.blogspot.com/2022/08/making-decision-without-all-information.html" rel="bookmark" class="u-url"
        title="Making decision without all the information is tricky, a case study" target="_blank">
       <time class="m-date" datetime="2022-08-13 19:06:00+00:00">
@@ -180,7 +476,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p>In a <a href="https://nibblestew.blogspot.com/feeds/posts/default">recent blog post</a>, Michal Catanzaro wrote about choosing proper configurations for your build, especially the <span>buildtype</span> attribute. As noted in the text, Meson's build type setup is not the greatest in the world., so I figured I'd write why that is, what would a better design look like and why we don't use that (and probably won't for the foreseeable future).</p><p>The concept of build types was copied almost directly from CMake. The main thing that they do is to set compiler flags like <span>-g</span> and <span>-O2</span>. Quite early in the development process of Meson I planned on adding top level options for debug info and optimization but the actual implementation for those was done much later. I copied the build types and flags almost directly except for build types <span>RelWithDebInfo</span> and <span>Release</span>. Having these two as separate …</p>
+  <p>In a <a href="https://blogs.gnome.org/mcatanzaro/2022/07/15/best-practices-for-build-options/">recent blog post</a>, Michal Catanzaro wrote about choosing proper configurations for your build, especially the <span>buildtype</span> attribute. As noted in the text, Meson's build type setup is not the greatest in the world., so I figured I'd write why that is, what would a better design look like and why we don't use that (and probably won't for the foreseeable future).</p><p>The concept of build types was copied almost directly from CMake. The main thing that they do is to set compiler flags like <span>-g</span> and <span>-O2</span>. Quite early in the development process of Meson I planned on adding top level options for debug info and optimization but the actual implementation for those was done much later. I copied the build types and flags almost directly except for build types <span>RelWithDebInfo</span> and <span>Release</span>. Having these two as separate …</p>
   </p>
   </div>
 </header>
@@ -190,138 +486,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2022-08-13 19:06:00+00:00" class="dt-published"></time>
   Sat 13 Aug 2022
   in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://journal.paoloamoroso.com/next-suite8080-features-trim-uninitialized-data-macro-assembler?pk_campaign=rss-feed" rel="bookmark" class="u-url"
-       title=""Paolo Amoroso's Journal": Next Suite8080 features: trim uninitialized data, macro assembler" target="_blank">
-      <time class="m-date" datetime="2022-08-13 12:54:07+00:00">
-        Aug
-        <span class="m-date-day">
-          13
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      "Paolo Amoroso's Journal": Next Suite8080 features: trim uninitialized data, macro assembler
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I decided what to work on next on <a href="https://journal.paoloamoroso.com/tag:Suite8080">Suite8080</a>, the suite of Intel 8080 Assembly cross-development tools I'm writing in Python. I'll add two features, the ability for the assembler to trim trailing uninitialized data and a macro assembler script.</p>
-
-
-Trimming uninitialized data
-
-<p>Consider this 8080 Assembly code, which declares a 1024 bytes uninitialized data area at the end of the program:</p>
-
-<pre><code># . . .
-
-data:        ds    1024
-             end
-</code></pre>
-
-<p>For this <code>ds</code> directive, the Suite8080 assembler <code>asm80</code> emits a sequence of 1024 null bytes at the end of the binary program. Similarly, <code>dw</code> emits 16-bit words. The executable file is thus longer and may be slower to load on the host system, typically CP/M.</p>
-
-<p>The Digital Research CP/M assemblers, <code>ASM.COM</code> and <code>MAC.COM</code>, strip such trailing uninitialized data from binaries. After <a href="https://www.reddit.com/r/asm/comments/v9y32g/ds_section_at_end_of_program_strip_or_keep_the/">asking for feedback to r/asm</a>, I decided to …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-13 12:54:07+00:00" class="dt-published"></time>
-  Sat 13 Aug 2022
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2022/08/13/kf6-qml-porting-progress.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Frameworks 6 QML porting" target="_blank">
-      <time class="m-date" datetime="2022-08-13 06:45:00+00:00">
-        Aug
-        <span class="m-date-day">
-          13
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Frameworks 6 QML porting
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>It’s been three months since my <a href="//www.volkerkrause.eu/2022/05/14/kf6-plasma-build-progress.html">last post</a>
-about the ongoing transition to KDE Frameworks 6, so another update is long overdue
-given how much has happened since.</p>
-
-
-QML Porting
-
-<p>While the main attention had been on porting build system and C++ code so far, meanwhile QML code
-has also moved into focus. QML code is generally harder to port, due to the lack of compile-time
-checking and the lack of conditional code based on the Qt version.</p>
-
-<p>Only seeing mistakes at runtime means for every single change we need to ensure to manually exercise
-the affected code paths. That is much easier to do if everything else is fully working, ie. in the
-current Qt 5 codebase.</p>
-
-<p>That however is only an option for changes that result in code that works with both Qt 5 and Qt 6 …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2022-08-13 06:45:00+00:00" class="dt-published"></time>
-  Sat 13 Aug 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/dev/tailscale-ssh" rel="bookmark" class="u-url"
-       title="Tailscale SSH" target="_blank">
-      <time class="m-date" datetime="2022-08-12 21:35:51+02:00">
-        Aug
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Tailscale SSH
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I finally got around to using Tailscale SSH. I’ve been using Tailscale for over a year to access my servers via SSH (my VPS is even available via Tailscale only), but I haven’t used the new Tailscale SSH feature yet.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-12 21:35:51+02:00" class="dt-published"></time>
-  Fri 12 Aug 2022
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -578,41 +742,6 @@ Community members<p>We strongly encourage maintainers of …</p>
   on <time datetime="2022-08-08 08:08:08+00:00" class="dt-published"></time>
   Mon 08 Aug 2022
   in Gregory Szorc's Digital Home.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article922/august-in-boston" rel="bookmark" class="u-url"
-       title="August in Boston" target="_blank">
-      <time class="m-date" datetime="2022-08-07 17:54:00+02:00">
-        Aug
-        <span class="m-date-day">
-          07
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      August in Boston
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-08-07_pepper-and-carrot-flying-over-boston-downtown.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-08-07_pepper-and-carrot-flying-over-boston-downtown.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>For everyone in or near Boston (USA), I'll be around at the end of the month (30/31 August)! If you have any ideas about the organisation of a meeting, a signing session, a pleinair sketch group, or a Krita workshop, contact me. </p>
-<p>It's first time I'll visit US! ☺️</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-08-07 17:54:00+02:00" class="dt-published"></time>
-  Sun 07 Aug 2022
-  in David Revoy.
 </footer>
 <div class="m-clearfix-l"></div>
 
