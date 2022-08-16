@@ -164,147 +164,266 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.nbshare.io/notebook/829042414/PySpark-concat_ws/" rel="bookmark" class="u-url"
-       title="John Ludhi/nbshare.io: PySpark concat_ws" target="_blank">
-      <time class="m-date" datetime="2022-08-14 21:38:39+00:00">
+    <a href="https://tsdgeos.blogspot.com/2022/08/come-to-barcelona-for-akademy-2022.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Come to Barcelona for Akademy 2022!" target="_blank">
+      <time class="m-date" datetime="2022-08-15 21:14:00+00:00">
         Aug
         <span class="m-date-day">
-          14
+          15
         </span>
         2022
       </time>
       <div class="p-name">
-      John Ludhi/nbshare.io: PySpark concat_ws
+      Come to Barcelona for Akademy 2022!
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div>
-    <div>
+  <p><a href="https://akademy.kde.org/2022">Akademy</a> is KDE's yearly community event, this year it happens between October 1st and October 7th in my city <a href="https://ca.wikipedia.org/wiki/Comarca">comarca</a> [one of the reasons of why it's happening is that our Mr. President tricked me into helping organize it [*]]</p><p>&nbsp;</p><p>You don't need to be a "KDE expert" to join, if you're remotely involved or interested in KDE you should really attend if you can (in person if possible, for me online really doesn't work for conferences), and not only the weekend of talks, but the whole week!</p><p></p><p>I still remember 2007 when our back-then-newbie Mr. President asked me "should I really go to Akademy? All the week? is it really worth it?" and i said "as many days as you can", and I guess we made a good enough impression to convince him to stay around and even want to …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Albert Astals Cid</b></span>
+  on <time datetime="2022-08-15 21:14:00+00:00" class="dt-published"></time>
+  Mon 15 Aug 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
 
-<div>
-<div>
-</div>
-<div>
-<div>
+</article>
 
-PySpark concat_ws()<a href="https://www.nbshare.io/feeds/all.atom.xml#PySpark-concat_ws()"></a>
-</div>
-</div>
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
-<p>split(str) function is used to convert a string column into an array of strings using a delimiter for the split. concat_ws() is the opposite of split. It creates a string column from an array of strings. The resulting array is concatenated with the provided delimiter.</p>
-
-</div>
-</div>
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
-<p>pyspark functions used in this notebook are 
-<a href="https://www.nbshare.io/feeds/all.atom.xml#createOrReplaceTempView">rdd.createOrReplaceTempView</a>, <a href="https://www.nbshare.io/feeds/all.atom.xml#rdddrop">rdd.drop</a>, <a href="https://www.nbshare.io/feeds/all.atom.xml#createOrReplaceTempView">spark.sql</a></p>
-
-</div>
-</div>
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
-<p>First we load the important libraries</p>
-
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>In&#160;[1]:</div>
-<div>
-    <div>
-<div><pre><span></span><span>from</span> <span>pyspark.sql</span> <span>import</span> <span>SparkSession</span>
-<span>from</span> <span>pyspark.sql.functions</span> <span>import</span> <span>(</span><span>col</span><span>,</span> <span>concat_ws</span><span>,</span> <span>split</span><span>)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div>
-<div>
-<div>In&#160;[3]:</div>
-<div>
-    <div>
-<div><pre><span></span><span># initializing spark session instance</span>
-<span>spark</span> <span>=</span> <span>SparkSession</span><span>.</span><span>builder</span><span>.</span><span>appName</span><span>(</span><span>'pyspark concat snippets'</span><span>)</span><span>.</span><span>getOrCreate</span><span>()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div>
-<div>
-</div>
-<div>
-<div>
-<p>Then load our initial records</p>
-
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>In&#160;[4]:</div>
-<div>
-    <div>
-<div><pre><span></span><span>columns</span> <span>=</span> <span>[</span><span>"Full_Name"</span><span>,</span><span>"Salary"</span><span>]</span>
-<span>data</span> <span>=</span> <span>[(</span><span>"Sam A Smith"</span><span>,</span> <span>1000</span><span>),</span> <span>(</span><span>"Alex Wesley Jones"</span><span>,</span> <span>120000</span><span>),</span> <span>(</span><span>"Steve Paul Jobs"</span><span>,</span> <span>5000</span><span>)]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div>
-<div>
-<div>In&#160;[5]:</div>
-<div>
-    <div>
-<div><pre><span></span><span># converting data to rdds</span>
-<span>rdd</span> <span>=</span> <span>spark</span><span>.</span><span>sparkContext</span><span>.</span><span>parallelize</span><span>(</span><span>data</span><span>)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div>
-<div>
-<div>In&#160;[6]:</div>
-<div>
-    <div>
-<div><pre><span></span><span># Then creating a dataframe …</span></pre></div></div></div></div></div></div></div>
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2022/08/2022-08-15-kgpub" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2022-08-15 19:52:09+02:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I was just about to write a long response to a discussion I saw online. But while writing it, I realized that I have an opinion, but I can’t express it properly and somehow I don’t have anything to contribute. So I deleted my draft. I don’t have to give my two cents on everything. 😅
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-14 21:38:39+00:00" class="dt-published"></time>
-  Sun 14 Aug 2022
+  on <time datetime="2022-08-15 19:52:09+02:00" class="dt-published"></time>
+  Mon 15 Aug 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pycon.blogspot.com/2022/08/holding-pycon-us-2023-in-salt-lake-city.html" rel="bookmark" class="u-url"
+       title="PyCon: Holding PyCon US 2023 in Salt Lake City, UT" target="_blank">
+      <time class="m-date" datetime="2022-08-15 16:12:25+00:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      PyCon: Holding PyCon US 2023 in Salt Lake City, UT
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In light of recent anti-abortion legislation, we have received feedback and concern about hosting PyCon US 2023 in Salt Lake City, Utah. We hear this concern and recognize the risk and impact these laws impose on people who can become pregnant. PyCon US plans to take extra efforts to create a safe and inclusive environment throughout the duration of the conference, including extending our “no questions asked” refund or conversion to a virtual ticket for any reason, right up to the start of the event.PyCon US is a community conference centered around creating a valuable and inclusive experience for each member of our community to network and collaborate within the open source space. Diversity, equity and inclusion are an important focus of PyCon US and the Python Software Foundation’s <a href="https://www.python.org/psf/mission/">mission</a>, and they are valued and implemented through both …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-15 16:12:25+00:00" class="dt-published"></time>
+  Mon 15 Aug 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/08/15/deere-in-headlights/" rel="bookmark" class="u-url"
+       title="Pluralistic: 15 Aug 2022" target="_blank">
+      <time class="m-date" datetime="2022-08-15 15:37:35+00:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: 15 Aug 2022
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links This weekend, I watched a hacker jailbreak a John Deere tractor live on stage: Total pwnage, with a a side of copyfraud. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading This weekend, I watched a hacker jailbreak a John Deere tractor live on stage (permalink) Last Saturday, I sat in a crowded ballroom at Caesar's Forum in Las Vegas and watched Sickcodes jailbreak a John Deere tractor's control unit live, before an audience of cheering Defcon 30 attendees (and, possibly, a few undercover Deere execs, who often attend Sickcodes's talks). The presentation was significant because Deere &#8211; along with Apple &#8211; are the vanguard of the war on repair, a company that has made wild and outlandish claims about the reason …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2022-08-15 15:37:35+00:00" class="dt-published"></time>
+  Mon 15 Aug 2022
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://k-d-w.org/blog/2022/08/scikit-survival-0.18.0-released/" rel="bookmark" class="u-url"
+       title="scikit-survival 0.18.0 released" target="_blank">
+      <time class="m-date" datetime="2022-08-15 15:18:26+00:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      scikit-survival 0.18.0 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I’m pleased to announce the release of
+<a href="https://scikit-survival.readthedocs.io/">scikit-survival</a> 0.18.0,
+which adds support for scikit-learn 1.1.</p>
+<p>In addition, this release adds the <code>return_array</code> argument to all models providing
+<code>predict_survival_function</code> and <code>predict_cumulative_hazard_function</code>.
+That means you can now choose, whether you want to have the survival
+(cumulative hazard function) automatically evaluated at the unique event
+times. This is particular useful for plotting. Previously, you would have
+to evaluate each survival function before plotting:</p>
+<pre><code>estimator = CoxPHSurvivalAnalysis()
+estimator.fit(X_train, y_train)
+pred_surv = estimator.predict_survival_function(
+X_test
+)
+times = pred_surv[0].x
+for surv_func in pred_surv:
+plt.step(times, surv_func(times), where="post")
+</code></pre>
+<p>Now, you can pass <code>return_array=True</code> and directly get probabilities
+of the survival function:</p>
+<pre><code>estimator = CoxPHSurvivalAnalysis()
+estimator.fit(X_train, y_train)
+pred_surv …</code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-15 15:18:26+00:00" class="dt-published"></time>
+  Mon 15 Aug 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article924/tutorial-an-illustration-from-a-to-z-with-krita" rel="bookmark" class="u-url"
+       title="Tutorial: an Illustration from A to Z with Krita" target="_blank">
+      <time class="m-date" datetime="2022-08-15 15:30:00+02:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Tutorial: an Illustration from A to Z with Krita
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-08-14_kiki-mascott-in-my-style_thumb.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-08-14_kiki-mascott-in-my-style_thumb.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p></p><div></div><p></p>
+<ul>
+<li>Youtube: <a href="https://youtu.be/uYdEkOyFUn8">https://youtu.be/uYdEkOyFUn8</a></li>
+<li>Peertube: <a href="https://peertube.touhoppai.moe/c/4742f338-1ded-4798-bd85-93e8de367476/videos">Soon on the channel</a>.</li>
+</ul>
+<p>And here is the long 1h22min Krita video tutorial fully commented as I promised on <a href="https://www.davidrevoy.com/article923/kiki">the last blog post</a> with the artwork. </p>
+<p><strong>It's a real full lenght course suited to beginners,</strong> but also advanced digital painters. It starts <strong>from scratch</strong> with <strong>default set of brushes</strong>, preferences and <strong>break-down all the process</strong>. The repetitive parts while painting were all accelerated and can be skipped easily (a timer in overlay appears on display) Check the Timeline codes under to navigate in the video. </p>
+<p><strong>Subtitle are unfortunately not available</strong>, sorry for my (heavy) French accent and poor vocabulary. It was too long to write them this time. I hope the auto generation will work and you'll have not a lot of trouble to understand me mumbling sometime. </p>
+<p>I recorded over 6h of material …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2022-08-15 15:30:00+02:00" class="dt-published"></time>
+  Mon 15 Aug 2022
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2659/" rel="bookmark" class="u-url"
+       title="Unreliable Connection" target="_blank">
+      <time class="m-date" datetime="2022-08-15 00:00:00+00:00">
+        Aug
+        <span class="m-date-day">
+          15
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Unreliable Connection
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="NEGATIVE REVIEWS MENTION: Unreliable internet. POSITIVE REVIEWS MENTION: Unreliable internet." src="https://imgs.xkcd.com/comics/unreliable_connection.png" title="NEGATIVE REVIEWS MENTION: Unreliable internet. POSITIVE REVIEWS MENTION: Unreliable internet.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-08-15 00:00:00+00:00" class="dt-published"></time>
+  Mon 15 Aug 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -339,221 +458,6 @@ PySpark concat_ws()<a href="https://www.nbshare.io/feeds/all.atom.xml#PySpark-co
   on <time datetime="2022-08-14 21:19:48+00:00" class="dt-published"></time>
   Sun 14 Aug 2022
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2022/08/2022-08-14-nztyu" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2022-08-14 20:18:04+02:00">
-        Aug
-        <span class="m-date-day">
-          14
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I’ve realized that trying to strictly follow what is on the IndieWeb wiki won’t work well for me. Thus, I have to invent and change some things to make it work better.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-14 20:18:04+02:00" class="dt-published"></time>
-  Sun 14 Aug 2022
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article923/kiki" rel="bookmark" class="u-url"
-       title="Kiki" target="_blank">
-      <time class="m-date" datetime="2022-08-14 18:52:00+02:00">
-        Aug
-        <span class="m-date-day">
-          14
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Kiki
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2022/kiki-mascot-in-my-own-style_final.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/kiki-mascot-in-my-own-style_final.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>🪷Kiki (the Krita’s mascot), but in my style. </p>
-<p>It's the topic of the contest of the <a href="https://krita-artists.org/t/monthly-art-contest-august-2022-topic-draw-kiki-the-krita-s-mascot-in-your-own-style/45135">monthly Krita-Artist art contest</a>.  That's also for my future mega tutorial for this summer.</p>
-<p>I recorded it this week; commenting everything and I'm right now derushing 6h of talk and screenrecord to crush that to a "smaller" 1h40 video. It will be my second "from A to Z" big video friendly for beginners. The artwork was done for the needs of the video with a Krita without preferences, from stock install and with only default brushes. </p>
-<p>I'm back at video editing it! I hope Kdenlive will be able to render this huge monster.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-08-14 18:52:00+02:00" class="dt-published"></time>
-  Sun 14 Aug 2022
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kamikazow.wordpress.com/2022/08/14/how-to-use-angelfish-as-touch-friendly-web-browser-in-steam-decks-game-mode/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="How to use Angelfish as touch-friendly web browser in Steam Deck’s Game Mode" target="_blank">
-      <time class="m-date" datetime="2022-08-14 07:53:30+00:00">
-        Aug
-        <span class="m-date-day">
-          14
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      How to use Angelfish as touch-friendly web browser in Steam Deck’s Game Mode
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>For whatever reason Steam Deck pretty much has two default browsers: Google Chrome in Game Mode and Firefox in Plasma aka. Desktop Mode. Firefox is absolutely unusable in Game Mode. Chrome (probably most other Chromium variants as well, I&#8217;ve only tried a handful) work okay-ish – at least they don&#8217;t go ballistic on touch events but they are not a truly nice experience either.</p>
-
-
-
-<p>Readers of <a href="https://planet.kde.org/">Planet KDE</a> probably already know that some KDE applications have convergent GUIs thanks to <a href="https://plasma-mobile.org/">Plasma Mobile</a>, including the <a href="https://invent.kde.org/plasma-mobile/angelfish">Angelfish web browser</a>. It took some fiddling but after a while I managed to get it into a shape that’s very usable in Game Mode. Without any tweaks Angelfish defaults to use its desktop GUI and thereby runs just fine in Plasma Desktop, perhaps docked to a monitor.</p>
-
-
-
-<p>First step is to enter Desktop …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Markus Slopianka</b></span>
-  on <time datetime="2022-08-14 07:53:30+00:00" class="dt-published"></time>
-  Sun 14 Aug 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nibblestew.blogspot.com/2022/08/making-decision-without-all-information.html" rel="bookmark" class="u-url"
-       title="Making decision without all the information is tricky, a case study" target="_blank">
-      <time class="m-date" datetime="2022-08-13 19:06:00+00:00">
-        Aug
-        <span class="m-date-day">
-          13
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Making decision without all the information is tricky, a case study
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In a <a href="https://blogs.gnome.org/mcatanzaro/2022/07/15/best-practices-for-build-options/">recent blog post</a>, Michal Catanzaro wrote about choosing proper configurations for your build, especially the <span>buildtype</span> attribute. As noted in the text, Meson's build type setup is not the greatest in the world., so I figured I'd write why that is, what would a better design look like and why we don't use that (and probably won't for the foreseeable future).</p><p>The concept of build types was copied almost directly from CMake. The main thing that they do is to set compiler flags like <span>-g</span> and <span>-O2</span>. Quite early in the development process of Meson I planned on adding top level options for debug info and optimization but the actual implementation for those was done much later. I copied the build types and flags almost directly except for build types <span>RelWithDebInfo</span> and <span>Release</span>. Having these two as separate …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2022-08-13 19:06:00+00:00" class="dt-published"></time>
-  Sat 13 Aug 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2022/08/12/regulatory-uncapture/" rel="bookmark" class="u-url"
-       title="Pluralistic: 12 Aug 2022" target="_blank">
-      <time class="m-date" datetime="2022-08-12 15:37:30+00:00">
-        Aug
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: 12 Aug 2022
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links The FTC takes aim at commercial surveillance: Oh, the sheer poetry of "Commercial Surveillance and Data Security Rulemaking." Hey look at this: Delights to delectate. This day in history: 2007, 2012, 2017 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The FTC takes aim at commercial surveillance (permalink) The biggest fallacy in the online privacy is that there is a difference between "state surveillance" and "commercial surveillance." Bizarrely, it's a fallacy that is widely held by both government snoops and Big Tech snoops. Many's the time I've spoken to a DC audience about privacy, only to have an audience member say, "I'm OK with Uncle Sam spying on me &#8211; after all, I've already given up every sensitive scrap of information about my personal life to the Office of Personnel Management when I applied for security …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-08-12 15:37:30+00:00" class="dt-published"></time>
-  Fri 12 Aug 2022
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2658/" rel="bookmark" class="u-url"
-       title="Coffee Cup Holes" target="_blank">
-      <time class="m-date" datetime="2022-08-12 00:00:00+00:00">
-        Aug
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Coffee Cup Holes
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Theoretical physicist: At the Planck length, uncountably many." src="https://imgs.xkcd.com/comics/coffee_cup_holes.png" title="Theoretical physicist: At the Planck length, uncountably many.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-08-12 00:00:00+00:00" class="dt-published"></time>
-  Fri 12 Aug 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -984,40 +888,6 @@ the server can get a shell and run commands.</p>
   on <time datetime="2022-07-28 08:00:28+00:00" class="dt-published"></time>
   Thu 28 Jul 2022
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tonsky.me/blog/dice-out/" rel="bookmark" class="u-url"
-       title="GMTK Game Jam 2022: Dice Out" target="_blank">
-      <time class="m-date" datetime="2022-07-26 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          26
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      GMTK Game Jam 2022: Dice Out
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Experience report from participating in latest GMTK Game Jam
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2022-07-26 00:00:00+00:00" class="dt-published"></time>
-  Tue 26 Jul 2022
-  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
