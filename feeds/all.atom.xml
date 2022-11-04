@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-01-11T00:50:07+01:00</updated><entry><title>Email services</title><link href="https://fluid.quest/email-services.html" rel="alternate"></link><published>2022-01-11T00:50:07+01:00</published><updated>2022-01-11T00:50:07+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-11:/email-services.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My current email server &lt;a href="https://protonmail.com"&gt;Protonmail&lt;/a&gt;, while reliable and easy to get started, ends up indirectly holding you hostage, if you need to add your own domain name, it comes with a steep cost of  € 48 per year (not to mention there is no official support for IMAP for the free tier). The next best option I had seen so far was &lt;a href="https://register.mailbox.org/en"&gt;mailbox.de&lt;/a&gt; with the same at € 36 per year.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ashwin Vishnu's Website</title><link href="https://fluid.quest/" rel="alternate"></link><link href="https://fluid.quest/feeds/all.atom.xml" rel="self"></link><id>https://fluid.quest/</id><updated>2022-11-04T09:14:41+01:00</updated><entry><title>PyCon Sweden 2022 - Beyond 100% test coverage</title><link href="https://fluid.quest/pyconse2022.html" rel="alternate"></link><published>2022-11-04T09:14:41+01:00</published><updated>2022-11-04T09:14:41+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-11-04:/pyconse2022.html</id><summary type="html">&lt;p&gt;Lightning talk&lt;/p&gt;</summary><content type="html">&lt;p&gt;Yesterday, I hack together a demo which is based on a real incident work. The
+incident made me realize that 100% code coverage is not good enough and you
+have to resort to typing in Python to avoid another class of errors.&lt;/p&gt;
+&lt;p&gt;Sources to the demo can be found here:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/ashwinvis/beyond-100-test-cov"&gt;https://github.com/ashwinvis/beyond-100-test-cov&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I will add the transcript of the demo soon.&lt;/p&gt;</content><category term="Tech Talk"></category><category term="software"></category></entry><entry><title>Email services</title><link href="https://fluid.quest/email-services.html" rel="alternate"></link><published>2022-01-11T00:50:07+01:00</published><updated>2022-01-11T00:50:07+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2022-01-11:/email-services.html</id><summary type="html"></summary><content type="html">&lt;p&gt;My current email server &lt;a href="https://protonmail.com"&gt;Protonmail&lt;/a&gt;, while reliable and easy to get started, ends up indirectly holding you hostage, if you need to add your own domain name, it comes with a steep cost of  € 48 per year (not to mention there is no official support for IMAP for the free tier). The next best option I had seen so far was &lt;a href="https://register.mailbox.org/en"&gt;mailbox.de&lt;/a&gt; with the same at € 36 per year.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://purelymail.com/"&gt;Purelymail&lt;/a&gt; is an interesting service offering this and much more at $ 10 per year. Looks like an indie operation from the website, but it does come with a compelling pricing. It is, however a US based company so all the privacy caveats attaches with the service. Although the company themselves do not sell any data, they do acknowledge the &lt;a href="https://purelymail.com/docs/security"&gt;limitations in their approach&lt;/a&gt;. Nevertheless I am curious to know how it goes for &lt;a href="https://jlelse.blog/"&gt;jlelse&lt;/a&gt;.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>Testing comments on Fediverse</title><link href="https://fluid.quest/testing-comments-on-fediverse.html" rel="alternate"></link><published>2021-12-19T15:30:21+01:00</published><updated>2021-12-19T15:30:21+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-12-19:/testing-comments-on-fediverse.html</id><summary type="html">&lt;p&gt;A tiny javascript to backfeed replies&lt;/p&gt;</summary><content type="html">&lt;p&gt;Thanks to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/"&gt;https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/&lt;/a&gt;&lt;/li&gt;
@@ -93,93 +100,4 @@ have little time left to act.&lt;/p&gt;
 &lt;p&gt;reach out to&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://coderefinery.zulipchat.com/#narrow/stream/300025-carpentries/topic/Announcement.20of.20new.20upcoming.20instructor.20trainings"&gt;https://coderefinery.zulipchat.com/#narrow/stream/300025-carpentries/topic/Announcement.20of.20new.20upcoming.20instructor.20trainings&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;to help you through the process. This priority would expire soon as NeIC's
-membership of the Carpentries expire at the end of October.&lt;/p&gt;</content><category term="Microblog"></category></entry><entry><title>The good old blog with a new name</title><link href="https://fluid.quest/domain-name.html" rel="alternate"></link><published>2021-08-30T21:06:13+02:00</published><updated>2021-09-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-08-30:/domain-name.html</id><summary type="html">&lt;p&gt;I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; The URL of this website would soon be &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Today, on the thirtieth day of August 2021, as rain continue to shower on
-Stockholm nearly every day, marks the end of my hunt for a succinct
-domain name. For a long time, I was not convinced to spend a good handful of
-money on a virtual asset. That changed recently.&lt;/p&gt;
-&lt;p&gt;After jumping ships from Blogger, to WordPress, to Tumblr and finally to
-&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; pages using Pelican static-site generator, I thought I was
-done. I had full control on the content and the site generation. It was made
-using open-source software, which means there was no way the toolchain will not
-work in the foreseeable future. Therefore, in short the internals were intact.
-Moreover, my precious visitors to my blog then do not get served ads, cookies
-or third party tracking scripts.&lt;/p&gt;
-&lt;p&gt;Everything seemed fine. Until Microsoft bought it. Just because it is a free
-service and has a large user base does not inspire any confidence that it might
-stay like this forever. I recall how I used to adore following other blogs on
-Google Reader until &lt;a href="https://killedbygoogle.com/"&gt;Google swung the axe, decided it was not profitable
-enough&lt;/a&gt;. However, feed readers were easy, they
-continued to exist, and it was still possible to find alternatives (server based
-and server-less). In fact this is not an isolated incident. Large corporations
-always change services, buy new ones, shutdown old ones on their whims and
-fancies. They would come abruptly, and I should be prepared for this.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In fact, blog and email servers are like
-&lt;a href="https://genius.com/37517]"&gt;Hotel California (&lt;em&gt;You can check out any time you like, but you can never leave&lt;/em&gt;)&lt;/a&gt;
-as long as you care about others to be able to find you.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;By buying a domain name, you get an address which stays the same,
-irrespective of where you host it. The host could be GitHub, Gitlab,
-&lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt; or even a small server powered by a Raspberry Pi!
-The readers will still be able to find you. And as a bonus, you can choose a
-domain name which represents your interests better.&lt;/p&gt;
-&lt;p&gt;Talking about interests, did you know there are a lot of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; (top
-level domain names) right now. Dull &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.net&lt;/code&gt; TLDs of yore are old-fashioned.
-The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
-the "domain registrar". Where to buy can be confusing to a total beginner.&lt;/p&gt;
-&lt;h2 id="doing-the-pre-purchase-research"&gt;&lt;a class="toclink" href="#doing-the-pre-purchase-research"&gt;Doing the pre-purchase research&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The research that I did was a bit of informal hearsay in the interweb. For instance the &lt;a href="https://wizardzines.com"&gt;following comics by Julia Evans&lt;/a&gt; were really useful&lt;sup id="fnref:zines"&gt;&lt;a class="footnote-ref" href="#fn:zines"&gt;1&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
-&lt;p&gt;&lt;img alt="choosing a domain registrar" src="https://wizardzines.com/comics/registrar/registrar.png"&gt;
-&lt;img alt="whois protection can" src="https://wizardzines.com/comics/domain-privacy/domain-privacy.png"&gt;
-&lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;&lt;img alt="TLDs" src="https://wizardzines.com/comics/tld/tld.png"&gt;&lt;/a&gt;
-&lt;img alt="subdomains" src="https://wizardzines.com/comics/subdomains/subdomains.png"&gt;&lt;/p&gt;
-&lt;p&gt;And this one on receiving
-&lt;a href="https://wizardzines.com/comics/receiving-email/"&gt;emails&lt;/a&gt; which I will think
-about later. Self-hosting emails is not an easy feat.&lt;/p&gt;
-&lt;p&gt;On the choosing the domain registrar question, I got a excellent tip from
-&lt;a href="https://jlelse.blog/dev/free-website"&gt;Jan Lukas-Else&lt;/a&gt; who had good experience
-with &lt;a href="https://porkbun.com"&gt;Porkbun&lt;/a&gt;. Therefore, I went there and there were many good deals
-going on.&lt;/p&gt;
-&lt;h2 id="how-i-bought-the-domain-name"&gt;&lt;a class="toclink" href="#how-i-bought-the-domain-name"&gt;How I bought the domain name&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;No single correct or optimal answer exists to which domain name one should buy
--- given the plethora of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; in the market! The &lt;a href="https://porkbun.com/products/domains"&gt;prices&lt;/a&gt; are
-nearly fixed for a given TLD. This caught my eye, and I decided to scrap the
-table for offline brainstorming.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The result was a small &lt;a href="https://codeberg.org/ashwinvis/domain-name-search"&gt;domain-name-search Python tool&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;By doing so, I was able to check availability of different combinations of
-domain names using &lt;code&gt;whois&lt;/code&gt; and visualize costs in an interactive plot. Of
-course, it was not perfect, a few domain names which were available were up for
-premium registration (prices often exceeding thousands of dollars). Which were
-not for me.  Once I had a shortlist done, it was easy to reduce the options.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;And thus I registered &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="why-fluidquest"&gt;&lt;a class="toclink" href="#why-fluidquest"&gt;Why &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;For now, I can say that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;It is an ode to the skill that I have been trained in for nearly a decade, Fluid Mechanics.&lt;/li&gt;
-&lt;li&gt;The quest post Ph.D. still continues&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="what-happens-next"&gt;&lt;a class="toclink" href="#what-happens-next"&gt;What happens next?&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;First I will archive a snapshot of the landing page and this post, in case
-someone runs into the blog years later with the old URL and receives a 404
-error message, wondering what had happened.&lt;/p&gt;
-&lt;p&gt;I will soon a register &lt;a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"&gt;the apex domain / subdomain&lt;/a&gt; to point to this
-very website via the &lt;a href="https://fluid.quest"&gt;new URL&lt;/a&gt;. Hopefully, all visits to the current URL
-&lt;a href="https://ashwinvis.github.io"&gt;ashwinvis.github.io&lt;/a&gt; would be redirected by
-&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; as long I continue to use their service.&lt;/p&gt;
-&lt;p&gt;Over a longer period of time, I can turn to a different host with more ethical
-business model such as &lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="update"&gt;&lt;a class="toclink" href="#update"&gt;Update&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The move is now complete to &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:zines"&gt;
-&lt;p&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines &lt;a href="https://wizardzines.com/licensing/"&gt;CC-BY-NC-SA 4.0&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:zines" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry></feed>
+membership of the Carpentries expire at the end of October.&lt;/p&gt;</content><category term="Microblog"></category></entry></feed>

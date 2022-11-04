@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/</loc>
-<lastmod>2022-08-16T00:15:59-00:00</lastmod>
+<lastmod>2022-11-04T09:34:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/planet.html</loc>
-<lastmod>2022-08-16T00:15:59-00:00</lastmod>
+<lastmod>2022-11-04T09:34:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/planet.html</loc>
-<lastmod>2022-08-16T00:15:59-00:00</lastmod>
+<lastmod>2022-11-04T09:34:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -61,7 +61,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/sponsors.html</loc>
-<lastmod>2022-08-16T00:15:59-00:00</lastmod>
+<lastmod>2022-11-04T09:34:27-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -71,6 +71,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2020-06-16T00:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://fluid.quest/pyconse2022.html</loc>
+<lastmod>2022-11-04T09:14:41+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -481,7 +488,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/category/tech-talk.html</loc>
-<lastmod>2021-12-19T15:30:21+01:12</lastmod>
+<lastmod>2022-11-04T09:14:41+01:12</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -495,7 +502,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/tag/software.html</loc>
-<lastmod>2021-12-19T15:30:21+01:12</lastmod>
+<lastmod>2022-11-04T09:14:41+01:12</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -1076,7 +1083,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/author/ashwin-vishnu-mohanan.html</loc>
-<lastmod>2022-01-11T00:50:07+01:12</lastmod>
+<lastmod>2022-11-04T09:14:41+01:12</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
