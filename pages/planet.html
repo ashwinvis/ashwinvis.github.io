@@ -164,6 +164,85 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://jvns.ca/blog/2022/11/06/making-a-dns-query-in-ruby-from-scratch/" rel="bookmark" class="u-url"
+       title="Making a DNS query in Ruby from scratch" target="_blank">
+      <time class="m-date" datetime="2022-11-06 08:31:53+00:00">
+        Nov
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Making a DNS query in Ruby from scratch
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! A while back I wrote a post about <a href="https://jvns.ca/blog/2022/02/01/a-dns-resolver-in-80-lines-of-go/">how to write a toy DNS resolver in Go</a>.</p>
+
+<p>In that post I left out &ldquo;how to generate and parse DNS queries&rdquo; because I
+thought it was boring, but a few people pointed out that they did not know how
+to parse and generate DNS queries and they were interested in how to do it.</p>
+
+<p>This made me curious &ndash; how much work <em>is</em> it do the DNS parsing? It turns out
+we can do it in a pretty nice 120-line Ruby program, which is not that bad.</p>
+
+<p>So here&rsquo;s a quick post on how to generate DNS queries and parse DNS responses!
+We&rsquo;re going to do it in Ruby because I&rsquo;m giving a talk at a Ruby conference
+soon, and this blog post is partly prep for that …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-06 08:31:53+00:00" class="dt-published"></time>
+  Sun 06 Nov 2022
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://felixc.at/2022/11/use-pacman-accel-to-accelerate-pacman/" rel="bookmark" class="u-url"
+       title="用 pacman-accel 给 pacman 加速" target="_blank">
+      <time class="m-date" datetime="2022-11-06 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      用 pacman-accel 给 pacman 加速
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  我在选镜像站的时候，总会遇到一个矛盾：镜像站访问快、镜像站和上游同步延迟低（同步到了最新的包）两者不可兼得。 比较容易想到的解决思路是：只从同步延迟低的镜像下 db，然后从速度快的镜像开始依次试，跳过 404 的镜像，直到找到一个已经存在该文件的镜像。 在过往的十来年里，我一直是通过写一个脚本来分别给 pacman -Sy 和 pacman -Su 设置不同 …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Felix Yan</b></span>
+  on <time datetime="2022-11-06 00:00:00+00:00" class="dt-published"></time>
+  Sun 06 Nov 2022
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://thepythoncodingbook.com/2022/11/05/intermediate-python-functions-series-1/" rel="bookmark" class="u-url"
        title="The Python Coding Blog: Moving On From The Basics of Python Functions [#1 in Intermediate Python Functions Series]" target="_blank">
       <time class="m-date" datetime="2022-11-05 21:04:00+00:00">
@@ -616,44 +695,6 @@ might pay or contribute. So there&#8217;s no …</p>
   on <time datetime="2022-10-29 07:37:17-04:00" class="dt-published"></time>
   Sat 29 Oct 2022
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://shibumi.dev/posts/install-arch-linux-on-chromeos/" rel="bookmark" class="u-url"
-       title="Install Arch Linux on ChromeOS" target="_blank">
-      <time class="m-date" datetime="2022-10-28 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          28
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Install Arch Linux on ChromeOS
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Hello there.
-I have not written a new article for quite a time now, but the waiting is finally over. Here comes the article everyone of you ever waited for.
-Let us install Arch Linux on ChromeOS together. Yihaaaa&hellip;
-(Not quite what you expected? Feel free to drop this article :&lsquo;D).
-If you are reading this, this means you are still here. Nice. So, let us start with a short explanation on why I am doing this:
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-10-28 00:00:00+00:00" class="dt-published"></time>
-  Fri 28 Oct 2022
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
