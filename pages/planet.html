@@ -164,31 +164,65 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://testdriven.io/blog/django-social-auth/" rel="bookmark" class="u-url"
-       title="TestDriven.io: Adding Social Authentication to Django" target="_blank">
-      <time class="m-date" datetime="2022-11-11 21:40:35+00:00">
+    <a href="https://rabbitictranslator.com/wordpress/index.php/2022/11/12/latinoware-2022/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE Network Brazil – Latinoware 2022" target="_blank">
+      <time class="m-date" datetime="2022-11-12 23:38:50+00:00">
         Nov
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      TestDriven.io: Adding Social Authentication to Django
+      KDE Network Brazil – Latinoware 2022
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  This tutorial details how to set up social auth with Django and Django Allauth.
+  From 01/11 until 05/11, I went from São Paulo to Foz do Iguaçu in Paraná to tend to the KDE booth at the biggest free software event of Latin America, Latinoware 2022, together with two great people who have been attending Latinoware for years, Pedro and Barbara, and who have been contributing to KDE longer &#8230; <a href="https://rabbitictranslator.com/wordpress/index.php/2022/11/12/latinoware-2022/">Continue reading<span> "KDE Network Brazil &#8211; Latinoware 2022"</span></a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Thiago Masato Costa Sueto</b></span>
+  on <time datetime="2022-11-12 23:38:50+00:00" class="dt-published"></time>
+  Sat 12 Nov 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://blog.vrplumber.com/b/2022/11/12/potions-with-custom-effects/" rel="bookmark" class="u-url"
+       title="Mike C. Fletcher: Potions with Custom Effects" target="_blank">
+      <time class="m-date" datetime="2022-11-12 20:34:15+00:00">
+        Nov
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Mike C. Fletcher: Potions with Custom Effects
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In Pycraft, I figured out the Potions-with-custom-effects, the problem being that Bukkit's PotionEffectType doesn't actually implement the keyed interface, but instead has its own .values() call, so needs a whole special handler. The code for creating potion with custom effects looks like:</p><pre>    await potion_of(            'night_vision',            "Gopher's Gruel",            {                'type': 'fast_digging',                'duration': 20 * 60 * 8,  # in ticks, so 20 seconds...                'amplifier': 50,  # likely excessive            },            {                'type': 'luck',                'duration': 20 * 60 * 8,  # in ticks, so 20 seconds...                'amplifier': 1,            },            player=player,            world=world,        )</pre>Custom effects are converted from the dictionaries to the PotionEffect type and the python code for potion_of just adds each of them in turn using addCustomEffect() for the PotionMeta.<p></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-11 21:40:35+00:00" class="dt-published"></time>
-  Fri 11 Nov 2022
+  on <time datetime="2022-11-12 20:34:15+00:00" class="dt-published"></time>
+  Sat 12 Nov 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,43 +232,76 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://steveire.wordpress.com/2022/11/11/grantlee-version-5-3-1-now-available/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Grantlee version 5.3.1 now available" target="_blank">
-      <time class="m-date" datetime="2022-11-11 20:55:50+00:00">
+    <a href="https://jlelse.blog/micro/2022/11/2022-11-12-phpmf" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2022-11-12 20:42:47+01:00">
         Nov
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      Grantlee version 5.3.1 now available
+      💬
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>I&#8217;ve just made a new 5.3.1 release of Grantlee. The <a href="https://steveire.wordpress.com/2022/09/10/grantlee-version-5-3-now-available/">5.3.0 release</a> had some build issues with Qt 6 which should now be resolved with <a href="https://github.com/steveire/grantlee/releases/tag/v5.3.1">version 5.3.1</a>.</p>
-
-<p>Unlike previous releases, this release will not appear on <a href="https://www.grantlee.org/downloads/">http://www.grantlee.org/downloads/</a>. I&#8217;ll be turning off grantlee.org soon. All previous releases have already been uploaded to <a href="https://github.com/steveire/grantlee/releases">https://github.com/steveire/grantlee/releases</a>.</p>
-
-<p>The continuation of Grantlee for Qt 6 is happening as <a href="https://invent.kde.org/libraries/ktexttemplate">KTextTemplate</a> so as not to be constrained by my lack of availability. I&#8217;ll only make new Grantlee patch releases as needed to fix any issues that come up in the meantime.</p>
-
-<p>Many thanks to the KDE community for taking up stewardship and ownership of this library!</p>
-
-
-
-
-<p></p>
+  Although there are definitely reasons to hate Windows, there are also reasons to like Windows 11: Linux GUI apps, Android apps, winget package manager and improved window tiling. It would be even better, when one wouldn’t need to toogle all the privacy and telemety settings first…
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Stephen Kelly</b></span>
-  on <time datetime="2022-11-11 20:55:50+00:00" class="dt-published"></time>
-  Fri 11 Nov 2022
-  in Planet KDE.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-12 20:42:47+01:00" class="dt-published"></time>
+  Sat 12 Nov 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html" rel="bookmark" class="u-url"
+       title="In praise of Plan 9" target="_blank">
+      <time class="m-date" datetime="2022-11-12 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      In praise of Plan 9
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs">Plan 9</a> is an operating system designed by Bell Labs. It&rsquo;s the OS they wrote
+<em>after</em> Unix, with the benefit of hindsight. It is the most interesting
+operating system that you&rsquo;ve never heard of, and, in my opinion, the best
+operating system design to date. Even if you haven&rsquo;t heard of Plan 9, the
+designers of whatever OS you <em>do</em> use have heard of it, and have incorporated
+some of its ideas into your OS.</p>
+<p>Plan 9 is a research operating system, and exists to answer questions about
+ideas in OS design. As such, the Plan 9 experience is in essence an exploration
+of the interesting ideas it puts forth. Most of the ideas are small. Many of
+them found a foothold in the broader ecosystem — UTF-8, goroutines, /proc,
+containers, union filesystems, these all have their roots …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-12 00:00:00+00:00" class="dt-published"></time>
+  Sat 12 Nov 2022
+  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -454,40 +521,6 @@ of files.</p>
   on <time datetime="2022-11-09 07:26:41+00:00" class="dt-published"></time>
   Wed 09 Nov 2022
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2022/11/2022-11-08-xmgxv" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2022-11-08 20:36:57+01:00">
-        Nov
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  One simple thing to noticeably reduce the router’s power consumption: turn off 2.4 GHz Wi-Fi. Meanwhile, almost every device supports 5 GHz.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-08 20:36:57+01:00" class="dt-published"></time>
-  Tue 08 Nov 2022
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -762,49 +795,6 @@ might pay or contribute. So there&#8217;s no …</p>
   on <time datetime="2022-10-29 07:37:17-04:00" class="dt-published"></time>
   Sat 29 Oct 2022
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2022/10/27/Kernel-hacking-with-Hare-part-3.html" rel="bookmark" class="u-url"
-       title="Notes from kernel hacking in Hare, part 3: serial driver" target="_blank">
-      <time class="m-date" datetime="2022-10-27 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          27
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Notes from kernel hacking in Hare, part 3: serial driver
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Today I would like to show you the implementation of the first userspace driver
-for Helios: a simple serial driver. All of the code we&rsquo;re going to look at today
-runs in userspace, not in the kernel, so strictly speaking this should be &ldquo;notes
-from OS hacking in Hare&rdquo;, but I won&rsquo;t snitch if you don&rsquo;t.</p>
-<p><em>Note: In the <a href="https://drewdevault.com/2022/10/02/Kernel-hacking-with-Hare-part-2.html">previous entry</a> to this series, I promised to cover the
-userspace threading API in this post. I felt like covering this instead. Sorry!</em></p>
-<p>A serial port provides a simple protocol for transferring data between two
-systems. It generalizes a bit, but for our purposes we can just think of this as
-a terminal which you can use over a simple cable and a simple protocol. It&rsquo;s a
-standard x86_64 feature (though one which has been out …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-10-27 00:00:00+00:00" class="dt-published"></time>
-  Thu 27 Oct 2022
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
