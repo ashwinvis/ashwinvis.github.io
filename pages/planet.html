@@ -166,10 +166,10 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <h1>
     <a href="https://switowski.com/blog/how-to-benchmark-python-code/" rel="bookmark" class="u-url"
        title="Sebastian Witowski: How to Benchmark (Python) Code" target="_blank">
-      <time class="m-date" datetime="2022-11-13 21:40:10+00:00">
+      <time class="m-date" datetime="2022-11-14 21:40:25+00:00">
         Nov
         <span class="m-date-day">
-          13
+          14
         </span>
         2022
       </time>
@@ -180,21 +180,222 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  <p>While preparing to write the &quot;Writing Faster Python&quot; series, the first problem I faced was &quot;How do I benchmark a piece of code in an objective, yet uncomplicated way&quot;.</p>
-<p>I could run <code>python -m timeit &lt;piece of code&gt;</code> which is probably the simplest way of measuring how long it takes to execute some code<a href="https://switowski.com/blog/how-to-benchmark-python-code/#fn1">[1]</a>. But maybe it's too simple and I owe my readers some way of benchmarking that won't be interfered by sudden CPU spikes on my computer?</p>
-<p>So here are a couple of different tools and techniques I tried. At the end of the article I will tell you which one I chose and why. Plus I will give you some rules of thumb when each tool might be handy.</p>
+  <p>While preparing to write the &quot;Writing Faster Python&quot; series, the first problem I faced was &quot;How do I benchmark a piece of code in an objective yet uncomplicated way&quot;.</p>
+<p>I could run <code>python -m timeit &lt;piece of code&gt;</code>, which is probably the simplest way of measuring how long it takes to execute some code<a href="https://switowski.com/blog/how-to-benchmark-python-code/#fn1">[1]</a>. But maybe it's too simple, and I owe my readers some way of benchmarking that won't be interfered by sudden CPU spikes on my computer?</p>
+<p>So here are a couple of different tools and techniques I tried. At the end of the article, I will tell you which one I chose and why. Plus, I will give you some rules of thumb for when each tool might be handy.</p>
 
 python -m timeit <a href="https://switowski.com/blog/how-to-benchmark-python-code/#python-m-timeit">#</a>
-<p>The easiest way to measure how long it takes to run some code is …</p>
+<p>The easiest way to measure how long it takes to run some code …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-13 21:40:10+00:00" class="dt-published"></time>
-  Sun 13 Nov 2022
+  on <time datetime="2022-11-14 21:40:25+00:00" class="dt-published"></time>
+  Mon 14 Nov 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nibblestew.blogspot.com/2022/11/if-you-dont-tolerate-it-in-new-code-you.html" rel="bookmark" class="u-url"
+       title="If you don't tolerate it in new code you should not tolerate it in old code either" target="_blank">
+      <time class="m-date" datetime="2022-11-14 18:52:00+00:00">
+        Nov
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      If you don't tolerate it in new code you should not tolerate it in old code either
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Let's assume that you are working on a code base and notice that it has some minor issue. For argument's sake we'll say that it has some self written functionality and that the language's standard library has added identical functionality recently. Let's further assume that that said implementation behaves exactly the same as the self written one. At this point you might decide to clean up the code base, make it use the stdlib implementation and delete the custom code. This seems like a nice cleanup so you then file merge request to get the thing changed.</p><p>It might be accepted and merged without problems. On the other hand it might be blocked, either temporarily or permanently. There are several valid reasons for not merging the change. For example:</p><p></p><ol><li>That part of the code does not have sufficient tests so …</li></ol>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2022-11-14 18:52:00+00:00" class="dt-published"></time>
+  Mon 14 Nov 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jriddell.org/2022/11/14/ubuntu-summit-2022-prague/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Ubuntu Summit 2022 Prague" target="_blank">
+      <time class="m-date" datetime="2022-11-14 13:49:22+00:00">
+        Nov
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Ubuntu Summit 2022 Prague
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://jriddell.org/wp-content/uploads/2022/11/image.png"><img alt="" src="https://jriddell.org/wp-content/uploads/2022/11/image-1024x537.png"></a>
+Arriving for the first session
+
+
+
+<p>One of the lovelyest things about open community development is you can do it from home but you also get to travel to fancy places to meet your fellow devs and share ideas.  Lockdowns stopped that for two years but with Akademy last month it felt like open tech life could return to a more fun state.  Then came the return of a meeting that had last happened a decade ago, the Ubuntu Summit.  A bunch of KDE devs were invited, me (who does KDE neon), Ade (who does Calamares installer), Scarlett (who does Snap packages), Aleix (who does Discover app installers), Harald (KDE neon), Luca (OpenRazor and hangs around KDE).</p>
+
+
+
+
+<a href="https://jriddell.org/wp-content/uploads/2022/11/image-1.png"><img alt="" src="https://jriddell.org/wp-content/uploads/2022/11/image-1-1024x473.png"></a>
+Scarlett Gives a Workshop on KDE apps as Snap packages
+
+
+
+<p>Unlike the old Ubuntu Developer Summits this wasn&#8217;t aimed at planning the next …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jonathan Esk-Riddell</b></span>
+  on <time datetime="2022-11-14 13:49:22+00:00" class="dt-published"></time>
+  Mon 14 Nov 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/11/14/luxury-surveillance/" rel="bookmark" class="u-url"
+       title="Pluralistic: 14 Nov 2022 Even if you're paying for the product, you're still the product" target="_blank">
+      <time class="m-date" datetime="2022-11-14 08:01:45+00:00">
+        Nov
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: 14 Nov 2022 Even if you're paying for the product, you're still the product
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Even if you're paying for the product, you're still the product: Incentives matter, but impunity matters more. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Even if you're paying for the product, you're still the product (permalink) There's something oddly comforting about the idea that "if you're not paying for the product, you're the product," namely, the corollary: "If you can afford to pay for a product, you won't be the product." But it's bullshit. Companies don't make you the product because you don't pay &#8211; they make you the product because you can't stop them. The theory behind "if you're not paying for the product&#8230;" is that old economist's saw: "incentives matter." Companies that monetize attention are incentivized to …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2022-11-14 08:01:45+00:00" class="dt-published"></time>
+  Mon 14 Nov 2022
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2698/" rel="bookmark" class="u-url"
+       title="Bad Date" target="_blank">
+      <time class="m-date" datetime="2022-11-14 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Bad Date
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="&quot;Even split between us, this will pay way better than the Jumanji sponsorship I came into the date with.&quot;" src="https://imgs.xkcd.com/comics/bad_date.png" title="&quot;Even split between us, this will pay way better than the Jumanji sponsorship I came into the date with.&quot;">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-14 00:00:00+00:00" class="dt-published"></time>
+  Mon 14 Nov 2022
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2022/11/14/scaling-mastodon/" rel="bookmark" class="u-url"
+       title="Scaling Mastodon is Impossible" target="_blank">
+      <time class="m-date" datetime="2022-11-14 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          14
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Scaling Mastodon is Impossible
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In light of <a href="https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk">recent events at Twitter</a> a
+lot of the people that I follow (or used to follow) on that platform have
+started evaluating (or moved) to <a href="https://en.wikipedia.org/wiki/Mastodon_(software)">Mastodon</a>.  And <a href="https://hachyderm.io/&#64;mitsuhiko">I also
+have a Mastodon account now</a>.  But
+after a few days with this thing I have a lot of thoughts on this that are
+too long for a Tweet or Toot.  Since some of my followers asked though I
+decided do a longform version of this and explain my dissatifaction with
+Mastodon a bit better.</p>
+<p>The short version of this is that I believe that Mastodon — more
+specifically federation and decentralization won't work out.</p>
+<div>
+
+My Claim: Decentralization is a Questionable Goal
+<p>In the last few years a lot of centralized services did not develop like
+people wanted which I believe resulted in the pendulum prominently swinging
+towards decentralization.</p>
+<p>Decentralization …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2022-11-14 00:00:00+00:00" class="dt-published"></time>
+  Mon 14 Nov 2022
+  in Armin Ronacher's Thoughts and Writings.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -271,74 +472,6 @@ python -m timeit <a href="https://switowski.com/blog/how-to-benchmark-python-cod
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/11/13/graceful-failure/" rel="bookmark" class="u-url"
-       title="Pluralistic: 13 Nov 2022 The Framework is the most exciting laptop I've ever broken" target="_blank">
-      <time class="m-date" datetime="2022-11-13 11:47:55+00:00">
-        Nov
-        <span class="m-date-day">
-          13
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: 13 Nov 2022 The Framework is the most exciting laptop I've ever broken
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links The Framework is the most exciting laptop I've ever broken: If you only pay attention to how things work, you'll be screwed when they fail. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The Framework is the most exciting laptop I've ever broken (permalink) From the moment I started using computers, I wanted to help other people use them. I was everyone's tech support for years, which prepared me for the decade or so when I was a CIO-for-hire. In the early days of the internet, I spent endless hours helping my BBS friends find their way onto the net. Helping other people use technology requires humility: you have to want to help them realize their goals, which may …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-11-13 11:47:55+00:00" class="dt-published"></time>
-  Sun 13 Nov 2022
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://rabbitictranslator.com/wordpress/index.php/2022/11/12/latinoware-2022/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Network Brazil – Latinoware 2022" target="_blank">
-      <time class="m-date" datetime="2022-11-12 23:38:50+00:00">
-        Nov
-        <span class="m-date-day">
-          12
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Network Brazil – Latinoware 2022
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  From 01/11 until 05/11, I went from São Paulo to Foz do Iguaçu in Paraná to tend to the KDE booth at the biggest free software event of Latin America, Latinoware 2022, together with two great people who have been attending Latinoware for years, Pedro and Barbara, and who have been contributing to KDE longer &#8230; <a href="https://rabbitictranslator.com/wordpress/index.php/2022/11/12/latinoware-2022/">Continue reading<span> "KDE Network Brazil &#8211; Latinoware 2022"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Thiago Masato Costa Sueto</b></span>
-  on <time datetime="2022-11-12 23:38:50+00:00" class="dt-published"></time>
-  Sat 12 Nov 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html" rel="bookmark" class="u-url"
        title="In praise of Plan 9" target="_blank">
       <time class="m-date" datetime="2022-11-12 00:00:00+00:00">
@@ -375,40 +508,6 @@ containers, union filesystems, these all have their roots …</p>
   on <time datetime="2022-11-12 00:00:00+00:00" class="dt-published"></time>
   Sat 12 Nov 2022
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2697/" rel="bookmark" class="u-url"
-       title="Y2K and 2038" target="_blank">
-      <time class="m-date" datetime="2022-11-11 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          11
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Y2K and 2038
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="It's taken me 20 years, but I've finally finished rebuilding all my software to use 33-bit signed ints." src="https://imgs.xkcd.com/comics/y2k_and_2038.png" title="It's taken me 20 years, but I've finally finished rebuilding all my software to use 33-bit signed ints.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-11 00:00:00+00:00" class="dt-published"></time>
-  Fri 11 Nov 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -467,69 +566,6 @@ of files.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://thisweek.gnome.org/posts/2022/11/twig-69/" rel="bookmark" class="u-url"
-       title="#69 Zapping Through Videos" target="_blank">
-      <time class="m-date" datetime="2022-11-11 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          11
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      #69 Zapping Through Videos
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Update on what happened across the GNOME project in the week from November 04 to November 11.</p>
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#circle-apps-and-libraries"></a>Circle Apps and Libraries
-<p><a href="https://matrix.to/#/@sophieherold:gnome.org">Sophie</a> says</p>
-<blockquote>
-<p>This week, Zap joined GNOME Circle. Zap allows you to play all your favorite sounds from a sound board to make your livestreams more entertaining. Congratulations!
-
-<img alt="" src="https://thisweek.gnome.org/posts/2022/11/twig-69/98958bb87c64448a727be4ae36b812914f924589.png">
-</p>
-</blockquote>
-
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#newsflash-feed-reader"></a>NewsFlash feed reader <a href="https://gitlab.com/news-flash/news_flash_gtk"></a>
-<p>Follow your favorite blogs &amp; news sites.</p>
-<p><a href="https://matrix.to/#/@jangernert:matrix.org">Jan Lukas</a> says</p>
-<blockquote>
-<p>NewsFlash 2.1.3 was released this week. It mostly features improvements for Google Reader API based implementations e.g. FreshRSS &amp; Inoreader. For existing users of these implementations I suggest to reset your account in NewsFlash and log back in for the best experience.</p>
-</blockquote>
-
-
-
-
-<a href="https://thisweek.gnome.org/author/felix/index.xml#gaphor"></a>Gaphor <a href="https://gaphor.org"></a>
-<p>A simple UML and SysML modeling tool.</p>
-<p><a href="https://matrix.to/#/@Yeaw:matrix.org">Dan Yeaw</a> says</p>
-<blockquote>
-<p><a href="https://gaphor.org/">Gaphor</a>, the simple modeling tool, recently completed some modernization of our UI using libadwaita. Our next release will feature a new about dialog, message …</p></blockquote>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-11 00:00:00+00:00" class="dt-published"></time>
-  Fri 11 Nov 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://noyb.eu/en/gdpr-rights-sweden" rel="bookmark" class="u-url"
        title="GDPR Rights in Sweden: Court confirms that authority must investigate complaints." target="_blank">
       <time class="m-date" datetime="2022-11-09 07:26:41+00:00">
@@ -560,6 +596,40 @@ of files.</p>
   on <time datetime="2022-11-09 07:26:41+00:00" class="dt-published"></time>
   Wed 09 Nov 2022
   in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://peps.python.org/pep-8104/" rel="bookmark" class="u-url"
+       title="PEP 8104: 2023 Term Steering Council election" target="_blank">
+      <time class="m-date" datetime="2022-11-08 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          08
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      PEP 8104: 2023 Term Steering Council election
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  This document describes the schedule and other details of the December 2022 election for the Python steering council, as specified in PEP 13. This is the steering council election for the 2023 term (i.e. Python 3.12).
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ee Durbin (ee@python.org)</b></span>
+  on <time datetime="2022-11-08 00:00:00+00:00" class="dt-published"></time>
+  Tue 08 Nov 2022
+  in Newest Python PEPs.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -837,41 +907,6 @@ might pay or contribute. So there&#8217;s no …</p>
   on <time datetime="2022-10-29 07:37:17-04:00" class="dt-published"></time>
   Sat 29 Oct 2022
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pythoninsider.blogspot.com/2022/10/python-3120-alpha-1-released.html" rel="bookmark" class="u-url"
-       title="Python 3.12.0 alpha 1 released" target="_blank">
-      <time class="m-date" datetime="2022-10-25 00:00:00-04:00">
-        Oct
-        <span class="m-date-day">
-          25
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Python 3.12.0 alpha 1 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>&nbsp;As Pablo released Python 3.11.0 final earlier today, now it's my turn to release Python 3.12.0 alpha 1.</p><b><div><p><a href="https://www.python.org/downloads/release/python-3120a1/"><span>https://www.python.org/downloads/release/python-3120a1/</span></a></p></div><div><b></b></div>This is an early developer preview of Python 3.12</b>
-<span>Major new features of the 3.12 series, compared to 3.11</span>Python 3.12 is still in development. This release, 3.12.0a1, is the first of seven planned alpha releases.Alpha releases are intended to make it easier to test the current state of new features and bug fixes and to test the release process.During the alpha phase, features may be added up until the start of the beta phase (2023-05-08) and, if necessary, may be modified or deleted up until the release candidate phase (2023-07-31). Please keep in mind that this is a preview release and its …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Thomas Wouters (noreply@blogger.com)</b></span>
-  on <time datetime="2022-10-25 00:00:00-04:00" class="dt-published"></time>
-  Tue 25 Oct 2022
-  in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
 
