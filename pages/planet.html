@@ -164,31 +164,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://feaneron.com/2022/11/18/boatswain-0-2-2-is-out/" rel="bookmark" class="u-url"
-       title="Boatswain 0.2.2 is out!" target="_blank">
-      <time class="m-date" datetime="2022-11-18 19:24:46+00:00">
+    <a href="https://samthursfield.wordpress.com/2022/11/19/status-update-19-11-2022/" rel="bookmark" class="u-url"
+       title="Status update, 19/11/2022" target="_blank">
+      <time class="m-date" datetime="2022-11-19 18:29:08+00:00">
         Nov
         <span class="m-date-day">
-          18
+          19
         </span>
         2022
       </time>
       <div class="p-name">
-      Boatswain 0.2.2 is out!
+      Status update, 19/11/2022
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Last week, I’ve rolled out the 0.2.1 release of Boatswain, the Elgato Stream Deck application for Linux. After the massive push to get the initial releases out, the development pace naturally slowed down, but I managed to pick up some new fancy features for this release. The most visible new feature is dragging button actions … <a href="https://feaneron.com/2022/11/18/boatswain-0-2-2-is-out/">Continue reading <span>Boatswain 0.2.2 is out!</span> <span>→</span></a>
+  Audio Developer Conference I was at ADC 2022 last week – thanks to Codethink as always for covering the cost and allowing me 2 days time off to attend. It was my first time attending in person, and besides the amazing talks (which will appear online here around the end of this month), I had … <a href="https://samthursfield.wordpress.com/2022/11/19/status-update-19-11-2022/">Continue reading <span>Status update, 19/11/2022</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>feaneron</b></span>
-  on <time datetime="2022-11-18 19:24:46+00:00" class="dt-published"></time>
-  Fri 18 Nov 2022
+  <span class="p-author"><b>Sam Thursfield</b></span>
+  on <time datetime="2022-11-19 18:29:08+00:00" class="dt-published"></time>
+  Sat 19 Nov 2022
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,35 +198,55 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tobiasfella.de/posts/neochat-e2ee/?utm_source=atom_feed?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="NeoChat, encryption, and thanks for all the olms" target="_blank">
-      <time class="m-date" datetime="2022-11-18 19:00:00+00:00">
+    <a href="https://www.volkerkrause.eu/2022/11/19/qt-qnetworkaccessmanager-best-practices.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Secure and efficient QNetworkAccessManager use" target="_blank">
+      <time class="m-date" datetime="2022-11-19 09:30:00+00:00">
         Nov
         <span class="m-date-day">
-          18
+          19
         </span>
         2022
       </time>
       <div class="p-name">
-      NeoChat, encryption, and thanks for all the olms
+      Secure and efficient QNetworkAccessManager use
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Ever since work on NeoChat has started in 2020, the most requested feature has been support for end-to-end (E2EE) encrypted rooms. Unfortunately, while libQuotient, the library NeoChat uses for dealing with the Matrix protocol, had some pre-existing support for E2EE, it was not in a functional state at that time and was thus not enabled by default.</p>
-<p><img alt="" src="encrypted-messages.png"></p>
+  <p>Doing HTTP operations with Qt is relatively straightforward, but there are also a few pitfalls, unexpected
+default settings and low-hanging performance improvements around it worth keeping in mind.</p>
 
-History
-<p>Early in 2021, Carl and I were made aware of <a href="https://nlnet.nl/">NlNet</a>, a dutch foundation that sponsors many open source projects, and decided to apply for some funding there to expedite the development process. Fortunately, the application process at NlNet is very light-weight, so there isn&rsquo;t a lot of risk involved in applying for funding. A while after sending our application, NlNet got back to us with the good news that they would indeed be funding E2EE work for NeoChat and libQuotient …</p>
+
+Delete replies
+
+<p>The most common and most easily to make mistake when working with <code>QNetworkAccessManager</code> is probably
+missing to delete finished replies, and thus leaking reply objects over time. Make sure to call <code>deleteLater()</code>
+on the <code>QNetworkReply</code> instances in response to their <code>finished()</code> signal.</p>
+
+
+<pre><code><span>QNetworkReply</span> <span>*</span><span>reply</span> <span>=</span> <span>...</span>
+<span>connect</span><span>(</span><span>reply</span><span>,</span> <span>&amp;</span><span>QNetworkReply</span><span>::</span><span>finished</span><span>,</span> <span>this</span><span>,</span> <span>[</span><span>reply</span><span>]())</span> <span>&#123;</span>
+    <span>reply</span><span>-&gt;</span><span>deleteLater</span><span>();</span>
+    <span>...</span>
+<span>});</span></code></pre>
+
+
+Use transport security
+
+<p>That is, use URLs starting with <code>https:</code> rather than <code>http:</code>. That might sound obvious, but the little <code>s</code> is
+easy to miss.</p>
+
+<p>So, pay extra attention to hardcoded URLs and think about how to deal with URLs taken from user input. In the best
+case the <code>https:</code> scheme can just be enforced unconditionally, but that …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Tobias Fella</b></span>
-  on <time datetime="2022-11-18 19:00:00+00:00" class="dt-published"></time>
-  Fri 18 Nov 2022
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2022-11-19 09:30:00+00:00" class="dt-published"></time>
+  Sat 19 Nov 2022
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -236,40 +256,218 @@ History
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.pythonforbeginners.com/basics/custom-json-encoder-in-python" rel="bookmark" class="u-url"
-       title="Python for Beginners: Custom JSON Encoder in Python" target="_blank">
-      <time class="m-date" datetime="2022-11-18 14:00:00+00:00">
+    <a href="https://www.nbshare.io/notebook/76246860/TTM-Squeeze-Stocks-Scanner-Using-Python/" rel="bookmark" class="u-url"
+       title="John Ludhi/nbshare.io: TTM Squeeze Stocks Scanner Using Python" target="_blank">
+      <time class="m-date" datetime="2022-11-19 04:38:48+00:00">
         Nov
         <span class="m-date-day">
-          18
+          19
         </span>
         2022
       </time>
       <div class="p-name">
-      Python for Beginners: Custom JSON Encoder in Python
+      John Ludhi/nbshare.io: TTM Squeeze Stocks Scanner Using Python
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>JSON objects are one of the most efficient ways to transmit information on the internet. However, we cannot directly convert all types of data into JSON. In this article, we will discuss different ways to create a custom JSON encoder to convert python objects into JSON format in Python.</p>
+  <div><div>
+<div>
+<div>
+</div>
+<div><div>
+</div><div>
+
+TTM Squeeze Stocks Scanner Using Python<a href="https://www.nbshare.io/feeds/all.atom.xml#TTM-Squeeze-Stocks-Scanner-Using-Python"></a>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+</div>
+<div><div>
+</div><div>
+<p>In this tutorial, I will build a TTM Squeeze scanner using Python and Mongodb</p>
+
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+</div>
+<div><div>
+</div><div>
+<p>Let us first import the necessary packages for pandas and pymongo.</p>
+
+</div>
+</div>
+</div>
+</div><div>
+<div>
+<div>
+</div>
+<div>
+<div>In&#160;[1]:</div>
+<div>
+     <div>
+<div><pre><span></span><span>import</span> <span>pymongo</span>
+<span>from</span> <span>pymongo</span> <span>import</span> <span>MongoClient</span>
+<span>import</span> <span>datetime</span>
+<span>import</span> <span>pandas</span> <span>as</span> <span>pd</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+<div>
+</div>
+<div><div>
+</div><div>
+<p>I have stocks data for all stocks in mongodb. 
+Let us initiate the mongo DB Connection.</p>
+
+</div>
+</div>
+</div>
+</div><div>
+<div>
+<div>
+</div>
+<div>
+<div>In&#160;[&#160;]:</div>
+<div>
+     <div>
+<div><pre><span></span><span>client</span> <span>=</span> <span>MongoClient</span><span>(</span><span>'mongodb://localhost:27017'</span><span>)</span>
+<span>db</span> <span>=</span> <span>client</span><span>[</span><span>'stocksdb'</span><span>]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<div>
+<div>
+</div>
+<div><div>
+</div><div>
+<p>Let us look at our stock document. Document is similar to a row in MySQL.</p>
+
+</div>
+</div>
+</div>
+</div><div>
+<div>
+<div>
+</div>
+<div>
+<div>In&#160;[4]:</div>
+<div>
+     <div>
+<div><pre><span></span><span>db</span><span>.</span><span>stock_data</span><span>.</span><span>find_one</span><span>()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div>
+<div>
+</div>
+
+
+<div>
+<div>
+
+    <div>Out[4]:</div>
 
 
 
-<p>This article discusses how to create a custom JSON encoder in Python. If you don&#8217;t haven&#8217;t worked with JSON files even with the default encoders, I suggest you read this article on <a href="https://www.pythonforbeginners.com/basics/working-with-json-files-in-python">working with JSON files in Python</a>.</p>
 
+<div>
+<pre>{'_id': ObjectId('6202f99a80d4ed2d9c536156'),
+ 'date': datetime.datetime(2020, 1, 2, 0, 0),
+ 'open': 21.86,
+ 'high': 21.86,
+ 'low': 21.315,
+ 'close': 21.42,
+ 'adjusted_close': 21.3733,
+ 'volume': 3062541,
+ 'ticker': 'AA',
+ 'perchange': None}</pre>
+</div>
 
+</div>
 
-<div><span><span>Table of Contents</span><span></span></span><div><ol><li><a href="https://www.pythonforbeginners.com/feed#htoc-convert-python-object-to-json-using-the-dump-method">Convert Python Object to JSON Using The dump() Method</a><ol><li><a href="https://www.pythonforbeginners.com/feed#htoc-create-custom-json-encoder-using-the-default-parameter">Create Custom JSON Encoder Using the “default” Parameter</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-create-custom-json-encoder-using-the-cls-parameter">Create Custom JSON Encoder Using the “cls” Parameter</a></li></ol></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-convert-python-objects-to-json-using-the-dumps-method">Convert Python Objects to JSON Using the dumps() Method</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-convert-python-object-to-json-using-the-jsonencoder-class">Convert Python Object to JSON Using the JSONEncoder Class</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-json-encoder-for-converting-complex-python-objects-to-json">JSON Encoder for Converting Complex …</a></li></ol></div></div>
+</div>
+
+</div>
+
+</div>
+<div>
+<div>
+<div>
+</div>
+<div><div>
+</div><div>
+<p>From the collection/table in mongodb, we can retrieve the data by date …</p></div></div></div></div></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-18 14:00:00+00:00" class="dt-published"></time>
-  Fri 18 Nov 2022
+  on <time datetime="2022-11-19 04:38:48+00:00" class="dt-published"></time>
+  Sat 19 Nov 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://linderud.dev/blog/coredumpctl-delve-and-debug-packages-for-go/" rel="bookmark" class="u-url"
+       title="coredumpctl, delve and debug packages for Go" target="_blank">
+      <time class="m-date" datetime="2022-11-19 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          19
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      coredumpctl, delve and debug packages for Go
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I have spent a fair amount of time hacking on debug packages the past two years. This work resulted in Arch Linux announcing the public debuginfod server which allows users to download symbols and source code to debug software running on their system.
+With this service users don&rsquo;t need to figure out what the debug packages are called, installing them and maybe removing it afterwards. It also saves a fair amount of data you need to download.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-19 00:00:00+00:00" class="dt-published"></time>
+  Sat 19 Nov 2022
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -757,40 +955,6 @@ containers, union filesystems, these all have their roots …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://felixc.at/2022/11/arch-systemd-era-nbd-client-persistent-config/" rel="bookmark" class="u-url"
-       title="[Arch] systemd 时代的 NBD 客户端持久化配置方法" target="_blank">
-      <time class="m-date" datetime="2022-11-08 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      [Arch] systemd 时代的 NBD 客户端持久化配置方法
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  NBD 用于提供块设备给远程设备使用是一种非常简便、低成本的方法。然而，让 NBD 开始工作的方法在网上能找到很多，但是 NBD 客户端的配置持久化却很难搜到比较完整的资料。在参考了一些过时博客、manpage 等比较分散的资料之后，我总算是凭借蛛丝马迹找到了应当是正确的配置方法。 1、自动加载 nbd 内核模块 echo nbd &gt; /etc/modules-load.d/nbd.conf （虽然——我觉得这件事 …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Felix Yan</b></span>
-  on <time datetime="2022-11-08 00:00:00+00:00" class="dt-published"></time>
-  Tue 08 Nov 2022
-  in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pyfound.blogspot.com/2022/11/its-time-for-our-annual-year-end-psf.html" rel="bookmark" class="u-url"
        title="It's time for our annual year-end PSF fundraiser and membership drive 🎉" target="_blank">
       <time class="m-date" datetime="2022-11-07 12:30:00.001000-05:00">
@@ -901,50 +1065,6 @@ soon, and this blog post is partly prep for that …</p>
   on <time datetime="2022-10-31 16:00:43+00:00" class="dt-published"></time>
   Mon 31 Oct 2022
   in Unsung Films.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202210/ideal_open_source.html" rel="bookmark" class="u-url"
-       title="Ideal open source" target="_blank">
-      <time class="m-date" datetime="2022-10-29 07:37:17-04:00">
-        Oct
-        <span class="m-date-day">
-          29
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Ideal open source
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>A friend asked my opinion about DHH&#8217;s essay from last year:
-<a href="https://world.hey.com/dhh/i-won-t-let-you-pay-me-for-my-open-source-d7cf4568">I won&#8217;t let you pay me for my open source</a>.
-</p><p>He makes some interesting points about how Bill Gates and Richard Stallman,
-the poster children for capitalism and open source, normally considered polar
-opposites, are actually driven by the same economic fears of scarcity.  Gates&#8217;
-fear is that people will use software without paying, Stallman&#8217;s fear is that
-they won&#8217;t contribute.</p><p>But then he moves into his ideal view of open source, which is that it can be
-completely removed from these economic fears and constraints, because there is
-no scarcity.  If I write software, and you use it without paying or
-contributing, I am not harmed.  And your actions also don&#8217;t harm other users who
-might pay or contribute. So there&#8217;s no …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2022-10-29 07:37:17-04:00" class="dt-published"></time>
-  Sat 29 Oct 2022
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
