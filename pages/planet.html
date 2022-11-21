@@ -164,32 +164,54 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://samthursfield.wordpress.com/2022/11/19/status-update-19-11-2022/" rel="bookmark" class="u-url"
-       title="Status update, 19/11/2022" target="_blank">
-      <time class="m-date" datetime="2022-11-19 18:29:08+00:00">
+    <a href="https://dvratil.cz/2022/11/qcoro-0.7.0-release-announcement/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="QCoro 0.7.0 Release Announcement" target="_blank">
+      <time class="m-date" datetime="2022-11-20 23:52:00+00:00">
         Nov
         <span class="m-date-day">
-          19
+          20
         </span>
         2022
       </time>
       <div class="p-name">
-      Status update, 19/11/2022
+      QCoro 0.7.0 Release Announcement
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Audio Developer Conference I was at ADC 2022 last week – thanks to Codethink as always for covering the cost and allowing me 2 days time off to attend. It was my first time attending in person, and besides the amazing talks (which will appear online here around the end of this month), I had … <a href="https://samthursfield.wordpress.com/2022/11/19/status-update-19-11-2022/">Continue reading <span>Status update, 19/11/2022</span></a>
+
+
+QCoro 0.7.0 Release Announcement
+
+<p>The major new feature in this release is initial QML support, contributed by
+Jonah Brüchert. Jonah also contributed <code>QObject::connect</code> helper and
+a coroutine version of QQuickImageProvider. As always, this release includes
+some smaller enhancements and bugfixes, you can find a full list of them
+on the Github release page.</p>
+
+<p>As always, big thank you to everyone who report issues and contributed to QCoro.
+Your help is much appreciated!</p>
+
+
+Initial QML Support
+
+<p>Jonah Brüchert has contributed initial support for QML. Unfortunately, we
+cannot extend the QML engine to support the <code>async</code> and <code>await</code> keywords from
+ES8, but we can make it possible to set a callback from QML that should be
+called when the coroutine finishes.</p>
+
+<p>The problem with <code>QCoro::Task</code> is that it is a template class so it cannot be
+registered into …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Sam Thursfield</b></span>
-  on <time datetime="2022-11-19 18:29:08+00:00" class="dt-published"></time>
-  Sat 19 Nov 2022
-  in Planet GNOME.
+  <span class="p-author"><b>Daniel Vrátil</b></span>
+  on <time datetime="2022-11-20 23:52:00+00:00" class="dt-published"></time>
+  Sun 20 Nov 2022
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -198,56 +220,49 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.volkerkrause.eu/2022/11/19/qt-qnetworkaccessmanager-best-practices.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Secure and efficient QNetworkAccessManager use" target="_blank">
-      <time class="m-date" datetime="2022-11-19 09:30:00+00:00">
+    <a href="https://informatique-libre.be/swilmet/blog/2022-11-20-gedit-crowdfunding.html" rel="bookmark" class="u-url"
+       title="gedit crowdfunding" target="_blank">
+      <time class="m-date" datetime="2022-11-20 10:00:00+00:00">
         Nov
         <span class="m-date-day">
-          19
+          20
         </span>
         2022
       </time>
       <div class="p-name">
-      Secure and efficient QNetworkAccessManager use
+      gedit crowdfunding
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Doing HTTP operations with Qt is relatively straightforward, but there are also a few pitfalls, unexpected
-default settings and low-hanging performance improvements around it worth keeping in mind.</p>
+  <p>
+  A short message to announce that
+  <a href="https://wiki.gnome.org/Apps/Gedit">gedit</a>
+  is again accepting donations!
+</p>
+<p>
+  More details
+  <a href="https://liberapay.com/gedit/">on Liberapay</a>.
+</p>
+<p>
+  Many thanks for your support.
+</p>
 
-
-Delete replies
-
-<p>The most common and most easily to make mistake when working with <code>QNetworkAccessManager</code> is probably
-missing to delete finished replies, and thus leaking reply objects over time. Make sure to call <code>deleteLater()</code>
-on the <code>QNetworkReply</code> instances in response to their <code>finished()</code> signal.</p>
-
-
-<pre><code><span>QNetworkReply</span> <span>*</span><span>reply</span> <span>=</span> <span>...</span>
-<span>connect</span><span>(</span><span>reply</span><span>,</span> <span>&amp;</span><span>QNetworkReply</span><span>::</span><span>finished</span><span>,</span> <span>this</span><span>,</span> <span>[</span><span>reply</span><span>]())</span> <span>&#123;</span>
-    <span>reply</span><span>-&gt;</span><span>deleteLater</span><span>();</span>
-    <span>...</span>
-<span>});</span></code></pre>
-
-
-Use transport security
-
-<p>That is, use URLs starting with <code>https:</code> rather than <code>http:</code>. That might sound obvious, but the little <code>s</code> is
-easy to miss.</p>
-
-<p>So, pay extra attention to hardcoded URLs and think about how to deal with URLs taken from user input. In the best
-case the <code>https:</code> scheme can just be enforced unconditionally, but that …</p>
+<p><em>
+  Even though it's not possible to write comments on this blog, don't hesitate
+  to drop me an email. I do read them, and like to have feedbacks and to
+  exchange ideas.
+</em></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2022-11-19 09:30:00+00:00" class="dt-published"></time>
-  Sat 19 Nov 2022
-  in Planet KDE.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-20 10:00:00+00:00" class="dt-published"></time>
+  Sun 20 Nov 2022
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
