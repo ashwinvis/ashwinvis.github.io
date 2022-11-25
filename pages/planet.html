@@ -164,12 +164,73 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://zerotomastery.io/blog/python-monthly-newsletter-november-2022/?utm_source=python-rss-feed" rel="bookmark" class="u-url"
-       title="Zero to Mastery: Python Monthly Newsletter 💻🐍" target="_blank">
-      <time class="m-date" datetime="2022-11-23 21:41:50+00:00">
+    <a href="https://jbb.ghsq.ga/2022/11/25/audiotube-improvements.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Recent AudioTube improvements" target="_blank">
+      <time class="m-date" datetime="2022-11-24 23:48:00+00:00">
         Nov
         <span class="m-date-day">
-          23
+          24
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Recent AudioTube improvements
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Since the last post about AudioTube, a lot has happened!
+So in this blog post, you can find a summary of the important changes.</p>
+
+
+Notable new features
+
+
+Library
+
+<p>AudioTube now has a library, in which you can see your favourite, most often and recently played songs.
+<img alt="library with rounded covers" src="//jbb.ghsq.ga/img/audiotube/library.png"></p>
+
+Filtering through previous searches
+
+<p>This allows searching through locally known songs and previous search terms, without even sending a request to youtube.
+<img alt="search dialogue which displays songs from your history" src="//jbb.ghsq.ga/img/audiotube/search.png"></p>
+
+Lyrics
+
+<p>While playing a song, you can now see the lyrics of the song in a separate tab.
+<img alt="lyrics shown in the player" src="//jbb.ghsq.ga/img/audiotube/lyrics.png"></p>
+
+User Interface improvements
+
+<p>Finally, AudioTube displays album covers everywhere. Devin Lin has redesigned and improved the actual audio player.
+Mathis Brüchert has done several design improvements across the board, like rounded album covers, improved spacing.</p>
+
+<p>The support for wider screens has also been improved, and the queue list will now only expand up too …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jonah Brüchert</b></span>
+  on <time datetime="2022-11-24 23:48:00+00:00" class="dt-published"></time>
+  Thu 24 Nov 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://zerotomastery.io/blog/python-monthly-newsletter-november-2022/?utm_source=python-rss-feed" rel="bookmark" class="u-url"
+       title="Zero to Mastery: Python Monthly Newsletter 💻🐍" target="_blank">
+      <time class="m-date" datetime="2022-11-24 21:41:16+00:00">
+        Nov
+        <span class="m-date-day">
+          24
         </span>
         2022
       </time>
@@ -187,8 +248,8 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-23 21:41:50+00:00" class="dt-published"></time>
-  Wed 23 Nov 2022
+  on <time datetime="2022-11-24 21:41:16+00:00" class="dt-published"></time>
+  Thu 24 Nov 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,49 +259,128 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2022/11/23/a-better-fundraising-platform/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="A better fundraising platform" target="_blank">
-      <time class="m-date" datetime="2022-11-23 21:38:16+00:00">
+    <a href="https://blogs.gnome.org/chergert/2022/11/24/concurrency-parallelism-i-o-scheduling-thread-pooling-and-work-stealing/" rel="bookmark" class="u-url"
+       title="Concurrency, Parallelism, I/O Scheduling, Thread Pooling, and Work-Stealing" target="_blank">
+      <time class="m-date" datetime="2022-11-24 20:07:05+00:00">
         Nov
         <span class="m-date-day">
-          23
+          24
         </span>
         2022
       </time>
       <div class="p-name">
-      A better fundraising platform
+      Concurrency, Parallelism, I/O Scheduling, Thread Pooling, and Work-Stealing
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>KDE is getting a much more user-friendly fundraising platform, and it&#8217;s a big deal!</p>
-
-
-
-
-
-
-
-
-<p>Currently our small-donor donation page is <a href="https://kde.org/community/donations">https://kde.org/community/donations</a>, which lets you make a single one-time donation. To make a recurring donation, you have to visit <a href="https://relate.kde.org">https://relate.kde.org</a>, which is less user-friendly, and it&#8217;s always struck me as odd to have these split up in two locations.</p>
-
-
-
-<p>Well, KDE is getting a much better donation system powered by <a href="https://donorbox.org/">Donorbox</a>, which I hope will turbocharge our fundraising! It&#8217;s very user-friendly and allows you to easily make recurring donations, which is important. We already set this up for <a href="https://kdenlive.org/en/fund">the Kdenlive fundraiser</a>, and it was a smash hit, raising 100% of the funds in the first month of the 3-month campaign. That fundraiser has since moved into stretch goals!</p>
-
-
-
-<p>We&#8217;ve now …</p>
+  Around 15 years ago I worked on some interesting pieces of software which are unfortunately still not part of my daily toolbox in GNOME and GTK programming. At the time, the world was going through changes to how we would write thread pools, particularly with regards to wait-free programming and thread-pooling. New trends like work-stealing … <a href="https://blogs.gnome.org/chergert/2022/11/24/concurrency-parallelism-i-o-scheduling-thread-pooling-and-work-stealing/">Continue reading <span>Concurrency, Parallelism, I/O Scheduling, Thread Pooling, and Work-Stealing</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2022-11-23 21:38:16+00:00" class="dt-published"></time>
-  Wed 23 Nov 2022
-  in Planet KDE.
+  <span class="p-author"><b>chergert</b></span>
+  on <time datetime="2022-11-24 20:07:05+00:00" class="dt-published"></time>
+  Thu 24 Nov 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article942/that-feeling-when-you-get-a-new-skill" rel="bookmark" class="u-url"
+       title="That feeling when you get a new skill." target="_blank">
+      <time class="m-date" datetime="2022-11-24 20:09:00+01:00">
+        Nov
+        <span class="m-date-day">
+          24
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      That feeling when you get a new skill.
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-11-24_that-feeling-when-you-get-a-new-skill.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-11-24_that-feeling-when-you-get-a-new-skill.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p><em>4K picture, click to enlarge.</em></p>
+<p>I'm still training my brushwork and my speed to complete artwork. My goal, is to sort of bypass drawing or inking totally and draw later with the thin brush while painting. After many failed tests, this one is starting to bring together a lot of aspects that I like. A good reason to share it with you. I hope you'll like it.</p>
+<p><strong>Process:</strong></p>
+<p>I don't have a lot of snapshots of this one, but this early 'block' painting of the process might give you clue of the technique used. I spent a lot of time finding a good brush to block volumes quickly while still having a little texture and not too much mixing or opacity variation to resist doing too early 'over modeling'. </p>
+<p><a href="https://www.davidrevoy.com/data/images/blog/2022/2022-11-24_that-feeling-when-you-get-a-new-skill_the-sketch.jpg"><img alt="" src="https://www.davidrevoy.com/data/images/blog/2022/2022-11-24_that-feeling-when-you-get-a-new-skill_the-sketch.jpg"></a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2022-11-24 20:09:00+01:00" class="dt-published"></time>
+  Thu 24 Nov 2022
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-meson-compiler-option-family/" rel="bookmark" class="u-url"
+       title="CMake and Meson compiler option family" target="_blank">
+      <time class="m-date" datetime="2022-11-24 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          24
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      CMake and Meson compiler option family
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>On Windows, compiler option syntax is generally MSVC-like or GCC-like.
+On Windows, the compiler option families are:</p>
+<ul>
+<li>MSVC-like: Intel oneAPI (IntelLLVM), Clang-CL, Visual Studio</li>
+<li>GCC-like: GCC, Clang, non-Windows OS}.</li>
+</ul>
+<p>Meson and CMake can each detect compiler option family.
+In general, the &ldquo;else&rdquo; branch would have further nested &ldquo;if&rdquo; to handle compiler options with distinct syntax.</p>
+<p>CMake uses the
+<a href="https://cmake.org/cmake/help/latest/variable/MSVC.html">MSVC variable</a>
+to detect compiler option family.
+More specific compiler option selection is often handled with an if-else tree for each compiler ID and / or <a href="https://cmake.org/cmake/help/latest/module/CheckCCompilerFlag.html">check_c_compiler_flag()</a>.</p>
+<div><pre><code><span><span>cmake_minimum_required(<span>VERSION</span> <span>3.1</span>)<span>
+</span></span></span><span><span><span>
+</span></span></span><span><span><span></span>project(<span>Hello</span> <span>LANGUAGES</span> <span>C</span>)<span>
+</span></span></span><span><span><span>
+</span></span></span><span><span><span></span>if(<span>MSVC</span>)<span>
+</span></span></span><span><span><span></span> message(<span>STATUS</span> <span>"${CMAKE_C_COMPILER_ID} is MSVC-like"</span>)<span>
+</span></span></span><span><span><span></span>else()<span>
+</span></span></span><span><span><span></span> message(<span>STATUS</span> <span>"${CMAKE_C_COMPILER_ID} is GCC-like"</span>)<span>
+</span></span></span><span><span><span></span>endif()<span>
+</span></span></span></code></pre></div><p>Meson uses the
+<a href="https://mesonbuild.com/Reference-manual_returned_compiler.html#compilerget_argument_syntax">.get_argument_syntax() property</a>
+to detect compiler option family.
+Getting more specific compiler options can be done with an if-else …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-24 00:00:00+00:00" class="dt-published"></time>
+  Thu 24 Nov 2022
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -401,50 +541,6 @@ instance mutexes in Rust are pretty convenient as a result:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/shell-detect-bash-zsh-other/" rel="bookmark" class="u-url"
-       title="Detect Bash, zsh or other shell" target="_blank">
-      <time class="m-date" datetime="2022-11-23 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          23
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Detect Bash, zsh or other shell
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>A
-<a href="https://www.av8n.com/computer/shell-dialect-detect">5-way shell detect script</a>
-can detect bash, csh, dash, ksh, or zsh.
-However, often we simply want to detect if the shell is Bash or something else.
-For example, in a Bash-dependent script we may thereby stop and recommend the user use Bash to avoid needing to test across numerous shells.
-There are a number of
-<a href="https://stackoverflow.com/a/41083844/7703794">pitfalls</a>
-in detecting a shell type so this method is not completely robust either, but has worked for our purposes.
-The key to this
-<a href="https://gist.github.com/scivision/6e6221a6ae6ad338dd257d6a689c5a6e">technique</a>
-is that while different shells have distinct &ldquo;if-else&rdquo; syntax, most shells have &ldquo;case-esac&rdquo;.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-23 00:00:00+00:00" class="dt-published"></time>
-  Wed 23 Nov 2022
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://treyhunner.com/2022/11/python-black-friday-and-cyber-monday-sales-2022/" rel="bookmark" class="u-url"
        title="Python Black Friday &amp; Cyber Monday sales (2022)" target="_blank">
       <time class="m-date" datetime="2022-11-22 10:15:00-08:00">
@@ -525,40 +621,6 @@ Save up to $108 a year on Python Morsels
   on <time datetime="2022-11-22 12:38:07+00:00" class="dt-published"></time>
   Tue 22 Nov 2022
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blogs.gnome.org/wjjt/2022/11/22/recovering-a-truncated-zoom-meeting-recording-on-endless-os/" rel="bookmark" class="u-url"
-       title="Recovering a truncated Zoom meeting recording on Endless OS" target="_blank">
-      <time class="m-date" datetime="2022-11-22 10:39:47+00:00">
-        Nov
-        <span class="m-date-day">
-          22
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Recovering a truncated Zoom meeting recording on Endless OS
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  One of my colleagues was recording a Zoom meeting. The session ended in such a way that the recording was left unfinished, named video2013876469.mp4.tmp. Trying to play it in Videos just gave the error “This file is invalid and cannot be played”. ffplay gave the more helpful error “moov atom not found”. It wasn’t too … <a href="https://blogs.gnome.org/wjjt/2022/11/22/recovering-a-truncated-zoom-meeting-recording-on-endless-os/">Continue reading<span> "Recovering a truncated Zoom meeting recording on Endless OS"</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Will Thompson</b></span>
-  on <time datetime="2022-11-22 10:39:47+00:00" class="dt-published"></time>
-  Tue 22 Nov 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -671,42 +733,6 @@ With this service users don&rsquo;t need to figure out what the debug packages a
   on <time datetime="2022-11-18 10:41:11+00:00" class="dt-published"></time>
   Fri 18 Nov 2022
   in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article941/my-neighbor-mastodon" rel="bookmark" class="u-url"
-       title="My Neighbor Mastodon" target="_blank">
-      <time class="m-date" datetime="2022-11-17 23:20:00+01:00">
-        Nov
-        <span class="m-date-day">
-          17
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      My Neighbor Mastodon
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-11-13_my-neighbor-mastodon_15k.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-11-13_my-neighbor-mastodon_15k.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>An obvious <a href="https://en.wikipedia.org/wiki/My_Neighbor_Totoro">parody</a> to celebrate 15K followers on Mastodon (it grows quickly because a lot of Twitter users joins it recently). It's a social network I love because it is made of Free/Libre software, a decentralized network, and open standards for the protocol.</p>
-<p>My account is here: <a href="https://framapiaf.org/@davidrevoy">https://framapiaf.org/@davidrevoy</a></p>
-<p>I'll always keep posting my art here too, in high resolution. Maybe RSS is my biggest social-media too in a way. It's just amazing how calming it can be for me as an artist to know that my biggest social-media audience is on the a free/libre social media right now. It will for sure weight in my brainstorming; I don't feel the need to please any ranking algorythm. My article of this year "<a href="https://www.davidrevoy.com/article904/how-proprietary-social-medias-are-shaping-the-future-of-peppercarrot">How proprietary social-medias are shaping the future of Pepper&amp;Carrot</a>" feels already far away …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-11-17 23:20:00+01:00" class="dt-published"></time>
-  Thu 17 Nov 2022
-  in David Revoy.
 </footer>
 <div class="m-clearfix-l"></div>
 
