@@ -164,32 +164,165 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pythoncircle.com/post/767/selecting-linux-kernel-version-during-system-booting-process/" rel="bookmark" class="u-url"
-       title="Python Circle: Selecting Linux kernel version during system booting process" target="_blank">
-      <time class="m-date" datetime="2022-11-27 21:39:43+00:00">
+    <a href="https://zerotomastery.io/blog/python-monthly-newsletter-november-2022/?utm_source=python-rss-feed" rel="bookmark" class="u-url"
+       title="Zero to Mastery: Python Monthly Newsletter 💻🐍" target="_blank">
+      <time class="m-date" datetime="2022-11-28 21:41:07+00:00">
         Nov
         <span class="m-date-day">
-          27
+          28
         </span>
         2022
       </time>
       <div class="p-name">
-      Python Circle: Selecting Linux kernel version during system booting process
+      Zero to Mastery: Python Monthly Newsletter 💻🐍
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  How to revert to the previous kernel version of Ubuntu, Showing grub menu during boot-up process, selecting the desired kernel version from grub menu, permanently selecting the kernel version, updating grub file, Setting timeout in grub menu
+  36th issue of the Python Monthly Newsletter! Read by 25,000+ Python developers every month. This monthly Python newsletter covers the latest Python news so that you stay up-to-date with the industry and keep your skills sharp.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-27 21:39:43+00:00" class="dt-published"></time>
-  Sun 27 Nov 2022
+  on <time datetime="2022-11-28 21:41:07+00:00" class="dt-published"></time>
+  Mon 28 Nov 2022
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wingolog.org/archives/2022/11/28/are-ephemerons-primitive" rel="bookmark" class="u-url"
+       title="are ephemerons primitive?" target="_blank">
+      <time class="m-date" datetime="2022-11-28 21:11:30+00:00">
+        Nov
+        <span class="m-date-day">
+          28
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      are ephemerons primitive?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Good evening :)  A quick note, tonight: I've long thought that
+<a href="https://wingolog.org/archives/2022/10/31/ephemerons-and-finalizers">ephemerons</a>
+are primitive and can't be implemented with mark functions and/or
+finalizers, but today I think I have a counterexample.</p><p>For context, one of the goals of the <a href="https://github.com/wingo/whippet-gc">GC implementation I have been
+working on on</a> is to replace
+<a href="https://gnu.org/s/guile">Guile</a>'s current use of the <a href="https://github.com/ivmai/bdwgc">Boehm-Demers-Weiser (BDW) conservative
+collector</a>.  Of course, changing a
+garbage collector for a production language runtime is risky, and for Guile one of the mitigation
+strategies for this work is that the new collector is behind an abstract API
+whose implementation can be chosen at compile-time, without requiring
+changes to user code.  That way we can first switch to
+BDW-implementing-the-new-GC-API, then switch the implementation behind
+that API to something else.</p><p>Abstracting GC is a tricky problem to get right, and I thank the <a href="https://www.mmtk.io/">MMTk
+project …</a></p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2022-11-28 21:11:30+00:00" class="dt-published"></time>
+  Mon 28 Nov 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/11/28/enshittification/" rel="bookmark" class="u-url"
+       title="Pluralistic: How monopoly enshittified Amazon/28 Nov 2022" target="_blank">
+      <time class="m-date" datetime="2022-11-28 17:17:13+00:00">
+        Nov
+        <span class="m-date-day">
+          28
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: How monopoly enshittified Amazon/28 Nov 2022
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links How monopoly enshittified Amazon: Chokepoint Capitalism ruins everything. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading How monopoly enshittified Amazon (permalink) In Bezos's original plan, the company called "Amazon" was called "Relentless," due to its ambition to be "Earth's most customer-centric company." Today, Amazon is an enshittified endless scroll of paid results, where winning depends on ad budgets, not quality. Writing in Jeff Bezos's newspaper The Washington Post, veteran tech reporter Geoffrey Fowler reports on the state of his boss's "relentless" commitment to customer service. The state is grim. https://www.washingtonpost.com/technology/interactive/2022/amazon-shopping-ads/ Search Amazon for "cat beds" and the entire first screen is ads. One of them is an ad for a dog carrier …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2022-11-28 17:17:13+00:00" class="dt-published"></time>
+  Mon 28 Nov 2022
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.broulik.de/2022/11/introducing-kio-afc/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Introducing KIO AFC" target="_blank">
+      <time class="m-date" datetime="2022-11-28 12:00:41+00:00">
+        Nov
+        <span class="m-date-day">
+          28
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Introducing KIO AFC
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A KIO worker for accessing iOS devices through the Apple File Conduit service.</p>
+
+
+
+
+<a href="https://blog.broulik.de/wp-content/uploads/2022/11/Screenshot_20221123_125815.png"><img alt="Dolphin file manager showing the directory contents of an iPhone. Folders include &quot;Apps&quot;, &quot;Books&quot;, &quot;DCIM&quot; (Camera), &quot;Documents&quot;, &quot;Downloads&quot;, and 8 more." src="https://blog.broulik.de/wp-content/uploads/2022/11/Screenshot_20221123_125815-1024x731.png"></a>
+Dolphin browsing the contents of an attached iPhone
+
+
+
+<p>While there have been several projects like this for both KDE 4 and Frameworks 5, this one has been written on top of the latest KIO classes and will be officially part of the next KDE Gear release. It is now <a href="https://invent.kde.org/network/kio-extras/-/tree/master/afc">part of the <em>kio-extras</em> module</a>, which also houses the Android counterpart for transferring files over the MTP protocol.</p>
+
+
+
+<span></span>
+
+
+
+<p>Thanks to <a href="https://invent.kde.org/frameworks/solid/-/tree/master/src/solid/devices/backends/imobile">prior work</a> in Solid, KDE’s hardware abstraction Framework, an iPhone plugged in to the computer will be shown in the <em>Disks &amp; Devices</em> applet and Dolphin’s Places sidebar like any other external storage medium. I also submitted <a href="https://gitlab.freedesktop.org/upower/upower/-/merge_requests/172">a small fix</a> to UPower so that the device’s name rather than vendor and type is shown in the …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kai Uwe Broulik</b></span>
+  on <time datetime="2022-11-28 12:00:41+00:00" class="dt-published"></time>
+  Mon 28 Nov 2022
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -275,6 +408,74 @@ other so that people on one server …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://www.scivision.dev/cmake-presets-build-options/" rel="bookmark" class="u-url"
+       title="CMake presets build options" target="_blank">
+      <time class="m-date" datetime="2022-11-27 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          27
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      CMake presets build options
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="https://cmake.org/cmake/help/latest/manual/cmake-presets.7.html">CMake presets</a>
+can have specific build preset option for particular build tools.
+This CMakePresets.json shows example build presets for Ninja.
+The preset name &ldquo;ninja&rdquo; in this example is arbitrary.
+As usual, the presets help avoid copying script parameters and the possibility of typos in duplicated script code, whether for CI or developers themselves.</p>
+<p>For example, to have ninja &ldquo;explain&rdquo; why a target is dirty:</p>
+<div><pre><code><span><span>cmake --build --preset explain
+</span></span></code></pre></div><div><pre><code><span><span>{
+</span></span><span><span> <span>"version"</span>: <span>2</span>,
+</span></span><span><span> <span>"configurePresets"</span>: [
+</span></span><span><span> {
+</span></span><span><span> <span>"name"</span>: <span>"ninja"</span>,
+</span></span><span><span> <span>"generator"</span>: <span>"Ninja"</span>,
+</span></span><span><span> <span>"binaryDir"</span>: <span>"${sourceDir}/build"</span>
+</span></span><span><span> }
+</span></span><span><span> ],
+</span></span><span><span> <span>"buildPresets"</span>:[
+</span></span><span><span> {
+</span></span><span><span> <span>"name"</span>: <span>"explain"</span>,
+</span></span><span><span> <span>"configurePreset"</span>: <span>"ninja"</span>,
+</span></span><span><span> <span>"nativeToolOptions"</span>: [<span>"-d"</span>, <span>"explain"</span>]
+</span></span><span><span> },
+</span></span><span><span> {
+</span></span><span><span> <span>"name"</span>: <span>"keep"</span>,
+</span></span><span><span> <span>"configurePreset"</span>: <span>"ninja"</span>,
+</span></span><span><span> <span>"nativeToolOptions"</span>: [<span>"-d"</span>, <span>"keeprsp"</span>, <span>"-d"</span>, <span>"keepdepfile"</span>]
+</span></span><span><span> },
+</span></span><span><span> {
+</span></span><span><span> <span>"name"</span>: <span>"stats"</span>,
+</span></span><span><span> <span>"configurePreset"</span>: <span>"ninja"</span>,
+</span></span><span><span> <span>"nativeToolOptions"</span>: [<span>"-d"</span>, <span>"stats"</span>]
+</span></span><span><span> }
+</span></span><span><span> ]
+</span></span><span><span>}
+</span></span></code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-11-27 00:00:00+00:00" class="dt-published"></time>
+  Sun 27 Nov 2022
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://bbs.archlinux.org/viewtopic.php?id=281620" rel="bookmark" class="u-url"
        title=""Trusted Users" are now "Package Maintainers"" target="_blank">
       <time class="m-date" datetime="2022-11-27 00:00:00+00:00">
@@ -304,92 +505,6 @@ The role remains the same. The forum titles have been updated accordingly.
   on <time datetime="2022-11-27 00:00:00+00:00" class="dt-published"></time>
   Sun 27 Nov 2022
   in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://feaneron.com/2022/11/26/crowdfunding-elgato-key-lights/" rel="bookmark" class="u-url"
-       title="Crowdfunding Elgato Key Lights" target="_blank">
-      <time class="m-date" datetime="2022-11-26 15:14:05+00:00">
-        Nov
-        <span class="m-date-day">
-          26
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Crowdfunding Elgato Key Lights
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Since I created Boatswain, earlier this year, a lot has happened. Recently it was accepted as part of the GNOME Circle! As the app gets more popular, people are asking for more useful features that I cannot implement without having access to the actual hardware they depend on. Specifically, I’ve received multiple requests to integrate … <a href="https://feaneron.com/2022/11/26/crowdfunding-elgato-key-lights/">Continue reading <span>Crowdfunding Elgato Key Lights</span> <span>→</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>feaneron</b></span>
-  on <time datetime="2022-11-26 15:14:05+00:00" class="dt-published"></time>
-  Sat 26 Nov 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pointieststick.com/2022/11/25/this-week-in-kde-humongous-ui-improvements/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="This week in KDE: Humongous UI improvements" target="_blank">
-      <time class="m-date" datetime="2022-11-26 06:04:49+00:00">
-        Nov
-        <span class="m-date-day">
-          26
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      This week in KDE: Humongous UI improvements
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This week we have a lot of large and impactful user interface improvements across multiple apps and Plasma, not to mention progress on the big bugs!</p>
-
-
-
-
-New Features
-
-
-
-<p>Dragon Player&#8211;KDE&#8217;s venerable minimalistic video and audio player&#8211;has undergone a major UI overhaul, including adopting KHamburgerMenu and a welcome screen, a streamlined and more intuitive set of default toolbar buttons, and less glitchy behavior when opening videos in the Plasma Wayland session (Harald Sitter, Dragon Player 23.04, <a href="https://bugs.kde.org/show_bug.cgi?id=461387">Link 1</a>, <a href="https://invent.kde.org/multimedia/dragon/-/merge_requests/12">link 2</a>, <a href="https://bugs.kde.org/show_bug.cgi?id=461378">link 3</a>, <a href="https://bugs.kde.org/show_bug.cgi?id=461375">link 4</a>, <a href="https://bugs.kde.org/show_bug.cgi?id=461383">link 5</a>, and <a href="https://bugs.kde.org/show_bug.cgi?id=461840">link 6</a>):</p>
-
-
-<div>
-
-<img alt="" src="https://pointieststick.files.wordpress.com/2022/11/image-10.png">
-There&#8217;s still a bit more polishing to do, but now this app is sleek as hell!</div>
-
-
-<p>Filelight now has a list view on the left side of the window, providing a simple text-based method of viewing size information. This also fixes multiple bugs with the tooltips and …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2022-11-26 06:04:49+00:00" class="dt-published"></time>
-  Sat 26 Nov 2022
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -573,64 +688,6 @@ The learning you get from day-to-day coding is messy and unpredictable. Yes, lea
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/cmake-meson-compiler-option-family/" rel="bookmark" class="u-url"
-       title="CMake and Meson compiler option family" target="_blank">
-      <time class="m-date" datetime="2022-11-24 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          24
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      CMake and Meson compiler option family
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>On Windows, compiler option syntax is generally MSVC-like or GCC-like.
-On Windows, the compiler option families are:</p>
-<ul>
-<li>MSVC-like: Intel oneAPI (IntelLLVM), Clang-CL, Visual Studio</li>
-<li>GCC-like: GCC, Clang, non-Windows OS}.</li>
-</ul>
-<p>Meson and CMake can each detect compiler option family.
-In general, the &ldquo;else&rdquo; branch would have further nested &ldquo;if&rdquo; to handle compiler options with distinct syntax.</p>
-<p>CMake uses the
-<a href="https://cmake.org/cmake/help/latest/variable/MSVC.html">MSVC variable</a>
-to detect compiler option family.
-More specific compiler option selection is often handled with an if-else tree for each compiler ID and / or <a href="https://cmake.org/cmake/help/latest/module/CheckCCompilerFlag.html">check_c_compiler_flag()</a>.</p>
-<div><pre><code><span><span>cmake_minimum_required(<span>VERSION</span> <span>3.1</span>)<span>
-</span></span></span><span><span><span>
-</span></span></span><span><span><span></span>project(<span>Hello</span> <span>LANGUAGES</span> <span>C</span>)<span>
-</span></span></span><span><span><span>
-</span></span></span><span><span><span></span>if(<span>MSVC</span>)<span>
-</span></span></span><span><span><span></span> message(<span>STATUS</span> <span>"${CMAKE_C_COMPILER_ID} is MSVC-like"</span>)<span>
-</span></span></span><span><span><span></span>else()<span>
-</span></span></span><span><span><span></span> message(<span>STATUS</span> <span>"${CMAKE_C_COMPILER_ID} is GCC-like"</span>)<span>
-</span></span></span><span><span><span></span>endif()<span>
-</span></span></span></code></pre></div><p>Meson uses the
-<a href="https://mesonbuild.com/Reference-manual_returned_compiler.html#compilerget_argument_syntax">.get_argument_syntax() property</a>
-to detect compiler option family.
-Getting more specific compiler options can be done with an if-else …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-11-24 00:00:00+00:00" class="dt-published"></time>
-  Thu 24 Nov 2022
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pyfound.blogspot.com/2022/11/where-is-psf.html" rel="bookmark" class="u-url"
        title="Where is the PSF?" target="_blank">
       <time class="m-date" datetime="2022-11-23 18:47:00.002000-05:00">
@@ -658,40 +715,6 @@ Where to Find the PSF Online<p>One of the main ways we reach people for news and
   on <time datetime="2022-11-23 18:47:00.002000-05:00" class="dt-published"></time>
   Wed 23 Nov 2022
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2022/11/23/incentives-matter/" rel="bookmark" class="u-url"
-       title="Pluralistic: 23 Nov 2022 Citizens United and the FTX meltdown" target="_blank">
-      <time class="m-date" datetime="2022-11-23 14:47:01+00:00">
-        Nov
-        <span class="m-date-day">
-          23
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: 23 Nov 2022 Citizens United and the FTX meltdown
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Citizens United and the FTX meltdown: The Keating Five were amateurs. Hey look at this: Delights to delectate. This day in history: 2012, 2017, 2021. Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Citizens United and the FTX meltdown (permalink) The collapse of the FTX cryptocurrency exchange and its affiliated businesses has left a million creditors holding the bag for a chaotically managed, corrupt enterprise that created vast personal fortunes for the conspirators who ran it, even as it stole the life's savings of retail investors who bought into its lies. Could the unsuspecting public have been shielded from the FTX Ponzi scheme? Hindsight is 20/20, but there's good reason to believe that FTX could have been brought down in a controlled glide, rather than a nose-first crash landing and ensuing fireball. Earlier this …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-11-23 14:47:01+00:00" class="dt-published"></time>
-  Wed 23 Nov 2022
-  in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -917,40 +940,6 @@ Major new features of the 3.12 series, compared to 3.11<div><div></div><div>Pyth
   on <time datetime="2022-11-09 07:26:41+00:00" class="dt-published"></time>
   Wed 09 Nov 2022
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://peps.python.org/pep-8104/" rel="bookmark" class="u-url"
-       title="PEP 8104: 2023 Term Steering Council election" target="_blank">
-      <time class="m-date" datetime="2022-11-08 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      PEP 8104: 2023 Term Steering Council election
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This document describes the schedule and other details of the December 2022 election for the Python steering council, as specified in PEP 13. This is the steering council election for the 2023 term (i.e. Python 3.12).
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ee Durbin (ee@python.org)</b></span>
-  on <time datetime="2022-11-08 00:00:00+00:00" class="dt-published"></time>
-  Tue 08 Nov 2022
-  in Newest Python PEPs.
 </footer>
 <div class="m-clearfix-l"></div>
 
