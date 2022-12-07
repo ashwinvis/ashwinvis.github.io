@@ -164,31 +164,225 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/12/05/eldritch-physics/" rel="bookmark" class="u-url"
-       title="Pluralistic: Monopoly's event-horizon (05 Dec 2022)" target="_blank">
-      <time class="m-date" datetime="2022-12-05 14:19:09+00:00">
+    <a href="https://pythoninsider.blogspot.com/2022/12/python-3111-3109-3916-3816-3716-and.html" rel="bookmark" class="u-url"
+       title="Python 3.11.1, 3.10.9, 3.9.16, 3.8.16, 3.7.16, and 3.12.0 alpha 3 are now available" target="_blank">
+      <time class="m-date" datetime="2022-12-06 17:58:00.004000-05:00">
         Dec
         <span class="m-date-day">
-          05
+          06
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: Monopoly's event-horizon (05 Dec 2022)
+      Python 3.11.1, 3.10.9, 3.9.16, 3.8.16, 3.7.16, and 3.12.0 alpha 3 are now available
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Monopoly's event-horizon: The true capitalist singularity. Hey look at this: Delights to delectate. This day in history: 2012 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Monopoly's event-horizon (permalink) When a superdense, concentrated mass forms a black hole, the laws of physics around it change, giving rise to an eldritch zone where the normal rules don't apply. When corporations form a concentrated industry, the laws of economics likewise change. Take copyright: when I was a baby writer, there were dozens of comparably sized New York publishers. The writers who mentored me could shop their rights around to lots of houses, which enabled them to subdivide those rights. For example, they could separately sell paperback and hardcover rights, getting paid twice for the same book. Under those circumstances, giving authors broader copyrights and easier enforcement systems …
+  <p>Greetings! We bring you a slew of releases this fine Saint Nicholas /
+ Sinterklaas day. Six simultaneous releases has got to be some record. 
+There’s one more record we broke this time, you’ll see below.</p>
+<p>In any case, updating is recommended due to security content:</p>
+<ul><li>3.7 - 3.12: <a href="https://github.com/python/cpython/issues/98739">gh-98739</a>: Updated bundled libexpat to 2.5.0 to fix <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-43680">CVE-2022-43680</a> (heap use-after-free).</li><li>3.7 - 3.12: <a href="https://github.com/python/cpython/issues/98433">gh-98433</a>: The IDNA codec decoder used on DNS hostnames by <code>socket</code> or <code>asyncio</code> related name resolution functions no longer involves a quadratic algorithm to fix <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-45061">CVE-2022-45061</a>.
+ This prevents a potential CPU denial of service if an out-of-spec 
+excessive length hostname involving bidirectional characters were 
+decoded. Some protocols such as <code>urllib</code> http 3xx redirects potentially allow for an attacker to supply such a name.</li><li>3.7 - 3.12: <a href="https://github.com/python/cpython/issues/100001">gh-100001</a>: <code>python -m http.server</code> no …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
+  on <time datetime="2022-12-06 17:58:00.004000-05:00" class="dt-published"></time>
+  Tue 06 Dec 2022
+  in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/posts/chat-apps-again" rel="bookmark" class="u-url"
+       title="Thinking about chat apps again…" target="_blank">
+      <time class="m-date" datetime="2022-12-06 20:38:29+01:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Thinking about chat apps again…
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Lately, I’ve been thinking about chat apps more often again. Actually, I’ve always been a fan of Telegram, and it’s still a good messenger, but I’m a bit suspicious about the latest developments (such as the Fragment platform, with which Telegram is now implementing its crypto plans again).
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-06 20:38:29+01:00" class="dt-published"></time>
+  Tue 06 Dec 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pycoders.com/issues/554" rel="bookmark" class="u-url"
+       title="PyCoder’s Weekly: Issue #554 (Dec. 6, 2022)" target="_blank">
+      <time class="m-date" datetime="2022-12-06 19:30:00+00:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      PyCoder’s Weekly: Issue #554 (Dec. 6, 2022)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p> <span>#554 – DECEMBER 6, 2022</span> <span><a href="https://pycoders.com/issues/554/feed">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p> 
+ <div> 
+<a href="https://pycoders.com/link/9966/feed">Using Python&rsquo;s <code>pathlib</code> Module</a> <p> In this video course, you&rsquo;ll learn how to effectively work with file system paths in Python 3 using the <code>pathlib</code> module in the standard library. <span><a href="https://pycoders.com/link/9966/feed">REAL PYTHON</a></span> <span>course</span> </p> </div> <div> 
+<a href="https://pycoders.com/link/9975/feed">A Crash Course in Comprehensions and Generators</a> <p> A great collection of code snippets that showcase the power and flexibility of list comprehensions, generators and related constructs. <span><a href="https://pycoders.com/link/9975/feed">PETE FISON</a> • Shared by <a href="https://pycoders.com/link/9977/feed">Pete FIson</a></span> </p> </div> <div> 
+<a href="https://pycoders.com/link/9954/feed">TelemetryHub by Scout APM, A One-Step Solution for Open-Telemetry</a> <a href="https://pycoders.com/link/9954/feed"><img alt="alt" src="https://cdn.pycoders.com/49193c8cfe0958fc4452cdbf82e0e9a8"></a> <p> Imagine a world where you could see all of your logs, metrics, and tracing data in one place. We&rsquo;ve built TelemetryHub to be the simplest observability tool on the market. We supply peace of mind by providing an intuitive user experience that allows you to <a href="https://pycoders.com/link/9954/feed">easily monitor your application →</a> <span><a href="https://pycoders.com/link/9954/feed">SCOUT APM</a></span> <span>sponsor</span> </p> </div> <div> 
+<a href="https://pycoders.com/link/9959/feed">Guido van Rossum: Python and …</a></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-06 19:30:00+00:00" class="dt-published"></time>
+  Tue 06 Dec 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://noyb.eu/en/noyb-win-personalized-ads-facebook-instagram-and-whatsapp-declared-illegal" rel="bookmark" class="u-url"
+       title="noyb win: Personalized Ads on Facebook, Instagram and WhatsApp declared illegal" target="_blank">
+      <time class="m-date" datetime="2022-12-06 16:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      noyb win: Personalized Ads on Facebook, Instagram and WhatsApp declared illegal
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <span>noyb win: Personalized Ads on Facebook, Instagram and WhatsApp declared illegal</span>
+
+                    The EDPB has decided that three Meta Apps (Facebook, Instagram and WhatsApp) did not have a legal basis to process user data since May 2018. Meta's legal trick has been rejected.
+
+                      <img alt="meta logos with " src="https://noyb.eu/sites/default/files/styles/media_large/public/2022-12/facebook_header.png?itok=KIq34TJY">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>ms</b></span>
+  on <time datetime="2022-12-06 16:00:00+00:00" class="dt-published"></time>
+  Tue 06 Dec 2022
+  in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.kdab.com/hotspot-v1-4-0/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Hotspot v1.4.0" target="_blank">
+      <time class="m-date" datetime="2022-12-06 15:32:13+00:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Hotspot v1.4.0
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hotspot 1.4.0 has been released!</p>
+<p>Hotspot is a replacement for <code>perf report</code>. It&#8217;s a GUI for the perf profiler that takes a <code>perf.data</code> file, parses and evaluates its contents, and then displays the result in a graphical way.</p>
+<p>This feature release contains close to 400 commits since the last stable v1.3.0 release. It comes with its usual assorted list of bug fixes and performance improvements along with new features.</p>
+<p>One of the most notable new features in Hotspot 1.4.0 is a greatly improved disassembly view with a godbolt-like source code annotation:</p>
+<p><img alt="" src="https://www.kdab.com/wp-content/uploads/stories/205396114-039f5d09-a8a6-4022-96a7-83ee2692913f-1.png"></p>
+<p>&nbsp;</p>
+<p>Several other new features come with this release of Hotspot as well, including:</p>
+<ul>
+<li>the self cost columns for tracepoints are now hidden by default, as they would always show 0 except for the function that contains the tracepoint. the inclusive cost …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>KDAB on Qt</b></span>
+  on <time datetime="2022-12-06 15:32:13+00:00" class="dt-published"></time>
+  Tue 06 Dec 2022
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2022/12/06/good-grief-charlie-brown/" rel="bookmark" class="u-url"
+       title="Pluralistic: Raising money for Locus Magazine (06 Dec 2022)" target="_blank">
+      <time class="m-date" datetime="2022-12-06 15:19:44+00:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: Raising money for Locus Magazine (06 Dec 2022)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Raising money for Locus Magazine: Bid on naming rights for a character in one of my upcoming novels. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Raising money for Locus Magazine (permalink) Update: The naming rights/Tuckerization from this fundraiser sold almost immediately after this post went live, so we've added another one. Update 2: This one sold, too. Since 1968, Locus magazine has been the paper of record for science fiction, fantasy and horror literature; it's been through several iterations, but the current one &#8211; a crowd-supported nonprofit &#8211; is the best yet. They're raising $75k on Indiegogo to fund the next year's operations: https://www.indiegogo.com/projects/locus-magazine-science-fiction-fantasy-horror/ I started writing a bimonthly column for Locus in 2006; I've …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-12-05 14:19:09+00:00" class="dt-published"></time>
-  Mon 05 Dec 2022
+  on <time datetime="2022-12-06 15:19:44+00:00" class="dt-published"></time>
+  Tue 06 Dec 2022
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,9 +392,52 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://realpython.com/python-news-november-2022/" rel="bookmark" class="u-url"
-       title="Real Python: Python News: What's New From November 2022" target="_blank">
-      <time class="m-date" datetime="2022-12-05 14:00:00+00:00">
+    <a href="https://theevilskeleton.gitlab.io/2022/12/06/where-fedora-linux-could-improve.html" rel="bookmark" class="u-url"
+       title="Where Fedora Linux Could Improve" target="_blank">
+      <time class="m-date" datetime="2022-12-06 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          06
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Where Fedora Linux Could Improve
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Disclaimers
+<ol>
+  <li>I am not employed by Red Hat (yes, I have to say that).</li>
+  <li>I may sound rude, so I sincerely apologize for that, as I am really critical in some of these topics.</li>
+  <li>“Fedora Project” is referred to the organization. “Fedora Linux” is referred to Fedora operating systems, like Fedora Workstation, Fedora KDE Plasma Desktop Edition, Fedora Silverblue, and others. “Fedora Linux community” is referred to the Fedora Project/Linux community, such as developers, contributors and users.</li>
+</ol>
+
+
+Introduction
+<p>The Fedora Project is a great organization to gain experience no matter the team you are in. I am currently a part of the Fedora Websites &amp; Apps team improving my technical writing, communication and design skills.With all the things the Fedora Project does well, there are several places that, in my opinion, need to be improved. I’d like to …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>TheEvilSkeleton</b></span>
+  on <time datetime="2022-12-06 00:00:00+00:00" class="dt-published"></time>
+  Tue 06 Dec 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.kitware.com/new-in-paraview-5-11-selection-editor/" rel="bookmark" class="u-url"
+       title="New in ParaView 5.11: Selection Editor" target="_blank">
+      <time class="m-date" datetime="2022-12-05 14:39:06+00:00">
         Dec
         <span class="m-date-day">
           05
@@ -208,28 +445,22 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2022
       </time>
       <div class="p-name">
-      Real Python: Python News: What's New From November 2022
+      New in ParaView 5.11: Selection Editor
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>The Python world never stops spinning! After the release of Python 3.11 in October, the Python release team is already launching the first alpha versions of <strong>Python 3.12</strong>. The excitement of trying shiny new things shouldn’t distract you from being cautious while coding, though. Recently, researchers found more <strong>malicious packages</strong> on PyPI, and lawyers raised concerns about license violations when using <strong>GitHub Copilot</strong> to generate code.</p>
-<p>Let’s dive into the biggest <strong>Python news</strong> from the past month!</p>
-<div><p><strong>Join Now:</strong> <a href="https://realpython.com/atom.xml">Click here to join the Real Python Newsletter</a> and you'll never miss another Python tutorial, course update, or post.</p></div>
-
-
-Python 3.12 Alpha Released<a href="https://realpython.com/atom.xml#python-312-alpha-released" title="Permanent link"></a>
-<p>One of the <a href="https://realpython.com/python-news-october-2022/">most newsworthy events from October</a> was the release of <strong>Python 3.11</strong>. While many of us are exploring the <a href="https://realpython.com/python311-new-features/">cool new features of Python 3.11</a>, others are already hard …</p></div>
+  Introduction Selections are one of the core operations of ParaView. Selections enable you to extract a subset of cells or points from your dataset so that you can either look more closely or notice the behavior of this selected subset over time. You can use ParaView to generate several types of selections by using mouse-based [&#8230;]
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-05 14:00:00+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Spiros Tsalikis</b></span>
+  on <time datetime="2022-12-05 14:39:06+00:00" class="dt-published"></time>
   Mon 05 Dec 2022
-  in Planet Python.
+  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -264,111 +495,6 @@ Python 3.12 Alpha Released<a href="https://realpython.com/atom.xml#python-312-al
   on <time datetime="2022-12-05 00:00:00+00:00" class="dt-published"></time>
   Mon 05 Dec 2022
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://eco.kde.org/blog/2022-12-02_guest_openuk_awards/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Guest Post: OpenUK Awards 2022 Sustainability" target="_blank">
-      <time class="m-date" datetime="2022-12-05 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          05
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Guest Post: OpenUK Awards 2022 Sustainability
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>This is a guest post by Jonathan Esk-Riddell for the KDE Eco blog about the OpenUK Awards.</p>
-<p>OpenUK is an advocacy organisation for open tech (software, hardware and data) in the UK. We run various activities and I have had the priviledge of hosting the award ceremony for the last few years.</p>
-<p>Last year at COP26 in Glasgow I announced <a href="https://eco.kde.org/">KDE Eco</a>, the KDE project to measure and certify apps as energy efficient. For those reading this who aren't familiar, KDE is an open source community making apps for Linux and other platforms. KDE Eco has two parts, <a href="https://eco.kde.org/#feep">FOSS Energy Efficiency Project</a>, developing tools to improve energy efficiency in free and open source software development. And <a href="https://eco.kde.org/#be4foss">Blauer Engel For FOSS</a>, working with German Environment Agency to create eco-certification with the Blauer Engel label for desktop software.</p>
-<p>This year our ceremony …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDE Eco</b></span>
-  on <time datetime="2022-12-05 00:00:00+00:00" class="dt-published"></time>
-  Mon 05 Dec 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nibblestew.blogspot.com/2022/12/color-management-this-time-with-pdf.html" rel="bookmark" class="u-url"
-       title="Color management, this time with PDF" target="_blank">
-      <time class="m-date" datetime="2022-12-04 13:18:00+00:00">
-        Dec
-        <span class="m-date-day">
-          04
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Color management, this time with PDF
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>In previous posts the topic of color management in Cairo was examined. Since then people have told me a few things about the issue. According to them (and who am I do to proper background research and fact checking, I'm just someone writing on the Internet) there are a few fundamental problems with Cairo. The main one is that Cairo's imaging model is difficult to implement in GPU shaders. It also is (again, according to Internet rumors) pretty much impossible to make work with wide gamut and HDR content.</p><p>Dealing with all that <i>and</i> printing (which is what I was originally interested in) seems like a too large a mouthful to swallow. One thing lead to another and thus in the spirit of Bender, I wrote <a href="https://github.com/jpakkane/pdfgen">my own color managed PDF generator library</a>. It does not try to do any …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2022-12-04 13:18:00+00:00" class="dt-published"></time>
-  Sun 04 Dec 2022
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2022/12/2022-12-04-lizpl" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2022-12-04 13:08:00+01:00">
-        Dec
-        <span class="m-date-day">
-          04
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Near my new home. 🍂
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-04 13:08:00+01:00" class="dt-published"></time>
-  Sun 04 Dec 2022
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -456,40 +582,6 @@ Have a good week-end!</p>
   on <time datetime="2022-12-02 18:23:00+01:00" class="dt-published"></time>
   Fri 02 Dec 2022
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kitware.com/paraview-expression-manager/" rel="bookmark" class="u-url"
-       title="ParaView Expression Manager" target="_blank">
-      <time class="m-date" datetime="2022-12-01 12:51:23+00:00">
-        Dec
-        <span class="m-date-day">
-          01
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      ParaView Expression Manager
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  ParaView provides many different filters to process dataset attributes. Some treatments, such as isocontouring, stream tracing and histogram computing, effectively perform a predefined set of mathematical operations. The Calculator and Python Calculator tools enable one to customize the data processing through a user-defined single line expression. Up until now, writing this expression was a manual [&#8230;]
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nicolas Vuaille</b></span>
-  on <time datetime="2022-12-01 12:51:23+00:00" class="dt-published"></time>
-  Thu 01 Dec 2022
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -915,41 +1007,6 @@ instance mutexes in Rust are pretty convenient as a result:</p>
   on <time datetime="2022-11-16 01:01:00+00:00" class="dt-published"></time>
   Wed 16 Nov 2022
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pythoninsider.blogspot.com/2022/11/python-3120-alpha-2-released.html" rel="bookmark" class="u-url"
-       title="Python 3.12.0 alpha 2 released" target="_blank">
-      <time class="m-date" datetime="2022-11-15 08:06:00-05:00">
-        Nov
-        <span class="m-date-day">
-          15
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Python 3.12.0 alpha 2 released
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I'm pleased to announce the release of Python 3.12 alpha 2.</p><p><a href="https://www.python.org/downloads/release/python-3120a2/">https://www.python.org/downloads/release/python-3120a2/</a></p><div><b>This is an early developer preview of Python 3.12.</b></div><div><b></b></div>
-Major new features of the 3.12 series, compared to 3.11<div><div></div><div>Python 3.12 is still in development. This release, 3.12.0a2 is the second of seven planned alpha releases.</div><div></div><div>Alpha releases are intended to make it easier to test the current state of new features and bug fixes and to test the release process.</div><div></div><div>During the alpha phase, features may be added up until the start of the beta phase (2023-05-08) and, if necessary, may be modified or deleted up until the release candidate phase (2023-07-31). Please keep in mind that this is a preview release and its use is <b>not </b>recommended for production environments.</div><div></div><div>Many new features …</div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Thomas Wouters (noreply@blogger.com)</b></span>
-  on <time datetime="2022-11-15 08:06:00-05:00" class="dt-published"></time>
-  Tue 15 Nov 2022
-  in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
 
