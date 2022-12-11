@@ -164,33 +164,81 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.davidrevoy.com/article945/its-decorating-time" rel="bookmark" class="u-url"
-       title="It’s decorating time!" target="_blank">
-      <time class="m-date" datetime="2022-12-09 18:37:00+01:00">
+    <a href="https://wingolog.org/archives/2022/12/10/a-simple-semi-space-collector" rel="bookmark" class="u-url"
+       title="a simple semi-space collector" target="_blank">
+      <time class="m-date" datetime="2022-12-10 20:50:28+00:00">
         Dec
         <span class="m-date-day">
-          09
+          10
         </span>
         2022
       </time>
       <div class="p-name">
-      It’s decorating time!
+      a simple semi-space collector
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2022/2022-12-07_it-s-decorating-time_by-david-revoy.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/2022-12-07_it-s-decorating-time_by-david-revoy.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Each year −more or less− I try to paint a Pepper&amp;Carrot artwork for the holidays. </p>
-<p>So here is one for 2022. I'm still doing my drawing researches and studies, so I took a break this week and finished this piece. </p>
-<p>You'll see in this artwork where I am right now in my researches: I stretch a bit more my style for the shapes and volumes to something more cartoony. The exagerated facial expression of Pepper and the design of the dragon here is a perfect example of that. You are probably familiar with this aspect of my work, because design like the "Dragoncow" of Episode 3 or many episode of Pepper&amp;Carrots have this type of designs. I unfortunately abandoned this way to design things over the last years to draw more realistic and with adult proportion my characters …</p>
+  <div><p>Good day, hackfolk.  Today's article is about semi-space collectors.
+Many of you know what these are, but perhaps not so many have
+seen an annotated implementation, so let's do that.</p><p>Just to recap, the big picture here is that a semi-space collector
+divides a chunk of memory into two equal halves or spaces, called the
+<i>fromspace</i> and the <i>tospace</i>.  Allocation proceeds linearly across
+tospace, from one end to the other.  When the tospace is full, we <i>flip</i>
+the spaces: the tospace becomes the fromspace, and the fromspace becomes
+the tospace.  The collector copies out all live data <i>from</i> the
+fromspace <i>to</i> the tospace (hence the names), starting from some set of
+root objects.  Once the copy is done, allocation then proceeds in the
+new tospace.</p><p>In practice when you build a GC, it's parameterized in a few ways, one
+of …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2022-12-10 20:50:28+00:00" class="dt-published"></time>
+  Sat 10 Dec 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article946/greeting-cards" rel="bookmark" class="u-url"
+       title="Greeting cards" target="_blank">
+      <time class="m-date" datetime="2022-12-10 20:38:00+01:00">
+        Dec
+        <span class="m-date-day">
+          10
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Greeting cards
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2022/greeting-card_preview.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2022/greeting-card_preview.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>I uploaded a new set of artworks to have greeting cards ready on my Redbubble shop. You can still get them before the 25, worldwide delivery (and I get 20% off the sale 😁 so thank you for your support!):</p>
+<ul>
+<li><a href="https://www.redbubble.com/people/davidrevoy/shop?artistUserName=davidrevoy&amp;asc=u&amp;collections=3227717&amp;iaCode=all-departments&amp;sortOrder=relevant">Greeting cards on Redbubble</a></li>
+<li><a href="https://www.redbubble.com/people/davidrevoy/explore?asc=u&amp;page=1&amp;sortOrder=recent">All artworks &amp; products</a></li>
+</ul>
+<p>If you want to print them with your own hardware or as a product for your company, you can ☺️. You'll find the source and licenses of the artwork in high resolution here: <a href="https://www.peppercarrot.com/en/artworks/artworks.html">https://www.peppercarrot.com/en/artworks/artworks.html</a> (check the "Source Explorer" and the category "Misc", "Wallpaper", "Artworks", "Shop"; all the artworks are categorised here).</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2022-12-09 18:37:00+01:00" class="dt-published"></time>
-  Fri 09 Dec 2022
+  on <time datetime="2022-12-10 20:38:00+01:00" class="dt-published"></time>
+  Sat 10 Dec 2022
   in David Revoy.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -200,49 +248,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.pythonforbeginners.com/basics/check-if-a-pandas-series-is-sorted-in-python" rel="bookmark" class="u-url"
-       title="Python for Beginners: Check if a Pandas Series Is Sorted in Python" target="_blank">
-      <time class="m-date" datetime="2022-12-09 14:00:00+00:00">
+    <a href="https://pluralistic.net/2022/12/10/e2e/" rel="bookmark" class="u-url"
+       title="Pluralistic: Freedom of reach IS freedom of speech (10 Dec 2022)" target="_blank">
+      <time class="m-date" datetime="2022-12-10 15:35:20+00:00">
         Dec
         <span class="m-date-day">
-          09
+          10
         </span>
         2022
       </time>
       <div class="p-name">
-      Python for Beginners: Check if a Pandas Series Is Sorted in Python
+      Pluralistic: Freedom of reach IS freedom of speech (10 Dec 2022)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Pandas series is a great tool for handling sequential data in python. In this article, we will discuss different ways to check if a pandas series is sorted. </p>
-
-
-
-<div><span><span>Table of Contents</span><span></span></span><div><ol><li><a href="https://www.pythonforbeginners.com/feed#htoc-check-if-a-pandas-series-is-sorted-using-the-is-monotonic-attribute">Check if a  Pandas Series Is Sorted Using the is_monotonic Attribute</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-check-if-a-pandas-series-is-sorted-in-ascending-order">Check if a  Pandas Series Is Sorted in Ascending Order</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-check-if-a-series-is-sorted-in-descending-order-in-python">Check if a  Series Is Sorted in Descending Order in Python</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-check-if-a-series-is-sorted-using-the-numpy-module">Check if A Series Is Sorted Using the Numpy Module</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-check-if-the-index-of-a-series-is-sorted-in-python">Check if the Index of a Series Is Sorted in Python</a></li><li><a href="https://www.pythonforbeginners.com/feed#htoc-conclusion">Conclusion</a></li></ol></div></div>
-
-
-
-
-Check if a  Pandas Series Is Sorted Using the is_monotonic Attribute
-
-
-
-<p>To check if a  <a href="https://www.pythonforbeginners.com/basics/pandas-series-data-structure-in-python">pandas series</a> is sorted in ascending order, we can use the <code>is_monotonic</code> attribute of the series. The <code>is_monotonic</code> attribute evaluates to True if a  pandas series is sorted in either ascending order. </p>
-
-
-
-<p>For instance, if a …</p>
+  Today's links Freedom of reach IS freedom of speech: The end-to-end principle is good, actually. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Freedom of reach IS freedom of speech (permalink) The online debate over free speech suuuuucks, and, amazingly, it's getting worse. This week, it's the false dichotomy between "freedom of speech" and "freedom of reach," that is, the debate over whether a platform should override your explicit choices about what you want to see: https://seekingalpha.com/news/3849331-musk-meets-twitter-staff-freedom-of-reach-new-ideas-on-human-verification It's wild that we're still having this fight. It is literally the first internet fight! The modern internet was born out of an epic struggled between "Bellheads" (who believed centralized powers should decide how you used networks) and "Netheads" (who …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-09 14:00:00+00:00" class="dt-published"></time>
-  Fri 09 Dec 2022
-  in Planet Python.
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2022-12-10 15:35:20+00:00" class="dt-published"></time>
+  Sat 10 Dec 2022
+  in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -251,43 +282,46 @@ Check if a  Pandas Series Is Sorted Using the is_monotonic Attribute
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.david-redondo.de/qt/kde/2022/12/09/wayland-native-interface.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Wayland native interface in Qt 6.5" target="_blank">
-      <time class="m-date" datetime="2022-12-09 12:30:00+00:00">
+    <a href="https://www.volkerkrause.eu/2022/12/10/kf6-branching-update.html?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="KDE Frameworks 6 Branching" target="_blank">
+      <time class="m-date" datetime="2022-12-10 09:45:00+00:00">
         Dec
         <span class="m-date-day">
-          09
+          10
         </span>
         2022
       </time>
       <div class="p-name">
-      Wayland native interface in Qt 6.5
+      KDE Frameworks 6 Branching
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Qt 6 introduced a new way to access platform specific objects and functionality in the
-<a href="https://doc.qt.io/qt-6/native-interfaces.html"><code>QNativeInterface</code> namespace</a>. Starting with Qt 6.5
-it will be possible to obtain handles to wayland object handles this way. Let’s look at what’s new
-and how it improves on the past method.</p>
+  <p>We are nearing an important milestone in the KDE Frameworks 6 development,
+branching and thus splitting the development of KDE Frameworks 5 and 6 is getting really close now.
+That’s not the only noteworthy news from the KF6 work though.</p>
 
-<p>In Qt 5 there were to two options to access platform-specific API and native handles of the current platform.
-If you were lucky, your platform had an ‘Extras’ module like Qt Max Extras, Qt X11 Extras or Qt Android Extras.
-However these were <a href="https://doc.qt.io/qt-6/extras-changes-qt6.html">removed for Qt 6</a> and
-if you ever needed something that was not exposed this way or the platform had no ‘Extras’ module (like Wayland), it
-was also possible to access functionality via <a href="https://doc.qt.io/qt-5/qguiapplication.html#platformNativeInterface"><code>QPlatformNativeInterface</code></a>.
-An example usage of would look like this:</p>
-<div><div><pre><code><span>QPlatformNativeInterface</span> <span>*</span><span>nativeInterface</span> <span>=</span> <span>QGuiApplication</span><span>::</span><span>platformNativeInterface</span><span>();</span>
-<span>if …</span></code></pre></div></div>
+
+Branching plan
+
+<p>Following the <a href="//www.volkerkrause.eu/2022/10/14/kf6-windows-ci-branching-plan.html">plan from Akademy</a> this
+should happen after 5.101, which is about to be released. Given we still have a few things to sort out around
+tooling and infrastructure as well as scheduling constraints around the upcoming holiday season we are looking at the
+first week of January for this now.</p>
+
+<p>By then we hope to have <a href="https://nicolasfella.de/posts/generating-dependency-metadata/?utm_source=atom_feed"><code>kdesrc-build</code> metadata prepared</a>
+and new CI jobs set up. We’d then create a branch in all Frameworks repository named <code>kf5</code>.</p>
+
+<p>From that point on, KDE Frameworks 5 is considered feature-frozen, feature work should continue to happen in …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>David Redondo</b></span>
-  on <time datetime="2022-12-09 12:30:00+00:00" class="dt-published"></time>
-  Fri 09 Dec 2022
+  <span class="p-author"><b>Volker Krause</b></span>
+  on <time datetime="2022-12-10 09:45:00+00:00" class="dt-published"></time>
+  Sat 10 Dec 2022
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -297,9 +331,77 @@ An example usage of would look like this:</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.dreamwidth.org/captcha?returnto=https://mjg59.dreamwidth.org/62598.html" rel="bookmark" class="u-url"
-       title="End-to-end encrypted messages need more than libsignal" target="_blank">
-      <time class="m-date" datetime="2022-12-09 06:17:30+00:00">
+    <a href="https://pythoncircle.com/post/771/publishing-to-kafka-synchronous-vs-asynchronous/" rel="bookmark" class="u-url"
+       title="Python Circle: Publishing to Kafka — Synchronous vs Asynchronous" target="_blank">
+      <time class="m-date" datetime="2022-12-10 07:40:41+00:00">
+        Dec
+        <span class="m-date-day">
+          10
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Python Circle: Publishing to Kafka — Synchronous vs Asynchronous
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  By default, the Kafka client uses a blocking call to push the messages to the Kafka broker. We can use the non-blocking call if application requirements permit. Here we will explore how we can use the non-blocking approach to push data to Kafka, what is the impact, and what  could be the concern points and how to take care of them.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-10 07:40:41+00:00" class="dt-published"></time>
+  Sat 10 Dec 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2022/12/2022-12-10-pfqhj" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2022-12-10 07:56:00+01:00">
+        Dec
+        <span class="m-date-day">
+          10
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      💬
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  I use Firefox as my preferred web browser both on PCs and my phone. One extension is always installed: uBlock Origin. The web is so much nicer with all the ads and tracking removed. But today I also retried an extension that will probably join the “must install” list: DarkReader. Especially when I’m browsing the web on my phone in the early morning, I don’t like to be blinded by white websites. Since March DarkReader has finally an option to detect if a website already has a dark theme and only apply it’s color changes to those who haven’t.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-10 07:56:00+01:00" class="dt-published"></time>
+  Sat 10 Dec 2022
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2709/" rel="bookmark" class="u-url"
+       title="Solar System Model" target="_blank">
+      <time class="m-date" datetime="2022-12-09 00:00:00+00:00">
         Dec
         <span class="m-date-day">
           09
@@ -307,22 +409,22 @@ An example usage of would look like this:</p>
         2022
       </time>
       <div class="p-name">
-      End-to-end encrypted messages need more than libsignal
+      Solar System Model
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  (Disclaimer: I'm not a cryptographer, and I do not claim to be an expert in Signal. I've had this read over by a couple of people who are so with luck there's no egregious errors, but any mistakes here are mine)There are <a href="https://twitter.com/wongmjane/status/1592721308479291397">indications</a> that Twitter is working on end-to-end encrypted DMs, likely building on work that was <a href="https://twitter.com/bhcarpenter/status/1596691905898811393">done back in 2018</a>. This made use of <a href="https://github.com/signalapp/libsignal">libsignal</a>, the reference implementation of the protocol used by the <a href="https://signal.org">Signal</a> encrypted messaging app. There seems to be a fairly widespread perception that, since libsignal is widely deployed (it's also the basis for <a href="https://whatsapp.com">WhatsApp</a>'s e2e encryption) and open source and has been worked on by a whole bunch of cryptography experts, choosing to use libsignal means that 90% of the work has already been done. And in some ways this is true - the …
+  <img alt="The Earth is, on average, located in the habitable zone, but at any given time it has a certain probability of being outside it, which is why life exists on Earth but is mortal." src="https://imgs.xkcd.com/comics/solar_system_model.png" title="The Earth is, on average, located in the habitable zone, but at any given time it has a certain probability of being outside it, which is why life exists on Earth but is mortal.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-09 06:17:30+00:00" class="dt-published"></time>
+  on <time datetime="2022-12-09 00:00:00+00:00" class="dt-published"></time>
   Fri 09 Dec 2022
-  in Planet GNOME.
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -451,40 +553,6 @@ diving into figuring out the root cause.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/12/08/one-last-job/" rel="bookmark" class="u-url"
-       title="Pluralistic: One weird trick to make monopolies self-destruct (08 Dec 2022)" target="_blank">
-      <time class="m-date" datetime="2022-12-08 12:15:17+00:00">
-        Dec
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: One weird trick to make monopolies self-destruct (08 Dec 2022)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links One weird trick to make monopolies self-destruct: Remember when corporate raiders broke companies up? Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading One weird trick to make monopolies self-destruct (permalink) Kim Stanley Robinson's 2020 novel Ministry For the Future was a groundbreaking work: it's the tale of a detailed, plausible transition from a world on a collision course with civilization-ending climate catastrophe to one where the challenge is met, with humanity collectively deciding to save itself: https://pluralistic.net/2020/12/03/ministry-for-the-future/#ksr Robinson's book is important: it not only disproves the (variously attributed) capitalist realism aphorism that "it is easier to imagine the end of the world than it is to imagine the end of capitalism" &#8211; it also …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-12-08 12:15:17+00:00" class="dt-published"></time>
-  Thu 08 Dec 2022
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.kitware.com/numerical-plasma-dynamics-from-the-comfort-of-your-web-browser-with-trame/" rel="bookmark" class="u-url"
        title="Numerical plasma dynamics from the comfort of your web browser with trame" target="_blank">
       <time class="m-date" datetime="2022-12-08 10:51:23+00:00">
@@ -557,40 +625,6 @@ can be useful when at another person&rsquo;s Mac laptop.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2708/" rel="bookmark" class="u-url"
-       title="Mystery Asterisk Destination" target="_blank">
-      <time class="m-date" datetime="2022-12-07 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          07
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Mystery Asterisk Destination
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="If you ever see the † dagger symbol with no unmatched footnote, it means the writer is saying the phrase while threatening you with a dagger." src="https://imgs.xkcd.com/comics/mystery_asterisk_destination.png" title="If you ever see the † dagger symbol with no unmatched footnote, it means the writer is saying the phrase while threatening you with a dagger.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-07 00:00:00+00:00" class="dt-published"></time>
-  Wed 07 Dec 2022
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pythoninsider.blogspot.com/2022/12/python-3111-3109-3916-3816-3716-and.html" rel="bookmark" class="u-url"
        title="Python 3.11.1, 3.10.9, 3.9.16, 3.8.16, 3.7.16, and 3.12.0 alpha 3 are now available" target="_blank">
       <time class="m-date" datetime="2022-12-06 17:58:00.004000-05:00">
@@ -624,40 +658,6 @@ decoded. Some protocols such as <code>urllib</code> http 3xx redirects potential
   on <time datetime="2022-12-06 17:58:00.004000-05:00" class="dt-published"></time>
   Tue 06 Dec 2022
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/posts/chat-apps-again" rel="bookmark" class="u-url"
-       title="Thinking about chat apps again…" target="_blank">
-      <time class="m-date" datetime="2022-12-06 20:38:29+01:00">
-        Dec
-        <span class="m-date-day">
-          06
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Thinking about chat apps again…
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Lately, I’ve been thinking about chat apps more often again. Actually, I’ve always been a fan of Telegram, and it’s still a good messenger, but I’m a bit suspicious about the latest developments (such as the Fragment platform, with which Telegram is now implementing its crypto plans again).
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-06 20:38:29+01:00" class="dt-published"></time>
-  Tue 06 Dec 2022
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
