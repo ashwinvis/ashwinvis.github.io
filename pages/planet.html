@@ -164,43 +164,127 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://wingolog.org/archives/2022/12/10/a-simple-semi-space-collector" rel="bookmark" class="u-url"
-       title="a simple semi-space collector" target="_blank">
-      <time class="m-date" datetime="2022-12-10 20:50:28+00:00">
+    <a href="https://chezsoi.org/lucas/blog/another-animated-dungeon-the-sky-blind-spire.html" rel="bookmark" class="u-url"
+       title="Lucas Cimon: Another animated dungeon: The Sky-Blind Spire" target="_blank">
+      <time class="m-date" datetime="2022-12-11 21:31:21+00:00">
         Dec
         <span class="m-date-day">
-          10
+          11
         </span>
         2022
       </time>
       <div class="p-name">
-      a simple semi-space collector
+      Lucas Cimon: Another animated dungeon: The Sky-Blind Spire
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Good day, hackfolk.  Today's article is about semi-space collectors.
-Many of you know what these are, but perhaps not so many have
-seen an annotated implementation, so let's do that.</p><p>Just to recap, the big picture here is that a semi-space collector
-divides a chunk of memory into two equal halves or spaces, called the
-<i>fromspace</i> and the <i>tospace</i>.  Allocation proceeds linearly across
-tospace, from one end to the other.  When the tospace is full, we <i>flip</i>
-the spaces: the tospace becomes the fromspace, and the fromspace becomes
-the tospace.  The collector copies out all live data <i>from</i> the
-fromspace <i>to</i> the tospace (hence the names), starting from some set of
-root objects.  Once the copy is done, allocation then proceeds in the
-new tospace.</p><p>In practice when you build a GC, it's parameterized in a few ways, one
-of …</p></div>
+  <div><p>Following <a href="https://chezsoi.org/shaarli/feed/animated-one-page-dungeon-escape-of-the-torment.html">last week animated PDF adventure</a>,
+I have been reading a series of one page dungeons...
+And yesterday I had the opportunity to play the best one in my opinion:
+<strong><a href="http://blog.trilemma.com/2016/04/the-sky-blind-spire.html">The Sky-Blind Spire by Michael Prescott</a></strong>.</p>
+<p>It has everythng I love on one page: a maze to explore, mysteries to …</p></div>
+
+&#8212; <a href="https://chezsoi.org/shaarli/shaare/lSpfyw" title="Permalink">Permalink</a>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-11 21:31:21+00:00" class="dt-published"></time>
+  Sun 11 Dec 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wingolog.org/archives/2022/12/11/we-iterate-so-that-you-can-recurse" rel="bookmark" class="u-url"
+       title="we iterate so that you can recurse" target="_blank">
+      <time class="m-date" datetime="2022-12-11 21:19:20+00:00">
+        Dec
+        <span class="m-date-day">
+          11
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      we iterate so that you can recurse
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Sometimes when you see an elegant algorithm, you think "looks great, I
+just need it to also do X".  Perhaps you are able to build X directly
+out of what the algorithm gives you; fantastic.  Or, perhaps you can
+alter the algorithm a bit, and it works just as well while also doing X.
+Sometimes, though, you alter the algorithm and things go pear-shaped.</p><p>Tonight's little note builds on <a href="https://wingolog.org/archives/2022/12/10/a-simple-semi-space-collector">yesterday's semi-space collector
+article</a>
+and discusses an worse alternative to the Cheney scanning algorithm.</p><p>To recall, we had this visit_field function that takes a edge in the
+object graph, as the address of a field in memory containing a struct gc_obj*.  If the edge points to an object that was already copied,
+visit_field updates it to the forwarded address.  Otherwise it copies the object,
+thus computing the new …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Andy Wingo</b></span>
-  on <time datetime="2022-12-10 20:50:28+00:00" class="dt-published"></time>
-  Sat 10 Dec 2022
+  on <time datetime="2022-12-11 21:19:20+00:00" class="dt-published"></time>
+  Sun 11 Dec 2022
   in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="http://www.thelins.se/johan/blog/2022/12/debian-on-the-xps13-plus-9320/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Debian on the XPS13 Plus (9320)" target="_blank">
+      <time class="m-date" datetime="2022-12-11 15:45:52+00:00">
+        Dec
+        <span class="m-date-day">
+          11
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Debian on the XPS13 Plus (9320)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>TL;DR; Still no sound, but I learned a couple of new things&#8230;</p>
+
+
+
+<p>So, I finally got around to upgrading my laptop. I decided to go for my fourth XPS13, and this time I opted for a maxed out XPS13 Plus. A really nice machine. However, the driver stack isn&#8217;t quite there yet. Yes, I should have read up more before buying, but I didn&#8217;t and I know it will be sorted out over time.</p>
+
+
+
+<p>As a vim user, the touch Esc key will be a challenge. Perhaps this is where I learn to bind to capslock, but I&#8217;ve not come to that point yet.</p>
+
+
+
+<p>So, after installing using the netinst image with non-free drivers (and my phone over USB tether for networking since the wifi still didn&#8217;t work), I had to move to testing for …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Johan Thelin</b></span>
+  on <time datetime="2022-12-11 15:45:52+00:00" class="dt-published"></time>
+  Sun 11 Dec 2022
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -274,89 +358,6 @@ of …</p></div>
   on <time datetime="2022-12-10 15:35:20+00:00" class="dt-published"></time>
   Sat 10 Dec 2022
   in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.volkerkrause.eu/2022/12/10/kf6-branching-update.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Frameworks 6 Branching" target="_blank">
-      <time class="m-date" datetime="2022-12-10 09:45:00+00:00">
-        Dec
-        <span class="m-date-day">
-          10
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      KDE Frameworks 6 Branching
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>We are nearing an important milestone in the KDE Frameworks 6 development,
-branching and thus splitting the development of KDE Frameworks 5 and 6 is getting really close now.
-That’s not the only noteworthy news from the KF6 work though.</p>
-
-
-Branching plan
-
-<p>Following the <a href="//www.volkerkrause.eu/2022/10/14/kf6-windows-ci-branching-plan.html">plan from Akademy</a> this
-should happen after 5.101, which is about to be released. Given we still have a few things to sort out around
-tooling and infrastructure as well as scheduling constraints around the upcoming holiday season we are looking at the
-first week of January for this now.</p>
-
-<p>By then we hope to have <a href="https://nicolasfella.de/posts/generating-dependency-metadata/?utm_source=atom_feed"><code>kdesrc-build</code> metadata prepared</a>
-and new CI jobs set up. We’d then create a branch in all Frameworks repository named <code>kf5</code>.</p>
-
-<p>From that point on, KDE Frameworks 5 is considered feature-frozen, feature work should continue to happen in …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Volker Krause</b></span>
-  on <time datetime="2022-12-10 09:45:00+00:00" class="dt-published"></time>
-  Sat 10 Dec 2022
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pythoncircle.com/post/771/publishing-to-kafka-synchronous-vs-asynchronous/" rel="bookmark" class="u-url"
-       title="Python Circle: Publishing to Kafka — Synchronous vs Asynchronous" target="_blank">
-      <time class="m-date" datetime="2022-12-10 07:40:41+00:00">
-        Dec
-        <span class="m-date-day">
-          10
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Python Circle: Publishing to Kafka — Synchronous vs Asynchronous
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  By default, the Kafka client uses a blocking call to push the messages to the Kafka broker. We can use the non-blocking call if application requirements permit. Here we will explore how we can use the non-blocking approach to push data to Kafka, what is the impact, and what  could be the concern points and how to take care of them.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-10 07:40:41+00:00" class="dt-published"></time>
-  Sat 10 Dec 2022
-  in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
 
