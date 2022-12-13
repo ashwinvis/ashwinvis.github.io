@@ -164,38 +164,44 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://chezsoi.org/lucas/blog/another-animated-dungeon-the-sky-blind-spire.html" rel="bookmark" class="u-url"
-       title="Lucas Cimon: Another animated dungeon: The Sky-Blind Spire" target="_blank">
-      <time class="m-date" datetime="2022-12-11 21:31:21+00:00">
+    <a href="http://www.thelins.se/johan/blog/2022/12/hibernation/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Hibernation" target="_blank">
+      <time class="m-date" datetime="2022-12-12 20:23:06+00:00">
         Dec
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      Lucas Cimon: Another animated dungeon: The Sky-Blind Spire
+      Hibernation
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Following <a href="https://chezsoi.org/shaarli/feed/animated-one-page-dungeon-escape-of-the-torment.html">last week animated PDF adventure</a>,
-I have been reading a series of one page dungeons...
-And yesterday I had the opportunity to play the best one in my opinion:
-<strong><a href="http://blog.trilemma.com/2016/04/the-sky-blind-spire.html">The Sky-Blind Spire by Michael Prescott</a></strong>.</p>
-<p>It has everythng I love on one page: a maze to explore, mysteries to …</p></div>
+  <p>So, another day, another update. Today I managed to get hibernation working on my Dell XPS13 Plus (9320) running Debian.</p>
 
-&#8212; <a href="https://chezsoi.org/shaarli/shaare/lSpfyw" title="Permalink">Permalink</a>
+
+
+<p>So, a quick recap. I&#8217;m running Debian testing. I set up the system with <em>Guided &#8211; Use entire disk and Setup LVM</em>. This leaves me with an encrypted root partition. What I want to do now, is to put a reasonably sized swap file there, and make the system hibernate to it.</p>
+
+
+
+<p>So, first, I created a 35 GB (35840MB) large swapfile as <code>/swapfile</code>. I prefer to create a swapfile slightly larger than RAM, to ensure that everything fits and my machine comes with 32GB of RAM. I used <a href="https://wiki.archlinux.org/title/swap#Swap_file">the instructions in the excellent Arch Wiki</a> to set this up. I also edited <code>/etc/fstab</code>, commenting out the swap partition setup by the installer and adding the swapfile.</p>
+
+
+
+<p>Then, I …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-11 21:31:21+00:00" class="dt-published"></time>
-  Sun 11 Dec 2022
-  in Planet Python.
+  <span class="p-author"><b>Johan Thelin</b></span>
+  on <time datetime="2022-12-12 20:23:06+00:00" class="dt-published"></time>
+  Mon 12 Dec 2022
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -204,40 +210,31 @@ And yesterday I had the opportunity to play the best one in my opinion:
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://wingolog.org/archives/2022/12/11/we-iterate-so-that-you-can-recurse" rel="bookmark" class="u-url"
-       title="we iterate so that you can recurse" target="_blank">
-      <time class="m-date" datetime="2022-12-11 21:19:20+00:00">
+    <a href="https://nibblestew.blogspot.com/2022/12/print-quality-pdf-generation-color.html" rel="bookmark" class="u-url"
+       title="Print quality PDF generation, color separations, other fun stuff" target="_blank">
+      <time class="m-date" datetime="2022-12-12 19:20:00+00:00">
         Dec
         <span class="m-date-day">
-          11
+          12
         </span>
         2022
       </time>
       <div class="p-name">
-      we iterate so that you can recurse
+      Print quality PDF generation, color separations, other fun stuff
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p>Sometimes when you see an elegant algorithm, you think "looks great, I
-just need it to also do X".  Perhaps you are able to build X directly
-out of what the algorithm gives you; fantastic.  Or, perhaps you can
-alter the algorithm a bit, and it works just as well while also doing X.
-Sometimes, though, you alter the algorithm and things go pear-shaped.</p><p>Tonight's little note builds on <a href="https://wingolog.org/archives/2022/12/10/a-simple-semi-space-collector">yesterday's semi-space collector
-article</a>
-and discusses an worse alternative to the Cheney scanning algorithm.</p><p>To recall, we had this visit_field function that takes a edge in the
-object graph, as the address of a field in memory containing a struct gc_obj*.  If the edge points to an object that was already copied,
-visit_field updates it to the forwarded address.  Otherwise it copies the object,
-thus computing the new …</p></div>
+  <p>Going from the simple color managed PDF generator discussed in <a href="https://nibblestew.blogspot.com/2022/12/color-management-this-time-with-pdf.html">the previous blog post</a> into something more useful requires getting practical. So here is a screenshot of a "print ready" PDF document I generated with the code showing a typical layout you'd use for a softcover book. As printers can't really print all the way to the edges of paper, the cover needs to be printed to a larger sheet and then cut to its final size.</p><p><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggUkFT7Y9zIn-HdS3ViFljqXe4ypf-n9qwoa8kfwhqjiAau1xZb3JWpdFSB_OMQamHqQxY7GUVPQX0KnCtAyqrqJDhhYcREWOUPU24bKvlz4I1pBubZZmzEcTcDtTBBPK7yUXwGExihx-Iwkj86IoxqPlkhqzWTTKaKVLz7_AsM-X5cUHcY1YSL3Kt/s907/sep1.tif"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggUkFT7Y9zIn-HdS3ViFljqXe4ypf-n9qwoa8kfwhqjiAau1xZb3JWpdFSB_OMQamHqQxY7GUVPQX0KnCtAyqrqJDhhYcREWOUPU24bKvlz4I1pBubZZmzEcTcDtTBBPK7yUXwGExihx-Iwkj86IoxqPlkhqzWTTKaKVLz7_AsM-X5cUHcY1YSL3Kt/w400-h313/sep1.tif"></a></p><p>It's not of artistically high quality, granted, but most of the technical bits are there:</p><p></p><ul><li>The printed page is noticeably bigger than the "active area" and has a bunch of magic squiggles needed by the printing house</li><li>The output is fully color managed CMYK</li><li>The gray box represents the bleed area and in a real document the cover image would extend over it …</li></ul>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Andy Wingo</b></span>
-  on <time datetime="2022-12-11 21:19:20+00:00" class="dt-published"></time>
-  Sun 11 Dec 2022
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2022-12-12 19:20:00+00:00" class="dt-published"></time>
+  Mon 12 Dec 2022
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -247,9 +244,80 @@ thus computing the new …</p></div>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://www.thelins.se/johan/blog/2022/12/debian-on-the-xps13-plus-9320/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Debian on the XPS13 Plus (9320)" target="_blank">
-      <time class="m-date" datetime="2022-12-11 15:45:52+00:00">
+    <a href="https://pluralistic.net/2022/12/12/unsafe-at-any-speed/" rel="bookmark" class="u-url"
+       title="Pluralistic: Orphaned neurological implants (12 Dec 2022)" target="_blank">
+      <time class="m-date" datetime="2022-12-12 16:46:35+00:00">
+        Dec
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Pluralistic: Orphaned neurological implants (12 Dec 2022)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Orphaned neurological implants: When the company that powers your nervous system decides to 'pivot.' Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Orphaned neurological implants (permalink) The startup world's dirty not-so-secret is that most startups fail. Startups are risky ventures and their investors know it, so they cast a wide net, placing lots of bets on lots of startups and folding the ones that don't show promise, which sucks for the company employees, but also for the users who depend on the company's products. You know what this is like: you sink a bunch of time into familiarizing yourself with a new product, you spend money on accessories for it, you lock your data into it, you integrate it into …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2022-12-12 16:46:35+00:00" class="dt-published"></time>
+  Mon 12 Dec 2022
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://realpython.com/python-get-current-time/" rel="bookmark" class="u-url"
+       title="Real Python: How to Get and Use the Current Time in Python" target="_blank">
+      <time class="m-date" datetime="2022-12-12 14:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          12
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Real Python: How to Get and Use the Current Time in Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Getting the <strong>current time</strong> in Python is a nice starting point for many time-related operations. One very important use case is creating <a href="https://en.wikipedia.org/wiki/Timestamp">timestamps</a>. In this tutorial, you’ll learn how to <strong>get</strong>, <strong>display</strong>, and <strong>format</strong> the current time with the <a href="https://docs.python.org/3/library/datetime.html"><code>datetime</code></a> module.</p>
+<p>To effectively use the current time in your Python applications, you’ll add a few tools to your belt. For instance, you’ll learn how to <strong>read attributes</strong> of the current time, like the year, minutes, or seconds. To make the time more easily readable, you’ll explore options for <strong>printing</strong> it. You’ll also get to know different <strong>formats</strong> of time and learn how computers <strong>represent</strong> time, how to <strong>serialize</strong> time, and how to deal with <strong>time zones</strong>.</p>
+<div>
+<p><strong>Source Code:</strong> <a href="https://realpython.com/bonus/python-get-current-time-code/">Click here to download the free source code</a> for getting and using the current time in Python …</p></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-12 14:00:00+00:00" class="dt-published"></time>
+  Mon 12 Dec 2022
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/vtk-download-test-data/" rel="bookmark" class="u-url"
+       title="Download VTK test data" target="_blank">
+      <time class="m-date" datetime="2022-12-11 00:00:00+00:00">
         Dec
         <span class="m-date-day">
           11
@@ -257,34 +325,66 @@ thus computing the new …</p></div>
         2022
       </time>
       <div class="p-name">
-      Debian on the XPS13 Plus (9320)
+      Download VTK test data
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>TL;DR; Still no sound, but I learned a couple of new things&#8230;</p>
-
-
-
-<p>So, I finally got around to upgrading my laptop. I decided to go for my fourth XPS13, and this time I opted for a maxed out XPS13 Plus. A really nice machine. However, the driver stack isn&#8217;t quite there yet. Yes, I should have read up more before buying, but I didn&#8217;t and I know it will be sorted out over time.</p>
-
-
-
-<p>As a vim user, the touch Esc key will be a challenge. Perhaps this is where I learn to bind to capslock, but I&#8217;ve not come to that point yet.</p>
-
-
-
-<p>So, after installing using the netinst image with non-free drivers (and my phone over USB tether for networking since the wifi still didn&#8217;t work), I had to move to testing for …</p>
+  <p>VTK test data can be useful to test ParaView data flows and code as a reference of known good data.
+The VTK file I/O documentation itself recommends using the example data files to test one&rsquo;s own project software.
+A straightforward way to obtain the data is by &ldquo;building&rdquo; a single ExternalData target, where virtually all of the time is spent downloading.</p>
+<div><pre><code><span><span>git clone --recursive https://gitlab.kitware.com/vtk/vtk.git --depth <span>1</span>
+</span></span><span><span>
+</span></span><span><span>cmake -Bbuild -DVTK_BUILD_TESTING<span>=</span>ON
+</span></span><span><span>
+</span></span><span><span>cmake --build build -t VTKData
+</span></span></code></pre></div><p>Numerous data folders are created under build/ExternalData/Testing/Data.
+For example, VTKHDF data in HDF5 file is the file mandelbrot-vti.hdf</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Johan Thelin</b></span>
-  on <time datetime="2022-12-11 15:45:52+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-11 00:00:00+00:00" class="dt-published"></time>
   Sun 11 Dec 2022
-  in Planet KDE.
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://monthly-reports.archlinux.page/2022/11/" rel="bookmark" class="u-url"
+       title="November" target="_blank">
+      <time class="m-date" datetime="2022-12-11 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          11
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      November
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Arch Linux in November 2022 # Git packaging sources # We made huge progress towards finally being able to migrate from SVN to Git for package sources. The core projects responsible for our package build, workflow and release, namely dbscripts and devtools reached production grade adjustments to achieve the transition [0][1].
+Furthermore we have started to document and outline our Roadmap with the Git packaging as its first item [2].
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-11 00:00:00+00:00" class="dt-published"></time>
+  Sun 11 Dec 2022
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -324,40 +424,6 @@ thus computing the new …</p></div>
   on <time datetime="2022-12-10 20:38:00+01:00" class="dt-published"></time>
   Sat 10 Dec 2022
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2022/12/10/e2e/" rel="bookmark" class="u-url"
-       title="Pluralistic: Freedom of reach IS freedom of speech (10 Dec 2022)" target="_blank">
-      <time class="m-date" datetime="2022-12-10 15:35:20+00:00">
-        Dec
-        <span class="m-date-day">
-          10
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: Freedom of reach IS freedom of speech (10 Dec 2022)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Freedom of reach IS freedom of speech: The end-to-end principle is good, actually. Hey look at this: Delights to delectate. This day in history: 2002, 2007, 2012, 2017, 2021 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Freedom of reach IS freedom of speech (permalink) The online debate over free speech suuuuucks, and, amazingly, it's getting worse. This week, it's the false dichotomy between "freedom of speech" and "freedom of reach," that is, the debate over whether a platform should override your explicit choices about what you want to see: https://seekingalpha.com/news/3849331-musk-meets-twitter-staff-freedom-of-reach-new-ideas-on-human-verification It's wild that we're still having this fight. It is literally the first internet fight! The modern internet was born out of an epic struggled between "Bellheads" (who believed centralized powers should decide how you used networks) and "Netheads" (who …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-12-10 15:35:20+00:00" class="dt-published"></time>
-  Sat 10 Dec 2022
-  in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -588,44 +654,6 @@ diving into figuring out the root cause.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/macos-terminal-key-shortcuts/" rel="bookmark" class="u-url"
-       title="macOS Terminal key shortcuts" target="_blank">
-      <time class="m-date" datetime="2022-12-08 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          08
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      macOS Terminal key shortcuts
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Regardless of the macOS Terminal shell, the key bindings are generally distinct versus Linux terminals.
-It is possible to use <code>keybind</code> commands in ~/.zprofile to make macOS Terminal key shortcuts work like Linux terminal emulators.
-Learning the
-<a href="https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac">macOS Terminal key shortcut defaults</a>
-can be useful when at another person&rsquo;s Mac laptop.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-08 00:00:00+00:00" class="dt-published"></time>
-  Thu 08 Dec 2022
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pythoninsider.blogspot.com/2022/12/python-3111-3109-3916-3816-3716-and.html" rel="bookmark" class="u-url"
        title="Python 3.11.1, 3.10.9, 3.9.16, 3.8.16, 3.7.16, and 3.12.0 alpha 3 are now available" target="_blank">
       <time class="m-date" datetime="2022-12-06 17:58:00.004000-05:00">
@@ -835,43 +863,6 @@ other so that people on one server …</p>
   on <time datetime="2022-11-27 06:52:54-05:00" class="dt-published"></time>
   Sun 27 Nov 2022
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://bbs.archlinux.org/viewtopic.php?id=281620" rel="bookmark" class="u-url"
-       title=""Trusted Users" are now "Package Maintainers"" target="_blank">
-      <time class="m-date" datetime="2022-11-27 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          27
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      "Trusted Users" are now "Package Maintainers"
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Following a long discussion and a recent vote, the role of &quot;<a href="https://wiki.archlinux.org/index.php?title=Trusted_Users">Trusted User</a>&quot; has been renamed &quot;Package Maintainer&quot;:<ul><li>
-<a href="https://gitlab.archlinux.org/archlinux/rfcs/-/merge_requests/7/commits">https://gitlab.archlinux.org/archlinux/ … /7/commits</a></li><li>
-<a href="https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/6UPKMAL2A7FNAUNWMTHWI4EXV2KS5OSC/">https://lists.archlinux.org/archives/li … XV2KS5OSC/</a></li></ul>
-The role remains the same. The forum titles have been updated accordingly.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Xyne</b></span>
-  on <time datetime="2022-11-27 00:00:00+00:00" class="dt-published"></time>
-  Sun 27 Nov 2022
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
