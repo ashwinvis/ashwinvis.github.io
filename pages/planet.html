@@ -164,35 +164,44 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pycoders.com/issues/556" rel="bookmark" class="u-url"
-       title="PyCoder’s Weekly: Issue #556 (Dec. 20, 2022)" target="_blank">
-      <time class="m-date" datetime="2022-12-20 19:30:00+00:00">
+    <a href="https://everydaysuperpowers.dev/articles/til-debug-any-python-file-in-vs-code/" rel="bookmark" class="u-url"
+       title="Everyday Superpowers: TIL Debug any python file in VS Code" target="_blank">
+      <time class="m-date" datetime="2022-12-21 21:37:55+00:00">
         Dec
         <span class="m-date-day">
-          20
+          21
         </span>
         2022
       </time>
       <div class="p-name">
-      PyCoder’s Weekly: Issue #556 (Dec. 20, 2022)
+      Everyday Superpowers: TIL Debug any python file in VS Code
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p> <span>#556 – DECEMBER 20, 2022</span> <span><a href="https://pycoders.com/issues/556/feed">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p> 
- <div> 
-<a href="https://pycoders.com/link/10051/feed">Using a Build System &amp; Continuous Integration in Python</a> <p> What advantages can a build system provide for a Python developer? What new skills are required when working with a team of developers? This week on the show, Benjy Weinberger from Toolchain is here to discuss the Pants build system and getting started with continuous integration (CI). <span><a href="https://pycoders.com/link/10051/feed">REAL PYTHON</a></span> <span>podcast</span> </p> </div> <div> 
-<a href="https://pycoders.com/link/10038/feed">PEP 701: Syntactic Formalization of F-Strings</a> <p> This Python Enhancement Proposal describes the formalization of a grammar for f-strings, allowing a reduction in the underlying parser code complexity and providing future features like comments in multi-line f-strings. <span><a href="https://pycoders.com/link/10038/feed">PYTHON.ORG</a></span> </p> </div> <div> 
-<a href="https://pycoders.com/link/10023/feed">TelemetryHub by Scout APM, A One-Step Solution for Open-Telemetry</a> <a href="https://pycoders.com/link/10023/feed"><img alt="alt" src="https://cdn.pycoders.com/49193c8cfe0958fc4452cdbf82e0e9a8"></a> <p> Imagine a world where you could see all of your logs, metrics, and tracing data in one place. We&rsquo;ve built TelemetryHub to be the simplest observability tool …</p></div>
+  <div><p>One of my frustrations with VisualStudio Code was creating a `launch.json` file whenever I wanted to debug a one-off Python file. </p><p>Today, I learned that you could add a debugger configuration to your user settings. This allows you always to have a debugging configuration available.</p></div>
+<div>How to do this</div>
+<div><p>Create a debugging (or launch) configuration:</p><ol><li>Select the &quot;Run and Debug&quot; tab and click &quot;create a launch.json file&quot;</li></ol><p></p><img alt="A screen capture that shows a VisualStudio Code window with  the "><p>2. Choose &quot;Python File&quot;</p><p>3. VS Code will generate a configuration for you. This is the one I used, where I changed the `&quot;justMyCode&quot;` to `false`, so I can step in to any Python code.</p></div>
+<div>
+<pre><code>{
+    &quot;name&quot;: &quot;Python: Current File&quot;,
+    &quot;type&quot;: &quot;python&quot;,
+    &quot;request&quot;: &quot;launch&quot;,
+    &quot;program&quot;: &quot;${file}&quot;,
+    &quot;console&quot;: &quot;integratedTerminal&quot;,
+    &quot;justMyCode&quot;: false
+}</code></pre>
+</div>
+<div><p>4. Copy the config (including the curly braces)</p><p>5. Open your user configuration (`⌘`/`Ctrl` + `,`) and search for &quot;launch&quot;.</p><p>6. Click &quot;Edit in …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-20 19:30:00+00:00" class="dt-published"></time>
-  Tue 20 Dec 2022
+  on <time datetime="2022-12-21 21:37:55+00:00" class="dt-published"></time>
+  Wed 21 Dec 2022
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -202,32 +211,100 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2022/12/20/free-for-2023/" rel="bookmark" class="u-url"
-       title="Pluralistic: 2023's public domain is a banger (20 Dec 2022)" target="_blank">
-      <time class="m-date" datetime="2022-12-20 19:11:27+00:00">
+    <a href="https://pluralistic.net/2022/12/21/malicious-compliance/" rel="bookmark" class="u-url"
+       title="Pluralistic: How Apple could open its App Store without really opening its App Store (21 Dec 2022)" target="_blank">
+      <time class="m-date" datetime="2022-12-21 14:31:12+00:00">
         Dec
         <span class="m-date-day">
-          20
+          21
         </span>
         2022
       </time>
       <div class="p-name">
-      Pluralistic: 2023's public domain is a banger (20 Dec 2022)
+      Pluralistic: How Apple could open its App Store without really opening its App Store (21 Dec 2022)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links 2023's public domain is a banger: Hemingway! Holmes! Woolf! Pooh! Christie! Metropolis! Gershwin! Hey look at this: Delights to delectate. This day in history: 2002, 2012, 2017 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading 2023's public domain is a banger (permalink) 40 years ago, giant entertainment companies embarked on a slow-moving act of arson. The fuel for this arson was copyright term extension (making copyrights last longer), including retrospective copyright term extensions that took works out of the public domain and put them back into copyright for decades. Vast swathes of culture became off-limits, pseudo-property with absentee landlords, with much of it crumbling into dust. After 55-75 years, only 2% of works have any commercial value. After 75 years, it declines further. No wonder that so much of our cultural heritage is now orphan …
+  Today's links How Apple could open its App Store without really opening its App Store: &#8230;and what we should do about it. Hey look at this: Delights to delectate. This day in history: 2007, 2012, 2017 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading How Apple could open its App Store without really opening its App Store (permalink) Last week, Mark Gurman published a blockbuster story in Bloomberg, revealing Apple's plan to allow third-party Ios App Stores to comply with the EU's Digital Markets Act. Apple didn't confirm it, but I believe it. Gurman's sourcing was impeccable: https://www.bloomberg.com/news/articles/2022-12-13/will-apple-allow-users-to-install-third-party-app-stores-sideload-in-europe This is a huge deal. While Apple's "curated" approach to software delivers benefits to users, those benefits are unreliable. As I explain in a new post for EFF's Deeplinks blog, Apple only …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-12-20 19:11:27+00:00" class="dt-published"></time>
-  Tue 20 Dec 2022
+  on <time datetime="2022-12-21 14:31:12+00:00" class="dt-published"></time>
+  Wed 21 Dec 2022
   in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://feborg.es/proposing-internship-project-ideas/" rel="bookmark" class="u-url"
+       title="Proposing internship project ideas" target="_blank">
+      <time class="m-date" datetime="2022-12-21 13:45:44+00:00">
+        Dec
+        <span class="m-date-day">
+          21
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Proposing internship project ideas
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  GNOME yearly participates in both Outreachy and Google Summer of Code. These internship programs basically consist on having new contributors working on a well-scoped project alongside an experienced mentor. Defining project ideas is not as easy as it might sound. One needs to consider the perspective of a newcomer approaching the project for the first […]
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Felipe Borges</b></span>
+  on <time datetime="2022-12-21 13:45:44+00:00" class="dt-published"></time>
+  Wed 21 Dec 2022
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2714/" rel="bookmark" class="u-url"
+       title="Cold Complaints" target="_blank">
+      <time class="m-date" datetime="2022-12-21 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          21
+        </span>
+        2022
+      </time>
+      <div class="p-name">
+      Cold Complaints
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Our investigation into whining-based remedies became the first study to be halted by the IRB on the grounds that the treatment group was 'too annoying.'" src="https://imgs.xkcd.com/comics/cold_complaints.png" title="Our investigation into whining-based remedies became the first study to be halted by the IRB on the grounds that the treatment group was 'too annoying.'">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2022-12-21 00:00:00+00:00" class="dt-published"></time>
+  Wed 21 Dec 2022
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -262,43 +339,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2022-12-20 19:44:44+01:00" class="dt-published"></time>
   Tue 20 Dec 2022
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://viruta.org/development-guides.html" rel="bookmark" class="u-url"
-       title="Development guides for librsvg and at-spi2-core" target="_blank">
-      <time class="m-date" datetime="2022-12-20 18:19:42+00:00">
-        Dec
-        <span class="m-date-day">
-          20
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Development guides for librsvg and at-spi2-core
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>When I started helping out with <a href="https://flathub.org/apps/details/org.gnome.Crosswords">Crosswords</a>, <a href="https://blogs.gnome.org/jrb/">JRB</a> taught me a valuable
-lesson: before implementing a non-trivial feature, or doing a non-trivial change, one
-should first write a document with the design of the feature.  It doesn't have to be
-anything formal; just an explanation of where you are coming …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Federico Mena Quintero</b></span>
-  on <time datetime="2022-12-20 18:19:42+00:00" class="dt-published"></time>
-  Tue 20 Dec 2022
-  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -427,40 +467,6 @@ In such cases it is sometimes hard to get the modal window back to the main desk
   on <time datetime="2022-12-19 10:03:28+00:00" class="dt-published"></time>
   Mon 19 Dec 2022
   in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2713/" rel="bookmark" class="u-url"
-       title="Data Point" target="_blank">
-      <time class="m-date" datetime="2022-12-19 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          19
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Data Point
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="In general you should only include your single best data point in the paper. The rest of the data can go in the supplementary materials." src="https://imgs.xkcd.com/comics/data_point.png" title="In general you should only include your single best data point in the paper. The rest of the data can go in the supplementary materials.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-19 00:00:00+00:00" class="dt-published"></time>
-  Mon 19 Dec 2022
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -844,50 +850,6 @@ decoded. Some protocols such as <code>urllib</code> http 3xx redirects potential
   on <time datetime="2022-12-06 17:58:00.004000-05:00" class="dt-published"></time>
   Tue 06 Dec 2022
   in Python Insider.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://drewdevault.com/2022/12/01/I-shall-toil-quietly.html" rel="bookmark" class="u-url"
-       title="I shall toil at a reduced volume" target="_blank">
-      <time class="m-date" datetime="2022-12-01 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          01
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      I shall toil at a reduced volume
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Over the last nine years I have written 300,000 words for this blog on the
-topics which are important to me. I am not certain that I have much left to say.</p>
-<p>I can keep revisiting these topics for years, each time adding a couple more
-years of wisdom and improvements to my writing skills to present my arguments
-more effectively. However, I am starting to feel diminishing returns from my
-writing. It does not seem like my words are connecting with readers anymore.
-And, though the returns on my work seem to be diminishing, the costs are not.
-Each new article spurs less discussion than the last, but provides an unwavering
-supply of spiteful responses.</p>
-<p>Software is still the same mess it was when I started writing and working, or
-perhaps even worse. You can&rsquo;t overcome perverse …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-01 00:00:00+00:00" class="dt-published"></time>
-  Thu 01 Dec 2022
-  in Drew DeVault's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
