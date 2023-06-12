@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -226,27 +226,27 @@ is what I did following the instructions:</p>
    Save it as <code>deletetweet.sh</code> and make it executable.</li>
 <li>And a personal twist: send delete requests in parallel:</li>
 </ol>
-<div class="m-code"><pre><span></span><code>cat tweetstodelete.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Deleting {}&#39; &amp;&amp; ./deletetweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; delete.log <span class="p">&amp;</span>
-tail -f delete.log
+<div class="m-code"><pre><span></span><code>cat<span class="w"> </span>tweetstodelete.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>parallel<span class="w"> </span>-j4<span class="w"> </span><span class="s2">&quot;echo &#39;Deleting {}&#39; &amp;&amp; ./deletetweet.sh {}&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="m">1</span>&gt;&gt;<span class="w"> </span>delete.log<span class="w"> </span><span class="p">&amp;</span>
+tail<span class="w"> </span>-f<span class="w"> </span>delete.log
 </code></pre></div>
 
 <p>And the cURL command looks like:</p>
-<div class="m-code"><pre><span></span><code>curl -s <span class="s2">&quot;https://api.twitter.com/1.1/statuses/destroy/</span><span class="nv">$1</span><span class="s2">.json&quot;</span> ...
+<div class="m-code"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;https://api.twitter.com/1.1/statuses/destroy/</span><span class="nv">$1</span><span class="s2">.json&quot;</span><span class="w"> </span>...
 </code></pre></div>
 
 <p>So now I am down from 1400 tweets to 544 tweets. And the difference is almost
 correct:</p>
-<div class="m-code"><pre><span></span><code>❯ wc -l tweetstodelete.txt
-<span class="m">844</span> tweetstodelete.txt
+<div class="m-code"><pre><span></span><code>❯<span class="w"> </span>wc<span class="w"> </span>-l<span class="w"> </span>tweetstodelete.txt
+<span class="m">844</span><span class="w"> </span>tweetstodelete.txt
 </code></pre></div>
 
 <p>In step 3, the following command was used to extract the tweets with no
 interaction</p>
-<div class="m-code"><pre><span></span><code>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.favorite_count == &quot;0&quot;) | select(.retweet_count == &quot;0&quot;) | select(has(&quot;in_reply_to_user_id_str&quot;) | not)  | .id&#39;</span> -r &gt; tweetstodelete.txt<span class="sb">`</span>
+<div class="m-code"><pre><span></span><code>cat<span class="w"> </span>tweet.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.[] | select(.favorite_count == &quot;0&quot;) | select(.retweet_count == &quot;0&quot;) | select(has(&quot;in_reply_to_user_id_str&quot;) | not)  | .id&#39;</span><span class="w"> </span>-r<span class="w"> </span>&gt;<span class="w"> </span>tweetstodelete.txt<span class="sb">`</span>
 </code></pre></div>
 
 <p>To get a list of all the tweets:</p>
-<div class="m-code"><pre><span></span><code>cat tweet.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .id&#39;</span> -r &gt; tweetstodelete.txt
+<div class="m-code"><pre><span></span><code>cat<span class="w"> </span>tweet.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.[] | .id&#39;</span><span class="w"> </span>-r<span class="w"> </span>&gt;<span class="w"> </span>tweetstodelete.txt
 </code></pre></div>
 
 <p>Now we need something similar for undoing all the likes on Twitter.</p>
@@ -254,20 +254,20 @@ interaction</p>
 <p>Get a list of tweets to dislike from your archive in a
 similar approach. Take the <code>like.js</code> file from your archive and make it a
 proper JSON file.</p>
-<div class="m-code"><pre><span></span><code>cat like.json <span class="p">|</span> jq <span class="s1">&#39;.[] | .like.tweetId&#39;</span> -r &gt;! tweetstodislike.txt
+<div class="m-code"><pre><span></span><code>cat<span class="w"> </span>like.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.[] | .like.tweetId&#39;</span><span class="w"> </span>-r<span class="w"> </span>&gt;!<span class="w"> </span>tweetstodislike.txt
 </code></pre></div>
 
 <p>The POST request is also similar and contains "destroy". However the tweet ID
 should be in the data / payload. Therefore the curl command looks like (note
 the <code>$1</code> where the tweet ID gets substituted):</p>
 <div class="m-code"><pre><span></span><code><span class="ch">#!/bin/bash</span>
-curl -s <span class="s1">&#39;https://api.twitter.com/1.1/favorites/destroy.json&#39;</span> ...lots of stuff here...<span class="se">\</span>
-  --data<span class="s2">&quot;id=</span><span class="nv">$1</span><span class="s2">&amp;cards_platform=Web-13&amp; ...even more stuff...&quot;</span>
+curl<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;https://api.twitter.com/1.1/favorites/destroy.json&#39;</span><span class="w"> </span>...lots<span class="w"> </span>of<span class="w"> </span>stuff<span class="w"> </span>here...<span class="se">\</span>
+<span class="w">  </span>--data<span class="s2">&quot;id=</span><span class="nv">$1</span><span class="s2">&amp;cards_platform=Web-13&amp; ...even more stuff...&quot;</span>
 </code></pre></div>
 
 <p>Save the command in a file called <code>disliketweet.sh</code> and then,</p>
-<div class="m-code"><pre><span></span><code>cat tweetstodislike.txt <span class="p">|</span> parallel -j4 <span class="s2">&quot;echo &#39;Disliking {}&#39; &amp;&amp; ./disliketweet.sh {}&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="m">1</span>&gt;&gt; dislike.log <span class="p">&amp;</span>
-tail -f dislike.log
+<div class="m-code"><pre><span></span><code>cat<span class="w"> </span>tweetstodislike.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>parallel<span class="w"> </span>-j4<span class="w"> </span><span class="s2">&quot;echo &#39;Disliking {}&#39; &amp;&amp; ./disliketweet.sh {}&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="m">1</span>&gt;&gt;<span class="w"> </span>dislike.log<span class="w"> </span><span class="p">&amp;</span>
+tail<span class="w"> </span>-f<span class="w"> </span>dislike.log
 </code></pre></div>
 
 <h4 id="appendix-2-unstar-github-repositories"><a class="toclink" href="#appendix-2-unstar-github-repositories">Appendix 2: Unstar GitHub repositories</a></h4>

@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -184,28 +184,28 @@ out, I have been using the latter as it is noticeably faster. Snippets
 of the configuration files that I used are shown below.</p>
 <section id="travis-ci-configuration">
 <h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.travis.yml">Travis CI configuration</a></h3>
-<pre class="m-code"><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span><span class="w"></span>
+<pre class="m-code"><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
 
-<span class="nn">...</span><span class="w"></span>
+<span class="nn">...</span>
 
-<span class="nt">install</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pelican-themes -i pelican-bluedrop/bluedrop</span><span class="w"></span>
+<span class="nt">install</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pelican-themes -i pelican-bluedrop/bluedrop</span>
 
-<span class="nt">script</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd src</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">make publish</span><span class="w"></span>
+<span class="nt">script</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cd src</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">make publish</span>
 
-<span class="nt">deploy</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pages</span><span class="w"></span>
-<span class="w">  </span><span class="nt">skip-cleanup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">github-token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$GITHUB_TOKEN&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">keep-history</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">target-branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Travis CI</span><span class="w"></span>
-<span class="w">  </span><span class="nt">local-dir</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./output&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">on</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">develop</span><span class="w"></span></pre>
+<span class="nt">deploy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pages</span>
+<span class="w">  </span><span class="nt">skip-cleanup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">github-token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$GITHUB_TOKEN&quot;</span>
+<span class="w">  </span><span class="nt">keep-history</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">target-branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Travis CI</span>
+<span class="w">  </span><span class="nt">local-dir</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./output&quot;</span>
+<span class="w">  </span><span class="nt">on</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">develop</span></pre>
 <p>An extra step you have to do is to generate a personal access token,
 <code>`GITHUB_TOKEN</code> &lt;<a class="m-link-wrap" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>&gt;`__ for Travis to
 get permissions. Then, you save the token as a secret environment
@@ -214,36 +214,36 @@ documented</a>.</p>
 </section>
 <section id="github-actions-workflow">
 <h3><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/19.11/.github/workflows/publish.yml">GitHub actions workflow</a></h3>
-<pre class="m-code"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span><span class="w"></span>
+<pre class="m-code"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Publish pelican website</span>
 
-<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
 
-<span class="nt">env</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">PIP_CACHE_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span><span class="w"></span>
+<span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">PIP_CACHE_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span>
 
-<span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w"></span>
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
 
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
-<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max-parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span><span class="w"></span>
-<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">max-parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span>
 
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span><span class="w"></span>
-<span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success()</span><span class="w"></span>
-<span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">ACTIONS_DEPLOY_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.ACTIONS_DEPLOY_KEY }}</span><span class="w"></span>
-<span class="w">        </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"></span>
-<span class="w">        </span><span class="nt">PUBLISH_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./output</span><span class="w"></span>
-<span class="w">        </span><span class="nt">SCRIPT_MODE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">        </span><span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span><span class="w"></span>
-<span class="w">        </span><span class="no">bash ./entrypoint.sh</span><span class="w"></span></pre>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success()</span>
+<span class="w">      </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">ACTIONS_DEPLOY_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.ACTIONS_DEPLOY_KEY }}</span>
+<span class="w">        </span><span class="nt">PUBLISH_BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span>
+<span class="w">        </span><span class="nt">PUBLISH_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./output</span>
+<span class="w">        </span><span class="nt">SCRIPT_MODE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2.5.0/entrypoint.sh</span>
+<span class="w">        </span><span class="no">bash ./entrypoint.sh</span></pre>
 <p>Here we use a <a href="https://github.com/peaceiris/actions-gh-pages">third-party
 action</a> created to
 deploy generated files to GitHub pages. We may not want to give too many
@@ -269,47 +269,47 @@ Now I have come up with a better approach. The result was a Jinja template +
 interactive TUI workflow which creates a post stub, save it with the right
 filename, opens my editor, commits and pushes it! <a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/templates/post.md.j2">The template</a>
 looks as follows:</p>
-<pre class="m-code"><span class="cp">{%</span> <span class="k">block</span> <span class="nv">metadata</span> -<span class="cp">%}</span><span class="x"></span>
+<pre class="m-code"><span class="cp">{%</span> <span class="k">block</span> <span class="nv">metadata</span> -<span class="cp">%}</span>
 <span class="x">---</span>
-<span class="x">Title: </span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Author: </span><span class="cp">{{</span> <span class="nv">author</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Date: </span><span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Status: </span><span class="cp">{{</span> <span class="nv">status</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Summary: </span><span class="cp">{{</span> <span class="nv">summary</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Category: </span><span class="cp">{{</span> <span class="nv">category</span> <span class="cp">}}</span><span class="x"></span>
-<span class="x">Tags: </span><span class="cp">{{</span> <span class="nv">tags</span> <span class="o">|</span> <span class="nf">join</span><span class="o">(</span><span class="s1">&#39;, &#39;</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+<span class="x">Title: </span><span class="cp">{{</span> <span class="nv">title</span> <span class="cp">}}</span>
+<span class="x">Author: </span><span class="cp">{{</span> <span class="nv">author</span> <span class="cp">}}</span>
+<span class="x">Date: </span><span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span>
+<span class="x">Status: </span><span class="cp">{{</span> <span class="nv">status</span> <span class="cp">}}</span>
+<span class="x">Summary: </span><span class="cp">{{</span> <span class="nv">summary</span> <span class="cp">}}</span>
+<span class="x">Category: </span><span class="cp">{{</span> <span class="nv">category</span> <span class="cp">}}</span>
+<span class="x">Tags: </span><span class="cp">{{</span> <span class="nv">tags</span> <span class="o">|</span> <span class="nf">join</span><span class="o">(</span><span class="s1">&#39;, &#39;</span><span class="o">)</span> <span class="cp">}}</span>
 <span class="x">---</span>
-<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span></pre>
+<span class="cp">{%</span>- <span class="k">endblock</span> <span class="cp">%}</span></pre>
 <p>I did not want to build the TUI from the scratch. Therefore I borrowed
 the <code>prompt</code> module from <a href="https://cookiecutter.readthedocs.io/en/1.7.0/cookiecutter.html#module-cookiecutter.prompt">the cookiecutter project</a>
 to do it for me. I save some defaults in a <code>cookiecutter.json</code> file,
 based on which the metadata values are prompted from the user
 conveniently as follows:</p>
-<pre class="m-code">title <span class="o">[</span>Insert title<span class="o">]</span>: Turning Pelican into a mini-CMS
-summary <span class="o">[]</span>: Lowering writing inhibitions with tech
-Select category:
-<span class="m">1</span> - Blog
-<span class="m">2</span> - Tech Talk
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">2</span>
-Select tags:
-<span class="m">1</span> - life
-<span class="m">2</span> - research
-<span class="m">3</span> - software
-Choose from <span class="m">1</span>, <span class="m">2</span>, <span class="m">3</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">3</span>
-slug <span class="o">[</span>turning-pelican-into-a-mini-cms<span class="o">]</span>: pelican-mini-cms
-Select status:
-<span class="m">1</span> - draft
-<span class="m">2</span> - published
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>: <span class="m">1</span>
-date <span class="o">[</span><span class="m">2020</span>-01-02T14:12:41.803562<span class="o">]</span>:
-author <span class="o">[</span>Ashwin Vishnu Mohanan<span class="o">]</span>:
-Select filetype:
-<span class="m">1</span> - md
-<span class="m">2</span> - ipynb
-Choose from <span class="m">1</span>, <span class="m">2</span> <span class="o">[</span><span class="m">1</span><span class="o">]</span>:
-Track changes? <span class="o">[</span>True<span class="o">]</span>:
-Commit changes? <span class="o">[</span>True<span class="o">]</span>: n
-Push changes? <span class="o">[</span>False<span class="o">]</span>:</pre>
+<pre class="m-code">title<span class="w"> </span><span class="o">[</span>Insert<span class="w"> </span>title<span class="o">]</span>:<span class="w"> </span>Turning<span class="w"> </span>Pelican<span class="w"> </span>into<span class="w"> </span>a<span class="w"> </span>mini-CMS
+summary<span class="w"> </span><span class="o">[]</span>:<span class="w"> </span>Lowering<span class="w"> </span>writing<span class="w"> </span>inhibitions<span class="w"> </span>with<span class="w"> </span>tech
+Select<span class="w"> </span>category:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>Blog
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>Tech<span class="w"> </span>Talk
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">2</span>
+Select<span class="w"> </span>tags:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>life
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>research
+<span class="m">3</span><span class="w"> </span>-<span class="w"> </span>software
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">3</span>
+slug<span class="w"> </span><span class="o">[</span>turning-pelican-into-a-mini-cms<span class="o">]</span>:<span class="w"> </span>pelican-mini-cms
+Select<span class="w"> </span>status:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>draft
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>published
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span><span class="m">1</span>
+date<span class="w"> </span><span class="o">[</span><span class="m">2020</span>-01-02T14:12:41.803562<span class="o">]</span>:
+author<span class="w"> </span><span class="o">[</span>Ashwin<span class="w"> </span>Vishnu<span class="w"> </span>Mohanan<span class="o">]</span>:
+Select<span class="w"> </span>filetype:
+<span class="m">1</span><span class="w"> </span>-<span class="w"> </span>md
+<span class="m">2</span><span class="w"> </span>-<span class="w"> </span>ipynb
+Choose<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:
+Track<span class="w"> </span>changes?<span class="w"> </span><span class="o">[</span>True<span class="o">]</span>:
+Commit<span class="w"> </span>changes?<span class="w"> </span><span class="o">[</span>True<span class="o">]</span>:<span class="w"> </span>n
+Push<span class="w"> </span>changes?<span class="w"> </span><span class="o">[</span>False<span class="o">]</span>:</pre>
 <p><a href="https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/write.py">The script which does
 this</a>
 is self explanatory, I hope!</p>

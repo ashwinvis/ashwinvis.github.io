@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -216,7 +216,7 @@ looping</a></p>
 <section id="cpython">
 <h3>CPython</h3>
 <pre class="m-code">%%bash
-<span class="nb">time</span> python -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">N = 100_000_000</span>
 <span class="s1">for i in range(N):</span>
 <span class="s1">    pass</span>
@@ -225,7 +225,7 @@ looping</a></p>
 user        0m3.231s
 sys 0m0.000s</pre>
 <pre class="m-code">%%bash
-<span class="nb">time</span> python -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">from itertools import repeat</span>
 
 <span class="s1">N = 100_000_000</span>
@@ -239,7 +239,7 @@ sys 0m0.000s</pre>
 <section id="pypy">
 <h3>PyPy</h3>
 <pre class="m-code">%%bash
-<span class="nb">time</span> pypy3 -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>pypy3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">N = 100_000_000</span>
 <span class="s1">for i in range(N):</span>
 <span class="s1">    pass</span>
@@ -248,7 +248,7 @@ sys 0m0.000s</pre>
 user        0m0.183s
 sys 0m0.020s</pre>
 <pre class="m-code">%%bash
-<span class="nb">time</span> pypy3 -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>pypy3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">from itertools import repeat</span>
 
 <span class="s1">N = 100_000_000</span>
@@ -262,7 +262,7 @@ sys 0m0.021s</pre>
 <section id="rustpython">
 <h3>RustPython</h3>
 <pre class="m-code">%%bash
-<span class="nb">time</span> rustpython -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>rustpython<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">N = 1000000</span>
 <span class="s1">for i in range(N):</span>
 <span class="s1">    pass</span>
@@ -271,7 +271,7 @@ sys 0m0.021s</pre>
 user        0m3.297s
 sys 0m0.010s</pre>
 <pre class="m-code">%%bash
-<span class="nb">time</span> rustpython -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>rustpython<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">from itertools import repeat</span>
 
 <span class="s1">N = 1000000</span>
@@ -287,7 +287,7 @@ iterations and only a million instead.</p>
 <section id="graalpython">
 <h3>GraalPython</h3>
 <pre class="m-code">%%bash
-<span class="nb">time</span> graalpython -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>graalpython<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">N = 100_000_000</span>
 <span class="s1">for i in range(N):</span>
 <span class="s1">    pass</span>
@@ -298,7 +298,7 @@ real        0m6.894s
 user        0m6.829s
 sys 0m0.190s</pre>
 <pre class="m-code">%%bash
-<span class="nb">time</span> graalpython -c <span class="s1">&#39;</span>
+<span class="nb">time</span><span class="w"> </span>graalpython<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">from itertools import repeat</span>
 
 <span class="s1">N = 100_000_000</span>
@@ -362,10 +362,10 @@ Please note: This Python implementation is in the very early stages, and can run
 <h2>Versions</h2>
 <p>I have used the latest and greatest releases. For future reference:</p>
 <pre class="m-code">%%bash
-python -V
-pypy3 -V
-rustpython -V
-graalpython -V</pre>
+python<span class="w"> </span>-V
+pypy3<span class="w"> </span>-V
+rustpython<span class="w"> </span>-V
+graalpython<span class="w"> </span>-V</pre>
 <pre>Python 3.7.4
 Python 3.6.1 (784b254d669919c872a505b807db8462b6140973, May 09 2019, 13:17:30)
 [PyPy 7.1.1-beta0 with GCC 8.3.0]

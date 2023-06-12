@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -412,8 +412,8 @@ installing:</p>
 <p>However, SDDM did not start when X server was configured to use <code>nvidia</code>
 display driver. The key was to run some commands <a href="https://wiki.archlinux.org/index.php/NVIDIA_Optimus#SDDM">before SDDM</a> starts, with
 the following lines in <code>/usr/share/sddm/scripts/Xsetup</code>.</p>
-<pre class="m-code">xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto</pre>
+<pre class="m-code">xrandr<span class="w"> </span>--setprovideroutputsource<span class="w"> </span>modesetting<span class="w"> </span>NVIDIA-0
+xrandr<span class="w"> </span>--auto</pre>
 </section>
 <section id="option-2-optimus-prime">
 <h3>Option 2: Optimus Prime</h3>

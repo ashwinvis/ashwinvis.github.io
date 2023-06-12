@@ -1,7 +1,8 @@
 /*
     This file is part of m.css.
 
-    Copyright © 2017, 2018, 2019 Vladimír Vondruš <mosra@centrum.cz>
+    Copyright © 2017, 2018, 2019, 2020, 2021, 2022
+              Vladimír Vondruš <mosra@centrum.cz>
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -99,7 +100,7 @@ body > header > nav #m-navbar-brand .m-thin {
 body > header > nav #m-navbar-brand .m-breadcrumb {
   color: var(--header-breadcrumb-color);
 }
-body > header > nav a#m-navbar-show:before, body > header > nav a#m-navbar-hide:before {
+body > header > nav a#m-navbar-show::before, body > header > nav a#m-navbar-hide::before {
   content:'\2630';
 }
 body > header > nav #m-navbar-collapse {
@@ -429,7 +430,7 @@ article#m-jumbo > header #m-jumbo-cover {
   padding-bottom: 5rem;
 }
 article#m-jumbo > header #m-jumbo-image {
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   margin-bottom: -3rem;
 }
 article#m-jumbo > header h1 {

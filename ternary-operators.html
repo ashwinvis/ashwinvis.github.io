@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -191,12 +191,12 @@ variables in more real-life codes.</p>
 <h2 id="in-other-languages"><a class="toclink" href="#in-other-languages">In other languages</a></h2>
 <p>In C/C++, Java, ECMAScript (a.k.a JavaScript) and possibly more languages the
 syntax is a bit more terse. It looks like this with ECMAScript:</p>
-<div class="m-code"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;even&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;odd&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="m-code"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">even_or_odd</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;even&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;odd&quot;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <p>An advantage is that the syntax is more condensed; but as a downside, one
@@ -215,15 +215,15 @@ condition is <code>True</code> and <em>vice versa</em>.</p>
 It works because <a href="https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not">how the logical boolean operators <code>and</code>, <code>or</code>
 short-circuits</a>.</p>
 <p>In Bash-like shells such expressions can be used to achieve the same effect:</p>
-<div class="m-code"><pre><span></span><code>even_or_odd<span class="o">()</span> <span class="o">{</span>
-  <span class="nb">local</span> <span class="nv">x</span><span class="o">=</span><span class="nv">$1</span>
+<div class="m-code"><pre><span></span><code>even_or_odd<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">x</span><span class="o">=</span><span class="nv">$1</span>
 
-  <span class="k">if</span> <span class="o">[[</span> x -le <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-      <span class="nb">echo</span> <span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span>
-      <span class="k">return</span> <span class="m">1</span>
-  <span class="k">fi</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>x<span class="w"> </span>-le<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Even or odd is defined for positive integers only!&quot;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
 
-  <span class="o">[[</span> <span class="k">$((</span>x <span class="o">%</span> <span class="m">2</span><span class="k">))</span> <span class="o">==</span> <span class="m">0</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;even&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;odd&quot;</span>
+<span class="w">  </span><span class="o">[[</span><span class="w"> </span><span class="k">$((</span><span class="nv">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="k">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;even&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;odd&quot;</span>
 <span class="o">}</span>
 </code></pre></div>
 
@@ -231,8 +231,8 @@ short-circuits</a>.</p>
 commands returns a non-zero value in case of failure. This would be
 preferred over use of if-else constructs in Bash which, I think, are
 complicated in getting the syntax right.</p>
-<div class="m-code"><pre><span></span><code>mkdir -p build
-./build.sh <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Build successful!&quot;</span> <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;Build failed! Cleaning up ...&quot;</span> <span class="o">&amp;&amp;</span> rm -r build
+<div class="m-code"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>build
+./build.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Build successful!&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Build failed! Cleaning up ...&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>build
 </code></pre></div>
 
 <h2 id="bonus-when-to-avoid-if-else-statements-in-python"><a class="toclink" href="#bonus-when-to-avoid-if-else-statements-in-python">Bonus: when to avoid if-else statements in Python</a></h2>

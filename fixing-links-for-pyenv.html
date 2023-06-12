@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -216,9 +216,9 @@ edits as follows:</p>
 <section id="bash-gnu-parallel-to-parallelize-and-map-the-script-over-all-files">
 <h2>Bash + GNU Parallel: To parallelize and map the script over all files</h2>
 <pre class="m-code"><span class="ch">#!/bin/bash</span>
-<span class="nb">set</span> -e
-awk -f links.awk <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> &gt; <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.new&quot;</span>
-mv -f <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.new&quot;</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span></pre>
+<span class="nb">set</span><span class="w"> </span>-e
+awk<span class="w"> </span>-f<span class="w"> </span>links.awk<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.new&quot;</span>
+mv<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">.new&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span></pre>
 <p>This nifty bash script takes one argument <code>$1</code> which is a file we need to
 change and outputs to a temporary file. If no error is encountered the original
 file is replaced.</p>

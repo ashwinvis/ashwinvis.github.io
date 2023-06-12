@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -209,7 +209,7 @@ as raw text.</aside>
 <ul>
 <li>Javascript</li>
 </ul>
-<pre class="m-code"><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">arrow_operator</span><span class="w"> </span><span class="p">}</span><span class="w">              </span><span class="c1">// INFO: Ligatures for arrow operator</span><span class="w"></span></pre>
+<pre class="m-code"><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">arrow_operator</span><span class="w"> </span><span class="p">}</span><span class="w">              </span><span class="c1">// INFO: Ligatures for arrow operator</span></pre>
 <ul>
 <li>HTML</li>
 </ul>
@@ -218,24 +218,24 @@ as raw text.</aside>
 <ul>
 <li>Perl / Ruby / PHP</li>
 </ul>
-<pre class="m-code"><span class="mi">1</span> <span class="o">&lt;=&gt;</span> <span class="mi">1</span>                               <span class="c1"># INFO: Ligatures for spaceship operator</span></pre>
+<pre class="m-code"><span class="mi">1</span><span class="w"> </span><span class="o">&lt;=&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w">                               </span><span class="c1"># INFO: Ligatures for spaceship operator</span></pre>
 <ul>
 <li>Haskell</li>
 </ul>
-<pre class="m-code"><span class="c1">-- INFO: Ligatures for Haskell operators: ++, &gt;&gt;=,&lt;&lt;=, &gt;=&gt;, &lt;=&lt;</span><span class="w"></span>
-<span class="nf">a</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<pre class="m-code"><span class="c1">-- INFO: Ligatures for Haskell operators: ++, &gt;&gt;=,&lt;&lt;=, &gt;=&gt;, &lt;=&lt;</span>
+<span class="nf">a</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="n">b</span>
 
-<span class="c1">-- instead of</span><span class="w"></span>
-<span class="nf">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">g</span><span class="w"></span>
-<span class="c1">-- simply go with</span><span class="w"></span>
-<span class="nf">f</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">g</span><span class="w"></span>
+<span class="c1">-- instead of</span>
+<span class="nf">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">g</span>
+<span class="c1">-- simply go with</span>
+<span class="nf">f</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">g</span>
 
-<span class="c1">-- instead of</span><span class="w"></span>
-<span class="nf">\</span><span class="n">x</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">g</span><span class="w"></span>
-<span class="c1">-- simply go with</span><span class="w"></span>
-<span class="nf">f</span><span class="w"> </span><span class="o">&gt;=&gt;</span><span class="w"> </span><span class="n">g</span><span class="w"></span>
-<span class="c1">-- or</span><span class="w"></span>
-<span class="nf">g</span><span class="w"> </span><span class="o">&lt;=&lt;</span><span class="w"> </span><span class="n">f</span><span class="w"></span></pre>
+<span class="c1">-- instead of</span>
+<span class="nf">\</span><span class="n">x</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="n">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">g</span>
+<span class="c1">-- simply go with</span>
+<span class="nf">f</span><span class="w"> </span><span class="o">&gt;=&gt;</span><span class="w"> </span><span class="n">g</span>
+<span class="c1">-- or</span>
+<span class="nf">g</span><span class="w"> </span><span class="o">&lt;=&lt;</span><span class="w"> </span><span class="n">f</span></pre>
 </section>
 <section id="try-it-yourself">
 <h2>Try it yourself</h2>

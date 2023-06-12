@@ -91,7 +91,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -272,12 +272,12 @@ Enable GPU [true]:
 Name of configuration file [config.xml]:
 ❯ mkdir -p ~/.config/systemd/user/</pre>
 <p>Create a service <code>~/.config/systemd/user/foldingathome.service</code>:</p>
-<pre class="m-code"><span class="k">[Unit]</span><span class="w"></span>
-<span class="na">Description</span><span class="o">=</span><span class="s">Run folding at home client</span><span class="w"></span>
+<pre class="m-code"><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Run folding at home client</span>
 
-<span class="k">[Service]</span><span class="w"></span>
-<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/avmo/.cache/foldingathome</span><span class="w"></span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml</span><span class="w"></span></pre>
+<span class="k">[Service]</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/avmo/.cache/foldingathome</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/FAHClient --config /home/avmo/.config/foldingathome/config.xml</span></pre>
 <p>Execute:</p>
 <pre>❯ systemctl --user start foldingathome.service
 ❯ systemctl --user status foldingathome.service

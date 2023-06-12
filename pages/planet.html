@@ -88,7 +88,7 @@
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
-      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20"/>fluid.quest</a>
+      <a href="https://fluid.quest/" id="m-navbar-brand" class="m-col-t-7 m-col-m-none m-left-m"><img src="https://fluid.quest/images/logo_ashwin.png" height="20" alt=""/>fluid.quest</a>
       <div class="m-col-t-2 m-col-m-none m-right-m">
         <button name="switch" id="dark-light-switch" title="Toggle dark or light colorscheme" color="dark">
           <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="m-theme-icon" viewBox="0 0 1800 1800" width="20" height="20">
@@ -164,139 +164,50 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://tsdgeos.blogspot.com/2023/01/the-kde-qt5-patch-collection-has-been.html?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="The KDE Qt5 Patch Collection has been rebased on top of Qt 5.15.8" target="_blank">
-      <time class="m-date" datetime="2023-01-04 21:08:00+00:00">
-        Jan
+    <a href="https://alexschroeder.ch/wiki/2023-06-11_Upgrading_Debian_Bullseye_(11)_to_Bookworm_(12)" rel="bookmark" class="u-url"
+       title="Upgrading Debian Bullseye (11) to Bookworm (12)" target="_blank">
+      <time class="m-date" datetime="2023-06-11 22:07:18+00:00">
+        Jun
         <span class="m-date-day">
-          04
+          11
         </span>
         2023
       </time>
       <div class="p-name">
-      The KDE Qt5 Patch Collection has been rebased on top of Qt 5.15.8
+      Upgrading Debian Bullseye (11) to Bookworm (12)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Commit: <a href="https://invent.kde.org/qt/qt/qt5/-/commit/281044e2541c842f8d0b0bc1a199999bf9d9951c">https://invent.kde.org/qt/qt/qt5/-/commit/281044e2541c842f8d0b0bc1a199999bf9d9951c</a> </p><p></p><p>Commercial release announcement: <a href="https://www.qt.io/blog/commercial-lts-qt-5.15.8-released">https://www.qt.io/blog/commercial-lts-qt-5.15.8-released</a></p><p></p>OpenSource release announcement:&nbsp;<a href="https://lists.qt-project.org/pipermail/announce/2023-January/000388.html">https://lists.qt-project.org/pipermail/announce/2023-January/000388.html</a><p>&nbsp;</p><p>As usual I want to personally extend my gratitude to the Commercial users of Qt for beta testing Qt 5.15.8 for the rest of us.</p><p>&nbsp;</p><p>The  Commercial Qt 5.15.8 release introduced two bugs that have later been  fixed. Thanks to that, our Patchset Collection has been able to  incorporate the the fix for one of the issues <a href="https://invent.kde.org/qt/qt/qtbase/-/commit/9cf586d629a04040c9414c4f9e17abbc65c644eb">[1]</a> and revert for the other <a href="https://invent.kde.org/qt/qt/qtbase/-/commit/f5f4260bff6aa633c381e7cdc81921cb80cd2ba6">[2]</a>&nbsp; and the Free Software users will never be affected by it!&nbsp;</p><p>&nbsp;</p><p>P.S: Special shout-out to Andreas Sturmlechner for identifying the fix of the issue, since I usually only pay attention to "Revert XYZ" commits and this one is …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Albert Astals Cid</b></span>
-  on <time datetime="2023-01-04 21:08:00+00:00" class="dt-published"></time>
-  Wed 04 Jan 2023
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.programiz.com/python-programming/list" rel="bookmark" class="u-url"
-       title="Programiz: Python List" target="_blank">
-      <time class="m-date" datetime="2023-01-04 16:29:39+00:00">
-        Jan
-        <span class="m-date-day">
-          04
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Programiz: Python List
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In this tutorial, we will learn about Python lists (creating lists, changing list items, removing items and other list operations) with the help of examples.
+  <div><p> That feeling when you think about upgrading the operating system.</p><blockquote><p>I’m reading the release notes, and following the instructions. I started reading at 14:20, and I logged into the server at 14:34. – <a href="https://alexschroeder.ch/wiki/2021-08-30_Upgrading_Debian_Buster_(10)_to_Bullseye_(11)">2021-08-30 Upgrading Debian Buster (10) to Bullseye (11)</a></p></blockquote><p> I’m feeling hopeful!</p><pre># My selections
+dpkg --get-selections '*'&gt;debian.selections
+# Update bullseye
+apt update
+apt upgrade
+# Listing obsolete stuff
+apt list '~o'
+# libmojo-useragent-role-queued-perl/now 1.15-1
+# libtext-spanningtable-perl/now 1.000000-1
+# thelounge/now 4.4.0
+# Try again, different command
+apt list '?narrow(?installed, ?not(?origin(Debian)))'
+# libmojo-useragent-role-queued-perl/now 1.15-1
+# libtext-spanningtable-perl/now 1.000000-1
+# nodejs/unknown,now 19.9.0-deb-1nodesource1
+# thelounge/now 4.4.0
+# Don't know what to do about them, so not doing anything
+# Checking for old upgrade related files
+find /etc -name '*.dpkg-*' -o -name '*.ucf-*' -o -name '*.merge-error'
+# Deleting old upgrade related files …</pre></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-01-04 16:29:39+00:00" class="dt-published"></time>
-  Wed 04 Jan 2023
-  in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://noyb.eu/en/breaking-meta-prohibited-use-personal-data-advertisment" rel="bookmark" class="u-url"
-       title="BREAKING: Meta prohibited from use of personal data for advertisment" target="_blank">
-      <time class="m-date" datetime="2023-01-04 15:18:44+00:00">
-        Jan
-        <span class="m-date-day">
-          04
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      BREAKING: Meta prohibited from use of personal data for advertisment
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <span>BREAKING: Meta prohibited from use of personal data for advertisment</span>
-
-                    After almost five years, the Irish DPC decided on a noyb complaint and required Facebook, Instagram and WhatsApp to stop using the personal data of users for advertisement in the EU.
-
-                      <img alt="Privacy Win " src="https://noyb.eu/sites/default/files/styles/media_large/public/2023-01/privacy%20win%403x.png?itok=sydEWHOQ">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>ms</b></span>
-  on <time datetime="2023-01-04 15:18:44+00:00" class="dt-published"></time>
-  Wed 04 Jan 2023
-  in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://alexschroeder.ch/wiki/2023-01-04_Getting_some_78rpm_music" rel="bookmark" class="u-url"
-       title="Getting some 78rpm music" target="_blank">
-      <time class="m-date" datetime="2023-01-04 14:03:41+00:00">
-        Jan
-        <span class="m-date-day">
-          04
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Getting some 78rpm music
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><blockquote><p>Lunch break. What can I do?</p></blockquote><p> I would prefer to use torrent files. Let’s see.</p><blockquote><p>Firstly you do need to start with the Advanced Search form. Using the second form on that page, in the query box put collection:georgeblood, select the identifier field (only), set the format to CSV. Set the limit to 30000 (there are about 25000+ records), and download the huge CSV… – <a href="https://rwmj.wordpress.com/2017/08/14/downloading-all-the-78rpm-rips-at-the-internet-archive/">Downloading all the 78rpm rips at the Internet Archive</a></p></blockquote><p>If you read the page, you’ll find that there are a lot more these days. Use an appropriate number.</p><pre>$ wc -l search.csv 
-200001 search.csv</pre><p>Let’s turn these into a list of URLs of the format <code>https://archive.org/download/&lt;id&gt;/&lt;id&gt;_archive.torrent</code> and skipping the header.</p><pre>tail --lines=+2 search.csv \
-| sed --expression='s/^.\(.*\).$/https:\/\/archive.org\/download\/\1\/\1 …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-01-04 14:03:41+00:00" class="dt-published"></time>
-  Wed 04 Jan 2023
+  on <time datetime="2023-06-11 22:07:18+00:00" class="dt-published"></time>
+  Sun 11 Jun 2023
   in Alex Schroeder: Diary.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -306,31 +217,301 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2720/" rel="bookmark" class="u-url"
-       title="Biology vs Robotics" target="_blank">
-      <time class="m-date" datetime="2023-01-04 00:00:00+00:00">
-        Jan
+    <a href="https://nedbatchelder.com/blog/202306/special_olympics_swimming.html" rel="bookmark" class="u-url"
+       title="Special Olympics swimming" target="_blank">
+      <time class="m-date" datetime="2023-06-11 13:34:53-04:00">
+        Jun
         <span class="m-date-day">
-          04
+          11
         </span>
         2023
       </time>
       <div class="p-name">
-      Biology vs Robotics
+      Special Olympics swimming
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="Sorry, I've just always had these random things I don't like--like olives, or robots drilling holes in me without warning." src="https://imgs.xkcd.com/comics/biology_vs_robotics.png" title="Sorry, I've just always had these random things I don't like--like olives, or robots drilling holes in me without warning.">
+  <p>The Special Olympics swimming season ended this weekend with the
+Massachusetts state games.  I am a coach on my son Nat&#8217;s swim team, and it is
+one of my favorite things in the world.  I&#8217;ll miss it, and look forward to it
+starting up again next year.</p><p>My son Nat and I have been on the team for a long time: this is our
+<a href="//nedbatchelder.com/blog/200404/special_olympics.html">20th year</a>.  It&#8217;s been great helping
+him improve and he enjoys the physicality and camaraderie of it even though he
+doesn&#8217;t talk much.</p><p>But in recent years I haven&#8217;t worked just with Nat, or even mostly with him.
+I&#8217;ve paired more with other athletes, and let other coaches focus on Nat.</p><p>I&#8217;ve loved getting to know each athlete for their own strengths and gaps. &#8220;A&#8221;
+is incredibly strong, but …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2023-06-11 13:34:53-04:00" class="dt-published"></time>
+  Sun 11 Jun 2023
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://k-d-w.org/blog/2023/06/scikit-survival-0.21.0-released/" rel="bookmark" class="u-url"
+       title="Sebastian Pölsterl: scikit-survival 0.21.0 released" target="_blank">
+      <time class="m-date" datetime="2023-06-11 16:43:30+00:00">
+        Jun
+        <span class="m-date-day">
+          11
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Sebastian Pölsterl: scikit-survival 0.21.0 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Today marks the release of <a href="https://scikit-survival.readthedocs.io/">scikit-survival</a> 0.21.0.
+This release features some exciting new features and significant performance improvements:</p>
+<ul>
+<li>Pointwise confidence intervals for the Kaplan-Meier estimator.</li>
+<li>Early stopping in GradientBoostingSurvivalAnalysis.</li>
+<li>Improved performance of fitting SurvivalTree and RandomSurvivalForest.</li>
+<li>Reduced memory footprint of concordance_index_censored.</li>
+</ul>
+
+Pointwise Confidence Intervals for the Kaplan-Meier Estimator
+<p><a href="https://scikit-survival.readthedocs.io/en/v0.21.0/api/generated/sksurv.nonparametric.kaplan_meier_estimator.html#sksurv.nonparametric.kaplan_meier_estimator">kaplan_meier_estimator()</a>
+can now estimate pointwise confidence intervals by specifying the <code>conf_type</code> parameter.</p>
+<pre><code>import matplotlib.pyplot as plt
+from sksurv.datasets import load_veterans_lung_cancer
+from sksurv.nonparametric import kaplan_meier_estimator
+_, y = load_veterans_lung_cancer()
+time, survival_prob, conf_int = kaplan_meier_estimator(
+y[&quot;Status&quot;], y[&quot;Survival_in_days&quot;], conf_type=&quot;log-log&quot;
+)
+plt.step(time, survival_prob, where=&quot;post&quot;)
+plt.fill_between(time, conf_int[0], conf_int[1], alpha=0.25, step=&quot;post&quot;)
+plt.ylim(0, 1)
+plt.ylabel(&quot;est. probability of survival $\hat{S}(t)$&quot;)
+plt.xlabel(&quot;time $t$&quot;)
+</code></pre>
+
+<img alt="Kaplan-Meier curve with pointwise confidence intervals." src="https://k-d-w.org/blog/2023/06/scikit-survival-0.21.0-released/img/km-with-ci.svg"> 
+<p>Kaplan-Meier curve with pointwise confidence intervals.</p>
+
+
+
+Early Stopping in GradientBoostingSurvivalAnalysis
+<p>Early stopping enables us to …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-01-04 00:00:00+00:00" class="dt-published"></time>
-  Wed 04 Jan 2023
+  on <time datetime="2023-06-11 16:43:30+00:00" class="dt-published"></time>
+  Sun 11 Jun 2023
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://k-d-w.org/blog/2023/06/scikit-survival-0.21.0-released/" rel="bookmark" class="u-url"
+       title="scikit-survival 0.21.0 released" target="_blank">
+      <time class="m-date" datetime="2023-06-11 16:43:30+00:00">
+        Jun
+        <span class="m-date-day">
+          11
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      scikit-survival 0.21.0 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Today marks the release of <a href="https://scikit-survival.readthedocs.io/">scikit-survival</a> 0.21.0.
+This release features some exciting new features and significant performance improvements:</p>
+<ul>
+<li>Pointwise confidence intervals for the Kaplan-Meier estimator.</li>
+<li>Early stopping in GradientBoostingSurvivalAnalysis.</li>
+<li>Improved performance of fitting SurvivalTree and RandomSurvivalForest.</li>
+<li>Reduced memory footprint of concordance_index_censored.</li>
+</ul>
+
+Pointwise Confidence Intervals for the Kaplan-Meier Estimator
+<p><a href="https://scikit-survival.readthedocs.io/en/v0.21.0/api/generated/sksurv.nonparametric.kaplan_meier_estimator.html#sksurv.nonparametric.kaplan_meier_estimator">kaplan_meier_estimator()</a>
+can now estimate pointwise confidence intervals by specifying the <code>conf_type</code> parameter.</p>
+<pre><code>import matplotlib.pyplot as plt
+from sksurv.datasets import load_veterans_lung_cancer
+from sksurv.nonparametric import kaplan_meier_estimator
+_, y = load_veterans_lung_cancer()
+time, survival_prob, conf_int = kaplan_meier_estimator(
+y["Status"], y["Survival_in_days"], conf_type="log-log"
+)
+plt.step(time, survival_prob, where="post")
+plt.fill_between(time, conf_int[0], conf_int[1], alpha=0.25, step="post")
+plt.ylim(0, 1)
+plt.ylabel("est. probability of survival $\hat{S}(t)$")
+plt.xlabel("time $t$")
+</code></pre>
+
+
+<img alt="Kaplan-Meier curve with pointwise confidence intervals." src="https://k-d-w.org/blog/2023/06/scikit-survival-0.21.0-released/img/km-with-ci.svg"> 
+
+<p>Kaplan-Meier curve with pointwise confidence intervals.</p>
+
+
+
+Early Stopping in GradientBoostingSurvivalAnalysis
+<p>Early stopping enables us to …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-11 16:43:30+00:00" class="dt-published"></time>
+  Sun 11 Jun 2023
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2023/06/10/in-the-dumps/" rel="bookmark" class="u-url"
+       title="Pluralistic: Links, dumped (10 June 2023)" target="_blank">
+      <time class="m-date" datetime="2023-06-10 16:23:48+00:00">
+        Jun
+        <span class="m-date-day">
+          10
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Pluralistic: Links, dumped (10 June 2023)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Links, dumped: A grab-bag of delicious miscellania. This day in history: 2008, 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Links, dumped (permalink) It's Saturday, which means: time for a linkdump post! I'm back from my book-tour across the US, Canada and the UK, finishing up in Berlin &#8211; and I'm jetlagged in the backyard hammock, waiting for my laundry to come out of the machine and plowing through a long backlog of interesting links. Let's goooooooo! It's Pride month, and Pat Robertson kicked it off with a bang by&#8230;kicking off. What better way to start Pride than with a piece of fanfic by Wil Wheaton about Robertson's arrival in Hell? https://wilwheaton.net/2023/06/the-wait/ Once you've had your fill of schadenfreude, get your Pride/Trekkie (or, if you prefer …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2023-06-10 16:23:48+00:00" class="dt-published"></time>
+  Sat 10 Jun 2023
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kdenlive.org/en/2023/06/kdenlive-news-and-fundraising-report/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Kdenlive news and fundraising report" target="_blank">
+      <time class="m-date" datetime="2023-06-10 13:45:34+00:00">
+        Jun
+        <span class="m-date-day">
+          10
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Kdenlive news and fundraising report
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>
+
+
+
+
+
+
+                <div>
+                <div>
+
+
+
+
+                <div>
+
+
+
+
+                <span><img alt="" src="https://kdenlive.org/wp-content/uploads/2023/06/kdenlive-23.04.2.jpg" title="kdenlive-23.04.2"></span>
+            </div><div>
+
+
+
+
+                <div><p>As many users have noticed, our 23.04.0 release didn&#8217;t go as smoothly as planned. Several major regressions affected the release, resulting in a poor user experience. We are well aware that most users want stability above all else, and with our growing user base we really need to improve on that front.</p>
+<p>So for Kdenlive 23.08, we plan to focus only on bug reporting and regression testing to avoid repeating the mistakes of the 23.04 release. Our intention is to improve our test suite, and also to create a repository of sample project files, with automated scripts that open the files, render them, and compare the results to a reference render.</p>
+<p>This should allow us to catch regressions and be much safer when releasing a new version with major changes, as was the case with …</p></div></div></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2023-06-10 13:45:34+00:00" class="dt-published"></time>
+  Sat 10 Jun 2023
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2787/" rel="bookmark" class="u-url"
+       title="Iceberg" target="_blank">
+      <time class="m-date" datetime="2023-06-09 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          09
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Iceberg
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="90% of the iceberg is hidden beneath the water, but that 90% only uses 10% of its brain, so it's really only 9%." src="https://imgs.xkcd.com/comics/iceberg.png" title="90% of the iceberg is hidden beneath the water, but that 90% only uses 10% of its brain, so it's really only 9%.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-09 00:00:00+00:00" class="dt-published"></time>
+  Fri 09 Jun 2023
   in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -340,12 +521,57 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2023/01/2023-01-03-uqfys" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2023-01-03 15:59:26+01:00">
-        Jan
+    <a href="https://www.scivision.dev/madrigal-gnss-line-of-sight-python/" rel="bookmark" class="u-url"
+       title="Madrigal GNSS line-of-sight data load in Python" target="_blank">
+      <time class="m-date" datetime="2023-06-09 00:00:00+00:00">
+        Jun
         <span class="m-date-day">
-          03
+          09
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Madrigal GNSS line-of-sight data load in Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><a href="http://cedar.openmadrigal.org/openmadrigal">Madrigal data repositories</a>
+give access to numerous types of geospace data spanning multiple decades.
+One kind of data (3505) is GNSS line of sight (LOS) data.
+Loading the 10+ GB files is best done by choosing slices of data, typically in time at least.
+This <a href="https://gist.github.com/scivision/83f0b1101aaf5e55eba6b96e02b11169">example Python script</a>
+may help get started.
+Plotting the data also requires knowing the location of the receiver and corresponding satellite.</p>
+<p>The Madrigal data for GNSS LOS is stored under &ldquo;Data / Table Layout&rdquo; as a huge 1D unordered vector of
+<a href="https://docs.hdfgroup.org/hdf5/develop/_h5__u_g.html#subsubsec_program_model_compound">HDF5 compound data</a>.
+h5py can read slices of the
+<a href="https://docs.h5py.org/en/stable/high/dataset.html">compound data</a>
+to avoid wasted reads and overusing RAM.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-09 00:00:00+00:00" class="dt-published"></time>
+  Fri 09 Jun 2023
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2023/06/2023-06-08-pmxrb" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2023-06-08 17:59:00+02:00">
+        Jun
+        <span class="m-date-day">
+          08
         </span>
         2023
       </time>
@@ -356,15 +582,15 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   </h1>
   <div class="p-summary">
   <p>
-  I bought a full year of access to the Freeletics coach, so I should actually start doing my workout, right? 🙃 I can already feel the soreness just thinking about it…
+  Today another view from about 650 meters near our apartment.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-01-03 15:59:26+01:00" class="dt-published"></time>
-  Tue 03 Jan 2023
+  on <time datetime="2023-06-08 17:59:00+02:00" class="dt-published"></time>
+  Thu 08 Jun 2023
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -374,408 +600,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/jrb/2023/01/03/crosswords-puzzle-update/" rel="bookmark" class="u-url"
-       title="Crosswords: Puzzle update" target="_blank">
-      <time class="m-date" datetime="2023-01-03 08:38:35+00:00">
-        Jan
+    <a href="https://www.kitware.com/point-cloud-visualization-on-the-web-with-lidarview-and-vtk-js/" rel="bookmark" class="u-url"
+       title="Point Cloud visualization on the Web with LidarView and VTK.js" target="_blank">
+      <time class="m-date" datetime="2023-06-08 07:50:22+00:00">
+        Jun
         <span class="m-date-day">
-          03
+          08
         </span>
         2023
       </time>
       <div class="p-name">
-      Crosswords: Puzzle update
+      Point Cloud visualization on the Web with LidarView and VTK.js
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Happy New Year, Crossword-lovers! This is a minor update in preparation for a bigger release in the next few weeks. We’ve done a lot of exciting work on Crosswords over the past few months that’s almost ready for release. However, there are a few things available already that I wanted to highlight early. Puzzles There … <a href="https://blogs.gnome.org/jrb/2023/01/03/crosswords-puzzle-update/">Continue reading<span> "Crosswords: Puzzle update"</span></a>
+  Showcase LiDAR data being visualized in a web browser
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>jrb</b></span>
-  on <time datetime="2023-01-03 08:38:35+00:00" class="dt-published"></time>
-  Tue 03 Jan 2023
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://bbs.archlinux.org/viewtopic.php?id=282512" rel="bookmark" class="u-url"
-       title="FOSDEM 2023 Dinner" target="_blank">
-      <time class="m-date" datetime="2023-01-03 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          03
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      FOSDEM 2023 Dinner
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  There is going to be a dinner at FOSDEM 2023! Please email foxboron@archlinux.org if you want to attend 
-Copypasta follows.
-
-<code>Yo!
-
-The previous years at FOSDEM we have held a dinner with around 15-20 people.
-Some maintainers from Arch, and some users that wanted to join. It has been
-great events and with FOSDEM 2023 happening I thought it was a good idea to do
-it again :)
-
-The dinner will be held Saturday, 4th of February, around 20:00. The dinner is
-sponsored by the Arch and should cover a drink and a main course.
-
-We will cap the attendees to 20 people. Priority for members of the Arch team
-(developers, trusted users and support staff). Any free spots after this can be
-taken by anyone interested.
-
-The users requesting spots will get a heads up the week …</code>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Foxboron</b></span>
-  on <time datetime="2023-01-03 00:00:00+00:00" class="dt-published"></time>
-  Tue 03 Jan 2023
-  in Arch Linux.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://snarky.ca/the-many-shapes-and-sizes-of-keyboards/" rel="bookmark" class="u-url"
-       title="The many shapes and sizes of keyboards" target="_blank">
-      <time class="m-date" datetime="2023-01-02 23:28:51+00:00">
-        Jan
-        <span class="m-date-day">
-          02
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      The many shapes and sizes of keyboards
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Like many people in the programming industry, I work from home. And as such, I do not get up from my desk as much as I probably should as my office space is pretty comfortable. Unfortunately, this has led to my upper back getting a bit tight from slouching forward</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Brett Cannon</b></span>
-  on <time datetime="2023-01-02 23:28:51+00:00" class="dt-published"></time>
-  Mon 02 Jan 2023
-  in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pradyunsg.me/blog/2023/01/02/chatgpt-fun-with-error-messages/" rel="bookmark" class="u-url"
-       title="Excellent error messages from command line tools, according to ChatGPT" target="_blank">
-      <time class="m-date" datetime="2023-01-02 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          02
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Excellent error messages from command line tools, according to ChatGPT
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  In late Dec 2022, I played around with ChatGPT in an evening.
-Since it was on the top of my mind1, I decided try to nudge ChatGPT into the direction of giving me a useful answer about error message design for command line tools.2
-Now, tell me what an excellent error message from a command line tool should contain.
-An excellent error message from a command line tool should contain the following elements:
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-01-02 00:00:00+00:00" class="dt-published"></time>
-  Mon 02 Jan 2023
-  in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article950/happy-new-year-2023" rel="bookmark" class="u-url"
-       title="Happy New Year 2023!" target="_blank">
-      <time class="m-date" datetime="2023-01-01 16:27:00+01:00">
-        Jan
-        <span class="m-date-day">
-          01
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Happy New Year 2023!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-01-01_new-year-illustration.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-01-01_new-year-illustration.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>I wish you with this illustration strength and courage against all the "dragons" who might be on your way in 2023. </p>
-<p>Can you see the numbers in the silhouettes? I'm doing this type of illustration yearly on the blog for the new year, I have a <a href="https://www.davidrevoy.com/tag/newyear">tag with all of them since 2009</a> if you want to see this little tradition.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2023-01-01 16:27:00+01:00" class="dt-published"></time>
-  Sun 01 Jan 2023
-  in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://peps.python.org/pep-0702/" rel="bookmark" class="u-url"
-       title="PEP 702: Marking deprecations using the type system" target="_blank">
-      <time class="m-date" datetime="2022-12-30 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          30
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      PEP 702: Marking deprecations using the type system
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  This PEP adds an @typing.deprecated() decorator that marks a class or function as deprecated, enabling static checkers to warn when it is used.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jelle Zijlstra (jelle.zijlstra@gmail.com)</b></span>
-  on <time datetime="2022-12-30 00:00:00+00:00" class="dt-published"></time>
-  Fri 30 Dec 2022
-  in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202212/talk_python_to_me_tools_for_readme.html" rel="bookmark" class="u-url"
-       title="Talk Python to Me: Tools for README" target="_blank">
-      <time class="m-date" datetime="2022-12-26 08:52:23-05:00">
-        Dec
-        <span class="m-date-day">
-          26
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Talk Python to Me: Tools for README
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Michael Kennedy invited me on his podcast to chat about a round-up of tools
-for README maintenance and other similar project automation:
-<a href="https://talkpython.fm/episodes/show/395/tools-for-readme.md-creation-and-maintenance">Talk Python to Me #395: Tools for README.md Creation and
-Maintenance</a>.</p><p>We talked about almost 20 different tools, intermixed with philosophical
-discussion about the problems maintainers face and the solutions they use.
-Project maintainers need to write about their work, and present it to their
-users.  How to do that in a way that is convenient for both the maintainer and
-the user?  What to automate, and how?</p><p>Of course, I have opinions about this, which come out in the course of the
-episode. Here are some of my top principles:</p><ul>
-
-<li>Writing about your work helps you understand your work.</li>
-
-<li>You need to write with your audience in mind, and &#8220;the same thing&#8221; may need
-to be …</li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2022-12-26 08:52:23-05:00" class="dt-published"></time>
-  Mon 26 Dec 2022
-  in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2022/12/24/looking-back/" rel="bookmark" class="u-url"
-       title="Pluralistic: An end-of-year retrospective (24 Dec 2022)" target="_blank">
-      <time class="m-date" datetime="2022-12-24 12:50:49+00:00">
-        Dec
-        <span class="m-date-day">
-          24
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Pluralistic: An end-of-year retrospective (24 Dec 2022)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links An end-of-year retrospective: 2002, 2003, 2007, 2008, 2009, 2012, 2013, 2017, 2018, 2021, 2022. Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading An end-of-year retrospective (permalink) Every day, I revisit all the posts I've ever made, over more than 20 years of blogging; I review posts from one year, 5 years, 10 years, 15 years and 20 years ago, revisiting my priors and regrounding myself in the arc of stories I've followed for decades. I call it "The Memex Method": https://doctorow.medium.com/the-memex-method-238c71f2fb46 As I'm about to leave on vacation for two weeks, I won't be blogging until after Jan 7. Normally, I'd just skip over those days for my "This Day in History" posts, but I made the mistake of looking ahead at those holiday-season posts from years gone by and I …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2022-12-24 12:50:49+00:00" class="dt-published"></time>
-  Sat 24 Dec 2022
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://soundcloud.com/javaswag/e40" rel="bookmark" class="u-url"
-       title="Java Swag" target="_blank">
-      <time class="m-date" datetime="2022-12-23 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          23
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      Java Swag
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Разочарование в Java, простота Clojure и опенсорс проекты
-
-
-          <div><audio><source src="https://s.tonsky.me/tonsky.me/2022-12%20Java%20Swag.mp3" type="audio/mpeg"></audio></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2022-12-23 00:00:00+00:00" class="dt-published"></time>
-  Fri 23 Dec 2022
-  in Nikita Prokopov's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pyfound.blogspot.com/2022/12/more-python-everywhere-all-at-once.html" rel="bookmark" class="u-url"
-       title="More Python Everywhere, All at Once: Looking Forward to 2023" target="_blank">
-      <time class="m-date" datetime="2022-12-22 11:08:00-05:00">
-        Dec
-        <span class="m-date-day">
-          22
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      More Python Everywhere, All at Once: Looking Forward to 2023
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The PSF works hard throughout the year to put on <a href="https://us.pycon.org/2023/">PyCon US</a>, support smaller Python events around the world through our <a href="https://www.python.org/psf/grants/">Grants program</a> and of course to provide the critical infrastructure and expertise that keep CPython and PyPI running smoothly for the 8 million (and growing!) worldwide base of Python users. We want to invest more deeply in education and outreach in 2023, and donations from individuals (like you) can make sure we have the resources to start new projects and sustain them alongside our critical community functions. <a href="https://www.python.org/psf/donations/2022-q4-drive/">Supporting Membership</a> is a particularly great way to contribute to the PSF. By becoming a Supporting Member, you join a core group of PSF stakeholders, and since Supporting Members are eligible to vote in our Board and bylaws elections, you gain a voice in the future of the PSF. And we have …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Deb Nicholson (noreply@blogger.com)</b></span>
-  on <time datetime="2022-12-22 11:08:00-05:00" class="dt-published"></time>
-  Thu 22 Dec 2022
-  in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kitware.com/lidarview-brings-powerful-visualization-and-analysis-of-sensor-data-to-manufacturers/" rel="bookmark" class="u-url"
-       title="LidarView Brings Powerful Visualization and Analysis of Sensor Data to Manufacturers" target="_blank">
-      <time class="m-date" datetime="2022-12-22 16:06:51+00:00">
-        Dec
-        <span class="m-date-day">
-          22
-        </span>
-        2022
-      </time>
-      <div class="p-name">
-      LidarView Brings Powerful Visualization and Analysis of Sensor Data to Manufacturers
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  A versatile lidar data visualization and analysis tool LidarView is a versatile, highly-customizable tool for streaming, acquiring, and replaying lidar data. It’s a cost-effective open source solution designed to meet the needs of lidar sensor manufacturers and their end users. LidarView can be customized to highlight your sensors’ capabilities while supporting the end users’ workflows. [&#8230;]
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Samantha Schmitt</b></span>
-  on <time datetime="2022-12-22 16:06:51+00:00" class="dt-published"></time>
-  Thu 22 Dec 2022
+  <span class="p-author"><b>Jules Bourdais</b></span>
+  on <time datetime="2023-06-08 07:50:22+00:00" class="dt-published"></time>
+  Thu 08 Jun 2023
   in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -785,43 +634,32 @@ to be …</li></ul>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/oneapi-windows-cmake-workaround-icpx/" rel="bookmark" class="u-url"
-       title="Intel oneAPI icpx Windows" target="_blank">
-      <time class="m-date" datetime="2022-12-22 00:00:00+00:00">
-        Dec
+    <a href="https://chomsky.info/20230607-3/" rel="bookmark" class="u-url"
+       title="Chomsky and Pollin: Just Transition Can Stop Earth From Becoming Uninhabitable" target="_blank">
+      <time class="m-date" datetime="2023-06-07 18:23:00+00:00">
+        Jun
         <span class="m-date-day">
-          22
+          07
         </span>
-        2022
+        2023
       </time>
       <div class="p-name">
-      Intel oneAPI icpx Windows
+      Chomsky and Pollin: Just Transition Can Stop Earth From Becoming Uninhabitable
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Intel oneAPI 2023.0.0 newly provides GNU-like (icpx) and MSVC-like (icx)
-<a href="https://www.intel.com/content/www/us/en/develop/documentation/oneapi-dpcpp-cpp-compiler-dev-guide-and-reference/top/compiler-setup/use-the-command-line/invoke-the-compiler.html">compiler drivers</a>
-for Linux and Windows.
-This is a good thing, but CMake had assumptions that only C++ compiler driver icpx OR icx would be present.
-We created a CMake
-<a href="https://gitlab.kitware.com/cmake/cmake/-/merge_requests/8041">fix</a>.
-Long term, GNU-like
-<a href="https://gitlab.kitware.com/cmake/cmake/-/merge_requests/8032">support for Windows</a>
-may also come.
-Until you update CMake, you can workaround this issue of C++ oneAPI compiler detection on Windows by configuring the CMake project like:</p>
-<div><pre><code><span><span>cmake -Bbuild -DCMAKE_CXX_COMPILER<span>=</span>icx
-</span></span></code></pre></div>
+  Chomsky and Pollin: Just Transition Can Stop Earth From Becoming Uninhabitable Noam Chomsky Interviewed by C.J. Polychroniou June 7, 2023.&#160;Truthout.&#160; Climate change is “making our planet uninhabitable,” said UN Secretary-General&#160;António Guterres in late March.&#160;Indeed, the threats of the impending climate crisis have become very tangible, and the world’s top scientists are warning that the Earth [&#8230;]
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-22 00:00:00+00:00" class="dt-published"></time>
-  Thu 22 Dec 2022
-  in Michael Hirsch, Ph.D..
+  <span class="p-author"><b>anthony</b></span>
+  on <time datetime="2023-06-07 18:23:00+00:00" class="dt-published"></time>
+  Wed 07 Jun 2023
+  in chomsky.info.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -830,65 +668,206 @@ Until you update CMake, you can workaround this issue of C++ oneAPI compiler det
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jvns.ca/blog/2022/12/21/new-zine--the-pocket-guide-to-debugging/" rel="bookmark" class="u-url"
-       title="New zine: The Pocket Guide to Debugging" target="_blank">
-      <time class="m-date" datetime="2022-12-21 12:11:55+00:00">
-        Dec
+    <a href="https://pyfound.blogspot.com/2023/06/affirming-your-psf-membership-voting.html" rel="bookmark" class="u-url"
+       title="Affirming your PSF Membership voting status" target="_blank">
+      <time class="m-date" datetime="2023-06-07 13:57:00-04:00">
+        Jun
         <span class="m-date-day">
-          21
+          07
         </span>
-        2022
+        2023
       </time>
       <div class="p-name">
-      New zine: The Pocket Guide to Debugging
+      Affirming your PSF Membership voting status
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Hello! On Monday, we released a new zine: <strong>The Pocket Guide to Debugging</strong>! It has 47 of my favourite strategies for solving your sneakiest bugs.</p>
+  Every PSF Voting Member (Supporting, Managing, Contributing, and Fellow) needs to affirm their membership in order to vote in this year’s election.<div></div><div>This year’s Board Election begins June 20th, and voter eligibility cut-off is June 15th. You should have received an email with instructions and you need to affirm your voting rights before June 15th in order to participate in this year's Board Election. Email will be from&nbsp;"psf@psfmember.org &lt;Python Software Foundation&gt;" with subject "[Action Required] Affirm your PSF Membership voting status"Why you are being asked to do this: <div>Section 4.2 of the PSF Bylaws requires that “Members of any membership class with voting rights must affirm each year to the corporation in writing that such member intends to be a voting member for such year.”The PSF has not enforced this in the …</div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Deb Nicholson (noreply@blogger.com)</b></span>
+  on <time datetime="2023-06-07 13:57:00-04:00" class="dt-published"></time>
+  Wed 07 Jun 2023
+  in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
 
-<p>You can get it for $12 here:
-<a href="https://wizardzines.com/zines/debugging-guide">https://wizardzines.com/zines/debugging-guide</a>, or get
-an <a href="https://wizardzines.com/zines/all-the-zines/">12-pack of all my zines here</a>.</p>
+</article>
 
-<p>Here&rsquo;s the cover:</p>
-
-<div>
-<a href="https://wizardzines.com/zines/debugging-guide"><img src="https://jvns.ca/images/debugging-guide-cover.jpg"></a>
-</div>
-
-
-the table of contents
-
-<p>Here&rsquo;s the table of contents!</p>
-
-<p><a href="https://jvns.ca/images/debugging-guide-toc.png"><img src="https://jvns.ca/images/debugging-guide-toc.png"></a></p>
-
-<p>A few people mentioned that they were printing it out, so I made a PDF
-poster version if you want to print it:</p>
-
-<ul>
-<li><a href="https://wizardzines.com/images/debugging/toc-letter.pdf">Printable table of contents (letter paper)</a></li>
-<li><a href="https://wizardzines.com/images/debugging/toc-a4.pdf">Printable table of contents (A4 paper)</a></li>
-</ul>
-
-<p>I love that the table of contents is already kind of useful as a collection of
-strategies on its own.</p>
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pythoninsider.blogspot.com/2023/06/python-3114-31012-3917-3817-3717-and.html" rel="bookmark" class="u-url"
+       title="Python 3.11.4, 3.10.12, 3.9.17, 3.8.17, 3.7.17, and 3.12.0 beta 2 are now available" target="_blank">
+      <time class="m-date" datetime="2023-06-07 02:56:00.001000-04:00">
+        Jun
+        <span class="m-date-day">
+          07
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Python 3.11.4, 3.10.12, 3.9.17, 3.8.17, 3.7.17, and 3.12.0 beta 2 are now available
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Greetings! Time for another combined release of six separate versions of Python!</p>
 
 
-why debugging?
+<a href="https://discuss.python.org/t/python-3-11-4-3-10-12-3-9-17-3-8-17-3-7-17-and-3-12-0-beta-2-are-now-availble/27477#before-you-scroll-away-to-the-download-links-1"></a>Before you scroll away to the download links
+<p>Please test the 3.12 beta! Downloading it and trying it out helps us a
+ lot in ensuring Python 3.12.0 will be as polished as possible.</p>
+<p>We welcome 3.10 to the prestigious club of security-only releases. 
+It’s officially an old version of Python now! If you haven’t rewritten 
+all your <code>if:elif:else:</code>s with pattern matching yet, are you even still writing Python?</p>
+<p>At the same time, it looks like 3.7 is reaching end-of-life. Unless 
+another security release happens in June, 3.7.17 will be the final 
+release of Python 3.7. I mean, now that I typed it out for all you to 
+read, I’m sure I jinxed it. But …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Łukasz Langa (noreply@blogger.com)</b></span>
+  on <time datetime="2023-06-07 02:56:00.001000-04:00" class="dt-published"></time>
+  Wed 07 Jun 2023
+  in Python Insider.
+</footer>
+<div class="m-clearfix-l"></div>
 
-<p>I wrote this zine because debugging is a huge part of how we spend our time as
-programmers, but nobody teaches us how …</p>
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://peps.python.org/pep-0715/" rel="bookmark" class="u-url"
+       title="PEP 715: Disabling bdist_egg distribution uploads on PyPI" target="_blank">
+      <time class="m-date" datetime="2023-06-06 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          06
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      PEP 715: Disabling bdist_egg distribution uploads on PyPI
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  This PEP recommends deprecating and then disabling new uploads of the bdist_egg distribution type on PyPI. In a parallel move, this PEP recommends deprecating and then disabling new uploads of distribution filenames that have the .egg suffix.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>William Woodruff (william@yossarian.net)</b></span>
+  on <time datetime="2023-06-06 00:00:00+00:00" class="dt-published"></time>
+  Tue 06 Jun 2023
+  in Newest Python PEPs.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://wizardzines.com/comics/32-bit-small/" rel="bookmark" class="u-url"
+       title="32 bits is small" target="_blank">
+      <time class="m-date" datetime="2023-06-05 16:07:54+00:00">
+        Jun
+        <span class="m-date-day">
+          05
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      32 bits is small
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img src="https://wizardzines.com/images/uploads/32-bit-small.png">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2022-12-21 12:11:55+00:00" class="dt-published"></time>
-  Wed 21 Dec 2022
+  on <time datetime="2023-06-05 16:07:54+00:00" class="dt-published"></time>
+  Mon 05 Jun 2023
+  in Wizard Zines.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2023/06/05/some-blogging-myths/" rel="bookmark" class="u-url"
+       title="Some blogging myths" target="_blank">
+      <time class="m-date" datetime="2023-06-05 07:30:34+00:00">
+        Jun
+        <span class="m-date-day">
+          05
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Some blogging myths
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>A few years ago I gave a short talk (<a href="https://jvns.ca/blog/2020/12/10/day-24--a-short-talk-about-blogging-myths/">slides</a>)
+about myths that discourage people from blogging. I was chatting with a friend
+about blogging the other day and it made me want to write up that talk as a
+blog post.</p>
+
+<p>here are the myths:</p>
+
+<ul>
+<li><a href="#myth-you-need-to-be-original">myth: you need to be original</a></li>
+<li><a href="#myth-you-need-to-be-an-expert">myth: you need to be an expert</a></li>
+<li><a href="#myth-posts-need-to-be-100-correct">myth: posts need to be 100% correct</a></li>
+<li><a href="#myth-writing-boring-posts-is-bad">myth: writing boring posts is bad</a></li>
+<li><a href="#myth-you-need-to-explain-every-concept">myth: you need to explain every concept</a></li>
+<li><a href="#myth-page-views-matter">myth: page views matter</a></li>
+<li><a href="#myth-more-material-is-always-better">myth: more material is always better</a></li>
+<li><a href="#myth-everyone-should-blog">myth: everyone should blog</a></li>
+</ul>
+
+
+myth: you need to be original
+
+<p>This is probably the one I hear the most often &ndash; &ldquo;Someone has written about
+this before! Who&rsquo;s going to care about what I have to say?&ldquo;.</p>
+
+<p>The main way I think about this personally is:</p>
+
+<ol>
+<li>identify something I personally have …</li></ol>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-05 07:30:34+00:00" class="dt-published"></time>
+  Mon 05 Jun 2023
   in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -898,43 +877,145 @@ programmers, but nobody teaches us how …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://flothesof.github.io/gmsh-draw-over-image.html" rel="bookmark" class="u-url"
-       title="GMSH tutorial: how to draw a mesh over an image?" target="_blank">
-      <time class="m-date" datetime="2022-12-16 17:32:00+01:00">
-        Dec
+    <a href="https://snarky.ca/proposing-a-struct-syntax/" rel="bookmark" class="u-url"
+       title="Proposing a struct syntax for Python" target="_blank">
+      <time class="m-date" datetime="2023-06-02 19:01:29+00:00">
+        Jun
         <span class="m-date-day">
-          16
+          02
         </span>
-        2022
+        2023
       </time>
       <div class="p-name">
-      GMSH tutorial: how to draw a mesh over an image?
+      Proposing a struct syntax for Python
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  What is GMSH?
-<p><a href="https://gmsh.info/">GMSH</a> is an open-source tool commonly used to produce meshes of geometries in 2D or 3D.
-It is both a command line tool and a graphical user interface.</p>
-
-Drawing a mesh on top of an image
-<p>An interesting feature of the graphical user interface is that it can display images as a background to the interactive drawing.
-According to the <a href="https://gmsh.info/doc/texinfo/gmsh.html#General-options">documentation</a>, it is possible to include images in JPEG, PNG or PDF format. </p>
-<p>Searching on the internet, I have found a starting point for this tutorial in this post from 2014: <a href="http://onelab.info/pipermail/gmsh/2014/009289.html">http://onelab.info/pipermail/gmsh/2014/009289.html</a></p>
-<p>However, I find the post hard to follow and had to make up my own understanding.
-The document this, I’ll try to explain a few of the options GMSH offers with associated screenshots in this tutorial.</p>
-
-Writing …
+  Story time<p>When I go on vacation with a <a href="https://dusty.phillips.codes/">fellow Python developer</a>, inevitably I will talk about Python. &#x1f601; Back in September, Andrea and I drove the <a href="https://www.cbisland.com/tourist-attractions/cabot-trail/">Cabot Trail</a> with our friends Dusty and Jen, which led to a discussion about the <code><a href="https://docs.python.org/3/reference/compound_stmts.html#the-match-statement">match</a></code><a href="https://docs.python.org/3/reference/compound_stmts.html#the-match-statement"> statement</a> and how Dusty and I both</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Florian Le Bourdais</b></span>
-  on <time datetime="2022-12-16 17:32:00+01:00" class="dt-published"></time>
-  Fri 16 Dec 2022
-  in Frolian's blog.
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2023-06-02 19:01:29+00:00" class="dt-published"></time>
+  Fri 02 Jun 2023
+  in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article972/my-solution-for-mobile-digital-painting-on-gnu-linux" rel="bookmark" class="u-url"
+       title="My solution for Mobile digital-painting on GNU/Linux" target="_blank">
+      <time class="m-date" datetime="2023-06-01 20:09:00+02:00">
+        Jun
+        <span class="m-date-day">
+          01
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      My solution for Mobile digital-painting on GNU/Linux
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-06-01_lenovo-370-review_thumb.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-06-01_lenovo-370-review_thumb.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p></p><div></div><p></p>
+<p>Watch it on:  </p>
+<ul>
+<li>Peertube: <a href="https://peertube.touhoppai.moe/w/oU74hKW7xGuAfVjrL4Kkoi">https://peertube.touhoppai.moe/w/oU74hKW7xGuAfVjrL4Kkoi</a></li>
+<li>Youtube: <a href="https://youtu.be/bIJ0yYDOHrw">https://youtu.be/bIJ0yYDOHrw</a></li>
+</ul>
+<p>I just posted a new video with my solutions for mobile digital painting on GNU/Linux! It's not sponsored, about a refurbished 5 y/o hardware, and relatively low budget. 🙂</p>
+<p>It's the Lenovo Yoga 370 (2017) and Wacom Bamboo ink plus stylus running on Fedora 38 KDE, talking about the obstacles, issues I met on my quest to find a device to paint on GNU/Linux, with only Free/Libre and Open-Source software.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2023-06-01 20:09:00+02:00" class="dt-published"></time>
+  Thu 01 Jun 2023
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://noyb.eu/de/credit-agency-crif-systematically-withholds-data-consumers" rel="bookmark" class="u-url"
+       title="Kreditauskunftei CRIF hält Daten von Konsument:innen systematisch zurück" target="_blank">
+      <time class="m-date" datetime="2023-06-01 09:06:55+00:00">
+        Jun
+        <span class="m-date-day">
+          01
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Kreditauskunftei CRIF hält Daten von Konsument:innen systematisch zurück
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <span>Credit agency CRIF systematically withholds data from consumers</span>
+
+                    noyb's proceedings against credit reporting agency CRIF are draining a swamp of legal violations and cynical interpretation of the GDPR. 
+
+                      <img alt="missing piece" src="https://noyb.eu/sites/default/files/styles/media_large/public/2023-06/crif_header.png?itok=d-daPWbY">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>eg</b></span>
+  on <time datetime="2023-06-01 09:06:55+00:00" class="dt-published"></time>
+  Thu 01 Jun 2023
+  in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://blog.orhun.dev/ratatui-0-21-0/" rel="bookmark" class="u-url"
+       title="Ratatui: Build rich terminal user interfaces using Rust" target="_blank">
+      <time class="m-date" datetime="2023-05-29 00:00:00+00:00">
+        May
+        <span class="m-date-day">
+          29
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Ratatui: Build rich terminal user interfaces using Rust
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://github.com/tui-rs-revival/ratatui">Ratatui</a> came a long way since its transition from the original <a href="https://github.com/fdehau/tui-rs"><code>tui-rs</code></a> crate. In this post, let's take a look at what's new in the latest version.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Unknown</b></span>
+  on <time datetime="2023-05-29 00:00:00+00:00" class="dt-published"></time>
+  Mon 29 May 2023
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 

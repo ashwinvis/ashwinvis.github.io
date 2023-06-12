@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/</loc>
-<lastmod>2023-01-05T00:20:44-00:00</lastmod>
+<lastmod>2023-06-12T00:13:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/planet.html</loc>
-<lastmod>2023-01-05T00:20:44-00:00</lastmod>
+<lastmod>2023-06-12T00:13:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/planet.html</loc>
-<lastmod>2023-01-05T00:20:44-00:00</lastmod>
+<lastmod>2023-06-12T00:13:02-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -61,7 +61,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/sponsors.html</loc>
-<lastmod>2023-01-05T00:20:44-00:00</lastmod>
+<lastmod>2023-06-12T00:13:02-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -467,630 +467,630 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/category/blog.html</loc>
-<lastmod>2021-09-24T00:00:00+01:12</lastmod>
+<lastmod>2021-09-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/category/blogger-archive.html</loc>
-<lastmod>2014-01-01T20:46:00+01:12</lastmod>
+<lastmod>2014-01-01T20:46:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/category/microblog.html</loc>
-<lastmod>2022-01-11T00:50:07+01:12</lastmod>
+<lastmod>2022-01-11T00:50:07+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/category/tech-talk.html</loc>
-<lastmod>2022-11-04T09:14:41+01:12</lastmod>
+<lastmod>2022-11-04T09:14:41+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/category/tumblr-archive.html</loc>
-<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<lastmod>2015-04-06T11:58:33+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/software.html</loc>
-<lastmod>2022-11-04T09:14:41+01:12</lastmod>
+<lastmod>2022-11-04T09:14:41+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/life.html</loc>
-<lastmod>2021-09-24T00:00:00+01:12</lastmod>
+<lastmod>2021-09-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/climate.html</loc>
-<lastmod>2021-09-24T00:00:00+01:12</lastmod>
+<lastmod>2021-09-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/fridaysforfuture.html</loc>
-<lastmod>2021-09-24T00:00:00+01:12</lastmod>
+<lastmod>2021-09-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/digitalstrike.html</loc>
-<lastmod>2021-09-24T00:00:00+01:12</lastmod>
+<lastmod>2021-09-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/covid-19.html</loc>
-<lastmod>2021-09-24T00:00:00+01:12</lastmod>
+<lastmod>2021-09-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/meta.html</loc>
-<lastmod>2021-09-06T00:00:00+01:12</lastmod>
+<lastmod>2021-09-06T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/python.html</loc>
-<lastmod>2021-05-16T12:41:13+01:12</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/bash.html</loc>
-<lastmod>2021-05-16T12:41:13+01:12</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/c.html</loc>
-<lastmod>2021-05-16T12:41:13+01:12</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/cpp.html</loc>
-<lastmod>2021-05-16T12:41:13+01:12</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/java.html</loc>
-<lastmod>2021-05-16T12:41:13+01:12</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/ecmascript.html</loc>
-<lastmod>2021-05-16T12:41:13+01:12</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/open-source.html</loc>
-<lastmod>2020-08-20T16:50:51+01:12</lastmod>
+<lastmod>2020-08-20T16:50:51+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/css.html</loc>
-<lastmod>2020-06-24T09:30:09+01:12</lastmod>
+<lastmod>2020-06-24T09:30:09+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/typography.html</loc>
-<lastmod>2020-06-15T17:23:27+01:12</lastmod>
+<lastmod>2020-06-15T17:23:27+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/ligatures.html</loc>
-<lastmod>2020-06-15T17:23:27+01:12</lastmod>
+<lastmod>2020-06-15T17:23:27+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/programming.html</loc>
-<lastmod>2020-06-15T17:23:27+01:12</lastmod>
+<lastmod>2020-06-15T17:23:27+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/markdown.html</loc>
-<lastmod>2020-11-20T00:00:00+01:12</lastmod>
+<lastmod>2020-11-20T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/rst.html</loc>
-<lastmod>2020-11-20T00:00:00+01:12</lastmod>
+<lastmod>2020-11-20T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/vim.html</loc>
-<lastmod>2020-11-20T00:00:00+01:12</lastmod>
+<lastmod>2020-11-20T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/writing.html</loc>
-<lastmod>2020-11-20T00:00:00+01:12</lastmod>
+<lastmod>2020-11-20T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/research.html</loc>
-<lastmod>2020-05-23T20:59:28+01:12</lastmod>
+<lastmod>2020-05-23T20:59:28+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/open-access.html</loc>
-<lastmod>2020-05-23T20:59:28+01:12</lastmod>
+<lastmod>2020-05-23T20:59:28+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/academia.html</loc>
-<lastmod>2020-05-23T20:59:28+01:12</lastmod>
+<lastmod>2020-05-23T20:59:28+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/phone.html</loc>
-<lastmod>2020-04-09T06:09:37+01:12</lastmod>
+<lastmod>2020-04-09T06:09:37+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/hpc.html</loc>
-<lastmod>2020-03-25T22:29:00+01:12</lastmod>
+<lastmod>2020-03-25T22:29:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/linux.html</loc>
-<lastmod>2020-01-13T00:00:00+01:12</lastmod>
+<lastmod>2020-01-13T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/ubuntu.html</loc>
-<lastmod>2020-01-13T00:00:00+01:12</lastmod>
+<lastmod>2020-01-13T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/archlinux.html</loc>
-<lastmod>2020-01-13T00:00:00+01:12</lastmod>
+<lastmod>2020-01-13T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/ci.html</loc>
-<lastmod>2020-01-02T14:12:41+01:12</lastmod>
+<lastmod>2020-01-02T14:12:41+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/automation.html</loc>
-<lastmod>2020-01-02T14:12:41+01:12</lastmod>
+<lastmod>2020-01-02T14:12:41+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/devops.html</loc>
-<lastmod>2020-01-02T14:12:41+01:12</lastmod>
+<lastmod>2020-01-02T14:12:41+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/licensing.html</loc>
-<lastmod>2019-12-21T00:00:00+01:12</lastmod>
+<lastmod>2019-12-21T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/postdoc.html</loc>
-<lastmod>2019-12-12T00:00:00+01:12</lastmod>
+<lastmod>2019-12-12T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/fluid-mechanics.html</loc>
-<lastmod>2019-12-12T00:00:00+01:12</lastmod>
+<lastmod>2019-12-12T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/fluiddyn.html</loc>
-<lastmod>2019-12-01T00:00:00+01:12</lastmod>
+<lastmod>2019-12-01T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/transonic.html</loc>
-<lastmod>2019-12-01T00:00:00+01:12</lastmod>
+<lastmod>2019-12-01T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/pyconse.html</loc>
-<lastmod>2019-12-01T00:00:00+01:12</lastmod>
+<lastmod>2019-12-01T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/pypy.html</loc>
-<lastmod>2019-08-06T00:00:00+01:12</lastmod>
+<lastmod>2019-08-06T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/rust.html</loc>
-<lastmod>2019-08-06T00:00:00+01:12</lastmod>
+<lastmod>2019-08-06T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/csharp.html</loc>
-<lastmod>2019-08-06T00:00:00+01:12</lastmod>
+<lastmod>2019-08-06T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/social-media.html</loc>
-<lastmod>2019-07-28T00:00:00+01:12</lastmod>
+<lastmod>2019-07-28T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/privacy.html</loc>
-<lastmod>2019-07-28T00:00:00+01:12</lastmod>
+<lastmod>2019-07-28T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/fediverse.html</loc>
-<lastmod>2019-07-28T00:00:00+01:12</lastmod>
+<lastmod>2019-07-28T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/sympy.html</loc>
-<lastmod>2019-07-24T00:00:00+01:12</lastmod>
+<lastmod>2019-07-24T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/fluidfft.html</loc>
-<lastmod>2018-12-26T00:00:00+01:12</lastmod>
+<lastmod>2018-12-26T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/fluidsim.html</loc>
-<lastmod>2018-12-26T00:00:00+01:12</lastmod>
+<lastmod>2018-12-26T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/optimization.html</loc>
-<lastmod>2018-12-26T00:00:00+01:12</lastmod>
+<lastmod>2018-12-26T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/conference.html</loc>
-<lastmod>2018-01-06T00:00:00+01:12</lastmod>
+<lastmod>2018-01-06T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/wordporm.html</loc>
-<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<lastmod>2015-04-06T11:58:33+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/til.html</loc>
-<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<lastmod>2015-04-06T11:58:33+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/today-i-learned.html</loc>
-<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<lastmod>2015-04-06T11:58:33+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/tumblr.html</loc>
-<lastmod>2015-04-06T11:58:33+01:12</lastmod>
+<lastmod>2015-04-06T11:58:33+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/rant.html</loc>
-<lastmod>2015-03-29T13:15:09+01:12</lastmod>
+<lastmod>2015-03-29T13:15:09+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/kindness.html</loc>
-<lastmod>2014-12-13T10:55:03+01:12</lastmod>
+<lastmod>2014-12-13T10:55:03+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/strangers.html</loc>
-<lastmod>2014-12-13T10:55:03+01:12</lastmod>
+<lastmod>2014-12-13T10:55:03+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/game-of-thrones.html</loc>
-<lastmod>2014-12-05T22:47:05+01:12</lastmod>
+<lastmod>2014-12-05T22:47:05+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/congress.html</loc>
-<lastmod>2014-12-05T22:47:05+01:12</lastmod>
+<lastmod>2014-12-05T22:47:05+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/indian-politics.html</loc>
-<lastmod>2014-12-05T22:47:05+01:12</lastmod>
+<lastmod>2014-12-05T22:47:05+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/brainwaves.html</loc>
-<lastmod>2014-11-11T00:55:00+01:12</lastmod>
+<lastmod>2014-11-11T00:55:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/motto.html</loc>
-<lastmod>2014-11-07T23:44:00+01:12</lastmod>
+<lastmod>2014-11-07T23:44:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/helloworld.html</loc>
-<lastmod>2014-11-07T23:23:00+01:12</lastmod>
+<lastmod>2014-11-07T23:23:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/introduction.html</loc>
-<lastmod>2014-11-07T23:23:00+01:12</lastmod>
+<lastmod>2014-11-07T23:23:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/resolution.html</loc>
-<lastmod>2014-01-01T20:46:00+01:12</lastmod>
+<lastmod>2014-01-01T20:46:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/poetry.html</loc>
-<lastmod>2013-07-15T04:28:00+01:12</lastmod>
+<lastmod>2013-07-15T04:28:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/internet.html</loc>
-<lastmod>2013-06-04T08:03:00+01:12</lastmod>
+<lastmod>2013-06-04T08:03:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/psychology.html</loc>
-<lastmod>2013-06-04T08:03:00+01:12</lastmod>
+<lastmod>2013-06-04T08:03:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/thin-line.html</loc>
-<lastmod>2013-06-04T08:03:00+01:12</lastmod>
+<lastmod>2013-06-04T08:03:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/survival.html</loc>
-<lastmod>2013-05-08T19:33:00+01:12</lastmod>
+<lastmod>2013-05-08T19:33:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/emotion.html</loc>
-<lastmod>2012-10-05T14:45:00+01:12</lastmod>
+<lastmod>2012-10-05T14:45:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/economy.html</loc>
-<lastmod>2012-08-18T06:32:00+01:12</lastmod>
+<lastmod>2012-08-18T06:32:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/india.html</loc>
-<lastmod>2012-08-18T06:32:00+01:12</lastmod>
+<lastmod>2012-08-18T06:32:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/recession.html</loc>
-<lastmod>2012-08-18T06:32:00+01:12</lastmod>
+<lastmod>2012-08-18T06:32:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/tips.html</loc>
-<lastmod>2012-08-18T06:32:00+01:12</lastmod>
+<lastmod>2012-08-18T06:32:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/friends.html</loc>
-<lastmod>2012-02-03T17:23:00+01:12</lastmod>
+<lastmod>2012-02-03T17:23:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/teenage.html</loc>
-<lastmod>2012-02-03T17:23:00+01:12</lastmod>
+<lastmod>2012-02-03T17:23:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/travel.html</loc>
-<lastmod>2011-09-15T11:45:00+01:12</lastmod>
+<lastmod>2011-09-15T11:45:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/uncategorized.html</loc>
-<lastmod>2011-03-02T04:06:00+01:12</lastmod>
+<lastmod>2011-03-02T04:06:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/list.html</loc>
-<lastmod>2010-11-05T08:45:00+01:12</lastmod>
+<lastmod>2010-11-05T08:45:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/mood.html</loc>
-<lastmod>2010-11-05T08:45:00+01:12</lastmod>
+<lastmod>2010-11-05T08:45:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/tag/music.html</loc>
-<lastmod>2010-11-05T08:45:00+01:12</lastmod>
+<lastmod>2010-11-05T08:45:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/author/ashwin-vishnu.html</loc>
-<lastmod>2019-12-21T00:00:00+01:12</lastmod>
+<lastmod>2019-12-21T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/author/ashwin-vishnu-mohanan.html</loc>
-<lastmod>2022-11-04T09:14:41+01:12</lastmod>
+<lastmod>2022-11-04T09:14:41+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/author/azuwish.html</loc>
-<lastmod>2014-01-01T20:46:00+01:12</lastmod>
+<lastmod>2014-01-01T20:46:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
