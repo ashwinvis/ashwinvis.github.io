@@ -164,33 +164,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nibblestew.blogspot.com/2023/06/functionality-currently-implemented-in.html" rel="bookmark" class="u-url"
-       title="Functionality currently implemented in CapyPDF" target="_blank">
-      <time class="m-date" datetime="2023-06-13 21:27:00+00:00">
+    <a href="https://blogs.gnome.org/alexm/2023/06/15/rethinking-adaptivity/" rel="bookmark" class="u-url"
+       title="Rethinking Adaptivity" target="_blank">
+      <time class="m-date" datetime="2023-06-14 23:21:08+00:00">
         Jun
         <span class="m-date-day">
-          13
+          14
         </span>
         2023
       </time>
       <div class="p-name">
-      Functionality currently implemented in CapyPDF
+      Rethinking Adaptivity
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><a href="https://github.com/jpakkane/capypdf">CapyPDF</a> has a fair bit of functionality and it might be difficult to tell from the outside what works and what does not. Here is a rough outline of implemented functionality.</p>
-In the public C API (and Python)<p></p><ul><li>Basic draw commands in RGB, gray and CMYK</li><li>ICC profile support</li><li>Loading PNG, JPG and TIFF images (including CMYK TIFFs)</li><li>Embed JPG files directly without unpacking first</li><li>Using images as a paint mask</li><li>Handle color profiles embedded in images</li><li>Using builtin PDF fonts</li><li>Using TrueType fonts with font subsetting</li><li>All PDF font operators like extra padding, raise/lower and set as clipping path</li><li>Page transitions</li></ul>
-Implemented but not exposed<p>The items listed here vary in implementation completeness from "sort of ready, just not exposed yet" to "the Mmest of MVP". You can only get to them by poking at the innards directly …</p>
+  TL;DR: The current adaptive widgets have significant problems and have all been replaced and deprecated. You may want to port your apps, the migration guide is here. Over the past year, I’ve been working on replacing the old adaptive widgets in libadwaita, and as of a few days ago the last pieces have landed. The … <a href="https://blogs.gnome.org/alexm/2023/06/15/rethinking-adaptivity/">Continue reading <span>Rethinking Adaptivity</span></a>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2023-06-13 21:27:00+00:00" class="dt-published"></time>
-  Tue 13 Jun 2023
+  <span class="p-author"><b>Alice Mikhaylenko</b></span>
+  on <time datetime="2023-06-14 23:21:08+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
   in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -200,35 +198,106 @@ Implemented but not exposed<p>The items listed here vary in implementation compl
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pycoders.com/issues/581" rel="bookmark" class="u-url"
-       title="PyCoder’s Weekly: Issue #581 (June 13, 2023)" target="_blank">
-      <time class="m-date" datetime="2023-06-13 19:30:00+00:00">
+    <a href="https://pluralistic.net/2023/06/14/flywheel-shyster-and-flywheel/" rel="bookmark" class="u-url"
+       title="Pluralistic: How Amazon transformed the EU into a planned economy (14 June 2023)" target="_blank">
+      <time class="m-date" datetime="2023-06-14 19:43:22+00:00">
         Jun
         <span class="m-date-day">
-          13
+          14
         </span>
         2023
       </time>
       <div class="p-name">
-      PyCoder’s Weekly: Issue #581 (June 13, 2023)
+      Pluralistic: How Amazon transformed the EU into a planned economy (14 June 2023)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p> <span>#581 – JUNE 13, 2023</span> <span><a href="https://pycoders.com/issues/581/feed">View in Browser »</a></span> </p> <p><a href="https://pycoders.com"><img alt="The PyCoder&amp;rsquo;s Weekly Logo" src="https://cdn.pycoders.com/37bdf31dc645f968ffb90196e5d38ff5"></a></p> 
- <div> 
-<a href="https://pycoders.com/link/10955/feed">What&rsquo;s the Zen of Python?</a> <p> In this tutorial, you&rsquo;ll be exploring the Zen of Python, a collection of nineteen guiding principles for writing idiomatic Python. You&rsquo;ll find out how they originated and whether you should follow them. Along the way, you&rsquo;ll uncover several inside jokes associated with this humorous poem. <span><a href="https://pycoders.com/link/10955/feed">REAL PYTHON</a></span> </p> </div> <div> 
-<a href="https://pycoders.com/link/10956/feed">JupyterLab 4.0 Is Here</a> <p> The Jupyter contributor community have announced JupyterLab 4.0. This blog post shows you some of the new features, including: performance improvements, editor upgrades, better search, and more. <span><a href="https://pycoders.com/link/10956/feed">JASON WEILL</a></span> </p> </div> <div> 
-<a href="https://pycoders.com/link/10936/feed">Build Internal Tools in Minutes with Retool, Where Visual Programming Meets the Power of Real Code</a> <a href="https://pycoders.com/link/10936/feed"><img alt="alt" src="https://cdn.pycoders.com/1cc8824cfe355363a6acfb15a9f55290"></a> <p> Our customers use Retool to solve all kinds of business problems 10x faster: Plaid uses Retool to manage integration product support. Amazon uses Retool to handle …</p></div>
+  Today's links How Amazon transformed the EU into a planned economy: Monopsony, junk fees and market power. Hey look at this: Delights to delectate. This day in history: 2008, 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading How Amazon transformed the EU into a planned economy (permalink) Amazon is a perfect parable of enshittification, the process by which platforms first offer subsidies to end users until they're locked in, then make life good for business customers at users' expense, until they're locked in, then claw back all the value they can for themselves, leaving just enough behind to keep the lock-in going. In a new report for SOMO, Margarida Silva describes how the end-stage enshittification of Amazon is playing out in the EU, with Amazon repeating its US playbook of gouging the small businesses …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2023-06-14 19:43:22+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://k3yss.github.io/posts/gsoc_blog3/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="GSoC-23 Week 1-2 | Adding Account Moderation Tool #3" target="_blank">
+      <time class="m-date" datetime="2023-06-14 19:21:05+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      GSoC-23 Week 1-2 | Adding Account Moderation Tool #3
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello world,</p>
+<p>This is my third blog post for Google Summer of Code 2023 where I will be sharing what I was able to accomplish in the first two weeks.</p>
+<p>The first task I worked on was implementing the account moderation tool. This tool enables moderators/admins of an instance to view all the accounts available on the server and take action against them.</p>
+<p>Before starting with its implementation, I requested Carl to schedule a meeting so that I could gain a better understanding of the implementation process. He advised me to study the already implemented <code>SocialGraph</code> page, along with other helpful insights.</p>
+<p>Initially, when attempting to receive raw JSON data from the <code>/api/v1/admin/accounts</code> endpoint, I encountered a <code>403</code> error response. Upon spending some time debugging my code I couldn&rsquo;t determine what I was doing wrong …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>planet-kde on Rishi Kumar's Blog</b></span>
+  on <time datetime="2023-06-14 19:21:05+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://realpython.com/how-to-make-programming-videos/" rel="bookmark" class="u-url"
+       title="Real Python: How to Make Engaging Programming Videos" target="_blank">
+      <time class="m-date" datetime="2023-06-14 14:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Real Python: How to Make Engaging Programming Videos
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p><a href="https://realpython.com/courses/">Programming videos</a> have become an increasingly popular medium for sharing knowledge and helping the fellow developers on your team. Especially when you’re working remotely, effective communication is vital, and screencasts have emerged as a powerful tool that meets this need. That’s why knowing how to make programming videos is a valuable skill, no matter where you are in your career.</p>
+<p>Even if you’ve never considered creating video content yourself, creating a screencast can be a great way to enhance written documentation or demonstrate complex processes as a professional programmer. Often, a two-minute video helps your colleagues more than a wordy email. Other times, an in-depth thirty-minute video is more convincing than an hour-long meeting.</p>
+<p>However, not all videos are equally effective. To create engaging and informative programming screencasts, you should keep some important details in mind.</p>
+<p><strong>In …</strong></p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-13 19:30:00+00:00" class="dt-published"></time>
-  Tue 13 Jun 2023
+  on <time datetime="2023-06-14 14:00:00+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -238,40 +307,135 @@ Implemented but not exposed<p>The items listed here vary in implementation compl
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2023/06/13/tips-tricks-handwritten-signatures-in-okular/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Tips & tricks: handwritten signatures in Okular" target="_blank">
-      <time class="m-date" datetime="2023-06-13 19:04:18+00:00">
+    <a href="https://xkcd.com/2789/" rel="bookmark" class="u-url"
+       title="Making Plans" target="_blank">
+      <time class="m-date" datetime="2023-06-14 00:00:00+00:00">
         Jun
         <span class="m-date-day">
-          13
+          14
         </span>
         2023
       </time>
       <div class="p-name">
-      Tips & tricks: handwritten signatures in Okular
+      Making Plans
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Today I&#8217;d like to share a tip about <a href="https://okular.kde.org/">Okular</a>, KDE&#8217;s flagship document reader app that&#8217;s <a href="https://www.blauer-engel.de/en/products/kde-okular">eco-certified in Germany</a> and <a href="https://dot.kde.org/2023/04/25/g10-code-becomes-kde-patron">used professionally around the world</a> to secure documents.</p>
-
-
-
-<p>Okular has robust support for digitally signing documents using a cryptographic signature, and it&#8217;s going to become <a href="https://invent.kde.org/graphics/okular/-/merge_requests/745">even better soon</a>. But what about signing documents using handwritten signatures, for those who live in places where digital signing hasn&#8217;t caught on yet?</p>
-
-
-
-<p>Now, this is typically the point at which everyone who lives in a place where cryptographic signatures are common will chime in about how handwritten signatures are pointless and insecure. And they may be right, but it doesn&#8217;t matter because handwritten signatures are still used and considered valid in most of the world. And thankfully for people who live in any such part of the world …</p>
+  <img alt="Oh no, I haven't checked in with Yvonne in YEARS." src="https://imgs.xkcd.com/comics/making_plans.png" title="Oh no, I haven't checked in with Yvonne in YEARS.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2023-06-13 19:04:18+00:00" class="dt-published"></time>
-  Tue 13 Jun 2023
-  in Planet KDE.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-14 00:00:00+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/matlab-macos-rosetta/" rel="bookmark" class="u-url"
+       title="Matlab on Apple Silicon" target="_blank">
+      <time class="m-date" datetime="2023-06-14 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Matlab on Apple Silicon
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Matlab R2023b is the first version of Matlab that is
+<a href="https://www.mathworks.com/support/requirements/prerelease/matlab-mac.html">officially supported</a>
+on
+<a href="https://www.mathworks.com/support/requirements/apple-silicon.html">Apple Silicon</a>.</p>
+<p>To use Matlab from Terminal, add to
+<a href="https://www.scivision.dev/macos-terminal-config">~/.zshrc</a>
+as appropriate for the Matlab version on the Mac computer:</p>
+<div><pre><code><span><span><span>export</span> <span>PATH</span>=<span>$PATH</span>:/Applications/MATLAB_R2023b.app/bin/</span></span></code></pre></div>
+
+
+<p>History of Matlab on Apple Silicon:</p>
+<p>Matlab worked on Apple Silicon via
+<a href="https://www.mathworks.com/matlabcentral/answers/641925-is-matlab-supported-on-apple-silicon-macs#answer_538915">Rosetta since Matlab R2020b</a>.
+Our Matlab script detects if
+<a href="https://www.scivision.dev/macos-detect-rosetta">Matlab is running using Rosetta</a>.
+Matlab R2022 brought the <a href="https://blogs.mathworks.com/matlab/2022/12/08/playing-with-the-r2022b-matlab-apple-silicon-beta-for-m1-m2-mac/">Apple Silicon beta</a>
+that runs natively on Apple Silicon for generally better performance.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-14 00:00:00+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://archlinux.org/news/openblas-0323-2-update-requires-manual-intervention/" rel="bookmark" class="u-url"
+       title="OpenBLAS >= 0.3.23-2 update requires manual intervention" target="_blank">
+      <time class="m-date" datetime="2023-06-14 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          14
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      OpenBLAS >= 0.3.23-2 update requires manual intervention
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  The openblas package prior to version 0.3.23-2 doesn't ship optimized
+LAPACK routine and CBLAS/LAPACKE interfaces for compatibility. This
+decision has been reverted now, and the ability to choose a different
+default system BLAS/LAPACK implementation while keeping openblas
+installed is now provided to allow future co-installation of BLIS,
+ATLAS, etc.
+
+The default BLAS implementation will be used for most packages like
+NumPy or R. Please install "blas-openblas" and "blas64-openblas" to make
+OpenBLAS the default BLAS implementation, just like the old behavior.
+
+Unfortunately you will get errors on updating if you currently have
+OpenBLAS installed as the default BLAS implementation:
+
+error: failed to prepare transaction (could not satisfy dependencies)
+:: installing openblas (0.3.23-2) breaks dependency 'blas' required by cblas
+:: installing openblas (0.3.23-2) breaks dependency 'blas' required by
+lapack
+
+Please append your preferred default BLAS implementation …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Felix Yan</b></span>
+  on <time datetime="2023-06-14 00:00:00+00:00" class="dt-published"></time>
+  Wed 14 Jun 2023
+  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -306,40 +470,6 @@ Implemented but not exposed<p>The items listed here vary in implementation compl
   on <time datetime="2023-06-13 20:24:00+02:00" class="dt-published"></time>
   Tue 13 Jun 2023
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2023/06/13/certified-organic-reach/" rel="bookmark" class="u-url"
-       title="Pluralistic: Saving the news from Big Tech with end-to-end social media (13 June 2023)" target="_blank">
-      <time class="m-date" datetime="2023-06-13 16:48:44+00:00">
-        Jun
-        <span class="m-date-day">
-          13
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Pluralistic: Saving the news from Big Tech with end-to-end social media (13 June 2023)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Saving the news from Big Tech with end-to-end social media: The final installment in my EFF series on saving the news. Hey look at this: Delights to delectate. This day in history: 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Saving the news from Big Tech with end-to-end social media (permalink) Big Tech steals from the news, but it doesn't steal content &#8211; it steals money. In "Saving the News From Big Tech," a series for EFF, I've documented how tech monopolies in ad-tech and app stores result in vast cash transfers from the news to tech, starving newsrooms and gutting reporting: https://www.eff.org/deeplinks/2023/04/saving-news-big-tech Now we've published the final part, describing how social media platforms hold audiences hostage, charging media companies to reach the subscribers who asked …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-06-13 16:48:44+00:00" class="dt-published"></time>
-  Tue 13 Jun 2023
-  in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -468,40 +598,6 @@ that of two entities who …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2788/" rel="bookmark" class="u-url"
-       title="Musical Scales" target="_blank">
-      <time class="m-date" datetime="2023-06-12 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Musical Scales
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="In the Hall of the Mountain King was accidentally composed on log/log paper." src="https://imgs.xkcd.com/comics/musical_scales.png" title="In the Hall of the Mountain King was accidentally composed on log/log paper.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-12 00:00:00+00:00" class="dt-published"></time>
-  Mon 12 Jun 2023
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://alexschroeder.ch/wiki/2023-06-11_Upgrading_Debian_Bullseye_(11)_to_Bookworm_(12)" rel="bookmark" class="u-url"
        title="Upgrading Debian Bullseye (11) to Bookworm (12)" target="_blank">
       <time class="m-date" datetime="2023-06-11 22:07:18+00:00">
@@ -589,51 +685,6 @@ is incredibly strong, but …</p>
   on <time datetime="2023-06-11 13:34:53-04:00" class="dt-published"></time>
   Sun 11 Jun 2023
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/madrigal-gnss-line-of-sight-python/" rel="bookmark" class="u-url"
-       title="Madrigal GNSS line-of-sight data load in Python" target="_blank">
-      <time class="m-date" datetime="2023-06-09 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          09
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Madrigal GNSS line-of-sight data load in Python
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="http://cedar.openmadrigal.org/openmadrigal">Madrigal data repositories</a>
-give access to numerous types of geospace data spanning multiple decades.
-One kind of data (3505) is GNSS line of sight (LOS) data.
-Loading the 10+ GB files is best done by choosing slices of data, typically in time at least.
-This <a href="https://gist.github.com/scivision/83f0b1101aaf5e55eba6b96e02b11169">example Python script</a>
-may help get started.
-Plotting the data also requires knowing the location of the receiver and corresponding satellite.</p>
-<p>The Madrigal data for GNSS LOS is stored under &ldquo;Data / Table Layout&rdquo; as a huge 1D unordered vector of
-<a href="https://docs.hdfgroup.org/hdf5/develop/_h5__u_g.html#subsubsec_program_model_compound">HDF5 compound data</a>.
-h5py can read slices of the
-<a href="https://docs.h5py.org/en/stable/high/dataset.html">compound data</a>
-to avoid wasted reads and overusing RAM.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-09 00:00:00+00:00" class="dt-published"></time>
-  Fri 09 Jun 2023
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -945,42 +996,6 @@ this before! Who&rsquo;s going to care about what I have to say?&ldquo;.</p>
   on <time datetime="2023-06-02 19:01:29+00:00" class="dt-published"></time>
   Fri 02 Jun 2023
   in Tall, Snarky Canadian.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://monthly-reports.archlinux.page/2023/05/" rel="bookmark" class="u-url"
-       title="May" target="_blank">
-      <time class="m-date" datetime="2023-06-01 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          01
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      May
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Arch Linux in May 2023 # Staff # We would like to welcome Anton Hvornum (torxed) and Christian Heusel (gromit) among the Arch Linux Package Maintainers.
-On top we would like to welcome Leonidas Spyropoulos (artafinde) to their new additional duties as Arch Linux Developer
-Git packaging # We are thrilled to announce the successful migration of our packaging ecosystem to Git, with package sources now accessible on GitLab. As part of this transition, we have developed a powerful new tool called pkgctl, available through devtools, offering a user-centric design and streamlined user experience for interacting with all aspects of Arch Linux packaging for users and packagers alike.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-01 00:00:00+00:00" class="dt-published"></time>
-  Thu 01 Jun 2023
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
