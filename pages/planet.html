@@ -164,65 +164,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/alexm/2023/06/15/rethinking-adaptivity/" rel="bookmark" class="u-url"
-       title="Rethinking Adaptivity" target="_blank">
-      <time class="m-date" datetime="2023-06-14 23:21:08+00:00">
+    <a href="https://pluralistic.net/2023/06/15/paid-medical-disinformation/" rel="bookmark" class="u-url"
+       title="Pluralistic: Google makes millions on paid abortion disinformation (15 June 2023)" target="_blank">
+      <time class="m-date" datetime="2023-06-15 17:27:09+00:00">
         Jun
         <span class="m-date-day">
-          14
+          15
         </span>
         2023
       </time>
       <div class="p-name">
-      Rethinking Adaptivity
+      Pluralistic: Google makes millions on paid abortion disinformation (15 June 2023)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  TL;DR: The current adaptive widgets have significant problems and have all been replaced and deprecated. You may want to port your apps, the migration guide is here. Over the past year, I’ve been working on replacing the old adaptive widgets in libadwaita, and as of a few days ago the last pieces have landed. The … <a href="https://blogs.gnome.org/alexm/2023/06/15/rethinking-adaptivity/">Continue reading <span>Rethinking Adaptivity</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Alice Mikhaylenko</b></span>
-  on <time datetime="2023-06-14 23:21:08+00:00" class="dt-published"></time>
-  Wed 14 Jun 2023
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pluralistic.net/2023/06/14/flywheel-shyster-and-flywheel/" rel="bookmark" class="u-url"
-       title="Pluralistic: How Amazon transformed the EU into a planned economy (14 June 2023)" target="_blank">
-      <time class="m-date" datetime="2023-06-14 19:43:22+00:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Pluralistic: How Amazon transformed the EU into a planned economy (14 June 2023)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links How Amazon transformed the EU into a planned economy: Monopsony, junk fees and market power. Hey look at this: Delights to delectate. This day in history: 2008, 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading How Amazon transformed the EU into a planned economy (permalink) Amazon is a perfect parable of enshittification, the process by which platforms first offer subsidies to end users until they're locked in, then make life good for business customers at users' expense, until they're locked in, then claw back all the value they can for themselves, leaving just enough behind to keep the lock-in going. In a new report for SOMO, Margarida Silva describes how the end-stage enshittification of Amazon is playing out in the EU, with Amazon repeating its US playbook of gouging the small businesses …
+  Today's links Google makes millions on paid abortion disinformation: The real secret of "dark SEO" is "pay for an ad." Hey look at this: Delights to delectate. This day in history: 2008, 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Google makes millions on paid abortion disinformation (permalink) Google's search quality has been in steady decline for years, and Google assures us that they're working on it, though the most visible effort is replacing links to webpages with lengthy, florid paragraphs written by a confident habitual liar chatbot: https://pluralistic.net/2023/02/16/tweedledumber/#easily-spooked The internet is increasingly full of garbage, much of it written by other confident habitual liar chatbots, which are now extruding plausible sentences at enormous scale. Future confident habitual liar chatbots will be trained on the output of …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-06-14 19:43:22+00:00" class="dt-published"></time>
-  Wed 14 Jun 2023
+  on <time datetime="2023-06-15 17:27:09+00:00" class="dt-published"></time>
+  Thu 15 Jun 2023
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -232,35 +198,99 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://k3yss.github.io/posts/gsoc_blog3/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="GSoC-23 Week 1-2 | Adding Account Moderation Tool #3" target="_blank">
-      <time class="m-date" datetime="2023-06-14 19:21:05+00:00">
+    <a href="https://wingolog.org/archives/2023/06/15/parallel-futures-in-mobile-application-development" rel="bookmark" class="u-url"
+       title="parallel futures in mobile application development" target="_blank">
+      <time class="m-date" datetime="2023-06-15 14:02:16+00:00">
         Jun
         <span class="m-date-day">
-          14
+          15
         </span>
         2023
       </time>
       <div class="p-name">
-      GSoC-23 Week 1-2 | Adding Account Moderation Tool #3
+      parallel futures in mobile application development
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Hello world,</p>
-<p>This is my third blog post for Google Summer of Code 2023 where I will be sharing what I was able to accomplish in the first two weeks.</p>
-<p>The first task I worked on was implementing the account moderation tool. This tool enables moderators/admins of an instance to view all the accounts available on the server and take action against them.</p>
-<p>Before starting with its implementation, I requested Carl to schedule a meeting so that I could gain a better understanding of the implementation process. He advised me to study the already implemented <code>SocialGraph</code> page, along with other helpful insights.</p>
-<p>Initially, when attempting to receive raw JSON data from the <code>/api/v1/admin/accounts</code> endpoint, I encountered a <code>403</code> error response. Upon spending some time debugging my code I couldn&rsquo;t determine what I was doing wrong …</p>
+  <div><p>Good morning, hackers.  Today I'd like to pick up my series on mobile
+application development.  To recap, we looked at:</p><ul><li><p><a href="https://wingolog.org/archives/2023/04/20/structure-and-interpretation-of-capacitor-programs">Ionic/Capacitor</a>, which makes mobile app development more like web
+app development;</p></li><li><p><a href="https://wingolog.org/archives/2023/04/21/structure-and-interpretation-of-react-native">React Native</a>, a flavor of React that renders to
+platform-native UI components rather than the Web, with ahead-of-time
+compilation of JavaScript;</p></li><li><p><a href="https://wingolog.org/archives/2023/04/24/structure-and-interpretation-of-nativescript">NativeScript</a>, which exposes all platform capabilities directly to
+JavaScript and lets users layer their preferred framework on top;</p></li><li><p><a href="https://wingolog.org/archives/2023/04/26/structure-and-interpretation-of-flutter">Flutter</a>, which bypasses the platform's native UI components to
+render directly using the GPU, and uses Dart instead of
+JavaScript/TypeScript; and</p></li><li><p><a href="https://wingolog.org/archives/2023/05/02/structure-and-interpretation-of-ark">Ark</a>, which is Flutter-like in its rendering, but programmed via a
+dialect of TypeScript, with its own multi-tier compilation
+and distribution pipeline.</p></li></ul><p>Taking a step back, with the exception of Ark which has a special
+relationship to HarmonyOS and Huawei, these frameworks are all layers on
+top …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>planet-kde on Rishi Kumar's Blog</b></span>
-  on <time datetime="2023-06-14 19:21:05+00:00" class="dt-published"></time>
-  Wed 14 Jun 2023
+  <span class="p-author"><b>Andy Wingo</b></span>
+  on <time datetime="2023-06-15 14:02:16+00:00" class="dt-published"></time>
+  Thu 15 Jun 2023
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://kdenlive.org/en/2023/06/kdenlive-23-04-2-released/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Kdenlive 23.04.2 released" target="_blank">
+      <time class="m-date" datetime="2023-06-15 13:01:55+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Kdenlive 23.04.2 released
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>
+
+
+
+
+
+
+                <div>
+                <div>
+
+
+
+
+                <div>
+
+
+
+
+                <div><p>Kdenlive 23.04.2 brings several bug fixes and enhancements to improve the stability of Timelines Sequences. Among the bug fixes, we addressed a freeze that occurred when encountering a duplicate sequence, sequence creation from selection, and re-enabling of sequence thumbnails. Other notable fixes include addressing problems with dragging clips in the timeline causing out-of-view scrolling, a crash when pasting subtitles in a timeline sequence without subtitles and timeline focus problems.</p>
+<p>Furthermore, there are enhancements to our subtitling engines Vosk and Whisper and resolved issues related to project archiving, subtitle file display, motion tracker, color wheel resetting issue and scaled rendering.</p>
+<p>Sysadmin news: as some of you may have perceived our website&#8217;s commenting system has been integrated to the new <a href="https://discuss.kde.org">KDE forum</a>. So please leave your comments and feedback there.</p>
+<p><strong>Full log</strong></p>
+<ul>
+<li>Fix freeze on duplicate sequence. <a href="https://commits.kde.org/kdenlive/a25516e9e2a08d7f6056a01cb11cd25c59f63bad">Commit.</a> See …</li></ul></div></div></div></div></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Kdenlive</b></span>
+  on <time datetime="2023-06-15 13:01:55+00:00" class="dt-published"></time>
+  Thu 15 Jun 2023
   in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -270,35 +300,148 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://realpython.com/how-to-make-programming-videos/" rel="bookmark" class="u-url"
-       title="Real Python: How to Make Engaging Programming Videos" target="_blank">
-      <time class="m-date" datetime="2023-06-14 14:00:00+00:00">
+    <a href="https://www.kitware.com/a-new-time-manager-is-landing-in-paraview/" rel="bookmark" class="u-url"
+       title="A new Time Manager is landing in ParaView" target="_blank">
+      <time class="m-date" datetime="2023-06-15 09:57:22+00:00">
         Jun
         <span class="m-date-day">
-          14
+          15
         </span>
         2023
       </time>
       <div class="p-name">
-      Real Python: How to Make Engaging Programming Videos
+      A new Time Manager is landing in ParaView
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <div><p><a href="https://realpython.com/courses/">Programming videos</a> have become an increasingly popular medium for sharing knowledge and helping the fellow developers on your team. Especially when you’re working remotely, effective communication is vital, and screencasts have emerged as a powerful tool that meets this need. That’s why knowing how to make programming videos is a valuable skill, no matter where you are in your career.</p>
-<p>Even if you’ve never considered creating video content yourself, creating a screencast can be a great way to enhance written documentation or demonstrate complex processes as a professional programmer. Often, a two-minute video helps your colleagues more than a wordy email. Other times, an in-depth thirty-minute video is more convincing than an hour-long meeting.</p>
-<p>However, not all videos are equally effective. To create engaging and informative programming screencasts, you should keep some important details in mind.</p>
-<p><strong>In …</strong></p></div>
+  In ParaView, you can load a temporal dataset and navigate through its timesteps. You can also create an animated scene where analysis and visualization parameters can change at each timestep. The features are more than useful to understand your data and communicate about your results! And, as always in ParaView, we want you to have [&#8230;]
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nicolas Vuaille</b></span>
+  on <time datetime="2023-06-15 09:57:22+00:00" class="dt-published"></time>
+  Thu 15 Jun 2023
+  in Kitware blog - Paraview.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pybit.es/articles/importance-of-refactoring/" rel="bookmark" class="u-url"
+       title="PyBites: The importance of refactoring regularly [podcast]" target="_blank">
+      <time class="m-date" datetime="2023-06-15 09:50:44+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      PyBites: The importance of refactoring regularly [podcast]
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In this episode we talk with Chris May, Python developer and coach, about his background and passion for refactoring.</p>
+
+
+
+<p>Watch here:</p>
+
+
+
+<div>
+
+</div>
+
+
+
+<p>Or listen here:</p>
+
+
+
+<div></div>
+
+
+
+<p>This turned into a beautiful love letter <img alt="💌" src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f48c.png"> to refactoring and we think you should take notice, because adopting the mindset he teaches will improve your code. A lot!</p>
+
+
+
+<p>Enjoy and as always reach out if you have any feedback, including direct refactoring questions to us, on Slack and/or to Chris (contact details below).</p>
+
+
+
+<p>Chapters:00:00 Intro snippet and intro music00:41 Episode / guest intro01:28 Who is Chris May? (and how we met)02:53 What do you and how did you get into Python05:22 Link between creativity and programming06:30 How did you get to into refactoring (3 quotes)08:05 Slatkin&#8217;s quote about devs spending 50 …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-14 14:00:00+00:00" class="dt-published"></time>
-  Wed 14 Jun 2023
+  on <time datetime="2023-06-15 09:50:44+00:00" class="dt-published"></time>
+  Thu 15 Jun 2023
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/strict-aliasing-memory-leak/" rel="bookmark" class="u-url"
+       title="No strict aliasing C / C++" target="_blank">
+      <time class="m-date" datetime="2023-06-15 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          15
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      No strict aliasing C / C++
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>For optimization &ldquo;-O2&rdquo; and above, compilers such as GCC enable
+<a href="https://gcc.gnu.org/onlinedocs/gcc-13.1.0/gcc/Optimize-Options.html#index-fstrict-aliasing">strict aliasing</a>.
+For a wide variety of existing projects, strict aliasing provides additional optimization.
+For some projects, such as
+<a href="https://github.com/scivision/mumps/pull/56">MUMPS</a>,
+memory leaks have been observed that are resolved by disabling strict aliasing using GCC flag &ldquo;-fno-strict-aliasing&rdquo;.</p>
+<p>Strict aliasing links:</p>
+<ul>
+<li><a href="http://dbp-consulting.com/tutorials/StrictAliasing.html">tutorial</a></li>
+<li><a href="https://gist.github.com/shafik/848ae25ee209f698763cffee272a58f8">discussion</a></li>
+<li><a href="https://llvm.org/devmtg/2017-10/slides/Finkel-The%20Type%20Sanitizer.pdf">presentation</a></li>
+<li>Red Hat: &ldquo;The joys and perils of C and C++ aliasing&rdquo; <a href="https://developers.redhat.com/blog/2020/06/02/the-joys-and-perils-of-c-and-c-aliasing-part-1">Part 1</a> &amp; <a href="https://developers.redhat.com/blog/2020/06/03/the-joys-and-perils-of-aliasing-in-c-and-c-part-2">Part 2</a></li>
+</ul>
+<p>Clang also has option
+<a href="https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-fstrict-aliasing">-f[no]strict-aliasing</a>.
+libuv recommends
+<a href="https://github.com/libuv/libuv#-fno-strict-aliasing">-fno-strict-aliasing</a>
+due to
+<a href="https://en.wikipedia.org/wiki/Type_punning">type punning</a>.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-15 00:00:00+00:00" class="dt-published"></time>
+  Thu 15 Jun 2023
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -333,56 +476,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2023-06-14 00:00:00+00:00" class="dt-published"></time>
   Wed 14 Jun 2023
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/matlab-macos-rosetta/" rel="bookmark" class="u-url"
-       title="Matlab on Apple Silicon" target="_blank">
-      <time class="m-date" datetime="2023-06-14 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Matlab on Apple Silicon
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Matlab R2023b is the first version of Matlab that is
-<a href="https://www.mathworks.com/support/requirements/prerelease/matlab-mac.html">officially supported</a>
-on
-<a href="https://www.mathworks.com/support/requirements/apple-silicon.html">Apple Silicon</a>.</p>
-<p>To use Matlab from Terminal, add to
-<a href="https://www.scivision.dev/macos-terminal-config">~/.zshrc</a>
-as appropriate for the Matlab version on the Mac computer:</p>
-<div><pre><code><span><span><span>export</span> <span>PATH</span>=<span>$PATH</span>:/Applications/MATLAB_R2023b.app/bin/</span></span></code></pre></div>
-
-
-<p>History of Matlab on Apple Silicon:</p>
-<p>Matlab worked on Apple Silicon via
-<a href="https://www.mathworks.com/matlabcentral/answers/641925-is-matlab-supported-on-apple-silicon-macs#answer_538915">Rosetta since Matlab R2020b</a>.
-Our Matlab script detects if
-<a href="https://www.scivision.dev/macos-detect-rosetta">Matlab is running using Rosetta</a>.
-Matlab R2022 brought the <a href="https://blogs.mathworks.com/matlab/2022/12/08/playing-with-the-r2022b-matlab-apple-silicon-beta-for-m1-m2-mac/">Apple Silicon beta</a>
-that runs natively on Apple Silicon for generally better performance.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-14 00:00:00+00:00" class="dt-published"></time>
-  Wed 14 Jun 2023
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -598,59 +691,6 @@ that of two entities who …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2023-06-11_Upgrading_Debian_Bullseye_(11)_to_Bookworm_(12)" rel="bookmark" class="u-url"
-       title="Upgrading Debian Bullseye (11) to Bookworm (12)" target="_blank">
-      <time class="m-date" datetime="2023-06-11 22:07:18+00:00">
-        Jun
-        <span class="m-date-day">
-          11
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Upgrading Debian Bullseye (11) to Bookworm (12)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p> That feeling when you think about upgrading the operating system.</p><blockquote><p>I’m reading the release notes, and following the instructions. I started reading at 14:20, and I logged into the server at 14:34. – <a href="https://alexschroeder.ch/wiki/2021-08-30_Upgrading_Debian_Buster_(10)_to_Bullseye_(11)">2021-08-30 Upgrading Debian Buster (10) to Bullseye (11)</a></p></blockquote><p> I’m feeling hopeful!</p><pre># My selections
-dpkg --get-selections '*'&gt;debian.selections
-# Update bullseye
-apt update
-apt upgrade
-# Listing obsolete stuff
-apt list '~o'
-# libmojo-useragent-role-queued-perl/now 1.15-1
-# libtext-spanningtable-perl/now 1.000000-1
-# thelounge/now 4.4.0
-# Try again, different command
-apt list '?narrow(?installed, ?not(?origin(Debian)))'
-# libmojo-useragent-role-queued-perl/now 1.15-1
-# libtext-spanningtable-perl/now 1.000000-1
-# nodejs/unknown,now 19.9.0-deb-1nodesource1
-# thelounge/now 4.4.0
-# Don't know what to do about them, so not doing anything
-# Checking for old upgrade related files
-find /etc -name '*.dpkg-*' -o -name '*.ucf-*' -o -name '*.merge-error'
-# Deleting old upgrade related files …</pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-11 22:07:18+00:00" class="dt-published"></time>
-  Sun 11 Jun 2023
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://nedbatchelder.com/blog/202306/special_olympics_swimming.html" rel="bookmark" class="u-url"
        title="Special Olympics swimming" target="_blank">
       <time class="m-date" datetime="2023-06-11 13:34:53-04:00">
@@ -685,40 +725,6 @@ is incredibly strong, but …</p>
   on <time datetime="2023-06-11 13:34:53-04:00" class="dt-published"></time>
   Sun 11 Jun 2023
   in Ned Batchelder's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.kitware.com/point-cloud-visualization-on-the-web-with-lidarview-and-vtk-js/" rel="bookmark" class="u-url"
-       title="Point Cloud visualization on the Web with LidarView and VTK.js" target="_blank">
-      <time class="m-date" datetime="2023-06-08 07:50:22+00:00">
-        Jun
-        <span class="m-date-day">
-          08
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Point Cloud visualization on the Web with LidarView and VTK.js
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Showcase LiDAR data being visualized in a web browser
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Jules Bourdais</b></span>
-  on <time datetime="2023-06-08 07:50:22+00:00" class="dt-published"></time>
-  Thu 08 Jun 2023
-  in Kitware blog - Paraview.
 </footer>
 <div class="m-clearfix-l"></div>
 
