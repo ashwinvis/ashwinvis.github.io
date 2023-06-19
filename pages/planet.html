@@ -164,6 +164,153 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="http://blog.vrplumber.com/b/2023/06/18/what-is-pythonic-typing-for-there-exists-some-plugin-that-provides-an-adapter-for-x/" rel="bookmark" class="u-url"
+       title="Mike C. Fletcher: What is Pythonic Typing for "There exists some plugin that provides an Adapter for X"" target="_blank">
+      <time class="m-date" datetime="2023-06-18 13:32:30+00:00">
+        Jun
+        <span class="m-date-day">
+          18
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Mike C. Fletcher: What is Pythonic Typing for "There exists some plugin that provides an Adapter for X"
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>So starting to think about a PyOpenGL 4.x release, which would be first to drop Python 2.7 support, so the first one where type-hints can be used to declare metadata for type-coercion (vs the current nonstandard type declarations). The first big question that comes up is:</p>
+
+<p>Given an open collection of types {A,B,C,...}And a set of run-time-registered adaptors {E,F,G,...}Such that a given adaptor may adapt (and must declare the adaptation of) some set of types to interface IHow does one type-specify the arguments that accept one of {A, B, C, ...} which is an open-ended set, and where individual types are not guaranteed to support any common interface (without an adaptor; for instance, between an int, a numpy array, and a ctypes pointer)?</p>
+
+<p>Or, in another formulation:</p>
+
+<p>How do I specify that …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-18 13:32:30+00:00" class="dt-published"></time>
+  Sun 18 Jun 2023
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pointieststick.com/2023/06/18/on-the-road-to-plasma-6/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="On the road to Plasma 6" target="_blank">
+      <time class="m-date" datetime="2023-06-18 08:30:39+00:00">
+        Jun
+        <span class="m-date-day">
+          18
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      On the road to Plasma 6
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>At this point you&#8217;ve heard a lot about Plasma 6, and each of my weekly &#8220;This week in KDE&#8221; brings news of a few new features, UI changes, or bugfixes that are only in Plasma 6. But how do we get there, and how long will it take? So today I&#8217;d like to talk about the process and schedule a bit. Let&#8217;s start with an outline of the required steps to get there, in sequential order:</p>
+
+
+
+<ol>
+<li>Make it compile</li>
+
+
+
+<li>Make it livable</li>
+
+
+
+<li>Clean up the code</li>
+
+
+
+<li>Implement planned features and changes</li>
+
+
+
+<li>QA it and fix the bugs</li>
+</ol>
+
+
+
+
+Are we there yet?
+
+
+
+<p>My sense right now is that we&#8217;re in the middle of steps 3 and 4.  Basically everything in Plasma compiles with Qt 6, and at this point Plasma 6 is fairly livable. To give you …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Nate Graham</b></span>
+  on <time datetime="2023-06-18 08:30:39+00:00" class="dt-published"></time>
+  Sun 18 Jun 2023
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://archlinux.org/news/tex-live-package-reorganization/" rel="bookmark" class="u-url"
+       title="TeX Live package reorganization" target="_blank">
+      <time class="m-date" datetime="2023-06-18 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          18
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      TeX Live package reorganization
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Starting from version 2023.66594-9, TeX Live packages have been reorganized to mirror upstream collections. Even though the new <code>texlive-basic</code> replaces the old <code>texlive-core</code>, many of the texlive-core contents (including language specific files) are now split between different packages. To find out which Arch package contains a specific CTAN package, you can use the <code>tlmgr</code> utility, eg.
+
+<code>$ tlmgr info euler | grep collection
+collection:  collection-latexrecommended
+</code>
+
+which means the euler CTAN package is contained in <code>texlive-latexrecommended</code>. You may also use <code>pacman -F</code> to query for specific files.
+
+A new metapackage texlive-meta is available to install all subpackages (except for language specific ones), and the new texlive-doc package provides the full documentation for offline use.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Antonio Rojas</b></span>
+  on <time datetime="2023-06-18 00:00:00+00:00" class="dt-published"></time>
+  Sun 18 Jun 2023
+  in Arch Linux.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://josecodes.hashnode.dev/developer-experience" rel="bookmark" class="u-url"
        title="Developer Experience" target="_blank">
       <time class="m-date" datetime="2023-06-17 19:05:43+00:00">
@@ -226,112 +373,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2023-06-17 12:14:47+02:00" class="dt-published"></time>
   Sat 17 Jun 2023
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pointieststick.com/2023/06/16/this-week-in-kde-nicer-digital-signing-in-okular/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="This week in KDE: nicer digital signing in Okular" target="_blank">
-      <time class="m-date" datetime="2023-06-17 05:54:18+00:00">
-        Jun
-        <span class="m-date-day">
-          17
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      This week in KDE: nicer digital signing in Okular
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>There&#8217;s some of interesting Plasma 6 news, but I&#8217;m saving it for another post in a day or two, so it doesn&#8217;t distract from all the great work that KDE contributors landed on other things this week! So let&#8217;s dig into that:</p>
-
-
-
-
-New Features
-
-
-
-<p>Okular&#8217;s digital signature workflow has been improved, and now offers you the opportunity to add various pieces of metadata such as &#8220;reason&#8221; and &#8220;location&#8221; to the signature, and also to optionally add a background image behind it (Sune Vuorela, Okular 23.08. <a href="https://invent.kde.org/graphics/okular/-/merge_requests/745">Link</a>):</p>
-
-
-<div>
-
-<img alt="" src="https://pointieststick.files.wordpress.com/2023/06/image-14.png"></div>
-
-
-
-User Interface Improvements
-
-
-
-<p>You can now double-click on a tab in Dolphin to create a duplicate of it (Méven Car, Dolphin 23.08. <a href="https://bugs.kde.org/show_bug.cgi?id=470388">Link</a>)</p>
-
-
-
-<p>When Elisa switches album art between one image and another one, it&#8217;s now smoother and nicer-looking, with no visual flash or flicker (Fushan …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2023-06-17 05:54:18+00:00" class="dt-published"></time>
-  Sat 17 Jun 2023
-  in Planet KDE.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.blog.pythonlibrary.org/2023/06/16/the-python-show-episode-2-data-science-and-python-with-akshay-pachaar-video/" rel="bookmark" class="u-url"
-       title="Mike Driscoll: The Python Show – Episode 2 – Data Science and Python with Akshay Pachaar (Video)" target="_blank">
-      <time class="m-date" datetime="2023-06-17 02:08:15+00:00">
-        Jun
-        <span class="m-date-day">
-          17
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Mike Driscoll: The Python Show – Episode 2 – Data Science and Python with Akshay Pachaar (Video)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://www.pythonshow.com/">The Python Show&#8217;s</a> second episode is now on YouTube!</p>
-<div></div>
-<p>Today’s episode is about data science and Python with my guest, Akshay Pachaar!</p>
-<p>You can follow <a href="https://twitter.com/akshay_pachaar">Akshay on Twitter</a> or befriend him on <a href="https://www.linkedin.com/in/akshay-pachaar/">LinkedIn</a>.</p>
-<p>Topics covered include:</p>
-<ul>
-<li>How Akshay got into tech, data science, and Python</li>
-<li>Using Python in data science</li>
-<li>Python and maps / GIS</li>
-<li>Machine learning</li>
-<li>LLMs</li>
-</ul>
-<p>The post <a href="https://www.blog.pythonlibrary.org/2023/06/16/the-python-show-episode-2-data-science-and-python-with-akshay-pachaar-video/">The Python Show &#8211; Episode 2 &#8211; Data Science and Python with Akshay Pachaar (Video)</a> appeared first on <a href="https://www.blog.pythonlibrary.org">Mouse Vs Python</a>.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-17 02:08:15+00:00" class="dt-published"></time>
-  Sat 17 Jun 2023
-  in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -659,59 +700,6 @@ due to
   on <time datetime="2023-06-15 00:00:00+00:00" class="dt-published"></time>
   Thu 15 Jun 2023
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://archlinux.org/news/openblas-0323-2-update-requires-manual-intervention/" rel="bookmark" class="u-url"
-       title="OpenBLAS >= 0.3.23-2 update requires manual intervention" target="_blank">
-      <time class="m-date" datetime="2023-06-14 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          14
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      OpenBLAS >= 0.3.23-2 update requires manual intervention
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The openblas package prior to version 0.3.23-2 doesn't ship optimized
-LAPACK routine and CBLAS/LAPACKE interfaces for compatibility. This
-decision has been reverted now, and the ability to choose a different
-default system BLAS/LAPACK implementation while keeping openblas
-installed is now provided to allow future co-installation of BLIS,
-ATLAS, etc.
-
-The default BLAS implementation will be used for most packages like
-NumPy or R. Please install "blas-openblas" and "blas64-openblas" to make
-OpenBLAS the default BLAS implementation, just like the old behavior.
-
-Unfortunately you will get errors on updating if you currently have
-OpenBLAS installed as the default BLAS implementation:
-
-error: failed to prepare transaction (could not satisfy dependencies)
-:: installing openblas (0.3.23-2) breaks dependency 'blas' required by cblas
-:: installing openblas (0.3.23-2) breaks dependency 'blas' required by
-lapack
-
-Please append your preferred default BLAS implementation …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Felix Yan</b></span>
-  on <time datetime="2023-06-14 00:00:00+00:00" class="dt-published"></time>
-  Wed 14 Jun 2023
-  in Arch Linux.
 </footer>
 <div class="m-clearfix-l"></div>
 
