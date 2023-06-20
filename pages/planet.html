@@ -164,37 +164,99 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://blog.vrplumber.com/b/2023/06/18/what-is-pythonic-typing-for-there-exists-some-plugin-that-provides-an-adapter-for-x/" rel="bookmark" class="u-url"
-       title="Mike C. Fletcher: What is Pythonic Typing for "There exists some plugin that provides an Adapter for X"" target="_blank">
-      <time class="m-date" datetime="2023-06-18 13:32:30+00:00">
+    <a href="https://www.pythonmorsels.com/terms/" rel="bookmark" class="u-url"
+       title="Python Morsels: Python Terminology" target="_blank">
+      <time class="m-date" datetime="2023-06-19 18:55:00+00:00">
         Jun
         <span class="m-date-day">
-          18
+          19
         </span>
         2023
       </time>
       <div class="p-name">
-      Mike C. Fletcher: What is Pythonic Typing for "There exists some plugin that provides an Adapter for X"
+      Python Morsels: Python Terminology
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>So starting to think about a PyOpenGL 4.x release, which would be first to drop Python 2.7 support, so the first one where type-hints can be used to declare metadata for type-coercion (vs the current nonstandard type declarations). The first big question that comes up is:</p>
+  <p>Definitions for colloquial Python terminology (effectively an unofficial version of the Python glossary).</p>
 
-<p>Given an open collection of types {A,B,C,...}And a set of run-time-registered adaptors {E,F,G,...}Such that a given adaptor may adapt (and must declare the adaptation of) some set of types to interface IHow does one type-specify the arguments that accept one of {A, B, C, ...} which is an open-ended set, and where individual types are not guaranteed to support any common interface (without an adaptor; for instance, between an int, a numpy array, and a ctypes pointer)?</p>
 
-<p>Or, in another formulation:</p>
+<div>
 
-<p>How do I specify that …</p>
+  <p>
+  <strong>Table of contents</strong>
+  </p><ol>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#looping">Looping</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#collections">Collections</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#variables-and-assignment">Variables and Assignment</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#objects-and-mutation">Objects and Mutation</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#modules">Modules</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#scripts-and-repl">Scripts and REPL</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#functions">Functions</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#classes">Classes</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#lazy-looping">Lazy Looping</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#syntax">Syntax</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#code-style">Code Style</a></li>
+
+  <li><a href="https://www.pythonmorsels.com/terms/#practice-python">Practice Python</a></li>
+
+  </ol>
+  <p></p>
+</div>
+<div>
+
+
+Looping
+
+
+        <p>These terms are all about looping and objects you can loop over.</p>
+
+
+
+
+
+Iteration
+
+
+<p>Looping over an <a href="https://www.pythonmorsels.com/topics/feed/#iterable">iterable</a> object.</p>
+<p>A <a href="https://www.pythonmorsels.com/writing-a-for-loop/"><code>for</code> loop</a> is the epitome of iteration, but there are many other ways to iterate over an iterable in Python.</p>
+<p><a href="https://www.pythonmorsels.com/topics/feed/#comprehension">List comprehensions</a> iterate.
+<a href="https://www.pythonmorsels.com/topics/feed/#tuple-unpacking">Tuple unpacking</a> iterates.
+Using <code>*</code> operator in a <a href="https://www.pythonmorsels.com/topics/feed/#function">function</a> call iterates (see <a href="https://www.pythonmorsels.com/unpacking-iterables-function-arguments/">Unpacking iterables into function arguments</a>).
+Using <code>*</code> operator in a list literal iterates (see <a href="https://www.pythonmorsels.com/unpacking-iterables-iterables/">Unpacking iterables into iterables</a>).</p>
+
+
+Iterable
+
+
+<p>(Our perspective as Python users)
+Anything you can loop over with using a <code>for</code> loop or by various other forms of iteration.
+More on iterables in <a href="https://www.pythonmorsels.com/iterable/">What is an iterable</a>.</p>
+
+
+
+<p>(Python's …</p></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-18 13:32:30+00:00" class="dt-published"></time>
-  Sun 18 Jun 2023
+  on <time datetime="2023-06-19 18:55:00+00:00" class="dt-published"></time>
+  Mon 19 Jun 2023
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -204,63 +266,160 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pointieststick.com/2023/06/18/on-the-road-to-plasma-6/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="On the road to Plasma 6" target="_blank">
-      <time class="m-date" datetime="2023-06-18 08:30:39+00:00">
+    <a href="https://write.as/alexander-lohnau/unifying-the-krunner-sorting-mechanisms-for-plasma6-and-further-plans?pk_campaign=rss-feed?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Unifying the KRunner sorting mechanisms for Plasma6 & further plans" target="_blank">
+      <time class="m-date" datetime="2023-06-19 17:53:41+00:00">
         Jun
         <span class="m-date-day">
-          18
+          19
         </span>
         2023
       </time>
       <div class="p-name">
-      On the road to Plasma 6
+      Unifying the KRunner sorting mechanisms for Plasma6 & further plans
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>At this point you&#8217;ve heard a lot about Plasma 6, and each of my weekly &#8220;This week in KDE&#8221; brings news of a few new features, UI changes, or bugfixes that are only in Plasma 6. But how do we get there, and how long will it take? So today I&#8217;d like to talk about the process and schedule a bit. Let&#8217;s start with an outline of the required steps to get there, in sequential order:</p>
+  <p>In Plasma5, we had different sorting implementations for KRunner and Kicker. This had historical reasons, because Kicker only used a subset of the available KRunner plugins. Due to the increased reliability, we decided to allow all available plugins to be loaded. However, the model still hard-coded the order in which the categories are displayed.
+This was reported in <a href="https://bugs.kde.org/show_bug.cgi?id=431204">this bug</a> which received numerous duplicates.</p>
+
+<p>To address this concern, I focused on refactoring and cleaning up KRunner as part of KDE Frameworks 6. Among the significant architectural changes was the integration of KRunner's model responsible for sorting into the KRunner framework itself. This integration enabled easier code sharing and simplified code maintenance. Consequently, the custom sorting logic previously present in Kicker could be removed.</p>
 
 
+Further plans
 
-<ol>
-<li>Make it compile</li>
-
-
-
-<li>Make it livable</li>
-
-
-
-<li>Clean up the code</li>
-
-
-
-<li>Implement planned features and changes</li>
-
-
-
-<li>QA it and fix the bugs</li>
-</ol>
-
-
-
-
-Are we there yet?
-
-
-
-<p>My sense right now is that we&#8217;re in the middle of steps 3 and 4.  Basically everything in Plasma compiles with Qt 6, and at this point Plasma 6 is fairly livable. To give you …</p>
+<p>Now you know some of the improvements that have been done, but more interesting might …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Nate Graham</b></span>
-  on <time datetime="2023-06-18 08:30:39+00:00" class="dt-published"></time>
-  Sun 18 Jun 2023
+  <span class="p-author"><b>Alexander's blog</b></span>
+  on <time datetime="2023-06-19 17:53:41+00:00" class="dt-published"></time>
+  Mon 19 Jun 2023
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.davidrevoy.com/article974/signing-session-and-exhibition-at-bulle-a-croquer-festival-saint-brieuc" rel="bookmark" class="u-url"
+       title="Signing-Session and Exhibition at "Bulle à Croquer" festival, Saint-Brieuc" target="_blank">
+      <time class="m-date" datetime="2023-06-19 16:37:00+02:00">
+        Jun
+        <span class="m-date-day">
+          19
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Signing-Session and Exhibition at "Bulle à Croquer" festival, Saint-Brieuc
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-06-19_bulle-a-croquer-festival-saint-brieuc_001.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-06-19_bulle-a-croquer-festival-saint-brieuc_001.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>I'll do signing sessions for my comic books during the festival "Bulles à Croquer" of Saint-Brieuc on the 8 and 9 July. I'm also honored the festival organized a Pepper&amp;Carrot exhibition this year. The entrance is free and you'll find many other authors and activities. I hope I'll meet a lot of you!</p>
+<p><strong>More info:
+→ <a href="https://www.bullesacroquer.net/festival-bd-edition-2023/">https://www.bullesacroquer.net/festival-bd-edition-2023/</a></strong></p>
+<p>Picture: a little parody of the poster of the festival with Pepper and an octopus 🐙</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2023-06-19 16:37:00+02:00" class="dt-published"></time>
+  Mon 19 Jun 2023
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://drewdevault.com/2023/06/19/Reforming-the-free-software-message.html" rel="bookmark" class="u-url"
+       title="Reforming the free software message" target="_blank">
+      <time class="m-date" datetime="2023-06-19 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          19
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Reforming the free software message
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Several weeks ago, I wrote <a href="https://drewdevault.com/2023/04/11/2023-04-11-The-FSF-is-dying.html">The Free Software Foundation is dying</a>, wherein I
+enumerated a number of problems with the Free Software Foundation. Some of my
+criticisms focused on the message: fsf.org and gnu.org together suffer from no
+small degree of incomprehensibility and inaccessibility which makes it difficult
+for new participants to learn about the movement and apply it in practice to
+their own projects.</p>
+<p>This is something which is relatively easily fixed! I have a background in
+writing documentation and a thorough understanding of free software philosophy
+and practice. Enter <a href="https://writefreesoftware.org">writefreesoftware.org</a>: a comprehensive introduction to
+free software philosophy and implementation.</p>
+<p>The goals of this resource are:</p>
+<ul>
+<li>Provide an accessible introduction to the most important principles of free
+software</li>
+<li>Offer practical advice on choosing free software licenses from a free software
+perspective (compare to the OSS perspective …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-19 00:00:00+00:00" class="dt-published"></time>
+  Mon 19 Jun 2023
+  in Drew DeVault's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2791/" rel="bookmark" class="u-url"
+       title="Bookshelf Sorting" target="_blank">
+      <time class="m-date" datetime="2023-06-19 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          19
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Bookshelf Sorting
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Of course, I sort all my bookshelves the normal way, alphabetically (by first sentence)." src="https://imgs.xkcd.com/comics/bookshelf_sorting.png" title="Of course, I sort all my bookshelves the normal way, alphabetically (by first sentence).">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-19 00:00:00+00:00" class="dt-published"></time>
+  Mon 19 Jun 2023
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -539,89 +698,6 @@ empirically:</p><blockquote><pre><span>import</span>&#xa0;<span>itertools …</s
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://drewdevault.com/2023/06/16/Mobile-linux-retrospective.html" rel="bookmark" class="u-url"
-       title="Throwing in the towel on mobile Linux" target="_blank">
-      <time class="m-date" datetime="2023-06-16 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Throwing in the towel on mobile Linux
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I have been tinkering with mobile Linux &ndash; a phrase I will use here to describe
-any Linux distribution other than Android running on a mobile device &ndash; as my
-daily driver since about 2019, when I first picked up the PinePhone. For about 3
-years I have run mobile Linux as my daily driver on my phone, and as of a few
-weeks ago, I&rsquo;ve thrown in the towel and switched to Android.</p>
-<p>The distribution I ran for the most time is <a href="https://postmarketos.org/">postmarketOS</a>, which I was mostly
-quite happy with, running at times sxmo and Phosh. I switched to <a href="https://ubports.com/en/">UBports</a> a
-couple of months ago. I have tried a variety of hardware platforms to support
-these efforts, namely:</p>
-<ul>
-<li>Pinephone (pmOS)</li>
-<li>Pinephone Pro (pmOS)</li>
-<li>Xiaomi Poco F1 (pmOS)</li>
-<li>Fairphone 4 (UBports)</li>
-</ul>
-<p>I have returned to LineageOS as my daily driver and …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-16 00:00:00+00:00" class="dt-published"></time>
-  Fri 16 Jun 2023
-  in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2790/" rel="bookmark" class="u-url"
-       title="Heat Pump" target="_blank">
-      <time class="m-date" datetime="2023-06-16 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          16
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Heat Pump
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="If I'm not going to upgrade to a powered one, I should at LEAST stop leaving the door open so often." src="https://imgs.xkcd.com/comics/heat_pump.png" title="If I'm not going to upgrade to a powered one, I should at LEAST stop leaving the door open so often.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-16 00:00:00+00:00" class="dt-published"></time>
-  Fri 16 Jun 2023
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://www.kitware.com/a-new-time-manager-is-landing-in-paraview/" rel="bookmark" class="u-url"
        title="A new Time Manager is landing in ParaView" target="_blank">
       <time class="m-date" datetime="2023-06-15 09:57:22+00:00">
@@ -738,43 +814,6 @@ due to
   on <time datetime="2023-06-13 09:04:18+00:00" class="dt-published"></time>
   Tue 13 Jun 2023
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article973/peppercarrot-game-jam" rel="bookmark" class="u-url"
-       title="Pepper&Carrot Game Jam" target="_blank">
-      <time class="m-date" datetime="2023-06-12 14:31:00+02:00">
-        Jun
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Pepper&Carrot Game Jam
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-06-12_video-game-jam.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-06-12_video-game-jam.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>3 days left before the Pepper&amp;Carrot game jam starts! </p>
-<p>It's hosted by Brett Chalupa here:
-→ <a href="https://itch.io/jam/pepper-carrot-jam">https://itch.io/jam/pepper-carrot-jam</a> </p>
-<p>Good luck to the 17 participants who already joined, and because I cannot wait to see the results, I colored a sketch with Pepper and Carrot playing a 'VS Fighter' (Carrot is clearly winning).</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2023-06-12 14:31:00+02:00" class="dt-published"></time>
-  Mon 12 Jun 2023
-  in David Revoy.
 </footer>
 <div class="m-clearfix-l"></div>
 
