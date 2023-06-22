@@ -164,68 +164,148 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://coderslegacy.com/python-apscheduler-asyncioscheduler/" rel="bookmark" class="u-url"
-       title="CodersLegacy: Python APScheduler: Exploring the Power of AsyncIOScheduler" target="_blank">
-      <time class="m-date" datetime="2023-06-20 19:42:43+00:00">
+    <a href="https://www.paulox.net/2023/06/21/2023-python-software-foundation-board-nomination/" rel="bookmark" class="u-url"
+       title="Paolo Melchiorre: 2023 Python Software Foundation Board Nomination" target="_blank">
+      <time class="m-date" datetime="2023-06-21 17:06:34+00:00">
         Jun
         <span class="m-date-day">
-          20
+          21
         </span>
         2023
       </time>
       <div class="p-name">
-      CodersLegacy: Python APScheduler: Exploring the Power of AsyncIOScheduler
+      Paolo Melchiorre: 2023 Python Software Foundation Board Nomination
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Python&#8217;s APScheduler library is a powerful tool for <a href="https://coderslegacy.com/python/apscheduler-tutorial-advanced-scheduler/">scheduling and automating tasks</a>. One of the standout features of APScheduler is the AsyncIOScheduler, which allows developers to schedule asynchronous functions and coroutines effortlessly. In this article, we will delve into the AsyncIOScheduler, exploring its capabilities, benefits, and how it can streamline your asynchronous task scheduling needs.</p>
-
-
-
-<div></div>
-
-
-
-
-
-
-
-
-<div></div>
-
-
-
-
-Understanding AsyncIOScheduler and APScheduler
-
-
-
-<p>The AsyncIOScheduler class in the APScheduler library is designed specifically for integrating with asyncio, a module introduced in Python 3.4 that provides a powerful framework for writing asynchronous code. By leveraging asyncio, AsyncIOScheduler enables developers to schedule and run asynchronous functions, coroutines, and callbacks using the apscheduler library.</p>
-
-
-
-<p></p>
-
-
-
-
-Benefits of AsyncIOScheduler
-
-
-
-<ol>
-<li><strong>Asynchronous Task Execution: </strong> AsyncIOScheduler allows developers to schedule and execute asynchronous tasks, enabling concurrent processing and non-blocking operations. This is particularly useful when dealing with I/O-bound tasks …</li></ol>
+  <p>My self-nomination statement for the 2023 Python Software Foundation (<span>PSF</span>) Board&nbsp;Election</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-20 19:42:43+00:00" class="dt-published"></time>
-  Tue 20 Jun 2023
+  on <time datetime="2023-06-21 17:06:34+00:00" class="dt-published"></time>
+  Wed 21 Jun 2023
   in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://frinring.wordpress.com/2023/06/21/review-use-of-qt-module-header-includes/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Review use of Qt module header includes" target="_blank">
+      <time class="m-date" datetime="2023-06-21 15:00:37+00:00">
+        Jun
+        <span class="m-date-day">
+          21
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Review use of Qt module header includes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Wait a minute&#8230;
+
+
+
+<p>Having come across sources using include statements for some Qt module headers (like <code>#include &lt;QtDBus&gt;</code>), memories arose about a check from the static analyzer tool <a href="https://github.com/Krazy-collection/krazy">krazy</a> as once run conveniently on KDE&#8217;s former <a href="https://web.archive.org/web/20190719033048/http://ebn.kde.org/">ebn.kde.org</a> site. That check, called <a href="https://github.com/Krazy-collection/krazy/blob/master/plugins/c%2B%2B/includes">includes</a>, poked one not to use Qt module headers. Due to resulting in the inclusion of all the headers of those modules, and then again that of the other Qt modules used by the module. Which them meant more stuff to process by the compiler for compilation units with such module header includes.</p>
+
+
+
+<p>So is that perhaps in 2023 no longer a real-world noticeable issue? A first look at some preprocessor outputs (with Qt5) for a single line file with just an include statement hinted though it might still be true:</p>
+
+
+
+
+
+foo.cpp: <code>#include &lt;QtDBus&gt;</code>foo …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Friedrich Kossebau</b></span>
+  on <time datetime="2023-06-21 15:00:37+00:00" class="dt-published"></time>
+  Wed 21 Jun 2023
+  in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2023-06-21_Books_for_conservative_teenagers" rel="bookmark" class="u-url"
+       title="Books for conservative teenagers" target="_blank">
+      <time class="m-date" datetime="2023-06-21 07:22:58+00:00">
+        Jun
+        <span class="m-date-day">
+          21
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Books for conservative teenagers
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p>Winter World by A.G. Riddle was weird. I wouldn’t have finished it if it hadn’t listened to it as an audiobook.</p><p>That said, these days I don’t finish most books as I’m easily bored and have a vivid imagination so as soon as I think I know what the author is going to write, I loose interested very fast.</p><p>Winter World read like an adventure story for kids by a conservative man, i.e. main characters with practically no flaws, a story with no social politics, climate cooling because of alien artefacts instead of talking about the current climate collapse, no sex politics, hand holding instead of sex (not saying I need the sex but I’ll notice when people are holding hands instead of having sex…), no other politics either, and lots of American …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-21 07:22:58+00:00" class="dt-published"></time>
+  Wed 21 Jun 2023
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2792/" rel="bookmark" class="u-url"
+       title="Summer Solstice" target="_blank">
+      <time class="m-date" datetime="2023-06-21 00:00:00+00:00">
+        Jun
+        <span class="m-date-day">
+          21
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Summer Solstice
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Then I'll start work on my lunar engines to line the Moon up with the ecliptic so we can have a solar eclipse every month (with a little wobble so they're not always on the equator.)" src="https://imgs.xkcd.com/comics/summer_solstice.png" title="Then I'll start work on my lunar engines to line the Moon up with the ecliptic so we can have a solar eclipse every month (with a little wobble so they're not always on the equator.)">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-06-21 00:00:00+00:00" class="dt-published"></time>
+  Wed 21 Jun 2023
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -271,7 +351,7 @@ This is a beta preview of Python 3.12<div></div><div>Python 3.12 is still in dev
   <h1>
     <a href="https://pyfound.blogspot.com/2023/06/the-2023-psf-board-election-is-open.html" rel="bookmark" class="u-url"
        title="The 2023 PSF Board Election is Open!" target="_blank">
-      <time class="m-date" datetime="2023-06-20 13:47:00.002000-04:00">
+      <time class="m-date" datetime="2023-06-20 13:47:00.003000-04:00">
         Jun
         <span class="m-date-day">
           20
@@ -285,61 +365,16 @@ This is a beta preview of Python 3.12<div></div><div>Python 3.12 is still in dev
   </h1>
   <div class="p-summary">
   <p>
-  It’s time to cast your vote! Voting takes place from today Tuesday, June 20, through Friday, June 30, 2023 11:59pm UTC. If you are a voting member of the PSF, you should have gotten an email from “OpaVote Voting Link &lt;noreply@opavote.com&gt;” with your ballot, the subject line will read “Python Software Foundation Board of Directors Election 2023”. If you haven’t seen your ballot by Wednesday, please 1) check your spam folder for a message from “noreply@opavote.com” and if you don’t see anything 2) get in touch by emailing psf-elections@python.org so we can make sure we have the most up to date email for you. We’re overwhelmed by how many of you are willing to contribute to the Python community by serving on the PSF board! Make sure you schedule …
+  <p>It’s time to cast your vote! Voting takes place from today Tuesday, June 20, through Friday, June 30, 2023 11:59pm UTC. If you are a voting member of the PSF, you should have gotten an email from “OpaVote Voting Link &lt;noreply@opavote.com&gt;” with your ballot, the subject line will read “Python Software Foundation Board of Directors Election 2023”. If you haven’t seen your ballot by Wednesday, please 1) check your spam folder for a message from “noreply@opavote.com” and if you don’t see anything 2) get in touch by emailing psf-elections@python.org so we can make sure we have the most up to date email for you.&nbsp;</p><p>Four seats are open, but you can approve as many candidates as you like. BUT! Choose carefully before you press the <b><span>big green vote button</span></b>. Once …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Deb Nicholson (noreply@blogger.com)</b></span>
-  on <time datetime="2023-06-20 13:47:00.002000-04:00" class="dt-published"></time>
+  on <time datetime="2023-06-20 13:47:00.003000-04:00" class="dt-published"></time>
   Tue 20 Jun 2023
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://kde.org/announcements/plasma/5/5.27.6/?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="KDE Plasma 5.27.6, Bugfix Release for June" target="_blank">
-      <time class="m-date" datetime="2023-06-20 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          20
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      KDE Plasma 5.27.6, Bugfix Release for June
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Tuesday, 20 June 2023. Today KDE releases a bugfix update to KDE Plasma 5, versioned 5.27.6.</p>
-<p><a href="https://kde.org/announcements/plasma/5/5.27.0">Plasma 5.27</a> was released in February 2023 with many feature refinements and new modules to complete the desktop experience.</p>
-<p>This release adds two months' worth of new translations and fixes from KDE's contributors. The bugfixes are typically small but important and include:</p>
-<ul>
-<li>Dpms: Don't crash if trying to interact with the fake screen. <a href="https://commits.kde.org/libkscreen/56f0286a1adc70d56b8ce44cabe0a3ffd7ee8d9a">Commit.</a> Fixes bug <a href="https://bugs.kde.org/470484">#470484</a></li>
-<li>Panel: mitigate plasmashell high CPU usage when moving windows. <a href="https://commits.kde.org/plasma-desktop/14d56ef4eecea4e6623ba45409e4e4042fcb5938">Commit.</a></li>
-<li>Runners/calculator: implement thread-safety in QalculateEngine::evaluate. <a href="https://commits.kde.org/plasma-workspace/9d18e0821455366c00a763252515d48741316f6c">Commit.</a> Fixes bug <a href="https://bugs.kde.org/470219">#470219</a></li>
-<li>Fix ddcutil for laptop user. <a href="https://commits.kde.org/powerdevil/ddcabaf93712b953e3ec327416e0332d7e44fc40">Commit.</a> Fixes bug <a href="https://bugs.kde.org/469895">#469895</a></li>
-<li>Fix showing error messages. <a href="https://commits.kde.org/sddm-kcm/d8ca15e88a15df26859a79a376056a222f7d63bd">Commit.</a> Fixes bug <a href="https://bugs.kde.org/471040">#471040</a></li>
-<li>Fix UI with huge window sizes. <a href="https://commits.kde.org/plasma-thunderbolt/d8474c7594093b9cb58ea618a1c029425a3327cb">Commit.</a> Fixes bug <a href="https://bugs.kde.org/461102">#461102</a></li>
-</ul>
-<a href="https://kde.org/announcements/changelogs/plasma/5/5.27.5-5.27.6">View full changelog</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>KDE Community</b></span>
-  on <time datetime="2023-06-20 00:00:00+00:00" class="dt-published"></time>
-  Tue 20 Jun 2023
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -426,40 +461,6 @@ perspective (compare to the OSS perspective …</li></ul>
   on <time datetime="2023-06-19 00:00:00+00:00" class="dt-published"></time>
   Mon 19 Jun 2023
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2791/" rel="bookmark" class="u-url"
-       title="Bookshelf Sorting" target="_blank">
-      <time class="m-date" datetime="2023-06-19 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          19
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Bookshelf Sorting
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Of course, I sort all my bookshelves the normal way, alphabetically (by first sentence)." src="https://imgs.xkcd.com/comics/bookshelf_sorting.png" title="Of course, I sort all my bookshelves the normal way, alphabetically (by first sentence).">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-06-19 00:00:00+00:00" class="dt-published"></time>
-  Mon 19 Jun 2023
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
