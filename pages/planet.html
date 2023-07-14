@@ -164,6 +164,159 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://devblogs.microsoft.com/python/python-package-management-proposal/" rel="bookmark" class="u-url"
+       title="Python Engineering at Microsoft: Package Management in the Python extension for Visual Studio Code" target="_blank">
+      <time class="m-date" datetime="2023-07-13 21:02:21+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Python Engineering at Microsoft: Package Management in the Python extension for Visual Studio Code
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Python, with its simple syntax and powerful libraries, has become one of the most popular programming languages and a great language for those new to programming. However, as your projects grow in complexity and size, so does the complexity of managing dependencies. As new users take on more mature projects, they learn about the importance of virtual environments and managing dependencies. While the benefits of virtual environments and package management in Python are undeniable, it&#8217;s essential to acknowledge the potential challenges they pose, particularly for beginners. For those new to Python development, the terminology, concepts, and the variety of tools available can be overwhelming.</p>
+<p>The Python extension for Visual Studio Code set to demystify virtual environments and streamline environment creation with the <strong>Python: Create Environment</strong> command. This command helps developers of any skill level create isolated environments, each with …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-07-13 21:02:21+00:00" class="dt-published"></time>
+  Thu 13 Jul 2023
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2023/07/13/whose-security/" rel="bookmark" class="u-url"
+       title="Pluralistic: A "secure" system can be the most dangerous of all (13 July 2023)" target="_blank">
+      <time class="m-date" datetime="2023-07-13 17:56:02+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Pluralistic: A "secure" system can be the most dangerous of all (13 July 2023)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links A "secure" system can be the most dangerous of all: Who we secure FOR &#8211; and AGAINST &#8211; reveals our true priorities and values. Hey look at this: Delights to delectate. This day in history: 2013 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading A "secure" system can be the most dangerous of all (permalink) Two decades ago, my life changed forever: hearing Bruce Schneier explain that "security" doesn't exist in the abstract. You can only be secure from some threat. A fire alarm won't protect you from burglaries. A condom won't protect you from mass shootings. It seems obvious, but how often do we hear about "security" without any mention of who is being made secure, and from which threat? Take the US welfare system. It is very "secure" in that it is hedged in by …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2023-07-13 17:56:02+00:00" class="dt-published"></time>
+  Thu 13 Jul 2023
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="www.conda-forge.org/blog/posts/2023-07-13-installer-security-fixes/" rel="bookmark" class="u-url"
+       title="Security updates to our installers" target="_blank">
+      <time class="m-date" datetime="2023-07-13 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Security updates to our installers
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  In June 2023, software engineers from Anaconda have reported a security issue in the uninstallers that are included in the Windows versions of the miniforge and mambaforge installers, one of the main ways to bootstrap conda-forge based conda and mamba distributions.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>conda-forge</b></span>
+  on <time datetime="2023-07-13 00:00:00+00:00" class="dt-published"></time>
+  Thu 13 Jul 2023
+  in conda-forge blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/xarray-to-netcdf-compression/" rel="bookmark" class="u-url"
+       title="xarray to_netcdf() file compression" target="_blank">
+      <time class="m-date" datetime="2023-07-13 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          13
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      xarray to_netcdf() file compression
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>As with HDF5 and h5py, using xarray
+<a href="https://docs.xarray.dev/en/stable/generated/xarray.DataArray.to_netcdf.html">to_netcdf()</a>
+to write netCDF files can losslessly compress Datasets and DataArrays, but file compression is off by default.
+Each data variable must have the compression option set to take effect.
+We typically only compress variables of 2-D or higher rank.</p>
+<p>Notes:</p>
+<ul>
+<li>Specify <code>format=&quot;NETCDF4&quot;, engine=&quot;netcdf4&quot;</code> to allow a broader range of data types.</li>
+<li>if &ldquo;chunksizes&rdquo; is not set, the data variable will not compress. We arbitrarily made the chunk sizes half of each dimension, but this can be optimized for particular data.</li>
+<li>&ldquo;fletcher32&rdquo; is a checksum that can be used to detect data corruption.</li>
+<li>Setting &ldquo;.attr&rdquo; of a data variable will be written to the netCDF file as well. This is useful to note physical units, for example.</li>
+</ul>
+<div><pre><code><span><span><span>from</span> <span>pathlib</span> <span>import</span> Path
+</span></span><span><span><span>import</span> <span>xarray</span>
+</span></span><span><span>
+</span></span><span><span>
+</span></span><span><span><span>def</span> <span>write_netcdf</span>(ds: xarray.Dataset, out_file: Path) -&gt; <span>None …</span></span></span></code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-07-13 00:00:00+00:00" class="dt-published"></time>
+  Thu 13 Jul 2023
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jlelse.blog/thoughts/2023/07/2023-07-12-yhmzm" rel="bookmark" class="u-url"
        title="Finding peace in ignorance" target="_blank">
       <time class="m-date" datetime="2023-07-12 22:24:48+02:00">
@@ -190,40 +343,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2023-07-12 22:24:48+02:00" class="dt-published"></time>
   Wed 12 Jul 2023
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://blog.europython.eu/microsoft-at-europython-2023/" rel="bookmark" class="u-url"
-       title="EuroPython: Microsoft at EuroPython 2023" target="_blank">
-      <time class="m-date" datetime="2023-07-12 18:12:13+00:00">
-        Jul
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      EuroPython: Microsoft at EuroPython 2023
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p></p><p>We&#x2019;re thrilled to be a Platinum Sponsor of<a href="https://ep2022.europython.eu"> EuroPython</a> again this year, happening from July 17th-23rd in Prague, Czechia. If you can&#x2019;t make it in person, you can still attend the<a href="https://ep2023.europython.eu/remote"> conference remotely</a>, as EuroPython is a hybrid event this year!</p><p>Our team member: Steve Dower, will be giving talks during the conference:</p><ul><li><a href="https://ep2023.europython.eu/session/python-visual-studio-code-copilot-revolutionizing-the-way-you-do-data-science">Python &amp; Visual Studio Code, Copilot &#x2013; Revolutionizing the way you do data science</a>.</li><li><a href="https://ep2023.europython.eu/session/cpython-core-developer-panel">CPython Developer Panel</a>.</li></ul><p>Make sure you don&#x2019;t miss them! &#xa0;We&#x2019;ll also be at the Microsoft booth talking about the hard work our teams have been doing to continue supporting the Python community, and to improve the experience for Python developers across our products over the past year.</p><p>For instance<strong>,</strong><a href="https://code.visualstudio.com/"><strong> Visual Studio Code</strong></a>,<strong> </strong>which has become the<a href="https://lp.jetbrains.com/python-developers-survey-2021/#DevelopmentTools"> most used editor for Python developers in 2021</a>, has a new and improved experience when …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-12 18:12:13+00:00" class="dt-published"></time>
-  Wed 12 Jul 2023
-  in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -299,40 +418,6 @@ Measuring energy consumption of software
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2023/07/12/because-its-too-expensive/" rel="bookmark" class="u-url"
-       title="Pluralistic: Why are so many Californians homeless? (12 July 2023)" target="_blank">
-      <time class="m-date" datetime="2023-07-12 13:22:48+00:00">
-        Jul
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Pluralistic: Why are so many Californians homeless? (12 July 2023)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Why are so many Californians homeless?: It's not "homeless migration." Hey look at this: Delights to delectate. This day in history: 2008, 2013 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Why are so many Californians homeless? (permalink) 12% of Americans live in California &#8211; but 30% of homeless Americans, and 50% of unsheltered Americans, call California "home." This is the source of endless schadenfreude from "red state" partisans, and is often waved as proof of the failure of liberal policies. But the real story is both more complicated &#8211; and simpler. UCSF's Benioff Homelessness and Housing Initiative's "California Statewide Study of People Experiencing Homelessness" is the largest, best study of homelessness in California in some 30 years: https://homelessness.ucsf.edu/our-impact/our-studies/california-statewide-study-people-experiencing-homelessness Between Oct 2021 and Nov 2022, researchers surveyed a representative sample of …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-07-12 13:22:48+00:00" class="dt-published"></time>
-  Wed 12 Jul 2023
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://blogs.gnome.org/chergert/2023/07/12/spellchecking-for-gtk-4/" rel="bookmark" class="u-url"
        title="Spellchecking for GTK 4" target="_blank">
       <time class="m-date" datetime="2023-07-12 01:04:12+00:00">
@@ -367,8 +452,8 @@ Measuring energy consumption of software
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/python-read-image-exif-metadata/" rel="bookmark" class="u-url"
-       title="Read image metadata with Python" target="_blank">
+    <a href="https://peps.python.org/pep-0721/" rel="bookmark" class="u-url"
+       title="PEP 721: Using tarfile.data_filter for source distribution extraction" target="_blank">
       <time class="m-date" datetime="2023-07-12 00:00:00+00:00">
         Jul
         <span class="m-date-day">
@@ -377,45 +462,47 @@ Measuring energy consumption of software
         2023
       </time>
       <div class="p-name">
-      Read image metadata with Python
+      PEP 721: Using tarfile.data_filter for source distribution extraction
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>The Python
-<a href="https://imageio.readthedocs.io/">imageio</a>
-package reads and writes numerous image formats and their metadata.
-The time and location of citizen science images are often critical to their interpretation.
-Not all cameras have GPS modules.
-Not all cameras have sufficiently accurately set clocks (including time zone).</p>
-<p>A typical metadata item of interest is &ldquo;DateTimeOriginal&rdquo;.
-How this is defined and its accuracy is up to the
-<a href="https://photo.stackexchange.com/questions/103734/does-the-exif-data-datetimeoriginal-get-recorded-at-the-start-or-end-of-the-ex">camera implementation</a>.</p>
-<p>We show the reading of image metadata in a few distinct ways.</p>
+  Extracting a source distribution archive should normally use the data filter added in PEP 706. We clarify details, and specify the behaviour for tools that cannot use the filter directly.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Petr Viktorin (encukou@gmail.com)</b></span>
+  on <time datetime="2023-07-12 00:00:00+00:00" class="dt-published"></time>
+  Wed 12 Jul 2023
+  in Newest Python PEPs.
+</footer>
+<div class="m-clearfix-l"></div>
 
+</article>
 
-<a href="https://www.scivision.dev/python-read-image-exif-metadata/#imageio-read-metadata">ImageIO read metadata</a>
-
-<p>Get the image time using <a href="https://imageio.readthedocs.io/en/stable/_autosummary/imageio.v3.immeta.html#imageio.v3.immeta">imageio.immeta</a>:</p>
-<div><pre><code><span><span><span>import</span> <span>imageio.v3</span> <span>as</span> <span>iio</span>
-</span></span><span><span>
-</span></span><span><span><span>from</span> <span>sys</span> <span>import</span> argv
-</span></span><span><span><span>from</span> <span>pathlib</span> <span>import</span> Path
-</span></span><span><span>
-</span></span><span><span>fn = Path(argv[<span>1</span>]).expanduser()
-</span></span><span><span>
-</span></span><span><span>meta = iio.immeta(fn)
-</span></span><span><span>
-</span></span><span><span><span>for</span> k <span>in</span> (<span>"DateTimeOriginal"</span>, <span>"DateTimeDigitized"</span>, <span>"DateTime"</span>):
-</span></span><span><span> <span>print</span>(k, meta.get(k))</span></span></code></pre></div>
-<p>Consider that the timezone may need to be corrected.</p>
-
-
-<a href="https://www.scivision.dev/python-read-image-exif-metadata/#exifread-metadata">ExifRead metadata</a>
-
-<p><a href="https://pypi.org/project/ExifRead/">ExifRead</a>
-Python module is powerful for reading EXIF image …</p>
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2801/" rel="bookmark" class="u-url"
+       title="Contact Merge" target="_blank">
+      <time class="m-date" datetime="2023-07-12 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          12
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Contact Merge
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="I actually kind of feel like John and Surf King wouldn't like each other, which is a lot to unpack." src="https://imgs.xkcd.com/comics/contact_merge.png" title="I actually kind of feel like John and Surf King wouldn't like each other, which is a lot to unpack.">
   </p>
   </div>
 </header>
@@ -424,7 +511,7 @@ Python module is powerful for reading EXIF image …</p>
   <span class="p-author"><b>Anonymous</b></span>
   on <time datetime="2023-07-12 00:00:00+00:00" class="dt-published"></time>
   Wed 12 Jul 2023
-  in Michael Hirsch, Ph.D..
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -581,40 +668,6 @@ containers on Mac), but I hadn&rsquo;t realized …</p>
   on <time datetime="2023-07-10 09:23:08+00:00" class="dt-published"></time>
   Mon 10 Jul 2023
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2800/" rel="bookmark" class="u-url"
-       title="Down" target="_blank">
-      <time class="m-date" datetime="2023-07-10 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          10
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Down
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="It's just that I get nervous about heights." src="https://imgs.xkcd.com/comics/down.png" title="It's just that I get nervous about heights.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-10 00:00:00+00:00" class="dt-published"></time>
-  Mon 10 Jul 2023
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
