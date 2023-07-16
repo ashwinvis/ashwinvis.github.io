@@ -164,47 +164,33 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.minchin.ca/2023/07/microblogging-110.html" rel="bookmark" class="u-url"
-       title="William Minchin: Microblogging 1.1.0 for Pelican Released" target="_blank">
-      <time class="m-date" datetime="2023-07-14 17:52:00+00:00">
+    <a href="https://nibblestew.blogspot.com/2023/07/pdf-transparency-groups-and-composition.html" rel="bookmark" class="u-url"
+       title="PDF transparency groups and composition" target="_blank">
+      <time class="m-date" datetime="2023-07-15 21:02:00+00:00">
         Jul
         <span class="m-date-day">
-          14
+          15
         </span>
         2023
       </time>
       <div class="p-name">
-      William Minchin: Microblogging 1.1.0 for Pelican Released
+      PDF transparency groups and composition
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p><em>Microblogging</em> is a plugin for <a href="http://docs.getpelican.com/">Pelican</a>,
-a static site generator written in Python.</p>
-<p><em>Microblogging</em> is a plugin to allow you to have “micro” (or “µ” or
-small) posts, similarly (at least outwardly) to Twitter, Mastodon, or Threads.</p>
-
-
-<p>This is by no means a complete replacement for Twitter (or Mastodon), but if
-you want to record your thoughts, especially your short ones, on your own site,
-this should allow you to do that. (For longer thoughts, at this point you’ve
-already got Pelican set up, so don’t be afraid to create “real” blog posts!)</p>
-<p>For best results, you probably want to upgrade your theme to support
-µposts, but it should work out of the box with your existing theme
-(assuming it supports posts generally).
-<em><a href="http://blog.minchin.ca/label/seafoam/">Seafoam</a></em> will have a release
-presently with support for µposts.</p>
-<p>Pull Requests to extend the …</p>
+  <p>The PDF specification has the following image as an example of how to do transparent graphics composition.</p><div><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSa58PFc7ooWkow2nZda9CM4fzcpDAPDgF5QWrDOhcNCqZdOOUjBmUmOBqXW6E92u6npkGXT2fbSChDhefkjdGa0lTVgrG-Q8haGxQHa01UKTqksEhXBaVaH4VdX_nY9_HGbHEyiynkPFUaJPKpI_ajHBODHnDM0VqjhdPHU9czD5jgFY3-p0HjC7e1rw/s657/trgroup_spec.png"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSa58PFc7ooWkow2nZda9CM4fzcpDAPDgF5QWrDOhcNCqZdOOUjBmUmOBqXW6E92u6npkGXT2fbSChDhefkjdGa0lTVgrG-Q8haGxQHa01UKTqksEhXBaVaH4VdX_nY9_HGbHEyiynkPFUaJPKpI_ajHBODHnDM0VqjhdPHU9czD5jgFY3-p0HjC7e1rw/w400-h313/trgroup_spec.png"></a></div><p>This seems simple but actually requires quite a lot of functionality:</p><p></p><ul><li>Specifying CMYK gradients</li><li>Setting the blend mode for paint operations</li><li>Specifying transparency group xobjects</li><li>Specifying layer composition parameters</li></ul>I had to implement a bunch of new functionality to get this working, but here is the same image reproduced with <a href="https://github.com/jpakkane/capypdf">CapyPDF</a>. (<a href="https://www.dropbox.com/s/25994bk35q3gj4o/group_test.pdf?dl=0">output PDF here</a>)<p></p><div><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQjgH_Dm43IXBK357Cvc89Yvey676aQlBJU5quEYOXVk6ior3k5E5W5p404HvA13dc3E65jO8rT52qm_sjc8pq0NFAsCmKNfOTsHbhLbbjYgKiuxf-9UFyP6LCBMYstTfBZSqEbFUTmCZijgYZzMnDIAZB7nCbfS1oYW2X2LF1ggoedhARlcfOUg5OUk0/s657/trgroup_capy.png"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQjgH_Dm43IXBK357Cvc89Yvey676aQlBJU5quEYOXVk6ior3k5E5W5p404HvA13dc3E65jO8rT52qm_sjc8pq0NFAsCmKNfOTsHbhLbbjYgKiuxf-9UFyP6LCBMYstTfBZSqEbFUTmCZijgYZzMnDIAZB7nCbfS1oYW2X2LF1ggoedhARlcfOUg5OUk0/w400-h289/trgroup_capy.png"></a></div><p>The only difference here is that out of laziness I used a simple two color linear gradient rather than a rainbow one.</p>
+Nonportability<div>This is again one of those features that only Acrobat Reader can handle. I tried Okular, Ghostscript, Firefox, Chromium and Apple Preview and they all rendered the file incorrectly. There was no consistency, each one was broken in a different way.</div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-14 17:52:00+00:00" class="dt-published"></time>
-  Fri 14 Jul 2023
-  in Planet Python.
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2023-07-15 21:02:00+00:00" class="dt-published"></time>
+  Sat 15 Jul 2023
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -213,46 +199,12 @@ presently with support for µposts.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2023/07/14/making-good-trouble/" rel="bookmark" class="u-url"
-       title="Pluralistic: Why they're smearing Lina Khan (14 July 2023)" target="_blank">
-      <time class="m-date" datetime="2023-07-14 16:02:50+00:00">
-        Jul
-        <span class="m-date-day">
-          14
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Pluralistic: Why they're smearing Lina Khan (14 July 2023)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Why they're smearing Lina Khan: She wants you to have nice things and they don't (it's really that simple). Hey look at this: Delights to delectate. This day in history: 2003, 2008 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Why they're smearing Lina Khan (permalink) My god, they sure hate Lina Khan. This once-in-a-generation, groundbreaking, brilliant legal scholar and fighter for the public interest, the slayer of Reaganomics, has attracted more vitriol, mockery, and dismissal than any of her predecessors in living memory. She sure must be doing something right, huh? A quick refresher. In 2017, Khan &#8211; then a law student &#8211; published Amazon's Antitrust Paradox in the Yale Law Journal. It was a brilliant, blistering analysis showing how the Reagan-era theory of antitrust (which celebrates monopolies as "efficient") had failed on its own terms …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-07-14 16:02:50+00:00" class="dt-published"></time>
-  Fri 14 Jul 2023
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/micro/2023/07/2023-07-14-yacuw" rel="bookmark" class="u-url"
+    <a href="https://jlelse.blog/micro/2023/07/2023-07-15-ohzhj" rel="bookmark" class="u-url"
        title="" target="_blank">
-      <time class="m-date" datetime="2023-07-14 16:33:00+02:00">
+      <time class="m-date" datetime="2023-07-15 21:21:00+02:00">
         Jul
         <span class="m-date-day">
-          14
+          15
         </span>
         2023
       </time>
@@ -263,15 +215,15 @@ presently with support for µposts.</p>
   </h1>
   <div class="p-summary">
   <p>
-  I bought myself a Tilley LTM6 hat. It was expensive and still feels a bit strange to wear because nobody wears hats here. But it’s comfortable even with my big head (I always have to buy XXL caps and helmets) and it protects my face and neck pretty well from the sun. And it comes with a lifetime warranty!
+  First day of Interrail to Romania ✅
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-14 16:33:00+02:00" class="dt-published"></time>
-  Fri 14 Jul 2023
+  on <time datetime="2023-07-15 21:21:00+02:00" class="dt-published"></time>
+  Sat 15 Jul 2023
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -281,39 +233,123 @@ presently with support for µposts.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://shivoditg.hashnode.dev/gsoc-23-summary-of-work-done-over-first-coding-period?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="GSoC '23: Summary of work done over first coding period" target="_blank">
-      <time class="m-date" datetime="2023-07-14 13:13:31+00:00">
+    <a href="https://death.andgravity.com/reader-3-7" rel="bookmark" class="u-url"
+       title="death and gravity: reader 3.7 released – contributor docs, 300 stars" target="_blank">
+      <time class="m-date" datetime="2023-07-15 18:00:00+00:00">
         Jul
         <span class="m-date-day">
-          14
+          15
         </span>
         2023
       </time>
       <div class="p-name">
-      GSoC '23: Summary of work done over first coding period
+      death and gravity: reader 3.7 released – contributor docs, 300 stars
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Hello and welcome back to my blog! This time I will be reviewing the work I've done during the first coding period of GSoC '23. This blog is written as part of my work for GSoC '23, to detail all the work I have done. Let's get started!</p>
+  <p>Hi there!</p>
+<p>I'm happy to announce version 3.7 of <strong><a href="https://github.com/lemon24/reader">reader</a></strong>, a Python feed reader library.</p>
+<p>More importantly, <em>reader</em> has reached 300 stars on GitHub!</p>
+<p><img alt="reader in action" src="https://death.andgravity.com/_file/reader-3-7/stars.png"></p>
 
-Challenges faced
-<p>Some of the challenges I faced are:</p>
-<ul>
-<li><p>Time: Sometimes it felt like time was not on my side. Between college, assignments, exams, and family time, I found it hard to find time to concentrate on GSoC. However, I'm hoping I can improve my time management to remove this issue.</p>
-</li>
-<li><p>Lack of Documentation: For Android-NDK, there was a lack of documentation for things that are considered simple when developing a traditional Java app for Android. This made it more annoying to deal with Android libraries (especially since I'm using CMake). Sometimes …</p></li></ul>
+What's new?<span> <a href="https://death.andgravity.com/reader-3-7#what-s-new" title="permalink">#</a></span>
+<p>Here are the highlights since <a href="https://death.andgravity.com/reader-3-4">reader 3.4</a>.</p>
+
+Contributor documentation<span> <a href="https://death.andgravity.com/reader-3-7#contributor-documentation" title="permalink">#</a></span>
+<p><em>reader</em> now has <strong><a href="https://reader.readthedocs.io/en/latest/contributing.html">contributor documentation</a></strong>!
+If you want to help
+or you're just curious where it's all going,
+check out the <a href="https://reader.readthedocs.io/en/latest/dev.html#roadmap">roadmap</a> and <a href="https://reader.readthedocs.io/en/latest/why.html#philosophy">the <em>reader</em> philosophy</a>.</p>
+<p>Thank you to <a href="https://kjamistan.com/">Katharine Jarmul</a>
+for getting me to do this!
+(it only took me <a href="https://death.andgravity.com/reader-3-4#5-years-2000-commits">five years</a>...)</p>
+
+Explicitly unimportant<span> <a href="https://death.andgravity.com/reader-3-7#explicitly-unimportant" title="permalink">#</a></span>
+<p>The <a href="https://reader.readthedocs.io/en/latest/api.html#reader.Entry.important">important</a> <a href="https://reader.readthedocs.io/en/latest/guide.html#entry-flags">entry flag</a> is now <code>bool|None</code> instead of <code>bool</code>,<a href="https://death.andgravity.com/reader-3-7#fn-1">1</a>
+so there's a sane way to express &quot;I don't care about this article&quot;.</p>
+<p>The point of marking an article as explicitly unimportant is to give you
+<a href="https://death.andgravity.com/reader-2-5#statistics">a better understanding of how you consume content</a>
+– if you consistently don't care about the articles in a feed,
+maybe …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Shivodit</b></span>
-  on <time datetime="2023-07-14 13:13:31+00:00" class="dt-published"></time>
-  Fri 14 Jul 2023
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-07-15 18:00:00+00:00" class="dt-published"></time>
+  Sat 15 Jul 2023
+  in Planet Python.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://tube.kockatoo.org/w/qi7MDCni4C72tdwueS3FSU?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Akademy 2023 - Room 1 - 7/15/2023, 8:46:38 AM" target="_blank">
+      <time class="m-date" datetime="2023-07-15 15:38:49+00:00">
+        Jul
+        <span class="m-date-day">
+          15
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Akademy 2023 - Room 1 - 7/15/2023, 8:46:38 AM
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Akademy is the annual world summit of KDE, one of the largest Free Software communities in the world. It is a free, non-commercial event organized by the KDE Community.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Akademy</b></span>
+  on <time datetime="2023-07-15 15:38:49+00:00" class="dt-published"></time>
+  Sat 15 Jul 2023
   in Planet KDE.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2023/07/15/in-the-dumps/" rel="bookmark" class="u-url"
+       title="Pluralistic: Linkty Dumpty (15 July 2023)" target="_blank">
+      <time class="m-date" datetime="2023-07-15 15:26:57+00:00">
+        Jul
+        <span class="m-date-day">
+          15
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Pluralistic: Linkty Dumpty (15 July 2023)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Linkty Dumpty: Things I thought about when I was supposed to be on holidays. This day in history: 2003, 2008, 2013, 2018 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Linkty Dumpty (permalink) I was supposed to be on vacation, and while I didn't do any blogging for a month, that didn't mean that I stopped looking at my distraction rectangle and making a list of things I wanted to write about. Consequentially, the link backlog is massive, so it's time to declare bankruptcy with another linkdump: https://pluralistic.net/tag/linkdump/ Let's kick things off with a little graphic whimsy. You've doubtless seen the endless Trolley Problem memes, working from the same crude line drawings? Well, philosopher John Holbo got tired of that artwork, and he whomped up a fantastic alternative, which you can …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2023-07-15 15:26:57+00:00" class="dt-published"></time>
+  Sat 15 Jul 2023
+  in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -352,6 +388,40 @@ Challenges faced
   on <time datetime="2023-07-14 05:00:00+00:00" class="dt-published"></time>
   Fri 14 Jul 2023
   in noyb.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2802/" rel="bookmark" class="u-url"
+       title="Fireflies" target="_blank">
+      <time class="m-date" datetime="2023-07-14 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          14
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Fireflies
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="I feel bad for Earth 2 and their shadowflies." src="https://imgs.xkcd.com/comics/fireflies.png" title="I feel bad for Earth 2 and their shadowflies.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-07-14 00:00:00+00:00" class="dt-published"></time>
+  Fri 14 Jul 2023
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -444,40 +514,6 @@ We typically only compress variables of 2-D or higher rank.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blogs.gnome.org/chergert/2023/07/12/spellchecking-for-gtk-4/" rel="bookmark" class="u-url"
-       title="Spellchecking for GTK 4" target="_blank">
-      <time class="m-date" datetime="2023-07-12 01:04:12+00:00">
-        Jul
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Spellchecking for GTK 4
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Apparently, spellchecking was preventing some people from porting their applications to GTK 4. So I spent a little time today extracting Text Editor’s spellcheck engine into a library you can use in your GTK 4 application without having to write fun data-structures on your own. It’s slightly different since I have to avoid putting code … <a href="https://blogs.gnome.org/chergert/2023/07/12/spellchecking-for-gtk-4/">Continue reading <span>Spellchecking for GTK 4</span></a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>chergert</b></span>
-  on <time datetime="2023-07-12 01:04:12+00:00" class="dt-published"></time>
-  Wed 12 Jul 2023
-  in Planet GNOME.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://peps.python.org/pep-0721/" rel="bookmark" class="u-url"
        title="PEP 721: Using tarfile.data_filter for source distribution extraction" target="_blank">
       <time class="m-date" datetime="2023-07-12 00:00:00+00:00">
@@ -504,40 +540,6 @@ We typically only compress variables of 2-D or higher rank.</p>
   on <time datetime="2023-07-12 00:00:00+00:00" class="dt-published"></time>
   Wed 12 Jul 2023
   in Newest Python PEPs.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2801/" rel="bookmark" class="u-url"
-       title="Contact Merge" target="_blank">
-      <time class="m-date" datetime="2023-07-12 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Contact Merge
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="I actually kind of feel like John and Surf King wouldn't like each other, which is a lot to unpack." src="https://imgs.xkcd.com/comics/contact_merge.png" title="I actually kind of feel like John and Surf King wouldn't like each other, which is a lot to unpack.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-12 00:00:00+00:00" class="dt-published"></time>
-  Wed 12 Jul 2023
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
