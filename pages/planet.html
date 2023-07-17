@@ -164,33 +164,36 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://nibblestew.blogspot.com/2023/07/pdf-transparency-groups-and-composition.html" rel="bookmark" class="u-url"
-       title="PDF transparency groups and composition" target="_blank">
-      <time class="m-date" datetime="2023-07-15 21:02:00+00:00">
+    <a href="https://pointieststick.com/2023/07/16/where-bugfixes-and-new-features-come-from/?utm_source=atom_feed" rel="bookmark" class="u-url"
+       title="Where bugfixes and new features come from" target="_blank">
+      <time class="m-date" datetime="2023-07-16 22:31:45+00:00">
         Jul
         <span class="m-date-day">
-          15
+          16
         </span>
         2023
       </time>
       <div class="p-name">
-      PDF transparency groups and composition
+      Where bugfixes and new features come from
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>The PDF specification has the following image as an example of how to do transparent graphics composition.</p><div><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSa58PFc7ooWkow2nZda9CM4fzcpDAPDgF5QWrDOhcNCqZdOOUjBmUmOBqXW6E92u6npkGXT2fbSChDhefkjdGa0lTVgrG-Q8haGxQHa01UKTqksEhXBaVaH4VdX_nY9_HGbHEyiynkPFUaJPKpI_ajHBODHnDM0VqjhdPHU9czD5jgFY3-p0HjC7e1rw/s657/trgroup_spec.png"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSa58PFc7ooWkow2nZda9CM4fzcpDAPDgF5QWrDOhcNCqZdOOUjBmUmOBqXW6E92u6npkGXT2fbSChDhefkjdGa0lTVgrG-Q8haGxQHa01UKTqksEhXBaVaH4VdX_nY9_HGbHEyiynkPFUaJPKpI_ajHBODHnDM0VqjhdPHU9czD5jgFY3-p0HjC7e1rw/w400-h313/trgroup_spec.png"></a></div><p>This seems simple but actually requires quite a lot of functionality:</p><p></p><ul><li>Specifying CMYK gradients</li><li>Setting the blend mode for paint operations</li><li>Specifying transparency group xobjects</li><li>Specifying layer composition parameters</li></ul>I had to implement a bunch of new functionality to get this working, but here is the same image reproduced with <a href="https://github.com/jpakkane/capypdf">CapyPDF</a>. (<a href="https://www.dropbox.com/s/25994bk35q3gj4o/group_test.pdf?dl=0">output PDF here</a>)<p></p><div><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQjgH_Dm43IXBK357Cvc89Yvey676aQlBJU5quEYOXVk6ior3k5E5W5p404HvA13dc3E65jO8rT52qm_sjc8pq0NFAsCmKNfOTsHbhLbbjYgKiuxf-9UFyP6LCBMYstTfBZSqEbFUTmCZijgYZzMnDIAZB7nCbfS1oYW2X2LF1ggoedhARlcfOUg5OUk0/s657/trgroup_capy.png"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQjgH_Dm43IXBK357Cvc89Yvey676aQlBJU5quEYOXVk6ior3k5E5W5p404HvA13dc3E65jO8rT52qm_sjc8pq0NFAsCmKNfOTsHbhLbbjYgKiuxf-9UFyP6LCBMYstTfBZSqEbFUTmCZijgYZzMnDIAZB7nCbfS1oYW2X2LF1ggoedhARlcfOUg5OUk0/w400-h289/trgroup_capy.png"></a></div><p>The only difference here is that out of laziness I used a simple two color linear gradient rather than a rainbow one.</p>
-Nonportability<div>This is again one of those features that only Acrobat Reader can handle. I tried Okular, Ghostscript, Firefox, Chromium and Apple Preview and they all rendered the file incorrectly. There was no consistency, each one was broken in a different way.</div>
+  <p>A few conversations I&#8217;ve had recently at <a href="https://akademy.kde.org/2023/">Akademy 2023</a> have inspired me to write about a topic I&#8217;ve been wanting to share for a long time. So today I&#8217;d like to shine a bit of light on how the process of getting bugs fixed and features implemented works in KDE. This article&#8217;s target audience is general users more so than experienced technical contributors who will already have an understanding of this. But feel free to read anyway if you consider yourself a member of that group!</p>
+
+
+
+<p>To begin with, I sometimes encounter the impression that there&#8217;s this pool of developers who either roam around looking for bugs to fix and features to implement, or are told or motivated to do so by some higher authority. This isn&#8217;t necessarily a misconception, but it needs to …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
-  on <time datetime="2023-07-15 21:02:00+00:00" class="dt-published"></time>
-  Sat 15 Jul 2023
-  in Planet GNOME.
+  <span class="p-author"><b>Nate Graham</b></span>
+  on <time datetime="2023-07-16 22:31:45+00:00" class="dt-published"></time>
+  Sun 16 Jul 2023
+  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -199,12 +202,85 @@ Nonportability<div>This is again one of those features that only Acrobat Reader 
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2023/07/2023-07-15-ohzhj" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2023-07-15 21:21:00+02:00">
+    <a href="https://www.davidrevoy.com/article979/my-neighbor-mastodon-3" rel="bookmark" class="u-url"
+       title="🌱 My Neighbor Mastodon 3" target="_blank">
+      <time class="m-date" datetime="2023-07-16 22:01:00+02:00">
         Jul
         <span class="m-date-day">
-          15
+          16
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      🌱 My Neighbor Mastodon 3
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-17-16_my-neighboor-mastodon_25k_by-david-revoy.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-17-16_my-neighboor-mastodon_25k_by-david-revoy.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>A new piece of artwork to celebrate reaching 25,000 followers on <a href="https://framapiaf.org/@davidrevoy">my Mastodon account</a>.</p>
+<p>The scene is a parody of a still from "My Neighbor Totoro" by Studio Ghibli. </p>
+<p><a href="https://www.peppercarrot.com/en/viewer/misc__2023-17-16_My-Neighboor-Mastodon_25K_by-David-Revoy.html">"Source and full license here.</a></p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>David REVOY</b></span>
+  on <time datetime="2023-07-16 22:01:00+02:00" class="dt-published"></time>
+  Sun 16 Jul 2023
+  in David Revoy.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://alexschroeder.ch/wiki/2023-07-16_Bots_crawling_my_sites" rel="bookmark" class="u-url"
+       title="Bots crawling my sites" target="_blank">
+      <time class="m-date" datetime="2023-07-16 09:54:33+00:00">
+        Jul
+        <span class="m-date-day">
+          16
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Bots crawling my sites
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div><p> I’m thinking about blocking all bots from my website. But where to start? How about this: Check the access.log file (I use Apache as my web server). If the User Agent Field contains the word “bot” that sounds like a candidate? Let’s see!</p><p>First, let’s pick 24h worth of log files.</p><pre>grep ^alexschroeder /var/log/apache2/access.log.1 | wc -l
+15875</pre><p>This is yesterday’s log file and it has about 16k hits for my site.</p><pre>perl -ne 'print "$1\n" if /"([^"]*bot[^"]*)"$/i' \
+  &lt; /var/log/apache2/access.log.1 \
+  | sort | uniq -c | sort -n | tail</pre><p>This takes a line from the access.log like this: <code>www.emacswiki.org:443 66.249.64.38 - - [16/Jul/2023:00:00:44 +0200] "GET /emacs/SmtpAuth HTTP/1.1" 200 11056 "-" "Mozilla/5.0 (compatible; Googlebot/2 …</code></p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-07-16 09:54:33+00:00" class="dt-published"></time>
+  Sun 16 Jul 2023
+  in Alex Schroeder: Diary.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/micro/2023/07/2023-07-16-eoiib" rel="bookmark" class="u-url"
+       title="" target="_blank">
+      <time class="m-date" datetime="2023-07-16 09:18:00+02:00">
+        Jul
+        <span class="m-date-day">
+          16
         </span>
         2023
       </time>
@@ -215,16 +291,57 @@ Nonportability<div>This is again one of those features that only Acrobat Reader 
   </h1>
   <div class="p-summary">
   <p>
-  First day of Interrail to Romania ✅
+  #SlowTravel in the IC/IR 73 Traianus from Budapest to Timişoara. 🚂
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-15 21:21:00+02:00" class="dt-published"></time>
-  Sat 15 Jul 2023
+  on <time datetime="2023-07-16 09:18:00+02:00" class="dt-published"></time>
+  Sun 16 Jul 2023
   in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://theevilskeleton.gitlab.io/2023/07/16/opt-in-telemetry-and-asking-users-for-feedback-may-not-work-in-practice.html" rel="bookmark" class="u-url"
+       title="Opt-in Telemetry and Asking Users for Feedback May Not Work in Practice" target="_blank">
+      <time class="m-date" datetime="2023-07-16 00:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          16
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Opt-in Telemetry and Asking Users for Feedback May Not Work in Practice
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Introduction
+
+<p>Telemetry is one of the biggest controversial topics in the Linux community. Many people believe that telemetry is entirely meaningless, because developers can “just” ask their users. Some people also argue that users can opt into telemetry if they want to participate, but most of these users are in consensus that opt-out telemetry shouldn’t be there in the first place.</p>
+
+<p>However, I don’t believe that asking users or explicitly opting into telemetry helps to a degree where developers and designers can form educated conclusions, as both methods share many issues regarding gathering data accurately. In this article, we’re going to explore the issues around asking users and opting into telemetry, and then I will explain why opt-out telemetry is a better approach to gather accurate data and forming educated conclusions.</p>
+
+
+Definition and Methods of Gathering User …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>TheEvilSkeleton</b></span>
+  on <time datetime="2023-07-16 00:00:00+00:00" class="dt-published"></time>
+  Sun 16 Jul 2023
+  in Planet GNOME.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -282,40 +399,6 @@ maybe …</p>
   on <time datetime="2023-07-15 18:00:00+00:00" class="dt-published"></time>
   Sat 15 Jul 2023
   in Planet Python.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tube.kockatoo.org/w/qi7MDCni4C72tdwueS3FSU?utm_source=atom_feed" rel="bookmark" class="u-url"
-       title="Akademy 2023 - Room 1 - 7/15/2023, 8:46:38 AM" target="_blank">
-      <time class="m-date" datetime="2023-07-15 15:38:49+00:00">
-        Jul
-        <span class="m-date-day">
-          15
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Akademy 2023 - Room 1 - 7/15/2023, 8:46:38 AM
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Akademy is the annual world summit of KDE, one of the largest Free Software communities in the world. It is a free, non-commercial event organized by the KDE Community.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Akademy</b></span>
-  on <time datetime="2023-07-15 15:38:49+00:00" class="dt-published"></time>
-  Sat 15 Jul 2023
-  in Planet KDE.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -583,40 +666,6 @@ This is a beta preview of Python 3.12<div></div><div><div>Python 3.12 is still i
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://alexschroeder.ch/wiki/2023-07-11_Thinking_about_switching_away_from_Oddmuse" rel="bookmark" class="u-url"
-       title="Thinking about switching away from Oddmuse" target="_blank">
-      <time class="m-date" datetime="2023-07-11 17:01:39+00:00">
-        Jul
-        <span class="m-date-day">
-          11
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Thinking about switching away from Oddmuse
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div><p> Things that have been troubling me:</p><p>Oddmuse started out as a CGI script written in Perl. This is great for very small and dynamic sites: Most of the time, nobody is visiting and the process isn’t running. As activity increases (and search engines and bots activity increases!) a CGI script is an increasingly bad idea. Every time, you load the Perl binary, it loads the script, parses the script, runs the script, loads the libraries, parses the libraries, and so on.</p><p>These days, I run a Mojolicious server which keeps the script in memory and reruns it for every request. The webserver acts as a proxy server for all of this. And it’s somewhat tricky: Every now and then there are processes that won’t die, accumulating, see <a href="https://alexschroeder.ch/wiki/2023-06-28_Reduced_Site_Functionality">2023-06-28 Reduced Site Functionality</a>.</p><p>There’s also the problem of …</p></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-11 17:01:39+00:00" class="dt-published"></time>
-  Tue 11 Jul 2023
-  in Alex Schroeder: Diary.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://jvns.ca/blog/2023/07/10/lima--a-nice-way-to-run-linux-vms-on-mac/" rel="bookmark" class="u-url"
        title="Lima: a nice way to run Linux VMs on Mac" target="_blank">
       <time class="m-date" datetime="2023-07-10 09:23:08+00:00">
@@ -708,47 +757,6 @@ or effective ownership over the contributor&rsquo;s copyright and …</p><p></p>
   on <time datetime="2023-07-04 00:00:00+00:00" class="dt-published"></time>
   Tue 04 Jul 2023
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.davidrevoy.com/article978/pepper-carrot-gamejam-2023-recap-10-games-in-less-than-5-minutes" rel="bookmark" class="u-url"
-       title="Pepper & Carrot Gamejam 2023 Recap - 10 games in less than 5 minutes." target="_blank">
-      <time class="m-date" datetime="2023-07-01 20:12:00+02:00">
-        Jul
-        <span class="m-date-day">
-          01
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Pepper & Carrot Gamejam 2023 Recap - 10 games in less than 5 minutes.
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-06-30_pepper-carrot-gamejam-2023-debrief_thumb.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-06-30_pepper-carrot-gamejam-2023-debrief_thumb.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>Thanks again to @brettmakesgames@mastodon.gamedev.place for organising it, and (many) thanks to all the participants. 😻</p>
-<p></p><div></div><p></p>
-<ul>
-<li>Ptb: <a href="https://peertube.touhoppai.moe/w/fo4Udw77tSYaQQhXrpP7Y3">https://peertube.touhoppai.moe/w/fo4Udw77tSYaQQhXrpP7Y3</a>  </li>
-<li>Ytb: <a href="https://youtu.be/1AsvqyofhWA">https://youtu.be/1AsvqyofhWA</a>  </li>
-</ul>
-
-peppercarrot #gamejam #indiegames #godot #creativecommons
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2023-07-01 20:12:00+02:00" class="dt-published"></time>
-  Sat 01 Jul 2023
-  in David Revoy.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -860,40 +868,6 @@ fill the off-cycle vacancy left by Joannah Nanjekye, who …</p>
   on <time datetime="2023-06-26 14:00:00+00:00" class="dt-published"></time>
   Mon 26 Jun 2023
   in Hynek Schlawak.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://tonsky.me/blog/clojurescript-2/" rel="bookmark" class="u-url"
-       title="A case for ClojureScript 2.0" target="_blank">
-      <time class="m-date" datetime="2023-06-26 00:00:00+00:00">
-        Jun
-        <span class="m-date-day">
-          26
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      A case for ClojureScript 2.0
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Innocent early design decision that led to a disaster years later
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Nikita Prokopov (niki@tonsky.me)</b></span>
-  on <time datetime="2023-06-26 00:00:00+00:00" class="dt-published"></time>
-  Mon 26 Jun 2023
-  in Nikita Prokopov's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
