@@ -164,47 +164,68 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://blog.glyph.im/2023/07/bilithification.html" rel="bookmark" class="u-url"
-       title="Glyph Lefkowitz: Bilithification" target="_blank">
-      <time class="m-date" datetime="2023-07-20 20:59:00+00:00">
+    <a href="https://nibblestew.blogspot.com/2023/07/creating-pdfx-3-document-with-capypdf.html" rel="bookmark" class="u-url"
+       title="Creating a PDF/X-3 document with CapyPDF" target="_blank">
+      <time class="m-date" datetime="2023-07-21 18:15:00+00:00">
         Jul
         <span class="m-date-day">
-          20
+          21
         </span>
         2023
       </time>
       <div class="p-name">
-      Glyph Lefkowitz: Bilithification
+      Creating a PDF/X-3 document with CapyPDF
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>Several years ago at O’Reilly’s Software Architecture conference, within a
-comprehensive talk on refactoring “Technical Debt: A Masterclass”, r0ml<a href="https://glyph.twistedmatrix.com/feeds/all.atom.xml#fn:1:bilithification-2023-7">1</a>
-presented a concept that I think should be highlighted.</p>
-<p>If you have access to O’Reilly Safari, I think the video is available there, or
-you can get the slides
-<a href="https://conferences.oreilly.com/software-architecture/sa-ny-2018/cdn.oreillystatic.com/en/assets/1/event/281/Technical%20debt_%20A%20master%20class%20Presentation.pdf">here</a>.
-It’s well worth watching in its own right.  The talk contains a lot of hard-won
-wisdom from a decades-long career, but in slides 75-87, he articulates a
-concept that I believe resolves the perennial pendulum-swing between
-microservices and monoliths that we see in the Software as a Service world.</p>
-<p>I will refer to this concept as “the bilithification strategy”.</p>
+  <p>The original motivation for creating CapyPDF was understanding how fully color managed and print-ready PDF files are actually put together. A reasonable measure of this would be being able to generate fully spec conforming <a href="https://en.wikipedia.org/wiki/PDF/X">PDF/X-3</a> files. Most of the building blocks were already there so this was mostly a question of exposing all that in Python and adding the missing bits.</p><p>I have now done this and it seems to work. The script itself can be found in <a href="https://github.com/jpakkane/capypdf/blob/master/tools/x3gen.py">CapyPDF's Git repo</a> and the generated PDF document can be downloaded using <a href="https://www.dropbox.com/s/vw8y0wfbwqana22/x3sample.pdf?dl=0">this link</a>. It looks like this in Acrobat Pro.</p><div><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixDYY1rFvdFuM4b1pkZeLpkV0NJrUoDADVVhFgzYFrqMntnAZMm-lzE8NC8F8lPwPZEazOmxmjgzmNksAO3inikwEydY2HjNSCDICAHEK9AIbBJ5qQbOETgUJYQddBfximPft1l4N-puhBbbhzMn2RXzxT8rW80vDZN8JZtsUf73oCzW2AgMght4y8eWA/s972/x3_boxes.png"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixDYY1rFvdFuM4b1pkZeLpkV0NJrUoDADVVhFgzYFrqMntnAZMm-lzE8NC8F8lPwPZEazOmxmjgzmNksAO3inikwEydY2HjNSCDICAHEK9AIbBJ5qQbOETgUJYQddBfximPft1l4N-puhBbbhzMn2RXzxT8rW80vDZN8JZtsUf73oCzW2AgMght4y8eWA/w296-h400/x3_boxes.png"></a></div><p>It is not graphically the most flashy, but it requires quite a lot of functionality:</p><p></p><ul><li>The document is A4 size but it is defined on a larger canvas. After printing it needs to be cut into the final shape. This …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Jussi (noreply@blogger.com)</b></span>
+  on <time datetime="2023-07-21 18:15:00+00:00" class="dt-published"></time>
+  Fri 21 Jul 2023
+  in Planet GNOME.
+</footer>
+<div class="m-clearfix-l"></div>
 
-Background
-<p>Personally, I have long been a microservice skeptic.  I would generally
-articulate this skepticism in terms of
-“<a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it">YAGNI</a>”.</p>
-<p>Here’s the way I would advise people …</p>
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://realpython.com/podcasts/rpp/165/" rel="bookmark" class="u-url"
+       title="Real Python: The Real Python Podcast – Episode #165: Leveraging the Features of Your Database With Postgres and Python" target="_blank">
+      <time class="m-date" datetime="2023-07-21 12:00:00+00:00">
+        Jul
+        <span class="m-date-day">
+          21
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Real Python: The Real Python Podcast – Episode #165: Leveraging the Features of Your Database With Postgres and Python
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Are you getting the most out of your Postgres database? What features could you leverage to improve your Python project? This week on the show, Craig Kerstiens from Crunchy Data is here to discuss getting the most out of Postgres.</p>
+
+
+        <p><em>[ Improve Your Python With 🐍 Python Tricks 💌 – Get a short &amp; sweet Python Trick delivered to your inbox every couple of days. <a href="https://realpython.com/python-tricks/?utm_source=realpython&amp;utm_medium=rss&amp;utm_campaign=footer">&gt;&gt; Click here to learn more and see examples</a> ]</em></p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-20 20:59:00+00:00" class="dt-published"></time>
-  Thu 20 Jul 2023
+  on <time datetime="2023-07-21 12:00:00+00:00" class="dt-published"></time>
+  Fri 21 Jul 2023
   in Planet Python.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -214,32 +235,32 @@ articulate this skepticism in terms of
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://ondrej.holych.net/what-locations-does-gvfs-provide/" rel="bookmark" class="u-url"
-       title="What locations does GVfs provide?" target="_blank">
-      <time class="m-date" datetime="2023-07-20 12:49:19+00:00">
+    <a href="https://xkcd.com/2805/" rel="bookmark" class="u-url"
+       title="Global Atmospheric Circulation" target="_blank">
+      <time class="m-date" datetime="2023-07-21 00:00:00+00:00">
         Jul
         <span class="m-date-day">
-          20
+          21
         </span>
         2023
       </time>
       <div class="p-name">
-      What locations does GVfs provide?
+      Global Atmospheric Circulation
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  You probably all know that you can easily access files on connected devices using the sidebar items in the Files application. Most of you also know that the Other Locations view provides access to internal storage and some other discovered services. But I have recently noticed that some people are completely unaware of the ability … <p><a href="https://ondrej.holych.net/what-locations-does-gvfs-provide/">Continue reading<span> "What locations does GVfs provide?"</span></a></p>
+  <img alt="Refs generally say that you can exercise enough altitude control to avoid the ground, but if you start strategically choosing air layers to steer yourself, that's traveling." src="https://imgs.xkcd.com/comics/global_atmospheric_circulation.png" title="Refs generally say that you can exercise enough altitude control to avoid the ground, but if you start strategically choosing air layers to steer yourself, that's traveling.">
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Ondřej Holý</b></span>
-  on <time datetime="2023-07-20 12:49:19+00:00" class="dt-published"></time>
-  Thu 20 Jul 2023
-  in Planet GNOME.
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-07-21 00:00:00+00:00" class="dt-published"></time>
+  Fri 21 Jul 2023
+  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -417,40 +438,6 @@ articulate this skepticism in terms of
   on <time datetime="2023-07-19 05:00:00+00:00" class="dt-published"></time>
   Wed 19 Jul 2023
   in noyb.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2804/" rel="bookmark" class="u-url"
-       title="Marshmallow" target="_blank">
-      <time class="m-date" datetime="2023-07-19 00:00:00+00:00">
-        Jul
-        <span class="m-date-day">
-          19
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Marshmallow
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="The increasing number of graham crackers and chocolate bars in orbit has created a growing risk of Kessler s'mores." src="https://imgs.xkcd.com/comics/marshmallow.png" title="The increasing number of graham crackers and chocolate bars in orbit has created a growing risk of Kessler s'mores.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-07-19 00:00:00+00:00" class="dt-published"></time>
-  Wed 19 Jul 2023
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -843,49 +830,6 @@ or effective ownership over the contributor&rsquo;s copyright and …</p><p></p>
   on <time datetime="2023-07-04 00:00:00+00:00" class="dt-published"></time>
   Tue 04 Jul 2023
   in Drew DeVault's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pyfound.blogspot.com/2023/06/announcing-2023-psf-board-election.html" rel="bookmark" class="u-url"
-       title="Announcing the 2023 PSF Board Election Results!" target="_blank">
-      <time class="m-date" datetime="2023-06-30 20:13:00-04:00">
-        Jun
-        <span class="m-date-day">
-          30
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Announcing the 2023 PSF Board Election Results!
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>&nbsp;</p><p>It was a really lively and engaged election process for the PSF Board
- this year! First of all, we want to thank everyone who ran and was 
-willing to serve on the PSF Board. Even if you were not elected, we 
-appreciate all the time and effort you put into thinking about how to 
-make the PSF better and how to represent the parts of the community that
- you participate in. We hope that you will continue to think about these
- issues and share your ideas. Congratulations to our five new Board members-elect!&nbsp;</p><ul><li>Cheuk Ting Ho</li><li>Denny Perez</li><li>Georgi Ker</li><li>Christopher Neugebauer</li><li>KwonHan Bae * </li></ul><p>We’ll
- be in touch with all the elected candidates next week to schedule 
-onboarding. * The fifth person is being invited to serve for a year to 
-fill the off-cycle vacancy left by Joannah Nanjekye, who …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Deb Nicholson (noreply@blogger.com)</b></span>
-  on <time datetime="2023-06-30 20:13:00-04:00" class="dt-published"></time>
-  Fri 30 Jun 2023
-  in Python Software Foundation News.
 </footer>
 <div class="m-clearfix-l"></div>
 
