@@ -62,13 +62,15 @@
           https://cdnjs.cloudflare.com
           https://bibbase.org
           https://ajax.googleapis.com
-          'unsafe-inline' 'unsafe-eval' 'self';
+          'unsafe-eval'
+          'self';
         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
         img-src 'unsafe-inline' 'self' https: data:;
         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
         worker-src 'self';
         "
   >
+  <!-- Only connect to this site via HTTPS for the two years (recommended) -->
   <!-- FIXME: The following rule is required for livereload to work-->
   <!-- connect-src 'self' ws://localhost:8000; -->
 
@@ -147,18 +149,30 @@
       <div class="m-col-l-10 m-push-l-1">
         <h1>Sponsors</h1>
 <!-- content -->
-<aside class="m-note m-dim">
-<h3>None so far 🤔</h3>
+<aside class="m-frame">
+<h3>👋 Hello passerby!</h3>
+<p><strong>I hope you are enjoying this corner of the inter-webs</strong>. I share
+<a href="https://fediscience.org/&#64;ashwinvis">thoughts</a> to it, <a href="https://codeberg.org/ashwinvis">program</a> it, <a href="https://mastodon.acc.sunet.se/&#64;ashwinvis">moderate</a> <a href="https://discuss.tchncs.de/c/fluidmechanics">communities</a> and in return, learn
+from it. Only space and time limit my output. And when I do find some, I
+<a href="https://fluid.quest/archives.html">blog</a>, <a href="https://github.com/ashwinvis">code</a>, and <a href="https://reddit.com/r/FluidMechanics">interact</a> in the hope to make the world a better place…
+little-by-little.</p>
 </aside>
-<p>Most of the things I write and code are out of my own sheer passion. Only space and
-time limit my output. I do have a full-time job to keep me busy, but that said
-, I would not mind some encouragement from readers like you.  If you feel like,
-head over to either of the following:</p>
-<section id="liberapay">
-<h2>Liberapay</h2>
-<p>Many flexible ways to chip in a tip anonymously:</p>
+<p>That said, I would not mind some encouragement from readers like you.  If you
+wish to support me, use either:</p>
+<div class="m-row">
+<div class="m-col-l-6 m-col-m-6 m-col-s-6">
+<aside class="m-block m-primary">
+<h3><strong>Ko-fi</strong>: to make a one-time tip</h3>
+<a href="https://ko-fi.com/ashwinvis"><img alt="Buy me a coffee" src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" style="height: 2em" /></a>
+</aside>
+</div>
+<div class="m-col-l-6 m-col-m-6 m-col-s-6">
+<aside class="m-block m-warning">
+<h3><strong>Liberapay</strong>: to make a recurring tip (cancel anytime)</h3>
 <a href="https://liberapay.com/ashwinvis/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" style="height: 2em" /></a>
-</section>
+</aside>
+</div>
+</div>
 <hr />
 <section id="giving-back">
 <h2>Giving back</h2>
@@ -166,14 +180,16 @@ head over to either of the following:</p>
 underfunded. Consider supporting your favourite individual / organization.</p>
 <p>I am currently supporting:</p>
 <ul>
-<li><a href="https://numfocus.salsalabs.org/donate">Numfocus</a></li>
-<li><a href="https://cython.org/#donate">Cython</a></li>
+<li><a href="https://help.unicef.org/">UNICEF</a></li>
+<li><a href="https://tchncs.de/donate">Tchncs</a></li>
 </ul>
 <p>I have donated in the past to:</p>
 <ul>
 <li><a href="https://www.archlinux.org/donate/">Arch Linux</a></li>
+<li><a href="https://cython.org/#donate">Cython</a></li>
 <li><a href="https://kde.org/community/donations/index.php">KDE e.V.</a></li>
 <li><a href="https://www.msf.org/">MSF</a></li>
+<li><a href="https://numfocus.salsalabs.org/donate">Numfocus</a></li>
 <li><a href="https://www.radioparadise.com/">Radio Paradise</a></li>
 <li><a href="https://www.rodakorset.se/">Red Cross</a></li>
 <li><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en">Wikipedia</a></li>

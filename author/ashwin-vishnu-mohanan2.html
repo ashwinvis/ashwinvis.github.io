@@ -64,13 +64,15 @@
           https://cdnjs.cloudflare.com
           https://bibbase.org
           https://ajax.googleapis.com
-          'unsafe-inline' 'unsafe-eval' 'self';
+          'unsafe-eval'
+          'self';
         font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
         img-src 'unsafe-inline' 'self' https: data:;
         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
         worker-src 'self';
         "
   >
+  <!-- Only connect to this site via HTTPS for the two years (recommended) -->
   <!-- FIXME: The following rule is required for livereload to work-->
   <!-- connect-src 'self' ws://localhost:8000; -->
 
