@@ -72,7 +72,96 @@ have little time left to act.&lt;/p&gt;
 &lt;script src="https://api.climateclock.world/assets/widget-v2.js" async&gt;&lt;/script&gt;
 &lt;noscript&gt;&lt;a href="https://climateclock.world/"&gt;Climate Clock&lt;/a&gt;&lt;/noscript&gt;
 &lt;climate-clock/&gt;&lt;/section&gt;
-</content><category term="Blog"></category><category term="life"></category><category term="climate"></category><category term="FridaysForFuture"></category><category term="DigitalStrike"></category><category term="covid-19"></category></entry><entry><title>Show Your Stripes Day</title><link href="https://fluid.quest/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
+</content><category term="Blog"></category><category term="life"></category><category term="climate"></category><category term="FridaysForFuture"></category><category term="DigitalStrike"></category><category term="covid-19"></category></entry><entry><title>The good old blog with a new name</title><link href="https://fluid.quest/domain-name.html" rel="alternate"></link><published>2021-08-30T21:06:13+02:00</published><updated>2021-09-06T00:00:00+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-08-30:/domain-name.html</id><summary type="html">&lt;p&gt;I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;TLDR;&lt;/strong&gt; The URL of this website would soon be &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Today, on the thirtieth day of August 2021, as rain continue to shower on
+Stockholm nearly every day, marks the end of my hunt for a succinct
+domain name. For a long time, I was not convinced to spend a good handful of
+money on a virtual asset. That changed recently.&lt;/p&gt;
+&lt;p&gt;After jumping ships from Blogger, to WordPress, to Tumblr and finally to
+&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; pages using Pelican static-site generator, I thought I was
+done. I had full control on the content and the site generation. It was made
+using open-source software, which means there was no way the toolchain will not
+work in the foreseeable future. Therefore, in short the internals were intact.
+Moreover, my precious visitors to my blog then do not get served ads, cookies
+or third party tracking scripts.&lt;/p&gt;
+&lt;p&gt;Everything seemed fine. Until Microsoft bought it. Just because it is a free
+service and has a large user base does not inspire any confidence that it might
+stay like this forever. I recall how I used to adore following other blogs on
+Google Reader until &lt;a href="https://killedbygoogle.com/"&gt;Google swung the axe, decided it was not profitable
+enough&lt;/a&gt;. However, feed readers were easy, they
+continued to exist, and it was still possible to find alternatives (server based
+and server-less). In fact this is not an isolated incident. Large corporations
+always change services, buy new ones, shutdown old ones on their whims and
+fancies. They would come abruptly, and I should be prepared for this.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In fact, blog and email servers are like
+&lt;a href="https://genius.com/37517]"&gt;Hotel California (&lt;em&gt;You can check out any time you like, but you can never leave&lt;/em&gt;)&lt;/a&gt;
+as long as you care about others to be able to find you.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By buying a domain name, you get an address which stays the same,
+irrespective of where you host it. The host could be GitHub, Gitlab,
+&lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt; or even a small server powered by a Raspberry Pi!
+The readers will still be able to find you. And as a bonus, you can choose a
+domain name which represents your interests better.&lt;/p&gt;
+&lt;p&gt;Talking about interests, did you know there are a lot of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; (top
+level domain names) right now. Dull &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.net&lt;/code&gt; TLDs of yore are old-fashioned.
+The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
+the "domain registrar". Where to buy can be confusing to a total beginner.&lt;/p&gt;
+&lt;h2 id="doing-the-pre-purchase-research"&gt;&lt;a class="toclink" href="#doing-the-pre-purchase-research"&gt;Doing the pre-purchase research&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The research that I did was a bit of informal hearsay in the interweb. For instance the &lt;a href="https://wizardzines.com"&gt;following comics by Julia Evans&lt;/a&gt; were really useful&lt;sup id="fnref:zines"&gt;&lt;a class="footnote-ref" href="#fn:zines"&gt;1&lt;/a&gt;&lt;/sup&gt; .&lt;/p&gt;
+&lt;p&gt;&lt;img alt="choosing a domain registrar" src="https://wizardzines.com/comics/registrar/registrar.png"&gt;
+&lt;img alt="whois protection can" src="https://wizardzines.com/comics/domain-privacy/domain-privacy.png"&gt;
+&lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;&lt;img alt="TLDs" src="https://wizardzines.com/comics/tld/tld.png"&gt;&lt;/a&gt;
+&lt;img alt="subdomains" src="https://wizardzines.com/comics/subdomains/subdomains.png"&gt;&lt;/p&gt;
+&lt;p&gt;And this one on receiving
+&lt;a href="https://wizardzines.com/comics/receiving-email/"&gt;emails&lt;/a&gt; which I will think
+about later. Self-hosting emails is not an easy feat.&lt;/p&gt;
+&lt;p&gt;On the choosing the domain registrar question, I got a excellent tip from
+&lt;a href="https://jlelse.blog/dev/free-website"&gt;Jan Lukas-Else&lt;/a&gt; who had good experience
+with &lt;a href="https://porkbun.com"&gt;Porkbun&lt;/a&gt;. Therefore, I went there and there were many good deals
+going on.&lt;/p&gt;
+&lt;h2 id="how-i-bought-the-domain-name"&gt;&lt;a class="toclink" href="#how-i-bought-the-domain-name"&gt;How I bought the domain name&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;No single correct or optimal answer exists to which domain name one should buy
+-- given the plethora of &lt;a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains"&gt;TLDs&lt;/a&gt; in the market! The &lt;a href="https://porkbun.com/products/domains"&gt;prices&lt;/a&gt; are
+nearly fixed for a given TLD. This caught my eye, and I decided to scrap the
+table for offline brainstorming.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The result was a small &lt;a href="https://codeberg.org/ashwinvis/domain-name-search"&gt;domain-name-search Python tool&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By doing so, I was able to check availability of different combinations of
+domain names using &lt;code&gt;whois&lt;/code&gt; and visualize costs in an interactive plot. Of
+course, it was not perfect, a few domain names which were available were up for
+premium registration (prices often exceeding thousands of dollars). Which were
+not for me.  Once I had a shortlist done, it was easy to reduce the options.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And thus I registered &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="why-fluidquest"&gt;&lt;a class="toclink" href="#why-fluidquest"&gt;Why &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For now, I can say that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is an ode to the skill that I have been trained in for nearly a decade, Fluid Mechanics.&lt;/li&gt;
+&lt;li&gt;The quest post Ph.D. still continues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-happens-next"&gt;&lt;a class="toclink" href="#what-happens-next"&gt;What happens next?&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;First I will archive a snapshot of the landing page and this post, in case
+someone runs into the blog years later with the old URL and receives a 404
+error message, wondering what had happened.&lt;/p&gt;
+&lt;p&gt;I will soon a register &lt;a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages"&gt;the apex domain / subdomain&lt;/a&gt; to point to this
+very website via the &lt;a href="https://fluid.quest"&gt;new URL&lt;/a&gt;. Hopefully, all visits to the current URL
+&lt;a href="https://ashwinvis.github.io"&gt;ashwinvis.github.io&lt;/a&gt; would be redirected by
+&lt;a href="https://pages.github.com/"&gt;GitHub&lt;/a&gt; as long I continue to use their service.&lt;/p&gt;
+&lt;p&gt;Over a longer period of time, I can turn to a different host with more ethical
+business model such as &lt;a href="https://codeberg.page/"&gt;Codeberg&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="update"&gt;&lt;a class="toclink" href="#update"&gt;Update&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The move is now complete to &lt;a href="https://fluid.quest"&gt;fluid.quest&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:zines"&gt;
+&lt;p&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines &lt;a href="https://wizardzines.com/licensing/"&gt;CC-BY-NC-SA 4.0&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:zines" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Blog"></category><category term="meta"></category><category term="software"></category></entry><entry><title>Show Your Stripes Day</title><link href="https://fluid.quest/show-your-stripes-day.html" rel="alternate"></link><published>2021-06-18T16:06:06+02:00</published><updated>2021-06-18T16:06:06+02:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2021-06-18:/show-your-stripes-day.html</id><summary type="html">&lt;p&gt;It is hot everywhere. An info-graphic, a stark reminder that the worst is not over yet.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The end of the COVID-19 pandemic is visible as vaccinations progress in most
 places across the world, slowly but surely,&lt;/p&gt;
 &lt;figure&gt;
@@ -192,11 +281,11 @@ approve of.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://keeplearning.khanacademy.org/daily-schedule#Pre-K-1-2"&gt;Daily Schedule from Khan Academy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.varsitytutors.com"&gt;Varsity Tutors&lt;/a&gt; - Both paid and free lessons
-  on a wide variety of topics themed as &lt;a href="https://www.varsitytutors.com/virtual-school-day"&gt;Virtual School
-  Days&lt;/a&gt; and &lt;a href="https://www.varsitytutors.com/classes/featured-collections/virtual-field-trips?f_class_size=large-group0"&gt;Virtual Field
-  Trips&lt;/a&gt;.
-  I have signed up to see how it is like. The only trouble is to sign in to
-  get access to the content.&lt;/li&gt;
+    on a wide variety of topics themed as &lt;a href="https://www.varsitytutors.com/virtual-school-day"&gt;Virtual School
+    Days&lt;/a&gt; and &lt;a href="https://www.varsitytutors.com/classes/featured-collections/virtual-field-trips?f_class_size=large-group0"&gt;Virtual Field
+    Trips&lt;/a&gt;.
+    I have signed up to see how it is like. The only trouble is to sign in to
+    get access to the content.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
@@ -208,34 +297,4 @@ approve of.&lt;/p&gt;
 &lt;p&gt;YouTube channel&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="Blog"></category><category term="life"></category><category term="covid-19"></category></entry><entry><title>About my postdoc project at Stockholm University</title><link href="https://fluid.quest/project-eturb.html" rel="alternate"></link><published>2019-12-12T00:00:00+01:00</published><updated>2019-12-12T00:00:00+01:00</updated><author><name>Ashwin Vishnu Mohanan</name></author><id>tag:fluid.quest,2019-12-12:/project-eturb.html</id><summary type="html">&lt;p&gt;eTurb - Efficient simulations of turbulence in atmospheric boundary layers&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since October 1, 2019 I have been working as a postdoc at MISU, Stockholm
-University. There has been a couple of meetings with the group involved, and
-now the &lt;em&gt;who&lt;/em&gt; and the &lt;em&gt;what&lt;/em&gt; are more concrete. I wrote a short abstract for
-the &lt;a href="https://www.flow.kth.se/projects"&gt;annual FLOW catalogue&lt;/a&gt;, which I share
-below.&lt;/p&gt;
-&lt;h2 id="eturb-efficient-simulations-of-turbulence-in-atmospheric-boundary-layers"&gt;&lt;a class="toclink" href="#eturb-efficient-simulations-of-turbulence-in-atmospheric-boundary-layers"&gt;eTurb: Efficient simulations of turbulence in atmospheric boundary layers&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A. V. Mohanan, G. Brethouwer, M. Kupiainen, J. Nordström, D. S. Henningson,
-P. Schlatter &amp;amp; G. Svensson&lt;/p&gt;
-&lt;p&gt;Funding: Swedish e-Science Research Centre (SeRC)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The atmospheric boundary layer (ABL) is the region which interacts with the
-Earth’s surface and exchanges energy between larger geophysical scales and
-land. The ABL goes through different regimes of stratification during the
-day-night transition, referred to as the diurnal cycle. Daytime convection
-results in a mixed layer when the boundary layer depth increases, and during
-night as the land cools, a shallower stably stratified boundary layer is
-observed. Accurate representation of turbulence in the ABL is crucial e.g. to
-improve weather predictions and for wind-energy applications. A suitable tool
-for studying the turbulence and complex transient phenomena in the ABL during a
-typical diurnal cycle is large-eddy simulation (LES).&lt;/p&gt;
-&lt;p&gt;This project aims to tackle different modelling challenges along the road to an
-efficient LES of the ABL. From the physics perspective, the wall boundary
-condition and the LES subgrid-scale model need to be improved to allow for high
-resolution simulations. Existing models should also be verified with regards to
-numerical stability and consistency. A desired outcome of this project is an
-efficient and accurate code for an LES of diurnal cycle of the ABL. To
-coordinate this inter-disciplinary project a collaboration between KTH, SU, LiU
-and SMHI is set afoot. For the LES we will use the Nek5000 (KTH and SU) and
-ESSENSE (LiU and SMHI) codes.&lt;/p&gt;
-&lt;p&gt;&lt;a title="NikNaks [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Atmospheric_boundary_layer.svg"&gt;&lt;img alt="Atmospheric boundary layer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Atmospheric_boundary_layer.svg/512px-Atmospheric_boundary_layer.svg.png"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Blog"></category><category term="postdoc"></category><category term="research"></category><category term="fluid-mechanics"></category></entry></feed>
+&lt;/div&gt;</content><category term="Blog"></category><category term="life"></category><category term="covid-19"></category></entry></feed>
