@@ -5,14 +5,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/</loc>
-<lastmod>2023-09-05T11:00:46-00:00</lastmod>
+<lastmod>2023-09-06T00:11:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://fluid.quest/planet.html</loc>
-<lastmod>2023-09-05T11:00:46-00:00</lastmod>
+<lastmod>2023-09-06T00:11:09-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/planet.html</loc>
-<lastmod>2023-09-05T11:00:46-00:00</lastmod>
+<lastmod>2023-09-06T00:11:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -61,7 +61,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/pages/sponsors.html</loc>
-<lastmod>2023-09-05T11:00:46-00:00</lastmod>
+<lastmod>2023-09-06T00:11:09-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -487,13 +487,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://fluid.quest/category/misc.html</loc>
-<lastmod>2021-09-06T00:00:00+00:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://fluid.quest/category/tech-talk.html</loc>
 <lastmod>2022-11-04T09:14:41+00:53</lastmod>
 <changefreq>daily</changefreq>
@@ -550,8 +543,50 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://fluid.quest/tag/meta.html</loc>
+<lastmod>2021-09-06T00:00:00+00:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://fluid.quest/tag/python.html</loc>
-<lastmod>2020-08-20T16:50:51+00:53</lastmod>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://fluid.quest/tag/bash.html</loc>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://fluid.quest/tag/c.html</loc>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://fluid.quest/tag/cpp.html</loc>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://fluid.quest/tag/java.html</loc>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://fluid.quest/tag/ecmascript.html</loc>
+<lastmod>2021-05-16T12:41:13+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -747,13 +782,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://fluid.quest/tag/rust.html</loc>
-<lastmod>2019-08-06T00:00:00+00:53</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://fluid.quest/tag/java.html</loc>
 <lastmod>2019-08-06T00:00:00+00:53</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
