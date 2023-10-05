@@ -56,7 +56,7 @@
         content="
         upgrade-insecure-requests;
         default-src https:;
-        style-src https://bibbase.org 'unsafe-inline' 'self';
+        style-src https://fluid.quest https://bibbase.org 'unsafe-inline' 'self';
         script-src
           https://fluid.quest
           https://unpkg.com
@@ -64,15 +64,13 @@
           https://cdnjs.cloudflare.com
           https://bibbase.org
           https://ajax.googleapis.com
-          'unsafe-eval'
-          'self';
-        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+          'unsafe-inline' 'unsafe-eval' 'self';
+        font-src https://fluid.quest https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
         img-src 'unsafe-inline' 'self' https: data:;
         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
         worker-src 'self';
         "
   >
-  <!-- Only connect to this site via HTTPS for the two years (recommended) -->
   <!-- FIXME: The following rule is required for livereload to work-->
   <!-- connect-src 'self' ws://localhost:8000; -->
 
@@ -218,155 +216,160 @@ div.main div.admonition h1 {
         animation: 300ms shake1 linear 10;
     }
 
-    @keyframes shake1 {
-        2% {
-            transform: translate(0.5px, -1.5px) rotate(-0.5deg);
-        }
-        4% {
-            transform: translate(0.5px, 1.5px) rotate(1.5deg);
-        }
-        6% {
-            transform: translate(1.5px, 1.5px) rotate(1.5deg);
-        }
-        8% {
-            transform: translate(2.5px, 1.5px) rotate(0.5deg);
-        }
-        10% {
-            transform: translate(0.5px, 2.5px) rotate(0.5deg);
-        }
-        12% {
-            transform: translate(1.5px, 1.5px) rotate(0.5deg);
-        }
-        14% {
-            transform: translate(0.5px, 0.5px) rotate(0.5deg);
-        }
-        16% {
-            transform: translate(-1.5px, -0.5px) rotate(1.5deg);
-        }
-        18% {
-            transform: translate(0.5px, 0.5px) rotate(1.5deg);
-        }
-        20% {
-            transform: translate(2.5px, 2.5px) rotate(1.5deg);
-        }
-        22% {
-            transform: translate(0.5px, -1.5px) rotate(1.5deg);
-        }
-        24% {
-            transform: translate(-1.5px, 1.5px) rotate(-0.5deg);
-        }
-        26% {
-            transform: translate(1.5px, 0.5px) rotate(1.5deg);
-        }
-        28% {
-            transform: translate(-0.5px, -0.5px) rotate(-0.5deg);
-        }
-        30% {
-            transform: translate(1.5px, -0.5px) rotate(-0.5deg);
-        }
-        32% {
-            transform: translate(2.5px, -1.5px) rotate(1.5deg);
-        }
-        34% {
-            transform: translate(2.5px, 2.5px) rotate(-0.5deg);
-        }
-        36% {
-            transform: translate(0.5px, -1.5px) rotate(0.5deg);
-        }
-        38% {
-            transform: translate(2.5px, -0.5px) rotate(-0.5deg);
-        }
-        40% {
-            transform: translate(-0.5px, 2.5px) rotate(0.5deg);
-        }
-        42% {
-            transform: translate(-1.5px, 2.5px) rotate(0.5deg);
-        }
-        44% {
-            transform: translate(-1.5px, 1.5px) rotate(0.5deg);
-        }
-        46% {
-            transform: translate(1.5px, -0.5px) rotate(-0.5deg);
-        }
-        48% {
-            transform: translate(2.5px, -0.5px) rotate(0.5deg);
-        }
-        50% {
-            transform: translate(-1.5px, 1.5px) rotate(0.5deg);
-        }
-        52% {
-            transform: translate(-0.5px, 1.5px) rotate(0.5deg);
-        }
-        54% {
-            transform: translate(-1.5px, 1.5px) rotate(0.5deg);
-        }
-        56% {
-            transform: translate(0.5px, 2.5px) rotate(1.5deg);
-        }
-        58% {
-            transform: translate(2.5px, 2.5px) rotate(0.5deg);
-        }
-        60% {
-            transform: translate(2.5px, -1.5px) rotate(1.5deg);
-        }
-        62% {
-            transform: translate(-1.5px, 0.5px) rotate(1.5deg);
-        }
-        64% {
-            transform: translate(-1.5px, 1.5px) rotate(1.5deg);
-        }
-        66% {
-            transform: translate(0.5px, 2.5px) rotate(1.5deg);
-        }
-        68% {
-            transform: translate(2.5px, -1.5px) rotate(1.5deg);
-        }
-        70% {
-            transform: translate(2.5px, 2.5px) rotate(0.5deg);
-        }
-        72% {
-            transform: translate(-0.5px, -1.5px) rotate(1.5deg);
-        }
-        74% {
-            transform: translate(-1.5px, 2.5px) rotate(1.5deg);
-        }
-        76% {
-            transform: translate(-1.5px, 2.5px) rotate(1.5deg);
-        }
-        78% {
-            transform: translate(-1.5px, 2.5px) rotate(0.5deg);
-        }
-        80% {
-            transform: translate(-1.5px, 0.5px) rotate(-0.5deg);
-        }
-        82% {
-            transform: translate(-1.5px, 0.5px) rotate(-0.5deg);
-        }
-        84% {
-            transform: translate(-0.5px, 0.5px) rotate(1.5deg);
-        }
-        86% {
-            transform: translate(2.5px, 1.5px) rotate(0.5deg);
-        }
-        88% {
-            transform: translate(-1.5px, 0.5px) rotate(1.5deg);
-        }
-        90% {
-            transform: translate(-1.5px, -0.5px) rotate(-0.5deg);
-        }
-        92% {
-            transform: translate(-1.5px, -1.5px) rotate(1.5deg);
-        }
-        94% {
-            transform: translate(0.5px, 0.5px) rotate(-0.5deg);
-        }
-        96% {
-            transform: translate(2.5px, -0.5px) rotate(-0.5deg);
-        }
-        98% {
-            transform: translate(-1.5px, -1.5px) rotate(-0.5deg);
-        }
-    }
+
+<div class="m-code"><pre><span></span><code><span class="nv">@keyframes</span><span class="w"> </span><span class="n">shake1</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="mi">2</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">4</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">6</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">8</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">10</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">12</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">14</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">16</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">18</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">20</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">22</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">24</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">26</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">28</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">30</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">32</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">34</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">36</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">38</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">40</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">42</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">44</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">46</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">48</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">50</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">52</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">54</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">56</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">58</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">60</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">62</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">64</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">66</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">68</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">70</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">72</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">74</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">76</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">78</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">80</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">82</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">84</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">86</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">88</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">90</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">92</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="mf">1.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">94</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">0.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">96</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="mf">2.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="w">    </span><span class="mi">98</span><span class="o">%</span><span class="w"> </span><span class="err">{</span>
+<span class="w">        </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="k">translate</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="n">deg</span><span class="p">);</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="err">}</span>
+</code></pre></div>
+
+
+
 </style>
 
 <pre class='code'>

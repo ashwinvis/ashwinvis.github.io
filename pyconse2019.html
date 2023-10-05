@@ -57,7 +57,7 @@
         content="
         upgrade-insecure-requests;
         default-src https:;
-        style-src https://bibbase.org 'unsafe-inline' 'self';
+        style-src https://fluid.quest https://bibbase.org 'unsafe-inline' 'self';
         script-src
           https://fluid.quest
           https://unpkg.com
@@ -65,15 +65,13 @@
           https://cdnjs.cloudflare.com
           https://bibbase.org
           https://ajax.googleapis.com
-          'unsafe-eval'
-          'self';
-        font-src https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
+          'unsafe-inline' 'unsafe-eval' 'self';
+        font-src https://fluid.quest https://fontlibrary.org https://cdnjs.cloudflare.com 'self';
         img-src 'unsafe-inline' 'self' https: data:;
         frame-src https://invidious.snopyta.org https://pixelfed.social https://mastodon.acc.sunet.se https://tube.tchncs.de;
         worker-src 'self';
         "
   >
-  <!-- Only connect to this site via HTTPS for the two years (recommended) -->
   <!-- FIXME: The following rule is required for livereload to work-->
   <!-- connect-src 'self' ws://localhost:8000; -->
 
@@ -152,7 +150,7 @@
       <header>
         <h1><a href="https://fluid.quest/pyconse2019.html" rel="bookmark" class="u-url" title="Permalink to At PyCon Sweden 2019">
           <time class="m-date" datetime="2019-10-31T00:00:00+01:00">
-            Oct <span class="m-date-day">31</span> 2019
+            okt <span class="m-date-day">31</span> 2019
           </time>
           <div class="p-name">
             At PyCon Sweden 2019
@@ -185,7 +183,7 @@ videos and slides which might be of interest to you as a reader:</p>
   multiple user deployments on a <a href="https://tljh.jupyter.org/">single server</a> or
   on <a href="https://ztjh.jupyter.org/">the cloud</a>. <a href="https://invidio.us/watch?v=Epx4P6YCgTo">[video]</a></li>
 <li><a href="https://github.com/gavincyi/pycon-presentation/">Gavin Chan</a> who compared <em>Cython and Pybind11</em>
-   in his talk. <a href="https://invidio.us/watch?v=ZRKjoUALmwk">[video]</a></li>
+  in his talk. <a href="https://invidio.us/watch?v=ZRKjoUALmwk">[video]</a></li>
 <li><a href="https://github.com/isaacbernat/presentations/">Isaac Bernat</a> showed us that
   <em>algorithmic</em> improvements go a long way, indeed! <a href="https://invidio.us/watch?v=asZ0SDTKqvM">[video]</a></li>
 </ul>
@@ -220,7 +218,7 @@ dictionaries etc. This would allow for compatibility with <code>mypy</code> and 
 <code>mypyc</code> when it is ready.</p>
 </blockquote>
 <p>This is seriously followed up as a <a href="https://github.com/fluiddyn/transonic/issues/9">possible
-enhancement</a> to <code>transonic</code>. </p>
+enhancement</a> to <code>transonic</code>.</p>
 <blockquote>
 <p>Can you accelerate Pandas?</p>
 </blockquote>
@@ -233,9 +231,9 @@ especially when you follow functional programming style.</p>
 <p>This is a hard one. Of course, if you are dealing with images which are
 read as <code>numpy</code> arrays, it is possible. I haven't seen any Python extensions
 written (in Cython or other) to accelerate OpenCV code and even if it does
-exist, <code>transonic</code> is not designed to interface with libraries. </p>
+exist, <code>transonic</code> is not designed to interface with libraries.</p>
 <blockquote>
-<p>Can Pythran replace Cython / f2py for interfacing with native code? </p>
+<p>Can Pythran replace Cython / f2py for interfacing with native code?</p>
 </blockquote>
 <p>Pythran does sound like Fortran, but it has nothing much in common - except the
 fact that Pythran and Fortran target scientific computing and HPC. Generally
@@ -261,7 +259,7 @@ with us.</p>
         <p>Ashwin Vishnu Mohanan, Ph.D. in Fluid mechanics</p>
       </div>
       <footer>
-        <p>Posted by <a rel="author" href="https://fluid.quest/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-10-31T00:00:00+01:00" class="dt-published">Thu 31 October 2019</time> in <a class="p-category" href="https://fluid.quest/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2019-12-01T00:00:00+01:00" class="dt-updated">Sun 01 December 2019</time></span><br/>
+        <p>Posted by <a rel="author" href="https://fluid.quest/author/ashwin-vishnu.html">Ashwin Vishnu</a> on <time datetime="2019-10-31T00:00:00+01:00" class="dt-published">tor 31 oktober 2019</time> in <a class="p-category" href="https://fluid.quest/category/tech-talk.html">Tech Talk</a>. <span class="m-label m-success">updated <time datetime="2019-12-01T00:00:00+01:00" class="dt-updated">sön 01 december 2019</time></span><br/>
         <time class="dt-read-mins">
             <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
@@ -313,6 +311,7 @@ with us.</p>
         <li><a href="https://fluid.quest/category/blog.html">Blog</a></li>
         <li><a href="https://fluid.quest/category/blogger-archive.html">Blogger archive</a></li>
         <li><a href="https://fluid.quest/category/microblog.html">Microblog</a></li>
+        <li><a href="https://fluid.quest/category/misc.html">misc</a></li>
         <li><a href="https://fluid.quest/category/tech-talk.html">Tech Talk</a></li>
         <li><a href="https://fluid.quest/category/tumblr-archive.html">Tumblr archive</a></li>
       </ol>
@@ -321,20 +320,16 @@ with us.</p>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/academia.html">academia</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/archlinux.html">archlinux</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/automation.html">automation</a></li>
-        <li class="m-tag-1"><a href="https://fluid.quest/tag/bash.html">bash</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/brainwaves.html">brainwaves</a></li>
-        <li class="m-tag-1"><a href="https://fluid.quest/tag/c.html">c</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/ci.html">ci</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/climate.html">climate</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/conference.html">conference</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/congress.html">congress</a></li>
         <li class="m-tag-3"><a href="https://fluid.quest/tag/covid-19.html">covid-19</a></li>
-        <li class="m-tag-1"><a href="https://fluid.quest/tag/cpp.html">cpp</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/csharp.html">csharp</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/css.html">css</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/devops.html">devops</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/digitalstrike.html">DigitalStrike</a></li>
-        <li class="m-tag-1"><a href="https://fluid.quest/tag/ecmascript.html">ecmascript</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/economy.html">economy</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/emotion.html">emotion</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/fediverse.html">fediverse</a></li>
@@ -359,7 +354,6 @@ with us.</p>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/linux.html">linux</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/list.html">list</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/markdown.html">markdown</a></li>
-        <li class="m-tag-1"><a href="https://fluid.quest/tag/meta.html">meta</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/mood.html">mood</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/motto.html">motto</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/music.html">music</a></li>
@@ -374,7 +368,7 @@ with us.</p>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/psychology.html">psychology</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/pyconse.html">pyconse</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/pypy.html">pypy</a></li>
-        <li class="m-tag-3"><a href="https://fluid.quest/tag/python.html">python</a></li>
+        <li class="m-tag-2"><a href="https://fluid.quest/tag/python.html">python</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/rant.html">rant</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/recession.html">recession</a></li>
         <li class="m-tag-2"><a href="https://fluid.quest/tag/research.html">research</a></li>
@@ -382,7 +376,7 @@ with us.</p>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/rst.html">rst</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/rust.html">rust</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/social-media.html">social media</a></li>
-        <li class="m-tag-5"><a href="https://fluid.quest/tag/software.html">software</a></li>
+        <li class="m-tag-4"><a href="https://fluid.quest/tag/software.html">software</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/strangers.html">strangers</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/survival.html">survival</a></li>
         <li class="m-tag-1"><a href="https://fluid.quest/tag/sympy.html">sympy</a></li>
