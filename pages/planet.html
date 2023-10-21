@@ -164,31 +164,92 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2023/10/19/solid-tumors/" rel="bookmark" class="u-url"
-       title="Pluralistic: Uncle Sam paid to develop a cancer drug and now one guy will get to charge whatever he wants for it (19 Oct 2023)" target="_blank">
-      <time class="m-date" datetime="2023-10-19 12:17:51+00:00">
+    <a href="https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/" rel="bookmark" class="u-url"
+       title="Some miscellaneous git facts" target="_blank">
+      <time class="m-date" datetime="2023-10-20 14:39:23+00:00">
         Oct
         <span class="m-date-day">
-          19
+          20
         </span>
         2023
       </time>
       <div class="p-name">
-      Pluralistic: Uncle Sam paid to develop a cancer drug and now one guy will get to charge whatever he wants for it (19 Oct 2023)
+      Some miscellaneous git facts
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Uncle Sam paid to develop a cancer drug and now one guy will get to charge whatever he wants for it: Making billionaires, one patent at a time. Hey look at this: Delights to delectate. This day in history: 2008, 2013, 2018 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Uncle Sam paid to develop a cancer drug and now one guy will get to charge whatever he wants for it (permalink) The argument for pharma patents: making new medicines is expensive, and medicines are how we save ourselves from cancer and other diseases. Therefore, we will award government-backed monopolies &#8211; patents &#8211; to pharma companies so they will have an incentive to invest their shareholders' capital in research. There's plenty wrong with this argument. For one thing, pharma companies use their monopoly winnings to sell drugs …
+  <p>I&rsquo;ve been very slowly working on writing about how Git works. I thought I
+already knew Git pretty well, but as usual when I try to explain something I&rsquo;ve
+been learning some new things.</p>
+
+<p>None of these things feel super surprising in retrospect, but I hadn&rsquo;t thought
+about them clearly before.</p>
+
+<p>The facts are:</p>
+
+<ul>
+<li><a href="#the-index-staging-area-and-cached-are-all-the-same-thing">the &ldquo;index&rdquo;, &ldquo;staging area&rdquo; and &ldquo;&ndash;cached&rdquo; are all the same thing</a></li>
+<li><a href="#the-stash-is-a-bunch-of-commits">the stash is a bunch of commits</a></li>
+<li><a href="#not-all-references-are-branches-or-tags">not all references are branches or tags</a></li>
+<li><a href="#merge-commits-aren-t-empty">merge commits aren&rsquo;t empty</a></li>
+</ul>
+
+<p>Let&rsquo;s talk about them!</p>
+
+
+the &ldquo;index&rdquo;, &ldquo;staging area&rdquo; and &ldquo;&ndash;cached&rdquo; are all the same thing
+
+<p>When you run <code>git add file.txt</code>, and then <code>git status</code>, you&rsquo;ll see something like this:</p>
+
+<pre><code>$ git add content/post/2023-10-20-some-miscellaneous-git-facts.markdown
+$ git status
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+    new …</code></pre>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-10-20 14:39:23+00:00" class="dt-published"></time>
+  Fri 20 Oct 2023
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2023/10/20/release-energy/" rel="bookmark" class="u-url"
+       title="Pluralistic: Amazon's bestselling "bitter lemon" energy drink was bottled delivery driver piss (20 Oct 2023)" target="_blank">
+      <time class="m-date" datetime="2023-10-20 10:01:31+00:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Pluralistic: Amazon's bestselling "bitter lemon" energy drink was bottled delivery driver piss (20 Oct 2023)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Amazon's bestselling "bitter lemon" energy drink was bottled delivery driver piss: Amazon immediately spotted an undercover reporter but missed that the bestselling 'Release Energy' was its drivers' urine. Hey look at this: Delights to delectate. This day in history: 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Amazon's bestselling "bitter lemon" energy drink was bottled delivery driver piss (permalink) For a brief time this year, the bestselling "bitter lemon drink" on Amazon was "Release Energy," which consisted of the harvested urine of Amazon delivery drivers, rebottled for sale by Catfish UK prankster Oobah Butler in a stunt for a new Channel 4 doc, "The Great Amazon Heist": https://www.channel4.com/programmes/the-great-amazon-heist Collecting driver piss is surprisingly easy. Amazon, you see, puts its drivers on a quota that makes it impossible …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-10-19 12:17:51+00:00" class="dt-published"></time>
-  Thu 19 Oct 2023
+  on <time datetime="2023-10-20 10:01:31+00:00" class="dt-published"></time>
+  Fri 20 Oct 2023
   in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,8 +259,42 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2843/" rel="bookmark" class="u-url"
-       title="Professional Oaths" target="_blank">
+    <a href="https://xkcd.com/2844/" rel="bookmark" class="u-url"
+       title="Black Holes vs Regular Holes" target="_blank">
+      <time class="m-date" datetime="2023-10-20 00:00:00+00:00">
+        Oct
+        <span class="m-date-day">
+          20
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Black Holes vs Regular Holes
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Created by the collapse of: [massive stars] [Florida limestone bedrock]" src="https://imgs.xkcd.com/comics/black_holes_vs_regular_holes.png" title="Created by the collapse of: [massive stars] [Florida limestone bedrock]">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-10-20 00:00:00+00:00" class="dt-published"></time>
+  Fri 20 Oct 2023
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pythonspeed.com/articles/upgrade-python-3.12/" rel="bookmark" class="u-url"
+       title="When should you upgrade to Python 3.12?" target="_blank">
       <time class="m-date" datetime="2023-10-18 00:00:00+00:00">
         Oct
         <span class="m-date-day">
@@ -208,13 +303,21 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2023
       </time>
       <div class="p-name">
-      Professional Oaths
+      When should you upgrade to Python 3.12?
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <img alt="Interpretations of the Hermeneutic Oath differ." src="https://imgs.xkcd.com/comics/professional_oaths.png" title="Interpretations of the Hermeneutic Oath differ.">
+  <p>Python 3.12 is out now–but should you switch to it immediately?
+And if you shouldn’t upgrade just yet, when should you?</p>
+
+<p>Immediately after the release, you may not want to upgrade just yet.
+But from December 2023 and onwards, upgrading is definitely worth trying.
+To understand why, we need to consider Python packaging, the software development process, and take a look at the history of past releases.</p>
+
+
+   <a href="https://pythonspeed.com/articles/upgrade-python-3.12/">Read more...</a>
   </p>
   </div>
 </header>
@@ -223,7 +326,7 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <span class="p-author"><b>Anonymous</b></span>
   on <time datetime="2023-10-18 00:00:00+00:00" class="dt-published"></time>
   Wed 18 Oct 2023
-  in xkcd.com.
+  in Python⇒Speed.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -664,85 +767,6 @@ a career, get married, have 1.5 children, retire to Florida, die.</p>
   on <time datetime="2023-10-07 16:27:57+00:00" class="dt-published"></time>
   Sat 07 Oct 2023
   in Computing with Dabeaz.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2023/10/06/new-talk--making-hard-things-easy/" rel="bookmark" class="u-url"
-       title="New talk: Making Hard Things Easy" target="_blank">
-      <time class="m-date" datetime="2023-10-06 08:43:54+00:00">
-        Oct
-        <span class="m-date-day">
-          06
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      New talk: Making Hard Things Easy
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>A few weeks ago I gave a keynote at <a href="https://www.thestrangeloop.com/">Strange Loop</a>
-called Making Hard Things Easy. It&rsquo;s about why I think some things are hard
-to learn and ideas for how we can make them easier.</p>
-
-<p>Here&rsquo;s the video, as well as the slides and a transcript of (roughly) what I
-said in the talk.</p>
-
-
-the video
-
-
-
-
-the transcript
-
-
-
-<div>
-<div>
-<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-0.png"><img src="https://jvns.ca/images/strangeloop-2023-talk/slide-0.png"></a>
-</div>
-<div>
-
-
-Hello, Strange Loop! Strange Loop is one of the first places I
-spoke almost 10 years ago and I'm so honored to be back here today for the
-last one. Can we have one more round of applause for the organizers?
-
-
-</div>
-</div>
-
-<div>
-<div>
-<a href="https://jvns.ca/images/strangeloop-2023-talk/slide-1.png"><img src="https://jvns.ca/images/strangeloop-2023-talk/slide-small-1.png"></a>
-</div>
-<div>
-
-<p>
-I often give talks about things that I'm excited about,
-or that I think are really fun.
-</p>
-
-<p>
-But today, I want to talk about something that I'm a little bit mad about,
-which is that sometimes things that …</p></div></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-10-06 08:43:54+00:00" class="dt-published"></time>
-  Fri 06 Oct 2023
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
