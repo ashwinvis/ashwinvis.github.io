@@ -270,6 +270,57 @@ What's the problem?
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://jvns.ca/blog/2023/11/01/confusing-git-terminology/" rel="bookmark" class="u-url"
+       title="Confusing git terminology" target="_blank">
+      <time class="m-date" datetime="2023-11-01 08:45:26+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Confusing git terminology
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! I&rsquo;m slowly working on explaining git. One of my biggest problems is that
+after almost 15 years of using git, I&rsquo;ve become very used to git&rsquo;s
+idiosyncracies and it&rsquo;s easy for me to forget what&rsquo;s confusing about it.</p>
+
+<p>So I asked people <a href="https://social.jvns.ca/@b0rk/111330564535454510">on Mastodon</a>:</p>
+
+<blockquote>
+<p>what git jargon do you find confusing? thinking of writing a blog post that explains some of git&rsquo;s weirder terminology: &ldquo;detached HEAD state”, &ldquo;fast-forward&rdquo;, &ldquo;index/staging area/staged&rdquo;, “ahead of &lsquo;origin/main&rsquo; by 1 commit”, etc</p>
+</blockquote>
+
+<p>I got a lot of GREAT answers and I&rsquo;ll try to summarize some of them here.  Here&rsquo;s a list of the terms:</p>
+
+<ul>
+<li><a href="#head-and-heads">HEAD and &ldquo;heads&rdquo;</a></li>
+<li><a href="#detached-head-state">&ldquo;detached HEAD state&rdquo;</a></li>
+<li><a href="#ours-and-theirs-while-merging-or-rebasing">&ldquo;ours&rdquo; and &ldquo;theirs&rdquo; while merging or rebasing</a></li>
+<li><a href="#your-branch-is-up-to-date-with-origin-main">&ldquo;Your branch is up to date with &lsquo;origin/main&rsquo;&rdquo;</a></li>
+<li><a href="#head-head-head-head-head-2-head-2">HEAD^, HEAD~ HEAD^^, HEAD~~, HEAD^2, HEAD …</a></li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-11-01 08:45:26+00:00" class="dt-published"></time>
+  Wed 01 Nov 2023
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://xkcd.com/2849/" rel="bookmark" class="u-url"
        title="Under the Stars" target="_blank">
       <time class="m-date" datetime="2023-11-01 00:00:00+00:00">
@@ -296,6 +347,54 @@ What's the problem?
   on <time datetime="2023-11-01 00:00:00+00:00" class="dt-published"></time>
   Wed 01 Nov 2023
   in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2023/11/1/remote-before-and-after-covid/" rel="bookmark" class="u-url"
+       title="Post Covid Remote Work Doesn't Work As Well" target="_blank">
+      <time class="m-date" datetime="2023-11-01 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          01
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Post Covid Remote Work Doesn't Work As Well
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p><em>This year I decided that I want to share my most important learnings about
+engineering, teams and quite frankly personal mental health.  My hope is that
+those who want to learn from me find it useful.</em></p>
+<p>You can't make it 15 minutes on Twitter or elsewhere, without running into
+a post about a botched return to work implementation.  You also can't make
+it for very long to hear about the San Francisco doom loop.  These two
+topics relate in a quite deep way to me personally.  This post is a
+reflection of working at Sentry for almost 10 years, a company primarily
+headquartered in San Francisco and how it is to work for it from a
+distance before and after Covid.</p>
+<div>
+
+Cities are Magic
+<p>I'm a being that thrives in cities.  In fact, I'm genuinely amazed every
+day how humans …</p></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2023-11-01 00:00:00+00:00" class="dt-published"></time>
+  Wed 01 Nov 2023
+  in Armin Ronacher's Thoughts and Writings.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -761,67 +860,6 @@ My Current Obsession
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/" rel="bookmark" class="u-url"
-       title="Some miscellaneous git facts" target="_blank">
-      <time class="m-date" datetime="2023-10-20 14:39:23+00:00">
-        Oct
-        <span class="m-date-day">
-          20
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Some miscellaneous git facts
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I&rsquo;ve been very slowly working on writing about how Git works. I thought I
-already knew Git pretty well, but as usual when I try to explain something I&rsquo;ve
-been learning some new things.</p>
-
-<p>None of these things feel super surprising in retrospect, but I hadn&rsquo;t thought
-about them clearly before.</p>
-
-<p>The facts are:</p>
-
-<ul>
-<li><a href="#the-index-staging-area-and-cached-are-all-the-same-thing">the &ldquo;index&rdquo;, &ldquo;staging area&rdquo; and &ldquo;&ndash;cached&rdquo; are all the same thing</a></li>
-<li><a href="#the-stash-is-a-bunch-of-commits">the stash is a bunch of commits</a></li>
-<li><a href="#not-all-references-are-branches-or-tags">not all references are branches or tags</a></li>
-<li><a href="#merge-commits-aren-t-empty">merge commits aren&rsquo;t empty</a></li>
-</ul>
-
-<p>Let&rsquo;s talk about them!</p>
-
-
-the &ldquo;index&rdquo;, &ldquo;staging area&rdquo; and &ldquo;&ndash;cached&rdquo; are all the same thing
-
-<p>When you run <code>git add file.txt</code>, and then <code>git status</code>, you&rsquo;ll see something like this:</p>
-
-<pre><code>$ git add content/post/2023-10-20-some-miscellaneous-git-facts.markdown
-$ git status
-Changes to be committed:
-  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
-    new …</code></pre>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-10-20 14:39:23+00:00" class="dt-published"></time>
-  Fri 20 Oct 2023
-  in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pythonspeed.com/articles/upgrade-python-3.12/" rel="bookmark" class="u-url"
        title="When should you upgrade to Python 3.12?" target="_blank">
       <time class="m-date" datetime="2023-10-18 00:00:00+00:00">
@@ -890,52 +928,6 @@ To understand why, we need to consider Python packaging, the software developmen
   on <time datetime="2023-10-17 10:22:49+00:00" class="dt-published"></time>
   Tue 17 Oct 2023
   in Syntax Error.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://lucumr.pocoo.org/2023/10/14/eurorust-whats-a-conference/" rel="bookmark" class="u-url"
-       title="EuroRust 2023 Reflections: What's a Conference For?" target="_blank">
-      <time class="m-date" datetime="2023-10-14 00:00:00+00:00">
-        Oct
-        <span class="m-date-day">
-          14
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      EuroRust 2023 Reflections: What's a Conference For?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>I very rarely write recaps of conferences but this time around I could not
-resist.  This is for a lot of reasons. To kick things off, quite a bit of
-what was on my mind relates quite directly to a perception of a general
-negativity in the Rust community that I share.  Most specifically <a href="https://blog.adamchalmers.com/rustconf-2023-recap/">this quote
-by Adam Chalmer</a>:</p>
-<blockquote>
-Rustconf definitely felt sadder and downbeat than my previous visit. […]
-I felt like this year's conference was <em>defensive</em> and maybe somewhat
-<em>depressed</em>. I wanted to give the spirit of Rust a hug and tell it,
-&quot;hey, I know you've had a tough year&quot;.</blockquote>
-<p>Not only did this get me thinking, I also <a href="https://twitter.com/mitsuhiko/status/1663559716180758537">had a lot of reflection to do</a> about myself
-and Rust this year.  In case you are not familar, I posted a regretful
-tweet in response to the <a href="https://fasterthanli.me/articles/the-rustconf-keynote-fiasco-explained">keynote …</a></p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Armin Ronacher</b></span>
-  on <time datetime="2023-10-14 00:00:00+00:00" class="dt-published"></time>
-  Sat 14 Oct 2023
-  in Armin Ronacher's Thoughts and Writings.
 </footer>
 <div class="m-clearfix-l"></div>
 
