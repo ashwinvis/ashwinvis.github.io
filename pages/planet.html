@@ -164,6 +164,138 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://jlelse.blog/posts/november-23" rel="bookmark" class="u-url"
+       title="My November ‘23 in Review" target="_blank">
+      <time class="m-date" datetime="2023-11-30 20:47:21+01:00">
+        Nov
+        <span class="m-date-day">
+          30
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      My November ‘23 in Review
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  It’s that time of the month again for a new recap. November has passed, so let’s see what happened in the last 30 days…
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-11-30 20:47:21+01:00" class="dt-published"></time>
+  Thu 30 Nov 2023
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2023/11/30/not-doing-things-makes-you-fast/" rel="bookmark" class="u-url"
+       title="Bundleless: Not Doing Things Makes You Fast" target="_blank">
+      <time class="m-date" datetime="2023-11-30 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          30
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Bundleless: Not Doing Things Makes You Fast
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>I recently <a href="https://twitter.com/rauchg/status/1729596031434698774">came across a tweet</a> and one
+statement in it really triggered me: the claim that a bundleless dev
+server does not work.  The idea here being that you cannot avoid bundling
+during development for performance reasons.  This challenges the code
+concept and premise of <a href="https://vitejs.dev/">vite</a>'s design.  Its
+dev server primarily operates by serving individual files post-initial
+transpiling.</p>
+<p>There's some belief that bundleless development isn't feasible, especially
+for projects with thousands of modules, due to potential performance
+issues.  However, I contend that this thinking overlooks the benefits of
+a bundleless approach.</p>
+<p>There is obviously some truth to it having issues.  If you have thousands
+of modules, that can take a while to load and on contrast if most of those
+are bundled up into a single file, that will take less time to load.</p>
+<p>I believe this to …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2023-11-30 00:00:00+00:00" class="dt-published"></time>
+  Thu 30 Nov 2023
+  in Armin Ronacher's Thoughts and Writings.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com/blog/202311/say_it_again_values_not_expressions.html" rel="bookmark" class="u-url"
+       title="Say it again: values not expressions" target="_blank">
+      <time class="m-date" datetime="2023-11-29 18:30:46-05:00">
+        Nov
+        <span class="m-date-day">
+          29
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Say it again: values not expressions
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Sometimes you can explain a simple thing for the thousandth time,
+and come away with a deeper understanding yourself.  It happened to me the
+other day with Python mutable argument default values.
+</p><p>This is a classic Python &#8220;gotcha&#8221;: you can provide a default value for a
+function argument, but it will only be evaluated once:</p><blockquote><pre><span>&gt;&gt;&gt;&#xa0;</span><span>def</span>&#xa0;<span>doubled</span><span>(</span><span>item</span><span>,</span>&#xa0;<span>the_list</span><span>=</span><span>[]):</span>
+<span>...&#xa0;</span>&#xa0;&#xa0;&#xa0;&#xa0;<span>the_list</span><span>.</span><span>append</span><span>(</span><span>item</span><span>)</span>
+<span>...&#xa0;</span>&#xa0;&#xa0;&#xa0;&#xa0;<span>the_list</span><span>.</span><span>append</span><span>(</span><span>item</span><span>)</span>
+<span>...&#xa0;</span>&#xa0;&#xa0;&#xa0;&#xa0;<span>return</span>&#xa0;<span>the_list</span>
+<span>...</span>
+<span>&gt;&gt;&gt;&#xa0;</span><span>print</span><span>(</span><span>doubled</span><span>(</span><span>10</span><span>))</span>
+<span>[10,&#xa0;10]</span>
+<span>&gt;&gt;&gt;&#xa0;</span><span>print</span><span>(</span><span>doubled</span><span>(</span><span>99</span><span>))</span>
+<span>[10,&#xa0;10,&#xa0;99,&#xa0;99]&#xa0;&#xa0;&#xa0;&#xa0;#&#xa0;WHAT!?</span>
+</pre></blockquote><p>I&#8217;ve seen people be surprised by this and ask about it countless times.
+And countless times I&#8217;ve said, &#8220;Yup, the value is only calculated once, and
+stored on the function.&#8221;</p><p>But recently I heard someone answer with, &#8220;it&#8217;s a value, not an expression,&#8221;
+which is a good succinct way to say it.  And when a co-worker brought …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2023-11-29 18:30:46-05:00" class="dt-published"></time>
+  Wed 29 Nov 2023
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pluralistic.net/2023/11/29/aethelred-the-unready/" rel="bookmark" class="u-url"
        title="Pluralistic: Sponsored listings are a ripoff…for sellers (29 Nov 2023)" target="_blank">
       <time class="m-date" datetime="2023-11-29 12:37:28+00:00">
@@ -305,40 +437,6 @@ Dave</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2023/11/2023-11-28-kaljg" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2023-11-28 12:16:00+01:00">
-        Nov
-        <span class="m-date-day">
-          28
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      💬
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  I captured the first real snow this winter this morning ❄️
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-11-28 12:16:00+01:00" class="dt-published"></time>
-  Tue 28 Nov 2023
-  in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://noyb.eu/en/noyb-files-gdpr-complaint-against-meta-over-pay-or-okay" rel="bookmark" class="u-url"
        title="noyb files GDPR complaint against Meta over “Pay or Okay”" target="_blank">
       <time class="m-date" datetime="2023-11-28 07:00:00+00:00">
@@ -431,6 +529,58 @@ Even setting <code>CMAKE_CACHE_ARGS</code> of ExternalProject does not help, nor
   on <time datetime="2023-11-28 00:00:00+00:00" class="dt-published"></time>
   Tue 28 Nov 2023
   in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pythonspeed.com/articles/polars-pandas-interopability/" rel="bookmark" class="u-url"
+       title="Using Polars in a Pandas world" target="_blank">
+      <time class="m-date" datetime="2023-11-28 00:00:00+00:00">
+        Nov
+        <span class="m-date-day">
+          28
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Using Polars in a Pandas world
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Polars is a dataframe-based library that can be faster, <a href="https://pythonspeed.com/articles/polars-memory-pandas/">more memory efficient</a>, and often simpler to use than Pandas.
+It’s also much newer, and correspondingly less popular.
+In November 2023:</p>
+
+<ul>
+  <li>Polars had ~2.6 million downloads from PyPI.</li>
+  <li>Pandas had ~140 million downloads!</li>
+</ul>
+
+<p>Because of Pandas’ popularity and decade and a half of availability, there are many third-party libraries with built-in support for Pandas, and others that specifically extend Pandas.
+Many plotting and visualization libraries will accept Pandas dataframes as an input, for example, and GeoPandas adds geographical data types to Pandas dataframes.
+If you’re using Polars, can you use these libraries?
+And if so, how?</p>
+
+<p>In this article we’ll cover the various integration options you have between Polars and third-party libraries originally designed to work with Pandas:</p>
+
+<ul>
+  <li>It Just Works.</li>
+  <li>Manual conversion to Pandas dataframes, and …</li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-11-28 00:00:00+00:00" class="dt-published"></time>
+  Tue 28 Nov 2023
+  in Python⇒Speed.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -762,56 +912,6 @@ Major new features of the 3.13 series, compared to 3.12<p>&nbsp;</p><p>Python 3.
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pythonspeed.com/articles/two-thread-pools/" rel="bookmark" class="u-url"
-       title="Two kinds of threads pools, and why you need both" target="_blank">
-      <time class="m-date" datetime="2023-11-21 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          21
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Two kinds of threads pools, and why you need both
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>When you’re doing large scale data processing with Python, threads are a good way to achieve parallelism.
-This is especially true if you’re doing numeric processing, where <a href="https://pythonspeed.com/articles/python-gil/">the global interpreter lock (GIL)</a> is typically not an issue.
-And if you’re using threading, thread pools are a good way to make sure you don’t use too many resources.</p>
-
-<p>But how many threads should your thread pool have?
-And do you need just one thread pool, or more than one?</p>
-
-<p>In this article we’ll see that for data processing batch jobs:</p>
-
-<ol>
-  <li>There are two kinds of thread pools, each for different use cases.</li>
-  <li>Each kind requires a different configuration.</li>
-  <li>You might need both.</li>
-</ol>
-
-
-   <a href="https://pythonspeed.com/articles/two-thread-pools/">Read more...</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-11-21 00:00:00+00:00" class="dt-published"></time>
-  Tue 21 Nov 2023
-  in Python⇒Speed.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://ekaitz.elenq.tech/bye-protonmail.html" rel="bookmark" class="u-url"
        title="Bye Protonmail" target="_blank">
       <time class="m-date" datetime="2023-11-21 00:00:00+02:00">
@@ -934,53 +1034,6 @@ Python Morsels helps developers <strong>deepen their Python skills</strong> in a
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://lucumr.pocoo.org/2023/11/19/cathedral-and-bazaaar-licensing/" rel="bookmark" class="u-url"
-       title="FSL: A License For the Bazaar, Not the Cathedral" target="_blank">
-      <time class="m-date" datetime="2023-11-19 00:00:00+00:00">
-        Nov
-        <span class="m-date-day">
-          19
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      FSL: A License For the Bazaar, Not the Cathedral
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Sentry relicensed under a new license, called the <a href="https://fsl.software/">Functional Source
-License (FSL)</a>.  Like the BUSL it replaces,
-It's not an Open Source license by the OSI definition, but it comes with
-an irrevocable grant: after two years it turns into an Apache 2.0 licensed
-artifact (or MIT for the alternative form).  It's the response to a lot of
-feedback we have received about our previous use of the <a href="https://spdx.org/licenses/BUSL-1.1.html">BUSL</a>.  You can read all about
-the switch to FSL
-in the <a href="https://blog.sentry.io/introducing-the-functional-source-license-freedom-without-free-riding/">Announcement Blog Post</a>.  (You can also find my original thoughts on <a href="http://lucumr.pocoo.org/2019/11/4/open-source-and-saas/">the use
-of the BUSL here</a>.)</p>
-<p>I believe this license to be closer to Open Source than what we had
-before.</p>
-<p>When I started Open Source development, there was a very famous essay
-by Eric S. Raymond called “The Cathedral and the Bazaar”.  It describes
-the bazaar style …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Armin Ronacher</b></span>
-  on <time datetime="2023-11-19 00:00:00+00:00" class="dt-published"></time>
-  Sun 19 Nov 2023
-  in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://tonsky.me/talks/" rel="bookmark" class="u-url"
        title="Podcast: Escaping Software Disenchantment @ Software Unscripted" target="_blank">
       <time class="m-date" datetime="2023-11-18 00:00:00+00:00">
@@ -1083,49 +1136,6 @@ Support Python in 2023!
   on <time datetime="2023-11-15 10:30:00.010000-05:00" class="dt-published"></time>
   Wed 15 Nov 2023
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202311/debug_helpers_in_coveragepy.html" rel="bookmark" class="u-url"
-       title="Debug helpers in coverage.py" target="_blank">
-      <time class="m-date" datetime="2023-11-12 16:40:51-05:00">
-        Nov
-        <span class="m-date-day">
-          12
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Debug helpers in coverage.py
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Debugging in the coverage.py code can be difficult, so I&#8217;ve written a lot of
-helper code to support debugging.  I just added some more.</p><p>These days I&#8217;m working on adding support in coverage.py for
-<a href="https://docs.python.org/3/library/sys.monitoring.html">sys.monitoring</a>.  This is a new feature in Python 3.12
-that completely changes how Python reports information about program execution.
-It&#8217;s a big change to coverage.py and it&#8217;s a new feature in Python, so while
-working on it I&#8217;ve been confused a lot.</p><p>Some of the confusion has been about <a href="https://github.com/python/cpython/issues/111963">how sys.monitoring
-works</a>, and some was eventually diagnosed as a <a href="https://github.com/python/cpython/issues/111984">genuine
-bug involving sys.monitoring</a>.  But all of it started as straight-up &#8220;WTF!?&#8221;
-confusion.  My preferred debugging approach at times like this is to log a lot
-of detailed information and then pore over it.</p><p>For …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2023-11-12 16:40:51-05:00" class="dt-published"></time>
-  Sun 12 Nov 2023
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
