@@ -164,34 +164,32 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.davidrevoy.com/article1008/ada-from-ada-zangemann" rel="bookmark" class="u-url"
-       title="Ada from "Ada & Zangemann"" target="_blank">
-      <time class="m-date" datetime="2023-12-04 18:46:00+01:00">
+    <a href="https://pluralistic.net/2023/12/05/third-party-nonconsensual-releases/" rel="bookmark" class="u-url"
+       title="Pluralistic: Pedophiles for Purdue Pharma (05 Dec 2023)" target="_blank">
+      <time class="m-date" datetime="2023-12-05 10:59:20+00:00">
         Dec
         <span class="m-date-day">
-          04
+          05
         </span>
         2023
       </time>
       <div class="p-name">
-      Ada from "Ada & Zangemann"
+      Pluralistic: Pedophiles for Purdue Pharma (05 Dec 2023)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <a href="https://www.davidrevoy.com/data/images/blog/2023/2023-12-03_ada-zangemann.jpg"><img alt="" src="https://www.davidrevoy.com//plugins/vignette/plxthumbnailer.php?src=https://www.davidrevoy.com/data/images/blog/2023/2023-12-03_ada-zangemann.jpg&amp;w=900&amp;h=800&amp;zc=4&amp;s=1&amp;q=86" title=""></a><p>My version of the character Ada from "Ada &amp; Zangemann", a Creative Commons license (BY-SA) book for children and a funny story about Free/Libre and Open-Source. It's written by Matthias Kirschner and illustrated by Sandra Brandstätter. It is great to see new characters in the Free Culture, especially because Ada is so cool. </p>
-<p>You can find it printed in English, French, German, Italian → <a href="https://fsfe.org/activities/ada-zangemann/">https://fsfe.org/activities/ada-zangemann/</a></p>
-<p><a href="https://www.peppercarrot.com/en/viewer/misc__2023-12-03_Ada-and-Zangemann_by-David-Revoy.html">Source file here</a></p>
+  Today's links Pedophiles for Purdue Pharma: With amici like these&#8230; Hey look at this: Delights to delectate. This day in history: 2008, 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Pedophiles for Purdue Pharma (permalink) It's not merely that the Sacklers &#8211; a multigenerational, ultra-wealthy drug-pusher dynasty &#8211; made billions while murdering hundreds of thousands of Americans by lying about the safety of Oxycontin, the flagship product of their Purdue Pharma drug company. It's that they got away with it. After a decade-long crime spree in which the family used a combination of elite philanthropy and vicious legal threats against critics (including me!) to maintain a squeaky-clean image, the Sackler name is finally a synonym for mass murder, and will forever be a curse. But though they lost their name, they kept their billions. In so …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>David REVOY</b></span>
-  on <time datetime="2023-12-04 18:46:00+01:00" class="dt-published"></time>
-  Mon 04 Dec 2023
-  in David Revoy.
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2023-12-05 10:59:20+00:00" class="dt-published"></time>
+  Tue 05 Dec 2023
+  in Pluralistic.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -200,9 +198,9 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2023/12/04/cahokia/" rel="bookmark" class="u-url"
-       title="Pluralistic: Francis Spufford's "Cahokia Jazz" (04 Dec 2023)" target="_blank">
-      <time class="m-date" datetime="2023-12-04 13:05:59+00:00">
+    <a href="https://jvns.ca/blog/2023/12/04/mounting-git-commits-as-folders-with-nfs/" rel="bookmark" class="u-url"
+       title="Mounting git commits as folders with NFS" target="_blank">
+      <time class="m-date" datetime="2023-12-04 09:28:03+00:00">
         Dec
         <span class="m-date-day">
           04
@@ -210,22 +208,35 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
         2023
       </time>
       <div class="p-name">
-      Pluralistic: Francis Spufford's "Cahokia Jazz" (04 Dec 2023)
+      Mounting git commits as folders with NFS
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Francis Spufford's "Cahokia Jazz": A stunning alternate history that fires on every cylinder. Hey look at this: Delights to delectate. This day in history: 2003, 2008, 2013, 2018, 2022 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Francis Spufford's "Cahokia Jazz" (permalink) Francis Spufford's Cahokia Jazz is a fucking banger: it's a taut, unguessable whuddunit, painted in ultrablack noir, set in an alternate Jazz Age in a world where indigenous people never ceded most the west to the USA. It's got gorgeously described jazz music, a richly realized modern indigenous society, and a spectacular romance. It's amazing: https://www.simonandschuster.com/books/Cahokia-Jazz/Francis-Spufford/9781668025451 Cahokia is the capital city of Deseret, a majority Catholic, majority indigenous state at the western frontier of the USA. It swirls with industry, wealth, and racial politics, serving as …
+  <p>Hello! The other day, I started wondering &ndash; has anyone ever made a FUSE
+filesystem for a git repository where all every commit is a folder? It turns
+out the answer is yes! There&rsquo;s <a href="https://github.com/fanzeyi/giblefs">giblefs</a>,
+<a href="https://belkadan.com/blog/2023/11/GitMounter/">GitMounter</a>, and <a href="https://orib.dev/git9.html">git9</a> for Plan 9.</p>
+
+<p>But FUSE is pretty annoying to use on Mac &ndash; you need to install a kernel
+extension, and Mac OS seems to be making it harder and harder to install kernel
+extensions for security reasons. Also I had a few ideas for how to organize the
+filesystem differently than those projects.</p>
+
+<p>So I thought it would be fun to experiment with ways to mount filesystems on
+Mac OS other than FUSE, so I built a project that does that called
+<a href="https://github.com/jvns/git-commit-folders">git-commit-folders</a>. It works (at least on my computer) with both FUSE and NFS, and there&rsquo;s a broken WebDav
+implementation …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-12-04 13:05:59+00:00" class="dt-published"></time>
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-12-04 09:28:03+00:00" class="dt-published"></time>
   Mon 04 Dec 2023
-  in Pluralistic.
+  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -252,7 +263,10 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   <p>
   <span>noyb sues CRIF and AZ Direct for illegal and secret data processing</span>
 
-                    noyb is suing for injunctive relief and damages, among other things.<img alt="CRIF / AZ Direct Klage" src="https://noyb.eu/sites/default/files/styles/media_large/public/2023-11/crifaz-direct_header.png?itok=LggWzl0c">
+                    noyb is suing for injunctive relief and damages, among other things.
+
+
+                      <img alt="CRIF / AZ Direct Klage" src="https://noyb.eu/sites/default/files/styles/media_large/public/2023-11/crifaz-direct_header.png?itok=LggWzl0c">
   </p>
   </div>
 </header>
@@ -599,7 +613,7 @@ which is a good succinct way to say it.  And when a co-worker brought …</p>
   </h1>
   <div class="p-summary">
   <p>
-  Add new convenient APIs to format type names the same way in Python and in C. No longer format type names differently depending on how types are implemented. Also, put an end to truncating type names in C. The new C API is compatible with the limited C API.
+  Add new convenient APIs to format type names the same way in Python and in C. No longer format type names differently depending on how types are implemented. No longer truncate type names in the standard library.
   </p>
   </div>
 </header>
@@ -782,58 +796,6 @@ the aim of establishing the patterns …</p>
   on <time datetime="2023-11-23 18:40:47+00:00" class="dt-published"></time>
   Thu 23 Nov 2023
   in Doctor Fortran.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2023/11/23/branches-intuition-reality/" rel="bookmark" class="u-url"
-       title="git branches: intuition & reality" target="_blank">
-      <time class="m-date" datetime="2023-11-23 09:51:27+00:00">
-        Nov
-        <span class="m-date-day">
-          23
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      git branches: intuition & reality
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! I&rsquo;ve been working on writing a zine about git so I&rsquo;ve been thinking
-about git branches a lot. I keep hearing from people that they find the way git
-branches work to be counterintuitive. It got me thinking:  what might an
-&ldquo;intuitive&rdquo; notion of a branch be, and how is it different from how git
-actually works?</p>
-
-<p>So in this post I want to briefly talk about</p>
-
-<ul>
-<li>an intuitive mental model I think many people have</li>
-<li>how git actually represents branches internally (&ldquo;branches are a pointer to a commit&rdquo; etc)</li>
-<li>how the &ldquo;intuitive model&rdquo; and the real way it works are actually pretty closely related</li>
-<li>some limits of the intuitive model and why it might cause problems</li>
-</ul>
-
-<p>Nothing in this post is remotely groundbreaking so I&rsquo;m going to try to keep it pretty short.</p>
-
-
-an intuitive …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-11-23 09:51:27+00:00" class="dt-published"></time>
-  Thu 23 Nov 2023
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
