@@ -164,32 +164,41 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2023/12/08/playstationed/" rel="bookmark" class="u-url"
-       title="Pluralistic: "If buying isn't owning, piracy isn't stealing" (08 Dec 2023)" target="_blank">
-      <time class="m-date" datetime="2023-12-08 14:17:37+00:00">
+    <a href="https://nedbatchelder.com/blog/202312/realworld_matchcase.html" rel="bookmark" class="u-url"
+       title="Real-world match/case" target="_blank">
+      <time class="m-date" datetime="2023-12-10 13:21:00-05:00">
         Dec
         <span class="m-date-day">
-          08
+          10
         </span>
         2023
       </time>
       <div class="p-name">
-      Pluralistic: "If buying isn't owning, piracy isn't stealing" (08 Dec 2023)
+      Real-world match/case
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links "If buying isn't owning, piracy isn't stealing": When Big Content makes the paid version *worse* than the free one. Hey look at this: Delights to delectate. This day in history: 2003, 2008, 2018, 2022. Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading "If buying isn't owning, piracy isn't stealing" (permalink) 20 years ago, I got in a (friendly) public spat with Chris Anderson, who was then the editor in chief of Wired. I'd publicly noted my disappointment with glowing Wired reviews of DRM-encumbered digital devices, prompting Anderson to call me unrealistic for expecting the magazine to condemn gadgets for their DRM: https://longtail.typepad.com/the_long_tail/2004/12/is_drm_evil.html I replied in public, telling him that he'd misunderstood. This wasn't an issue of ideological purity &#8211; it was about good reviewing practice. Wired was telling …
+  <p>Python 3.10 brought us structural pattern matching, better known as
+<b>match/case</b>.  At first glance, it looks like a switch statement from C or
+JavaScript, but it&#8217;s very different.</p><p>You can use match/case to match specific literals, similar to how switch
+statements work, but their point is to match patterns in the structure of data,
+not just values. <a href="https://peps.python.org/pep-0636/">PEP 636:
+Structural Pattern Matching: Tutorial</a> does a good job explaining the
+mechanics, but feels like a toy example.</p><p>Here&#8217;s a real-world use: at work we have a GitHub bot installed as a
+webhook.  When something happens in one of our repos, GitHub sends a payload of
+JSON data to our bot.  The bot has to examine the decoded payload to decide what
+to do.</p><p>These payloads are complex: they are dictionaries with only 6 or 8 keys …</p>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2023-12-08 14:17:37+00:00" class="dt-published"></time>
-  Fri 08 Dec 2023
-  in Pluralistic.
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2023-12-10 13:21:00-05:00" class="dt-published"></time>
+  Sun 10 Dec 2023
+  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -198,40 +207,33 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pythoninsider.blogspot.com/2023/12/python-3121-is-now-available.html" rel="bookmark" class="u-url"
-       title="Python 3.12.1 is now available" target="_blank">
-      <time class="m-date" datetime="2023-12-07 19:50:00-05:00">
+    <a href="https://pythoninsider.blogspot.com/2023/12/python-3117-is-now-available.html" rel="bookmark" class="u-url"
+       title="Python 3.11.7 is now available" target="_blank">
+      <time class="m-date" datetime="2023-12-10 11:10:00.002000-05:00">
         Dec
         <span class="m-date-day">
-          07
+          10
         </span>
         2023
       </time>
       <div class="p-name">
-      Python 3.12.1 is now available
+      Python 3.11.7 is now available
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  <p>&nbsp;</p><p>Python 3.12.1 is now available.</p><p><a href="https://www.python.org/downloads/release/python-3121/">https://www.python.org/downloads/release/python-3121/</a></p><p>&nbsp;</p>
-This is the first maintenance release of Python 3.12
-<p>Python 3.12 is the newest major release of the Python programming language, and it contains many new features and optimizations. 3.12.1 is the latest maintenance release, containing more than 400 bugfixes, build improvements and documentation changes since 3.12.0.</p>
-
-<a href="https://discuss.python.org/t/python-3-12-0-final-is-here/35186#major-new-features-of-the-312-series-compared-to-311-2"></a>&nbsp;
-Major new features of the 3.12 series, compared to 3.11
-
-<a href="https://discuss.python.org/t/python-3-12-0-final-is-here/35186#new-features-3"></a>&nbsp;
-New features
-<ul><li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-701-syntactic-formalization-of-f-strings">More flexible f-string parsing </a>, allowing many things previously disallowed (<a href="https://peps.python.org/pep-0701/">PEP 701</a>).</li><li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-688-making-the-buffer-protocol-accessible-in-python">Support for the buffer protocol </a> in Python code (<a href="https://peps.python.org/pep-0688/">PEP 688</a>).</li><li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-669-low-impact-monitoring-for-cpython">A new debugging/profiling API </a> (<a href="https://peps.python.org/pep-0669/">PEP 669</a>).</li><li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#pep-684-a-per-interpreter-gil">Support for isolated subinterpreters </a> with separate Global Interpreter Locks (<a href="https://peps.python.org/pep-0684">PEP 684</a>).</li><li><a href="https://docs.python.org/3.12/whatsnew/3.12.html#improved-error-messages">Even more improved error messages</a>. More exceptions potentially caused by typos now make suggestions to the user.</li><li><a href="https://docs.python.org/3.12/howto/perf_profiling.html">Support for the …</a></li></ul>
+  <p>&nbsp;&nbsp;</p><div><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEickKZquPSoujo5pHqw1C1q7m4_kEMV27tJ-7lIt1sxNnzvPQMpKso_RVbnrnkq1x4rQ2Ybx8zmTy-LmL3K5Ye3fP_bfwTdMRSFhFRCGcLXLNNtlj4mEurgdSvz5msOKq1fmLGKVfeXxxVh9W_SzLCfK9M5HsviItUSLPy19qTWch9mMh5YWpmCjC0a/s507/311logo.png"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEickKZquPSoujo5pHqw1C1q7m4_kEMV27tJ-7lIt1sxNnzvPQMpKso_RVbnrnkq1x4rQ2Ybx8zmTy-LmL3K5Ye3fP_bfwTdMRSFhFRCGcLXLNNtlj4mEurgdSvz5msOKq1fmLGKVfeXxxVh9W_SzLCfK9M5HsviItUSLPy19qTWch9mMh5YWpmCjC0a/s320/311logo.png"></a></div><p></p>
+This is the sixth maintenance release of Python 3.11<p>Python 3.11.7 is the newest major release of the Python programming language, and it contains many new features and optimizations. Get it here:</p><p><a href="https://www.python.org/downloads/release/python-3117/">https://www.python.org/downloads/release/python-3117/</a></p>
+<span>Major new features of the 3.11 series, compared to 3.10</span><div><p><span><span>Among the new major new features and changes so far:</span><span></span></span></p><ul><li><span><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657</a>&nbsp;– Include Fine-Grained Error Locations in Tracebacks</span></li><li><span><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654</a>&nbsp;– Exception Groups and except*</span></li><li><span><a href="https://www.python.org/dev/peps/pep-0673/">PEP 673</a>&nbsp;– Self Type</span></li><li><span><a href="https://www.python.org/dev/peps/pep-0646/">PEP 646</a>&nbsp;– Variadic Generics</span></li><li><a href="https://www.python.org/dev/peps/pep-0680/">PEP 680</a>&nbsp;– tomllib: Support for Parsing TOML in the Standard Library</li><li><a href="https://www.python.org/dev/peps/pep-0675/">PEP 675</a>&nbsp;– Arbitrary Literal String Type</li><li><a href="https://www.python.org/dev/peps/pep-0655/">PEP 655</a>&nbsp;– Marking individual TypedDict items as required or potentially-missing</li><li><a href="https://bugs.python.org/issue46752">bpo-46752</a>&nbsp;– Introduce task groups to asyncio</li><li><a href="https://www.python.org/dev/peps/pep-0681/">PEP 681</a>&nbsp;– Data Class Transforms</li><li><a href="https://github.com/python/cpython/issues/34627/">bpo-433030</a>– Atomic grouping ((?&gt;…)) and possessive quantifiers (<code>*+, ++, ?+, {m,n}+</code><span>) are now supported in regular expressions.</span></li><li><span>The&nbsp;<a href="https://github.com/faster-cpython">Faster …</a></span></li></ul></div>
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
-  <span class="p-author"><b>Thomas Wouters (noreply@blogger.com)</b></span>
-  on <time datetime="2023-12-07 19:50:00-05:00" class="dt-published"></time>
-  Thu 07 Dec 2023
+  <span class="p-author"><b>Pablo Galindo (noreply@blogger.com)</b></span>
+  on <time datetime="2023-12-10 11:10:00.002000-05:00" class="dt-published"></time>
+  Sun 10 Dec 2023
   in Python Insider.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -241,8 +243,122 @@ New features
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="http://husemeplz.blogspot.com/2023/12/3-things-i-forced-myself-to-learn-week-3.html" rel="bookmark" class="u-url"
+       title="3 Things I forced myself to learn - Week 3" target="_blank">
+      <time class="m-date" datetime="2023-12-10 16:18:00+05:30">
+        Dec
+        <span class="m-date-day">
+          10
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      3 Things I forced myself to learn - Week 3
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <div>Some good news is creeping up on the horizon for Bankers, as the Five day Banking scheme might finally get implemented. To compensate for the additional non-working days, the daily business hours will be increased. Of course, when you are already working on non-regulated working hours with no overtime, that makes no difference. So, here's to hoping that all weekends shall be worth two whole days as soon as possible.</div><div></div><div>Why is this relevant to this blog? Well, a proper weekend every weekend means that I'll hopefully be able to get back to my routine back in 2013-14, where I took time to write, rather than trying to cram my thoughts into semi-coherent thoughts, late on a Saturday night, while watching some Premier League football.</div><div></div><div>***</div><div></div><div>For this week's blog, which is coming nearly 48 hours late, we are going tp …</div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Harisankar S A (noreply@blogger.com)</b></span>
+  on <time datetime="2023-12-10 16:18:00+05:30" class="dt-published"></time>
+  Sun 10 Dec 2023
+  in Excuse me please.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://buttondown.email/jesper/archive/how-rude-olph-me-for-eating-the-last-cookie/" rel="bookmark" class="u-url"
+       title="🦌 How rude-olph me for eating the last cookie" target="_blank">
+      <time class="m-date" datetime="2023-12-09 19:20:31+00:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      🦌 How rude-olph me for eating the last cookie
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>it’s another beautiful weekend, the end of 2023. So let’s enjoy some of the late machine learning additions. Today we have a spicy one!</p>
+
+The Latest Fashion
+<ul>
+<li>It looks like the <a href="https://techcrunch.com/2023/12/07/googles-best-gemini-demo-was-faked/?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=how-rude-olph-me-for-eating-the-last-cookie">impressive Google Gemini demo wasn’t</a> all it was made out to be…</li>
+<li>Run Hugging Face’s <a href="https://github.com/chengzeyi/stable-fast?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=how-rude-olph-me-for-eating-the-last-cookie">” diffusers” diffusion models blazingly fast</a></li>
+<li>Fooocus is an <a href="https://github.com/lllyasviel/Fooocus?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=how-rude-olph-me-for-eating-the-last-cookie">open image generator</a> inspired by stable diffusion and Midjourney. The pictures are astonishing.</li>
+</ul>
+<p><em>Got this from a friend? <a href="https://buttondown.email/jesper/referral/?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=how-rude-olph-me-for-eating-the-last-cookie">Subscribe here</a>!</em></p>
+
+My Current Obsession
+<p>I finally finished the big big project I have been wrecking my brain over the past months at work. I am very proud of the work, and I hope this elevates AIFS so that even non-ML experts can now create a lot of exciting experiments!</p>
+<p>You can even see I missed two days on the <a href="https://github.com/JesperDramsch/advent-of-code/?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=how-rude-olph-me-for-eating-the-last-cookie">Advent of Code</a>, my …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-12-09 19:20:31+00:00" class="dt-published"></time>
+  Sat 09 Dec 2023
+  in Late To The Party 🎉.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pluralistic.net/2023/12/09/gallimaufry/" rel="bookmark" class="u-url"
+       title="Pluralistic: Kinkslump Linkdump (09 Dec 2023)" target="_blank">
+      <time class="m-date" datetime="2023-12-09 15:52:51+00:00">
+        Dec
+        <span class="m-date-day">
+          09
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Pluralistic: Kinkslump Linkdump (09 Dec 2023)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Kinkslump Linkdump: A week's worth of assortment. This day in history: 2008, 2013, 2018 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Kinkslump Linkdump (permalink) This is my dozenth linkdump! The world comes at you fast, and even though I'm writing 4-5 essays a week for this newsletter, many's the week that ends with more stray links than will fit in that format. Here's the previous ones: https://pluralistic.net/tag/linkdump/ I managed to turn out five posts last week, despite being on tour with my latest novel, The Lost Cause, a hopeful solarpunk novel endorsed by Rebecca Solnit, Bill McKibben and Kim Stanley Robinson. The tour went great &#8211; the book's now a national bestseller on the USA Today list! Here's an essay I wrote explaining the structure of the feeling that the book …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2023-12-09 15:52:51+00:00" class="dt-published"></time>
+  Sat 09 Dec 2023
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://xkcd.com/2865/" rel="bookmark" class="u-url"
-       title="the Wrong Stuff" target="_blank">
+       title="The Wrong Stuff" target="_blank">
       <time class="m-date" datetime="2023-12-08 00:00:00+00:00">
         Dec
         <span class="m-date-day">
@@ -251,7 +367,7 @@ New features
         2023
       </time>
       <div class="p-name">
-      the Wrong Stuff
+      The Wrong Stuff
       </div>
     </a>
   </h1>
@@ -464,86 +580,6 @@ implementation …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="http://husemeplz.blogspot.com/2023/12/3-things-i-forced-myself-to-learn-week-2.html" rel="bookmark" class="u-url"
-       title="3 Things I forced myself to learn - Week 2" target="_blank">
-      <time class="m-date" datetime="2023-12-03 10:37:00+05:30">
-        Dec
-        <span class="m-date-day">
-          03
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      3 Things I forced myself to learn - Week 2
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <div>History always repeats itself - mostly because the lessons of history fades away from our memory. The Malayalam movie TRAFFIC showed a possibility which arises from jumping traffic signals. People were very wary of it then, not so much now - I was a witness to a near miss event just today.</div><div></div><div>P.S. The flavour of the hour is to hold tight your kid's hands, and never let them get away from your sight.&nbsp;</div><div></div><div>Coming back to topic, there is a reason why you chose not to watch THAT movie till date. With zero external compulsion, with no threats of blackmail, and with no tantalizing reward on offer, why I still chose to watch PERUCHAZHI will always be an enigma. Why I chose to complete watching the movie is on me though.</div><div></div><div>After intensely studying the subject for close to two …</div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Harisankar S A (noreply@blogger.com)</b></span>
-  on <time datetime="2023-12-03 10:37:00+05:30" class="dt-published"></time>
-  Sun 03 Dec 2023
-  in Excuse me please.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://buttondown.email/jesper/archive/lucky-i-got-an-advent-calendar-their-days-are-numbered/" rel="bookmark" class="u-url"
-       title="🎄 Lucky I got an advent calendar, their days are numbered" target="_blank">
-      <time class="m-date" datetime="2023-12-02 18:19:43+00:00">
-        Dec
-        <span class="m-date-day">
-          02
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      🎄 Lucky I got an advent calendar, their days are numbered
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>The Christmas season started! Let’s look at some merry machine learning!</p>
-
-The Latest Fashion
-<ul>
-<li>Love this idea! They published a high-quality <a href="https://soundcloud.com/emily-m-bender/stochastic-parrots?si=94532ca828264f8b95527b32fab943e2&amp;utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=lucky-i-got-an-advent-calendar-their-days-are-numbered">audiobook version of the Stochastic Parrot Paper</a>!</li>
-<li><a href="https://github.com/ritchieng/the-incredible-pytorch?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=lucky-i-got-an-advent-calendar-their-days-are-numbered">The Incredible Pytorch</a> is a curated list of various content around Pytorch</li>
-<li>Friends don’t let <a href="https://github.com/cxli233/FriendsDontLetFriends?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=lucky-i-got-an-advent-calendar-their-days-are-numbered">friends make pie charts</a>.</li>
-</ul>
-<p><em>Got this from a friend? <a href="https://buttondown.email/jesper/referral/?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=lucky-i-got-an-advent-calendar-their-days-are-numbered">Subscribe here</a>!</em></p>
-
-My Current Obsession
-<p>It’s that time of the year again! <a href="https://github.com/JesperDramsch/advent-of-code/?utm_source=jesper&amp;utm_medium=email&amp;utm_campaign=lucky-i-got-an-advent-calendar-their-days-are-numbered">🎄 Advent of Code 🎄</a> is on!</p>
-<p>This was probably the most challenging Day 1 ever in the history of AoC, but I’m once again in love with code puzzling every day. In case you don’t know it yet, it’s an advent calendar, where you unlock a puzzle with two parts every day. They’re usually more accessible in the first week and more complex on the weekends when people have more …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-12-02 18:19:43+00:00" class="dt-published"></time>
-  Sat 02 Dec 2023
-  in Late To The Party 🎉.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://lucumr.pocoo.org/2023/12/1/the-python-that-was/" rel="bookmark" class="u-url"
        title="Untyped Python: The Python That Was" target="_blank">
       <time class="m-date" datetime="2023-12-01 00:00:00+00:00">
@@ -617,56 +653,6 @@ Intel oneAPI iostat codes are
   on <time datetime="2023-11-30 00:00:00+00:00" class="dt-published"></time>
   Thu 30 Nov 2023
   in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202311/say_it_again_values_not_expressions.html" rel="bookmark" class="u-url"
-       title="Say it again: values not expressions" target="_blank">
-      <time class="m-date" datetime="2023-11-29 18:30:46-05:00">
-        Nov
-        <span class="m-date-day">
-          29
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Say it again: values not expressions
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Sometimes you can explain a simple thing for the thousandth time,
-and come away with a deeper understanding yourself.  It happened to me the
-other day with Python mutable argument default values.
-</p><p>This is a classic Python &#8220;gotcha&#8221;: you can provide a default value for a
-function argument, but it will only be evaluated once:</p><blockquote><pre><span>&gt;&gt;&gt;&#xa0;</span><span>def</span>&#xa0;<span>doubled</span><span>(</span><span>item</span><span>,</span>&#xa0;<span>the_list</span><span>=</span><span>[]):</span>
-<span>...&#xa0;</span>&#xa0;&#xa0;&#xa0;&#xa0;<span>the_list</span><span>.</span><span>append</span><span>(</span><span>item</span><span>)</span>
-<span>...&#xa0;</span>&#xa0;&#xa0;&#xa0;&#xa0;<span>the_list</span><span>.</span><span>append</span><span>(</span><span>item</span><span>)</span>
-<span>...&#xa0;</span>&#xa0;&#xa0;&#xa0;&#xa0;<span>return</span>&#xa0;<span>the_list</span>
-<span>...</span>
-<span>&gt;&gt;&gt;&#xa0;</span><span>print</span><span>(</span><span>doubled</span><span>(</span><span>10</span><span>))</span>
-<span>[10,&#xa0;10]</span>
-<span>&gt;&gt;&gt;&#xa0;</span><span>print</span><span>(</span><span>doubled</span><span>(</span><span>99</span><span>))</span>
-<span>[10,&#xa0;10,&#xa0;99,&#xa0;99]&#xa0;&#xa0;&#xa0;&#xa0;#&#xa0;WHAT!?</span>
-</pre></blockquote><p>I&#8217;ve seen people be surprised by this and ask about it countless times.
-And countless times I&#8217;ve said, &#8220;Yup, the value is only calculated once, and
-stored on the function.&#8221;</p><p>But recently I heard someone answer with, &#8220;it&#8217;s a value, not an expression,&#8221;
-which is a good succinct way to say it.  And when a co-worker brought …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2023-11-29 18:30:46-05:00" class="dt-published"></time>
-  Wed 29 Nov 2023
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
