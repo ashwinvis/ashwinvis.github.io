@@ -164,6 +164,120 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://nedbatchelder.com/blog/202312/coveragepy_with_sysmonitoring.html" rel="bookmark" class="u-url"
+       title="Coverage.py with sys.monitoring" target="_blank">
+      <time class="m-date" datetime="2023-12-27 18:03:33-05:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Coverage.py with sys.monitoring
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>New in Python 3.12 is <a href="https://docs.python.org/3/library/sys.monitoring.html">sys.monitoring</a>, a
+lighter-weight way to monitor the execution of Python programs.
+<a href="https://pypi.org/project/coverage/7.4.0">Coverage.py 7.4.0</a> now
+can optionally use sys.monitoring instead of
+<a href="https://docs.python.org/3/library/sys.html#sys.settrace">sys.settrace</a>, the facility that has underpinned
+coverage.py for nearly two decades.  This is a big change, both in Python and in
+coverage.py.  It would be great if you could try it out and provide some
+feedback.</p><p>Using sys.monitoring should reduce the overhead of coverage measurement,
+often lower than 5%, but of course your timings might be different.  One of the
+things I would like to know is what your real-world speed improvements are
+like.</p><p>Because the support is still a bit experimental, you need to define an
+environment variable to use it: <code>COVERAGE_CORE=sysmon</code>.
+Eventually, sys.monitoring will be automatically used where possible, but for …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2023-12-27 18:03:33-05:00" class="dt-published"></time>
+  Wed 27 Dec 2023
+  in Ned Batchelder's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://snarky.ca/my-proof-of-concept-record-type/" rel="bookmark" class="u-url"
+       title="My proof-of-concept record type" target="_blank">
+      <time class="m-date" datetime="2023-12-27 19:46:35+00:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      My proof-of-concept record type
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Back in June, I <a href="https://snarky.ca/proposing-a-struct-syntax/">proposed a struct syntax for Python</a>. I shared the <a href="https://fosstodon.org/@brettcannon/110476181318093137">post on Mastodon</a> and got <a href="https://fosstodon.org/@brettcannon/110499844746248531">some feedback</a>. Afterwards I thought about what I heard and talked it over with some folks. I&apos;ve now coded up a proof-of-concept to share to get some more feedback from</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Brett Cannon</b></span>
+  on <time datetime="2023-12-27 19:46:35+00:00" class="dt-published"></time>
+  Wed 27 Dec 2023
+  in Tall, Snarky Canadian.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2873/" rel="bookmark" class="u-url"
+       title="Supersymmetry" target="_blank">
+      <time class="m-date" datetime="2023-12-27 00:00:00+00:00">
+        Dec
+        <span class="m-date-day">
+          27
+        </span>
+        2023
+      </time>
+      <div class="p-name">
+      Supersymmetry
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="High-speed collisions at the Baby Park track may support the hypothesis that Daisy is her own evil twin, a theory first suggested by Nintendo in the game Majorana's Mask." src="https://imgs.xkcd.com/comics/supersymmetry.png" title="High-speed collisions at the Baby Park track may support the hypothesis that Daisy is her own evil twin, a theory first suggested by Nintendo in the game Majorana's Mask.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2023-12-27 00:00:00+00:00" class="dt-published"></time>
+  Wed 27 Dec 2023
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://drewdevault.com/2023/12/26/2023-12-26-Prusa-is-floundering.html" rel="bookmark" class="u-url"
        title="Why Prusa is floundering, and how you can avoid their fate" target="_blank">
       <time class="m-date" datetime="2023-12-26 00:00:00+00:00">
@@ -209,40 +323,6 @@ work in developing a non-free license for …</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://xkcd.com/2872/" rel="bookmark" class="u-url"
-       title="Hydrothermal Vents" target="_blank">
-      <time class="m-date" datetime="2023-12-25 00:00:00+00:00">
-        Dec
-        <span class="m-date-day">
-          25
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Hydrothermal Vents
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Benthic Santas weren't even discovered until the 1970s, but many scientists now believe Christmas may have originally developed around hydrothermal vents and only later migrated to the surface." src="https://imgs.xkcd.com/comics/hydrothermal_vents.png" title="Benthic Santas weren't even discovered until the 1970s, but many scientists now believe Christmas may have originally developed around hydrothermal vents and only later migrated to the surface.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2023-12-25 00:00:00+00:00" class="dt-published"></time>
-  Mon 25 Dec 2023
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://lucumr.pocoo.org/2023/12/25/life-and-death-of-open-source/" rel="bookmark" class="u-url"
        title="The Life and Death of Open Source Companies" target="_blank">
       <time class="m-date" datetime="2023-12-25 00:00:00+00:00">
@@ -279,40 +359,6 @@ I toyed around with 3D printing and it was mostly in the context of …</p>
   on <time datetime="2023-12-25 00:00:00+00:00" class="dt-published"></time>
   Mon 25 Dec 2023
   in Armin Ronacher's Thoughts and Writings.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://snarky.ca/announcing-mousebender-2023/" rel="bookmark" class="u-url"
-       title="State of standardized lock files: December 2023" target="_blank">
-      <time class="m-date" datetime="2023-12-24 22:05:05+00:00">
-        Dec
-        <span class="m-date-day">
-          24
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      State of standardized lock files: December 2023
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Back in October, I released <a href="https://pypi.org/project/mousebender/">mousebender</a> 2023.2. The biggest change was adding support for <a href="https://peps.python.org/pep-0714/">PEP 714</a> (which unless you&apos;re running a package index you don&apos;t need to know about it). The other small thing was adding <a href="https://mousebender.readthedocs.io/en/latest/simple.html#mousebender.simple.ProjectFileDetails"><code>ProjectFileDetails</code></a> as a union of typed dicts to make</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Brett Cannon</b></span>
-  on <time datetime="2023-12-24 22:05:05+00:00" class="dt-published"></time>
-  Sun 24 Dec 2023
-  in Tall, Snarky Canadian.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -874,49 +920,6 @@ machine. The tools and the tricks to be effective (Zig and <span>NSIS</span> for
   on <time datetime="2023-12-12 03:00:00.034000-05:00" class="dt-published"></time>
   Tue 12 Dec 2023
   in Python Software Foundation News.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://nedbatchelder.com/blog/202312/realworld_matchcase.html" rel="bookmark" class="u-url"
-       title="Real-world match/case" target="_blank">
-      <time class="m-date" datetime="2023-12-10 13:21:00-05:00">
-        Dec
-        <span class="m-date-day">
-          10
-        </span>
-        2023
-      </time>
-      <div class="p-name">
-      Real-world match/case
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Python 3.10 brought us structural pattern matching, better known as
-<b>match/case</b>.  At first glance, it looks like a switch statement from C or
-JavaScript, but it&#8217;s very different.</p><p>You can use match/case to match specific literals, similar to how switch
-statements work, but their point is to match patterns in the structure of data,
-not just values. <a href="https://peps.python.org/pep-0636/">PEP 636:
-Structural Pattern Matching: Tutorial</a> does a good job explaining the
-mechanics, but feels like a toy example.</p><p>Here&#8217;s a real-world use: at work we have a GitHub bot installed as a
-webhook.  When something happens in one of our repos, GitHub sends a payload of
-JSON data to our bot.  The bot has to examine the decoded payload to decide what
-to do.</p><p>These payloads are complex: they are dictionaries with only 6 or 8 keys …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Ned Batchelder</b></span>
-  on <time datetime="2023-12-10 13:21:00-05:00" class="dt-published"></time>
-  Sun 10 Dec 2023
-  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
