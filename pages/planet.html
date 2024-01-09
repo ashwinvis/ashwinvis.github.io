@@ -164,6 +164,115 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://xkcd.com/2878/" rel="bookmark" class="u-url"
+       title="Supernova" target="_blank">
+      <time class="m-date" datetime="2024-01-08 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          08
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Supernova
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="They're a little cagey about exactly where the crossover point lies relative to the likelihood of devastating effects on the planet." src="https://imgs.xkcd.com/comics/supernova.png" title="They're a little cagey about exactly where the crossover point lies relative to the likelihood of devastating effects on the planet.">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-01-08 00:00:00+00:00" class="dt-published"></time>
+  Mon 08 Jan 2024
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/fortran-logical-byte-size/" rel="bookmark" class="u-url"
+       title="Fortran logical boolean C_BOOL" target="_blank">
+      <time class="m-date" datetime="2024-01-08 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          08
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Fortran logical boolean C_BOOL
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Fortran compilers typically use 4 bytes for
+<a href="https://www.intel.com/content/www/us/en/develop/documentation/fortran-compiler-oneapi-dev-guide-and-reference/top/language-reference/expressions-and-assignment-statements/expressions/logical-expressions.html">logical</a>
+while C compilers usually use
+<a href="https://docs.microsoft.com/en-us/cpp/cpp/fundamental-types-cpp#sizes-of-built-in-types">1 byte for bool</a>.</p>
+<p>The Intel oneAPI compiler needs the
+<a href="https://www.intel.com/content/www/us/en/docs/fortran-compiler/developer-guide-reference/2024-0/fpscomp.html">-fpscomp logicals</a>
+flag to use C_BOOL
+<a href="https://community.intel.com/t5/Intel-Fortran-Compiler/ifort-might-return-an-incorrect-C-BOOL-true-in-iso-c-binding/m-p/999050">values</a>
+correctly between C, C++ and Fortran.
+This flag ensures integer values 0,1 corresponding to .false., .true. are used.
+Otherwise by default unexpected values may cause programs to fail at runtime with impossible boolean values like 255.</p>
+<p>In CMake this flag is applied like:</p>
+
+<div><pre><code><span><span><span>if</span>(<span>CMAKE_Fortran_COMPILER_ID</span> <span>MATCHES</span> <span>"^Intel"</span>)<span>
+</span></span></span><span><span><span></span><span>add_compile_options</span>(<span>"$&lt;$&lt;AND:$&lt;COMPILE_LANGUAGE:Fortran&gt;,$&lt;NOT:$&lt;BOOL:${WIN32}&gt;&gt;&gt;:-fpscomp;logicals&gt;"</span>)<span>
+</span></span></span><span><span><span></span><span>endif</span>()</span></span></code></pre></div>
+
+
+<p>For C interoperability, Fortran can use:</p>
+
+<div><pre><code><span><span><span>use</span>,<span> </span><span>intrinsic</span><span> </span><span>::</span><span> </span><span>iso_c_binding</span><span>
+</span></span></span><span><span><span>
+</span></span></span><span><span><span></span><span>logical</span>(<span>kind</span>=<span>C_BOOL</span>)<span> </span><span>::</span><span> </span>L<span>
+</span></span></span><span><span><span></span><span>logical</span><span> </span><span>::</span><span> </span>Q<span>
+</span></span></span><span><span><span>
+</span></span></span><span><span><span></span><span>c_sizeof</span>(L)<span> </span>==<span> </span><span>1</span><span>
+</span></span></span><span><span><span></span><span>c_sizeof</span>(Q)<span> </span>==<span> </span><span>4</span><span>
+</span></span></span><span><span><span></span><span>!</span><span> </span>typically</span></span></code></pre></div>
+<p>while C uses:</p>
+
+<div><pre><code><span><span><span>#include</span> <span>&lt;stdbool.h&gt;</span><span>
+</span></span></span><span><span><span>#include</span> <span>&lt;stdio.h&gt;</span><span>
+</span></span></span><span><span><span></span>
+</span></span><span><span><span>int</span> <span>main</span>(<span>void</span>) {
+</span></span><span><span><span>bool</span> L;
+</span></span><span><span><span>printf</span>(<span>"%zu</span><span>\n</span><span>"</span>, <span>sizeof</span>(L));
+</span></span><span><span>}</span></span></code></pre></div>
+<p>and likewise C++ bool is typically 1 byte:</p>
+
+<div><pre><code><span><span><span>#include</span> <span>&lt;iostream&gt;</span><span>
+</span></span></span><span><span><span></span>
+</span></span><span><span><span>int …</span></span></span></code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-01-08 00:00:00+00:00" class="dt-published"></time>
+  Mon 08 Jan 2024
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="http://husemeplz.blogspot.com/2024/01/3-random-things-week-7.html" rel="bookmark" class="u-url"
        title="3 Random Things - Week 7" target="_blank">
       <time class="m-date" datetime="2024-01-07 20:39:00+05:30">
@@ -279,53 +388,6 @@ My Current Obsession
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/homebrew-cmake-curl-bug/" rel="bookmark" class="u-url"
-       title="Homebrew macOS system Curl bug" target="_blank">
-      <time class="m-date" datetime="2024-01-06 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          06
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Homebrew macOS system Curl bug
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>For <strong>macOS</strong> developers using Homebrew (possibly other package managers too) there is a bug where system Curl was used by build servers and Curl had a bug.
-One package impacted is CMake, though it&rsquo;s not a CMake bug as Kitware CMake binaries using newer Curl are fine.</p>
-<p>The bug causes some TLS/SSL download/upload internet operations to fail.
-This was due to a bug in macOS system Curl.
-While macOS has already updated Curl for end users, some package managers were building binaries on cloud servers with old, bugged Curl version.</p>
-<p>If stuck, one can set an
-<a href="https://github.com/Homebrew/homebrew-core/issues/158759#issuecomment-1874091015">environment variable per command</a>
-to disable TLS v1.3 as a temporary workaround:</p>
-
-<div><pre><code><span><span><span>CURL_SSL_BACKEND</span>=SecureTransport cmake ...</span></span></code></pre></div>
-<p>This is not a
-<a href="https://gitlab.kitware.com/cmake/cmake/-/issues/25522">CMake bug</a>,
-as the CMake binaries downloaded from Kitware work since they are built with a more recent non-macOS-system Curl.
-This …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-06 00:00:00+00:00" class="dt-published"></time>
-  Sat 06 Jan 2024
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://jvns.ca/blog/2024/01/05/do-we-think-of-git-commits-as-diffs--snapshots--or-histories/" rel="bookmark" class="u-url"
        title="Do we think of git commits as diffs, snapshots, and/or histories?" target="_blank">
       <time class="m-date" datetime="2024-01-05 14:00:51+00:00">
@@ -367,40 +429,6 @@ about the <em>primary</em> way people …</p>
   on <time datetime="2024-01-05 14:00:51+00:00" class="dt-published"></time>
   Fri 05 Jan 2024
   in Julia Evans.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2877/" rel="bookmark" class="u-url"
-       title="Fever" target="_blank">
-      <time class="m-date" datetime="2024-01-05 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          05
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Fever
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Hypothermia of below 98.6 K should be treated by leaving the giant molecular cloud and moving to the vicinity of a star." src="https://imgs.xkcd.com/comics/fever.png" title="Hypothermia of below 98.6 K should be treated by leaving the giant molecular cloud and moving to the vicinity of a star.">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-05 00:00:00+00:00" class="dt-published"></time>
-  Fri 05 Jan 2024
-  in xkcd.com.
 </footer>
 <div class="m-clearfix-l"></div>
 
