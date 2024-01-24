@@ -164,32 +164,74 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2024/01/22/anything-that-cant-go-on-forever/" rel="bookmark" class="u-url"
-       title="Pluralistic: Boeing, Spirit and Jetblue, a monopoly horror-story (21 Jan 2024)" target="_blank">
-      <time class="m-date" datetime="2024-01-22 12:32:16+00:00">
+    <a href="https://pluralistic.net/2024/01/23/peter-kien-viktor-ullmann/" rel="bookmark" class="u-url"
+       title="Pluralistic: Dave Maass and Patrick Lay's "Death Strikes: The Emperor of Atlantis" (23 January 2024)" target="_blank">
+      <time class="m-date" datetime="2024-01-23 13:07:42+00:00">
         Jan
         <span class="m-date-day">
-          22
+          23
         </span>
         2024
       </time>
       <div class="p-name">
-      Pluralistic: Boeing, Spirit and Jetblue, a monopoly horror-story (21 Jan 2024)
+      Pluralistic: Dave Maass and Patrick Lay's "Death Strikes: The Emperor of Atlantis" (23 January 2024)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Boeing, Spirit and Jetblue, a monopoly horror-story: 43 years later, Reagan's other shoe drops. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Boeing, Spirit and Jetblue, a monopoly horror-story (permalink) Last week, William Young, an 82 year old federal judge appointed by Ronald Reagan, blocked the merger of Spirit Airlines and Jetblue. It was a seismic event: https://storage.courtlistener.com/recap/gov.uscourts.mad.254267/gov.uscourts.mad.254267.461.0_6.pdf Seismic because the judge's opinion is full of rhetoric associated with the surging antitrust revival, sneeringly dismissed by corporate apologists as "hipster antitrust." Young called America's airlines and "oligopoly," a situation he blamed on out-of-control mergers. As Matt Stoller writes, this is the first airline merger …
+  Today's links Dave Maass and Patrick Lay's "Death Strikes: The Emperor of Atlantis": A graphic novel based on a musical written by inmates at a Nazi death-camp. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Dave Maass and Patrick Lay's "Death Strikes: The Emperor of Atlantis" (permalink) "The Emperor of Atlantis," is an opera written by two Nazi concentration camp inmates, the librettist Peter Kien and the composer Viktor Ullmann, while they were interned in Terezin, a show-camp in Czechoslovakia that housed numerous Jewish artists, who were encouraged to make and display their work as a way of proving to the rest of the world that Nazi camps were humane places. Of course, it was all a sham. Like nearly all …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2024-01-22 12:32:16+00:00" class="dt-published"></time>
-  Mon 22 Jan 2024
+  on <time datetime="2024-01-23 13:07:42+00:00" class="dt-published"></time>
+  Tue 23 Jan 2024
   in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/bash-script-dir/" rel="bookmark" class="u-url"
+       title="Get directory of Bash script" target="_blank">
+      <time class="m-date" datetime="2024-01-23 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          23
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Get directory of Bash script
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Most shells (including Bash) don&rsquo;t have a straightforward way to get the directory of the script being executed. Here&rsquo;s a common
+<a href="https://stackoverflow.com/questions/59895/how-do-i-get-the-directory-where-a-bash-script-is-located-from-within-the-script">one-liner</a>
+to get the script directory:</p>
+
+<div><pre><code><span><span><span>sdir</span>=<span>"</span><span>$(</span> <span>cd</span> <span>"</span><span>$(</span> dirname <span>"</span><span>${</span><span>BASH_SOURCE</span>[0]<span>}</span><span>"</span> <span>)</span><span>"</span> &gt;/dev/null 2&gt;&amp;<span>1</span> &amp;&amp; <span>pwd</span> <span>)</span><span>"</span></span></span></code></pre></div>
+<p>However, for some HPC batch systems, the above may not work as it copies this script to a temporary directory.
+This fallback put after the line above works if &ldquo;qsub&rdquo; batch command was run from this script&rsquo;s directory&ndash;supposing a script file &ldquo;gcc.sh&rdquo; also exists in the same directory as the original script.</p>
+
+<div><pre><code><span><span>[[ ! -f <span>${</span><span>sdir</span><span>}</span>/gcc.sh ]] &amp;&amp; <span>sdir</span>=<span>$PWD</span></span></span></code></pre></div>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-01-23 00:00:00+00:00" class="dt-published"></time>
+  Tue 23 Jan 2024
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -224,50 +266,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2024-01-22 00:00:00+00:00" class="dt-published"></time>
   Mon 22 Jan 2024
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-gui-homebrew/" rel="bookmark" class="u-url"
-       title="Homebrew CMake-GUI install" target="_blank">
-      <time class="m-date" datetime="2024-01-22 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          22
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Homebrew CMake-GUI install
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p><a href="https://github.com/Homebrew/homebrew-cask#homebrew-cask">Homebrew Cask</a>
-packages GUI (graphical) programs.
-Many users install CMake without the GUI like</p>
-
-<div><pre><code><span><span>brew install cmake</span></span></code></pre></div>
-<p>but this does not have the &ldquo;cmake-gui&rdquo; program.</p>
-<p>To install CMake-GUI do:</p>
-
-<div><pre><code><span><span>brew uninstall cmake
-</span></span><span><span>
-</span></span><span><span>brew install --cask cmake</span></span></code></pre></div>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-22 00:00:00+00:00" class="dt-published"></time>
-  Mon 22 Jan 2024
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -385,6 +383,73 @@ My Current Obsession
   on <time datetime="2024-01-21 04:00:45+00:00" class="dt-published"></time>
   Sun 21 Jan 2024
   in Late To The Party 🎉.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nskm.xyz/posts/ptrs/" rel="bookmark" class="u-url"
+       title="Pointers (WIP)" target="_blank">
+      <time class="m-date" datetime="2024-01-20 00:00:00+00:00">
+        Jan
+        <span class="m-date-day">
+          20
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Pointers (WIP)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In my <a href="https://nskm.xyz/posts/cp/">last</a> post, I've written about lots of things but not about pointers. I tought the topic deserves a post in itself because it's one of the most important feature of the C language.</p>
+<p>Let's start with some <a href="https://yewtu.be/watch?v=24ntpKNiUMs">music</a> please.</p>
+<img alt="Pointers" src="/assets/pointers.png" title="Pointers">
+
+
+
+ToC
+
+Introduction:
+<p>A pointer is a variable that contains the memory address of another variable. A pointer allows
+us to <em>indirectly</em> access and manipulate the value of the variable that is pointed to. Like other variables, pointers have a type. The compiler knows the format of the data pointed to by the address.</p>
+<pre><code><span>int *</span><span>iptr;  </span><span>// Pointer variable of type int*
+</span><span>float *</span><span>fptr;  </span><span>// Pointer variable of type float*
+</span><span>char *</span><span>cptr;  </span><span>// Pointer variable of type char*
+</span></code></pre>
+
+Declaration and initialization:
+
+
+
+
+
+
+
+Going further:
+<p>To learn more about pointers, we recommend the following links:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pointer_(dog_breed)">Pointer</a></li>
+<li><a href="https://yewtu.be/watch?v=IuDJeGqEZ3A">Pointer</a></li>
+<li><a href="https://tsusports.com/sports/mens-basketball/roster/coaches/pointer-williams/21">Pointer</a></li>
+</ul>
+
+
+
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-01-20 00:00:00+00:00" class="dt-published"></time>
+  Sat 20 Jan 2024
+  in Nsukami.
 </footer>
 <div class="m-clearfix-l"></div>
 
