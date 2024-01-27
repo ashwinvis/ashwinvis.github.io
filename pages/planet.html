@@ -164,32 +164,92 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2024/01/25/today-in-tabs/" rel="bookmark" class="u-url"
-       title="Pluralistic: Tabs give me superpowers (25 Jan 2024)" target="_blank">
-      <time class="m-date" datetime="2024-01-25 19:36:32+00:00">
+    <a href="https://pluralistic.net/2024/01/26/noclar-war/" rel="bookmark" class="u-url"
+       title="Pluralistic: The long sleep of capitalism's watchdogs (26 Jan 2024)" target="_blank">
+      <time class="m-date" datetime="2024-01-26 18:05:23+00:00">
         Jan
         <span class="m-date-day">
-          25
+          26
         </span>
         2024
       </time>
       <div class="p-name">
-      Pluralistic: Tabs give me superpowers (25 Jan 2024)
+      Pluralistic: The long sleep of capitalism's watchdogs (26 Jan 2024)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Tabs give me superpowers: Lifehacks are good, actually. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Tabs give me superpowers (permalink) "Lifehacking" is in pretty bad odor these days, and with good reason: a once-useful catch-all for describing how to make things easier has become a pit of productivity porn, grifter hustling, and anodyne advice wreathed in superlatives and transformed into SEO-compliant listicles. But I was there when lifehacking was born, and I'm here to tell you, it wasn't always thus. Lifehacking attained liftoff exactly 19 years and 348 days ago, on Feb 11, 2004, when Danny O'Brien presented "Life Hacks: Tech Secrets of Overprolific Alpha Geeks" at the 0'Reilly Emerging Technology Conference (aka ETCON). I was there, and I …
+  Today's links The long sleep of capitalism's watchdogs: "Self-regulation is to regulation as self-importance is to importance." Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The long sleep of capitalism's watchdogs (permalink) One of the weirdest aspect of end-stage capitalism is the collapse of auditing, the lynchpin of investing. Auditors &#8211; independent professionals who sign off on a company's finances &#8211; are the only way that investors can be sure they're not handing their money over to failing businesses run by crooks. It's just not feasible for investors to talk to supply-chain partners and retailers and verify that a company's orders and costs are real. Investors can't walk into a company's bank and demand to see their account histories. Auditors &#8211; who are paid …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2024-01-25 19:36:32+00:00" class="dt-published"></time>
-  Thu 25 Jan 2024
+  on <time datetime="2024-01-26 18:05:23+00:00" class="dt-published"></time>
+  Fri 26 Jan 2024
   in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jvns.ca/blog/2024/01/26/inside-git/" rel="bookmark" class="u-url"
+       title="Inside .git" target="_blank">
+      <time class="m-date" datetime="2024-01-26 09:42:42+00:00">
+        Jan
+        <span class="m-date-day">
+          26
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Inside .git
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! I posted a comic on Mastodon this week about what&rsquo;s in the <code>.git</code>
+directory and someone requested a text version, so here it is. I added some
+extra notes too. First, here&rsquo;s the image. It&rsquo;s a ~15 word explanation of each
+part of your <code>.git</code> directory.</p>
+
+<p><a href="https://wizardzines.com/comics/inside-git"><img src="https://wizardzines.com/images/uploads/inside-git.png"></a></p>
+
+<p>You can <code>git clone https://github.com/jvns/inside-git</code> if you want to run all
+these examples yourself.</p>
+
+<p>Here&rsquo;s a table of contents:</p>
+
+<ul>
+<li><a href="#head-git-head">HEAD: .git/head</a></li>
+<li><a href="#branch-git-refs-heads-main">branch: .git/refs/heads/main</a></li>
+<li><a href="#commit-git-objects-10-93da429">commit: .git/objects/10/93da429&hellip;</a></li>
+<li><a href="#tree-git-objects-9f-83ee7550">tree: .git/objects/9f/83ee7550&hellip;</a></li>
+<li><a href="#blobs-git-objects-5a-475762c">blobs: .git/objects/5a/475762c&hellip;</a></li>
+<li><a href="#reflog-git-logs-refs-heads-main">reflog: .git/logs/refs/heads/main</a></li>
+<li><a href="#remote-tracking-branches-git-refs-remotes-origin-main">remote-tracking branches: .git/refs/remotes/origin/main</a></li>
+<li><a href="#tags-git-refs-tags-v1-0">tags: .git/refs/tags/v1.0</a></li>
+<li><a href="#the-stash-git-refs-stash">the stash: .git/refs/stash</a></li>
+<li><a href="#git-config">.git/config</a></li>
+<li><a href="#hooks-git-hooks-pre-commit">hooks: .git/hooks/pre-commit</a></li>
+<li><a href="#the-staging-area-git-index">the staging area: .git/index</a></li>
+<li><a href="#this-isn-t-exhaustive">this isn&rsquo;t exhaustive</a></li>
+<li><a href="#this-isn-t-meant-to-completely-explain-git">this isn&rsquo;t meant …</a></li></ul>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-01-26 09:42:42+00:00" class="dt-published"></time>
+  Fri 26 Jan 2024
+  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -891,55 +951,6 @@ GPU-based libraries might be the answer to your performance problems… or they 
   on <time datetime="2024-01-09 21:51:00+01:00" class="dt-published"></time>
   Tue 09 Jan 2024
   in David Revoy.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2024/01/05/do-we-think-of-git-commits-as-diffs--snapshots--or-histories/" rel="bookmark" class="u-url"
-       title="Do we think of git commits as diffs, snapshots, and/or histories?" target="_blank">
-      <time class="m-date" datetime="2024-01-05 14:00:51+00:00">
-        Jan
-        <span class="m-date-day">
-          05
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Do we think of git commits as diffs, snapshots, and/or histories?
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! I&rsquo;ve been extremely slowly trying to figure how to explain every core
-concept in Git (commits! branches! remotes! the staging area!) and commits have
-been surprisingly tricky.</p>
-
-<p>Understanding how git commits are implemented feels pretty straightforward to
-me (those are facts! I can look it up!), but it&rsquo;s been much harder to figure
-out how other people think about commits. So like I&rsquo;ve been doing a lot
-recently, I went on Mastodon and started asking some questions.</p>
-
-
-how do people think about Git commits?
-
-<p>I did a <a href="https://social.jvns.ca/@b0rk/111563158717698550">highly unscientific poll</a> on Mastodon about how people think about Git
-commits: is it a snapshot? is it a diff? is it a list of every previous commit?
-(Of course it&rsquo;s legitimate to think about it as all three, but I was curious
-about the <em>primary</em> way people …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-05 14:00:51+00:00" class="dt-published"></time>
-  Fri 05 Jan 2024
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
