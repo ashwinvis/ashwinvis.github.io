@@ -164,6 +164,107 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://jvns.ca/blog/2024/02/01/dealing-with-diverged-git-branches/" rel="bookmark" class="u-url"
+       title="Dealing with diverged git branches" target="_blank">
+      <time class="m-date" datetime="2024-02-01 08:47:00+00:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Dealing with diverged git branches
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Hello! One of the most common problems I see folks struggling with in Git is
+when a local branch (like <code>main</code>) and a remote branch (maybe also called
+<code>main</code>) have diverged.</p>
+
+<p>There are two things that make this situation hard:</p>
+
+<ul>
+<li>If you&rsquo;re not used to interpreting git&rsquo;s error messages, it&rsquo;s nontrivial to
+even <strong>realize</strong> that your <code>main</code> has diverged from the remote <code>main</code> (git
+will often just give you an intimidating but generic error message like
+<code>! [rejected] main -&gt; main (non-fast-forward) error: failed to push some refs to 'github.com:jvns/int-exposed'</code>)</li>
+<li>Once you realize that your branch has diverged from the remote <code>main</code>, there
+no single clear way to handle it (what you need to do depends on the
+situation and your git workflow)</li>
+</ul>
+
+<p>So let&rsquo;s talk about a) how to recognize when you&rsquo;re in …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-01 08:47:00+00:00" class="dt-published"></time>
+  Thu 01 Feb 2024
+  in Julia Evans.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/cmake-macos-environment-xcode/" rel="bookmark" class="u-url"
+       title="CMake macOS Xcode Environment" target="_blank">
+      <time class="m-date" datetime="2024-02-01 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          01
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      CMake macOS Xcode Environment
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>When macOS or Xcode upgrades, CMake build directories often need to be refreshed.
+If the user has set custom environment variables concerning Xcode, they may need to be updated as well.
+Here are some important variables to check if problems occur after upgrading macOS or Xcode.</p>
+<p>For a simple CMake project on macOS, CMakeCache.txt might include:</p>
+
+<pre><code>CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
+
+CMAKE_OSX_SYSROOT:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX*.sdk</code></pre>
+<ul>
+<li>environment variable <code>MACOSX_DEPLOYMENT_TARGET</code> helps set <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_DEPLOYMENT_TARGET.html">CMAKE_OSX_DEPLOYMENT_TARGET</a></li>
+<li>Environment variable <code>SDKROOT</code> helps set <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_SYSROOT.html">CMAKE_OSX_SYSROOT</a></li>
+</ul>
+<p>Having multiple directories under <code>/Library/Developer/CommandLineTools/SDKs</code> and <code>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs</code> is fine, CMake can select the appropriate one.
+The user can
+<a href="https://developer.apple.com/library/archive/technotes/tn2339/_index.html">select the SDK</a>:</p>
+
+<div><pre><code><span><span>xcode-select --switch</span></span></code></pre></div>
+<p>but often this is not necessary.</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-01 00:00:00+00:00" class="dt-published"></time>
+  Thu 01 Feb 2024
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://pyfound.blogspot.com/2024/01/kicking-off-2024-strong.html" rel="bookmark" class="u-url"
        title="Kicking off 2024 strong, thanks to our community!" target="_blank">
       <time class="m-date" datetime="2024-01-31 08:00:00.002000-05:00">
@@ -258,41 +359,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2024-01-31 00:00:00+00:00" class="dt-published"></time>
   Wed 31 Jan 2024
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-preset-force-use/" rel="bookmark" class="u-url"
-       title="CMake preset enforce use" target="_blank">
-      <time class="m-date" datetime="2024-01-31 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          31
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      CMake preset enforce use
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>CMake presets allow simple or complex JSON configurations for configuring, building, and testing projects.
-A project maintainer may with to enforce the use of presets, which may be accomplished by using <a href="https://gist.github.com/scivision/8fe5812bcb56ac28e7a1e41f1f9a689d">sentinel environment variable</a>:</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-31 00:00:00+00:00" class="dt-published"></time>
-  Wed 31 Jan 2024
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -708,66 +774,6 @@ This is basically my research document as I am exploring what I want the release
   on <time datetime="2024-01-27 00:00:00+00:00" class="dt-published"></time>
   Sat 27 Jan 2024
   in Pradyun Gedam.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jvns.ca/blog/2024/01/26/inside-git/" rel="bookmark" class="u-url"
-       title="Inside .git" target="_blank">
-      <time class="m-date" datetime="2024-01-26 09:42:42+00:00">
-        Jan
-        <span class="m-date-day">
-          26
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Inside .git
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Hello! I posted a comic on Mastodon this week about what&rsquo;s in the <code>.git</code>
-directory and someone requested a text version, so here it is. I added some
-extra notes too. First, here&rsquo;s the image. It&rsquo;s a ~15 word explanation of each
-part of your <code>.git</code> directory.</p>
-
-<p><a href="https://wizardzines.com/comics/inside-git"><img src="https://wizardzines.com/images/uploads/inside-git.png"></a></p>
-
-<p>You can <code>git clone https://github.com/jvns/inside-git</code> if you want to run all
-these examples yourself.</p>
-
-<p>Here&rsquo;s a table of contents:</p>
-
-<ul>
-<li><a href="#head-git-head">HEAD: .git/head</a></li>
-<li><a href="#branch-git-refs-heads-main">branch: .git/refs/heads/main</a></li>
-<li><a href="#commit-git-objects-10-93da429">commit: .git/objects/10/93da429&hellip;</a></li>
-<li><a href="#tree-git-objects-9f-83ee7550">tree: .git/objects/9f/83ee7550&hellip;</a></li>
-<li><a href="#blobs-git-objects-5a-475762c">blobs: .git/objects/5a/475762c&hellip;</a></li>
-<li><a href="#reflog-git-logs-refs-heads-main">reflog: .git/logs/refs/heads/main</a></li>
-<li><a href="#remote-tracking-branches-git-refs-remotes-origin-main">remote-tracking branches: .git/refs/remotes/origin/main</a></li>
-<li><a href="#tags-git-refs-tags-v1-0">tags: .git/refs/tags/v1.0</a></li>
-<li><a href="#the-stash-git-refs-stash">the stash: .git/refs/stash</a></li>
-<li><a href="#git-config">.git/config</a></li>
-<li><a href="#hooks-git-hooks-pre-commit">hooks: .git/hooks/pre-commit</a></li>
-<li><a href="#the-staging-area-git-index">the staging area: .git/index</a></li>
-<li><a href="#this-isn-t-exhaustive">this isn&rsquo;t exhaustive</a></li>
-<li><a href="#this-isn-t-meant-to-completely-explain-git">this isn&rsquo;t meant …</a></li></ul>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-26 09:42:42+00:00" class="dt-published"></time>
-  Fri 26 Jan 2024
-  in Julia Evans.
 </footer>
 <div class="m-clearfix-l"></div>
 
