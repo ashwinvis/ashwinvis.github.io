@@ -164,6 +164,158 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://pluralistic.net/2024/02/02/upward-redistribution/" rel="bookmark" class="u-url"
+       title="Pluralistic: Worker misclassification is a competition issue (02 Feb 2024)" target="_blank">
+      <time class="m-date" datetime="2024-02-02 19:47:49+00:00">
+        Feb
+        <span class="m-date-day">
+          02
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Pluralistic: Worker misclassification is a competition issue (02 Feb 2024)
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  Today's links Worker misclassification is a competition issue: Corrupt employers created a market for lemons. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Worker misclassification is a competition issue (permalink) The brains behind Trump's stolen Supreme Court have detailed plans: they didn't just scheme to pack the court with judges who weren't qualified for &#8211; or entitled to &#8211; a SCOTUS life-tenure, they also set up a series of cases for that radical court to hear. Obviously, Dobbs was the big one, but it's only part of a whole procession of trumped-up cases designed to give the court a chance to overturn decades of settled law and create zones of impunity for America's oligarchs and the monopolies that provide them with wealth and …
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Cory Doctorow</b></span>
+  on <time datetime="2024-02-02 19:47:49+00:00" class="dt-published"></time>
+  Fri 02 Feb 2024
+  in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://jlelse.blog/posts/january-2024" rel="bookmark" class="u-url"
+       title="My January ‘24 in Review" target="_blank">
+      <time class="m-date" datetime="2024-02-02 15:00:00+01:00">
+        Feb
+        <span class="m-date-day">
+          02
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      My January ‘24 in Review
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  And now January of 2024 is over. Time to take a quick look back.
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-02 15:00:00+01:00" class="dt-published"></time>
+  Fri 02 Feb 2024
+  in jlelse's Blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://xkcd.com/2889/" rel="bookmark" class="u-url"
+       title="Greenhouse Effect" target="_blank">
+      <time class="m-date" datetime="2024-02-02 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          02
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Greenhouse Effect
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <img alt="Once he had the answer, Arrhenius complained to his friends that he'd &quot;wasted over a full year&quot; doing tedious calculations by hand about &quot;so trifling a matter&quot; as hypothetical CO2 concentrations in far-off eras (quoted in Crawford, 1997)." src="https://imgs.xkcd.com/comics/greenhouse_effect.png" title="Once he had the answer, Arrhenius complained to his friends that he'd &quot;wasted over a full year&quot; doing tedious calculations by hand about &quot;so trifling a matter&quot; as hypothetical CO2 concentrations in far-off eras (quoted in Crawford, 1997).">
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-02 00:00:00+00:00" class="dt-published"></time>
+  Fri 02 Feb 2024
+  in xkcd.com.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/homebrew-cmake-curl-bug/" rel="bookmark" class="u-url"
+       title="Homebrew macOS system cURL bug" target="_blank">
+      <time class="m-date" datetime="2024-02-02 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          02
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Homebrew macOS system cURL bug
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>For <strong>macOS</strong> developers using Homebrew (possibly other package managers too) there is a TLS v1.3 bug where system cURL was used by build servers and cURL had a bug.
+One package impacted is CMake, though it&rsquo;s not a CMake bug as Kitware CMake binaries using newer cURL are fine.</p>
+<p>The bug causes some TLS v1.3 download/upload internet operations to fail with code 35.
+This was due to a bug in macOS system cURL.
+macOS has already updated cURL for end users.
+Updating Homebrew CMake fixes this issue.</p>
+<p>If stuck, one can set an
+<a href="https://github.com/Homebrew/homebrew-core/issues/158759#issuecomment-1874091015">environment variable per command</a>
+to disable TLS v1.3 as a temporary workaround:</p>
+
+<div><pre><code><span><span><span>CURL_SSL_BACKEND</span>=SecureTransport cmake ...</span></span></code></pre></div>
+<p>However, it is better to upgrade Homebrew CMake to a fixed cURL version:</p>
+
+<div><pre><code><span><span>brew upgrade cmake</span></span></code></pre></div>
+<p>This is not a
+<a href="https://gitlab.kitware.com/cmake/cmake/-/issues/25522">CMake bug</a>,
+as the CMake binaries downloaded …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-02 00:00:00+00:00" class="dt-published"></time>
+  Fri 02 Feb 2024
+  in Michael Hirsch, Ph.D..
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="https://jvns.ca/blog/2024/02/01/dealing-with-diverged-git-branches/" rel="bookmark" class="u-url"
        title="Dealing with diverged git branches" target="_blank">
       <time class="m-date" datetime="2024-02-01 08:47:00+00:00">
@@ -214,57 +366,6 @@ situation and your git workflow)</li>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://www.scivision.dev/cmake-macos-environment-xcode/" rel="bookmark" class="u-url"
-       title="CMake macOS Xcode Environment" target="_blank">
-      <time class="m-date" datetime="2024-02-01 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          01
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      CMake macOS Xcode Environment
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>When macOS or Xcode upgrades, CMake build directories often need to be refreshed.
-If the user has set custom environment variables concerning Xcode, they may need to be updated as well.
-Here are some important variables to check if problems occur after upgrading macOS or Xcode.</p>
-<p>For a simple CMake project on macOS, CMakeCache.txt might include:</p>
-
-<pre><code>CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
-
-CMAKE_OSX_SYSROOT:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX*.sdk</code></pre>
-<ul>
-<li>environment variable <code>MACOSX_DEPLOYMENT_TARGET</code> helps set <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_DEPLOYMENT_TARGET.html">CMAKE_OSX_DEPLOYMENT_TARGET</a></li>
-<li>Environment variable <code>SDKROOT</code> helps set <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_OSX_SYSROOT.html">CMAKE_OSX_SYSROOT</a></li>
-</ul>
-<p>Having multiple directories under <code>/Library/Developer/CommandLineTools/SDKs</code> and <code>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs</code> is fine, CMake can select the appropriate one.
-The user can
-<a href="https://developer.apple.com/library/archive/technotes/tn2339/_index.html">select the SDK</a>:</p>
-
-<div><pre><code><span><span>xcode-select --switch</span></span></code></pre></div>
-<p>but often this is not necessary.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-02-01 00:00:00+00:00" class="dt-published"></time>
-  Thu 01 Feb 2024
-  in Michael Hirsch, Ph.D..
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://pyfound.blogspot.com/2024/01/kicking-off-2024-strong.html" rel="bookmark" class="u-url"
        title="Kicking off 2024 strong, thanks to our community!" target="_blank">
       <time class="m-date" datetime="2024-01-31 08:00:00.002000-05:00">
@@ -299,74 +400,6 @@ The user can
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2024/01/31/neural-interface-beta-tester/" rel="bookmark" class="u-url"
-       title="Pluralistic: Three AI insights for hard-charging, future-oriented smartypantses (31 Jan 2024)" target="_blank">
-      <time class="m-date" datetime="2024-01-31 09:06:22+00:00">
-        Jan
-        <span class="m-date-day">
-          31
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Pluralistic: Three AI insights for hard-charging, future-oriented smartypantses (31 Jan 2024)
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  Today's links Three AI insights for hard-charging, future-oriented smartypantses: A little bit of nonsensewatching for a Wednesday. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Three AI insights for hard-charging, future-oriented smartypantses (permalink) Living in the age of AI hype makes demands on all of us to come up with smartypants prognostications about how AI is about to change everything forever, and wow, it's pretty amazing, huh? AI pitchmen don't make it easy. They like to pile on the cognitive dissonance and demand that we all somehow resolve it. This is a thing cult leaders do, too &#8211; tell blatant and obvious lies to their followers. When a cult follower repeats the lie to others, they are demonstrating their loyalty, both to …
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2024-01-31 09:06:22+00:00" class="dt-published"></time>
-  Wed 31 Jan 2024
-  in Pluralistic.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://xkcd.com/2888/" rel="bookmark" class="u-url"
-       title="US Survey Foot" target="_blank">
-      <time class="m-date" datetime="2024-01-31 00:00:00+00:00">
-        Jan
-        <span class="m-date-day">
-          31
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      US Survey Foot
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <img alt="Subway refuses to answer my questions about whether it's an International Footlong or a US Survey Footlong. A milligram of sandwich is at stake!" src="https://imgs.xkcd.com/comics/us_survey_foot.png" title="Subway refuses to answer my questions about whether it's an International Footlong or a US Survey Footlong. A milligram of sandwich is at stake!">
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-31 00:00:00+00:00" class="dt-published"></time>
-  Wed 31 Jan 2024
-  in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
     <a href="https://wizardzines.com/comics/combining-branches/" rel="bookmark" class="u-url"
        title="combining branches" target="_blank">
       <time class="m-date" datetime="2024-01-30 18:35:48+00:00">
@@ -393,40 +426,6 @@ The user can
   on <time datetime="2024-01-30 18:35:48+00:00" class="dt-published"></time>
   Tue 30 Jan 2024
   in Wizard Zines.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://jlelse.blog/posts/preserving-digital8" rel="bookmark" class="u-url"
-       title="Preserving Memories: My Adventure with Digital8 Tapes and FireWire" target="_blank">
-      <time class="m-date" datetime="2024-01-30 19:35:15+01:00">
-        Jan
-        <span class="m-date-day">
-          30
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Preserving Memories: My Adventure with Digital8 Tapes and FireWire
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  The last few days, I dived into a new topic in my spare time: Archiving videos from old Hi8 and Digital8 videotapes onto my hard drive.
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-01-30 19:35:15+01:00" class="dt-published"></time>
-  Tue 30 Jan 2024
-  in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
