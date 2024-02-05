@@ -164,6 +164,53 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
+    <a href="https://lucumr.pocoo.org/2024/2/4/rye-a-vision/" rel="bookmark" class="u-url"
+       title="Rye: A Vision Continued" target="_blank">
+      <time class="m-date" datetime="2024-02-04 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          04
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Rye: A Vision Continued
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>In April of last year I released <a href="https://rye-up.com/">Rye</a> to the public.
+Rye, both then and now, represents my very personal vision of what an improved
+Python packaging and project management solution can look like.
+Essentially, it's a comprehensive user experience, designed so that the
+only tool a Python programmer would need to interface with is Rye itself
+and it gets you from zero to one in a minute.  It is capable of
+bootstrapping Python by automatically downloading different Python
+versions, it creates virtualenvs, it manages dependencies, and lints and
+formats.  Initially developed for my own use, I decided to release it to
+the public, and the feedback has been overwhelmingly positive.</p>
+<p>When I introduced it, I initiated a discussion thread titled <a href="https://github.com/mitsuhiko/rye/discussions/6">“Should Rye
+Exist”</a> referencing the
+well known <a href="https://xkcd.com/927/">XKCD #929</a> which humorously comments
+on the proliferation of competing standards.  I …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2024-02-04 00:00:00+00:00" class="dt-published"></time>
+  Sun 04 Feb 2024
+  in Armin Ronacher's Thoughts and Writings.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
     <a href="http://husemeplz.blogspot.com/2024/02/3-random-things-week-11.html" rel="bookmark" class="u-url"
        title="3 Random Things - Week 11" target="_blank">
       <time class="m-date" datetime="2024-02-03 23:31:00+05:30">
@@ -241,6 +288,64 @@ My Current Obsession
   on <time datetime="2024-02-03 12:45:56+00:00" class="dt-published"></time>
   Sat 03 Feb 2024
   in Late To The Party 🎉.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/git-commit-precheck-pep8/" rel="bookmark" class="u-url"
+       title="Global PEP8 Git pre-commit check hook" target="_blank">
+      <time class="m-date" datetime="2024-02-03 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          03
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Global PEP8 Git pre-commit check hook
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Many
+<a href="https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt">Git fixup</a>
+commits are for forgetting to check project code standards like:</p>
+<ul>
+<li>PEP8 compliance</li>
+<li>type annotation checks</li>
+<li>clang-format</li>
+</ul>
+<p>Mitigate <code>git commit</code> fixup clutter by making a Git pre-commit hook that applies to all repositories.
+The pre-commit hook also does a simple check for YaML syntax.
+This procedure works across operating systems since Python script is used.</p>
+<p>Tell Git the directory for Git hooks:</p>
+
+<div><pre><code><span><span>git config --global core.hooksPath ~/.git/hooks</span></span></code></pre></div>
+<p>Create executable file <code>~/.git/hooks/pre-commit</code> from
+<a href="https://github.com/scivision/gitMC/blob/main/scripts/pre-commit">this Python pre-commit script</a>.</p>
+<p>This global pre-commit check hook does several things:</p>
+<ol>
+<li>get a list of Python file names that changed.</li>
+<li>check PEP8, mypy type hinting and that Python <a href="https://www.scivision.dev/python-breakpoint-debug">breakpoint</a> debug statements are not present.</li>
+<li>check YaML syntax</li>
+<li>clears IPython notebook output cells</li>
+<li>Checks for trailing whitespaces in any code language</li>
+</ol>
+<p>One can easily extend the concept of lint-checking for other programming …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-03 00:00:00+00:00" class="dt-published"></time>
+  Sat 03 Feb 2024
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -343,56 +448,6 @@ My Current Obsession
   on <time datetime="2024-02-02 00:00:00+00:00" class="dt-published"></time>
   Fri 02 Feb 2024
   in xkcd.com.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/homebrew-cmake-curl-bug/" rel="bookmark" class="u-url"
-       title="Homebrew macOS system cURL bug" target="_blank">
-      <time class="m-date" datetime="2024-02-02 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          02
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Homebrew macOS system cURL bug
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>For <strong>macOS</strong> developers using Homebrew (possibly other package managers too) there is a TLS v1.3 bug where system cURL was used by build servers and cURL had a bug.
-One package impacted is CMake, though it&rsquo;s not a CMake bug as Kitware CMake binaries using newer cURL are fine.</p>
-<p>The bug causes some TLS v1.3 download/upload internet operations to fail with code 35.
-This was due to a bug in macOS system cURL.
-macOS has already updated cURL for end users.
-Updating Homebrew CMake fixes this issue.</p>
-<p>If stuck, one can set an
-<a href="https://github.com/Homebrew/homebrew-core/issues/158759#issuecomment-1874091015">environment variable per command</a>
-to disable TLS v1.3 as a temporary workaround:</p>
-
-<div><pre><code><span><span><span>CURL_SSL_BACKEND</span>=SecureTransport cmake ...</span></span></code></pre></div>
-<p>However, it is better to upgrade Homebrew CMake to a fixed cURL version:</p>
-
-<div><pre><code><span><span>brew upgrade cmake</span></span></code></pre></div>
-<p>This is not a
-<a href="https://gitlab.kitware.com/cmake/cmake/-/issues/25522">CMake bug</a>,
-as the CMake binaries downloaded …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-02-02 00:00:00+00:00" class="dt-published"></time>
-  Fri 02 Feb 2024
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
