@@ -164,32 +164,74 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2024/02/22/self-censorship/" rel="bookmark" class="u-url"
-       title="Pluralistic: The majority of censorship is self-censorship; The Bezzle excerpt (Part V) (22 Feb 2024)" target="_blank">
-      <time class="m-date" datetime="2024-02-22 13:04:42+00:00">
+    <a href="https://pluralistic.net/2024/02/23/gazeteer/" rel="bookmark" class="u-url"
+       title="Pluralistic: Dinkclump Linkdump; The Bezzle excerpt (Part VI) (23 Feb 2024)" target="_blank">
+      <time class="m-date" datetime="2024-02-23 15:03:54+00:00">
         Feb
         <span class="m-date-day">
-          22
+          23
         </span>
         2024
       </time>
       <div class="p-name">
-      Pluralistic: The majority of censorship is self-censorship; The Bezzle excerpt (Part V) (22 Feb 2024)
+      Pluralistic: Dinkclump Linkdump; The Bezzle excerpt (Part VI) (23 Feb 2024)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links The majority of censorship is self-censorship: &#8230;But the majority of self-censorship is intentionally cultivated by an outside power. The Bezzle excerpt (Part V): Keep your hands at 10 and 2. Hey look at this: Delights to delectate. This day in history: 2009, 2014, 2019, 2023 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading The majority of censorship is self-censorship (permalink) I know a lot of polymaths, but Ada Palmer takes the cake: brilliant science fiction writer, brilliant historian, brilliant librettist, brilliant singer, and then some: https://pluralistic.net/2022/02/10/monopoly-begets-monopoly/#terra-ignota Palmer is a friend and a colleague. In 2018, she, Adrian Johns and I collaborated on "Censorship, Information Control, &#38; Information Revolutions from Printing Press to Internet," a series of grad seminars at the U Chicago History department (where Ada is a tenured …
+  Today's links Dinkclump Linkdump: A rare, out-of-cycle linkdump. The Bezzle excerpt (Part VI): The thrilling conclusion! This day in history: 2009, 2014, 2019 Colophon: Recent publications, upcoming/recent appearances, current writing projects, current reading Dinkclump Linkdump (permalink) Some Saturday mornings, I look at the week's blogging and realize I have a lot more links saved up than I managed to write about this week, and then I do a linkdump. There've been 14 of these, and this is number 15: https://pluralistic.net/tag/linkdump/ Attentive readers will note that this isn't Saturday. You're right. But I'm on a book tour and every day is shatterday, because damn, it's grueling and I'm not the spry manchild who took Little Brother on the road in 2008 &#8211; I'm a 52 year old with two artificial hips. Hence: an out-of-cycle linkdump. Come see …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2024-02-22 13:04:42+00:00" class="dt-published"></time>
-  Thu 22 Feb 2024
+  on <time datetime="2024-02-23 15:03:54+00:00" class="dt-published"></time>
+  Fri 23 Feb 2024
   in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://www.scivision.dev/hpc-clear-temp-scratch/" rel="bookmark" class="u-url"
+       title="Clear temporary scratch files on HPC" target="_blank">
+      <time class="m-date" datetime="2024-02-23 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          23
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Clear temporary scratch files on HPC
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Unix-like HPC systems often have shared temporary scratch directories mapped by environment variable <code>$TMPDIR</code> to a directory like &ldquo;/scratch&rdquo; or &ldquo;/tmp&rdquo;.
+<code>$TMPDIR</code> may be used for temporary files during build or computation.
+<code>$TMPDIR</code> is often shared among all users with no expectation of preservation or backup.
+If user files are left in <code>$TMPDIR</code>, the HPC system may email a periodic alert to the user.</p>
+<p>If the user determines that <code>$TMPDIR</code> files aren&rsquo;t needed after the HPC batch job completes, one can clear <code>$TMPDIR</code> files with a command near the end of the batch job script.
+Carefully consider whether this is appropriate for the specific use case, as the scratch files will be permanently deleted.</p>
+
+<div><pre><code><span><span>rm -r -i <span>$TMPDIR</span> 2&gt;/dev/null</span></span></code></pre></div>
+<p>Verify that deletes only the user&rsquo;s files, as each user&rsquo;s files have write permissions only for …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-23 00:00:00+00:00" class="dt-published"></time>
+  Fri 23 Feb 2024
+  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -224,6 +266,49 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2024-02-22 00:00:00+00:00" class="dt-published"></time>
   Thu 22 Feb 2024
   in Nikita Prokopov's blog.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://pythonspeed.com/articles/climate-change/" rel="bookmark" class="u-url"
+       title="What can you do about climate change?" target="_blank">
+      <time class="m-date" datetime="2024-02-22 00:00:00+00:00">
+        Feb
+        <span class="m-date-day">
+          22
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      What can you do about climate change?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Climate change is impacting the whole planet, and getting worse every year.
+So you want to do <em>something</em>—but you’re not sure what.
+If you do some research you might encounter an essay by Bret Victor—<a href="http://worrydream.com/ClimateChange/">What can a technologist do about climate change?</a>
+There’s a whole pile of good ideas in there, and it’s worth reading, but the short version is that you can use technology to “create options for policy-makers.”
+And working on clean energy or efficiency is definitely a great way to spend your time.</p>
+
+<p>Thing is, policy-makers are doing far less than they should.
+As a result, this essay isn’t about technology, even though that’s what I mostly write about on this site, because I’m not so certain that technology is the bottleneck right now.</p>
+
+<p>Instead, I’m writing about …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Anonymous</b></span>
+  on <time datetime="2024-02-22 00:00:00+00:00" class="dt-published"></time>
+  Thu 22 Feb 2024
+  in Python⇒Speed.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -395,48 +480,6 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
   on <time datetime="2024-02-19 08:11:06+01:00" class="dt-published"></time>
   Mon 19 Feb 2024
   in jlelse's Blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://www.scivision.dev/cmake-dll-dirs/" rel="bookmark" class="u-url"
-       title="CMake TARGET_RUNTIME_DLL_DIRS for CTest" target="_blank">
-      <time class="m-date" datetime="2024-02-19 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          19
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      CMake TARGET_RUNTIME_DLL_DIRS for CTest
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Building Windows shared libraries in general creates DLLs whose directory must be on environment variable PATH when the executable target is run.
-Windows error code -1073741515 corresponding to hex error code 0xc0000135 emits when the necessary DLLs are not in the program&rsquo;s working directory or on PATH.
-This will make CTest tests fail with error code 135.</p>
-<p>The CMake generator expression <a href="https://cmake.org/cmake/help/latest/manual/cmake-generator-expressions.7.html#genex:TARGET_RUNTIME_DLL_DIRS">TARGET_RUNTIME_DLL_DIRS</a> along with test property
-<a href="https://www.scivision.dev/cmake-ctest-set-environment-variable">ENVIRONMENT_MODIFICATION</a>
-can be used to set the PATH environment variable for the test, gathering all the directories of the DLLs CMake knows the target needs.</p>
-
-<div><pre><code><span><span><span>set_property</span>(<span>TEST</span> <span>adder</span> <span>PROPERTY</span> <span>ENVIRONMENT_MODIFICATION</span> <span>PATH=path_list_append:</span>$&lt;<span>TARGET_RUNTIME_DLL_DIRS:main</span>&gt;)</span></span></code></pre></div>
-<p>in this <a href="https://github.com/scivision/cmake-dll-dirs">minimal example</a> CMakeLists.txt uses the properties above to work correctly.</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-02-19 00:00:00+00:00" class="dt-published"></time>
-  Mon 19 Feb 2024
-  in Michael Hirsch, Ph.D..
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -775,56 +818,6 @@ $$\bar{v}_{i} = \frac …</div></div></div></div>
   on <time datetime="2024-02-13 11:02:00+01:00" class="dt-published"></time>
   Tue 13 Feb 2024
   in Frolian's blog.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://pythonspeed.com/articles/gpu-without-cuda/" rel="bookmark" class="u-url"
-       title="Not just NVIDIA: GPU programming that runs everywhere" target="_blank">
-      <time class="m-date" datetime="2024-02-13 00:00:00+00:00">
-        Feb
-        <span class="m-date-day">
-          13
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      Not just NVIDIA: GPU programming that runs everywhere
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>If you’re doing computations on a GPU, NVIDIA is the default, alongside its CUDA libraries.
-Some libraries like PyTorch support do support AMD GPUs and Macs.
-But from the re-implementations of NumPy, SciPy, and Pandas in the <a href="https://rapids.ai/">RAPIDS</a> project, to <a href="https://numba.readthedocs.io/en/stable/cuda/index.html">Numba’s GPU support</a>, NVIDIA has best software support in the Python world.</p>
-
-<p>Sticking to NVIDIA-specific software has some downsides, however:</p>
-
-<ul>
-  <li>It won’t run on modern Mac laptops.</li>
-  <li>Testing in CI is more difficult: you need custom runners that have NVIDIA GPUs.</li>
-  <li>You can’t use any other GPUs you might have access to, like AMD GPUs.</li>
-</ul>
-
-<p>What can you do if you want to use GPUs in a portable manner?
-In this article we’ll cover one option, the <a href="https://wgpu-py.readthedocs.io/"><code>wgpu-py</code> library</a>.</p>
-
-
-   <a href="https://pythonspeed.com/articles/gpu-without-cuda/">Read more...</a>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-02-13 00:00:00+00:00" class="dt-published"></time>
-  Tue 13 Feb 2024
-  in Python⇒Speed.
 </footer>
 <div class="m-clearfix-l"></div>
 
