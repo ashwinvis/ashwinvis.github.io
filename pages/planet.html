@@ -164,31 +164,31 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://jlelse.blog/micro/2024/03/2024-03-25-fncvw" rel="bookmark" class="u-url"
-       title="" target="_blank">
-      <time class="m-date" datetime="2024-03-25 18:36:40+01:00">
+    <a href="https://jlelse.blog/thoughts/2024/03/home-server-offline" rel="bookmark" class="u-url"
+       title="Home Server Offline ☹️" target="_blank">
+      <time class="m-date" datetime="2024-03-26 21:06:27+01:00">
         Mar
         <span class="m-date-day">
-          25
+          26
         </span>
         2024
       </time>
       <div class="p-name">
-      💬
+      Home Server Offline ☹️
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Nice weather, good mood. 😌 Spring is definitely my favorite season! 🌷
+  Today, I woke up and noticed that my home server, located in my second flat, and also the router, all behind a 5G connection (that was showing as working fine on the provider’s website), were offline. No VPN connection anymore, and also Tailscale showed the nodes as being offline. I’m glad that I had automatic backups and was able to easily restore the three important services from that server on my VPS, without the need to travel to the second flat first.
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-03-25 18:36:40+01:00" class="dt-published"></time>
-  Mon 25 Mar 2024
+  on <time datetime="2024-03-26 21:06:27+01:00" class="dt-published"></time>
+  Tue 26 Mar 2024
   in jlelse's Blog.
 </footer>
 <div class="m-clearfix-l"></div>
@@ -198,32 +198,78 @@ I follow. <em>Disclaimer: This is not an endorsement</em>.</p>
 <article class="h-cite m-article-list">
 <header>
   <h1>
-    <a href="https://pluralistic.net/2024/03/25/black-boxes/" rel="bookmark" class="u-url"
-       title="Pluralistic: Conspiratorialism and the epistemological crisis (25 Mar 2024)" target="_blank">
-      <time class="m-date" datetime="2024-03-25 15:43:32+00:00">
+    <a href="https://pluralistic.net/2024/03/26/glitchbread/" rel="bookmark" class="u-url"
+       title="Pluralistic: Meatspace twiddling (26 Mar 2024)" target="_blank">
+      <time class="m-date" datetime="2024-03-26 14:05:26+00:00">
         Mar
         <span class="m-date-day">
-          25
+          26
         </span>
         2024
       </time>
       <div class="p-name">
-      Pluralistic: Conspiratorialism and the epistemological crisis (25 Mar 2024)
+      Pluralistic: Meatspace twiddling (26 Mar 2024)
       </div>
     </a>
   </h1>
   <div class="p-summary">
   <p>
-  Today's links Conspiratorialism and the epistemological crisis: We may not know what's in the box, but we can tell if it's been damaged in transit. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Upcoming appearances: Where to find me. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. Conspiratorialism and the epistemological crisis (permalink) Last year, Ed Pierson was supposed to fly from Seattle to New Jersey on Alaska Airlines. He boarded his flight, but then he had an urgent discussion with the flight attendant, explaining that as a former senior Boeing engineer, he'd specifically requested that flight because the aircraft wasn't a 737 Max: https://www.cnn.com/travel/boeing-737-max-passenger-boycott/index.html But for operational reasons, Boeing …
+  Today's links Meatspace twiddling: Cyberspace may never evert, but it can certainly prolapse. Hey look at this: Delights to delectate. This day in history: 2004, 2009, 2014, 2019, 2023 Upcoming appearances: Where to find me. Latest books: You keep readin' em, I'll keep writin' 'em. Upcoming books: Like I said, I'll keep writin' 'em. Colophon: All the rest. Meatspace twiddling (permalink) "Enshittification" isn't just a way of describing the symptoms of platform decay: it's also a theory of the mechanism of decay &#8211; the means by which platforms get shittier and shittier until they are a giant pile of shit. I call that mechanism "twiddling": this is the ability of digital services to alter their business-logic &#8211; the prices they charge, the payouts they offer, the particulars of the deal &#8211; from instant to instant, for each user, continuously: https://pluralistic.net/2023 …
   </p>
   </div>
 </header>
 <footer>
   <p>Posted by
   <span class="p-author"><b>Cory Doctorow</b></span>
-  on <time datetime="2024-03-25 15:43:32+00:00" class="dt-published"></time>
-  Mon 25 Mar 2024
+  on <time datetime="2024-03-26 14:05:26+00:00" class="dt-published"></time>
+  Tue 26 Mar 2024
   in Pluralistic.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://lucumr.pocoo.org/2024/3/26/rust-cdo/" rel="bookmark" class="u-url"
+       title="On Tech Debt: My Rust Library is now a CDO" target="_blank">
+      <time class="m-date" datetime="2024-03-26 00:00:00+00:00">
+        Mar
+        <span class="m-date-day">
+          26
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      On Tech Debt: My Rust Library is now a CDO
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>You're probably familiar with tech debt.  There is a joke that if there is
+tech debt, surely there must be derivatives to work with that debt?  I'm
+happy to say that the Rust ecosystem has created an environment where it
+looks like one solution for tech debt is collateralization.</p>
+<p>Here is how this miracle works.  Say you have a library <a href="https://github.com/mitsuhiko/insta">stuff</a> which depends on some other
+library <a href="https://github.com/chyh1990/yaml-rust">learned-rust-this-way</a>.
+The author of learned-rust-this-way at one point lost interest in this
+thing and issues keep piling up.  Some of those issues are feature
+requests, others are legitimate bugs.  However you as the person that
+wrote stuff never ran into any of those problems.  Yet it's hard to
+argue that learned-rust-this-way isn't tech debt.  It's one that does
+not bother you all that much, but it's debt nonetheless.</p>
+<p>At one point someone else …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Armin Ronacher</b></span>
+  on <time datetime="2024-03-26 00:00:00+00:00" class="dt-published"></time>
+  Tue 26 Mar 2024
+  in Armin Ronacher's Thoughts and Writings.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -392,6 +438,49 @@ this article we’ll show an example of:</p>
   on <time datetime="2024-03-20 15:06:00-04:00" class="dt-published"></time>
   Wed 20 Mar 2024
   in Python Software Foundation News.
+</footer>
+<div class="m-clearfix-l"></div>
+
+</article>
+
+<article class="h-cite m-article-list">
+<header>
+  <h1>
+    <a href="https://nedbatchelder.com/blog/202403/is_this_for_autistic_people.html" rel="bookmark" class="u-url"
+       title="Is this for autistic people?" target="_blank">
+      <time class="m-date" datetime="2024-03-20 11:46:00-04:00">
+        Mar
+        <span class="m-date-day">
+          20
+        </span>
+        2024
+      </time>
+      <div class="p-name">
+      Is this for autistic people?
+      </div>
+    </a>
+  </h1>
+  <div class="p-summary">
+  <p>
+  <p>Special Olympics swimming season started this past weekend.  A new athlete
+joined us, a young boy I&#8217;ll call Bryan. He asked me a question that has stuck
+with me.</p><p>Bryan is 12 or so, with the slightly goofy look of a boy growing into his
+body. He has braces on his too-large teeth.  It was his first time swimming with
+us, so we needed to show him the locker room, how to get out to the pool, and so
+on. He was serious and inquisitive about all of these things that were new to
+him.</p><p>We got out on the deck and started stretching with the other athletes, most
+of whom don&#8217;t look like Bryan.  They are older and have a variety of
+intellectual disabilities. Bryan surveyed the group then turned to me and asked
+the question: &#8220;is …</p>
+  </p>
+  </div>
+</header>
+<footer>
+  <p>Posted by
+  <span class="p-author"><b>Ned Batchelder</b></span>
+  on <time datetime="2024-03-20 11:46:00-04:00" class="dt-published"></time>
+  Wed 20 Mar 2024
+  in Ned Batchelder's blog.
 </footer>
 <div class="m-clearfix-l"></div>
 
@@ -863,49 +952,6 @@ My Current Obsession
   on <time datetime="2024-03-06 15:33:02+00:00" class="dt-published"></time>
   Wed 06 Mar 2024
   in Kitware blog - Paraview.
-</footer>
-<div class="m-clearfix-l"></div>
-
-</article>
-
-<article class="h-cite m-article-list">
-<header>
-  <h1>
-    <a href="https://buttondown.email/hynek/archive/new-video-uv-python-packaging-and-how-it-came-to/" rel="bookmark" class="u-url"
-       title="New Video: uv & Python Packaging – And How It Came to Be" target="_blank">
-      <time class="m-date" datetime="2024-03-05 14:30:00+00:00">
-        Mar
-        <span class="m-date-day">
-          05
-        </span>
-        2024
-      </time>
-      <div class="p-name">
-      New Video: uv & Python Packaging – And How It Came to Be
-      </div>
-    </a>
-  </h1>
-  <div class="p-summary">
-  <p>
-  <p>Greetings, friend!</p>
-<p>I bet you didn’t expect to hear from me so soon – neither did I! And I beg you not to get used to it, for better and worse.</p>
-<p>In <a href="https://buttondown.email/hynek/archive/dependency-injection-and-ongoing-youtube/">my last email</a> I told you that after spending two months on <a href="https://youtu.be/uWTvMCra-_Y?utm_source=hynek&amp;utm_medium=email&amp;utm_campaign=new-video-uv-python-packaging-and-how-it-came-to"><em>Loose Coupling &amp; Dependency Injection the EASY Way!</em></a>, I’ve challenged myself to produce a video as fast as I can.</p>
-<p>And I’ve succeeded! I’ve managed to push it out in exactly two weeks:</p>
-<p><a href="https://youtu.be/_FdjW47Au30?utm_source=hynek&amp;utm_medium=email&amp;utm_campaign=new-video-uv-python-packaging-and-how-it-came-to">Is <em>uv</em> the Future of Python Packaging? 🐍📦</a></p>
-<p>I don’t think two weeks of sacrificed free time is particularly impressive, but it gives me hope!</p>
-
-Behind the Scenes
-<p><em>I’d recommend watching the video first.</em></p>
-<p>I didn’t plan on creating Python packaging content so soon, but the <a href="https://astral.sh/blog/uv?utm_source=hynek&amp;utm_medium=email&amp;utm_campaign=new-video-uv-python-packaging-and-how-it-came-to">release of <em>uv</em></a> was a great opportunity to take a stab at a …</p>
-  </p>
-  </div>
-</header>
-<footer>
-  <p>Posted by
-  <span class="p-author"><b>Anonymous</b></span>
-  on <time datetime="2024-03-05 14:30:00+00:00" class="dt-published"></time>
-  Tue 05 Mar 2024
-  in Hynek Did Something.
 </footer>
 <div class="m-clearfix-l"></div>
 
